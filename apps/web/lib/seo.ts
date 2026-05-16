@@ -61,6 +61,7 @@ export function localBusinessSchema() {
     telephone: site.phone,
     email: site.email,
     image: `${site.url}/opengraph-image`,
+    sameAs: SAME_AS,
     address: {
       "@type": "PostalAddress",
       addressLocality: site.address.locality,
@@ -88,13 +89,43 @@ export function localBusinessSchema() {
   }
 }
 
+const SAME_AS = [
+  // Affiliated sites
+  "https://berne-repair.com",
+  "https://bernerepair.com",
+  "https://berne-commercial.com",
+  // Social
+  "https://www.tiktok.com/@berne.repair",
+  "https://www.instagram.com/bernerepair/",
+  "https://www.facebook.com/bernerepair",
+  // Yelp
+  "https://www.yelp.com/biz/berne-repair-sarasota",
+  "https://www.yelp.com/biz/berne-repair-hallandale-beach-3",
+  "https://www.yelp.com/biz/berne-repair-fort-myers",
+  // Thumbtack
+  "https://www.thumbtack.com/fl/tampa/appliance-repair/norma-appliance-repair/service/485458498671689761",
+  "https://www.thumbtack.com/fl/naples/appliance-repair/berne-appliance-repair-naples-fort-myers/service/566337571507380237",
+  // Google Business
+  "https://share.google/sSDq9B0xar89bItSq",
+  "https://share.google/6GQjQFqxDvYeOWZIp",
+  "https://share.google/VCXebzL4hfcPcu3P5",
+  "https://share.google/gH0RfcApFEEwD6zpy",
+  "https://share.google/c2j6LHKohujVnmXge",
+  // Apple Maps
+  "https://maps.apple/p/7r_.dJpYdb5n6V",
+  // Sister sites
+  "https://bernerepair.com/",
+  "https://normarepair.com/",
+]
+
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: site.name,
     url: site.url,
-    logo: `${site.url}/logo.svg`,
+    logo: `${site.url}/opengraph-image`,
+    sameAs: SAME_AS,
     contactPoint: [
       {
         "@type": "ContactPoint",
