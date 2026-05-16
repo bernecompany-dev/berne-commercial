@@ -1,6 +1,14 @@
 "use client"
 
 import { useState } from "react"
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void
+    dataLayer?: unknown[]
+  }
+}
+
 import { CheckCircle2, Loader2 } from "lucide-react"
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -54,6 +62,14 @@ export function DispatchForm({
       }
       form.reset()
       setStatus("success")
+      if (typeof window !== "undefined" && typeof window.gtag === "function") {
+        window.gtag("event", "generate_lead", {
+          form: "dispatch",
+          service: String(payload.service ?? ""),
+          city: String(payload.city ?? ""),
+          urgency: String(payload.urgency ?? ""),
+        })
+      }
     } catch (err) {
       setStatus("error")
       setErrorMsg(err instanceof Error ? err.message : "Submission failed")

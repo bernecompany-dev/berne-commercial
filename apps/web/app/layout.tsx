@@ -4,6 +4,7 @@ import type { Metadata, Viewport } from "next"
 import "@workspace/ui/globals.css"
 import { cn } from "@workspace/ui/lib/utils"
 import { JsonLd } from "@/components/json-ld"
+import { GoogleAnalytics } from "@/components/google-analytics"
 import {
   organizationSchema,
   localBusinessSchema,
@@ -46,6 +47,7 @@ export default function RootLayout({
         {children}
         <JsonLd data={organizationSchema()} />
         <JsonLd data={localBusinessSchema()} />
+        <GoogleAnalytics />
       </body>
     </html>
   )
