@@ -1,4 +1,5 @@
 import { trustedBy } from "@/lib/data/brands"
+import { BrandLogo } from "./brand-logo"
 
 export function TrustedBy() {
   return (
@@ -7,17 +8,12 @@ export function TrustedBy() {
         <p className="text-center text-xs font-medium uppercase tracking-widest text-muted-foreground">
           Trusted by commercial clients and national brands
         </p>
-        <div className="mx-auto mt-8 grid max-w-5xl grid-cols-2 items-center gap-x-8 gap-y-4 text-center sm:grid-cols-4 lg:grid-cols-8">
+        <div className="mx-auto mt-10 flex max-w-5xl flex-wrap items-center justify-center gap-4">
           {trustedBy.map((name) => (
-            <span
-              key={name}
-              className="text-sm font-medium tracking-tight text-foreground/70"
-            >
-              {name}
-            </span>
+            <BrandLogo key={name} name={name} />
           ))}
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-balance text-center text-xs text-muted-foreground">
+        <p className="mx-auto mt-8 max-w-2xl text-balance text-center text-xs text-muted-foreground">
           Our team has provided service for locations associated with these
           brands.
         </p>

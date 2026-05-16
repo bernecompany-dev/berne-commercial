@@ -7,12 +7,15 @@ import { AnchorButton, LinkButton } from "@/components/link-button"
 import { Card } from "@workspace/ui/components/card"
 import { Badge } from "@workspace/ui/components/badge"
 import { DispatchForm } from "@/components/dispatch-form"
+import { CityMap } from "@/components/city-map"
 import { TrustedBy } from "@/components/trusted-by"
 import { JsonLd } from "@/components/json-ld"
 import { metaFor, serviceSchema, faqSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import { cities, getCity, nearbyCities, COUNTIES } from "@/lib/data/cities"
 import { services, primaryServices } from "@/lib/data/services"
+import { cityIntro, citySecondaryParagraph } from "@/lib/copy"
+import { getCityProfile, cityProfileFallback } from "@/lib/data/city-profiles"
 
 type Params = { params: Promise<{ city: string }> }
 
@@ -30,9 +33,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       path: `/${slug}`,
       noindex: true,
     })
+  const p = getCityProfile(c.slug) ?? cityProfileFallback(c.name, c.county)
   return metaFor({
     title: `Commercial Equipment Repair in ${c.name}, FL`,
-    description: `Same-day commercial refrigeration, restaurant equipment, ice machine and commercial laundry repair in ${c.name}. Service call: ${site.serviceCall}.`,
+    description: `Same-day commercial dispatch across ${p.corridor} in ${c.name} — refrigeration, ice machines, restaurant equipment, ventilation and commercial laundry. Service call: ${site.serviceCall}.`,
     path: `/${c.slug}`,
   })
 }
@@ -64,7 +68,7 @@ export default async function CityPage({ params }: Params) {
       <PageHero
         eyebrow={`${COUNTIES[c.county]} County`}
         title={`Commercial Equipment Repair in ${c.name}, FL`}
-        description={`Berne Commercial Repair serves ${c.name} with same-day commercial refrigeration, restaurant equipment, ice machine and commercial laundry dispatch. Service call: ${site.serviceCall}.`}
+        description={cityIntro(c)}
       >
         <div className="flex flex-wrap gap-2">
           <Badge variant="outline" className="border-primary/30 bg-primary/5 text-primary">
@@ -118,6 +122,8 @@ export default async function CityPage({ params }: Params) {
           </div>
         </div>
       </section>
+
+      <CityMap city={c.name} />
 
       <TrustedBy />
 

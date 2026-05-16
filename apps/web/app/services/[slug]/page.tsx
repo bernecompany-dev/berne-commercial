@@ -1,11 +1,12 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { ArrowRight, CheckCircle2 } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
 import { Card } from "@workspace/ui/components/card"
 import { Badge } from "@workspace/ui/components/badge"
 import { AnchorButton, LinkButton } from "@/components/link-button"
 import { DispatchForm } from "@/components/dispatch-form"
+import { ServiceBullets } from "@/components/service-bullets"
 import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
 import { faqSchema, metaFor, serviceSchema } from "@/lib/seo"
@@ -59,38 +60,37 @@ export default async function ServiceDetailPage({ params }: Params) {
       </PageHero>
 
       <section className="border-b border-border/60 bg-background py-16">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
-          <div className="lg:col-span-2">
-            <h2 className="text-2xl font-semibold tracking-tight">Overview</h2>
-            <p className="mt-4 text-muted-foreground">{s.longDescription}</p>
-
-            {s.bullets.length ? (
-              <ul className="mt-8 grid gap-2 sm:grid-cols-2">
-                {s.bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-2 text-sm">
-                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-3">
+            <div className="lg:col-span-2">
+              <h2 className="text-2xl font-semibold tracking-tight">Overview</h2>
+              <p className="mt-4 text-muted-foreground">{s.longDescription}</p>
+            </div>
+            <Card className="h-fit gap-3 p-6">
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary">
+                South Florida coverage
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Miami-Dade, Broward and Palm Beach — same-day emergency
+                dispatch for commercial accounts.
+              </p>
+              <LinkButton
+                href={`/request-dispatch?service=${s.slug}`}
+                className="mt-3"
+              >
+                Request Service
+              </LinkButton>
+            </Card>
           </div>
 
-          <Card className="h-fit gap-3 p-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary">
-              South Florida coverage
+          {s.bullets.length ? (
+            <div className="mt-12">
+              <h3 className="mb-6 text-lg font-semibold tracking-tight">
+                What we fix
+              </h3>
+              <ServiceBullets items={s.bullets} />
             </div>
-            <p className="text-sm text-muted-foreground">
-              Miami-Dade, Broward and Palm Beach — same-day emergency dispatch
-              for commercial accounts.
-            </p>
-            <LinkButton
-              href={`/request-dispatch?service=${s.slug}`}
-              className="mt-3"
-            >
-              Request Service
-            </LinkButton>
-          </Card>
+          ) : null}
         </div>
       </section>
 

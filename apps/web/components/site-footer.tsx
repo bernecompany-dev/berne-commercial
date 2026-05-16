@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Mail, MapPin, Phone, ShieldCheck } from "lucide-react"
+import { BrandMark } from "./brand-mark"
 import { site } from "@/lib/site"
 import { citiesByCounty } from "@/lib/data/cities"
 import { primaryServices } from "@/lib/data/services"
@@ -24,16 +25,9 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-2.5">
-              <span
-                aria-hidden
-                className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-background text-foreground font-semibold"
-              >
-                B
-              </span>
-              <span className="text-base font-semibold tracking-tight">
-                {site.name}
-              </span>
+            <BrandMark tone="light" />
+            <div className="mt-2 text-base font-semibold tracking-tight">
+              {site.name}
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-background/70">
               Commercial equipment repair across South Florida — refrigeration,

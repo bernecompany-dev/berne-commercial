@@ -1,4 +1,5 @@
 import { brands } from "@/lib/data/brands"
+import { BrandLogo } from "./brand-logo"
 import { SectionHeading } from "./section-heading"
 
 export function BrandCloud() {
@@ -12,18 +13,13 @@ export function BrandCloud() {
           align="center"
         />
 
-        <div className="mx-auto mt-12 flex max-w-5xl flex-wrap items-center justify-center gap-2">
+        <div className="mx-auto mt-12 flex max-w-6xl flex-wrap items-center justify-center gap-3">
           {brands.map((b) => (
-            <span
+            <BrandLogo
               key={b.name}
-              className={`rounded-full border px-4 py-1.5 text-sm transition-colors ${
-                b.primary
-                  ? "border-primary/30 bg-primary/5 font-medium text-primary"
-                  : "border-border bg-card text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {b.name}
-            </span>
+              name={b.name}
+              tone={b.primary ? "primary" : "muted"}
+            />
           ))}
         </div>
       </div>

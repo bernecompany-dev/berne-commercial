@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowRight, CheckCircle2, MapPin } from "lucide-react"
+import { ArrowRight, MapPin } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
 import { AnchorButton, LinkButton } from "@/components/link-button"
 import { Card } from "@workspace/ui/components/card"
 import { Badge } from "@workspace/ui/components/badge"
 import { DispatchForm } from "@/components/dispatch-form"
+import { ServiceBullets } from "@/components/service-bullets"
+import { CityMap } from "@/components/city-map"
 import { FAQSection } from "@/components/faq-section"
 import { TrustedBy } from "@/components/trusted-by"
 import { JsonLd } from "@/components/json-ld"
@@ -14,6 +16,8 @@ import { metaFor, serviceSchema, faqSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import { cities, getCity, nearbyCities, COUNTIES } from "@/lib/data/cities"
 import { getService, services, primaryServices } from "@/lib/data/services"
+import { cityServiceIntro, cityServiceContext } from "@/lib/copy"
+import { getCityProfile, cityProfileFallback } from "@/lib/data/city-profiles"
 
 type Params = { params: Promise<{ city: string; service: string }> }
 
@@ -42,9 +46,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       noindex: true,
     })
   const title = `${s.title} in ${c.name}, FL`
+  const p = getCityProfile(c.slug) ?? cityProfileFallback(c.name, c.county)
   return metaFor({
     title,
-    description: `${s.summary} Same-day commercial dispatch in ${c.name}. Service call: ${site.serviceCall}.`,
+    description: `${s.shortTitle} dispatch across ${p.corridor} in ${c.name}. ${s.summary} Service call: ${site.serviceCall}.`,
     path: `/${c.slug}/${s.slug}`,
   })
 }
@@ -79,7 +84,7 @@ export default async function CityServicePage({ params }: Params) {
       <PageHero
         eyebrow={`${COUNTIES[c.county]} County · ${s.shortTitle}`}
         title={`${s.title} in ${c.name}, FL`}
-        description={`${s.summary} Same-day commercial dispatch in ${c.name}. Service call: ${site.serviceCall}.`}
+        description={cityServiceIntro(c, s)}
       >
         <div className="flex flex-wrap gap-2">
           <Badge variant="outline" className="border-primary/30 bg-primary/5 text-primary">
@@ -101,43 +106,41 @@ export default async function CityServicePage({ params }: Params) {
       </PageHero>
 
       <section className="border-b border-border/60 bg-background py-16">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
-          <div className="lg:col-span-2">
-            <h2 className="text-2xl font-semibold tracking-tight">
-              {s.shortTitle} dispatch in {c.name}
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              {s.longDescription} {c.name} sits in {COUNTIES[c.county]} County,
-              and our dispatch model is designed for the commercial accounts
-              operating here — restaurants, food production, grocery,
-              hospitality, retail and property-managed buildings.
-            </p>
-            {s.bullets.length ? (
-              <ul className="mt-8 grid gap-2 sm:grid-cols-2">
-                {s.bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-2 text-sm">
-                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
-          </div>
-          <Card className="h-fit gap-3 p-6">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary">
-              {c.name} coverage
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-3">
+            <div className="lg:col-span-2">
+              <h2 className="text-2xl font-semibold tracking-tight">
+                {s.shortTitle} dispatch in {c.name}
+              </h2>
+              <p className="mt-4 text-muted-foreground">
+                {cityServiceContext(c, s)}
+              </p>
             </div>
-            <p className="text-sm text-muted-foreground">
-              {COUNTIES[c.county]} County dispatch — same-day emergency
-              commercial service for {c.name} accounts.
-            </p>
-            <LinkButton
-              href={`/request-dispatch?city=${c.slug}&service=${s.slug}`}
-              className="mt-3"
-            >
-              Request Service
-            </LinkButton>
-          </Card>
+            <Card className="h-fit gap-3 p-6">
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary">
+                {c.name} coverage
+              </div>
+              <p className="text-sm text-muted-foreground">
+                {COUNTIES[c.county]} County dispatch — same-day emergency
+                commercial service for {c.name} accounts.
+              </p>
+              <LinkButton
+                href={`/request-dispatch?city=${c.slug}&service=${s.slug}`}
+                className="mt-3"
+              >
+                Request Service
+              </LinkButton>
+            </Card>
+          </div>
+
+          {s.bullets.length ? (
+            <div className="mt-12">
+              <h3 className="mb-6 text-lg font-semibold tracking-tight">
+                What we fix
+              </h3>
+              <ServiceBullets items={s.bullets} />
+            </div>
+          ) : null}
         </div>
       </section>
 
@@ -151,6 +154,8 @@ export default async function CityServicePage({ params }: Params) {
           </div>
         </div>
       </section>
+
+      <CityMap city={c.name} />
 
       <FAQSection
         faqs={combinedFaqs}

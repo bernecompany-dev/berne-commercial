@@ -11,10 +11,12 @@ const featured = [
   "ice-machine-repair",
   "fryer-repair",
   "commercial-oven-repair",
-  "prep-table-repair",
+  "commercial-hood-repair",
+  "espresso-machine-repair",
+  "soda-machine-repair",
+  "ice-cream-machine-repair",
   "commercial-laundry-repair",
-  "garbage-disposal-repair",
-  "trash-compactor-repair",
+  "vending-machine-repair",
 ]
 
 export function ServicesGrid() {

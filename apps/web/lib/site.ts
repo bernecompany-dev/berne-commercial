@@ -1,13 +1,18 @@
 export const site = {
   name: "Berne Commercial Repair",
   shortName: "Berne Commercial",
-  domain: "bernecommercial.com",
-  url: "https://bernecommercial.com",
+  domain: "berne-commercial.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://berne-commercial.com",
   description:
     "Commercial equipment repair across South Florida — refrigeration, restaurant equipment, ice machines, commercial laundry, and enterprise dispatch.",
-  phone: "+1 (305) 000-0000",
-  phoneHref: "tel:+13050000000",
+  phone: "(305) 520-7833",
+  phoneHref: "tel:+13055207833",
   email: "bernerepair@gmail.com",
+  founder: {
+    name: "Eugene Bernitsky",
+    title: "Founder & Operator",
+    photo: "/team/eugene-bernitsky.png",
+  },
   serviceCall: "$89",
   address: {
     locality: "Miami",

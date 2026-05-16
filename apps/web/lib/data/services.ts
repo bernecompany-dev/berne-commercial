@@ -2,6 +2,9 @@ export type ServiceCategory =
   | "refrigeration"
   | "ice-machines"
   | "restaurant-equipment"
+  | "beverage-frozen"
+  | "ventilation"
+  | "vending"
   | "commercial-laundry"
   | "other"
 
@@ -21,6 +24,9 @@ export const SERVICE_CATEGORIES: Record<ServiceCategory, string> = {
   refrigeration: "Commercial Refrigeration",
   "ice-machines": "Ice Machines",
   "restaurant-equipment": "Restaurant Equipment",
+  "beverage-frozen": "Beverage & Frozen Drink Equipment",
+  ventilation: "Ventilation & Exhaust",
+  vending: "Vending Equipment",
   "commercial-laundry": "Commercial Laundry",
   other: "Other Commercial Equipment",
 }
@@ -347,6 +353,214 @@ export const services: Service[] = [
       "Heating element replacement",
       "Airflow and venting diagnostics",
       "Belt, drum bearing and motor service",
+    ],
+    faqs: [],
+  },
+  {
+    slug: "commercial-hood-repair",
+    title: "Commercial Hood & Exhaust Repair",
+    shortTitle: "Commercial Hoods",
+    category: "ventilation",
+    primary: true,
+    summary:
+      "Vent hood, range hood and commercial exhaust system service — fan motors, controls, makeup-air units.",
+    longDescription:
+      "Berne Commercial Repair services commercial vent hoods, range hoods and exhaust systems for restaurants, commercial kitchens and production facilities. We handle exhaust fan motors and bearings, makeup-air unit (MAU) service, hood control panels, fire-suppression linkage components (non-licensed scope) and lighting. We don't certify fire-suppression systems — but we coordinate with your certified vendor when a repair touches that interface.",
+    bullets: [
+      "Exhaust fan motor and bearing replacement",
+      "Belt and pulley service",
+      "Hood control panel and switch service",
+      "Makeup-air unit diagnostics",
+      "Light bulb and ballast replacement",
+      "Damper, hinge and gasket service",
+    ],
+    faqs: [
+      {
+        q: "Do you service makeup-air units (MAUs) along with hoods?",
+        a: "Yes — fan, belt, motor and control board service on both the exhaust and makeup-air sides of the kitchen ventilation system.",
+      },
+    ],
+  },
+  {
+    slug: "slush-machine-repair",
+    title: "Slush Machine Repair",
+    shortTitle: "Slush Machines",
+    category: "beverage-frozen",
+    summary:
+      "Frozen drink and slush machine service — refrigeration, auger, viscosity controls.",
+    longDescription:
+      "Frozen drink dispensers run hard during peak hours. We service the refrigeration loop, auger drive, viscosity controls and dispensing valves on slush machines used in convenience stores, theaters, restaurants and event venues.",
+    bullets: [
+      "Refrigeration loop diagnostics",
+      "Auger drive and gearbox service",
+      "Viscosity control adjustment",
+      "Dispense valve replacement",
+      "Bowl seal and gasket replacement",
+    ],
+    faqs: [],
+  },
+  {
+    slug: "ice-cream-machine-repair",
+    title: "Ice Cream Machine Repair",
+    shortTitle: "Ice Cream Machines",
+    category: "beverage-frozen",
+    summary:
+      "Soft-serve and batch freezer service — compressor, scraper blade, mix pump.",
+    longDescription:
+      "We service soft-serve and batch ice cream freezers for restaurants, dessert shops, hotels and franchise operators. Common service includes compressor and refrigeration work, scraper blade and dasher replacement, mix pump diagnostics, electronic controller service and air-pump rebuilds.",
+    bullets: [
+      "Compressor and condenser service",
+      "Scraper blade and dasher replacement",
+      "Mix pump diagnostics",
+      "Air pump rebuild",
+      "Electronic controller service",
+    ],
+    faqs: [],
+  },
+  {
+    slug: "pizza-prep-table-repair",
+    title: "Pizza Prep Table Repair",
+    shortTitle: "Pizza Prep Tables",
+    category: "refrigeration",
+    summary:
+      "Pizza prep table refrigeration, lid seals, fan motors, control boards.",
+    longDescription:
+      "Pizza prep tables sit in hot kitchen environments and run constantly. We diagnose temperature drift, evaporator coil icing, control board faults, and door/lid seal issues on prep tables from True, Turbo Air, Continental, Beverage-Air and Delfield.",
+    bullets: [
+      "Refrigeration loop diagnostics",
+      "Lid hinge, seal and gasket replacement",
+      "Evaporator coil and fan service",
+      "Control board and thermostat service",
+    ],
+    faqs: [],
+  },
+  {
+    slug: "espresso-machine-repair",
+    title: "Commercial Espresso Machine Repair",
+    shortTitle: "Espresso Machines",
+    category: "restaurant-equipment",
+    primary: true,
+    summary:
+      "Espresso machine, grinder and brew-group service for cafés, restaurants and hotels.",
+    longDescription:
+      "We service commercial espresso machines and grinders for cafés, restaurants, hotels and quick-service operators. Common service includes brew-group rebuilds, boiler and heating element work, water-system descaling, pump and motor service, electronic controller diagnostics, and grinder burr replacement. We work on single, double and triple-group machines.",
+    bullets: [
+      "Brew-group rebuilds and gasket replacement",
+      "Boiler and heating element service",
+      "Pump, motor and pressure regulation",
+      "Water-system descaling and filtration",
+      "Electronic controller diagnostics",
+      "Grinder burr replacement and calibration",
+    ],
+    faqs: [
+      {
+        q: "Do you service multi-group espresso machines used in high-volume cafés?",
+        a: "Yes — single, double and triple-group commercial machines, including the most common Italian and European brands found in South Florida cafés.",
+      },
+    ],
+  },
+  {
+    slug: "coffee-machine-repair",
+    title: "Commercial Coffee Machine & Brewer Repair",
+    shortTitle: "Coffee Machines",
+    category: "restaurant-equipment",
+    summary:
+      "Coffee brewer, drip and pod machine service for offices, hotels, breakrooms and food service.",
+    longDescription:
+      "Berne Commercial Repair services commercial coffee brewers, drip machines, decanter-style brewers and capsule-based systems used in offices, hotels, condo amenities and food-service operations. Common service includes heating elements, solenoid valves, water-line and descaling work, and electronic controller diagnostics.",
+    bullets: [
+      "Heating element replacement",
+      "Solenoid valve and water-line service",
+      "Descaling and water-system service",
+      "Electronic controller diagnostics",
+      "Decanter and warmer plate service",
+    ],
+    faqs: [],
+  },
+  {
+    slug: "panini-press-repair",
+    title: "Panini Press & Sandwich Grill Repair",
+    shortTitle: "Panini Presses",
+    category: "restaurant-equipment",
+    summary:
+      "Panini press, sandwich grill and contact grill service — heating elements, thermostats, hinges.",
+    longDescription:
+      "We service commercial panini presses, sandwich grills and contact grills used in cafés, sandwich shops, hotels and quick-service restaurants.",
+    bullets: [
+      "Heating element replacement",
+      "Thermostat and high-limit service",
+      "Hinge and spring service",
+      "Power cord and switch replacement",
+    ],
+    faqs: [],
+  },
+  {
+    slug: "warming-table-repair",
+    title: "Warming Table & Heated Holding Repair",
+    shortTitle: "Warming Tables",
+    category: "restaurant-equipment",
+    summary:
+      "Heated holding cabinets, warming tables, steam tables — element and control service.",
+    longDescription:
+      "Heated holding equipment keeps food at safe service temperature. We service warming tables, steam tables, heated holding cabinets and drawer warmers — including Alto-Shaam, Hatco, Vulcan and other commercial brands.",
+    bullets: [
+      "Heating element replacement",
+      "Thermostat and high-limit service",
+      "Water level controls (steam tables)",
+      "Door seal and latch service",
+    ],
+    faqs: [],
+  },
+  {
+    slug: "soda-machine-repair",
+    title: "Soda Machine & Beverage Dispenser Repair",
+    shortTitle: "Soda Machines",
+    category: "beverage-frozen",
+    summary:
+      "Post-mix soda, juice and coffee dispenser service — carbonators, valves, refrigeration.",
+    longDescription:
+      "We service post-mix soda machines, juice dispensers, iced tea brewers and combination beverage stations. Common service includes carbonator rebuilds, BIB (bag-in-box) line work, dispense valve service, ice/water bath refrigeration, and electronic control.",
+    bullets: [
+      "Carbonator pump and motor service",
+      "Dispense valve replacement",
+      "BIB and CO2 line diagnostics",
+      "Ice/water bath refrigeration service",
+      "Electronic controller diagnostics",
+    ],
+    faqs: [],
+  },
+  {
+    slug: "margarita-machine-repair",
+    title: "Margarita & Frozen Cocktail Machine Repair",
+    shortTitle: "Margarita Machines",
+    category: "beverage-frozen",
+    summary:
+      "Frozen cocktail dispenser service — refrigeration, auger, dispense valves.",
+    longDescription:
+      "Frozen margarita and cocktail machines run continuously in bars and restaurants. We service the refrigeration loop, auger drive, viscosity control, dispense valves and bowl seals.",
+    bullets: [
+      "Refrigeration system service",
+      "Auger and gearbox replacement",
+      "Viscosity and consistency adjustment",
+      "Dispense valve and bowl seal replacement",
+    ],
+    faqs: [],
+  },
+  {
+    slug: "vending-machine-repair",
+    title: "Vending Machine Repair",
+    shortTitle: "Vending Machines",
+    category: "vending",
+    summary:
+      "Snack, drink and combo vending machine service — refrigeration, bill validators, control boards.",
+    longDescription:
+      "We service commercial vending machines in offices, schools, warehouses, hospitals and condo buildings — refrigerated drink machines, snack machines and combo machines.",
+    bullets: [
+      "Refrigeration system service",
+      "Coin and bill validator service",
+      "Vend motor and helix replacement",
+      "Control board diagnostics",
+      "Door and lock service",
     ],
     faqs: [],
   },

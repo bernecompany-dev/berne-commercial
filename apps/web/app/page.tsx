@@ -5,6 +5,9 @@ import { ServicesGrid } from "@/components/services-grid"
 import { IndustriesSection } from "@/components/industries-section"
 import { WhyUs } from "@/components/why-us"
 import { BrandCloud } from "@/components/brand-cloud"
+import { FounderSection } from "@/components/founder-section"
+import { TeamGrid } from "@/components/team-grid"
+import { CredentialsSection } from "@/components/credentials-section"
 import { TrustedBy } from "@/components/trusted-by"
 import { DispatchSection } from "@/components/dispatch-section"
 import { FAQSection } from "@/components/faq-section"
@@ -47,7 +50,10 @@ export default function HomePage() {
         <ServicesGrid />
         <IndustriesSection />
         <WhyUs />
+        <FounderSection />
+        <TeamGrid compact />
         <BrandCloud />
+        <CredentialsSection />
         <TrustedBy />
         <DispatchSection />
         <FAQSection

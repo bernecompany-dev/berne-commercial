@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { Menu, Phone, X } from "lucide-react"
 import { AnchorButton, LinkButton } from "./link-button"
+import { BrandMark } from "./brand-mark"
 import { site } from "@/lib/site"
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -23,16 +24,8 @@ export function SiteNavbar() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span
-            aria-hidden
-            className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground font-semibold"
-          >
-            B
-          </span>
-          <span className="text-sm font-semibold tracking-tight sm:text-base">
-            {site.shortName}
-          </span>
+        <Link href="/" className="flex items-center" aria-label={site.name}>
+          <BrandMark />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">

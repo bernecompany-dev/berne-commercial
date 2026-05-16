@@ -35,10 +35,11 @@ export function DispatchForm({
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    const form = e.currentTarget
     setStatus("submitting")
     setErrorMsg("")
 
-    const formData = new FormData(e.currentTarget)
+    const formData = new FormData(form)
     const payload = Object.fromEntries(formData.entries())
 
     try {
@@ -51,8 +52,8 @@ export function DispatchForm({
         const text = await res.text()
         throw new Error(text || "Submission failed")
       }
+      form.reset()
       setStatus("success")
-      e.currentTarget.reset()
     } catch (err) {
       setStatus("error")
       setErrorMsg(err instanceof Error ? err.message : "Submission failed")
@@ -82,28 +83,26 @@ export function DispatchForm({
     <Wrapper {...wrapperProps}>
       <form onSubmit={handleSubmit} className="grid gap-5">
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Company name" name="company" required />
           <Field label="Contact name" name="contact" required />
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2">
           <Field label="Phone" name="phone" type="tel" required />
-          <Field label="Email" name="email" type="email" required />
         </div>
 
         <Field label="Service address" name="address" required />
 
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           <Field
             label="City"
             name="city"
-            required
             defaultValue={defaults?.city}
           />
+          <Field label="Email" name="email" type="email" />
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Field label="Company name" name="company" />
           <SelectField
             label="Service type"
             name="service"
-            required
             defaultValue={defaults?.service}
           >
             <option value="">Select…</option>
@@ -113,6 +112,9 @@ export function DispatchForm({
               </option>
             ))}
           </SelectField>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-3">
           <SelectField label="Brand" name="brand">
             <option value="">Select…</option>
             {brands.map((b) => (
@@ -121,11 +123,8 @@ export function DispatchForm({
               </option>
             ))}
           </SelectField>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Equipment model (optional)" name="model" />
-          <SelectField label="Urgency" name="urgency" required>
+          <Field label="Equipment model" name="model" />
+          <SelectField label="Urgency" name="urgency">
             <option value="">Select…</option>
             {urgencyOptions.map((u) => (
               <option key={u.value} value={u.value}>
@@ -136,13 +135,12 @@ export function DispatchForm({
         </div>
 
         <div className="grid gap-2">
-          <Label htmlFor="issue">Issue description</Label>
+          <Label htmlFor="issue">What&apos;s happening with the equipment?</Label>
           <Textarea
             id="issue"
             name="issue"
-            required
             rows={4}
-            placeholder="What is happening with the equipment? Include error codes, smells, leaks, noises, last service…"
+            placeholder="Error codes, leaks, noises, last service — anything you have."
           />
         </div>
 
