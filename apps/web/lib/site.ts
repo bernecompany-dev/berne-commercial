@@ -26,7 +26,6 @@ export const site = {
     facebook: "",
     instagram: "",
   },
-  ogImage: "/og.jpg",
 } as const
 
 export type SiteConfig = typeof site

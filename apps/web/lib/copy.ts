@@ -37,7 +37,7 @@ export function cityIntro(city: City): string {
   const p = profileFor(city)
   return (
     `Berne Commercial Repair dispatches across ${p.corridor} in ${city.name}, ` +
-    `where ${p.mix}. ${cap(p.climate)} — which means refrigeration, ice machines, ` +
+    `serving ${p.mix}. Local factor: ${p.climate}. Refrigeration, ice machines, ` +
     `cooking equipment and back-of-house systems in ${city.name} stay on our ` +
     `short-cycle service rotation year-round.`
   )
@@ -59,7 +59,7 @@ export function cityServiceIntro(city: City, service: Service): string {
   const note = CATEGORY_NOTES[service.category](city.name)
   return (
     `In ${city.name}, our ${service.shortTitle.toLowerCase()} dispatch covers ` +
-    `${p.corridor}, where ${p.mix}. ${cap(p.climate)}. ${note}`
+    `${p.corridor} — serving ${p.mix}. Local factor: ${p.climate}. ${note}`
   )
 }
 

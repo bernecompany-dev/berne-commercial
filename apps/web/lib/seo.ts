@@ -43,7 +43,7 @@ export function localBusinessSchema() {
     url: site.url,
     telephone: site.phone,
     email: site.email,
-    image: `${site.url}${site.ogImage}`,
+    image: `${site.url}/opengraph-image`,
     address: {
       "@type": "PostalAddress",
       addressLocality: site.address.locality,
