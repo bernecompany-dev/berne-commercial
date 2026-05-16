@@ -1,0 +1,240 @@
+import type { Metadata } from "next"
+import Link from "next/link"
+import { notFound } from "next/navigation"
+import { ArrowRight, MapPin } from "lucide-react"
+import { PageHero, PageShell } from "@/components/page-shell"
+import { AnchorButton, LinkButton } from "@/components/link-button"
+import { Card } from "@workspace/ui/components/card"
+import { Badge } from "@workspace/ui/components/badge"
+import { DispatchForm } from "@/components/dispatch-form"
+import { ServiceBullets } from "@/components/service-bullets"
+import { CityMap } from "@/components/city-map"
+import { FAQSection } from "@/components/faq-section"
+import { TrustedBy } from "@/components/trusted-by"
+import { JsonLd } from "@/components/json-ld"
+import { serviceSchema, faqSchema } from "@/lib/seo"
+import { site } from "@/lib/site"
+import { cities, getCity, nearbyCities, COUNTIES } from "@/lib/data/cities"
+import { getService, services, primaryServices } from "@/lib/data/services"
+import { localizedService } from "@/lib/data/services-es"
+import { cityServiceIntro, cityServiceContext } from "@/lib/copy"
+import {
+  getCityProfileEs,
+  cityProfileFallbackEs,
+} from "@/lib/data/city-profiles-es"
+
+type Params = { params: Promise<{ city: string; service: string }> }
+
+export function generateStaticParams() {
+  const allowed = new Set(primaryServices.map((s) => s.slug))
+  const all: { city: string; service: string }[] = []
+  for (const c of cities) {
+    for (const s of services) {
+      if (allowed.has(s.slug)) all.push({ city: c.slug, service: s.slug })
+    }
+  }
+  return all
+}
+
+export const dynamicParams = true
+
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { city: citySlug, service: serviceSlug } = await params
+  const c = getCity(citySlug)
+  const s = getService(serviceSlug)
+  if (!c || !s)
+    return {
+      title: "Página",
+      robots: { index: false },
+    }
+  const es = localizedService(s, "es")
+  const p = getCityProfileEs(c.slug) ?? cityProfileFallbackEs(c.name, c.county)
+  const title = `${es.title} en ${c.name}, FL`
+  return {
+    title,
+    description: `Despacho de ${es.shortTitle.toLowerCase()} en ${p.corridor} de ${c.name}. ${es.summary} Llamada de servicio: ${site.serviceCall}.`,
+    alternates: {
+      canonical: `/es/${c.slug}/${s.slug}`,
+      languages: {
+        en: `/${c.slug}/${s.slug}`,
+        es: `/es/${c.slug}/${s.slug}`,
+        "x-default": `/${c.slug}/${s.slug}`,
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: "es_US",
+      url: `${site.url}/es/${c.slug}/${s.slug}`,
+      siteName: site.name,
+    },
+  }
+}
+
+const cityFaqsEs = (city: string, service: string, sc: string) => [
+  {
+    q: `¿Ofrecen ${service.toLowerCase()} en ${city}?`,
+    a: `Sí — proveemos ${service.toLowerCase()} en ${city} con despacho comercial el mismo día para restaurantes, plantas de producción, retail y edificios administrados.`,
+  },
+  {
+    q: `¿Cuánto cuesta la llamada de servicio comercial en ${city}?`,
+    a: `Nuestra llamada de servicio comercial es ${sc} y se aplica al costo de la reparación aprobada.`,
+  },
+  {
+    q: `¿Los técnicos en ${city} tienen licencia y seguro?`,
+    a: `Sí. Berne Commercial Repair está licenciado y asegurado para servicio comercial en todo el Sur de Florida, incluyendo ${city}.`,
+  },
+]
+
+export default async function CityServicePageES({ params }: Params) {
+  const { city: citySlug, service: serviceSlug } = await params
+  const c = getCity(citySlug)
+  const s = getService(serviceSlug)
+  if (!c || !s) notFound()
+  const es = localizedService(s, "es")
+
+  const nearby = nearbyCities(c.slug, 8)
+  const cFaqs = cityFaqsEs(c.name, es.shortTitle, site.serviceCall)
+  const combinedFaqs = [...cFaqs, ...es.faqs]
+
+  return (
+    <PageShell locale="es">
+      <PageHero
+        eyebrow={`Condado de ${COUNTIES[c.county]} · ${es.shortTitle}`}
+        title={`${es.title} en ${c.name}, FL`}
+        description={cityServiceIntro(c, s, "es")}
+      >
+        <div className="flex flex-wrap gap-2">
+          <Badge
+            variant="outline"
+            className="border-primary/30 bg-primary/5 text-primary"
+          >
+            Llamada de servicio comercial: {site.serviceCall}
+          </Badge>
+          <Badge variant="outline">Despacho el mismo día</Badge>
+          <Badge variant="outline" className="gap-1.5">
+            <MapPin className="size-3" /> {c.name}
+          </Badge>
+        </div>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <LinkButton href={`/es/request-dispatch?city=${c.slug}&service=${s.slug}`}>
+            Solicitar servicio <ArrowRight className="size-4" />
+          </LinkButton>
+          <AnchorButton href={site.phoneHref} variant="outline">
+            Llamar {site.phone}
+          </AnchorButton>
+        </div>
+      </PageHero>
+
+      <section className="border-b border-border/60 bg-background py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-3">
+            <div className="lg:col-span-2">
+              <h2 className="text-2xl font-semibold tracking-tight">
+                Despacho de {es.shortTitle.toLowerCase()} en {c.name}
+              </h2>
+              <p className="mt-4 text-muted-foreground">
+                {cityServiceContext(c, s, "es")}
+              </p>
+            </div>
+            <Card className="h-fit gap-3 p-6">
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary">
+                Cobertura en {c.name}
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Despacho del condado de {COUNTIES[c.county]} — servicio
+                comercial de emergencia el mismo día para cuentas de {c.name}.
+              </p>
+              <LinkButton
+                href={`/es/request-dispatch?city=${c.slug}&service=${s.slug}`}
+                className="mt-3"
+              >
+                Solicitar servicio
+              </LinkButton>
+            </Card>
+          </div>
+
+          {es.bullets.length ? (
+            <div className="mt-12">
+              <h3 className="mb-6 text-lg font-semibold tracking-tight">
+                Lo que reparamos
+              </h3>
+              <ServiceBullets items={es.bullets} />
+            </div>
+          ) : null}
+        </div>
+      </section>
+
+      <section className="border-b border-border/60 bg-accent/30 py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-semibold tracking-tight">
+            Solicitar despacho de {es.shortTitle.toLowerCase()} en {c.name}
+          </h2>
+          <div className="mt-8">
+            <DispatchForm locale="es" defaults={{ city: c.name, service: s.slug }} />
+          </div>
+        </div>
+      </section>
+
+      <CityMap city={c.name} />
+
+      <FAQSection
+        faqs={combinedFaqs}
+        title={`${es.shortTitle} en ${c.name} — Preguntas frecuentes`}
+      />
+
+      <TrustedBy locale="es" />
+
+      <section className="bg-background py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-base font-semibold tracking-tight">
+            Otros servicios en {c.name}
+          </h2>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {primaryServices
+              .filter((p) => p.slug !== s.slug)
+              .map((p) => {
+                const pes = localizedService(p, "es")
+                return (
+                  <Link
+                    key={p.slug}
+                    href={`/es/${c.slug}/${p.slug}`}
+                    className="rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground hover:text-foreground"
+                  >
+                    {pes.shortTitle}
+                  </Link>
+                )
+              })}
+          </div>
+          {nearby.length ? (
+            <>
+              <h2 className="mt-8 text-base font-semibold tracking-tight">
+                {es.shortTitle} en ciudades cercanas
+              </h2>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {nearby.map((n) => (
+                  <Link
+                    key={n.slug}
+                    href={`/es/${n.slug}/${s.slug}`}
+                    className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-primary"
+                  >
+                    {es.shortTitle} en {n.name}
+                  </Link>
+                ))}
+              </div>
+            </>
+          ) : null}
+        </div>
+      </section>
+
+      <JsonLd
+        data={serviceSchema({
+          name: `${es.title} en ${c.name}, FL`,
+          description: es.summary,
+          url: `${site.url}/es/${c.slug}/${s.slug}`,
+          city: c.name,
+        })}
+      />
+      <JsonLd data={faqSchema(combinedFaqs)} />
+    </PageShell>
+  )
+}
