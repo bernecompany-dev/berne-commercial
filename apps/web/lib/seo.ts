@@ -23,13 +23,11 @@ export function metaFor({
       url,
       siteName: site.name,
       type: "website",
-      images: [{ url: site.ogImage }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [site.ogImage],
     },
     robots: noindex
       ? { index: false, follow: false }

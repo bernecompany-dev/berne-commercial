@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 
 import "@workspace/ui/globals.css"
 import { cn } from "@workspace/ui/lib/utils"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { JsonLd } from "@/components/json-ld"
 import { GoogleAnalytics } from "@/components/google-analytics"
 import {
@@ -27,7 +28,6 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: site.url,
     siteName: site.name,
-    images: [{ url: site.ogImage }],
   },
   twitter: { card: "summary_large_image" },
 }
@@ -48,6 +48,7 @@ export default function RootLayout({
         <JsonLd data={organizationSchema()} />
         <JsonLd data={localBusinessSchema()} />
         <GoogleAnalytics />
+        <SpeedInsights />
       </body>
     </html>
   )
