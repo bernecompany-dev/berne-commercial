@@ -1,12 +1,14 @@
 import { SiteNavbar } from "./site-navbar"
 import { SiteFooter } from "./site-footer"
+import { MobileCtaBar } from "./mobile-cta-bar"
 
 export function PageShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <SiteNavbar />
-      <main>{children}</main>
+      <main className="pb-20 md:pb-0">{children}</main>
       <SiteFooter />
+      <MobileCtaBar />
     </>
   )
 }
