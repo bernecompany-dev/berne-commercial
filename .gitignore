@@ -33,4 +33,14 @@ npm-debug.log*
 
 # Misc
 .DS_Store
+Thumbs.db
 *.pem
+*.tsbuildinfo
+next-env.d.ts
+
+# Editors
+.idea
+.vscode
+
+# Claude
+.claude

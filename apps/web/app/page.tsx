@@ -1,19 +1,63 @@
-import { Button } from "@workspace/ui/components/button"
+import { SiteNavbar } from "@/components/site-navbar"
+import { SiteFooter } from "@/components/site-footer"
+import { Hero } from "@/components/hero"
+import { ServicesGrid } from "@/components/services-grid"
+import { IndustriesSection } from "@/components/industries-section"
+import { WhyUs } from "@/components/why-us"
+import { BrandCloud } from "@/components/brand-cloud"
+import { TrustedBy } from "@/components/trusted-by"
+import { DispatchSection } from "@/components/dispatch-section"
+import { FAQSection } from "@/components/faq-section"
+import { JsonLd } from "@/components/json-ld"
+import { faqSchema } from "@/lib/seo"
 
-export default function Page() {
+const homepageFaqs = [
+  {
+    q: "What is your commercial service call cost?",
+    a: "Our commercial service call is $89 and may be applied toward an approved repair.",
+  },
+  {
+    q: "Do you offer emergency same-day commercial repair?",
+    a: "Yes — we run emergency dispatch across Miami-Dade, Broward and Palm Beach. Refrigeration outages and food-safety-critical equipment are prioritized.",
+  },
+  {
+    q: "What commercial equipment do you service?",
+    a: "Commercial refrigeration (walk-ins, reach-ins, prep tables, deep freeze), ice machines, fryers, ovens, ranges, steamers, commercial laundry, garbage disposals and trash compactors.",
+  },
+  {
+    q: "What brands do you service?",
+    a: "Hoshizaki, Manitowoc, Scotsman, Turbo Air, True, Traulsen, Beverage-Air, Continental, Delfield, Vulcan, Hobart, Rational, Blodgett, Garland, Southbend, Cleveland, Pitco, Frymaster, Middleby, Alto-Shaam, Hatco, Electrolux Professional, Speed Queen, Whirlpool Commercial, Maytag Commercial and more.",
+  },
+  {
+    q: "Do you support multi-location and chain accounts?",
+    a: "Yes. We onboard chains, franchises and property-managed buildings with COI, vendor portals, and multi-location reporting. Visit the Become a Client page to get started.",
+  },
+  {
+    q: "Are you licensed and insured?",
+    a: "Yes. Berne Commercial Repair is licensed and insured for commercial service across South Florida.",
+  },
+]
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="text-muted-foreground font-mono text-xs">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <>
+      <SiteNavbar />
+      <main>
+        <Hero />
+        <ServicesGrid />
+        <IndustriesSection />
+        <WhyUs />
+        <BrandCloud />
+        <TrustedBy />
+        <DispatchSection />
+        <FAQSection
+          faqs={homepageFaqs}
+          title="Commercial repair questions"
+          description="Common questions from restaurants, production facilities and enterprise clients."
+        />
+      </main>
+      <SiteFooter />
+      <JsonLd data={faqSchema(homepageFaqs)} />
+    </>
   )
 }

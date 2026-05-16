@@ -1,0 +1,42 @@
+export type Brand = { name: string; primary?: boolean }
+
+export const brands: Brand[] = [
+  { name: "Hoshizaki", primary: true },
+  { name: "Manitowoc", primary: true },
+  { name: "Scotsman", primary: true },
+  { name: "Turbo Air", primary: true },
+  { name: "True", primary: true },
+  { name: "Traulsen" },
+  { name: "Beverage-Air" },
+  { name: "Continental" },
+  { name: "Delfield" },
+  { name: "Vulcan" },
+  { name: "Hobart" },
+  { name: "Rational" },
+  { name: "Blodgett" },
+  { name: "Garland" },
+  { name: "Southbend" },
+  { name: "Cleveland" },
+  { name: "Pitco" },
+  { name: "Frymaster" },
+  { name: "Middleby" },
+  { name: "Alto-Shaam" },
+  { name: "Hatco" },
+  { name: "Randell" },
+  { name: "Perlick" },
+  { name: "Electrolux Professional" },
+  { name: "Speed Queen" },
+  { name: "Whirlpool Commercial" },
+  { name: "Maytag Commercial" },
+]
+
+export const trustedBy = [
+  "Publix",
+  "Target",
+  "Petco",
+  "Marriott",
+  "Tesla",
+  "Boeing",
+  "Dr Pepper",
+  "Envy Massage",
+]
