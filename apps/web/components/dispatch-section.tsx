@@ -1,15 +1,27 @@
 import { CheckCircle2 } from "lucide-react"
 import { DispatchForm } from "./dispatch-form"
+import { t } from "@/lib/i18n/dict"
+import type { Locale } from "@/lib/i18n/config"
 
-const points = [
-  "Commercial service call: $89",
-  "Same-day emergency dispatch",
-  "Refrigeration, ice machines, ovens, fryers, laundry",
-  "Licensed and insured technicians",
-  "Vendor-ready: COI, multi-location reporting",
-]
+export function DispatchSection({ locale = "en" }: { locale?: Locale }) {
+  const tr = t(locale)
+  const points =
+    locale === "es"
+      ? [
+          "Llamada de servicio comercial: $89",
+          "Despacho de emergencia el mismo día",
+          "Refrigeración, máquinas de hielo, hornos, freidoras, lavandería",
+          "Técnicos con licencia y asegurados",
+          "Listos para vendors: COI, reportes multi-locación",
+        ]
+      : [
+          "Commercial service call: $89",
+          "Same-day emergency dispatch",
+          "Refrigeration, ice machines, ovens, fryers, laundry",
+          "Licensed and insured technicians",
+          "Vendor-ready: COI, multi-location reporting",
+        ]
 
-export function DispatchSection() {
   return (
     <section
       id="dispatch"
@@ -19,15 +31,13 @@ export function DispatchSection() {
         <div className="grid items-start gap-10 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div className="mb-3 text-xs font-medium uppercase tracking-wider text-primary">
-              Online Dispatch
+              {tr.sections.dispatchEyebrow}
             </div>
             <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-              Request commercial service
+              {tr.sections.dispatchTitle}
             </h2>
             <p className="mt-4 text-base text-muted-foreground">
-              Submit a dispatch request and a coordinator will follow up to
-              confirm the service window. For emergency outages, please call
-              dispatch directly.
+              {tr.sections.dispatchDescription}
             </p>
 
             <ul className="mt-8 space-y-3">
@@ -40,7 +50,7 @@ export function DispatchSection() {
             </ul>
           </div>
           <div className="lg:col-span-3">
-            <DispatchForm />
+            <DispatchForm locale={locale} />
           </div>
         </div>
       </div>

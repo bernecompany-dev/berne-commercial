@@ -17,14 +17,9 @@ import { Label } from "@workspace/ui/components/label"
 import { Card } from "@workspace/ui/components/card"
 import { services } from "@/lib/data/services"
 import { brands } from "@/lib/data/brands"
+import { t } from "@/lib/i18n/dict"
+import type { Locale } from "@/lib/i18n/config"
 import { cn } from "@workspace/ui/lib/utils"
-
-const urgencyOptions = [
-  { value: "emergency", label: "Emergency / same-day" },
-  { value: "urgent", label: "Urgent (within 24h)" },
-  { value: "scheduled", label: "Scheduled" },
-  { value: "estimate", label: "Estimate only" },
-]
 
 const selectClass =
   "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40 disabled:cursor-not-allowed disabled:opacity-50"
@@ -34,12 +29,22 @@ type Status = "idle" | "submitting" | "success" | "error"
 export function DispatchForm({
   variant = "card",
   defaults,
+  locale = "en",
 }: {
   variant?: "card" | "plain"
   defaults?: { city?: string; service?: string }
+  locale?: Locale
 }) {
+  const tr = t(locale)
   const [status, setStatus] = useState<Status>("idle")
   const [errorMsg, setErrorMsg] = useState<string>("")
+
+  const urgencyOptions = [
+    { value: "emergency", label: tr.form.urgencyEmergency },
+    { value: "urgent", label: tr.form.urgencyUrgent },
+    { value: "scheduled", label: tr.form.urgencyScheduled },
+    { value: "estimate", label: tr.form.urgencyEstimate },
+  ]
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -68,6 +73,7 @@ export function DispatchForm({
           service: String(payload.service ?? ""),
           city: String(payload.city ?? ""),
           urgency: String(payload.urgency ?? ""),
+          locale,
         })
       }
     } catch (err) {
@@ -82,10 +88,9 @@ export function DispatchForm({
         <span className="inline-flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary">
           <CheckCircle2 className="size-6" />
         </span>
-        <h3 className="text-lg font-semibold">Dispatch request received</h3>
+        <h3 className="text-lg font-semibold">{tr.form.success}</h3>
         <p className="max-w-md text-sm text-muted-foreground">
-          A dispatcher will contact you shortly to confirm the service window.
-          For emergency service, please also call our dispatch line.
+          {tr.form.successDescription}
         </p>
       </Card>
     )
@@ -99,29 +104,29 @@ export function DispatchForm({
     <Wrapper {...wrapperProps}>
       <form onSubmit={handleSubmit} className="grid gap-5">
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Contact name" name="contact" required />
-          <Field label="Phone" name="phone" type="tel" required />
+          <Field label={tr.form.contactName} name="contact" required />
+          <Field label={tr.form.phone} name="phone" type="tel" required />
         </div>
 
-        <Field label="Service address" name="address" required />
+        <Field label={tr.form.address} name="address" required />
 
         <div className="grid gap-4 sm:grid-cols-2">
           <Field
-            label="City"
+            label={tr.form.city}
             name="city"
             defaultValue={defaults?.city}
           />
-          <Field label="Email" name="email" type="email" />
+          <Field label={tr.form.email} name="email" type="email" />
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Company name" name="company" />
+          <Field label={tr.form.company} name="company" />
           <SelectField
-            label="Service type"
+            label={tr.form.service}
             name="service"
             defaultValue={defaults?.service}
+            placeholder={tr.form.selectPlaceholder}
           >
-            <option value="">Select…</option>
             {services.map((s) => (
               <option key={s.slug} value={s.slug}>
                 {s.title}
@@ -131,17 +136,23 @@ export function DispatchForm({
         </div>
 
         <div className="grid gap-4 sm:grid-cols-3">
-          <SelectField label="Brand" name="brand">
-            <option value="">Select…</option>
+          <SelectField
+            label={tr.form.brand}
+            name="brand"
+            placeholder={tr.form.selectPlaceholder}
+          >
             {brands.map((b) => (
               <option key={b.name} value={b.name}>
                 {b.name}
               </option>
             ))}
           </SelectField>
-          <Field label="Equipment model" name="model" />
-          <SelectField label="Urgency" name="urgency">
-            <option value="">Select…</option>
+          <Field label={tr.form.model} name="model" />
+          <SelectField
+            label={tr.form.urgency}
+            name="urgency"
+            placeholder={tr.form.selectPlaceholder}
+          >
             {urgencyOptions.map((u) => (
               <option key={u.value} value={u.value}>
                 {u.label}
@@ -151,31 +162,18 @@ export function DispatchForm({
         </div>
 
         <div className="grid gap-2">
-          <Label htmlFor="issue">What&apos;s happening with the equipment?</Label>
+          <Label htmlFor="issue">{tr.form.issue}</Label>
           <Textarea
             id="issue"
             name="issue"
             rows={4}
-            placeholder="Error codes, leaks, noises, last service — anything you have."
+            placeholder={tr.form.issuePlaceholder}
           />
         </div>
 
         <div className="grid gap-2">
-          <Label htmlFor="preferredTime">
-            Preferred service window (optional)
-          </Label>
-          <Input id="preferredTime" name="preferredTime" placeholder="e.g. Tomorrow before 11am" />
-        </div>
-
-        <div className="grid gap-2">
-          <Label htmlFor="upload">Photo / video of equipment (optional)</Label>
-          <input
-            id="upload"
-            name="upload"
-            type="file"
-            accept="image/*,video/*"
-            className="text-sm file:mr-3 file:rounded-md file:border-0 file:bg-muted file:px-3 file:py-2 file:text-sm file:font-medium hover:file:bg-accent"
-          />
+          <Label htmlFor="preferredTime">{tr.form.preferredTime}</Label>
+          <Input id="preferredTime" name="preferredTime" />
         </div>
 
         {status === "error" ? (
@@ -185,10 +183,7 @@ export function DispatchForm({
         ) : null}
 
         <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-muted-foreground">
-            Commercial service call: <strong>$89</strong> · Applied toward
-            approved repair
-          </p>
+          <p className="text-xs text-muted-foreground">{tr.form.serviceCallNote}</p>
           <Button
             type="submit"
             size="lg"
@@ -197,10 +192,10 @@ export function DispatchForm({
           >
             {status === "submitting" ? (
               <>
-                <Loader2 className="size-4 animate-spin" /> Sending…
+                <Loader2 className="size-4 animate-spin" /> {tr.form.submitting}
               </>
             ) : (
-              "Request Dispatch"
+              tr.form.submit
             )}
           </Button>
         </div>
@@ -245,12 +240,14 @@ function SelectField({
   required,
   children,
   defaultValue,
+  placeholder,
 }: {
   label: string
   name: string
   required?: boolean
   children: React.ReactNode
   defaultValue?: string
+  placeholder?: string
 }) {
   return (
     <div className="grid gap-2">
@@ -265,6 +262,7 @@ function SelectField({
         defaultValue={defaultValue}
         className={selectClass}
       >
+        <option value="">{placeholder ?? "—"}</option>
         {children}
       </select>
     </div>

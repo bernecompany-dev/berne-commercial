@@ -1,15 +1,18 @@
 import { brands } from "@/lib/data/brands"
 import { BrandLogo } from "./brand-logo"
 import { SectionHeading } from "./section-heading"
+import { t } from "@/lib/i18n/dict"
+import type { Locale } from "@/lib/i18n/config"
 
-export function BrandCloud() {
+export function BrandCloud({ locale = "en" }: { locale?: Locale }) {
+  const tr = t(locale)
   return (
     <section className="border-b border-border/60 bg-background py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Brands"
-          title="Commercial brands we service"
-          description="Factory-trained technicians for the brands that run commercial operations across South Florida."
+          eyebrow={tr.sections.brandsEyebrow}
+          title={tr.sections.brandsTitle}
+          description={tr.sections.brandsDescription}
           align="center"
         />
 

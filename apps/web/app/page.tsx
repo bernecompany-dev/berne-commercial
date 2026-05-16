@@ -1,5 +1,6 @@
 import { SiteNavbar } from "@/components/site-navbar"
 import { SiteFooter } from "@/components/site-footer"
+import { MobileCtaBar } from "@/components/mobile-cta-bar"
 import { Hero } from "@/components/hero"
 import { ServicesGrid } from "@/components/services-grid"
 import { IndustriesSection } from "@/components/industries-section"
@@ -44,25 +45,26 @@ const homepageFaqs = [
 export default function HomePage() {
   return (
     <>
-      <SiteNavbar />
-      <main>
-        <Hero />
-        <ServicesGrid />
-        <IndustriesSection />
-        <WhyUs />
-        <FounderSection />
-        <TeamGrid compact />
-        <BrandCloud />
-        <CredentialsSection />
-        <TrustedBy />
-        <DispatchSection />
+      <SiteNavbar locale="en" />
+      <main className="pb-20 md:pb-0">
+        <Hero locale="en" />
+        <ServicesGrid locale="en" />
+        <IndustriesSection locale="en" />
+        <WhyUs locale="en" />
+        <FounderSection locale="en" />
+        <TeamGrid compact locale="en" />
+        <BrandCloud locale="en" />
+        <CredentialsSection locale="en" />
+        <TrustedBy locale="en" />
+        <DispatchSection locale="en" />
         <FAQSection
           faqs={homepageFaqs}
           title="Commercial repair questions"
           description="Common questions from restaurants, production facilities and enterprise clients."
         />
       </main>
-      <SiteFooter />
+      <SiteFooter locale="en" />
+      <MobileCtaBar locale="en" />
       <JsonLd data={faqSchema(homepageFaqs)} />
     </>
   )

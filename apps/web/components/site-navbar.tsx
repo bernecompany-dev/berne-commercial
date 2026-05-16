@@ -5,26 +5,32 @@ import { useState } from "react"
 import { Menu, Phone, X } from "lucide-react"
 import { AnchorButton, LinkButton } from "./link-button"
 import { BrandMark } from "./brand-mark"
+import { LanguageSwitcher } from "./language-switcher"
 import { site } from "@/lib/site"
+import { t } from "@/lib/i18n/dict"
+import type { Locale } from "@/lib/i18n/config"
 import { cn } from "@workspace/ui/lib/utils"
 
-const nav = [
-  { href: "/services", label: "Services" },
-  { href: "/industries", label: "Industries" },
-  { href: "/brands", label: "Brands" },
-  { href: "/service-areas", label: "Service Areas" },
-  { href: "/become-a-client", label: "Become a Client" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-]
-
-export function SiteNavbar() {
+export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
   const [open, setOpen] = useState(false)
+  const tr = t(locale)
+  const p = locale === "es" ? "/es" : ""
+  const home = locale === "es" ? "/es" : "/"
+
+  const nav = [
+    { href: `${p}/services`, label: tr.nav.services },
+    { href: `${p}/industries`, label: tr.nav.industries },
+    { href: `${p}/brands`, label: tr.nav.brands },
+    { href: `${p}/service-areas`, label: tr.nav.serviceAreas },
+    { href: `${p}/become-a-client`, label: tr.nav.becomeClient },
+    { href: `${p}/about`, label: tr.nav.about },
+    { href: `${p}/contact`, label: tr.nav.contact },
+  ]
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center" aria-label={site.name}>
+        <Link href={home} className="flex items-center" aria-label={site.name}>
           <BrandMark />
         </Link>
 
@@ -41,12 +47,13 @@ export function SiteNavbar() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
+          <LanguageSwitcher compact />
           <AnchorButton href={site.phoneHref} variant="ghost" size="sm" className="gap-2">
             <Phone className="size-4" />
             {site.phone}
           </AnchorButton>
-          <LinkButton href="/request-dispatch" size="sm">
-            Request Dispatch
+          <LinkButton href={`${p}/request-dispatch`} size="sm">
+            {tr.cta.requestDispatch}
           </LinkButton>
         </div>
 
@@ -78,11 +85,15 @@ export function SiteNavbar() {
             </Link>
           ))}
           <div className="flex flex-col gap-2 pt-3">
+            <LanguageSwitcher />
             <AnchorButton href={site.phoneHref} variant="outline">
               <Phone className="size-4" /> {site.phone}
             </AnchorButton>
-            <LinkButton href="/request-dispatch" onClick={() => setOpen(false)}>
-              Request Dispatch
+            <LinkButton
+              href={`${p}/request-dispatch`}
+              onClick={() => setOpen(false)}
+            >
+              {tr.cta.requestDispatch}
             </LinkButton>
           </div>
         </div>

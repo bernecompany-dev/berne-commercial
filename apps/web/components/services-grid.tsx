@@ -3,6 +3,8 @@ import { ArrowUpRight } from "lucide-react"
 import { Card } from "@workspace/ui/components/card"
 import { services } from "@/lib/data/services"
 import { SectionHeading } from "./section-heading"
+import { t } from "@/lib/i18n/dict"
+import type { Locale } from "@/lib/i18n/config"
 
 const featured = [
   "commercial-refrigeration-repair",
@@ -19,7 +21,9 @@ const featured = [
   "vending-machine-repair",
 ]
 
-export function ServicesGrid() {
+export function ServicesGrid({ locale = "en" }: { locale?: Locale }) {
+  const tr = t(locale)
+  const p = locale === "es" ? "/es" : ""
   const items = featured
     .map((slug) => services.find((s) => s.slug === slug))
     .filter(Boolean) as typeof services
@@ -29,15 +33,15 @@ export function ServicesGrid() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
-            eyebrow="Services"
-            title="Commercial equipment we repair"
-            description="Refrigeration, restaurant equipment, commercial laundry and back-of-house systems — across South Florida."
+            eyebrow={tr.sections.servicesEyebrow}
+            title={tr.sections.servicesTitle}
+            description={tr.sections.servicesDescription}
           />
           <Link
-            href="/services"
+            href={`${p}/services`}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
           >
-            All services <ArrowUpRight className="size-4" />
+            {tr.sections.allServices} <ArrowUpRight className="size-4" />
           </Link>
         </div>
 
@@ -45,7 +49,7 @@ export function ServicesGrid() {
           {items.map((s) => (
             <Link
               key={s.slug}
-              href={`/services/${s.slug}`}
+              href={`${p}/services/${s.slug}`}
               className="group"
             >
               <Card className="h-full gap-3 p-5 transition-all hover:border-primary/40 hover:shadow-md">

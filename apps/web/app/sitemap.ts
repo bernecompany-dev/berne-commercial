@@ -24,6 +24,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: p === "" ? 1 : 0.7,
   }))
 
+  const esStaticPaths = ["/es", "/es/about", "/es/contact", "/es/request-dispatch"].map(
+    (p) => ({
+      url: `${base}${p}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: p === "/es" ? 0.9 : 0.6,
+    }),
+  )
+
   const serviceDetails = services.map((s) => ({
     url: `${base}/services/${s.slug}`,
     lastModified: now,
@@ -47,5 +56,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   )
 
-  return [...staticPaths, ...serviceDetails, ...cityPages, ...cityServicePages]
+  return [
+    ...staticPaths,
+    ...esStaticPaths,
+    ...serviceDetails,
+    ...cityPages,
+    ...cityServicePages,
+  ]
 }

@@ -3,6 +3,8 @@ import { ArrowUpRight } from "lucide-react"
 import { Card } from "@workspace/ui/components/card"
 import { industries } from "@/lib/data/industries"
 import { SectionHeading } from "./section-heading"
+import { t } from "@/lib/i18n/dict"
+import type { Locale } from "@/lib/i18n/config"
 
 const featured = [
   "restaurants",
@@ -15,7 +17,9 @@ const featured = [
   "warehouses",
 ]
 
-export function IndustriesSection() {
+export function IndustriesSection({ locale = "en" }: { locale?: Locale }) {
+  const tr = t(locale)
+  const p = locale === "es" ? "/es" : ""
   const items = featured
     .map((s) => industries.find((i) => i.slug === s))
     .filter(Boolean) as typeof industries
@@ -25,15 +29,15 @@ export function IndustriesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
-            eyebrow="Industries"
-            title="Built for commercial operations"
-            description="Enterprise dispatch, vendor-ready reporting and high-volume operational coverage."
+            eyebrow={tr.sections.industriesEyebrow}
+            title={tr.sections.industriesTitle}
+            description={tr.sections.industriesDescription}
           />
           <Link
-            href="/industries"
+            href={`${p}/industries`}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
           >
-            All industries <ArrowUpRight className="size-4" />
+            {tr.sections.allIndustries} <ArrowUpRight className="size-4" />
           </Link>
         </div>
 

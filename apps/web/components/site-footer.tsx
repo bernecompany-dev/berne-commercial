@@ -4,21 +4,25 @@ import { BrandMark } from "./brand-mark"
 import { site } from "@/lib/site"
 import { citiesByCounty } from "@/lib/data/cities"
 import { primaryServices } from "@/lib/data/services"
+import { t } from "@/lib/i18n/dict"
+import type { Locale } from "@/lib/i18n/config"
 
-const quick = [
-  { href: "/services", label: "Services" },
-  { href: "/industries", label: "Industries" },
-  { href: "/brands", label: "Brands" },
-  { href: "/service-areas", label: "Service Areas" },
-  { href: "/become-a-client", label: "Become a Client" },
-  { href: "/request-dispatch", label: "Request Dispatch" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-]
-
-export function SiteFooter() {
+export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
+  const tr = t(locale)
   const counties = citiesByCounty()
   const year = new Date().getFullYear()
+  const p = locale === "es" ? "/es" : ""
+
+  const quick = [
+    { href: `${p}/services`, label: tr.nav.services },
+    { href: `${p}/industries`, label: tr.nav.industries },
+    { href: `${p}/brands`, label: tr.nav.brands },
+    { href: `${p}/service-areas`, label: tr.nav.serviceAreas },
+    { href: `${p}/become-a-client`, label: tr.nav.becomeClient },
+    { href: `${p}/request-dispatch`, label: tr.nav.requestDispatch },
+    { href: `${p}/about`, label: tr.nav.about },
+    { href: `${p}/contact`, label: tr.nav.contact },
+  ]
 
   return (
     <footer className="bg-foreground text-background">
@@ -30,9 +34,9 @@ export function SiteFooter() {
               {site.name}
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-background/70">
-              Commercial equipment repair across South Florida — refrigeration,
-              restaurant equipment, ice machines and commercial laundry.
-              Enterprise dispatch and vendor-ready service.
+              {locale === "es"
+                ? "Reparación de equipo comercial en el Sur de Florida — refrigeración, equipo de restaurante, máquinas de hielo y lavandería comercial. Despacho corporativo y servicio listo para vendors."
+                : "Commercial equipment repair across South Florida — refrigeration, restaurant equipment, ice machines and commercial laundry. Enterprise dispatch and vendor-ready service."}
             </p>
 
             <ul className="mt-6 space-y-3 text-sm">
@@ -61,13 +65,13 @@ export function SiteFooter() {
 
           <div className="lg:col-span-2">
             <div className="text-xs font-semibold uppercase tracking-wider text-background/60">
-              Services
+              {tr.footer.services}
             </div>
             <ul className="mt-4 space-y-2 text-sm">
               {primaryServices.map((s) => (
                 <li key={s.slug}>
                   <Link
-                    href={`/services/${s.slug}`}
+                    href={`${p}/services/${s.slug}`}
                     className="text-background/80 hover:text-background"
                   >
                     {s.shortTitle}
@@ -79,7 +83,7 @@ export function SiteFooter() {
 
           <div className="lg:col-span-2">
             <div className="text-xs font-semibold uppercase tracking-wider text-background/60">
-              Company
+              {tr.footer.company}
             </div>
             <ul className="mt-4 space-y-2 text-sm">
               {quick.map((q) => (
@@ -97,14 +101,14 @@ export function SiteFooter() {
 
           <div className="lg:col-span-4">
             <div className="text-xs font-semibold uppercase tracking-wider text-background/60">
-              Service Areas
+              {tr.footer.serviceAreas}
             </div>
             <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1 text-xs sm:grid-cols-3">
               {counties.map((c) =>
                 c.items.slice(0, 8).map((city) => (
                   <Link
                     key={city.slug}
-                    href={`/${city.slug}`}
+                    href={`${p}/${city.slug}`}
                     className="text-background/70 hover:text-background"
                   >
                     {city.name}
@@ -113,17 +117,17 @@ export function SiteFooter() {
               )}
             </div>
             <Link
-              href="/service-areas"
+              href={`${p}/service-areas`}
               className="mt-3 inline-block text-xs font-medium text-background hover:underline"
             >
-              View all service areas →
+              {tr.footer.viewAll}
             </Link>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-background/10 pt-6 text-xs text-background/60 sm:flex-row sm:items-center">
-          <span>© {year} {site.name}. All rights reserved.</span>
-          <span>Commercial service call: {site.serviceCall}</span>
+          <span>{tr.footer.copyright(year)}</span>
+          <span>{tr.footer.serviceCall}</span>
         </div>
       </div>
     </footer>

@@ -1,20 +1,25 @@
 import Image from "next/image"
 import { team } from "@/lib/data/team"
 import { SectionHeading } from "./section-heading"
+import { t } from "@/lib/i18n/dict"
+import type { Locale } from "@/lib/i18n/config"
 
 export function TeamGrid({
   compact = false,
+  locale = "en",
 }: {
   compact?: boolean
+  locale?: Locale
 }) {
+  const tr = t(locale)
   const techs = team.filter((t) => t.role !== "Founder & Operator")
   return (
     <section className="border-b border-border/60 bg-background py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Team"
-          title="The technicians on the trucks"
-          description="Refrigeration specialists, restaurant equipment techs, ice machine and commercial laundry pros — built for the work other shops walk away from."
+          eyebrow={tr.sections.teamEyebrow}
+          title={tr.sections.teamTitle}
+          description={tr.sections.teamDescription}
           align="center"
         />
         <div

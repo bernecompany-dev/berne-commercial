@@ -22,7 +22,14 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/",
+      es: "/es",
+      "x-default": "/",
+    },
+  },
   formatDetection: { telephone: true, address: true, email: true },
   openGraph: {
     type: "website",

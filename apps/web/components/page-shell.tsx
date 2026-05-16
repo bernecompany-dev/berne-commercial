@@ -1,14 +1,21 @@
 import { SiteNavbar } from "./site-navbar"
 import { SiteFooter } from "./site-footer"
 import { MobileCtaBar } from "./mobile-cta-bar"
+import type { Locale } from "@/lib/i18n/config"
 
-export function PageShell({ children }: { children: React.ReactNode }) {
+export function PageShell({
+  children,
+  locale = "en",
+}: {
+  children: React.ReactNode
+  locale?: Locale
+}) {
   return (
     <>
-      <SiteNavbar />
+      <SiteNavbar locale={locale} />
       <main className="pb-20 md:pb-0">{children}</main>
-      <SiteFooter />
-      <MobileCtaBar />
+      <SiteFooter locale={locale} />
+      <MobileCtaBar locale={locale} />
     </>
   )
 }

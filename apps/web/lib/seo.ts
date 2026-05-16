@@ -6,23 +6,40 @@ export function metaFor({
   description,
   path = "/",
   noindex = false,
+  locale = "en",
 }: {
   title: string
   description: string
   path?: string
   noindex?: boolean
+  locale?: "en" | "es"
 }): Metadata {
   const url = `${site.url}${path}`
+  // For canonical/alternates: if path starts with /es, EN equivalent strips it.
+  const enPath = path.startsWith("/es/")
+    ? path.replace(/^\/es/, "")
+    : path.startsWith("/es")
+      ? "/"
+      : path
+  const esPath = path.startsWith("/es") ? path : `/es${path === "/" ? "" : path}`
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        en: enPath,
+        es: esPath,
+        "x-default": enPath,
+      },
+    },
     openGraph: {
       title,
       description,
       url,
       siteName: site.name,
       type: "website",
+      locale: locale === "es" ? "es_US" : "en_US",
     },
     twitter: {
       card: "summary_large_image",

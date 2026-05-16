@@ -1,8 +1,11 @@
 import Image from "next/image"
 import { Quote } from "lucide-react"
 import { site } from "@/lib/site"
+import { t } from "@/lib/i18n/dict"
+import type { Locale } from "@/lib/i18n/config"
 
-export function FounderSection() {
+export function FounderSection({ locale = "en" }: { locale?: Locale }) {
+  const tr = t(locale)
   return (
     <section className="border-b border-border/60 bg-accent/30 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -21,23 +24,14 @@ export function FounderSection() {
           </div>
           <div className="lg:col-span-7">
             <div className="mb-3 text-xs font-medium uppercase tracking-wider text-primary">
-              Founder
+              {tr.sections.founderEyebrow}
             </div>
             <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-              An engineering-built service company. We take on the hard work
-              other shops walk away from.
+              {tr.sections.founderTitle}
             </h2>
             <div className="mt-6 flex items-start gap-3 text-base text-muted-foreground sm:text-lg">
               <Quote className="mt-1 size-5 shrink-0 text-primary" />
-              <p>
-                I&apos;m an engineer by training, and so is the team I built.
-                That&apos;s why we take on the equipment most South Florida
-                shops won&apos;t — complex refrigeration loops, control-board
-                level diagnostics, commercial laundry systems, walk-in
-                rebuilds. Berne Commercial is four years old, but our
-                technicians bring up to 30 years of hands-on experience on
-                the trucks.
-              </p>
+              <p>{tr.sections.founderQuote}</p>
             </div>
             <div className="mt-8">
               <div className="text-sm font-semibold">
