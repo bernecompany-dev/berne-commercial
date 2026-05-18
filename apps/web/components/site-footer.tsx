@@ -125,7 +125,43 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-background/10 pt-6 text-xs text-background/60 sm:flex-row sm:items-center">
+        <div className="mt-12 border-t border-background/10 pt-8">
+          <div className="text-xs font-semibold uppercase tracking-wider text-background/60">
+            {locale === "es" ? "Otras divisiones de Berne" : "Other Berne divisions"}
+          </div>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            <a
+              href="https://bernerepair.com/"
+              rel="noopener"
+              className="group flex flex-col gap-1 rounded-lg border border-background/15 bg-background/5 p-4 transition-colors hover:border-background/40"
+            >
+              <span className="text-sm font-semibold text-background group-hover:underline">
+                Berne Appliance Repair →
+              </span>
+              <span className="text-xs leading-relaxed text-background/65">
+                {locale === "es"
+                  ? "Servicio residencial general en el Sur de Florida"
+                  : "General residential service across South Florida"}
+              </span>
+            </a>
+            <a
+              href="https://www.berne-repair.com/"
+              rel="noopener"
+              className="group flex flex-col gap-1 rounded-lg border border-background/15 bg-background/5 p-4 transition-colors hover:border-background/40"
+            >
+              <span className="text-sm font-semibold text-background group-hover:underline">
+                Berne Repair →
+              </span>
+              <span className="text-xs leading-relaxed text-background/65">
+                {locale === "es"
+                  ? "Reparación premium de electrodomésticos — Sub-Zero, Wolf, Viking, Miele"
+                  : "Premium appliance repair — Sub-Zero, Wolf, Viking, Miele"}
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-background/10 pt-6 text-xs text-background/60 sm:flex-row sm:items-center">
           <span>{tr.footer.copyright(year)}</span>
           <span>{tr.footer.serviceCall}</span>
         </div>

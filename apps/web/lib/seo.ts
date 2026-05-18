@@ -159,10 +159,17 @@ export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${site.url}/#organization`,
     name: site.name,
     url: site.url,
     logo: `${site.url}/opengraph-image`,
     sameAs: SAME_AS,
+    parentOrganization: {
+      "@type": "Organization",
+      "@id": "https://bernerepair.com/#organization",
+      name: "Berne Appliance Repair",
+      url: "https://bernerepair.com/",
+    },
     contactPoint: [
       {
         "@type": "ContactPoint",
