@@ -10,7 +10,7 @@ import { DispatchForm } from "@/components/dispatch-form"
 import { CityMap } from "@/components/city-map"
 import { TrustedBy } from "@/components/trusted-by"
 import { JsonLd } from "@/components/json-ld"
-import { metaFor, serviceSchema, faqSchema } from "@/lib/seo"
+import { metaFor, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import { cities, getCity, nearbyCities, COUNTIES } from "@/lib/data/cities"
 import { services, primaryServices } from "@/lib/data/services"
@@ -171,6 +171,13 @@ export default async function CityPage({ params }: Params) {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: `${site.url}/` },
+          { name: "Service Areas", url: `${site.url}/service-areas` },
+          { name: c.name, url: `${site.url}/${c.slug}` },
+        ])}
+      />
     </PageShell>
   )
 }

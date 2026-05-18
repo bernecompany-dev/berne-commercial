@@ -9,7 +9,7 @@ import { DispatchForm } from "@/components/dispatch-form"
 import { ServiceBullets } from "@/components/service-bullets"
 import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
-import { faqSchema, serviceSchema } from "@/lib/seo"
+import { faqSchema, serviceSchema, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import { getService, services } from "@/lib/data/services"
 import { localizedService } from "@/lib/data/services-es"
@@ -146,6 +146,13 @@ export default async function ServiceDetailPageES({ params }: Params) {
           description: es.summary,
           url: `${site.url}/es/services/${s.slug}`,
         })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Inicio", url: `${site.url}/es` },
+          { name: "Servicios", url: `${site.url}/es/services` },
+          { name: es.shortTitle, url: `${site.url}/es/services/${s.slug}` },
+        ])}
       />
     </PageShell>
   )

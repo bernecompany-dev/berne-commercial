@@ -12,7 +12,7 @@ import { CityMap } from "@/components/city-map"
 import { FAQSection } from "@/components/faq-section"
 import { TrustedBy } from "@/components/trusted-by"
 import { JsonLd } from "@/components/json-ld"
-import { serviceSchema, faqSchema } from "@/lib/seo"
+import { serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import { cities, getCity, nearbyCities, COUNTIES } from "@/lib/data/cities"
 import { getService, services, primaryServices } from "@/lib/data/services"
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const title = `${es.title} en ${c.name}, FL`
   return {
     title,
-    description: `Despacho de ${es.shortTitle.toLowerCase()} en ${p.corridor} de ${c.name}. ${es.summary} Llamada de servicio: ${site.serviceCall}.`,
+    description: `Despacho comercial de ${es.shortTitle.toLowerCase()} en ${c.name}, FL. Mismo día. Llamada de servicio: ${site.serviceCall}.`,
     alternates: {
       canonical: `/es/${c.slug}/${s.slug}`,
       languages: {
@@ -175,7 +175,7 @@ export default async function CityServicePageES({ params }: Params) {
         </div>
       </section>
 
-      <CityMap city={c.name} />
+      <CityMap city={c.name} locale="es" />
 
       <FAQSection
         faqs={combinedFaqs}
@@ -235,6 +235,13 @@ export default async function CityServicePageES({ params }: Params) {
         })}
       />
       <JsonLd data={faqSchema(combinedFaqs)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Inicio", url: `${site.url}/es` },
+          { name: c.name, url: `${site.url}/es/${c.slug}` },
+          { name: es.shortTitle, url: `${site.url}/es/${c.slug}/${s.slug}` },
+        ])}
+      />
     </PageShell>
   )
 }

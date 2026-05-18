@@ -12,7 +12,7 @@ import { CityMap } from "@/components/city-map"
 import { FAQSection } from "@/components/faq-section"
 import { TrustedBy } from "@/components/trusted-by"
 import { JsonLd } from "@/components/json-ld"
-import { metaFor, serviceSchema, faqSchema } from "@/lib/seo"
+import { metaFor, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import { cities, getCity, nearbyCities, COUNTIES } from "@/lib/data/cities"
 import { getService, services, primaryServices } from "@/lib/data/services"
@@ -212,6 +212,13 @@ export default async function CityServicePage({ params }: Params) {
         })}
       />
       <JsonLd data={faqSchema(combinedFaqs)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: `${site.url}/` },
+          { name: c.name, url: `${site.url}/${c.slug}` },
+          { name: s.shortTitle, url: `${site.url}/${c.slug}/${s.slug}` },
+        ])}
+      />
     </PageShell>
   )
 }

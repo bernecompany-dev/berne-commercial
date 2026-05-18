@@ -9,6 +9,7 @@ import { GoogleAnalytics } from "@/components/google-analytics"
 import {
   organizationSchema,
   localBusinessSchema,
+  websiteSchema,
 } from "@/lib/seo"
 import { site } from "@/lib/site"
 
@@ -36,8 +37,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: site.url,
     siteName: site.name,
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
-  twitter: { card: "summary_large_image" },
+  twitter: { card: "summary_large_image", images: ["/opengraph-image"] },
 }
 
 export const viewport: Viewport = {
@@ -55,6 +57,7 @@ export default function RootLayout({
         {children}
         <JsonLd data={organizationSchema()} />
         <JsonLd data={localBusinessSchema()} />
+        <JsonLd data={websiteSchema()} />
         <GoogleAnalytics />
         <SpeedInsights />
       </body>

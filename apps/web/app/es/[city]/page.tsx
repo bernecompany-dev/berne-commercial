@@ -10,7 +10,7 @@ import { DispatchForm } from "@/components/dispatch-form"
 import { CityMap } from "@/components/city-map"
 import { TrustedBy } from "@/components/trusted-by"
 import { JsonLd } from "@/components/json-ld"
-import { serviceSchema, faqSchema } from "@/lib/seo"
+import { serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import { cities, getCity, nearbyCities, COUNTIES } from "@/lib/data/cities"
 import { services, primaryServices } from "@/lib/data/services"
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const p = getCityProfileEs(c.slug) ?? cityProfileFallbackEs(c.name, c.county)
   return {
     title: `Reparación de Equipo Comercial en ${c.name}, FL`,
-    description: `Despacho comercial el mismo día en ${p.corridor} de ${c.name} — refrigeración, máquinas de hielo, equipo de restaurante, ventilación y lavandería comercial. Llamada de servicio: ${site.serviceCall}.`,
+    description: `Despacho comercial el mismo día en ${c.name}: refrigeración, hielo, restaurantes, ventilación, lavandería. Llamada de servicio: ${site.serviceCall}.`,
     alternates: {
       canonical: `/es/${c.slug}`,
       languages: {
@@ -144,7 +144,7 @@ export default async function CityPageES({ params }: Params) {
         </div>
       </section>
 
-      <CityMap city={c.name} />
+      <CityMap city={c.name} locale="es" />
 
       <TrustedBy locale="es" />
 
@@ -195,6 +195,13 @@ export default async function CityPageES({ params }: Params) {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Inicio", url: `${site.url}/es` },
+          { name: "Áreas de servicio", url: `${site.url}/es/service-areas` },
+          { name: c.name, url: `${site.url}/es/${c.slug}` },
+        ])}
+      />
     </PageShell>
   )
 }

@@ -40,11 +40,13 @@ export function metaFor({
       siteName: site.name,
       type: "website",
       locale: locale === "es" ? "es_US" : "en_US",
+      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: ["/opengraph-image"],
     },
     robots: noindex
       ? { index: false, follow: false }
@@ -55,12 +57,14 @@ export function metaFor({
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HVACBusiness"],
+    "@id": `${site.url}/#localbusiness`,
     name: site.name,
     url: site.url,
     telephone: site.phone,
     email: site.email,
     image: `${site.url}/opengraph-image`,
+    logo: `${site.url}/opengraph-image`,
     sameAs: SAME_AS,
     address: {
       "@type": "PostalAddress",
@@ -68,8 +72,12 @@ export function localBusinessSchema() {
       addressRegion: site.address.region,
       addressCountry: site.address.country,
     },
-    areaServed: ["Miami-Dade County", "Broward County", "Palm Beach County"],
-    priceRange: site.serviceCall,
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Miami-Dade County" },
+      { "@type": "AdministrativeArea", name: "Broward County" },
+      { "@type": "AdministrativeArea", name: "Palm Beach County" },
+    ],
+    priceRange: "$$",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -89,11 +97,43 @@ export function localBusinessSchema() {
   }
 }
 
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${site.url}/#website`,
+    url: site.url,
+    name: site.name,
+    inLanguage: ["en-US", "es-US"],
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${site.url}/search?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  }
+}
+
+export function breadcrumbSchema(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      item: it.url,
+    })),
+  }
+}
+
 const SAME_AS = [
-  // Affiliated sites
+  // Affiliated / sister sites (de-duped, no self-ref)
   "https://berne-repair.com",
   "https://bernerepair.com",
-  "https://berne-commercial.com",
+  "https://normarepair.com",
   // Social
   "https://www.tiktok.com/@berne.repair",
   "https://www.instagram.com/bernerepair/",
@@ -111,11 +151,8 @@ const SAME_AS = [
   "https://share.google/VCXebzL4hfcPcu3P5",
   "https://share.google/gH0RfcApFEEwD6zpy",
   "https://share.google/c2j6LHKohujVnmXge",
-  // Apple Maps
-  "https://maps.apple/p/7r_.dJpYdb5n6V",
-  // Sister sites
-  "https://bernerepair.com/",
-  "https://normarepair.com/",
+  // Apple Maps (canonical host)
+  "https://maps.apple.com/p/7r_.dJpYdb5n6V",
 ]
 
 export function organizationSchema() {

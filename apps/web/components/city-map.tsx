@@ -1,23 +1,38 @@
 import { MapPin } from "lucide-react"
+import type { Locale } from "@/lib/i18n/config"
 
-export function CityMap({ city }: { city: string }) {
+export function CityMap({
+  city,
+  locale = "en",
+}: {
+  city: string
+  locale?: Locale
+}) {
   const q = encodeURIComponent(`${city}, FL`)
   const src = `https://www.google.com/maps?q=${q}&t=&z=12&ie=UTF8&iwloc=&output=embed`
+
+  const t =
+    locale === "es"
+      ? {
+          eyebrow: "Área de servicio",
+          title: `Cobertura de despacho en ${city}`,
+          description: `Respuesta comercial el mismo día en ${city} y zonas de servicio circundantes.`,
+        }
+      : {
+          eyebrow: "Service area",
+          title: `Dispatch coverage in ${city}`,
+          description: `Same-day commercial response across ${city} and surrounding service zones.`,
+        }
 
   return (
     <section className="border-b border-border/60 bg-background py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-6 flex flex-col items-start gap-1">
           <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-primary">
-            <MapPin className="size-3.5" /> Service area
+            <MapPin className="size-3.5" /> {t.eyebrow}
           </div>
-          <h2 className="text-2xl font-semibold tracking-tight">
-            Dispatch coverage in {city}
-          </h2>
-          <p className="text-sm text-muted-foreground">
-            Same-day commercial response across {city} and surrounding service
-            zones.
-          </p>
+          <h2 className="text-2xl font-semibold tracking-tight">{t.title}</h2>
+          <p className="text-sm text-muted-foreground">{t.description}</p>
         </div>
 
         <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
