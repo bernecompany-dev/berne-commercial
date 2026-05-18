@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Mail, MapPin, Phone, ShieldCheck } from "lucide-react"
 import { BrandMark } from "./brand-mark"
+import { SocialIcons } from "./social-icons"
 import { site } from "@/lib/site"
 import { citiesByCounty } from "@/lib/data/cities"
 import { primaryServices } from "@/lib/data/services"
@@ -161,7 +162,11 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-background/10 pt-6 text-xs text-background/60 sm:flex-row sm:items-center">
+        <div className="mt-10 border-t border-background/10 pt-6">
+          <SocialIcons tone="light" locale={locale} />
+        </div>
+
+        <div className="mt-6 flex flex-col items-start justify-between gap-3 border-t border-background/10 pt-6 text-xs text-background/60 sm:flex-row sm:items-center">
           <span>{tr.footer.copyright(year)}</span>
           <span>{tr.footer.serviceCall}</span>
         </div>
