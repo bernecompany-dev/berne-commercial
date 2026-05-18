@@ -216,6 +216,308 @@ export const servicesEs: Record<string, ServiceI18n> = {
       },
     ],
   },
+  "reach-in-cooler-repair": {
+    title: "Reparación de Reach-In Cooler",
+    shortTitle: "Reach-In Coolers",
+    summary:
+      "Servicio de reach-in cooler para prep lines, bares y operaciones de back-of-house.",
+    longDescription:
+      "Berne Commercial Repair atiende reach-in coolers de True, Turbo Air, Traulsen, Continental, Delfield, Beverage-Air y otras marcas comerciales. Problemas comunes que resolvemos: drift de temperatura, falla de fan, short-cycling de compresor y fallas de control electrónico.",
+    bullets: [
+      "Servicio de compresor y condensador",
+      "Reemplazo de motor de fan de evaporador",
+      "Reemplazo de termostato y control board",
+      "Reemplazo de empaques, bisagras y manijas de puerta",
+      "Corrección de carga de refrigerante",
+    ],
+    faqs: [
+      {
+        q: "¿Atienden reach-ins True y Turbo Air en la misma visita?",
+        a: "Sí. Nuestros trucks cargan partes comunes para reach-ins True, Turbo Air, Traulsen y Beverage-Air, así que podemos completar la mayoría de reparaciones en una visita.",
+      },
+    ],
+  },
+  "reach-in-freezer-repair": {
+    title: "Reparación de Reach-In Freezer",
+    shortTitle: "Reach-In Freezers",
+    summary: "Servicio de reach-in freezer para cocinas comerciales y retail.",
+    longDescription:
+      "Atendemos reach-in freezers en todo el Sur de Florida — incluyendo unidades en configuraciones ajustadas de prep-line y merchandisers de freezer en retail y grocery. Nuestros técnicos manejan servicio de compresor, reconstrucciones de defrost, trabajo de refrigerante y reemplazo de controladores electrónicos.",
+    bullets: [
+      "Reemplazo de compresor",
+      "Servicio de calentador y timer de defrost",
+      "Detección de fugas de refrigerante y recarga",
+      "Servicio de motor de fan de evaporador",
+      "Reemplazo de sello y bisagra de puerta",
+    ],
+    faqs: [
+      {
+        q: "¿Tienen empaques de puerta de freezer-grade?",
+        a: "Sí — conseguimos empaques de fábrica y aftermarket para los reach-in freezers comerciales más comunes.",
+      },
+    ],
+  },
+  "commercial-range-repair": {
+    title: "Reparación de Ranges Comerciales",
+    shortTitle: "Ranges Comerciales",
+    summary: "Servicio de range tops y combos range/oven para cocinas comerciales.",
+    longDescription:
+      "Atendemos range tops comerciales y combinaciones range/oven de Vulcan, Garland, Southbend, Wolf y otras marcas comerciales. Trabajo común incluye reemplazo de quemadores, servicio de válvula de gas, reparación de ignición piloto y calibración de termostato de horno.",
+    bullets: [
+      "Servicio de cabeza de quemador y orificio",
+      "Servicio de piloto y módulo de ignición",
+      "Reemplazo de válvula de gas",
+      "Calibración de termostato de horno",
+    ],
+    faqs: [
+      {
+        q: "¿Atienden un range de 6 quemadores con base de horno en la misma visita?",
+        a: "Sí — la mayoría de reparaciones de combos range/oven comercial se completan en una sola visita.",
+      },
+    ],
+  },
+  "steamer-repair": {
+    title: "Reparación de Steamers Comerciales",
+    shortTitle: "Steamers",
+    summary: "Servicio de steamers de presión y convección para cocinas de producción.",
+    longDescription:
+      "Atendemos steamers de presión y convección de Cleveland, Vulcan, Garland y otras marcas comerciales. Servicio incluye control de nivel de agua, trabajo de elementos de calentamiento y válvula de gas, reemplazo de sello de puerta y descaling.",
+    bullets: [
+      "Servicio de sonda de nivel de agua",
+      "Reparación de elementos de calentamiento y válvula de gas",
+      "Servicio de sistema de descaling y limpieza",
+      "Reemplazo de sello y latch de puerta",
+    ],
+    faqs: [],
+  },
+  "prep-table-repair": {
+    title: "Reparación de Prep Tables",
+    shortTitle: "Prep Tables",
+    summary:
+      "Servicio de prep tables para sandwich, pizza y ensalada — refrigeración y eléctrica.",
+    longDescription:
+      "Las prep tables operan en ambientes calientes de cocina. Diagnosticamos drift de temperatura, falla de compresor, icing de serpentín evaporador, fallas de control board y problemas de sellos de puerta/tapa en prep tables Turbo Air, True, Continental, Beverage-Air y Delfield.",
+    bullets: [
+      "Servicio de compresor y condensador",
+      "Diagnóstico de icing de serpentín evaporador",
+      "Servicio de termostato y control board",
+      "Reemplazo de empaques de puerta y tapa",
+    ],
+    faqs: [
+      {
+        q: "Mi prep table está congelando las pans de comida — ¿cuál es la causa?",
+        a: "Típicamente un problema de ciclo de defrost, bajo refrigerante o termostato defectuoso. Diagnosticamos las tres en la primera visita.",
+      },
+    ],
+  },
+  "commercial-washer-repair": {
+    title: "Reparación de Lavadoras Comerciales",
+    shortTitle: "Lavadoras Comerciales",
+    summary: "Servicio de lavadoras comerciales front-load y top-load.",
+    longDescription:
+      "Atendemos lavadoras comerciales front-load y top-load usadas en hoteles, condominios, vivienda multi-familiar, centros de fitness e instituciones de cuidado.",
+    bullets: [
+      "Servicio de rodamiento y sello de tambor",
+      "Reemplazo de motor y correa de drive",
+      "Servicio de control board y timer",
+      "Servicio de válvula de entrada de agua y bomba de drenaje",
+    ],
+    faqs: [],
+  },
+  "commercial-dryer-repair": {
+    title: "Reparación de Secadoras Comerciales",
+    shortTitle: "Secadoras Comerciales",
+    summary: "Servicio de secadoras comerciales de gas y eléctricas.",
+    longDescription:
+      "Atendemos secadoras comerciales de gas y eléctricas — incluyendo stack dryers y unidades de alta capacidad usadas en hoteles e instituciones de cuidado.",
+    bullets: [
+      "Servicio de válvula de gas e ignición",
+      "Reemplazo de elemento de calentamiento",
+      "Diagnóstico de flujo de aire y ventilación",
+      "Servicio de correa, rodamiento de tambor y motor",
+    ],
+    faqs: [],
+  },
+  "garbage-disposal-repair": {
+    title: "Reparación de Garbage Disposals",
+    shortTitle: "Garbage Disposals",
+    summary: "Reparación y reemplazo de garbage disposals comerciales.",
+    longDescription:
+      "Atendemos y reemplazamos garbage disposals comerciales usados en restaurantes, hoteles y cocinas de producción.",
+    bullets: [
+      "Diagnóstico de jam y overload",
+      "Reemplazo de motor y impeller",
+      "Reemplazo y reinstalación",
+    ],
+    faqs: [],
+  },
+  "trash-compactor-repair": {
+    title: "Reparación de Trash Compactors",
+    shortTitle: "Trash Compactors",
+    summary: "Servicio de trash compactors comerciales.",
+    longDescription:
+      "Atendemos trash compactors comerciales para restaurantes, retail y edificios administrados por property management.",
+    bullets: [
+      "Servicio de sistema hidráulico",
+      "Reemplazo de switch y control board",
+      "Reemplazo de drum y ram",
+    ],
+    faqs: [],
+  },
+  "commercial-appliance-repair": {
+    title: "Reparación de Equipo Comercial",
+    shortTitle: "Equipos Comerciales",
+    summary:
+      "Reparación de equipo comercial whole-facility y coordinación de reemplazo.",
+    longDescription:
+      "Más allá del servicio por categoría específica, Berne Commercial Repair maneja cobertura whole-facility — incluyendo coordinación de reemplazo y gestión de vendor para edificios administrados, cadenas y franquicias.",
+    bullets: [
+      "Cobertura whole-facility",
+      "Coordinación de reemplazo",
+      "Reportes de vendor y cadena",
+    ],
+    faqs: [],
+  },
+  "slush-machine-repair": {
+    title: "Reparación de Máquinas de Slush",
+    shortTitle: "Máquinas de Slush",
+    summary:
+      "Servicio de dispensadores de bebidas congeladas y slush — refrigeración, auger, controles de viscosidad.",
+    longDescription:
+      "Los dispensadores de bebidas congeladas operan duro durante las horas pico. Atendemos el loop de refrigeración, drive de auger, controles de viscosidad y válvulas de dispensación en máquinas de slush usadas en tiendas de conveniencia, cines, restaurantes y venues de eventos.",
+    bullets: [
+      "Diagnóstico del loop de refrigeración",
+      "Servicio de drive y gearbox de auger",
+      "Ajuste de control de viscosidad",
+      "Reemplazo de válvula de dispensación",
+      "Reemplazo de sello y empaque de bowl",
+    ],
+    faqs: [],
+  },
+  "ice-cream-machine-repair": {
+    title: "Reparación de Máquinas de Helado",
+    shortTitle: "Máquinas de Helado",
+    summary:
+      "Servicio de soft-serve y batch freezer — compresor, scraper blade, mix pump.",
+    longDescription:
+      "Atendemos freezers de soft-serve y batch ice cream para restaurantes, dessert shops, hoteles y operadores de franquicia. Servicio común incluye trabajo de compresor y refrigeración, reemplazo de scraper blade y dasher, diagnóstico de mix pump, servicio de controlador electrónico y reconstrucciones de air pump.",
+    bullets: [
+      "Servicio de compresor y condensador",
+      "Reemplazo de scraper blade y dasher",
+      "Diagnóstico de mix pump",
+      "Reconstrucción de air pump",
+      "Servicio de controlador electrónico",
+    ],
+    faqs: [],
+  },
+  "pizza-prep-table-repair": {
+    title: "Reparación de Pizza Prep Tables",
+    shortTitle: "Pizza Prep Tables",
+    summary:
+      "Refrigeración de pizza prep table, sellos de tapa, motores de fan, control boards.",
+    longDescription:
+      "Las pizza prep tables están en ambientes calientes de cocina y operan continuamente. Diagnosticamos drift de temperatura, icing de serpentín evaporador, fallas de control board y problemas de sellos de puerta/tapa en prep tables de True, Turbo Air, Continental, Beverage-Air y Delfield.",
+    bullets: [
+      "Diagnóstico del loop de refrigeración",
+      "Reemplazo de bisagra, sello y empaque de tapa",
+      "Servicio de serpentín evaporador y fan",
+      "Servicio de control board y termostato",
+    ],
+    faqs: [],
+  },
+  "panini-press-repair": {
+    title: "Reparación de Panini Press y Grill de Sándwich",
+    shortTitle: "Panini Presses",
+    summary:
+      "Servicio de panini press, sandwich grill y contact grill — elementos de calentamiento, termostatos, bisagras.",
+    longDescription:
+      "Atendemos panini presses comerciales, sandwich grills y contact grills usados en cafés, sandwich shops, hoteles y restaurantes quick-service.",
+    bullets: [
+      "Reemplazo de elemento de calentamiento",
+      "Servicio de termostato y high-limit",
+      "Servicio de bisagra y resorte",
+      "Reemplazo de cable de poder y switch",
+    ],
+    faqs: [],
+  },
+  "warming-table-repair": {
+    title: "Reparación de Warming Tables y Heated Holding",
+    shortTitle: "Warming Tables",
+    summary:
+      "Heated holding cabinets, warming tables, steam tables — servicio de elementos y control.",
+    longDescription:
+      "El equipo de heated holding mantiene la comida a temperatura segura de servicio. Atendemos warming tables, steam tables, heated holding cabinets y drawer warmers — incluyendo Alto-Shaam, Hatco, Vulcan y otras marcas comerciales.",
+    bullets: [
+      "Reemplazo de elemento de calentamiento",
+      "Servicio de termostato y high-limit",
+      "Controles de nivel de agua (steam tables)",
+      "Servicio de sello y latch de puerta",
+    ],
+    faqs: [],
+  },
+  "soda-machine-repair": {
+    title: "Reparación de Máquinas de Soda y Dispensadores de Bebidas",
+    shortTitle: "Máquinas de Soda",
+    summary:
+      "Servicio de post-mix soda, jugo y dispensadores de café — carbonators, válvulas, refrigeración.",
+    longDescription:
+      "Atendemos post-mix soda machines, dispensadores de jugo, brewers de iced tea y estaciones de bebidas combinadas. Servicio común incluye reconstrucciones de carbonator, trabajo de líneas BIB (bag-in-box), servicio de válvula de dispensación, refrigeración de ice/water bath y control electrónico.",
+    bullets: [
+      "Servicio de bomba y motor de carbonator",
+      "Reemplazo de válvula de dispensación",
+      "Diagnóstico de líneas BIB y CO2",
+      "Servicio de refrigeración de ice/water bath",
+      "Diagnóstico de controlador electrónico",
+    ],
+    faqs: [],
+  },
+  "margarita-machine-repair": {
+    title: "Reparación de Máquinas de Margarita y Frozen Cocktail",
+    shortTitle: "Máquinas de Margarita",
+    summary:
+      "Servicio de dispensador de frozen cocktail — refrigeración, auger, válvulas de dispensación.",
+    longDescription:
+      "Las máquinas de frozen margarita y cocktail operan continuamente en bares y restaurantes. Atendemos el loop de refrigeración, drive de auger, control de viscosidad, válvulas de dispensación y sellos de bowl.",
+    bullets: [
+      "Servicio del sistema de refrigeración",
+      "Reemplazo de auger y gearbox",
+      "Ajuste de viscosidad y consistencia",
+      "Reemplazo de válvula de dispensación y sello de bowl",
+    ],
+    faqs: [],
+  },
+  "vending-machine-repair": {
+    title: "Reparación de Vending Machines",
+    shortTitle: "Vending Machines",
+    summary:
+      "Servicio de máquinas vending de snacks, bebidas y combo — refrigeración, bill validators, control boards.",
+    longDescription:
+      "Atendemos vending machines comerciales en oficinas, escuelas, almacenes, hospitales y edificios de condominios — máquinas refrigeradas de bebidas, máquinas de snacks y máquinas combo.",
+    bullets: [
+      "Servicio del sistema de refrigeración",
+      "Servicio de coin y bill validator",
+      "Reemplazo de vend motor y helix",
+      "Diagnóstico de control board",
+      "Servicio de puerta y cerradura",
+    ],
+    faqs: [],
+  },
+  "coffee-machine-repair": {
+    title: "Reparación de Máquinas de Café Comerciales y Brewers",
+    shortTitle: "Máquinas de Café",
+    summary:
+      "Servicio de coffee brewer, drip y pod machine para oficinas, hoteles, breakrooms y food service.",
+    longDescription:
+      "Berne Commercial Repair atiende coffee brewers comerciales, drip machines, decanter-style brewers y sistemas basados en capsule usados en oficinas, hoteles, amenities de condominios y operaciones de food-service. Servicio común incluye elementos de calentamiento, válvulas solenoides, trabajo de línea de agua y descaling, y diagnóstico de controlador electrónico.",
+    bullets: [
+      "Reemplazo de elemento de calentamiento",
+      "Servicio de válvula solenoide y línea de agua",
+      "Descaling y servicio del sistema de agua",
+      "Diagnóstico de controlador electrónico",
+      "Servicio de decanter y warmer plate",
+    ],
+    faqs: [],
+  },
 }
 
 export function getServiceI18n(slug: string): ServiceI18n | undefined {
