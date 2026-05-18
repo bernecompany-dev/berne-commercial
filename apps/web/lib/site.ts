@@ -2,7 +2,7 @@ export const site = {
   name: "Berne Commercial Repair",
   shortName: "Berne Commercial",
   domain: "berne-commercial.com",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.berne-commercial.com",
+  url: "https://www.berne-commercial.com",
   description:
     "Commercial equipment repair across South Florida — refrigeration, restaurant equipment, ice machines, commercial laundry, and enterprise dispatch.",
   phone: "(305) 520-7833",
