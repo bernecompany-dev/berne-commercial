@@ -15,20 +15,20 @@ export const walkInCoolerTemperature: Article = {
     "Traulsen",
     "refrigeration",
   ],
-  lede: "A hotel banquet chef opens the walk-in at 5:03 PM, ninety minutes before a 200-cover plated dinner, and the digital thermometer on the wall reads 46°F. The product temperature probe in the spinach is 43°F. The Florida DBPR rule is product at or below 41°F, and the kitchen manager has 90 minutes to make a call: hold the menu, swap inventory to a reach-in, or get a refrigeration tech on the dock. A walk-in cooler running warm rarely fails for one reason — it fails for a sequence of small things stacked over months. Here is the field-tested sequence.",
+  lede: "A hotel banquet chef opens the walk-in at 5:03 PM, ninety minutes before a 200-cover plated dinner, and the digital thermometer on the wall reads 46°F. The product temperature probe in the spinach reads 43. Florida DBPR rule is product at or below 41°F, and the chef has 90 minutes to make a call: hold the menu, swap inventory to a reach-in, or get a refrigeration tech on the dock. Here's the thing we've learned in fifteen years of walk-in work: a cooler running warm almost never fails for one reason. It fails for a sequence of small things stacked over months. The diagnostic sequence below is what our techs walk in with.",
   sections: [
     {
       heading: "1. First, separate a real warm box from a false reading",
       body: [
-        "Before assuming the system is broken, verify the reading. The Honeywell or Dixell controller on a True or Beverage-Air walk-in displays box temperature from a single thermistor mounted near the evaporator return air. If that thermistor has drifted (common after 5–7 years in a salt-air kitchen) or has fallen out of its clip, the display reads warm even when product is at 38°F.",
-        "A technician will hang a calibrated NIST-traceable thermocouple in the box, away from the evaporator coil, and read product-pulp temperature on three items: a jug of milk near the door, a tray in the center, and a case at the back. If those read under 41°F and the controller reads 46°F, the fix is a $40 thermistor and a recalibration, not a refrigerant call.",
+        "Before assuming the system's broken, verify the reading. The Honeywell or Dixell controller on a True or Beverage-Air walk-in displays box temperature from a single thermistor mounted near the evaporator return air. If that thermistor has drifted (common after 5–7 years in a salt-air kitchen) or fallen out of its clip, the display reads warm even when product is at 38°F.",
+        "Our tech will hang a calibrated NIST-traceable thermocouple in the box, away from the evaporator coil, and read product-pulp temperature on three items: a jug of milk near the door, a tray in the center, and a case at the back. If those all read under 41°F and the controller reads 46, the fix is a $40 thermistor and a recalibration. Not a refrigerant call. We see this misdiagnosed often enough that it's the first thing we check.",
       ],
     },
     {
       heading: "2. Door gaskets, sweeps, and infiltration load",
       body: [
         "South Florida walk-ins lose more capacity to door infiltration than anything else. A torn gasket on a 10-year-old Norlake panel or a missing kick-plate sweep on a Kolpak entrance can add 15–20 percent to the heat load. On a 90°F kitchen day with 60 percent humidity, that delta is enough to push a marginal compressor over the edge.",
-        "A flashlight test from inside the box, lights off, will show the daylight leaks. Gaskets are an $80–$200 part on a standard 36-inch swing door. Door closers and self-closing hinges on a Bohn or Heatcraft panel should snap the door shut in under 4 seconds — if it hangs open, the compressor runs continuously, the evaporator ices, and the box drifts warm during peak service.",
+        "A flashlight test from inside the box, lights off, shows the daylight leaks. Gaskets are an $80–$200 part on a standard 36-inch swing door. Door closers and self-closing hinges on a Bohn or Heatcraft panel should snap the door shut in under 4 seconds. If it hangs open, the compressor runs continuously, the evaporator ices, and the box drifts warm during peak service.",
       ],
     },
     {
@@ -41,8 +41,8 @@ export const walkInCoolerTemperature: Article = {
     {
       heading: "4. Evaporator fan motors and airflow",
       body: [
-        "A walk-in cooler depends on the evaporator fans to push cold air across the box. Bohn, Heatcraft, and Larkin evaporators run 9-watt ECM or 16-watt shaded-pole fan motors. When one of three fans seizes, total airflow drops by a third, and product nearest the failed fan starts to climb.",
-        "The check is visual and acoustic — pull the drain pan cover, look for a stalled blade, and listen for bearing noise. ECM motors fail open and read 0 RPM on the controller; shaded-pole motors usually grumble for weeks before dying. Replacement is a $120–$220 part plus 45 minutes labor.",
+        "A walk-in cooler depends on its evaporator fans to push cold air across the box. Bohn, Heatcraft, and Larkin evaporators run 9-watt ECM or 16-watt shaded-pole fan motors. When one of three fans seizes, total airflow drops by a third, and product nearest the failed fan starts to climb.",
+        "The check is visual and acoustic. Pull the drain pan cover, look for a stalled blade, listen for bearing noise. ECM motors fail open and read 0 RPM on the controller; shaded-pole motors usually grumble for weeks before dying. Replacement is a $120–$220 part plus 45 minutes labor.",
       ],
     },
     {

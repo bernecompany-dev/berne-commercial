@@ -9,20 +9,20 @@ export const commercialFryerThermostat: Article = {
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: ["fryers", "Pitco", "Frymaster", "Vulcan", "gas equipment"],
-  lede: "A line cook at a Hialeah quick-serve drops a basket of wings into the Pitco SG14, sets the timer, and the digital reads 287°F instead of climbing back to 350°F. Ten minutes later the oil is still at 290°F and the kitchen is sliding behind. A commercial fryer that won't hold temperature is either electrical, gas-flow, or thermostat — and the diagnostic order matters. Doing it wrong burns out a thermopile, costs a $180 part, and the cook still cannot serve wings.",
+  lede: "A line cook at a Hialeah quick-serve drops a basket of wings into the Pitco SG14, sets the timer, and the digital reads 287°F instead of climbing back to 350. Ten minutes later the oil's still at 290 and the kitchen's sliding behind. When a commercial fryer can't hold temperature, the cause is usually one of three things: electrical, gas-flow, or thermostat. I've watched techs jump straight to the thermopile, fry an $180 part, and the wings still don't come up. Order matters here.",
   sections: [
     {
       heading: "1. Verify the actual oil temperature with an external probe",
       body: [
-        "Start with a calibrated digital probe — a Cooper-Atkins or Thermoworks Thermapen — and submerge it next to the fryer's own probe. If the external reads 325°F and the fryer display reads 287°F, the temperature probe or controller is the fault, not the heat source. If both read 287°F, the heat source — burner, pilot, gas valve — is at fault.",
-        "On a Frymaster H50 with the FootPrint Pro controller, the probe is a Type-J thermocouple. On a Pitco SG14 with millivolt controls, the temperature is read by an analog bulb thermostat. Knowing the sensor type tells the technician which test to run first.",
+        "Start with a calibrated digital probe (a Cooper-Atkins or Thermoworks Thermapen works fine) and submerge it next to the fryer's own probe. If the external reads 325°F and the fryer display reads 287°F, the temperature probe or controller is the fault, not the heat source. If both read 287°F, the heat source is the fault — burner, pilot, or gas valve.",
+        "On a Frymaster H50 with the FootPrint Pro controller, the probe is a Type-J thermocouple. On a Pitco SG14 with millivolt controls, the temperature gets read by an analog bulb thermostat. Knowing which sensor you've got tells our techs which test to run first. We've seen a lot of $180 thermopiles wasted because somebody skipped this 90-second check.",
       ],
     },
     {
       heading: "2. Standing pilot, thermopile, and the millivolt circuit",
       body: [
-        "Standing-pilot fryers — Pitco SG14, Vulcan 1ER50, older Frymaster MJH and GF models — use a thermopile (sometimes called a pilot generator) to produce 750 millivolts that powers the gas valve and high-limit circuit. The thermopile sits in the pilot flame. A weak thermopile reads under 400 mV under load and the gas valve will not open the main burner.",
-        "The test: an analog or true RMS multimeter set to DC millivolts. Disconnect the thermopile leads at the gas valve, read open-circuit (should be 650–800 mV with a healthy pilot). Then reconnect, read across the TH-TP terminals under load with the main burner calling (should hold at 400–500 mV). Below that, replace the thermopile — about $35 in parts and a 15-minute job. A weak thermopile is the single most common cause of a Pitco SG14 that lights and then drops out mid-cook.",
+        "Standing-pilot fryers (Pitco SG14, Vulcan 1ER50, older Frymaster MJH and GF models) use a thermopile, sometimes called a pilot generator, to produce 750 millivolts that powers the gas valve and high-limit circuit. The thermopile sits in the pilot flame. A weak thermopile reads under 400 mV under load, and the gas valve won't open the main burner.",
+        "The test: an analog or true RMS multimeter set to DC millivolts. Disconnect the thermopile leads at the gas valve, read open-circuit (should be 650–800 mV with a healthy pilot). Then reconnect, read across the TH-TP terminals under load with the main burner calling (should hold at 400–500 mV). Below that, replace the thermopile. About $35 in parts and a 15-minute job. A weak thermopile is the single most common cause of a Pitco SG14 that lights and then drops out mid-cook.",
       ],
     },
     {
@@ -42,8 +42,8 @@ export const commercialFryerThermostat: Article = {
     {
       heading: "5. The gas valve itself — Honeywell, White-Rodgers, or Robertshaw",
       body: [
-        "If thermopile is strong, pilot is clean, high-limit is closed, and the gas valve still does not open the main burner, the valve is the failure. A Honeywell VR8205 or White-Rodgers 36C03 on a millivolt circuit will fail in three modes: stuck closed, leaking shut-off seat, or a failed magnet coil that needs 500+ mV to hold.",
-        "Diagnosis: with thermopile leads attached and pilot lit, jumper the TH and TR terminals on the gas valve. If the main burner lights, the valve magnet works and the controller or thermostat is the problem. If the main burner still does not light, the valve is failed. A Honeywell VR8205 replacement runs $180–$260 in parts and 45 minutes labor.",
+        "If the thermopile reads strong, the pilot's clean, the high-limit's closed, and the gas valve still won't open the main burner, the valve itself has failed. A Honeywell VR8205 or White-Rodgers 36C03 on a millivolt circuit fails in three modes: stuck closed, leaking shut-off seat, or a failed magnet coil that needs 500+ mV to hold.",
+        "Diagnosis: with thermopile leads attached and pilot lit, jumper the TH and TR terminals on the gas valve. If the main burner lights, the valve magnet works and the problem is upstream at the controller or thermostat. If the main burner stays dark, the valve's done. A Honeywell VR8205 replacement runs $180–$260 in parts and 45 minutes labor.",
       ],
     },
     {

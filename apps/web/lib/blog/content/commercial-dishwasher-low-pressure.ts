@@ -10,13 +10,13 @@ export const commercialDishwasherLowPressure: Article = {
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: ["dishwashers", "Hobart", "Jackson", "CMA", "descaling"],
-  lede: "A line cook at a Coral Gables steakhouse runs the post-service rack through a Hobart AM-15 and pulls plates that still have garlic butter streaks. The booster heater is reading 180°F on the gauge, the soap pump clicks like it should, and the temperature label on the rack reads pass — but the plates are dirty. Low wash pressure or poor wash results in a commercial dishwasher is rarely the heater and rarely the chemicals. It is almost always mechanical, and the diagnostic sequence is short.",
+  lede: "A line cook at a Coral Gables steakhouse runs the post-service rack through a Hobart AM-15 and pulls plates that still have garlic butter streaks. The booster heater reads 180°F on the gauge, the soap pump clicks like it should, and the rack's temperature label says pass. But the plates are dirty. When wash results go bad on a commercial dishwasher, it's rarely the heater and rarely the chemicals. Nine times out of ten our techs find something mechanical, and the diagnostic sequence is short.",
   sections: [
     {
       heading: "1. Confirm wash arm rotation and inspect the jets",
       body: [
-        "Run an empty rack on a wash cycle, then open the door mid-cycle and watch. The upper and lower wash arms on a Hobart AM-15, Jackson Conserver XL, or CMA EST-44L should spin freely — 60–120 RPM is typical. A stalled or slow arm means either a clogged jet pulling the arm off-balance, a worn arm bearing, or low pump output.",
-        "Pull the wash arms and look at each jet. South Florida water deposits lime scale around the jet exits in roughly 6 months on a busy dish line. Soak the arms in deliming solution for 30 minutes, then run a sewing needle through each jet. On a Hobart, the wash arm bearing is a $40 part; replacing it is 15 minutes with a flathead and snap-ring pliers.",
+        "Run an empty rack on a wash cycle, then open the door mid-cycle and watch. The upper and lower wash arms on a Hobart AM-15, Jackson Conserver XL, or CMA EST-44L should spin freely. 60 to 120 RPM is typical. A stalled or slow arm means either a clogged jet pulling the arm off-balance, a worn arm bearing, or low pump output.",
+        "Pull the wash arms and look at each jet. South Florida water deposits lime scale around the jet exits in roughly 6 months on a busy dish line. Soak the arms in deliming solution for 30 minutes, then run a sewing needle through each jet. On a Hobart, the wash arm bearing's a $40 part. Fifteen minutes with a flathead and snap-ring pliers. I've done this swap in the middle of a Saturday dinner rush; it's that quick.",
       ],
     },
     {
@@ -29,8 +29,8 @@ export const commercialDishwasherLowPressure: Article = {
     {
       heading: "3. Scale buildup on the heating elements and inside the tank",
       body: [
-        "Inside a 6-month-old commercial dishwasher in Miami, mineral scale coats every heated surface. The booster heater on a Jackson Conserver, the wash tank immersion element on a CMA EST-44L, and the rinse manifold all collect calcium and silica. Scaled elements run hot, fail early, and waste the energy you are paying NextEra for.",
-        "The descaling routine: drain the tank, fill with a deliming agent at the manufacturer concentration (Ecolab Soilmaster or Auto-Chlor Defender at the listed dosage), run a 20-minute wash cycle, drain, and rinse with clear water for 10 minutes. Hobart specifies deliming on AM-15 series every 30 days under hard-water conditions. South Florida municipal water hits 250+ ppm hardness in some service areas — that pushes descale frequency to every 2–3 weeks.",
+        "Inside a 6-month-old commercial dishwasher in Miami, mineral scale coats every heated surface. The booster heater on a Jackson Conserver, the wash tank immersion element on a CMA EST-44L, and the rinse manifold all collect calcium and silica. Scaled elements run hot, fail early, and waste the energy you're paying NextEra for.",
+        "The descaling routine: drain the tank, fill with a deliming agent at manufacturer concentration (Ecolab Soilmaster or Auto-Chlor Defender at the listed dosage), run a 20-minute wash cycle, drain, and rinse with clear water for 10 minutes. Hobart specifies deliming on AM-15 series every 30 days under hard-water conditions. South Florida municipal water hits 250+ ppm hardness in some service areas, and that pushes descale frequency closer to every 2 or 3 weeks.",
       ],
     },
     {
@@ -50,7 +50,7 @@ export const commercialDishwasherLowPressure: Article = {
     {
       heading: "6. Drain valve, drain pump, and tank water turnover",
       body: [
-        "If the wash tank holds soiled water cycle after cycle, the drain solenoid or drain pump is failing. A Hobart AM-15 uses a gravity drain with a mechanical drain valve; a CMA EST-44L conveyor uses a drain pump. When wash water carries food soils from rack to rack, the pre-rinse and pre-scrap routine has broken down — usually a busy-night shortcut by the dish porter, sometimes a failed pre-rinse spray nozzle on the disposer arm.",
+        "If the wash tank holds soiled water cycle after cycle, the drain solenoid or drain pump is failing. A Hobart AM-15 uses a gravity drain with a mechanical drain valve; a CMA EST-44L conveyor uses a drain pump. When wash water carries food soils from rack to rack, the pre-rinse and pre-scrap routine has broken down. Usually that's a busy-night shortcut by the dish porter. Sometimes it's a failed pre-rinse spray nozzle on the disposer arm.",
         "The fix is policy plus parts. Replace the pre-rinse spray valve (a $45 T&S Brass replacement), brief the dish team, and verify the drain cycles fully between racks. A small Encore disposer mounted ahead of the wash, if your line has one, prevents 80 percent of the food-soil load that ruins wash chemistry.",
       ],
     },
