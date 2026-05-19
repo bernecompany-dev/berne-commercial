@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { JsonLd } from "@/components/json-ld"
 import { GoogleAnalytics } from "@/components/google-analytics"
 import { MetaPixel } from "@/components/meta-pixel"
+import { CookieBanner } from "@/components/cookie-banner"
 import {
   organizationSchema,
   localBusinessSchema,
@@ -61,6 +62,7 @@ export default function RootLayout({
         <JsonLd data={websiteSchema()} />
         <GoogleAnalytics />
         <MetaPixel />
+        <CookieBanner />
         <SpeedInsights />
       </body>
     </html>

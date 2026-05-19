@@ -3,6 +3,7 @@ import { SiteNavbar } from "@/components/site-navbar"
 import { SiteFooter } from "@/components/site-footer"
 import { MobileCtaBar } from "@/components/mobile-cta-bar"
 import { Hero } from "@/components/hero"
+import { TrustStrip } from "@/components/trust-strip"
 import { ServicesGrid } from "@/components/services-grid"
 import { IndustriesSection } from "@/components/industries-section"
 import { WhyUs } from "@/components/why-us"
@@ -70,6 +71,7 @@ export default function HomePageES() {
       <SiteNavbar locale="es" />
       <main className="pb-20 md:pb-0">
         <Hero locale="es" />
+        <TrustStrip />
         <ServicesGrid locale="es" />
         <IndustriesSection locale="es" />
         <WhyUs locale="es" />

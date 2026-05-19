@@ -113,23 +113,47 @@ export function DispatchForm({
     <Wrapper {...wrapperProps}>
       <form onSubmit={handleSubmit} className="grid gap-5">
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field label={tr.form.contactName} name="contact" required />
-          <Field label={tr.form.phone} name="phone" type="tel" required />
+          <Field
+            label={tr.form.contactName}
+            name="contact"
+            required
+            autoComplete="name"
+          />
+          <Field
+            label={tr.form.phone}
+            name="phone"
+            type="tel"
+            required
+            autoComplete="tel"
+            inputMode="tel"
+          />
         </div>
 
-        <Field label={tr.form.address} name="address" required />
+        <Field
+          label={tr.form.address}
+          name="address"
+          required
+          autoComplete="street-address"
+        />
 
         <div className="grid gap-4 sm:grid-cols-2">
           <Field
             label={tr.form.city}
             name="city"
             defaultValue={defaults?.city}
+            autoComplete="address-level2"
           />
-          <Field label={tr.form.email} name="email" type="email" />
+          <Field
+            label={tr.form.email}
+            name="email"
+            type="email"
+            autoComplete="email"
+            inputMode="email"
+          />
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field label={tr.form.company} name="company" />
+          <Field label={tr.form.company} name="company" autoComplete="organization" />
           <SelectField
             label={tr.form.service}
             name="service"
@@ -144,52 +168,71 @@ export function DispatchForm({
           </SelectField>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-3">
-          <SelectField
-            label={tr.form.brand}
-            name="brand"
-            placeholder={tr.form.selectPlaceholder}
-          >
-            {brands.map((b) => (
-              <option key={b.name} value={b.name}>
-                {b.name}
-              </option>
-            ))}
-          </SelectField>
-          <Field label={tr.form.model} name="model" />
-          <SelectField
-            label={tr.form.urgency}
-            name="urgency"
-            placeholder={tr.form.selectPlaceholder}
-          >
-            {urgencyOptions.map((u) => (
-              <option key={u.value} value={u.value}>
-                {u.label}
-              </option>
-            ))}
-          </SelectField>
-        </div>
+        <details className="group rounded-md border border-border/60 bg-background/40 open:bg-background/60">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 text-sm font-medium text-foreground/90 hover:text-foreground">
+            <span>More details (optional)</span>
+            <span
+              className="text-xs text-muted-foreground transition-transform group-open:rotate-180"
+              aria-hidden
+            >
+              ▾
+            </span>
+          </summary>
+          <div className="space-y-4 px-4 pb-4 pt-1">
+            <div className="grid gap-4 sm:grid-cols-3">
+              <SelectField
+                label={tr.form.brand}
+                name="brand"
+                placeholder={tr.form.selectPlaceholder}
+              >
+                {brands.map((b) => (
+                  <option key={b.name} value={b.name}>
+                    {b.name}
+                  </option>
+                ))}
+              </SelectField>
+              <Field label={tr.form.model} name="model" />
+              <SelectField
+                label={tr.form.urgency}
+                name="urgency"
+                placeholder={tr.form.selectPlaceholder}
+              >
+                {urgencyOptions.map((u) => (
+                  <option key={u.value} value={u.value}>
+                    {u.label}
+                  </option>
+                ))}
+              </SelectField>
+            </div>
 
-        <div className="grid gap-2">
-          <Label htmlFor="issue">{tr.form.issue}</Label>
-          <Textarea
-            id="issue"
-            name="issue"
-            rows={4}
-            placeholder={tr.form.issuePlaceholder}
-          />
-        </div>
+            <div className="grid gap-2">
+              <Label htmlFor="issue">{tr.form.issue}</Label>
+              <Textarea
+                id="issue"
+                name="issue"
+                rows={4}
+                placeholder={tr.form.issuePlaceholder}
+              />
+            </div>
 
-        <div className="grid gap-2">
-          <Label htmlFor="preferredTime">{tr.form.preferredTime}</Label>
-          <Input id="preferredTime" name="preferredTime" />
-        </div>
+            <div className="grid gap-2">
+              <Label htmlFor="preferredTime">{tr.form.preferredTime}</Label>
+              <Input id="preferredTime" name="preferredTime" />
+            </div>
+          </div>
+        </details>
 
         {status === "error" ? (
           <p className="rounded-md border border-destructive/30 bg-destructive/5 px-3 py-2 text-sm text-destructive">
             {errorMsg || "Submission failed. Please try again."}
           </p>
         ) : null}
+
+        <p className="text-xs leading-relaxed text-muted-foreground">
+          By submitting, you agree to receive service messages from Berne
+          Commercial. Reply STOP to opt out, HELP for help. Msg &amp; data rates
+          may apply.
+        </p>
 
         <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-muted-foreground">{tr.form.serviceCallNote}</p>
@@ -219,12 +262,16 @@ function Field({
   type = "text",
   required,
   defaultValue,
+  autoComplete,
+  inputMode,
 }: {
   label: string
   name: string
   type?: string
   required?: boolean
   defaultValue?: string
+  autoComplete?: string
+  inputMode?: "text" | "tel" | "email" | "url" | "numeric" | "decimal" | "search" | "none"
 }) {
   return (
     <div className="grid gap-2">
@@ -238,6 +285,8 @@ function Field({
         type={type}
         required={required}
         defaultValue={defaultValue}
+        autoComplete={autoComplete}
+        inputMode={inputMode}
       />
     </div>
   )
