@@ -43,6 +43,9 @@ export const metadata: Metadata = {
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image", images: ["/opengraph-image"] },
+  other: {
+    "facebook-domain-verification": "i9d9nw28c7i5upydggyrouqqqx5bmq",
+  },
 }
 
 export const viewport: Viewport = {

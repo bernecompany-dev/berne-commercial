@@ -5,31 +5,42 @@ import { useEffect, useState } from "react"
 declare global {
   interface Window {
     gtag?: (...a: unknown[]) => void
+    fbq?: (...a: unknown[]) => void
   }
 }
 
 const STORAGE_KEY = "berne-consent"
 
 function applyDefaultDeny() {
-  if (typeof window === "undefined" || typeof window.gtag !== "function") return
-  window.gtag("consent", "default", {
-    ad_storage: "denied",
-    analytics_storage: "denied",
-    ad_user_data: "denied",
-    ad_personalization: "denied",
-    functionality_storage: "granted",
-    security_storage: "granted",
-  })
+  if (typeof window === "undefined") return
+  if (typeof window.gtag === "function") {
+    window.gtag("consent", "default", {
+      ad_storage: "denied",
+      analytics_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      functionality_storage: "granted",
+      security_storage: "granted",
+    })
+  }
+  if (typeof window.fbq === "function") {
+    window.fbq("consent", "revoke")
+  }
 }
 
 function applyGranted() {
-  if (typeof window === "undefined" || typeof window.gtag !== "function") return
-  window.gtag("consent", "update", {
-    ad_storage: "granted",
-    analytics_storage: "granted",
-    ad_user_data: "granted",
-    ad_personalization: "granted",
-  })
+  if (typeof window === "undefined") return
+  if (typeof window.gtag === "function") {
+    window.gtag("consent", "update", {
+      ad_storage: "granted",
+      analytics_storage: "granted",
+      ad_user_data: "granted",
+      ad_personalization: "granted",
+    })
+  }
+  if (typeof window.fbq === "function") {
+    window.fbq("consent", "grant")
+  }
 }
 
 export function CookieBanner() {
