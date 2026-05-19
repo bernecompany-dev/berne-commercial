@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next"
 import { site } from "@/lib/site"
 import { cities } from "@/lib/data/cities"
 import { primaryServices, services } from "@/lib/data/services"
+import { publishedArticles } from "@/lib/blog/articles"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url
@@ -17,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/become-a-client",
     "/request-dispatch",
     "/contact",
+    "/blog",
   ].map((p) => ({
     url: `${base}${p}`,
     lastModified: now,
@@ -34,11 +36,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/es/become-a-client",
     "/es/contact",
     "/es/request-dispatch",
+    "/es/blog",
   ].map((p) => ({
     url: `${base}${p}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
     priority: p === "/es" ? 0.9 : 0.6,
+  }))
+
+  const blogPosts = publishedArticles(now).map((a) => ({
+    url: `${base}/blog/${a.slug}`,
+    lastModified: new Date(a.updatedAt ?? a.publishedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
   }))
 
   const serviceDetails = services.map((s) => ({
@@ -90,6 +100,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPaths,
     ...esStaticPaths,
+    ...blogPosts,
     ...serviceDetails,
     ...esServiceDetails,
     ...cityPages,

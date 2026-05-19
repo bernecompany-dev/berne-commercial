@@ -21,6 +21,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
     { href: `${p}/service-areas`, label: tr.nav.serviceAreas },
     { href: `${p}/become-a-client`, label: tr.nav.becomeClient },
     { href: `${p}/request-dispatch`, label: tr.nav.requestDispatch },
+    { href: `${p}/blog`, label: locale === "es" ? "Blog" : "Blog" },
     { href: `${p}/about`, label: tr.nav.about },
     { href: `${p}/contact`, label: tr.nav.contact },
   ]
