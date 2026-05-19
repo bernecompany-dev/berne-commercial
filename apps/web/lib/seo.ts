@@ -171,6 +171,8 @@ export function organizationSchema() {
     url: site.url,
     logo: `${site.url}/opengraph-image`,
     sameAs: SAME_AS,
+    founder: { "@id": `${site.url}/#founder` },
+    foundingDate: "2015",
     parentOrganization: {
       "@type": "Organization",
       "@id": "https://bernerepair.com/#organization",
@@ -189,6 +191,26 @@ export function organizationSchema() {
   }
 }
 
+/**
+ * Standalone Person schema for Eugene Bernitsky, founder of the Berne
+ * family of brands. Emit on the homepage only — search engines stitch the
+ * node into the Organization graph via the shared #founder @id reference.
+ */
+export function founderSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${site.url}/#founder`,
+    name: "Eugene Bernitsky",
+    jobTitle: "Founder & CEO",
+    worksFor: { "@id": `${site.url}/#organization` },
+    sameAs: [
+      "https://bernerepair.com/",
+      "https://berne-repair.com/",
+    ],
+  }
+}
+
 export function serviceSchema(args: {
   name: string
   description: string
@@ -199,15 +221,29 @@ export function serviceSchema(args: {
     "@context": "https://schema.org",
     "@type": "Service",
     name: args.name,
+    serviceType: args.name,
     description: args.description,
     url: args.url,
     provider: {
       "@type": "LocalBusiness",
+      "@id": `${site.url}/#localbusiness`,
       name: site.name,
       telephone: site.phone,
       url: site.url,
     },
-    areaServed: args.city ? args.city : "South Florida",
+    areaServed: args.city
+      ? { "@type": "City", name: args.city }
+      : [
+          { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" },
+          { "@type": "AdministrativeArea", name: "Broward County, FL" },
+          { "@type": "AdministrativeArea", name: "Palm Beach County, FL" },
+        ],
+    offers: {
+      "@type": "Offer",
+      price: "89",
+      priceCurrency: "USD",
+      description: "$89 commercial service call",
+    },
   }
 }
 

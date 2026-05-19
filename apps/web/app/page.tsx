@@ -14,7 +14,7 @@ import { TrustedBy } from "@/components/trusted-by"
 import { DispatchSection } from "@/components/dispatch-section"
 import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
-import { faqSchema } from "@/lib/seo"
+import { faqSchema, founderSchema } from "@/lib/seo"
 
 const homepageFaqs = [
   {
@@ -68,6 +68,7 @@ export default function HomePage() {
       <SiteFooter locale="en" />
       <MobileCtaBar locale="en" />
       <JsonLd data={faqSchema(homepageFaqs)} />
+      <JsonLd data={founderSchema()} />
     </>
   )
 }
