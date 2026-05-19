@@ -9,6 +9,7 @@ import { GoogleAnalytics } from "@/components/google-analytics"
 import { MetaPixel } from "@/components/meta-pixel"
 import { Clarity } from "@/components/clarity"
 import { CookieBanner } from "@/components/cookie-banner"
+import { WhatsAppFab } from "@/components/whatsapp-fab"
 import {
   organizationSchema,
   localBusinessSchema,
@@ -67,6 +68,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <MetaPixel />
         <Clarity />
+        <WhatsAppFab />
         <CookieBanner />
         <SpeedInsights />
       </body>
