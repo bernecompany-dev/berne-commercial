@@ -6,6 +6,7 @@ import { cn } from "@workspace/ui/lib/utils"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { JsonLd } from "@/components/json-ld"
 import { GoogleAnalytics } from "@/components/google-analytics"
+import { MetaPixel } from "@/components/meta-pixel"
 import {
   organizationSchema,
   localBusinessSchema,
@@ -59,6 +60,7 @@ export default function RootLayout({
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
         <GoogleAnalytics />
+        <MetaPixel />
         <SpeedInsights />
       </body>
     </html>

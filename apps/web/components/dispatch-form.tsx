@@ -76,6 +76,15 @@ export function DispatchForm({
           locale,
         })
       }
+      if (typeof window !== "undefined" && typeof window.fbq === "function") {
+        window.fbq("track", "Lead", {
+          content_name: "Dispatch request",
+          content_category: String(payload.service ?? ""),
+          city: String(payload.city ?? ""),
+          urgency: String(payload.urgency ?? ""),
+          locale,
+        })
+      }
     } catch (err) {
       setStatus("error")
       setErrorMsg(err instanceof Error ? err.message : "Submission failed")
