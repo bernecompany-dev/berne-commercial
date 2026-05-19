@@ -16,7 +16,7 @@ export const espressoMachineNoPressure: Article = {
     "Rancilio",
     "cafe equipment",
   ],
-  lede: "A barista in Wynwood pulls a double off the La Marzocco Linea PB at 7:14 AM, watches the brew pressure gauge hover at 4 bars instead of the 9 it should read, and gets a pale, sour shot. The morning queue's six deep. We've fielded a hundred of these calls and the failure is almost always one of five components. A cafe operator who reads the gauges right can tell our dispatcher exactly which part to put on the truck, which saves an hour of lost service and the return trip nobody wants to pay for.",
+  lede: "A barista in Wynwood pulls a double off the La Marzocco Linea PB at 7:14 AM, watches the brew pressure gauge hover at 4 bars instead of the 9 it should read, and gets a pale, sour shot. The morning queue's six deep. We've fielded a hundred of these calls and the failure is almost always one of five components. A cafe operator who reads the gauges right can tell our dispatcher exactly which part to put on the truck, which saves an hour of lost service and the return trip nobody wants to pay for. On the espresso machines we service across Miami cafes, scale in the boiler and a stuck OPV are the failures we see month after month.",
   sections: [
     {
       heading: "1. Read both gauges first — pump and boiler",

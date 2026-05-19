@@ -17,7 +17,7 @@ export const nsfInspectorFailedReachIn: Article = {
     "Beverage-Air",
     "compliance",
   ],
-  lede: "A Florida DBPR inspector walks out of a Coral Gables bistro at 2:18 PM with a yellow copy stapled to a clipboard. The True T-49 line cooler under the prep table read 47°F on her probe — eight degrees over the 41°F maximum holding temperature. The kitchen manager has 24 to 48 hours to recover before the re-inspection, and the temptation is to dump ice on every shelf and hope. That isn't going to pass. Here's what to fix, in the order a working tech runs it, so the second visit ends with a green stamp.",
+  lede: "A Florida DBPR inspector walks out of a Coral Gables bistro at 2:18 PM with a yellow copy stapled to a clipboard. The True T-49 line cooler under the prep table read 47°F on her probe — eight degrees over the 41°F maximum holding temperature. The kitchen manager has 24 to 48 hours to recover before the re-inspection, and the temptation is to dump ice on every shelf and hope. That isn't going to pass. Here's what to fix, in the order a working tech runs it, so the second visit ends with a green stamp. In ten-plus years of South Florida service calls, our techs see the same two or three failures account for most tickets.",
   sections: [
     {
       heading: "1. Pull the model and read what the inspector actually wrote",

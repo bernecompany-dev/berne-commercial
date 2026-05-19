@@ -10,7 +10,7 @@ export const hoshizakiVsManitowocVsScotsman: Article = {
   readingMinutes: 10,
   category: "Refrigeration",
   tags: ["ice machines", "Hoshizaki", "Manitowoc", "Scotsman", "equipment selection"],
-  lede: "A restaurant group owner sits across the table in Wynwood holding three quotes — a Hoshizaki KM-660MAJ, a Manitowoc Indigo NXT IYT0620A, and a Scotsman Prodigy Elite C0830SA. All three are 650-pound class half-cube cubers, all three list within $400 of each other, and all three salesmen swore the unit will outrun the others in Miami heat. Real answer depends on what's behind the counter, who cleans it, and what the parts truck looks like at 9 PM on a Friday. Here's the working tech's read after fifteen years of South Florida ice service calls.",
+  lede: "A restaurant group owner sits across the table in Wynwood holding three quotes — a Hoshizaki KM-660MAJ, a Manitowoc Indigo NXT IYT0620A, and a Scotsman Prodigy Elite C0830SA. All three are 650-pound class half-cube cubers, all three list within $400 of each other, and all three salesmen swore the unit will outrun the others in Miami heat. Real answer depends on what's behind the counter, who cleans it, and what the parts truck looks like at 9 PM on a Friday. Here's the working tech's read after fifteen years of South Florida ice service calls. In ten-plus years of South Florida service calls, our techs see the same two or three failures account for most tickets.",
   sections: [
     {
       heading: "1. Build quality and what fails first on each brand",

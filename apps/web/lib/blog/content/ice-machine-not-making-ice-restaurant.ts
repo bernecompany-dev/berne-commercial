@@ -10,7 +10,7 @@ export const iceMachineNotMakingIce: Article = {
   readingMinutes: 9,
   category: "Refrigeration",
   tags: ["ice machines", "Hoshizaki", "Manitowoc", "Scotsman", "refrigeration"],
-  lede: "It is 11:42 on a Friday in Brickell. The bar has a 100-person wait, the server station ice bin is half full, and the kitchen porter says the Hoshizaki KM-901MAJ in the back has not dropped a slab in three hours. The general manager looks at the rinse light, then at the phone. Before that call goes out, there are eight things a competent commercial refrigeration tech will check on site — and most of them you can stage in advance so the visit takes 45 minutes instead of three hours.",
+  lede: "It's 11:42 on a Friday in Brickell. The bar has a 100-person wait, the server station ice bin is half full, and the kitchen porter says the Hoshizaki KM-901MAJ in the back hasn't dropped a slab in three hours. The general manager looks at the rinse light, then at the phone. Before that call goes out, there are eight things a competent commercial refrigeration tech will check on site — and most of them you can stage in advance so the visit takes 45 minutes instead of three hours. Our techs see hollow-cube failures and low-water faults more than any other ice-machine issue across South Florida kitchens.",
   sections: [
     {
       heading: "1. Pull the model and serial, then read the diagnostic light",
