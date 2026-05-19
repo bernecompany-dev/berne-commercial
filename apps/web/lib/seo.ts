@@ -66,6 +66,13 @@ export function localBusinessSchema() {
     image: `${site.url}/opengraph-image`,
     logo: `${site.url}/opengraph-image`,
     sameAs: SAME_AS,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.79",
+      reviewCount: 871,
+      bestRating: 5,
+      worstRating: 1,
+    },
     address: {
       "@type": "PostalAddress",
       addressLocality: site.address.locality,
