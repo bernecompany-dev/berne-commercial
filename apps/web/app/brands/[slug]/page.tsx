@@ -89,8 +89,18 @@ export default async function BrandDetailPage({ params }: Params) {
     .map((s) => INDUSTRY_PROFILES.find((i) => i.slug === s))
     .filter((x): x is IndustryProfileT => Boolean(x))
 
+  // Rank related brands by industry-overlap with the current brand so
+  // restaurants-heavy brands surface other restaurants brands, not random
+  // entries. Fallback: alphabetical order of the remaining brands.
+  const currentIndSet = new Set(b.industrySlugs)
   const relatedBrands = brandProfiles
     .filter((p) => p.slug !== b.slug)
+    .map((p) => ({
+      p,
+      overlap: p.industrySlugs.filter((s) => currentIndSet.has(s)).length,
+    }))
+    .sort((a, c) => c.overlap - a.overlap || a.p.name.localeCompare(c.p.name))
+    .map((x) => x.p)
     .slice(0, 4)
 
   return (

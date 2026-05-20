@@ -1518,3 +1518,12 @@ export function getBrandProfile(slug: string): BrandProfile | undefined {
 }
 
 export const brandProfileSlugs = brandProfiles.map((b) => b.slug)
+
+/**
+ * Return the brand profiles tagged as relevant for a given industry slug.
+ * Derived by inverting brand.industrySlugs — keeps the source of truth on
+ * the brand record so we don't drift two arrays.
+ */
+export function getBrandsForIndustry(industrySlug: string): BrandProfile[] {
+  return brandProfiles.filter((b) => b.industrySlugs.includes(industrySlug))
+}

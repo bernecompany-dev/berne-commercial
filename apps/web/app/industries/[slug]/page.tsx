@@ -15,6 +15,7 @@ import {
   INDUSTRY_PROFILES,
   getIndustryProfile,
 } from "@/lib/data/industry-profiles"
+import { getBrandsForIndustry } from "@/lib/data/brand-profiles"
 import { getService } from "@/lib/data/services"
 
 type Params = { params: Promise<{ slug: string }> }
@@ -56,6 +57,10 @@ export default async function IndustryDetailPage({ params }: Params) {
   const related = profile.relatedServices
     .map((s) => getService(s))
     .filter((s): s is NonNullable<ReturnType<typeof getService>> => Boolean(s))
+
+  // Brands relevant to this industry — inverted from brand.industrySlugs in
+  // lib/data/brand-profiles.ts so we don't maintain a parallel mapping.
+  const industryBrands = getBrandsForIndustry(profile.slug).slice(0, 5)
 
   return (
     <PageShell>
@@ -232,6 +237,42 @@ export default async function IndustryDetailPage({ params }: Params) {
           <p className="mt-4 text-muted-foreground">{profile.sameDay}</p>
         </div>
       </section>
+
+      {/* Brands we service in this industry — cross-links to /brands/[slug]
+          so industry hubs feed PageRank into brand pages and vice versa.
+          Inverted from brand.industrySlugs (single source of truth). */}
+      {industryBrands.length ? (
+        <section className="border-b border-border/60 bg-background py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-semibold tracking-tight">
+              Brands we service in {profile.industry}
+            </h2>
+            <p className="mt-2 max-w-3xl text-muted-foreground">
+              Equipment platforms our technicians actively service across
+              South Florida {profile.industry.toLowerCase()} accounts.
+            </p>
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {industryBrands.map((br) => (
+                <Link
+                  key={br.slug}
+                  href={`/brands/${br.slug}`}
+                  className="group rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40"
+                >
+                  <div className="text-base font-semibold group-hover:text-primary">
+                    {br.name}
+                  </div>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {br.teaser}
+                  </p>
+                  <div className="mt-3 text-xs font-medium uppercase tracking-wider text-primary opacity-0 transition-opacity group-hover:opacity-100">
+                    View {br.name} coverage →
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* Related services */}
       {related.length ? (
