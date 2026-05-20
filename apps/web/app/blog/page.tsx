@@ -12,7 +12,9 @@ import { publishedArticles, formatPublishDate } from "@/lib/blog/articles"
 export const revalidate = 3600
 
 export const metadata: Metadata = metaFor({
-  title: "Commercial Equipment Repair Blog — Berne Commercial",
+  // S13: title is rendered through layout template "%s · Berne Commercial
+  // Repair" (+26 chars). Keep this under 34 to stay <=60 total.
+  title: "Commercial Equipment Repair Blog",
   description:
     "Field guides for restaurant operators, hotel kitchens, and property managers — ice machines, walk-in coolers, dishwashers, espresso, fryers, and more.",
   path: "/blog",

@@ -75,7 +75,7 @@ function pickGreeting(rawPath: string): string {
   // Industry pages (/industries/<slug>) — highest priority because they pin
   // the verticals Eugene targets most.
   const industryMatch = p.match(/(?:^|\/)industries\/([a-z][a-z-]+)/)
-  if (industryMatch) {
+  if (industryMatch && industryMatch[1]) {
     const slug = industryMatch[1]
     const label = INDUSTRY_LABELS[slug]
     if (label) {

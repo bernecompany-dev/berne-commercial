@@ -22,7 +22,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Commercial Equipment Repair in South Florida`,
+    // S13: keep home <title> at <=60 chars (Google SERP cutoff).
+    default: `${site.name} · South Florida Dispatch`,
     template: `%s · ${site.name}`,
   },
   description: site.description,
