@@ -6,7 +6,7 @@ export const commercialDishwasherLowPressure: Article = {
     "Commercial Dishwasher Low Pressure or Poor Wash Results — Diagnosis",
   description:
     "Why a Hobart AM-15, Jackson Conserver, or CMA EST-44L starts pushing dirty racks — pump impellers, clogged wash jets, mineral scale, drain valves, and the descaling routine that saves the wash arms.",
-  publishedAt: "2026-06-05",
+  publishedAt: "2026-05-15",
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: ["dishwashers", "Hobart", "Jackson", "CMA", "descaling"],

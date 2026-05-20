@@ -130,10 +130,10 @@ const en: Dict = {
     eyebrow: "South Florida commercial dispatch",
     title: "Commercial Equipment Repair in South Florida",
     description:
-      "Fast dispatch for restaurants, production facilities, retail locations, commercial kitchens, property-managed buildings and enterprise clients.",
+      "Commercial emergency response across Miami-Dade, Broward, and Palm Beach — same-day dispatch, after-hours support, NDA-friendly for hotels and restaurants.",
     highlights: {
       serviceCall: "Commercial service call: $89",
-      sameDay: "Emergency same-day service",
+      sameDay: "Same-day response — emergency dispatch within hours",
       licensed: "Licensed & insured",
       refrigeration: "Refrigeration specialists",
     },
@@ -179,7 +179,7 @@ const en: Dict = {
     founderTitle:
       "An engineering-built service company. We take on the hard work other shops walk away from.",
     founderQuote:
-      "I'm an engineer by training, and so is the team I built. That's why we take on the equipment most South Florida shops won't — complex refrigeration loops, control-board level diagnostics, commercial laundry systems, walk-in rebuilds. Berne Commercial is four years old, but our technicians bring up to 30 years of hands-on experience on the trucks.",
+      "I'm an engineer by training, and so is the team I built. That's why we take on the equipment most South Florida shops won't — complex refrigeration loops, control-board level diagnostics, commercial laundry systems, walk-in rebuilds. Berne Commercial is backed by 11 years and 29,000+ services from the Berne family, with 18 technicians on the trucks today.",
   },
   form: {
     contactName: "Contact name",
@@ -272,10 +272,10 @@ const es: Dict = {
     eyebrow: "Despacho comercial del Sur de Florida",
     title: "Reparación de Equipo Comercial en el Sur de Florida",
     description:
-      "Despacho rápido para restaurantes, plantas de producción, locales comerciales, cocinas industriales, edificios administrados y clientes corporativos.",
+      "Respuesta comercial de emergencia en Miami-Dade, Broward y Palm Beach — despacho el mismo día, soporte fuera de horario, NDA-friendly para hoteles y restaurantes.",
     highlights: {
       serviceCall: "Llamada de servicio comercial: $89",
-      sameDay: "Servicio de emergencia el mismo día",
+      sameDay: "Respuesta el mismo día — despacho de emergencia en horas",
       licensed: "Con licencia y asegurado",
       refrigeration: "Especialistas en refrigeración",
     },
@@ -321,7 +321,7 @@ const es: Dict = {
     founderTitle:
       "Una empresa de servicio construida por ingenieros. Tomamos el trabajo difícil que otros talleres rechazan.",
     founderQuote:
-      "Soy ingeniero de formación, igual que el equipo que armé. Por eso tomamos el equipo que la mayoría de los talleres del Sur de Florida rechazan — loops de refrigeración complejos, diagnóstico a nivel de control board, sistemas de lavandería comercial, reconstrucciones de walk-in. Berne Commercial tiene cuatro años como empresa, pero nuestros técnicos traen hasta 30 años de experiencia práctica en los trucks.",
+      "Soy ingeniero de formación, igual que el equipo que armé. Por eso tomamos el equipo que la mayoría de los talleres del Sur de Florida rechazan — loops de refrigeración complejos, diagnóstico a nivel de control board, sistemas de lavandería comercial, reconstrucciones de walk-in. Berne Commercial está respaldado por 11 años y más de 29,000 servicios de la familia Berne, con 18 técnicos en los trucks hoy.",
   },
   form: {
     contactName: "Nombre de contacto",

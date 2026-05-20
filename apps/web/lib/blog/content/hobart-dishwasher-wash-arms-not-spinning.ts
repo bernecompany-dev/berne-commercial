@@ -6,7 +6,7 @@ export const hobartDishwasherWashArms: Article = {
     "Hobart Dishwasher Wash Arms Not Spinning — 4-Minute Diagnostic",
   description:
     "A Hobart AM-15, CRS-66A, or LXi conveyor dishwasher pushes plates through but the wash arms aren't rotating. A four-step field test on the wash pump, jet inserts, and bearing — what a tech checks before parts go on order.",
-  publishedAt: "2026-05-27",
+  publishedAt: "2026-04-29",
   readingMinutes: 8,
   category: "Restaurant Equipment",
   tags: [

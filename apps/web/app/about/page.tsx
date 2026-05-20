@@ -68,38 +68,40 @@ export default function AboutPage() {
                 We solve hard ones.
               </p>
               <p>
-                Berne Commercial is four years old as a company, but the
-                trucks carry up to 30 years of hands-on experience. Today we
-                run commercial dispatch across Miami-Dade, Broward and Palm
-                Beach for restaurants, chains, production facilities, hotels,
-                retail and property-managed buildings. Licensed, insured,
-                COI-ready, and on call for same-day emergency service.
+                Berne Commercial is backed by Berne Appliance Repair — 11
+                years in business, 18 technicians, 29,000+ services completed
+                across South Florida, and a 4.79★ aggregate rating across
+                871 reviews. Today we run commercial dispatch across
+                Miami-Dade, Broward and Palm Beach for restaurants, chains,
+                production facilities, hotels, retail and property-managed
+                buildings. Licensed, insured, COI-ready, and on call for
+                same-day emergency service.
               </p>
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-4 border-t border-border pt-6 text-sm sm:grid-cols-4">
               <div>
-                <div className="text-2xl font-semibold tracking-tight">17+</div>
+                <div className="text-2xl font-semibold tracking-tight">18</div>
                 <div className="text-xs text-muted-foreground">
                   Technicians on the road
                 </div>
               </div>
               <div>
-                <div className="text-2xl font-semibold tracking-tight">30y</div>
+                <div className="text-2xl font-semibold tracking-tight">11y</div>
                 <div className="text-xs text-muted-foreground">
-                  Senior tech experience
+                  Berne family in business
                 </div>
               </div>
               <div>
-                <div className="text-2xl font-semibold tracking-tight">3</div>
+                <div className="text-2xl font-semibold tracking-tight">29k+</div>
                 <div className="text-xs text-muted-foreground">
-                  South Florida counties
+                  Services completed
                 </div>
               </div>
               <div>
-                <div className="text-2xl font-semibold tracking-tight">24/7</div>
+                <div className="text-2xl font-semibold tracking-tight">4.79★</div>
                 <div className="text-xs text-muted-foreground">
-                  Emergency dispatch
+                  871 customer reviews
                 </div>
               </div>
             </div>

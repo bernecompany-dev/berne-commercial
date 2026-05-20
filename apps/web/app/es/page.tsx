@@ -12,6 +12,7 @@ import { FounderSection } from "@/components/founder-section"
 import { TeamGrid } from "@/components/team-grid"
 import { CredentialsSection } from "@/components/credentials-section"
 import { TrustedBy } from "@/components/trusted-by"
+import { ReviewsSection } from "@/components/reviews-section"
 import { DispatchSection } from "@/components/dispatch-section"
 import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
@@ -80,6 +81,7 @@ export default function HomePageES() {
         <BrandCloud locale="es" />
         <CredentialsSection locale="es" />
         <TrustedBy locale="es" />
+        <ReviewsSection locale="es" />
         <DispatchSection locale="es" />
         <FAQSection
           faqs={homepageFaqs}

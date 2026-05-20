@@ -5,7 +5,7 @@ export const walkInCoolerTemperature: Article = {
   title: "Walk-In Cooler Running Warm? Causes, Costs, and When to Call",
   description:
     "Why a True, Beverage-Air, or Traulsen walk-in starts climbing into the 40s — defrost faults, evaporator fan motors, refrigerant leaks, door gaskets, and what each repair actually costs.",
-  publishedAt: "2026-05-29",
+  publishedAt: "2026-05-01",
   readingMinutes: 10,
   category: "Refrigeration",
   tags: [

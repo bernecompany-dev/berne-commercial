@@ -6,7 +6,7 @@ export const hoshizakiVsManitowocVsScotsman: Article = {
     "Hoshizaki vs Manitowoc vs Scotsman — Ice Machine Selection for South Florida Humidity",
   description:
     "A working refrigeration tech's read on Hoshizaki KM, Manitowoc Indigo NXT, and Scotsman Prodigy Elite — which holds up in 90°F coastal kitchens, which parts wear first, and which manufacturer to spec for a Brickell bar versus a Hialeah QSR.",
-  publishedAt: "2026-06-03",
+  publishedAt: "2026-04-22",
   readingMinutes: 10,
   category: "Refrigeration",
   tags: ["ice machines", "Hoshizaki", "Manitowoc", "Scotsman", "equipment selection"],

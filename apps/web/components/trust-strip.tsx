@@ -21,7 +21,7 @@ export function TrustStrip() {
         </span>
         <span className="inline-flex items-center gap-2">
           <Phone className="size-4 text-primary" aria-hidden />
-          Same-day service
+          Same-day dispatch · within hours
         </span>
         <span className="hidden text-muted-foreground sm:inline" aria-hidden>
           ·

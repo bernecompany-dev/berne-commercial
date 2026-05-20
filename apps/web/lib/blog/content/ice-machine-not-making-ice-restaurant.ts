@@ -6,7 +6,7 @@ export const iceMachineNotMakingIce: Article = {
     "Restaurant Ice Machine Not Making Ice? 8 Things Your Tech Will Check",
   description:
     "A field-tested checklist for restaurant managers when a Hoshizaki, Manitowoc, or Scotsman ice machine stops producing — condenser, water filter, float switch, refrigerant temps, and harvest cycle.",
-  publishedAt: "2026-05-22",
+  publishedAt: "2026-05-08",
   readingMinutes: 9,
   category: "Refrigeration",
   tags: ["ice machines", "Hoshizaki", "Manitowoc", "Scotsman", "refrigeration"],
