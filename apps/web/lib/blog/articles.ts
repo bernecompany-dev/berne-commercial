@@ -22,6 +22,46 @@ import { espressoGroupHeadBoilerPressure } from "./content/espresso-group-head-b
 import { underbarRefrigerationFailure } from "./content/restaurant-underbar-refrigeration-failure"
 import { pizzaConveyorOvenBelt } from "./content/pizza-conveyor-oven-belt-bearing"
 import { propertyManagementMultiUnit } from "./content/property-management-multi-unit-refrigeration"
+import { hobartAm15WashArmBearing } from "./content/hobart-am15-wash-arm-bearing-replacement"
+import { restaurantKitchenDowntimeCalculator } from "./content/restaurant-kitchen-downtime-cost-calculator"
+import { vulcanVSeriesPilotSparkModule } from "./content/vulcan-v-series-pilot-spark-module-retrofit"
+import { hotelLaundrySpeedQueenContinental } from "./content/hotel-laundry-speed-queen-vs-continental-economics"
+import { trueTSeriesCondenserCoastalInland } from "./content/true-t-series-condenser-cleaning-coastal-inland"
+import { preTouristSeasonEquipmentAuditMiami } from "./content/pre-tourist-season-equipment-audit-miami"
+import { manitowocIndigoNxtIt } from "./content/manitowoc-indigo-nxt-it-series-water-hardness"
+import { laundromatWasherBearingRotation } from "./content/laundromat-washer-bearing-failure-rotation"
+import { hoshizakiKmWaterInletFlicker } from "./content/hoshizaki-km-water-inlet-flicker-diagnosis"
+import { walkInCoolerTempDriftCallOrWait } from "./content/walk-in-cooler-temperature-drift-call-or-wait"
+import { rationalIcombiProDescaling } from "./content/rational-icombi-pro-descaling-steam-generator"
+import { iceMachineBacterialHealthCode } from "./content/ice-machine-bacterial-buildup-health-code"
+import { garlandRbCharbroilerBurnerRegulator } from "./content/garland-rb-charbroiler-burner-regulator"
+import { dishwasherRinseTempSanitizing } from "./content/commercial-dishwasher-rinse-temp-sanitizing-chemical"
+import { traulsenGSeriesCompressorCoastal } from "./content/traulsen-g-series-compressor-coastal-lifespan"
+import { hurricaneSeasonPrepKitchens } from "./content/hurricane-season-prep-restaurant-kitchens"
+import { hobartClBoosterHeaterScalingMiami } from "./content/hobart-cl-booster-heater-scaling-miami"
+import { healthcareMedicalRefrigerationVaccine } from "./content/healthcare-medical-refrigeration-vaccine-compliance"
+import { vulcanLSeriesFryerTempDrift } from "./content/vulcan-l-series-fryer-temperature-drift"
+import { hoodVentGreaseTrapFireMarshall } from "./content/hood-vent-grease-trap-fire-marshall"
+import { trueGdmDoorGasketPreInspection } from "./content/true-gdm-door-gasket-pre-inspection"
+import { groceryDeliDisplayCaseHealthCallbacks } from "./content/grocery-deli-display-case-health-callbacks"
+import { manitowocNeoPreSeasonSouthFl } from "./content/manitowoc-neo-pre-season-south-fl"
+import { refrigerationLeakDetectionEpa } from "./content/refrigeration-leak-detection-epa-reporting"
+import { hoshizakiDcmCubeletSushiSeafood } from "./content/hoshizaki-dcm-cubelet-sushi-seafood"
+import { schoolCafeteriaWalkInFallPrep } from "./content/school-cafeteria-walk-in-cooler-fall-prep"
+import { rationalIcombiVsClassicRoi } from "./content/rational-icombi-vs-classic-service-roi"
+import { preHolidayCateringSurgeStressTest } from "./content/pre-holiday-catering-surge-equipment-stress-test"
+import { garlandSectionalGasPressure } from "./content/garland-sectional-range-gas-pressure-adjustment"
+import { backupGeneratorBrownoutDamage } from "./content/backup-generator-appliance-brownout-damage"
+import { traulsenRbcBlastChillerProbe } from "./content/traulsen-rbc-blast-chiller-probe-calibration"
+import { gymSmoothieBarRefrigeration } from "./content/gym-smoothie-bar-refrigeration-peak-readiness"
+import { serviceContractVsPerIncidentTco } from "./content/service-contract-vs-per-incident-tco-analysis"
+import { breweryGlycolChillerSouthFl } from "./content/brewery-glycol-chiller-south-fl-ambient"
+import { vendorManagementRestaurantsMultiEquipment } from "./content/vendor-management-restaurants-multi-equipment"
+import { countryClubBanquetEventFailurePrevention } from "./content/country-club-banquet-event-night-failure-prevention"
+import { yearEndDepreciationReplacement } from "./content/year-end-equipment-depreciation-replacement-planning"
+import { multiFamilyLaundrySpeedQueenCard } from "./content/multi-family-laundry-speed-queen-card-system"
+import { miamiRestaurantClusterVendorDensity } from "./content/miami-restaurant-cluster-vendor-density"
+import { southFlHospitalitySaltAirZone } from "./content/south-fl-hospitality-salt-air-zone-schedule"
 
 export type ArticleSection = {
   heading: string
@@ -73,6 +113,46 @@ export const articles: Article[] = [
   underbarRefrigerationFailure,
   pizzaConveyorOvenBelt,
   propertyManagementMultiUnit,
+  hobartAm15WashArmBearing,
+  restaurantKitchenDowntimeCalculator,
+  vulcanVSeriesPilotSparkModule,
+  hotelLaundrySpeedQueenContinental,
+  trueTSeriesCondenserCoastalInland,
+  preTouristSeasonEquipmentAuditMiami,
+  manitowocIndigoNxtIt,
+  laundromatWasherBearingRotation,
+  hoshizakiKmWaterInletFlicker,
+  walkInCoolerTempDriftCallOrWait,
+  rationalIcombiProDescaling,
+  iceMachineBacterialHealthCode,
+  garlandRbCharbroilerBurnerRegulator,
+  dishwasherRinseTempSanitizing,
+  traulsenGSeriesCompressorCoastal,
+  hurricaneSeasonPrepKitchens,
+  hobartClBoosterHeaterScalingMiami,
+  healthcareMedicalRefrigerationVaccine,
+  vulcanLSeriesFryerTempDrift,
+  hoodVentGreaseTrapFireMarshall,
+  trueGdmDoorGasketPreInspection,
+  groceryDeliDisplayCaseHealthCallbacks,
+  manitowocNeoPreSeasonSouthFl,
+  refrigerationLeakDetectionEpa,
+  hoshizakiDcmCubeletSushiSeafood,
+  schoolCafeteriaWalkInFallPrep,
+  rationalIcombiVsClassicRoi,
+  preHolidayCateringSurgeStressTest,
+  garlandSectionalGasPressure,
+  backupGeneratorBrownoutDamage,
+  traulsenRbcBlastChillerProbe,
+  gymSmoothieBarRefrigeration,
+  serviceContractVsPerIncidentTco,
+  breweryGlycolChillerSouthFl,
+  vendorManagementRestaurantsMultiEquipment,
+  countryClubBanquetEventFailurePrevention,
+  yearEndDepreciationReplacement,
+  multiFamilyLaundrySpeedQueenCard,
+  miamiRestaurantClusterVendorDensity,
+  southFlHospitalitySaltAirZone,
 ]
 
 export function getArticle(slug: string): Article | undefined {
