@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { Card } from "@workspace/ui/components/card"
 import { industries } from "@/lib/data/industries"
+import { INDUSTRY_PROFILE_SLUGS } from "@/lib/data/industry-profiles"
 import { SectionHeading } from "./section-heading"
 import { t } from "@/lib/i18n/dict"
 import type { Locale } from "@/lib/i18n/config"
@@ -16,6 +17,8 @@ const featured = [
   "facility-management",
   "warehouses",
 ]
+
+const PROFILE_SLUGS = new Set(INDUSTRY_PROFILE_SLUGS)
 
 export function IndustriesSection({ locale = "en" }: { locale?: Locale }) {
   const tr = t(locale)
@@ -42,24 +45,41 @@ export function IndustriesSection({ locale = "en" }: { locale?: Locale }) {
         </div>
 
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {items.map(({ slug, name, blurb, icon: Icon }) => (
-            <Card
-              key={slug}
-              className="gap-3 border-border/70 bg-card/80 p-5 backdrop-blur"
-            >
-              <span className="inline-flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Icon className="size-5" />
-              </span>
-              <div>
-                <div className="text-sm font-semibold text-foreground">
-                  {name}
+          {items.map(({ slug, name, blurb, icon: Icon }) => {
+            const card = (
+              <Card
+                className="h-full gap-3 border-border/70 bg-card/80 p-5 backdrop-blur transition group-hover:border-primary/40"
+              >
+                <span className="inline-flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <Icon className="size-5" />
+                </span>
+                <div>
+                  <div className="text-sm font-semibold text-foreground group-hover:text-primary">
+                    {name}
+                  </div>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    {blurb}
+                  </p>
                 </div>
-                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                  {blurb}
-                </p>
+              </Card>
+            )
+            if (PROFILE_SLUGS.has(slug)) {
+              return (
+                <Link
+                  key={slug}
+                  href={`${p}/industries/${slug}`}
+                  className="group block"
+                >
+                  {card}
+                </Link>
+              )
+            }
+            return (
+              <div key={slug} className="group">
+                {card}
               </div>
-            </Card>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

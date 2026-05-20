@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next"
 import { site } from "@/lib/site"
 import { cities } from "@/lib/data/cities"
 import { primaryServices, services } from "@/lib/data/services"
+import { brandProfiles } from "@/lib/data/brand-profiles"
+import { INDUSTRY_PROFILES } from "@/lib/data/industry-profiles"
 import { publishedArticles } from "@/lib/blog/articles"
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -65,6 +67,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }))
 
+  const brandPages = brandProfiles.map((b) => ({
+    url: `${base}/brands/${b.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }))
+
+  const industryPages = INDUSTRY_PROFILES.map((p) => ({
+    url: `${base}/industries/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }))
+
+  const esIndustryPages = INDUSTRY_PROFILES.map((p) => ({
+    url: `${base}/es/industries/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }))
+
   const cityPages = cities.map((c) => ({
     url: `${base}/${c.slug}`,
     lastModified: now,
@@ -103,6 +126,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogPosts,
     ...serviceDetails,
     ...esServiceDetails,
+    ...brandPages,
+    ...industryPages,
+    ...esIndustryPages,
     ...cityPages,
     ...esCityPages,
     ...cityServicePages,

@@ -1,11 +1,13 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { Quote } from "lucide-react"
+import Link from "next/link"
+import { Quote, ArrowUpRight } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
 import { TrustedBy } from "@/components/trusted-by"
 import { WhyUs } from "@/components/why-us"
 import { TeamGrid } from "@/components/team-grid"
 import { CredentialsSection } from "@/components/credentials-section"
+import { INDUSTRY_PROFILES } from "@/lib/data/industry-profiles"
 import { metaFor } from "@/lib/seo"
 import { site } from "@/lib/site"
 
@@ -142,6 +144,43 @@ export default function AboutPage() {
 
       <TeamGrid />
       <CredentialsSection />
+
+      <section className="border-b border-border/60 bg-accent/30 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <div className="text-xs font-medium uppercase tracking-wider text-primary">
+                Industries
+              </div>
+              <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+                Verticals we run dispatch for
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
+                Ten core verticals, each with a dedicated service page and
+                field-tested equipment knowledge.
+              </p>
+            </div>
+            <Link
+              href="/industries"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+            >
+              All industries <ArrowUpRight className="size-4" />
+            </Link>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-2">
+            {INDUSTRY_PROFILES.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/industries/${p.slug}`}
+                className="inline-flex items-center rounded-full border border-border/60 bg-card px-3 py-1.5 text-xs font-medium text-foreground transition hover:border-primary/40 hover:text-primary"
+              >
+                {p.industryTitle}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <WhyUs />
       <TrustedBy />
     </PageShell>
