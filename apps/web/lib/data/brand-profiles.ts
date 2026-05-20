@@ -39,6 +39,18 @@ export type BrandProfile = {
   faqs: { q: string; a: string }[]
   /** Common search keywords — used in copy & description */
   keywords: string[]
+  /** Spanish localization. If absent the EN content is used as fallback. */
+  es?: {
+    metaTitle: string
+    metaDescription: string
+    teaser: string
+    about: string
+    equipment: { series: string; description: string }[]
+    failureModes: { title: string; detail: string }[]
+    whyBerne: string
+    serviceArea: string
+    faqs: { q: string; a: string }[]
+  }
 }
 
 export const brandProfiles: BrandProfile[] = [
@@ -223,6 +235,56 @@ export const brandProfiles: BrandProfile[] = [
       "hobart slicer 2812 repair",
       "hobart commercial repair south florida",
     ],
+    es: {
+      metaTitle: "Reparación Comercial Hobart en el Sur de Florida",
+      metaDescription:
+        "Reparación de lavavajillas, batidoras y rebanadoras Hobart en Miami-Dade, Broward y Palm Beach. Series AM, CL, FT, A-200. El mismo día, $89 service call.",
+      teaser:
+        "Ware-washing AM, CL y FT, batidoras A-200 y rebanadoras 1612/2812 — restaurantes, hoteles y cocinas de alto volumen.",
+      about:
+        "Hobart Corporation es el fabricante dominante en Norteamérica de lavavajillas comerciales, batidoras planetarias y rebanadoras de alimentos, construyendo el equipo que se usa en el back-of-house de prácticamente cada restaurante full-service, hotel y cocina institucional del continente. La marca se divide en dos familias de producto que Berne atiende a diario: ware-washing — lavavajillas undercounter, door-type, conveyor y flight-type — y equipo de panadería/deli, incluyendo la legendaria batidora A-200 de 20 cuartos y las líneas de rebanadoras 1612/2812 manual y automática. Las máquinas Hobart están construidas para durar más de veinte años, que es exactamente por qué una flota envejecida en el Sur de Florida genera tantas llamadas de reparación.",
+      equipment: [
+        { series: "AM-15 / AM-15VL / AM-15VLT", description: "Lavavajillas door-type high-temp sanitizing — restaurantes, bares, coffee shops. El AM-15VL agrega la campana ventless de recuperación de calor; AM-15VLT es la variante alta para sheet pans. El elemento del booster y el balero del wash-arm son los tickets de servicio estándar en el Sur de Florida." },
+        { series: "AM-15F / AM-15T-2", description: "AM-15F es el door-type con booster integrado, AM-15T-2 la versión alta de doble enjuague. Comunes en BOH de hotel y cocinas de country club. Bomba de drenaje y solenoide del final-rinse lideran la lista de fallas." },
+        { series: "AM-16VL / AM-16-ASR / AM-16T", description: "Sucesor de la plataforma AM-15 con controles más inteligentes y el enjuague Advanced Sanitation — misma forma, mismo footprint de instalación, partes OEM ya en stock para ambas generaciones." },
+        { series: "LXeR / LXi / LXeR-2 Undercounter", description: "Lavavajillas undercounter compactos de 24\" — panaderías, cafés, cocinas pequeñas. Variantes de agua caliente y de sanitización química. El impulsor de la bomba de drenaje y el capacitor del motor de lavado son las fallas que cargamos en el camión." },
+        { series: "LXGePR / LXGeR Glasswasher", description: "Variantes glasswasher de la plataforma LX — instalaciones de bar y lounge. Brazos de lavado soft-spray con bombas de baja presión; servicio de baleros es la llamada recurrente." },
+        { series: "CL44e / CL44eN / CL54e / CL54eN", description: "Lavavajillas conveyor (de rack) — restaurantes de alto volumen, salones de banquete y commissaries de hotel empujando 200+ racks por hora. La serie eN agrega la opción de recuperación de energía. Desgaste de cortina y balero del conveyor drive son las reparaciones workhorse." },
+        { series: "CL64e / CL66e / CL66eN", description: "Lavavajillas conveyor de volumen medio — escuelas, BOH de casino, cocinas de banquete grandes de hotel. Booster, bomba de prewash y drive del pawl-bar lideran el log de servicio." },
+        { series: "CL86e / CL88e / CL88eN", description: "Lavavajillas conveyor heavy-duty para las instalaciones de banquete e institucionales más grandes. Diseños de tres tanques, booster separado, ensambles de cortina automatizados — trabajo de ciclo PM completo para las cuentas PM de Berne." },
+        { series: "FT900 / FT1000 / FT1000S Flight-Type", description: "Lavavajillas flight-type (de banda) — hospitales, BOH de casino, dining universitario, cocinas de prisión. Diseño de banda continua a 6000+ platos/hr. PRW prewash y cadena del conveyor son los componentes de mayor desgaste." },
+        { series: "ECMax / Hood-Type Door Dishwashers", description: "Máquinas hood-type Hobart en marcos europeos — usadas en independientes chef-driven y conceptos de pizza. Cable de puerta, microswitch y jet del brazo de enjuague son truck-stock estándar." },
+        { series: "A-200 / A-200T (Legacy)", description: "Batidora de banco de 20 cuartos — pizzerías, panaderías, cocinas de prep. Drive de banda, acción planetaria, partes de gearbox aún field-serviceable. La A-200T es la variante con timer." },
+        { series: "HL120 / HL200 / HL200T Legacy+", description: "Batidoras planetarias de banco de 12 y 20 cuartos — la línea moderna A-200. Manija de bowl-lift, agitador, banda de drive y baleros del gearbox son las reparaciones recurrentes." },
+        { series: "HL300 / HL400 / HL600 / HL662 Floor Mixers", description: "Batidoras de piso de 30, 40 y 60 cuartos — pizzerías, bagel shops y panaderías de alto volumen. HL662 es la variante pizza-spec con hub #12. Cable de bowl-lift y embrague planetario ven más llamadas." },
+        { series: "HL800 / HL1400 Floor Mixers", description: "Batidoras planetarias de piso de 80 y 140 cuartos para panaderías industriales y cocinas commissary. Motor de drive trifásico, gearbox planetario y ensambles de bowl-truck son las reparaciones pesadas." },
+        { series: "1612 / 1712 / 1812 Rebanadoras Manuales", description: "Rebanadoras manuales gravity-feed — delis, sandwich shops, deli de servicio de supermercado. Tracking del carriage, tensión de la cuchilla y alineación de la piedra de afilar dominan la lista de llamadas." },
+        { series: "2812 / 2912 Rebanadoras Automáticas", description: "Rebanadoras automáticas gravity-feed con carriage motorizado. Motor del carriage, transmisión y switch de fin-de-stroke son los puntos de desgaste; cargamos el kit de rebuild del gear-drive." },
+        { series: "EDGE12 / EDGE13 / Centerline / Quantum", description: "Rebanadoras compactas entry-level y tier premium — sandwich shops, prep de supermercado, líneas frías de fine-dining. Anillo de cuchilla, guarda del anillo y ensamble del sharpener son los items de servicio estándar." },
+        { series: "HCM / Buffalo Chopper", description: "Hobart HCM-450 vertical cutter mixer y el clásico chopper 84186 Buffalo — balero del bowl, sello del eje de la cuchilla y freno del motor son la lista de reparación recurrente." },
+      ],
+      failureModes: [
+        { title: "Falla de balero del brazo de lavado y enjuague (series CL y AM)", detail: "Los brazos de spray superior e inferior dejan de rotar. La mayoría de veces el balero del hub superior falla por años de química de detergente — los baleros se secan, los brazos cabecean, luego se trancan. Los vasos salen con manchas, los platos grasosos. Reconstruimos los ensambles del brazo y verificamos rotación bajo carga." },
+        { title: "Elemento del booster + trip del high-limit", detail: "La temperatura del final-rinse no llega al mínimo de 180°F de sanitización. O el elemento del booster tiene sarro y se está quemando, o el termostato high-limit dispara temprano. En el agua de la llave del Sur de Florida el booster ve la carga mineral más pesada y es casi siempre el primer punto de falla en un AM-15 de cinco años." },
+        { title: "Motor de bomba de drenaje trancado (LXe / LXi)", detail: "El tanque no drena entre ciclos. Impulsor de la bomba atascado con esquirlas de vidrio roto o etiquetas de lavado de botellas. Queja estándar de cocina que se hace pasar por falla de tarjeta de control." },
+        { title: "Gearbox planetario rasposo A-200", detail: "En la A-200 legacy el aceite del gearbox planetario se seca y los engranes piñón se astillan. Síntoma: mezclado ruidoso bajo carga de masa, dough hook cabeceando. Requiere drenar, inspeccionar, y reemplazo de engrane o balero — un trabajo que tiene que hacerse antes de que el cluster se destruya solo." },
+        { title: "Tracking de carriage de rebanadora / atasco del sharpener (1612, 2812)", detail: "Drift del carriage en rebanadoras automáticas significa que el grosor de la rebanada vaga. Las piedras del sharpener se atoran porque el residuo del wrap de deli las pega. Cleaning estándar + ajuste de carriage restaura spec." },
+        { title: "Pérdida de prime de bomba de detergente / rinse-aid", detail: "Las bombas químicas pierden prime cuando los contenedores de suministro se acaban. La tubería se gasta, las check valves se tapan. Los platos salen con película o sub-sanitizados. Reemplazable en campo; cargamos cabezas peristálticas en el camión." },
+        { title: "Falla de capacitor del motor de lavado", detail: "Motores de lavado monofásicos en modelos AM y LXe usan un capacitor de run que falla en humedad de Florida. El motor zumba pero no arranca, el breaker se cae después de unos segundos. Swap de capacitor, verificación con clamp-meter." },
+      ],
+      whyBerne:
+        "Berne Commercial Repair ha atendido equipo Hobart en el Sur de Florida por once años, con dieciocho técnicos de campo en la banca y una red de partes que incluye distribución Hobart OEM. Tenemos un AggregateRating de 4.79 en 871 reseñas, cobertura completa de general-liability y workers-comp, y entregamos COI bajo pedido para property managers y equipos de compliance de franquicia. Las reparaciones Hobart entran con brazos de lavado, elementos de booster y kits de gearbox OEM — el rebuild dura tanto como la máquina.",
+      serviceArea:
+        "Miami-Dade, Broward y Palm Beach — despacho el mismo día en fallas de ware-washing Hobart porque un dishmachine muerto cierra el piso. Cobertura corre de Homestead a Jupiter, incluyendo Miami Beach, Aventura, Hallandale, Fort Lauderdale, Boca Raton, Delray y West Palm.",
+      faqs: [
+        { q: "¿Reparan lavavajillas Hobart comerciales el mismo día en Miami?", a: "Sí. Nuestro despacho pone un técnico entrenado en Hobart on-site el mismo día hábil en Miami-Dade, Broward y Palm Beach. Fallas de elemento del booster, atascos de bomba de drenaje y baleros del wash-arm están stocked en el camión." },
+        { q: "¿Pueden atender batidoras A-200 legacy? Las partes son cada vez más difíciles.", a: "Sí. Atendemos batidoras A-200 y HL200 de 20 cuartos incluyendo rebuilds de gearbox, bandas de drive, baleros planetarios, ejes de agitador y switch packs. Las partes OEM todavía están en producción vía Hobart Service Parts." },
+        { q: "¿Cuánto cuesta un service call comercial Hobart?", a: "Nuestro service call comercial es $89, que cubre viaje y diagnóstico. La cuota se aplica a la reparación aprobada cuando el trabajo se autoriza en la misma visita." },
+        { q: "¿Manejan reemplazo y afilado de cuchilla Hobart?", a: "Sí — reemplazo de cuchilla, alineación de piedra de sharpening, tracking de carriage y servicio de motor en líneas de rebanadora 1612, 2812, EDGE13 y CenterLine. También podemos reconstruir el gear drive en modelos automáticos." },
+        { q: "¿Sus partes Hobart son OEM?", a: "Default es partes Hobart OEM — brazos de lavado, booster heaters, motores, gearboxes, control boards. Cotizaremos una alternativa aftermarket de calidad en partes commodity (mangueras, fittings, fusibles) cuando el cliente lo pida." },
+        { q: "¿Proveen COI y W-9 para property managers y vendors de franquicia?", a: "Sí — General Liability, Workers Comp y Auto en un solo COI, más W-9 y documentación de licencia EPA de refrigerante. Disponible bajo /credentials/." },
+      ],
+    },
   },
   {
     slug: "vulcan",
@@ -399,6 +461,48 @@ export const brandProfiles: BrandProfile[] = [
       "vulcan salamander service",
       "vulcan commercial repair south florida",
     ],
+    es: {
+      metaTitle: "Reparación Comercial Vulcan Estufas y Freidoras Miami",
+      metaDescription:
+        "Reparación comercial Vulcan de estufas, salamandras, freidoras y hot-tops en el Sur de Florida. V-series, EV, MSA, freidoras LG. Despacho el mismo día, técnicos gas-certified.",
+      teaser:
+        "Estufas V-series, salamandras, hot tops y freidoras LG — líneas de restaurante, cocinas de banquete y rebuilds de ghost-kitchen.",
+      about:
+        "Vulcan, parte del ITW Food Equipment Group junto con Hobart, fabrica equipo de cocción comercial heavy-duty — estufas de restaurante, salamandras, broilers, freidoras, hot tops, charbroilers y hornos combi. La marca está en el tier workhorse de las cocinas comerciales: ni la más barata, ni la más exótica, simplemente el equipo que la mayoría de cocineros de línea realmente ha corrido por diez años. Las reparaciones Vulcan se concentran en problemas de gas-train, termocoples e ignición de piloto que la humedad de Florida acelera.",
+      equipment: [
+        { series: "V36 / V60 / V72 V-Series Value", description: "Estufas de gas de restaurante V-Series de 36\", 60\" y 72\" — el workhorse price-sensitive en cada línea casual del Sur de Florida. Termocople de piloto y safety valve del horno son los tickets recurrentes." },
+        { series: "SX36-6B / SX60-10B SX Series", description: "Estufas value SX-Series de acero inox de 36\" 6-burner y 60\" 10-burner con base de horno estándar. Orificio del quemador, tubo del piloto y termostato del horno se cargan en el camión." },
+        { series: "36SS-6B / 60SS-10B Endurance", description: "Bases de estufa heavy-duty Endurance de 36\" y 60\" con dos hornos estándar en el modelo de 60\" — cocinas de banquete, country clubs, cocklines de hotel." },
+        { series: "EV12 / EV24 / EV36 Endurance Modular", description: "Hot tops, charbroilers, secciones open-burner y módulos de griddle modulares de 12\", 24\" y 36\" — líneas de restaurante de gama alta y cocinas de banquete grandes. Servicio común: limpieza de orificio y re-leveling modular." },
+        { series: "VTEC25 / VTEC36 Griddles Termostáticos", description: "Griddles termostáticos heavy-duty con sensing bajo plato — plataformas de breakfast, conceptos diner. Falla de termostato por zona produce la queja clásica de hot-spot." },
+        { series: "VCRH25 / VCRH36 / VCRH48 Radiant Charbroilers", description: "Charbroilers radiantes de gas de 25\", 36\" y 48\" — staple de steakhouse y burger. Radiantes cerámicos reemplazados como matched set después de daño por grease-fire." },
+        { series: "VSX24 / VSX36 / VSX48 Salamandras", description: "Salamandras finisher de infrarrojo wall-mount, anchos 24/36/48\". Emisor cerámico de infrarrojo y solenoide de válvula de gas son las fallas estándar." },
+        { series: "MSA72 / MSA85 Salamandras Ajustables", description: "Salamandras de gas ajustables verticalmente, wall o shelf-mount. Cable de lift-rail y polea de contrapeso se gastan antes que el quemador." },
+        { series: "LG300 / LG400 / LG500 Freidoras de Gas", description: "Freidoras de piso open-pot de 35/45/65 lb con controles millivolt o solid-state — la familia value de Vulcan. Termostato high-limit y válvula de gas dominan el call book." },
+        { series: "MLG14 / MLG18 / MLG22 Master Fryer", description: "Freidoras Master de gas en capacidades 50, 65 y 85 lb — líneas de freidora battery-built en QSR y BOH de hotel. Reparaciones de válvula de drenaje, bomba de filtro y blower de combustión." },
+        { series: "VC44 / VC55 / VC66 Hornos de Convección", description: "Hornos de convección de gas single y double-stack — panaderías, restaurantes, country clubs. Balero del blower motor, módulo de ignición y switch de puerta son las reparaciones estándar." },
+      ],
+      failureModes: [
+        { title: "Falla de termocople de piloto (horno base V-series)", detail: "El piloto del horno enciende pero el quemador principal no dispara — el termocople ha drifteado abajo del umbral de 20mV. Falla estándar del Sur de Florida en hornos V-series de cinco-plus años donde el vapor y la grasa han ciclado el circuito millivolt. Reemplazar, verificar drop de millivolt bajo carga." },
+        { title: "Hot-top con calor desparejo", detail: "El frente del hot top quema la comida, el atrás se queda frío. La causa casi siempre es un orificio del quemador parcialmente tapado o una placa pandeada que ya no hace contacto. Sacamos la placa, repasamos los orificios y re-nivelamos la sección a spec." },
+        { title: "Malfunción del melt-cycle de freidora LG", detail: "Las freidoras LG-series no salen de modo melt — el high-limit o termostato del melt-cycle está mal-leyendo. En modelos millivolt la válvula de safety se está cayendo; en solid-state verificamos resistencia del probe y lógica del control board antes de cambiar partes." },
+        { title: "Salamandra con cerámico de infrarrojo agrietado", detail: "Salamandras VSAL/MSA usan emisores cerámicos de infrarrojo que se agrietan por eventos de ignición de grasa. Resultado: zonas muertas en la superficie de finisher. Reemplazamos emisores como set para mantener perfil de calor parejo." },
+        { title: "Drop-out del solenoide de válvula de gas", detail: "Los quemadores encienden, corren un minuto, luego se caen. Bobina del solenoide en la válvula de gas principal está sobrecalentando por años de ciclo. Verificar con multímetro, swap de válvula, leak-test de joints con detector de gas combustible." },
+        { title: "Trancada de drain ball-valve de freidora", detail: "Las drain ball valves en freidoras LG y MLG se trancan por shortening solidificado cuando la cocina deja enfriar el aceite dentro de la válvula. Reconstruimos en vez de reemplazar donde sea posible, restaurando full drain stroke." },
+      ],
+      whyBerne:
+        "Las reparaciones Vulcan son trabajo de gas, entonces necesitan un técnico que pueda sacar una lectura de manómetro, verificar combustión bajo carga y respaldar el leak test. Berne Commercial Repair corre dieciocho técnicos, EPA-licensed donde se requiere y todos bajo un solo COI con General Liability y Workers Comp. Tenemos once años en líneas del Sur de Florida, un AggregateRating de 4.79 en 871 reseñas, y una política de partes que por defecto va a termocoples, válvulas de gas y quemadores Vulcan OEM. Despacho el mismo día cuando una estufa Vulcan se cae en servicio.",
+      serviceArea:
+        "Miami-Dade, Broward y Palm Beach — Doral, Hialeah, Miami Beach, Aventura, Hallandale, Fort Lauderdale, Boca Raton, Delray, West Palm. El mismo día para cocinas que no pueden sacar lunch sin la range battery.",
+      faqs: [
+        { q: "¿Atienden estufas Vulcan V-series en Miami el mismo día?", a: "Sí. Despacho el mismo día en Miami-Dade, Broward y Palm Beach. Termocoples de piloto, válvulas de gas, quemadores de hot-top y calibración de horno están stocked en el camión para V-series." },
+        { q: "¿Pueden reparar freidoras LG-series bajo el sistema millivolt safety?", a: "Sí. LG300, LG400 y LG500 variantes millivolt y solid-state — termostatos high-limit, controles de melt-cycle, válvulas de gas, válvulas de drenaje y elementos." },
+        { q: "¿Sus técnicos hacen el leak test de gas después de la reparación?", a: "Siempre. Cada reparación Vulcan que toca el gas-train termina con un leak test con detector de gas combustible en todos los joints abiertos y verificación con manómetro de presión de suministro bajo carga de quemador." },
+        { q: "¿Cuánto cuesta el service call Vulcan comercial?", a: "Nuestro service call comercial es $89, aplicado a la reparación aprobada cuando el cliente autoriza el trabajo en la misma visita." },
+        { q: "¿Reemplazan emisores de infrarrojo de salamandra Vulcan?", a: "Sí. Emisores VSAL, MSA y Endurance se reemplazan como matched set para que la distribución de calor se mantenga pareja en la superficie." },
+        { q: "¿Pueden proveer un COI nombrando a nuestro property management?", a: "Sí — emitimos COIs con endorsements de additional-insured para property managers, redes de vendor de franquicia y programas de facility-management. Documentación vive bajo /credentials/." },
+      ],
+    },
   },
   {
     slug: "true",
@@ -585,6 +689,47 @@ export const brandProfiles: BrandProfile[] = [
       "true GDM merchandiser service",
       "true commercial refrigeration south florida",
     ],
+    es: {
+      metaTitle: "Reparación Refrigeración Comercial True — Sur de Florida",
+      metaDescription:
+        "Reparación de refrigeradores True comerciales en el Sur de Florida — T-series reach-ins, prep tables TSSU, merchandisers GDM. El mismo día, EPA-certified, $89.",
+      teaser:
+        "Reach-ins T-series, prep tables TSSU/TWT y merchandisers de puerta de vidrio GDM — restaurantes, bares, c-stores y panaderías.",
+      about:
+        "True Manufacturing construye el grueso de la flota de refrigeración comercial que Berne ve en el Sur de Florida — coolers y freezers reach-in, mesas de prep, merchandisers de puerta de vidrio, coolers back-bar y vitrinas de display. La ingeniería de la marca es conservadora y serviceable: coils cobre-aluminio, compresores estándar Embraco/Tecumseh, compartimentos eléctricos accesibles. Esa serviceability es exactamente por qué el equipo True corre diez-a-quince años en el calor de Florida — y por qué una estrategia de repair-first le gana a reemplazo en casi cada llamada.",
+      equipment: [
+        { series: "T-12 / T-19 Reach-In Compactos", description: "Reach-ins compactos de una puerta para cocinas apretadas, back de bar y estaciones de espresso — compresor Embraco, capilar, defrost simple. Empaque de puerta y relé de start son los items estándar." },
+        { series: "T-23 / T-23-HC Reach-In de Una Puerta", description: "Coolers de altura completa de una puerta — la unidad más instalada en cada restaurante del Sur de Florida. La variante -HC es la plataforma post-2017 con carga de hidrocarburo. Carga de grasa en el coil del condensador y drop del cartucho de puerta son los tickets recurrentes." },
+        { series: "T-49 / T-49-HC Reach-In de Dos Puertas", description: "Coolers reach-in de dos puertas altura completa — cada BOH de pizza a fine dining. La queja de top-shelf caliente casi siempre es motor de evap fan o carga del coil." },
+        { series: "T-72 / T-72-HC Reach-In de Tres Puertas", description: "Coolers reach-in de tres puertas altura completa — prep de banquete, country clubs, restaurantes de alto volumen. Layout de evaporador dual, condensador único." },
+        { series: "T-23F / T-49F / T-72F Reach-In Freezers", description: "Variantes de freezer correspondientes — condensador bottom-mount, defrost hot-gas. Timer de defrost y termostato de terminación dominan el log de servicio de freezer." },
+        { series: "TG1R / TG2R / TG3R Reach-Ins Premium", description: "Reach-ins tier premium con controles electrónicos y defrost inteligente — resets de controlador y drift del probe son las llamadas estándar." },
+        { series: "TSSU-27/48/60/72 Sandwich Prep", description: "Mesas de prep de sandwich refrigeradas con riel de pan — sandwich shops, líneas de deli, prep frío de country club. Drift de temperatura del pan-rail es la queja más frecuente." },
+        { series: "TPP-44/60/67/93 Pizza Prep", description: "Mesas de prep de pizza con riel refrigerado elevado — pizzerías y conceptos italianos en Miami y Broward. Uso pesado de la tapa destruye bisagras antes que el compresor." },
+        { series: "TWT/TUC Worktop y Undercounter", description: "Refrigeradores worktop y undercounter — back-prep de línea, dessert station, espresso back. Drain pan y evap fan son los fixes recurrentes." },
+        { series: "GDM-23/26/49/72 Merchandisers", description: "Coolers de display de una a tres puertas de vidrio — c-stores, retail de bebida, grab-and-go de supermercado. Falla de cable anti-sweat y condensado en frame son las reparaciones estándar." },
+        { series: "TBB Back-Bar Coolers", description: "Coolers de back-bar bottle en anchos 24/68/95\" — restaurantes, bares, lounges. Reemplazo de resorte de bisagra y empaque corren perpetuamente." },
+      ],
+      failureModes: [
+        { title: "Carga de grasa y polvo en coil del condensador", detail: "El condensador bottom-mount en cada unidad T-series ingesta grasa de la cookline. El coil se tapa, head pressure sube, el compresor cicla corto, la temperatura de la caja sube. Hacemos limpieza química del coil, aspiramos las aletas y documentamos amp draw antes/después — la reparación única más común en unidades True de cocina en Florida." },
+        { title: "Drift de temperatura del pan-rail TSSU", detail: "Pan-rail corriendo a 50°F cuando el gabinete lee 38°F. Casi siempre el evap fan está fallando, el deflector de aire se sacó para limpiar y no se volvió a poner, o el sello del rail está roto. Aislamiento secuencial: airflow primero, ventilador segundo, sello tercero." },
+        { title: "Falla de empaque y sweat en frame GDM", detail: "Cabinets GDM en humedad de Florida sweatean del frame cuando el cable anti-sweat falla o el empaque deja de sellar. Resultado: agua en el piso, queja del cliente. Reemplazamos cable anti-sweat o cartucho de empaque." },
+        { title: "Falla de cartucho de puerta (reach-ins)", detail: "Los cartuchos de bisagra-y-empaque de True caen después de uso pesado. El reemplazo del cartucho restaura el sello y la rotación de la puerta a spec. Truck-stock para T-23, T-49 y T-72." },
+        { title: "Falla de compresor Embraco/Tecumseh", detail: "Compresores Embraco y Tecumseh fallan eléctrica y mecánicamente después de 8-12 años. Verificación de amp draw, capacitor de start y resistencia del overload antes del reemplazo." },
+      ],
+      whyBerne:
+        "True repairs son trabajo de refrigeración con riesgo en humedad de Florida: condensadores cargados, drifts de coil, y carga eléctrica que un técnico tiene que verificar bajo amp clamp. Berne corre dieciocho técnicos, EPA-608 en todo el field team, y mantiene partes True OEM en el camión — cartuchos de puerta, evap fans, empaques, capacitores. Once años en el Sur de Florida, 4.79 / 871 reseñas, COI y W-9 archivados.",
+      serviceArea:
+        "Miami-Dade, Broward y Palm Beach — el mismo día en T-23/T-49 caídos en servicio. ZIPs incluyen Miami, Doral, Hialeah, Aventura, Hallandale, Fort Lauderdale, Pompano, Boca Raton, Delray y West Palm.",
+      faqs: [
+        { q: "¿Qué tan rápido pueden poner online un True T-23 o T-49?", a: "La mayoría de reparaciones True cierran en una visita. Cartuchos de puerta, empaques, evap fans, capacitores y cleaning de coil de condensador están en el camión. Despacho el mismo día cuando se llama antes de 1pm en la mayoría de ZIPs." },
+        { q: "¿Pueden hacer limpieza de coil de condensador en mantenimiento?", a: "Sí — cleaning químico del coil con verificación de amp draw antes/después es servicio estándar. La carga de grasa es la falla #1 en cocinas." },
+        { q: "¿Trabajan en TSSU prep tables y temperatura del pan-rail?", a: "Sí — drift de pan-rail es queja regular. Aislamos airflow, ventilador y sello en secuencia antes de cambiar partes." },
+        { q: "¿Cuánto cuesta un service call comercial True?", a: "$89 service call comercial, cubre diagnóstico. Se aplica a la reparación aprobada en la misma visita." },
+        { q: "¿Su trabajo de refrigerante es EPA-certified?", a: "Sí. Todos los técnicos de refrigeración tienen EPA-608 universal. Recovery, leak test y recharge se documentan en el work order." },
+        { q: "¿Atienden merchandisers GDM en c-stores y supermercados?", a: "Sí — GDM-23, GDM-49, GDM-72 y variantes freezer. Cable anti-sweat, cartucho de puerta y limpieza de coil son las reparaciones estándar." },
+      ],
+    },
   },
   {
     slug: "manitowoc",
@@ -766,6 +911,45 @@ export const brandProfiles: BrandProfile[] = [
       "manitowoc descale service",
       "manitowoc commercial ice south florida",
     ],
+    es: {
+      metaTitle: "Reparación Máquinas de Hielo Manitowoc Sur de Florida",
+      metaDescription:
+        "Reparación de máquinas de hielo Manitowoc Indigo NXT, NEO y undercounter en Miami-Dade, Broward y Palm Beach. EPA-certified, partes OEM, $89 service call.",
+      teaser:
+        "Máquinas de hielo modulares Indigo NXT y NEO, dispensadores de hielo-y-agua y cubers undercounter — restaurantes, hoteles, hospitales.",
+      about:
+        "Manitowoc Ice es la marca de hielo comercial más instalada en Norteamérica, con el cuber modular Indigo NXT contando una gran porción de la producción de hielo de restaurantes y bares del Sur de Florida. El layout de la plataforma es consistente a través de décadas — water trough, placa del evaporador, tubo de distribución de agua, sensor de harvest, válvula hot-gas — lo que significa que los modos de falla son predecibles, y las reparaciones también. El servicio Manitowoc es fundamentalmente una historia de water-treatment: la carga mineral del Sur de Florida es lo que determina cuánto tiempo el ciclo de cosecha se mantiene limpio.",
+      equipment: [
+        { series: "IYT0420A / IDT0420A Indigo NXT", description: "Máquinas modulares half-dice y dice de 30\", producción ~470 lb/24h — restaurantes, hoteles pequeños. Switch de cortina y tubo de distribución de agua son las reparaciones estándar." },
+        { series: "IYT0500A / IDT0500A Indigo NXT", description: "Cubers modulares de 30\" en la clase 550 lb/24h — el Indigo NXT más instalado en el Sur de Florida. Descale de cal y sensor de harvest dominan el log de servicio." },
+        { series: "IYT0620A / IDT0620A Indigo NXT", description: "Cubers modulares de 30\" en clase 600+ lb/24h. Variantes water-cooled aparecen en cocinas con airflow pobre." },
+        { series: "IYT0750A / IDT0750A Indigo NXT", description: "Indigo NXT de 30\" en clase 750 lb/24h — restaurantes mid-size y BOH de hotel. Solenoide de válvula hot-gas y airflow del condensador lideran las llamadas." },
+        { series: "IYT0900A / IYT1200A / IYT1500A / IYT1900A Indigo NXT", description: "Indigo NXT en clases 900 a 1900 lb/24h — restaurantes de alto volumen, hoteles resort, casinos. Compresor amp draw y head pressure son las prioridades de diagnóstico." },
+        { series: "UYF / UDF / UN NEO Undercounter", description: "Máquinas undercounter half-dice, dice y nugget — bares, coffee shops, cocinas pequeñas, break rooms de healthcare. Condensador self-contained, shutdown temprano del bin-thermostat es el ticket estándar." },
+        { series: "QYT QuietQube Remote", description: "Cubers modulares con condensador remoto — ruido más bajo en piso, condensing unit CVD en techo. Leak de line-set y válvula de head-pressure son los trabajos técnicos." },
+        { series: "RFS / RNS Flake & Nugget", description: "Máquinas de hielo flake y nugget — display de seafood, healthcare, estaciones de bebidas blended. Balero del evaporador y sello del tornillo son los items de major-service." },
+        { series: "AC-Pre / XO Filtración de Agua", description: "Pre-filtros y filtración de dos etapas aprobada por fabricante — instalados junto con llamadas de descale para frenar la siguiente falla. Swaps de cartucho y test de head pressure incluidos en PM." },
+      ],
+      failureModes: [
+        { title: "Escala de cal en placa del evaporador (Indigo NXT)", detail: "El modo de falla #1 de Manitowoc en el Sur de Florida. La escala se acumula en la placa, formación de cubos se ralentiza, ciclos de cosecha se alargan, luego la unidad va a freeze-up. Hacemos descale con cleaner nickel-safe, sanitize, verificamos que los tiempos de ciclo regresen a spec — y cotizamos al cliente un setup de filtración de agua si no hay uno." },
+        { title: "Atasco del tubo de distribución de agua", detail: "El tubo de distribución arriba de la placa del evaporador se tapa con escala y biofilm. Resultado: formación irregular de cubos — medios cubos, cubos faltantes a la izquierda o derecha. Limpiar o reemplazar tubo." },
+        { title: "Falla de sensor de harvest / switch de cortina", detail: "El Indigo NXT depende del switch de cortina de harvest para saber cuándo cayó el hielo. El switch falla, la máquina reporta error de harvest-not-completed y se traba. Verificamos con modo diagnóstico y reemplazamos el switch." },
+        { title: "Solenoide de válvula hot-gas trancado", detail: "La válvula hot-gas no abre en harvest. El hielo se congela a la placa, la máquina se queda en freeze. Frecuentemente un solenoide trancado o una bobina fallida — reemplazar, verificar comportamiento de harvest." },
+        { title: "Restricción de airflow del condensador + climb de head pressure", detail: "El condensador air-cooled Indigo NXT ingesta polvo y grasa de la cocina. Head pressure sube, la máquina reduce producción 30–50%. Limpieza de coil, verificación de amp draw y presión de descarga." },
+      ],
+      whyBerne:
+        "Berne es EPA-608 certified en todo el field team, corre dieciocho técnicos en banca, y trata el servicio Manitowoc como problema de water-chemistry primero, mecánico segundo. Cargamos tubos de distribución, switches de cortina, válvulas hot-gas, sensores de harvest e Indigo controllers OEM Manitowoc — y mandamos el water test antes de cotizar el descale, para que la cocina no esté de vuelta al teléfono en seis meses. Once años en el Sur de Florida, 4.79 en 871 reseñas, documentación COI / W-9 / EPA archivada.",
+      serviceArea:
+        "Miami-Dade, Broward y Palm Beach — el mismo día para restaurantes, bares y hoteles corriendo Indigo NXT o NEO. ZIPs incluyen Miami, Doral, Hialeah, Aventura, Hallandale, Fort Lauderdale, Pompano, Boca Raton, Delray y West Palm.",
+      faqs: [
+        { q: "¿Qué tan rápido pueden poner online un Manitowoc Indigo NXT?", a: "La mayoría de reparaciones Manitowoc en el Sur de Florida cierran en una visita. Descales, tubo de distribución, switch de cortina, válvula hot-gas y sensores de harvest están en el camión. Despacho el mismo día cuando se llama antes de 1pm en la mayoría de ZIPs." },
+        { q: "¿Instalan filtros de water-treatment Manitowoc?", a: "Sí — instalaciones de XO y AC-prefilter son estándar con llamadas de descale. El agua de la llave de Florida es la causa raíz de la mayoría de llamadas Manitowoc; no cerraremos un descale mayor sin recomendar filtración." },
+        { q: "¿Su trabajo de refrigerante es EPA-certified?", a: "Sí. Todos los técnicos de refrigeración tienen EPA-608 universal. Recovery, leak test y recharge se documentan en el work order." },
+        { q: "¿Cuánto cuesta un service call Manitowoc?", a: "$89 service call comercial, cubre diagnóstico. Se aplica a la reparación aprobada en la misma visita." },
+        { q: "¿Sanitizan máquinas Manitowoc bajo schedule del health department?", a: "Sí. Descale full nickel-safe más chlorine sanitize con fotos documentadas antes/después y números de lote químico para archivos de health-inspector." },
+        { q: "¿Pueden atender setups QuietQube con condensador remoto?", a: "Sí — verificación de line-set, servicio de ventilador del condensador remoto, corrección de carga de refrigerante y diagnóstico de válvula de head-pressure en instalaciones QuietQube." },
+      ],
+    },
   },
   {
     slug: "hoshizaki",
@@ -952,6 +1136,44 @@ export const brandProfiles: BrandProfile[] = [
       "hoshizaki F801 flake ice service",
       "hoshizaki commercial ice south florida",
     ],
+    es: {
+      metaTitle: "Reparación Máquinas de Hielo Hoshizaki Sur de Florida",
+      metaDescription:
+        "Reparación de máquinas de hielo Hoshizaki KM, KMD, DCM y F-801 en Miami-Dade, Broward y Palm Beach. Partes OEM, EPA-608, $89 service call.",
+      teaser:
+        "Máquinas de hielo modulares KM y KMD, cubeleteras DCM, flake F-801 — restaurantes, hoteles, hospitales y supermercados.",
+      about:
+        "Hoshizaki es la otra mitad del oligopolio de hielo comercial en el Sur de Florida — la plataforma KM y KMD de cubo escamado y el flake F-801 son tan comunes como cualquier Manitowoc en cocinas, bares, salas de emergencia y supermercados. La ingeniería de Hoshizaki favorece evaporadores stainless-steel, sistemas de bomba de recirculación y switches de cortina de agua que requieren química OEM-spec. Usar descaler equivocado en una placa Hoshizaki la pica y anula el warranty — esa es la razón principal por la que cargamos solo el descaler Hoshizaki Scale Away en el camión.",
+      equipment: [
+        { series: "KM-340MAJ / KM-515MAJ / KM-650MAJ Modular", description: "Cubers modulares en clases 340/515/650 lb/24h — restaurantes, bares, hoteles boutique. Switch de cortina de agua y bomba de recirculación son las reparaciones recurrentes." },
+        { series: "KM-901MAJ / KM-1100MRJ / KM-1340MRJ Modular", description: "Cubers de mayor capacidad — restaurantes de alto volumen, hoteles, banquete. Las variantes water-cooled aparecen en BOH cerrado." },
+        { series: "KML-325MAJ / KML-451MAJ Stackable", description: "Plataformas modulares apilables — instalaciones donde el footprint manda. Sensor de hielo bin y panel de control son las llamadas estándar." },
+        { series: "DCM-300BAH / DCM-500BAH / DCM-751BAH Cubelet", description: "Dispensadores de hielo cubelet — break rooms de hospital, casinos, hoteles. Motor de tornillo, balero del tornillo y tubo de descarga son las reparaciones recurrentes." },
+        { series: "F-801MWJ / F-1001MAJ / F-1500MAJ Flake Ice", description: "Máquinas de hielo flake — display de seafood, healthcare, bebidas blended. Sello del tornillo del evaporador y bearing son los items de major-service." },
+        { series: "AM-50BAJ / AM-150BAJ Undercounter", description: "Cubers undercounter — bares, coffee shops, cocinas pequeñas. Self-contained, switch de bin-thermostat es el ticket estándar." },
+        { series: "KMD-460MAH / KMD-901MAH Modular Cubelet", description: "Plataformas modulares cubelet de mayor producción — soda fountains de restaurante, dispensadores de hotel." },
+      ],
+      failureModes: [
+        { title: "Switch de cortina de agua atascado (KM-Series)", detail: "El switch de cortina de agua de Hoshizaki detecta cuándo el ciclo de cosecha completó. Atascado, la máquina alarma o cicla incorrectamente. Limpiar, verificar movimiento libre o reemplazar." },
+        { title: "Falla de balero de bomba de agua", detail: "La bomba de recirculación que rocía agua sobre el evaporador desgasta el balero — la bomba chilla, luego se tranca. Síntoma es formación de cubo incompleta. La bomba es field-replaceable." },
+        { title: "Stall de gear-motor de tornillo DCM cubelet", detail: "Las máquinas DCM usan un tornillo para empujar hielo cubelet por el tubo de descarga. El gear-motor del tornillo se tranca bajo back-pressure de hielo apretado o un balero desgastado. Reparación estándar — sacar motor, verificar tornillo free-running." },
+        { title: "Drift de válvula de expansión / carga de refrigerante", detail: "Máquinas Hoshizaki long-running pierden un toque de carga por seepage de joint. Síntoma es cubos undersized y ciclos más largos. Recovery EPA-608, leak test, carga a spec." },
+        { title: "Drop-out de solenoide de inlet water valve", detail: "La bobina del solenoide se sobrecalienta y se cae — el sump no se vuelve a llenar, la máquina alarma low-water. Reemplazar válvula, verificar presión de suministro." },
+        { title: "Fuga del sello del tornillo F-801", detail: "Las máquinas de hielo flake tienen un sello del tornillo en el fondo del cilindro del evaporador. El sello se endurece, el agua se fuga, contamina el extremo del motor. El rebuild kit reemplaza sello, balero y o-rings." },
+      ],
+      whyBerne:
+        "Atendemos Hoshizaki con partes OEM y descaler spec-Hoshizaki — usar la química equivocada en un evaporador Hoshizaki anula el warranty y puede picar la placa. Dieciocho técnicos, EPA-608 en todo el field team, documentación COI / W-9 / EPA completa bajo /credentials/. Once años en el Sur de Florida, 4.79 en 871 reseñas. Despacho el mismo día en Hoshizaki para restaurantes e instalaciones de salud.",
+      serviceArea:
+        "Miami-Dade, Broward y Palm Beach — restaurantes, hoteles e instalaciones médicas dependiendo de Hoshizaki KM, KMD, F-801 y DCM. Cobertura Homestead a Jupiter, incluyendo todo Miami Beach, Aventura, Hallandale, Fort Lauderdale, Boca Raton y West Palm.",
+      faqs: [
+        { q: "¿Usan removedor OEM Hoshizaki, o ácido genérico?", a: "Solo OEM Hoshizaki Scale Away. Descaler ácidos genéricos pican la placa stainless del evaporador y anulan la cobertura del warranty. Nuestra política de partes en Hoshizaki es OEM por defecto." },
+        { q: "¿Pueden reparar un dispensador cubelet DCM en un hospital?", a: "Sí — gear-motor del tornillo DCM, balero del tornillo, tubo de descarga de hielo, ciclo de sanitizer y water valve. Documentación de sanitización para hospital incluida en el work order." },
+        { q: "¿Su trabajo de refrigerante en Hoshizaki es EPA-certified?", a: "Sí, EPA-608 en todo el field team. Recovery, leak test, evacuación y carga a spec con documentación PT-chart." },
+        { q: "¿Cuánto cuesta un service call Hoshizaki?", a: "$89 service call comercial, aplicado a la reparación aprobada en la misma visita." },
+        { q: "¿Manejan rebuilds del sello del tornillo F-801 flake?", a: "Sí — F-801, F-1001 y F-1500 rebuild kits de sello, balero y o-ring del tornillo. Trabajo común en máquinas flake de cinco-plus años." },
+        { q: "¿Pueden hacer mantenimiento preventivo en una flota de Hoshizaki?", a: "Sí — descale trimestral, sanitize, swap de filtro y limpieza de condensador en un schedule de PM documentado. Pricing multi-location para cadenas y property management." },
+      ],
+    },
   },
   {
     slug: "rational",
@@ -1143,6 +1365,44 @@ export const brandProfiles: BrandProfile[] = [
       "rational steam generator descale",
       "rational commercial combi south florida",
     ],
+    es: {
+      metaTitle: "Reparación Horno Combi Rational en Sur de Florida",
+      metaDescription:
+        "Reparación de hornos combi Rational iCombi Pro y Classic en Miami-Dade, Broward y Palm Beach. Eléctricos y gas, predecesores SCC. El mismo día, $89.",
+      teaser:
+        "Hornos combi iCombi Pro, iCombi Classic y SelfCookingCenter (SCC) — fine-dining, banquete, hospital y ghost kitchens.",
+      about:
+        "Rational AG fabrica la plataforma de horno combi más instalada en cocinas comerciales del mundo — la serie iCombi Pro y iCombi Classic, sucediendo a la línea SelfCookingCenter (SCC). Los hornos combi combinan calor de convección con inyección de vapor controlada, y la implementación de Rational incluye un ciclo de self-clean que usa tabletas cáusticas. La marca es engineering-heavy, repair-intensive una vez que envejece, y absolutamente crítica a las cocinas que dependen de ella.",
+      equipment: [
+        { series: "iCombi Pro XS 6-2/3 (Half-Size)", description: "iCombi Pro half-size 6-2/3 GN para cocinas apretadas, ghost kitchens y back-prep. Escala del generador de vapor y compresión del empaque de puerta son los top dos items de servicio." },
+        { series: "iCombi Pro 6-1/1 (Eléctrico / Gas)", description: "iCombi Pro de 6 racks 1/1 GN — restaurantes small-format, satellite kitchens, country clubs. Corrosión de probe socket y reemplazo de tubería CareControl corren continuamente." },
+        { series: "iCombi Pro 6-2/1 (Eléctrico / Gas)", description: "Formato 6 racks 2/1 GN — cocinas de banquete y country clubs necesitando capacidad full hotel-pan en altura de 6-rack. Servicio de válvula de inyección de vapor y core probe." },
+        { series: "iCombi Pro 10-1/1 (Eléctrico / Gas)", description: "10 racks 1/1 GN — la instalación workhorse de fine-dining y full-service. Cavity light, sello de puerta y bomba de dosing son la lista estándar de reparación." },
+        { series: "iCombi Pro 10-2/1 (Eléctrico / Gas)", description: "10 racks 2/1 GN — plataformas de banquete y country clubs grandes. Peso de cavity más pesado aumenta desgaste de bisagra con el tiempo." },
+        { series: "iCombi Pro 20-1/1 (Eléctrico / Gas)", description: "Floor model roll-in 20 racks 1/1 GN — cocinas de banquete de hotel, producción de hospital, catering grande. Bushing de puerta, bumper de trolley roll-in y línea de dosing son los trabajos típicos." },
+        { series: "iCombi Classic / SelfCookingCenter SCC", description: "Generaciones predecesoras — todavía en servicio en muchas cocinas del Sur de Florida. Misma arquitectura mecánica, controles distintos. Reemplazo de control board y soporte de software son frecuentes." },
+      ],
+      failureModes: [
+        { title: "Escala en generador de vapor / probe de nivel de agua", detail: "El agua de la llave del Sur de Florida crea acumulación de escala en el generador de vapor. La unidad no inyecta vapor, dispara error de nivel de agua o el ciclo de self-clean falla. Descale spec-Rational, verificación del probe y validación del ciclo." },
+        { title: "Compresión del empaque de puerta / fuga", detail: "Empaques de puerta Rational se comprimen y endurecen con el tiempo — la unidad pierde vapor durante el ciclo, los tiempos de cocción se alargan. Reemplazo del empaque y verificación de alineación de bisagra." },
+        { title: "Bomba de dosing CleanJet inoperante", detail: "El ciclo CleanJet falla cuando la bomba de dosing del químico se atora o pierde prime. La cocina no puede correr self-clean. Servicio o reemplazo de la bomba." },
+        { title: "Corrosión del probe socket", detail: "Los core probes se desconectan del socket; la corrosión del socket impide lectura. Servicio del socket o reemplazo del cable harness." },
+        { title: "Falla de motor del blower de convección", detail: "El balero del blower de convección falla después de uso pesado. Síntoma: ruido en cabin y cocción desparejada. Reemplazo del motor con verificación de carga." },
+        { title: "Reset / falla de control board (SCC legacy)", detail: "Tarjetas SCC fallan después de exposición prolongada a vapor. Reemplazo del board con actualización de software cuando disponible." },
+      ],
+      whyBerne:
+        "Las reparaciones Rational requieren un técnico que pueda navegar la lógica del control combi, leer la diagnostic mode del fabricante, y verificar el ciclo de vapor bajo carga. Berne corre dieciocho técnicos con experiencia Rational, EPA-608 donde se requiere para refrigeración adyacente, y partes Rational OEM en el camión — empaques, bombas de dosing, probes, sockets. Once años en el Sur de Florida, 4.79 / 871 reseñas, documentación completa.",
+      serviceArea:
+        "Miami-Dade, Broward y Palm Beach — restaurantes fine-dining, country clubs, hoteles y hospitales corriendo iCombi Pro y Classic. Mismo día cuando el servicio activo está en riesgo.",
+      faqs: [
+        { q: "¿Hacen descale del generador de vapor Rational?", a: "Sí — descale spec-Rational con verificación del probe de nivel de agua y validación del ciclo CleanJet. Es el ticket más recurrente en iCombi después de los cinco años." },
+        { q: "¿Atienden iCombi Classic y SelfCookingCenter legacy?", a: "Sí — SCC y iCombi Classic son plataformas todavía en servicio. Reemplazo de control board, empaques y bombas de dosing son trabajos estándar." },
+        { q: "¿Su trabajo en línea de gas Rational es licenciado?", a: "Sí. Técnicos gas-certified manejan combis de gas con leak test post-reparación y verificación de manómetro." },
+        { q: "¿Cuánto cuesta un service call Rational?", a: "$89 service call comercial, aplicado a la reparación aprobada en la misma visita." },
+        { q: "¿Pueden hacer PM trimestral en una flota de Rational?", a: "Sí — PM trimestral con descale, swap de empaque, verificación CleanJet y diagnostic mode review. Pricing multi-location disponible." },
+        { q: "¿Reemplazan el control board en SCC?", a: "Sí — boards disponibles vía partes OEM Rational. Coordinamos actualización de software cuando aplique." },
+      ],
+    },
   },
   {
     slug: "garland",
@@ -1324,6 +1584,45 @@ export const brandProfiles: BrandProfile[] = [
       "garland salamander service",
       "garland commercial repair south florida",
     ],
+    es: {
+      metaTitle: "Reparación Garland Estufas y Charbroilers — Sur de FL",
+      metaDescription:
+        "Reparación de estufas Garland G-series, charbroilers, salamandras y hornos de convección en el Sur de Florida. Despacho el mismo día, gas-certified, $89.",
+      teaser:
+        "Estufas G-series, charbroilers MWE/GTBG, salamandras GIR y hornos Master convection — cocinas de banquete, steakhouses y cocinas de hotel.",
+      about:
+        "Garland Commercial Ranges (Welbilt) construye estufas, charbroilers, salamandras y hornos de convección que se ven en cada steakhouse, kitchen de banquete y línea de hotel en el Sur de Florida. Las series G y MCO son workhorses con gas-trains predecibles y reparaciones field-friendly — el tipo de equipo donde un técnico puede sacar un pilot orifice, limpiar un quemador y verificar el manómetro sin documentación misteriosa de fabricante. Las llamadas Garland se concentran en pilotos, válvulas de gas y radiantes cerámicos de charbroiler.",
+      equipment: [
+        { series: "G24-2 / G36-6 / G48-8 G-Series Restaurant Ranges", description: "Estufas restaurante G-Series en anchos 24/36/48\" — staple de banquete y casual dining. Pilot tube y termocople de horno son los items recurrentes." },
+        { series: "G60-10 / G72-12 G-Series Large Ranges", description: "Estufas G-Series de 60\"/72\" con doble horno — country clubs, hoteles, cocinas grandes de banquete. Servicio de doble horno y batería de quemadores." },
+        { series: "MWE Series Radiant Charbroiler", description: "Charbroilers radiantes de gas — anchos 24/36/48/60\". Radiantes cerámicos reemplazados como matched set para mantener distribución de calor pareja." },
+        { series: "GD-15RB / GD-24RB / GD-36RB Designer", description: "Charbroilers radiantes Designer Series countertop de 15/24/36\" — conceptos de pizza, ghost kitchens. Piezo igniter y tubo del quemador están en el camión." },
+        { series: "GTBG Lava-Rock y Radiant Broilers", description: "Charbroilers heavy-duty lava-rock y radiantes en 24-72\" — staple de steakhouse y burger. Reemplazo de grate y lava rock, más servicio de tubo del quemador." },
+        { series: "GIR-BS / GIR-WB Infrared Salamander", description: "Salamandras de infrarrojo wall-mount y counter-mount con ignición de chispa. Fouling del electrodo y falla de flame-rectification son las reparaciones estándar." },
+        { series: "ED-24G / ED-30G / ED-36G / ED-48G Griddles", description: "Griddles termostáticos heavy-duty con sensing bajo-plato — plataformas de breakfast y short-order. Falla de termostato por zona produce el ticket de hot-spot." },
+        { series: "MCO-GS-10S / MCO-GS-20S Master Convection", description: "Hornos de convección de gas Master single y double-stack — panaderías, restaurantes, country clubs. Balero del blower motor, módulo de ignición y switch de puerta son truck repairs estándar." },
+        { series: "MP-ED-10D / MP-GD-10S Moisture+ Convection", description: "Hornos Moisture-Plus con inyección de vapor — panadería y programas de pan. Válvula de inlet y atasco de línea de vapor son los items rutinarios." },
+      ],
+      failureModes: [
+        { title: "Drop-out de piloto open-burner (G-series)", detail: "Los quemadores G-series corren piloto standing. El piloto se apaga repetidamente bajo draft de campana — la ventilación de cocina jala aire de combustión del orificio del piloto. Ajustamos shutter de aire, verificamos drop millivolt del termocople, y confirmamos balance de campana con la cocina." },
+        { title: "Drift de calibración del termostato de horno base", detail: "La temperatura de bake vaga ±25°F del setpoint. El bulbo del termostato capilar perdió carga o la calibración drifteó por años de heat cycling. Calibrar, o reemplazar, luego verificar a través del rango de cocción." },
+        { title: "Burnout de radiante cerámico de charbroiler (MWE)", detail: "Los charbroilers radiantes de gas agrietan los radiantes cerámicos por eventos de grease ignition. Zonas muertas en la superficie de cocción. Reemplazar como matched set para mantener distribución de calor pareja." },
+        { title: "Falla de ignición de piloto salamandra GIR", detail: "Las salamandras GIR usan módulo de chispa para encender el quemador de infrarrojo. El módulo falla, el electrodo se foulea con grasa, o el circuito de flame-rectification se debilita. Diagnóstico estándar + reemplazo." },
+        { title: "Falla de balero del blower de convección MCO", detail: "El balero del blower de convección falla después de uso pesado. Síntoma: ruido y cocción desparejada. Reemplazo del motor con verificación de amp." },
+      ],
+      whyBerne:
+        "Las reparaciones Garland son trabajo de gas — pilotos, válvulas, leak tests. Berne corre dieciocho técnicos gas-certified, EPA-608 donde se requiere, partes Garland OEM en el camión — termocoples, válvulas de gas, electrodos, radiantes cerámicos. Once años en el Sur de Florida, 4.79 / 871 reseñas, COI y W-9 archivados. Despacho el mismo día cuando una línea Garland se cae.",
+      serviceArea:
+        "Miami-Dade, Broward y Palm Beach — steakhouses, country clubs, cocinas de banquete y hoteles. El mismo día en G-series caído antes de un cover de viernes o sábado.",
+      faqs: [
+        { q: "¿Atienden estufas Garland G-series en Miami el mismo día?", a: "Sí. Despacho el mismo día en Miami-Dade, Broward y Palm Beach. Termocoples de piloto, válvulas de gas y batería de quemadores están en el camión." },
+        { q: "¿Hacen reemplazo de radiantes cerámicos en MWE?", a: "Sí — reemplazamos radiantes cerámicos como matched set para mantener distribución de calor pareja. Misma visita en la mayoría de casos." },
+        { q: "¿Sus técnicos hacen leak test post-reparación?", a: "Siempre. Cada reparación Garland que toca el gas-train termina con leak test de detector de gas combustible y verificación de manómetro." },
+        { q: "¿Cuánto cuesta un service call Garland?", a: "$89 service call comercial, aplicado a la reparación aprobada en la misma visita." },
+        { q: "¿Atienden salamandras GIR con ignición de chispa?", a: "Sí — módulos de chispa, electrodos y circuitos de flame-rectification GIR son trabajo regular." },
+        { q: "¿Pueden proveer COI para nuestro property management?", a: "Sí — emitimos COIs con additional-insured para property managers y vendor networks de franquicia." },
+      ],
+    },
   },
   {
     slug: "traulsen",
@@ -1510,6 +1809,45 @@ export const brandProfiles: BrandProfile[] = [
       "traulsen hinge cartridge replacement",
       "traulsen commercial refrigeration south florida",
     ],
+    es: {
+      metaTitle: "Reparación Refrigeración Traulsen — Sur de Florida",
+      metaDescription:
+        "Reparación de refrigeradores Traulsen R-series, G-series, blast chillers RBC en Miami-Dade, Broward y Palm Beach. EPA-608, OEM, $89 service call.",
+      teaser:
+        "Reach-ins R-series, G-series, blast chillers RBC y mesas de prep TBSU — fine-dining, country clubs, panaderías y producción de hospital.",
+      about:
+        "Traulsen (parte de ITW Food Equipment Group) es la marca premium de refrigeración comercial en el back-of-house — reach-ins R-series y G-series, blast chillers RBC y plataformas roll-in son comunes en cocinas fine-dining, country clubs y producción de hospital del Sur de Florida. La ingeniería de Traulsen es heavy-duty: gabinetes de stainless de pared gruesa, cartuchos de bisagra reemplazables y el controlador INTELA-TRAUL en unidades más nuevas. Las reparaciones son repair-first — Traulsen está diseñado para corre veinte años con servicio adecuado.",
+      equipment: [
+        { series: "RRI132 / RRI232 / RRI332 Roll-In Refrigerators", description: "Refrigeradores roll-in R-Series para producción sheet-pan rack-in — panadería, prep de banquete. Desgaste de floor channel y bumper de puerta." },
+        { series: "RRF132 / RRF232 Roll-In Freezers", description: "Freezers roll-in R-Series para líneas de producción frozen — terminación de defrost y servicio de bushing de puerta." },
+        { series: "RIH132 / RIH232 Pass-Thru", description: "Reach-ins pass-thru R-Series — handoffs cocina-a-wait staff en fine-dining y BOH de resort. Alineación de puerta doble y sellado de empaque en cada PM." },
+        { series: "G10010 / G12010 / G20010 / G30010 G-Series", description: "Reach-ins G-series single, dos y tres secciones — cocinas compactas a cocinas de producción. Cartucho de bisagra y empaque son las reparaciones recurrentes; controlador INTELA-TRAUL y drift de probe son las llamadas típicas de electrónica." },
+        { series: "GHT / GLT G-Series Glass-Door", description: "Variantes glass-door de la plataforma G-series — display de fine-dining y bebida de country club. Cable anti-sweat heater y condensado en frame son las reparaciones estándar." },
+        { series: "RBC50 / RBC100 / RBC200 / RBC400 / RBC700 Blast Chillers", description: "Blast chillers de 50 a 700 lb de capacidad — fine-dining, banquete, producción de hospital. Ciclos chill HACCP-compliant documentados en el work order. Corrosión del socket del core-probe y servicio del compresor lideran las llamadas." },
+        { series: "TBSU-27/48/60/72 Sandwich Prep", description: "Mesas de prep de sandwich Traulsen — pizzerías high-end y stations de sandwich de resort. Temperatura del pan-rail, evap fan y bisagra de lid son las reparaciones estándar." },
+        { series: "TUC-27 / TUC-48 / TUC-60 Undercounter", description: "Refrigeradores undercounter Traulsen — bar back, stations de fine-dining, pastry prep. Top-mount compacto o condensador front-breathing; cleaning de coil lead." },
+      ],
+      failureModes: [
+        { title: "Desgaste de cartucho de bisagra (puerta R-series)", detail: "Las puertas R-series usan cartuchos pesados que se desgastan en una década de uso pesado de cocina. La puerta cae, el empaque ya no sella, la caja corre caliente y el compresor cicla largo. Reemplazamos cartuchos, re-shim la puerta, verificamos pull del empaque." },
+        { title: "Falla del controlador INTELA-TRAUL", detail: "Unidades Traulsen más nuevas usan el controlador INTELA-TRAUL. Síntoma es display trancado, alarma no se limpia, errores de sensor-not-reading. Verificamos resistencia del probe, refrescamos firmware, reemplazamos controlador si se necesita." },
+        { title: "Trancada de motor del evaporador fan (top-mount)", detail: "Las unidades top-mount Traulsen tienen múltiples motores de evap fan que fallan uno a la vez. El cabinet corre caliente en una repisa mientras otra lee a spec. Aislamos por test de airflow y hacemos swap." },
+        { title: "Falla del termostato de defrost termination", detail: "El freezer se engela porque el termostato de defrost termination falla cerrando, o falla abriendo. Caminamos el ciclo manualmente, verificamos el termostato, reemplazamos." },
+        { title: "Climb de head-pressure del compresor (top-mount)", detail: "El condensador top-mount carga polvo incluso en las cocinas más limpias. Cleaning de coil, servicio de ventilador, luego verificación de amp draw + presión de descarga a spec." },
+        { title: "Falla de socket del core-probe en blast chiller", detail: "Los blast chillers RBC dependen de un core probe para ciclos chill HACCP-compliant. El socket se corroe por ingress de vapor, el ciclo lee incorrectamente, el log de food-safety está mal. Reemplazamos socket y probe, documentamos con el cliente." },
+      ],
+      whyBerne:
+        "Traulsen es refrigeración premium que merece un técnico que entienda cartuchos de bisagra, el controlador INTELA-TRAUL, y los ciclos HACCP de los blast chillers RBC. Berne corre dieciocho técnicos EPA-608, partes Traulsen OEM en el camión — cartuchos, empaques, controladores, probes. Once años en el Sur de Florida, 4.79 / 871 reseñas, documentación completa.",
+      serviceArea:
+        "Miami-Dade, Broward y Palm Beach — restaurantes fine-dining, country clubs, panaderías de producción y hospitales corriendo Traulsen R-series, G-series y blast chillers RBC.",
+      faqs: [
+        { q: "¿Atienden cartuchos de bisagra en R-series y G-series?", a: "Sí — reemplazamos cartuchos de bisagra y re-shim la puerta para restaurar sello del empaque y rotación a spec." },
+        { q: "¿Pueden hacer ciclos HACCP en blast chillers RBC?", a: "Sí — verificación del core probe, validación del ciclo chill y documentación HACCP-compliant en el work order. Coordinamos con auditores de food-safety cuando se requiera." },
+        { q: "¿Su trabajo de refrigerante Traulsen es EPA-certified?", a: "Sí. EPA-608 universal en todo el field team. Recovery, leak test y recharge se documentan en el work order." },
+        { q: "¿Cuánto cuesta un service call Traulsen?", a: "$89 service call comercial, aplicado a la reparación aprobada cuando se autoriza en la misma visita." },
+        { q: "¿Stockan partes para plataformas Traulsen mecánicas legacy?", a: "Sí — termostatos capilares, defrost timers, defrost termination thermostats y empaques para reach-ins Traulsen más viejos. No obsoletamos una unidad cuando las partes todavía están disponibles." },
+        { q: "¿Pueden soportar cobertura multi-location Traulsen para un grupo de hotel?", a: "Sí — despacho multi-property, reporting de vendor, documentación COI y formato estandarizado de work-order para cuentas de hotel y restaurant-group." },
+      ],
+    },
   },
 ]
 
