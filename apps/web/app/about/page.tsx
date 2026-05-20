@@ -164,6 +164,16 @@ export default function AboutPage() {
       </section>
 
       <TeamGrid />
+      <section className="border-b border-border/60 bg-background pb-12 pt-2">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Link
+            href="/team"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+          >
+            Full bios of every technician <ArrowUpRight className="size-4" />
+          </Link>
+        </div>
+      </section>
       <CredentialsSection />
 
       <section className="border-b border-border/60 bg-accent/30 py-16">

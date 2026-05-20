@@ -5,6 +5,8 @@ import { primaryServices, services } from "@/lib/data/services"
 import { brandProfiles } from "@/lib/data/brand-profiles"
 import { INDUSTRY_PROFILES } from "@/lib/data/industry-profiles"
 import { publishedArticles } from "@/lib/blog/articles"
+import { team } from "@/lib/data/team"
+import { BACK_OFFICE } from "@/lib/data/team-bios"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url
@@ -21,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/request-dispatch",
     "/contact",
     "/blog",
+    "/team",
   ].map((p) => ({
     url: `${base}${p}`,
     lastModified: now,
@@ -120,6 +123,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   )
 
+  const teamPages = [
+    ...team.map((t) => `/team/${t.slug}`),
+    ...BACK_OFFICE.map((b) => `/team/${b.slug}`),
+  ].map((p) => ({
+    url: `${base}${p}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }))
+
   return [
     ...staticPaths,
     ...esStaticPaths,
@@ -133,5 +146,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...esCityPages,
     ...cityServicePages,
     ...esCityServicePages,
+    ...teamPages,
   ]
 }
