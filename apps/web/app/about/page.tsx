@@ -8,8 +8,10 @@ import { WhyUs } from "@/components/why-us"
 import { TeamGrid } from "@/components/team-grid"
 import { CredentialsSection } from "@/components/credentials-section"
 import { INDUSTRY_PROFILES } from "@/lib/data/industry-profiles"
-import { metaFor } from "@/lib/seo"
+import { metaFor, personJsonLd } from "@/lib/seo"
 import { site } from "@/lib/site"
+import { team } from "@/lib/data/team"
+import { JsonLd } from "@/components/json-ld"
 
 export const metadata: Metadata = metaFor({
   title: "About — Commercial Service Organization",
@@ -183,6 +185,9 @@ export default function AboutPage() {
 
       <WhyUs />
       <TrustedBy />
+
+      {/* Person JSON-LD for every member of the field team — E-E-A-T. */}
+      <JsonLd data={team.map((t) => personJsonLd(t))} />
     </PageShell>
   )
 }

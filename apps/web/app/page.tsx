@@ -15,7 +15,8 @@ import { ReviewsSection } from "@/components/reviews-section"
 import { DispatchSection } from "@/components/dispatch-section"
 import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
-import { faqSchema, founderSchema } from "@/lib/seo"
+import { faqSchema, founderSchema, personJsonLd } from "@/lib/seo"
+import { team } from "@/lib/data/team"
 
 const homepageFaqs = [
   {
@@ -71,6 +72,13 @@ export default function HomePage() {
       <MobileCtaBar locale="en" />
       <JsonLd data={faqSchema(homepageFaqs)} />
       <JsonLd data={founderSchema()} />
+      {/* Top-5 technician Person schema on the homepage — E-E-A-T signal. */}
+      <JsonLd
+        data={team
+          .filter((t) => t.role !== "Founder & Operator")
+          .slice(0, 5)
+          .map((t) => personJsonLd(t))}
+      />
     </>
   )
 }

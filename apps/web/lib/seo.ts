@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { site } from "./site"
+import type { TeamMember } from "./data/team"
 
 export function metaFor({
   title,
@@ -213,6 +214,40 @@ export function founderSchema() {
       "https://www.linkedin.com/in/eugene-bernitsky-b52763364/",
     ],
   }
+}
+
+/**
+ * Per-technician Person JSON-LD. Adds verifiable E-E-A-T signals:
+ *   - hasCredential (EPA Section 608, FL technician license)
+ *   - knowsAbout (specialties)
+ *   - knowsLanguage (en / ru / es)
+ *   - worksFor reference to the #organization node
+ *
+ * Emit array of these on /about (all techs) and top 5 on home.
+ */
+export function personJsonLd(tech: TeamMember) {
+  const node: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${site.url}/about#person-${tech.slug}`,
+    name: tech.name,
+    image: `${site.url}${tech.photo}`,
+    jobTitle: tech.role,
+    worksFor: { "@id": `${site.url}/#organization` },
+    knowsAbout: ["Appliance Repair", ...tech.specialties],
+    knowsLanguage: tech.languages,
+    hasCredential: tech.credentials.map((c) => ({
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: c.category,
+      name: c.name,
+    })),
+    url: `${site.url}/about`,
+  }
+  if (tech.givenName) node.givenName = tech.givenName
+  if (tech.familyName) node.familyName = tech.familyName
+  if (tech.sameAs && tech.sameAs.length > 0) node.sameAs = tech.sameAs
+  if (tech.bio) node.description = tech.bio
+  return node
 }
 
 export function serviceSchema(args: {
