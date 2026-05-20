@@ -57,34 +57,94 @@ export const brandProfiles: BrandProfile[] = [
       "Hobart Corporation is the dominant North-American manufacturer of commercial dishwashers, planetary mixers and food slicers, building equipment used in the back-of-house of essentially every full-service restaurant, hotel and institutional kitchen on the continent. The brand is split between two product families that Berne services daily: ware-washing — undercounter, door-type, conveyor and flight-type dishmachines — and bakery/deli equipment, including the legacy A-200 20-quart mixer and the 1612/2812 manual & automatic slicer lines. Hobart machines are built to last twenty-plus years, which is exactly why an aging South Florida fleet generates so many repair calls.",
     equipment: [
       {
-        series: "AM-15 / AM-15VL / AM-15T",
+        series: "AM-15 / AM-15VL / AM-15VLT",
         description:
-          "Undercounter high-temp sanitizing dishwashers — restaurants, bars, coffee shops. Common in compact wash stations where space is limited.",
+          "Door-type high-temp sanitizing dishwashers — restaurants, bars, coffee shops. The AM-15VL adds the ventless heat-recovery hood; AM-15VLT is the tall variant for sheet pans. Booster element and wash-arm bearing are the standard South Florida service tickets.",
       },
       {
-        series: "LXe / LXi",
+        series: "AM-15F / AM-15T-2",
         description:
-          "Compact undercounter dishwashers — used in bakeries, cafes and small kitchens. Hot-water and chemical-sanitizing variants.",
+          "AM-15F is the door-type with a built-in booster, AM-15T-2 the dual-rinse tall version. Common in hotel BOH and country-club kitchens. Drain pump and final-rinse solenoid lead the failure list.",
       },
       {
-        series: "CL44e / CL44eN / CL54e / CL64e",
+        series: "AM-16VL / AM-16-ASR / AM-16T",
         description:
-          "Conveyor (rack) ware-washers — high-volume restaurants, banquet halls and hotel commissaries pushing 200+ racks per hour.",
+          "Successor to the AM-15 platform with smarter controls and the Advanced Sanitation rinse — same form factor, same install footprint, OEM parts now stocked for both generations.",
       },
       {
-        series: "AM-15F / FT900 / FT1000",
+        series: "LXeR / LXi / LXeR-2 Undercounter",
         description:
-          "Door-type and flight-type machines — large operations, hospitals, school cafeterias, casino BOH.",
+          "Compact 24\" undercounter dishwashers — bakeries, cafes, small kitchens. Hot-water and chemical-sanitizing variants. Drain pump impeller and wash motor capacitor are the truck-stock failures.",
       },
       {
-        series: "A-200 / HL200 (Legacy)",
+        series: "LXGePR / LXGeR Glass-Washer Variants",
         description:
-          "20-quart bench mixer — pizzerias, bakeries, prep kitchens. Belt drive, planetary action, parts still field-serviceable.",
+          "Glass-washing variants of the LX platform — bar and lounge installs. Soft-spray wash arms with low-pressure pumps; bearing service is the recurring call.",
       },
       {
-        series: "1612 / 2812 / EDGE13",
+        series: "CL44e / CL44eN / CL54e / CL54eN",
         description:
-          "Manual and automatic gravity-feed slicers — delis, sandwich shops, grocery prep. CenterLine and Quantum variants serviced.",
+          "Conveyor (rack) ware-washers — high-volume restaurants, banquet halls and hotel commissaries pushing 200+ racks per hour. The eN-series adds the energy-recovery option. Curtain wear and conveyor drive bearing are the workhorse repairs.",
+      },
+      {
+        series: "CL64e / CL66e / CL66eN",
+        description:
+          "Mid-volume conveyor ware-washers — schools, casino BOH, large hotel banquet kitchens. Booster heater, prewash pump and pawl-bar drive lead the service log.",
+      },
+      {
+        series: "CL86e / CL88e / CL88eN",
+        description:
+          "Heavy-duty conveyor washers for the largest banquet and institutional installs. Three-tank designs, separate booster, automated curtain assemblies — full PM cycle work for Berne's PM accounts.",
+      },
+      {
+        series: "FT900 / FT1000 / FT1000S Flight-Type",
+        description:
+          "Flight-type (belt) ware-washers — hospitals, casino BOH, university dining, prison kitchens. Continuous belt design at 6000+ dishes/hr. PRW prewash and conveyor chain are the high-wear components.",
+      },
+      {
+        series: "ECMax / Hood-Type Door Dishwashers",
+        description:
+          "Hobart's hood-type door machines on European-style frames — used in chef-driven independents and pizza concepts. Door cable, microswitch and rinse-arm jet are standard truck-stock.",
+      },
+      {
+        series: "A-200 / A-200T (Legacy)",
+        description:
+          "20-quart bench mixer — pizzerias, bakeries, prep kitchens. Belt drive, planetary action, gearbox parts still field-serviceable. The A-200T is the timed variant.",
+      },
+      {
+        series: "HL120 / HL200 / HL200T Legacy+ Bench Mixers",
+        description:
+          "12 and 20-quart Legacy+ bench-model planetary mixers — the modern A-200 line. Bowl-lift handle, agitator, drive belt and gearbox bearings are the recurring repairs.",
+      },
+      {
+        series: "HL300 / HL400 / HL600 / HL662 Floor Mixers",
+        description:
+          "30, 40 and 60-quart floor mixers — pizzerias, bagel shops and high-volume bakeries. HL662 is the pizza-spec variant with #12 hub. Bowl-lift cable and planetary clutch see the most calls.",
+      },
+      {
+        series: "HL800 / HL1400 Floor Mixers",
+        description:
+          "80 and 140-quart floor-model planetary mixers for industrial bakeries and commissary kitchens. Three-phase drive motor, planetary gearbox and bowl-truck wheel assemblies are the heavy repairs.",
+      },
+      {
+        series: "1612 / 1712 / 1812 Manual Slicers",
+        description:
+          "Manual gravity-feed slicers — delis, sandwich shops, grocery service deli. Carriage tracking, blade tension and sharpener stone alignment dominate the call list.",
+      },
+      {
+        series: "2812 / 2912 Automatic Slicers",
+        description:
+          "Automatic gravity-feed slicers with motorized carriage. Carriage drive motor, transmission and stroke-end switch are the wear points; we stock the gear-drive rebuild kit.",
+      },
+      {
+        series: "EDGE12 / EDGE13 / Centerline / Quantum",
+        description:
+          "Compact entry-level and premium-tier slicers — sandwich shops, grocery prep, fine-dining cold lines. Blade ring, ring guard and sharpener assembly are the standard service items.",
+      },
+      {
+        series: "HCM / Buffalo Chopper Food Cutters",
+        description:
+          "Hobart HCM-450 vertical cutter mixer and the classic 84186 Buffalo chopper — bowl bearing, knife shaft seal and motor brake make the recurring repair list.",
       },
     ],
     failureModes: [
@@ -179,34 +239,89 @@ export const brandProfiles: BrandProfile[] = [
       "Vulcan, part of the ITW Food Equipment Group along with Hobart, manufactures heavy-duty commercial cooking equipment — restaurant ranges, salamanders, broilers, fryers, hot tops, charbroilers and combi ovens. The brand sits in the workhorse tier of commercial kitchens: not the cheapest, not the most exotic, just the equipment most line cooks have actually run for ten years. Vulcan repairs concentrate on gas-train problems, thermocouples and pilot ignition that Florida humidity accelerates.",
     equipment: [
       {
-        series: "V-Series Restaurant Ranges (V2BG, V4FT, V6B36, V60F)",
+        series: "V36 / V60 / V72 V-Series Value Ranges",
         description:
-          "Six-burner and four-burner gas restaurant ranges with standard oven base — the backbone of every line in South Florida.",
+          "36\", 60\" and 72\" V-Series gas restaurant ranges — the price-sensitive workhorse on every casual line in South Florida. Pilot thermocouple and oven safety valve are the recurring tickets.",
       },
       {
-        series: "EV (Endurance) Heavy-Duty Range Battery",
+        series: "SX36-6B / SX60-10B SX Series Ranges",
         description:
-          "12\", 24\", 36\" modular hot tops, charbroilers and open-burner sections — banquet kitchens, country clubs, large hotels.",
+          "Stainless 36\" 6-burner and 60\" 10-burner SX-Series value ranges with standard oven base. Burner orifice, pilot tube and oven thermostat are stocked truck-side.",
       },
       {
-        series: "VSAL Salamander Broilers",
+        series: "36SS-6B / 60SS-10B Endurance Ranges",
         description:
-          "Gas salamander finishers — steakhouse line, brigade kitchens, melt stations.",
+          "Endurance stainless 36\" and 60\" heavy-duty range bases with two standard ovens on the 60\" model — banquet kitchens, country clubs, hotel cooklines.",
       },
       {
-        series: "LG / MLG Gas Fryers",
+        series: "EV12 / EV24 / EV36 Endurance Modular Battery",
         description:
-          "LG300, LG400, LG500 — 35/45/65 lb open-pot fryers with millivolt or solid-state controls.",
+          "12\", 24\" and 36\" modular hot tops, charbroilers, open-burner sections and griddle modules — high-end restaurant lines and large banquet kitchens. Common service: orifice cleaning and modular section re-leveling.",
       },
       {
-        series: "MSA / 1ER Salamander & Char-Broiler",
+        series: "VTEC25 / VTEC36 Thermostatic Griddles",
         description:
-          "Counter-mount salamanders for kitchens where the wall-mount broiler isn’t practical.",
+          "Heavy-duty thermostatic griddles with under-plate sensing — breakfast platforms, diner concepts. Per-zone thermostat failure produces the classic hot-spot complaint.",
       },
       {
-        series: "Hot Tops, French Plates, Griddle Modules",
+        series: "VCRH25 / VCRH36 / VCRH48 Radiant Charbroilers",
         description:
-          "Modular hot-top sections — French-plate cooking, sauté lines, Mediterranean kitchens.",
+          "25\", 36\" and 48\" gas radiant charbroilers — steakhouse and burger-concept mainstay. Ceramic radiants replaced as a matched set after grease-fire damage.",
+      },
+      {
+        series: "VCCB25 / VCCB36 Lava-Rock Charbroilers",
+        description:
+          "Lava-rock charbroiler variants — old-school steakhouse rigs. Cast-iron grate, lava rock and burner tube are the recurring service items.",
+      },
+      {
+        series: "VSX24 / VSX36 / VSX48 Salamander Broilers",
+        description:
+          "Wall-mount infrared salamander finishers, 24/36/48\" widths. Infrared ceramic emitter and gas valve solenoid are the standard failures.",
+      },
+      {
+        series: "1ER50 / 1ER85 / 1ER50C Cheesemelter Broilers",
+        description:
+          "Counter-mount cheese-melter broilers for kitchens that can't accept a wall-mount salamander — pizza concepts and casual lines.",
+      },
+      {
+        series: "MSA72 / MSA85 Adjustable Salamanders",
+        description:
+          "Vertically adjustable gas salamanders, wall or shelf-mount. Lift-rail cable and counterweight pulley wear out before the burner does.",
+      },
+      {
+        series: "LG300 / LG400 / LG500 Gas Fryers",
+        description:
+          "35/45/65 lb open-pot floor fryers with millivolt or solid-state controls — the value-tier Vulcan fryer family. High-limit thermostat and gas valve dominate the call book.",
+      },
+      {
+        series: "MLG14 / MLG18 / MLG22 Master Fryer Battery",
+        description:
+          "Master gas fryers in 50, 65 and 85 lb capacities — battery-built fryer lines in QSR and hotel BOH. Drain valve, filter pump and combustion-blower repairs.",
+      },
+      {
+        series: "VFRY18 / VFRY24 Electric Fryers",
+        description:
+          "Floor-model electric fryers for kitchens without gas service — element burnout and contactor failure are the recurring repairs.",
+      },
+      {
+        series: "VK45 / VK65 / VK85 Tilting Kettles",
+        description:
+          "Gas and electric tilt skillets and kettles — banquet kitchens and high-volume sauce production. Tilt mechanism, gas pilot and steam-jacket pressure relief are the technical work.",
+      },
+      {
+        series: "VG24 / VG36 / VG48 Heavy-Duty Griddles",
+        description:
+          "Manual-control heavy-duty griddles in 24/36/48\" widths — short-order and breakfast platforms. Burner tube and pilot tube replacement is most of the service log.",
+      },
+      {
+        series: "VC44 / VC55 / VC66 Convection Ovens",
+        description:
+          "Single and double-stack gas convection ovens — bakeries, restaurants, country clubs. Blower motor bearing, ignition module and door switch are the standard repairs.",
+      },
+      {
+        series: "VHP / VPX Hot Tops & French Plates",
+        description:
+          "Modular hot-top sections — French-plate cooking, sauté lines, Mediterranean kitchens. Plate warpage and orifice fouling are the typical complaints.",
       },
     ],
     failureModes: [
@@ -300,34 +415,99 @@ export const brandProfiles: BrandProfile[] = [
       "True Manufacturing builds the bulk of the commercial refrigeration fleet that Berne sees in South Florida — reach-in coolers and freezers, prep tables, glass-door merchandisers, back-bar coolers and food-display cases. The brand’s engineering is conservative and serviceable: copper-aluminum coils, standard Embraco/Tecumseh compressors, accessible electrical compartments. That serviceability is exactly why True equipment runs ten-to-fifteen years in Florida heat — and why a repair-first strategy beats replacement on almost every call.",
     equipment: [
       {
-        series: "T-23 / T-49 / T-72 Reach-In Refrigerators",
+        series: "T-12 / T-19 Compact Reach-In Coolers",
         description:
-          "One, two and three-door upright reach-in coolers — the workhorse of every restaurant kitchen. Solid-door and glass-door variants.",
+          "Single-door compact reach-ins for tight kitchens, bar back and espresso stations — Embraco compressor, capillary feed, simple defrost. Door gasket and start relay are the standard service items.",
+      },
+      {
+        series: "T-23 / T-23-HC One-Door Reach-In Coolers",
+        description:
+          "Full-height single-door coolers — the most-installed unit in every restaurant in South Florida. The -HC variant is the post-2017 hydrocarbon-charged platform. Condenser coil grease load and door cartridge drop are the recurring tickets.",
+      },
+      {
+        series: "T-49 / T-49-HC Two-Door Reach-In Coolers",
+        description:
+          "Two-door full-height reach-in coolers — every BOH from pizza to fine dining. Top-shelf warm complaint is almost always evaporator fan motor or coil load.",
+      },
+      {
+        series: "T-72 / T-72-HC Three-Door Reach-In Coolers",
+        description:
+          "Three-door full-height reach-in coolers — banquet prep, country clubs, high-volume restaurants. Dual evaporator, single condenser layout.",
       },
       {
         series: "T-23F / T-49F / T-72F Reach-In Freezers",
         description:
-          "Matching freezer variants — bottom-mount condenser, hot-gas defrost, used in every BOH from pizza to fine dining.",
+          "Matching freezer variants — bottom-mount condenser, hot-gas defrost. Defrost timer and termination thermostat dominate the freezer service log.",
       },
       {
-        series: "TSSU & TWT Sandwich / Pizza Prep Tables",
+        series: "T-23G / T-49G / T-72G Glass-Door Reach-Ins",
         description:
-          "Refrigerated prep tables with pan rail — sandwich shops, pizzerias, salad lines. Pan-rail temperature is the most frequent service concern.",
+          "Glass-door variants of the T-series reach-in line — anti-sweat heater wire and frame gasket are the routine repairs in Florida humidity.",
       },
       {
-        series: "GDM-23 / GDM-49 / GDM-72 Glass-Door Merchandisers",
+        series: "TG1R / TG2R / TG3R Premium Reach-Ins",
         description:
-          "Single, double and triple glass-door display refrigerators — c-stores, beverage retail, supermarket grab-and-go.",
+          "Premium-tier solid and glass-door reach-ins with electronic controls and intelligent defrost — controller resets and probe drift are the standard calls.",
       },
       {
-        series: "TUC / TWT Undercounter Coolers",
+        series: "TSSU-27 / TSSU-48 / TSSU-60 / TSSU-72 Sandwich Prep",
         description:
-          "Undercounter prep and bar coolers — back-bar, espresso stations, sandwich back-prep.",
+          "Refrigerated sandwich prep tables, 27/48/60/72\" widths with pan rail — sandwich shops, deli lines, country-club cold prep. Pan-rail temperature drift is the most frequent service concern.",
       },
       {
-        series: "TBB / TDD Back-Bar & Direct-Draw",
+        series: "TPP-44 / TPP-60 / TPP-67 / TPP-93 Pizza Prep",
         description:
-          "Back-bar coolers and direct-draw beer dispensers — restaurants and bars across South Florida.",
+          "Refrigerated pizza prep tables with raised refrigerated rail — pizzerias and Italian concepts across Miami and Broward. Heavy lid use destroys hinges before the compressor goes.",
+      },
+      {
+        series: "TWT-27 / TWT-48 / TWT-60 / TWT-72 Worktop Refrigerators",
+        description:
+          "Undercounter worktop refrigerators — pizza make-line back-prep, dessert station, espresso back. Door rail and cutting-board mount are standard wear items.",
+      },
+      {
+        series: "TUC-27 / TUC-48 / TUC-60 / TUC-72 Undercounter Coolers",
+        description:
+          "Undercounter refrigerators with full-height door — bar back, breakfast platform, back-prep. Drain pan and evaporator fan are the recurring fixes.",
+      },
+      {
+        series: "TUC-27F / TUC-48F Undercounter Freezers",
+        description:
+          "Undercounter freezer variants — defrost cycle and door hinge are the standard service log entries.",
+      },
+      {
+        series: "GDM-10 / GDM-12 / GDM-15 Countertop Merchandisers",
+        description:
+          "Compact countertop and undercounter glass-door merchandisers — espresso bars, juice shops, grab-and-go counters.",
+      },
+      {
+        series: "GDM-23 / GDM-26 / GDM-26F Single-Door Merchandisers",
+        description:
+          "Single glass-door display refrigerators and freezers — c-stores, beverage retail, supermarket grab-and-go. Door heater wire failure and frame condensate are the standard repairs.",
+      },
+      {
+        series: "GDM-49 / GDM-49F / GDM-72 / GDM-72F Multi-Door Merchandisers",
+        description:
+          "Two and three glass-door display coolers and freezers — high-volume c-stores and supermarket aisles. Anti-sweat heater wire and door cartridge dominate the repair list.",
+      },
+      {
+        series: "TBB-24 / TBB-3 / TBB-4 Back-Bar Coolers",
+        description:
+          "Back-bar bottle coolers in 24/68/95\" widths — restaurants, bars, lounges. Hinge spring and gasket replacement run perpetually.",
+      },
+      {
+        series: "TDD-1 / TDD-2 / TDD-3 Direct-Draw Beer Dispensers",
+        description:
+          "Direct-draw beer dispensers — bars and brewpubs. Beer line, faucet shank and CO2 regulator are the standard non-refrigerant calls; compressor and start gear handle the refrigerant side.",
+      },
+      {
+        series: "TGM-12 / TGM-23 Glass-Top Ice Cream Merchandisers",
+        description:
+          "Glass-top ice cream display freezers — ice cream shops and grocery frozen aisles. Defrost cycle and door gasket dominate the service log.",
+      },
+      {
+        series: "TWT-44CI / TPP-AT Air-Curtain Open Display",
+        description:
+          "Open-display air-curtain refrigerators for grab-and-go retail — air curtain calibration and condenser load are the recurring complaints in Florida humidity.",
       },
     ],
     failureModes: [
@@ -421,29 +601,94 @@ export const brandProfiles: BrandProfile[] = [
       "Manitowoc Ice is the most-installed commercial ice brand in North America, with the Indigo NXT modular cuber accounting for a large share of South Florida restaurant and bar ice production. The platform layout is consistent across decades — water trough, evaporator plate, water-distribution tube, harvest sensor, hot-gas valve — which means the failure modes are predictable, and so are the repairs. Manitowoc service is fundamentally a water-treatment story: South Florida’s mineral load is what determines how long the harvest cycle stays clean.",
     equipment: [
       {
-        series: "Indigo NXT (IYT / IDT / IRT)",
+        series: "IYT0420A / IDT0420A Indigo NXT Half-Dice",
         description:
-          "Modular cube, dice and regular ice machines — restaurants, hotels, c-stores. Smart controller with diagnostics + AlphaSan plate.",
+          "30\" modular half-dice and dice cube machines, ~470 lb/24h production — restaurants, small hotels. Curtain switch and water-distribution tube are the standard truck repairs.",
       },
       {
-        series: "NEO Undercounter Cubers (UY / UD)",
+        series: "IYT0500A / IDT0500A Indigo NXT",
         description:
-          "Undercounter cube machines — bars, coffee shops, small kitchens. Self-contained condenser.",
+          "30\" modular cubers in the 550 lb/24h class — the most-installed Indigo NXT in South Florida. Lime descale and harvest sensor dominate the service log.",
       },
       {
-        series: "QuietQube (QY / QC) Remote Condensing",
+        series: "IYT0620A / IDT0620A Indigo NXT",
         description:
-          "Remote-condenser modular ice machines for kitchens with rooftop condensing units — quieter floor noise, lower kitchen heat load.",
+          "30\" modular cubers in the 600+ lb/24h class. Water-cooled variants (IYT0620W/IDT0620W) show up in kitchens with poor airflow.",
       },
       {
-        series: "Ice/Water Dispensers (CNF / SPA / RNS)",
+        series: "IYT0750A / IDT0750A Indigo NXT",
         description:
-          "Countertop and full-size ice-and-water dispensers — break rooms, healthcare, hotels.",
+          "30\" Indigo NXT in the 750 lb/24h class — mid-size restaurants and hotel BOH. Hot-gas valve solenoid and condenser airflow lead the calls.",
       },
       {
-        series: "Flake & Nugget (RFS / RNS)",
+        series: "IYT0900A / IYF0900A Indigo NXT",
         description:
-          "Soft-serve nugget and flake ice — healthcare, blended-drink stations, seafood display.",
+          "30\" Indigo NXT in the 900 lb/24h class, cube (IYT) and full-dice (IYF) variants — restaurant lines, banquet ice, hotel bar service.",
+      },
+      {
+        series: "IYT1200A / IDT1200A / IDF1200A Indigo NXT",
+        description:
+          "30\" Indigo NXT in the 1200 lb/24h class — high-volume restaurants and resort hotels. Water-cooled IYT1200W common in enclosed BOH installs.",
+      },
+      {
+        series: "IYT1500A / IDT1500A Indigo NXT",
+        description:
+          "30\" Indigo NXT in the 1500 lb/24h class — banquet kitchens, casino BOH. Compressor amp draw and head pressure are the diagnostic priorities.",
+      },
+      {
+        series: "IYT1900A / IYT1900W Indigo NXT",
+        description:
+          "30\" flagship Indigo NXT at 1900 lb/24h. Air and water-cooled — typical install in resort, casino and convention-center kitchens.",
+      },
+      {
+        series: "IRT0500A / IRT0620A / IRT0900A Regular Cube",
+        description:
+          "Regular-cube Indigo NXT variants — supermarket beverage and ice bagging programs. Same chassis, different evaporator pitch.",
+      },
+      {
+        series: "UYF / UDF NEO Undercounter Cubers",
+        description:
+          "UYF-0140A, UYF-0190A, UDF-0140A undercounter half-dice and dice machines — bars, coffee shops, small kitchens. Self-contained condenser, bin-thermostat early-shutdown is the standard ticket.",
+      },
+      {
+        series: "UR / UN NEO Undercounter Nugget",
+        description:
+          "UN-0244A and UN-0324A undercounter nugget machines for chewable-ice concepts and healthcare break rooms. Auger gear-motor service work.",
+      },
+      {
+        series: "QYT0420 / QYT0620 / QYT0900 QuietQube Remote",
+        description:
+          "Remote-condenser modular cube machines — quieter floor noise, rooftop CVD condensing unit. Line-set leak and head-pressure control valve service are the technical jobs.",
+      },
+      {
+        series: "RFS-0385 / RFS-0650 / RFS-1300 Flake Ice",
+        description:
+          "Flake ice machines, 385/650/1300 lb/24h — seafood display, healthcare, blended-drink stations. Evaporator bearing and auger seal rebuild are the major-service items.",
+      },
+      {
+        series: "RNS-12 / RNS-20 Nugget Ice (Soft Cubelet)",
+        description:
+          "Nugget (chewable) ice machines — ER kitchens, healthcare, blended-beverage concepts. Auger drive motor and discharge tube clog are the recurring repairs.",
+      },
+      {
+        series: "RFS / RFS Sani-Server Flake & Nugget",
+        description:
+          "Sani-Server platform combining ice production with dispensing for FDA-regulated environments — full sanitize cycle plus mechanical service.",
+      },
+      {
+        series: "CNF / SPA / RNS Ice & Water Dispensers",
+        description:
+          "Countertop and floor ice-and-water dispensers — break rooms, healthcare, hotels. Sanitize cycle, water valve and dispense lever are the standard service items.",
+      },
+      {
+        series: "B-Series / D-Series Ice Storage Bins",
+        description:
+          "Ice storage bins under the modular heads — bin gasket, drain and ice diverter make up the bin-only call list.",
+      },
+      {
+        series: "AC-Pre / XO Manitowoc Water Filtration",
+        description:
+          "Manufacturer-approved pre-filters and twin-stage filtration — installed alongside descale calls to slow the next failure. Cartridge swaps and head pressure test included in PM.",
       },
     ],
     failureModes: [
@@ -537,29 +782,99 @@ export const brandProfiles: BrandProfile[] = [
       "Hoshizaki America is the premium half of the commercial ice-machine market in South Florida — the brand is engineered around a stainless-steel evaporator plate and a long mean-time-between-failures, and it commands a higher install price for that reason. Hoshizaki service problems differ from Manitowoc: the evaporator design tolerates scale better, but the float, water valve and pump assemblies generate their own failure profile. Our technicians have a separate Hoshizaki kit on the truck.",
     equipment: [
       {
-        series: "KM Series (KM-301BAJ, KM-515MAJ, KM-901MWJ, KM-1340MRJ)",
+        series: "KM-301BAJ Modular Crescent Cuber",
         description:
-          "Stackable cube ice machines, air- and water-cooled, 250–1300+ lb/day production. The Hoshizaki backbone.",
+          "Compact 22\" modular crescent cuber at ~315 lb/24h — small restaurants, coffee shops. Float switch and water valve solenoid are the bread-and-butter repairs.",
       },
       {
-        series: "KMD Modular Cube Machines",
+        series: "KM-515MAJ / KM-515MWJ Modular Cuber",
         description:
-          "Modular cube machines for high-volume installations — hotels, hospitals, large restaurants.",
+          "22\" modular crescent cuber at ~515 lb/24h, air or water-cooled — mid-size restaurants, smaller hotels. Lime scale + sump cleaning lead the call list.",
       },
       {
-        series: "F-801 / F-1001 / F-1500 Flake Ice",
+        series: "KM-660MAJ / KM-660MRJ Slim-Line Cuber",
         description:
-          "Flake ice machines — seafood, healthcare, food-display merchandising.",
+          "22\" slim-line modular crescent cuber at ~650 lb/24h, air or remote-cooled — restaurant lines and country clubs. Water pump bearing and float chamber service dominate.",
       },
       {
-        series: "DCM Cubelet Ice & Water Dispensers",
+        series: "KM-901MAJ / KM-901MWJ / KM-901MRJ",
         description:
-          "Cubelet (nugget-style) ice-and-water dispensers — hospitals, break rooms, hotels, fitness centers.",
+          "30\" modular crescent cuber at ~900 lb/24h, air-cooled / water-cooled / remote — the most-installed KM in South Florida hotels. Hot-gas valve and float assembly are stocked truck-side.",
       },
       {
-        series: "Undercounter (AM-50, AM-150) Cube",
+        series: "KM-1100MAJ / KM-1100MWJ / KM-1100MRJ",
         description:
-          "Undercounter machines for bars, espresso bars and small kitchens.",
+          "30\" modular crescent cuber at ~1100 lb/24h — banquet kitchens, hospital BOH. The MRJ is the remote-cooled variant common in interior installs.",
+      },
+      {
+        series: "KM-1340MAJ / KM-1340MWJ / KM-1340MRJ",
+        description:
+          "30\" KM at ~1340 lb/24h — high-volume restaurants, hotels and casino BOH. Compressor amp draw and head pressure verification on every service visit.",
+      },
+      {
+        series: "KM-1601MAJ / KM-1601MWJ / KM-1601MRJ",
+        description:
+          "30\" flagship modular crescent cuber at ~1600 lb/24h — convention centers, resorts, casino BOH. Three-phase compressor and expansion valve drift make up the heavy work.",
+      },
+      {
+        series: "KMD Series Modular Cube Stack Pairs",
+        description:
+          "Stackable KMD-901, KMD-1101 and KMD-1340 cube machines for high-volume installations — paired heads on a single bin. Doubling production typically doubles call frequency.",
+      },
+      {
+        series: "F-801MAJ / F-801MWJ Flake Ice",
+        description:
+          "22\" air or water-cooled flake ice machines at ~800 lb/24h — seafood display, healthcare, blended-drink stations. Auger seal and bearing rebuild kit is the major service.",
+      },
+      {
+        series: "F-1001MAJ / F-1001MWJ Flake Ice",
+        description:
+          "22\" flake ice machines at ~1000 lb/24h — supermarket seafood and large healthcare. Auger gear-motor and evaporator cylinder are the wear path.",
+      },
+      {
+        series: "F-1500MAJ-C / F-1500MWJ-C Flake Ice",
+        description:
+          "30\" flake ice machines at ~1500 lb/24h with built-in compressor and remote variants. Recirculation pump and discharge tube top the call list.",
+      },
+      {
+        series: "F-2000MWJ / F-2000MRJ Flake Ice",
+        description:
+          "30\" flagship flake machines at ~2000 lb/24h — fish markets, hospital production kitchens. Auger seal rebuild every 3-5 years in Florida service.",
+      },
+      {
+        series: "DCM-300BAH / DCM-500BAH / DCM-500BWH",
+        description:
+          "Countertop cubelet (nugget) ice-and-water dispensers — break rooms, hotel guest floors, healthcare. Auger gear-motor stall and dispense lever microswitch are the standard repairs.",
+      },
+      {
+        series: "DCM-751BAH / DCM-751BWH Cubelet Dispensers",
+        description:
+          "Larger countertop cubelet dispensers at ~800 lb/24h with 70 lb storage — hotel banquet floors, fitness centers, healthcare. Sanitize cycle and water valve service.",
+      },
+      {
+        series: "AM-50BAJ / AM-150BAJ Undercounter Cubers",
+        description:
+          "Undercounter cube and half-cube machines for bars, espresso stations and small kitchens. Self-contained condenser, bin-thermostat early-shutdown is the typical complaint.",
+      },
+      {
+        series: "AM-251BAJ / AM-50BAJ-PV Specialty Undercounter",
+        description:
+          "Specialty undercounter installs including the AM-251 octagonal-pearl gourmet cube — back-bar fine dining, specialty cocktail concepts.",
+      },
+      {
+        series: "HR / HF Series Commercial Reach-In Refrigeration",
+        description:
+          "Hoshizaki HR-RT and HF-RT one, two and three-door reach-in coolers and freezers. Top-mount condenser layout, electronic controls, premium-tier alternative to True/Traulsen.",
+      },
+      {
+        series: "PR / PT Series Pizza & Sandwich Prep",
+        description:
+          "Hoshizaki pizza and sandwich prep tables — pan rail temperature drift, evaporator fan and door gasket are the standard service items.",
+      },
+      {
+        series: "Hoshizaki H-GUARD Plus Water Filtration",
+        description:
+          "OEM-approved single and twin-stage carbon filtration — installed alongside every descale on machines without an existing filter program.",
       },
     ],
     failureModes: [
@@ -653,29 +968,104 @@ export const brandProfiles: BrandProfile[] = [
       "Rational AG manufactures the most-installed combi-oven platform in commercial kitchens worldwide — the iCombi Pro and iCombi Classic series, succeeding the SelfCookingCenter (SCC) line. Combi ovens combine convection heat with controlled steam injection, and Rational’s implementation includes a self-clean cycle that uses caustic tablets. The brand is engineering-heavy, repair-intensive once it ages, and absolutely critical to the kitchens that depend on it.",
     equipment: [
       {
-        series: "iCombi Pro (Electric / Gas, 6-1/1, 10-1/1, 20-1/1)",
+        series: "iCombi Pro XS 6-2/3 (Half-Size)",
         description:
-          "Flagship combi platform with iCookingSuite, iProductionManager and CareControl auto-clean. Banquet, fine-dining, large catering.",
+          "Half-size 6-2/3 GN iCombi Pro for tight kitchens, ghost kitchens and back-prep counters. Steam generator scale and door gasket compression are the top two service items.",
       },
       {
-        series: "iCombi Classic (6, 10, 20 GN)",
+        series: "iCombi Pro 6-1/1 (Electric / Gas)",
         description:
-          "Manual-control combi for kitchens that don’t need the iCookingSuite intelligence — bakeries, hotels, casual dining.",
+          "Six-rack 1/1 GN iCombi Pro — small-format restaurants, satellite kitchens, country clubs. Probe socket corrosion and CareControl tubing replacement run continuously.",
       },
       {
-        series: "SelfCookingCenter (SCC, SCC 5 Senses)",
+        series: "iCombi Pro 6-2/1 (Electric / Gas)",
         description:
-          "Predecessor platform — still very common in South Florida kitchens. Parts and service remain available.",
+          "Six-rack 2/1 GN format — banquet kitchens and country clubs needing full-hotel-pan capacity at 6-rack height. Steam injection valve and core probe service.",
       },
       {
-        series: "CombiMaster Plus (CMP, manual controls)",
+        series: "iCombi Pro 10-1/1 (Electric / Gas)",
         description:
-          "Manual-only entry combi — schools, ghost kitchens, smaller operations.",
+          "Ten-rack 1/1 GN — the workhorse fine-dining and full-service install. Cavity light, door seal and dosing pump are the standard repair list.",
       },
       {
-        series: "VarioCookingCenter (VCC, multifunctional)",
+        series: "iCombi Pro 10-2/1 (Electric / Gas)",
         description:
-          "Tilting multifunctional pan — pressure cooking, frying, boiling. Sister product, similar service profile.",
+          "Ten-rack 2/1 GN — banquet platforms and large country clubs. Heavier cavity weight increases hinge wear over time.",
+      },
+      {
+        series: "iCombi Pro 20-1/1 (Electric / Gas)",
+        description:
+          "Roll-in 20-rack 1/1 GN floor model — hotel banquet kitchens, hospital production, large catering. Door bushing, roll-in trolley bumper and dosing line are the typical service jobs.",
+      },
+      {
+        series: "iCombi Pro 20-2/1 (Electric / Gas)",
+        description:
+          "Roll-in flagship 20-rack 2/1 GN — convention centers, resort banquet platforms. Three-phase electric or gas; steam generator descale is the largest single PM job.",
+      },
+      {
+        series: "iCombi Classic 6-1/1 (Manual Controls)",
+        description:
+          "Six-rack manual-control combi at 1/1 GN format — casual dining, bakery production, schools that don't need iCookingSuite intelligence.",
+      },
+      {
+        series: "iCombi Classic 10-1/1 / 10-2/1",
+        description:
+          "Ten-rack manual-control combi in 1/1 and 2/1 GN — hotel banquet back-up, satellite production. Same mechanical platform as Pro, simpler HMI.",
+      },
+      {
+        series: "iCombi Classic 20-1/1 / 20-2/1",
+        description:
+          "Roll-in 20-rack manual-control combi — institutional kitchens, schools. Mechanical service profile identical to Pro variants.",
+      },
+      {
+        series: "SelfCookingCenter (SCC) 61, 62, 101, 102",
+        description:
+          "Predecessor SCC platform in 6 and 10-rack, 1/1 and 2/1 GN — still extremely common in South Florida hotels. Parts and service remain in full production. CareControl pump, probe, dosing tube.",
+      },
+      {
+        series: "SelfCookingCenter (SCC) 201, 202 Roll-In",
+        description:
+          "Roll-in 20-rack SCC predecessor — banquet platforms across older Miami Beach and Fort Lauderdale resorts. Steam generator service is the largest PM line item.",
+      },
+      {
+        series: "SCC 5 Senses (5-Senses Update)",
+        description:
+          "Mid-life update of the SCC platform with the 5-Senses HMI — same hardware, refreshed touchscreen and software stack. Firmware push fixes most lockup symptoms.",
+      },
+      {
+        series: "CombiMaster Plus CMP 61 / 62",
+        description:
+          "Six-rack 1/1 and 2/1 GN CombiMaster Plus — manual-only entry combi for schools, ghost kitchens, smaller operations. Simpler service profile, fewer electronics.",
+      },
+      {
+        series: "CombiMaster Plus CMP 101 / 102",
+        description:
+          "Ten-rack 1/1 and 2/1 CombiMaster Plus — institutional and back-up production. Same mechanical platform, simpler service log.",
+      },
+      {
+        series: "CombiMaster Plus CMP 201 / 202",
+        description:
+          "Roll-in 20-rack CombiMaster Plus — institutional and large catering. Standard descale and door-gasket service.",
+      },
+      {
+        series: "VarioCookingCenter VCC 112 / 211 / 311",
+        description:
+          "Multifunctional tilting pans — pressure cooking, frying, boiling, braising. Tilt mechanism, pressure lid seal and probe socket are the technical work.",
+      },
+      {
+        series: "iVario Pro 2-XS / L / XL",
+        description:
+          "Successor to VarioCookingCenter — iVario Pro multifunctional pans with intelligent cooking. Tilt drive and lid hinge are the wear points.",
+      },
+      {
+        series: "UltraVent / UltraVent Plus Hood Systems",
+        description:
+          "Rational ventilation hoods that pair with iCombi installs — fan motor and condensate drain service. Often replaced or rebuilt alongside the combi PM.",
+      },
+      {
+        series: "UC-M / UC-XS Water Treatment",
+        description:
+          "Rational-approved water-treatment cartridges for the steam generator — installed alongside every descale call. Florida tap water is the root cause of the SCC/iCombi service log.",
       },
     ],
     failureModes: [
@@ -769,34 +1159,94 @@ export const brandProfiles: BrandProfile[] = [
       "Garland Group, part of the Welbilt / Ali Group umbrella, manufactures heavy-duty commercial cooking equipment — gas ranges, electric ranges, charbroilers, salamanders, hot tops and full restaurant range batteries. The brand is heavily represented in steakhouse and banquet kitchens, where the open-burner sections and infrared charbroilers are common picks. Garland service is gas work; combustion verification, thermocouples and pilot maintenance dominate the call book.",
     equipment: [
       {
-        series: "G-Series Restaurant Ranges (G24, G36, G48, G60)",
+        series: "G24-3L / G24-4L 24\" Restaurant Ranges",
         description:
-          "Standard 24\"-60\" open-burner ranges with oven base — restaurant cookline.",
+          "24\" gas restaurant ranges with 3 or 4 open burners and standard oven base — small-format restaurants, satellite kitchens, ghost-kitchen builds. Pilot thermocouple is the first wear item.",
       },
       {
-        series: "Master Series (Master 200, Master Sentry)",
+        series: "G36-6R / G36-6T 36\" Restaurant Ranges",
         description:
-          "Heavy-duty range battery — banquet kitchens, country clubs, steakhouses with a modular hot-top + open-burner mix.",
+          "36\" gas restaurant ranges with 6 open burners over standard oven (G36-6R) or 24\" griddle plus 2 burners (G36-2G24R). The Miami cookline default.",
       },
       {
-        series: "MWE Char-Broilers & Radiant Broilers",
+        series: "G48-8R / G48-G24R / G48-G36R 48\" Ranges",
         description:
-          "Char-broilers — gas radiant and lava-rock variants. Steakhouse mainstay.",
+          "48\" gas restaurant ranges in 8-burner, 4-burner+24\" griddle, and 36\" griddle layouts — banquet support and full-service casual lines.",
       },
       {
-        series: "Garland Salamander Broilers (GIR)",
+        series: "G60-10R / G60-G36R / G60-G48R 60\" Ranges",
         description:
-          "Infrared salamander finishers — wall-mount and counter-mount variants.",
+          "60\" gas restaurant ranges, 10-burner or burner+griddle combos — banquet kitchens, country clubs, full-line restaurants. Oven safety valve and pilot tube lead the call list.",
       },
       {
-        series: "Garland Griddles & Hot Tops",
+        series: "Master 200 Heavy-Duty Range Battery",
         description:
-          "Heavy-duty thermostatic griddles, French-plate hot tops — breakfast platforms and Mediterranean lines.",
+          "Heavy-duty Master 200 modular range battery — banquet platforms, hotel cooklines, steakhouse rigs. Modular hot top, open burner, charbroiler sections.",
       },
       {
-        series: "Garland Convection Ovens",
+        series: "Master Sentry MST Range-Match Series",
         description:
-          "Half-size and full-size gas/electric convection ovens — bakeries, restaurants.",
+          "Master Sentry range-match charbroilers, salamanders and griddles with flame-failure protection and electric ignition. Spec-grade for steakhouses and resort kitchens.",
+      },
+      {
+        series: "MWE / MWE-RB Radiant Charbroilers",
+        description:
+          "Gas radiant charbroilers — 24/36/48/60\" widths. Ceramic radiants replaced as a matched set to keep heat distribution even.",
+      },
+      {
+        series: "GD-15RB / GD-24RB / GD-36RB Designer Series",
+        description:
+          "Designer Series countertop radiant charbroilers at 15/24/36\" — pizza concepts, ghost kitchens, satellite stations. Piezo igniter and burner tube are stocked truck-side.",
+      },
+      {
+        series: "GTBG Lava-Rock & Radiant Broilers",
+        description:
+          "Heavy-duty lava-rock and radiant charbroilers in 24-72\" widths — steakhouse and burger-concept staple. Cast grate and lava rock replacement, plus burner tube service.",
+      },
+      {
+        series: "GIR-BS / GIR-WB Infrared Salamander",
+        description:
+          "Wall-mount and counter-mount infrared salamanders with spark ignition. Igniter electrode fouling and flame-rectification failure are the standard repairs.",
+      },
+      {
+        series: "GIR-RC Cheesemelter Series",
+        description:
+          "Counter-mount cheesemelters for kitchens that can't accept a wall-mount salamander — pizza, casual dining. Burner tube and gas valve service.",
+      },
+      {
+        series: "ED-24G / ED-30G / ED-36G / ED-48G Thermostatic Griddles",
+        description:
+          "Heavy-duty thermostatic griddles with under-plate sensing in 24/30/36/48\" widths — breakfast platforms and short-order lines. Per-zone thermostat failure produces the hot-spot ticket.",
+      },
+      {
+        series: "S680 / S684 Sectional Hot Tops & French Plates",
+        description:
+          "Sectional hot-tops and French-plate cooking modules — sauté lines and Mediterranean kitchens. Plate level and burner orifice cleaning lead the service log.",
+      },
+      {
+        series: "MCO-GS-10S / MCO-GS-20S Master Convection Ovens",
+        description:
+          "Master single and double-stack gas convection ovens — bakeries, restaurants, country clubs. Blower motor bearing, ignition module and door switch are standard truck repairs.",
+      },
+      {
+        series: "MCO-ES Electric Convection Ovens",
+        description:
+          "Electric single and double-stack convection ovens — kitchens without gas service. Element burnout, contactor and door switch are the recurring failures.",
+      },
+      {
+        series: "MP-ED-10D / MP-GD-10S Moisture+ Convection",
+        description:
+          "Moisture-Plus convection ovens with steam injection — bakery and bread-program kitchens. Water inlet valve and steam line clog are the routine service items.",
+      },
+      {
+        series: "G24-G G24-G24 Hot Tops",
+        description:
+          "Modular 24\" gas hot tops with French-plate cook surface — sauté and stock-pot service in steakhouses and banquet kitchens.",
+      },
+      {
+        series: "G-Series Pasta Cookers & Stock Pots",
+        description:
+          "Garland pasta cookers and stock-pot ranges — Italian concepts and banquet kitchens. Gas valve, pilot tube and pot-fill water line are the standard service work.",
       },
     ],
     failureModes: [
@@ -890,29 +1340,99 @@ export const brandProfiles: BrandProfile[] = [
       "Traulsen is the premium tier of commercial reach-in refrigeration and the dominant brand in serious back-of-house kitchens — fine-dining lines, banquet prep, hospital production kitchens and the R-Series dealer-network specs that come standard on every consultant-designed kitchen plan. The cabinets are heavier than the volume tier, the controls are tighter, and the failure profile is shifted: less coil-grease, more electronics and door-mechanism work.",
     equipment: [
       {
-        series: "R-Series Reach-In Refrigerators (RHT, RHF, RHT232)",
+        series: "RHT132WUT One-Section Reach-In Cooler",
         description:
-          "Dealer-network premium reach-ins — single, double and triple-door coolers and freezers. The kitchen plan staple.",
+          "Single-section R-series reach-in cooler — fine-dining back-prep, country-club pantry. Top-mount condenser, OEM hinge cartridges, INTELA-TRAUL controller.",
       },
       {
-        series: "G-Series Reach-In (Compact, Glass Door, Roll-In)",
+        series: "RHT232WUT Two-Section Reach-In Cooler",
         description:
-          "G-series cabinets — production kitchens and roll-in racks.",
+          "Two-section R-series reach-in cooler — the consultant-spec workhorse on banquet kitchen plans. Door cartridge wear, gasket pull and condenser airflow lead the service log.",
       },
       {
-        series: "RBC / RBC Blast Chillers",
+        series: "RHT332WUT Three-Section Reach-In Cooler",
         description:
-          "Blast chillers and shock freezers — hospital kitchens, banquet production, food-safety compliance.",
+          "Three-section R-series reach-in cooler — banquet platforms, high-volume restaurant prep. Dual evaporator, single top-mount condenser.",
       },
       {
-        series: "TBSU / TUC Sandwich Prep & Undercounter",
+        series: "RHF132 / RHF232 / RHF332 R-Series Freezers",
         description:
-          "Sandwich and pizza prep refrigerators and undercounter units — high-end pizzerias and bars.",
+          "Matching R-series freezer variants in one, two and three-section formats. Defrost termination thermostat and evaporator fan motor are the standard freezer-side repairs.",
       },
       {
-        series: "Dealer-Network Compact (TS, TBC)",
+        series: "RRI132 / RRI232 / RRI332 Roll-In Refrigerators",
         description:
-          "Compact cabinets for tight kitchens — bar back, espresso back-prep.",
+          "R-Series roll-in refrigerators for sheet-pan rack-in production — bakery, banquet prep. Floor channel and door bumper wear.",
+      },
+      {
+        series: "RRF132 / RRF232 Roll-In Freezers",
+        description:
+          "R-Series roll-in freezers for frozen production lines — defrost termination and door bushing service.",
+      },
+      {
+        series: "RIH132 / RIH232 Pass-Thru Refrigerators",
+        description:
+          "Pass-thru R-Series reach-ins — kitchen-to-wait-staff handoffs in fine-dining and resort BOH. Double-sided door alignment and gasket sealing on every PM.",
+      },
+      {
+        series: "G10010 / G12010 G-Series Compact",
+        description:
+          "G-series single-section reach-ins for compact kitchens — pantry stations, bar back, espresso prep. Hinge cartridge and gasket are the recurring repairs.",
+      },
+      {
+        series: "G20010 / G22010 G-Series Two-Section",
+        description:
+          "G-series two-section reach-in coolers and freezers — production kitchens and country-club back-prep. INTELA-TRAUL controller and probe drift are the typical electronics calls.",
+      },
+      {
+        series: "G30010 / G31010 G-Series Three-Section",
+        description:
+          "G-series three-section reach-ins — banquet platforms and large casual restaurants. Same mechanical platform, more doors, more hinge service.",
+      },
+      {
+        series: "GHT / GLT G-Series Glass-Door Reach-Ins",
+        description:
+          "Glass-door variants of the G-series platform — fine-dining display and country-club beverage. Anti-sweat heater wire and frame condensate are the standard repairs.",
+      },
+      {
+        series: "RBC50 Undercounter Blast Chiller",
+        description:
+          "50 lb capacity undercounter blast chiller — fine-dining cold lines, pastry stations. Core-probe socket corrosion and chill-cycle termination service.",
+      },
+      {
+        series: "RBC100 Reach-In Blast Chiller",
+        description:
+          "100 lb capacity reach-in blast chiller — banquet prep, country clubs, hospital cooking. HACCP-compliant chill cycles documented on the work order.",
+      },
+      {
+        series: "RBC200 / RBC200RT Roll-In Blast Chiller",
+        description:
+          "200 lb capacity roll-in blast chiller — hospital production kitchens and large banquet platforms. RT variant is the retrofit replacement. Heavy compressor and condenser PM.",
+      },
+      {
+        series: "RBC400 / RBC700 Large-Capacity Blast Chillers",
+        description:
+          "400 and 700 lb capacity production blast chillers — central commissary kitchens and food-safety-regulated production. Three-phase compressor service, refrigerant charge verification.",
+      },
+      {
+        series: "TBSU-27 / TBSU-48 / TBSU-60 / TBSU-72 Sandwich Prep",
+        description:
+          "Traulsen sandwich prep tables — high-end pizzerias and resort sandwich stations. Pan-rail temperature, evaporator fan and lid hinge are the standard repairs.",
+      },
+      {
+        series: "TUC-27 / TUC-48 / TUC-60 Undercounter Coolers",
+        description:
+          "Traulsen undercounter refrigerators — bar back, fine-dining service stations, pastry prep. Compact top-mount or front-breathing condenser; coil cleaning lead.",
+      },
+      {
+        series: "TS / TBC Dealer-Network Compact Cabinets",
+        description:
+          "Compact dealer-network cabinets for tight kitchens — bar back, espresso back-prep, satellite kitchens. Drain pan, gasket and door switch are the recurring fixes.",
+      },
+      {
+        series: "RDT / RHT Spec-Line Premium Cabinets",
+        description:
+          "Spec-line premium R-series cabinets with custom interior racking and HACCP probe ports — kitchen-consultant builds in resort hotels and hospital systems.",
       },
     ],
     failureModes: [
