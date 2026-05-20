@@ -7,7 +7,12 @@ import { Card } from "@workspace/ui/components/card"
 import { Badge } from "@workspace/ui/components/badge"
 import { AnchorButton, LinkButton } from "@/components/link-button"
 import { JsonLd } from "@/components/json-ld"
-import { metaFor, breadcrumbSchema } from "@/lib/seo"
+import {
+  metaFor,
+  breadcrumbSchema,
+  blogPostingSchema,
+  howToSchema,
+} from "@/lib/seo"
 import { site } from "@/lib/site"
 import {
   articles,
@@ -16,6 +21,7 @@ import {
   formatPublishDate,
   publishedArticles,
 } from "@/lib/blog/articles"
+import { HOWTO_BLUEPRINTS } from "@/lib/blog/howto-allowlist"
 
 export const revalidate = 3600
 
@@ -61,36 +67,37 @@ export default async function BlogArticlePage({ params }: Params) {
 
   const relatedFinal = related.length ? related : fallbackRelated
 
-  const blogPostingSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "@id": `${site.url}/blog/${a.slug}#article`,
+  const articleUrl = `${site.url}/blog/${a.slug}`
+
+  // Word count derived from section bodies. Lede + section paragraphs.
+  const wordCount =
+    a.lede.trim().split(/\s+/).filter(Boolean).length +
+    a.sections.reduce(
+      (acc, s) =>
+        acc +
+        s.body.reduce(
+          (sum, p) => sum + p.trim().split(/\s+/).filter(Boolean).length,
+          0,
+        ),
+      0,
+    )
+
+  const blogPosting = blogPostingSchema({
+    url: articleUrl,
     headline: a.title,
     description: a.description,
     datePublished: a.publishedAt,
     dateModified: a.updatedAt ?? a.publishedAt,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `${site.url}/blog/${a.slug}`,
-    },
-    author: {
-      "@type": "Organization",
-      name: site.name,
-      url: site.url,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: site.name,
-      url: site.url,
-      logo: {
-        "@type": "ImageObject",
-        url: `${site.url}/opengraph-image`,
-      },
-    },
-    image: `${site.url}/opengraph-image`,
-    inLanguage: "en-US",
-    keywords: a.tags.join(", "),
-  }
+    authorName: "Eugene Bernitsky",
+    articleSection: a.category,
+    wordCount,
+    keywords: a.tags,
+  })
+
+  const howtoBlueprint = HOWTO_BLUEPRINTS[a.slug]
+  const howtoNode = howtoBlueprint
+    ? howToSchema({ url: articleUrl, ...howtoBlueprint })
+    : null
 
   return (
     <PageShell>
@@ -224,7 +231,8 @@ export default async function BlogArticlePage({ params }: Params) {
         ) : null}
       </article>
 
-      <JsonLd data={blogPostingSchema} />
+      <JsonLd data={blogPosting} />
+      {howtoNode ? <JsonLd data={howtoNode} /> : null}
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", url: `${site.url}/` },

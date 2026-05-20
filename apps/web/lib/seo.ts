@@ -251,6 +251,124 @@ export function serviceSchema(args: {
   }
 }
 
+/**
+ * Enriched BlogPosting schema for /blog/[slug] pages. Centralized so every
+ * article emits the same structured fields (mainEntityOfPage, articleSection,
+ * wordCount, keywords, alternativeHeadline, author Person + publisher) without
+ * each page hand-rolling the shape.
+ */
+export function blogPostingSchema(args: {
+  url: string
+  headline: string
+  alternativeHeadline?: string
+  description: string
+  image?: string
+  datePublished: string
+  dateModified: string
+  authorName: string
+  articleSection?: string
+  wordCount?: number
+  keywords?: string[]
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${args.url}#blogposting`,
+    headline: args.headline.slice(0, 110),
+    ...(args.alternativeHeadline && args.alternativeHeadline !== args.headline
+      ? { alternativeHeadline: args.alternativeHeadline }
+      : {}),
+    description: args.description,
+    image: args.image ?? `${site.url}/opengraph-image`,
+    datePublished: args.datePublished,
+    dateModified: args.dateModified,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": args.url,
+    },
+    author: {
+      "@type": "Person",
+      name: args.authorName,
+      url: "https://berne-repair.com/about",
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${site.url}/#organization`,
+      name: site.name,
+      url: site.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${site.url}/opengraph-image`,
+      },
+    },
+    inLanguage: "en-US",
+    ...(args.articleSection ? { articleSection: args.articleSection } : {}),
+    ...(typeof args.wordCount === "number" ? { wordCount: args.wordCount } : {}),
+    ...(args.keywords && args.keywords.length > 0
+      ? { keywords: args.keywords.join(", ") }
+      : {}),
+  }
+}
+
+/**
+ * HowTo schema. Step text must reflect the actual procedure copy from the
+ * article body. Fabricated or mis-extracted steps trigger a structured-data
+ * mismatch penalty in Search Console.
+ */
+export type HowToStepInput = {
+  name: string
+  text: string
+  url?: string
+  image?: string
+}
+
+export function howToSchema(args: {
+  url: string
+  name: string
+  description: string
+  totalTimeISO: string
+  estimatedCostUSD?: string
+  supply?: string[]
+  tool?: string[]
+  steps: HowToStepInput[]
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": `${args.url}#howto`,
+    name: args.name,
+    description: args.description,
+    totalTime: args.totalTimeISO,
+    ...(args.estimatedCostUSD
+      ? {
+          estimatedCost: {
+            "@type": "MonetaryAmount",
+            currency: "USD",
+            value: args.estimatedCostUSD,
+          },
+        }
+      : {}),
+    ...(args.supply && args.supply.length > 0
+      ? {
+          supply: args.supply.map((s) => ({ "@type": "HowToSupply", name: s })),
+        }
+      : {}),
+    ...(args.tool && args.tool.length > 0
+      ? {
+          tool: args.tool.map((t) => ({ "@type": "HowToTool", name: t })),
+        }
+      : {}),
+    step: args.steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+      url: s.url ?? `${args.url}#step${i + 1}`,
+      ...(s.image ? { image: s.image } : {}),
+    })),
+  }
+}
+
 export function faqSchema(faqs: { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",
