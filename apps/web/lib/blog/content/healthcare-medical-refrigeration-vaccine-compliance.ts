@@ -79,6 +79,7 @@ export const healthcareMedicalRefrigerationVaccine: Article = {
       heading: "Same-day medical refrigeration service",
       body: [
         "Berne Commercial Repair services Helmer, Migali, Follett, ABS Scientific, and Norlake medical refrigeration across Miami-Dade, Broward, and Palm Beach. Vaccine refrigerator service, ULT freezer service, data logger validation, VFC audit support. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our healthcare refrigeration page.",
+        "For private-residence pharmaceutical refrigeration (medical-grade home installs, concierge medicine setups), [Berne's premium residential team](https://berne-repair.com) covers that specialty.",
       ],
     },
   ],

@@ -1,3 +1,4 @@
+import type { ReactNode } from "react"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
@@ -26,6 +27,56 @@ import { HOWTO_BLUEPRINTS } from "@/lib/blog/howto-allowlist"
 export const revalidate = 3600
 
 type Params = { params: Promise<{ slug: string }> }
+
+/**
+ * Render inline markdown-style links `[text](url)` inside a paragraph string.
+ * External (http/https) links rendered as <a target="_blank" rel="noopener">;
+ * internal (relative) links rendered as next/link. Anything else passes through
+ * as plain text. Intentionally minimal — body strings are otherwise plain text.
+ */
+function renderInline(text: string): ReactNode {
+  // Pattern: [label](url) — non-greedy on label, url stops at whitespace or close paren
+  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)/g
+  const out: ReactNode[] = []
+  let lastIndex = 0
+  let key = 0
+  let m: RegExpExecArray | null
+  while ((m = pattern.exec(text)) !== null) {
+    if (m.index > lastIndex) {
+      out.push(text.slice(lastIndex, m.index))
+    }
+    const label = m[1] ?? ""
+    const url = m[2] ?? ""
+    if (/^https?:\/\//.test(url)) {
+      out.push(
+        <a
+          key={`l-${key++}`}
+          href={url}
+          target="_blank"
+          rel="noopener"
+          className="text-primary underline-offset-2 hover:underline"
+        >
+          {label}
+        </a>,
+      )
+    } else {
+      out.push(
+        <Link
+          key={`l-${key++}`}
+          href={url}
+          className="text-primary underline-offset-2 hover:underline"
+        >
+          {label}
+        </Link>,
+      )
+    }
+    lastIndex = m.index + m[0].length
+  }
+  if (lastIndex < text.length) {
+    out.push(text.slice(lastIndex))
+  }
+  return out
+}
 
 export function generateStaticParams() {
   // Generate params for all articles; date-gating happens at request time via notFound().
@@ -149,7 +200,7 @@ export default async function BlogArticlePage({ params }: Params) {
                 </h2>
                 <div className="mt-4 space-y-4 text-base leading-relaxed text-foreground/85">
                   {section.body.map((p, i) => (
-                    <p key={i}>{p}</p>
+                    <p key={i}>{renderInline(p)}</p>
                   ))}
                 </div>
               </section>

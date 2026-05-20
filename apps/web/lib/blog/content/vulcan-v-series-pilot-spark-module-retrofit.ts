@@ -78,6 +78,7 @@ export const vulcanVSeriesPilotSparkModule: Article = {
       heading: "Same-day Vulcan service",
       body: [
         "Berne Commercial Repair services Vulcan V-series, Endurance, and L-series ranges and fryers across Miami-Dade, Broward, and Palm Beach. Spark module retrofits, pilot service, burner replacements, and full range diagnostics. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial range repair page.",
+        "For residential pro-style range pilot and spark module service (Wolf, Viking Professional, BlueStar), [Berne's premium residential operation](https://berne-repair.com) covers the home-side equivalents.",
       ],
     },
   ],

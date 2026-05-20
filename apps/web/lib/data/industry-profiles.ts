@@ -39,6 +39,13 @@ export type IndustryProfile = {
   faqs: IndustryFaq[]
   /** Service slugs to cross-link in a "Related services" strip. */
   relatedServices: string[]
+  /**
+   * Optional contextual cross-link to a sister site (residential / premium-residential).
+   * Rendered as a single sentence after the "Why same-day" section so the link
+   * appears in editorial context rather than as boilerplate. Allows inline markdown
+   * `[label](https://...)` syntax (rendered via renderInline in industries page).
+   */
+  residentialAside?: string
   /** Spanish localization. If absent the EN content is used as fallback. */
   es?: {
     industry: string
@@ -156,6 +163,8 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       "commercial-hood-repair",
       "espresso-machine-repair",
     ],
+    residentialAside:
+      "Restaurant operators who run premium kitchens at home can route home-side dispatch to [Berne's premium residential team at berne-repair.com](https://berne-repair.com); the back-office is shared, so the call gets the same dispatch quality on either side.",
     es: {
       industry: "restaurantes",
       industryTitle: "Restaurante",
@@ -292,6 +301,8 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       "commercial-hood-repair",
       "commercial-dryer-repair",
     ],
+    residentialAside:
+      "Hotel staff-housing units and owner-occupied private suites run residential-grade equipment — [Berne Appliance Repair at bernerepair.com](https://bernerepair.com) handles in-unit washer/dryer, range, and refrigeration service on the residential side.",
   },
 
   // ────────────────────────────────────────────────────────── 3. Laundromats
@@ -380,6 +391,8 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       "commercial-washer-repair",
       "commercial-dryer-repair",
     ],
+    residentialAside:
+      "Laundromat owners and managers often have residential laundry at home — for in-home washer/dryer service (LG, Samsung, Whirlpool, Speed Queen residential), [Berne Appliance Repair](https://bernerepair.com) handles that side.",
   },
 
   // ────────────────────────────────────────────────────────── 4. Healthcare
@@ -469,6 +482,8 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       "ice-machine-repair",
       "commercial-oven-repair",
     ],
+    residentialAside:
+      "Concierge medicine practices and physician homes often install medical-grade refrigeration outside the clinic — [Berne's premium residential team at berne-repair.com](https://berne-repair.com) handles those private-residence installations.",
   },
 
   // ────────────────────────────────────────────────────────── 5. Grocery
@@ -564,6 +579,8 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       "ice-machine-repair",
       "commercial-oven-repair",
     ],
+    residentialAside:
+      "Grocery managers and franchisees who run premium home kitchens (Sub-Zero, Wolf, Viking) can route home-side service through [Berne's premium residential operation](https://berne-repair.com).",
   },
 
   // ────────────────────────────────────────────────────────── 6. Schools
@@ -659,6 +676,8 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       "steamer-repair",
       "ice-machine-repair",
     ],
+    residentialAside:
+      "Faculty housing and on-campus residences run residential-grade laundry and kitchen equipment — [Berne Appliance Repair](https://bernerepair.com) handles those in-unit calls on the residential side.",
   },
 
   // ────────────────────────────────────────────────────────── 7. Gyms / Fitness
@@ -753,6 +772,8 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       "commercial-laundry-repair",
       "espresso-machine-repair",
     ],
+    residentialAside:
+      "Gym members and owners running premium home kitchens often pair this account with [Berne's premium residential team at berne-repair.com](https://berne-repair.com) for Sub-Zero, Wolf, Viking, and Miele service at home.",
   },
 
   // ────────────────────────────────────────────────────────── 8. Breweries
@@ -846,6 +867,8 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       "walk-in-cooler-repair",
       "ice-machine-repair",
     ],
+    residentialAside:
+      "Brewery owners and head brewers often run premium beverage refrigeration at home (Sub-Zero wine columns, Marvel beverage centers) — [Berne's premium residential team](https://berne-repair.com) handles those installations.",
   },
 
   // ────────────────────────────────────────────────────────── 9. Country Clubs
@@ -940,6 +963,8 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       "ice-machine-repair",
       "commercial-oven-repair",
     ],
+    residentialAside:
+      "Club members can route home-side appliance service through [Berne's premium residential team at berne-repair.com](https://berne-repair.com); same factory training on Sub-Zero, Wolf, Viking, Thermador, and Miele, same dispatch back-office.",
   },
 
   // ────────────────────────────────────────────────────────── 10. Multi-Family
@@ -1034,6 +1059,8 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       "commercial-dryer-repair",
       "commercial-refrigeration-repair",
     ],
+    residentialAside:
+      "Resident-owned in-unit washer/dryer and kitchen appliances are residential-grade — [Berne Appliance Repair at bernerepair.com](https://bernerepair.com) handles those individual-unit calls separately from the common-area laundry contract.",
   },
 ]
 

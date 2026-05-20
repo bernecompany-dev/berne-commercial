@@ -77,6 +77,7 @@ export const manitowocNeoPreSeasonSouthFl: Article = {
       heading: "Same-day Manitowoc service",
       body: [
         "Berne Commercial Repair services Manitowoc NEO undercounter, Indigo NXT, and ID/IY/IB modular ice machines across Miami-Dade, Broward, and Palm Beach. Pre-season service, descaling, AuCS programming, and full refrigeration diagnostic. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our ice machine repair page.",
+        "For residential ice maker pre-season service on premium home units (Sub-Zero, Scotsman undercounter), [Berne's premium residential operation](https://berne-repair.com) runs the same prep cycle on the home side.",
       ],
     },
   ],

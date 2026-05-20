@@ -80,6 +80,7 @@ export const trueGdmDoorGasketPreInspection: Article = {
       heading: "Same-day True merchandiser service",
       body: [
         "Berne Commercial Repair services True GDM, T-series, TPP, TUC, TSSU, and TWT commercial refrigeration across Miami-Dade, Broward, and Palm Beach. Gasket replacement, hinge adjustment, condenser cleaning, full preventive service. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial refrigeration repair page.",
+        "For residential built-in refrigeration with similar gasket geometry (Sub-Zero glass-door wine columns, Viking integrated), [Berne's premium residential team](https://berne-repair.com) handles home-side gasket service.",
       ],
     },
   ],

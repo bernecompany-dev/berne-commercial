@@ -1,3 +1,4 @@
+import type { ReactNode } from "react"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
@@ -19,6 +20,54 @@ import { getBrandsForIndustry } from "@/lib/data/brand-profiles"
 import { getService } from "@/lib/data/services"
 
 type Params = { params: Promise<{ slug: string }> }
+
+/**
+ * Minimal inline markdown-link renderer for residential cross-site asides.
+ * External links open in a new tab with rel="noopener" so the sister-site
+ * outbound passes link equity correctly without losing the visitor's tab.
+ */
+function renderInlineLinks(text: string): ReactNode {
+  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)/g
+  const out: ReactNode[] = []
+  let lastIndex = 0
+  let key = 0
+  let m: RegExpExecArray | null
+  while ((m = pattern.exec(text)) !== null) {
+    if (m.index > lastIndex) {
+      out.push(text.slice(lastIndex, m.index))
+    }
+    const label = m[1] ?? ""
+    const url = m[2] ?? ""
+    if (/^https?:\/\//.test(url)) {
+      out.push(
+        <a
+          key={`il-${key++}`}
+          href={url}
+          target="_blank"
+          rel="noopener"
+          className="text-primary underline-offset-2 hover:underline"
+        >
+          {label}
+        </a>,
+      )
+    } else {
+      out.push(
+        <Link
+          key={`il-${key++}`}
+          href={url}
+          className="text-primary underline-offset-2 hover:underline"
+        >
+          {label}
+        </Link>,
+      )
+    }
+    lastIndex = m.index + m[0].length
+  }
+  if (lastIndex < text.length) {
+    out.push(text.slice(lastIndex))
+  }
+  return out
+}
 
 export function generateStaticParams() {
   return INDUSTRY_PROFILES.map((p) => ({ slug: p.slug }))
@@ -235,6 +284,11 @@ export default async function IndustryDetailPage({ params }: Params) {
             Why same-day matters for {profile.industry}
           </h2>
           <p className="mt-4 text-muted-foreground">{profile.sameDay}</p>
+          {profile.residentialAside ? (
+            <p className="mt-4 text-sm text-muted-foreground/90 italic">
+              {renderInlineLinks(profile.residentialAside)}
+            </p>
+          ) : null}
         </div>
       </section>
 

@@ -80,6 +80,7 @@ export const groceryDeliDisplayCaseHealthCallbacks: Article = {
       heading: "Same-day grocery refrigeration service",
       body: [
         "Berne Commercial Repair services Hussmann, Hill Phoenix, Tyler, Kysor Warren, and Migali deli/meat/seafood cases across Miami-Dade, Broward, and Palm Beach. Self-contained and remote-rack service. EPA Section 608 certified. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial refrigeration repair page.",
+        "For residential refrigeration in upscale homes that operate on a similar dispatch urgency (Sub-Zero, Wolf, Miele built-ins), our [premium residential operation](https://berne-repair.com) covers that segment.",
       ],
     },
   ],

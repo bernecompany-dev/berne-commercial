@@ -80,6 +80,7 @@ export const hobartClBoosterHeaterScalingMiami: Article = {
       heading: "Same-day Hobart service",
       body: [
         "Berne Commercial Repair services Hobart CLeN, CLPS, CLB, AM, and FT series warewashing equipment across Miami-Dade, Broward, and Palm Beach. Booster service, descaling, element replacement, external booster upgrades, water treatment coordination. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial dishwasher repair page.",
+        "For residential premium dishwashers and combi-ovens that scale in South Florida water (Miele G7000, Wolf CSO, Thermador), [Berne's premium residential team](https://berne-repair.com) covers descaling on the home side.",
       ],
     },
   ],

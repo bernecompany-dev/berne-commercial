@@ -81,6 +81,7 @@ export const gymSmoothieBarRefrigeration: Article = {
       heading: "Same-day commercial refrigeration service",
       body: [
         "Berne Commercial Repair services True undercounter, Manitowoc NEO, and other commercial refrigeration across Miami-Dade, Broward, and Palm Beach. Gym, cafe, and small-asset specialty. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial refrigeration repair page.",
+        "For residential refrigeration on home gyms and pool-area kitchens (built-in beverage centers, wine columns), [Berne Appliance Repair](https://bernerepair.com) handles the home-side equipment.",
       ],
     },
   ],

@@ -84,6 +84,7 @@ export const garlandSectionalGasPressure: Article = {
       heading: "Same-day Garland service",
       body: [
         "Berne Commercial Repair installs and services Garland sectional ranges, charbroilers, salamanders, and convection ovens across Miami-Dade, Broward, and Palm Beach. Commissioning, manifold adjustment, orifice conversion, full diagnostic service. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial range repair page.",
+        "For residential pro-style gas ranges in private kitchens (Wolf, Viking Professional, BlueStar), [Berne's premium residential team](https://berne-repair.com) handles the home-side calibration.",
       ],
     },
   ],

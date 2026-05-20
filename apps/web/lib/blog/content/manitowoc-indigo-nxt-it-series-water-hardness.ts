@@ -78,6 +78,7 @@ export const manitowocIndigoNxtIt: Article = {
       heading: "Same-day Manitowoc service",
       body: [
         "Berne Commercial Repair services Manitowoc Indigo NXT IT, ID, IY, IB and the NEO series across Miami-Dade, Broward, and Palm Beach. Descaling, AuCS programming, water system service, and full refrigeration diagnostic. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our ice machine repair page.",
+        "For residential ice makers facing the same South Florida water hardness profile (Sub-Zero ice columns, U-Line), [Berne's premium residential team](https://berne-repair.com) covers home-side scale management.",
       ],
     },
   ],

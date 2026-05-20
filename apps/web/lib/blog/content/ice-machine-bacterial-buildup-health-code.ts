@@ -78,6 +78,7 @@ export const iceMachineBacterialHealthCode: Article = {
       heading: "Same-day ice machine service",
       body: [
         "Berne Commercial Repair services Hoshizaki, Manitowoc, Scotsman, Ice-O-Matic, and Follett ice machines across Miami-Dade, Broward, and Palm Beach. Sanitation, descaling, filter service, and full diagnostic. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our ice machine repair page.",
+        "For residential ice maker cleaning protocols on premium home units (Sub-Zero ice columns, U-Line), [Berne's premium residential operation](https://berne-repair.com) runs the home-side sanitation service.",
       ],
     },
   ],

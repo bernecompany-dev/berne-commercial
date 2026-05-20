@@ -78,6 +78,7 @@ export const hotelLaundrySpeedQueenContinental: Article = {
       heading: "Same-day commercial laundry service",
       body: [
         "Berne Commercial Repair services Speed Queen, Continental Girbau, Huebsch, Wascomat, and Unimac commercial laundry equipment across Miami-Dade, Broward, and Palm Beach. Hotel and OPL specialty. Call (754) 345-4515 or request through our commercial laundry repair page.",
+        "For residential laundry in hotel staff housing or owner-occupied units (LG, Samsung, Whirlpool, Speed Queen residential), [Berne Appliance Repair](https://bernerepair.com) handles the home-side service.",
       ],
     },
   ],

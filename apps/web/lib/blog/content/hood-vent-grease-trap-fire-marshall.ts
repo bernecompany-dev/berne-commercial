@@ -78,6 +78,7 @@ export const hoodVentGreaseTrapFireMarshall: Article = {
       heading: "Same-day commercial dispatch",
       body: [
         "Berne Commercial Repair services commercial hoods, exhaust fans, makeup-air units, and full kitchen equipment across Miami-Dade, Broward, and Palm Beach. Coordination with certified hood-cleaning, grease, and Ansul contractors. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our dispatch page.",
+        "For residential range hoods and downdraft vents in premium kitchens (Wolf, Viking Professional, Vent-A-Hood), [Berne's premium residential operation](https://berne-repair.com) handles home-side ventilation service.",
       ],
     },
   ],

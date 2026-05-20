@@ -85,6 +85,7 @@ export const refrigerationLeakDetectionEpa: Article = {
       heading: "Same-day commercial refrigeration service",
       body: [
         "Berne Commercial Repair services commercial refrigeration across Miami-Dade, Broward, and Palm Beach with EPA Section 608 Universal certified technicians. Leak detection programs, rack-system service, refrigerant recovery and recharge, EPA documentation support. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial refrigeration repair page.",
+        "Residential refrigeration leak service follows the same EPA Section 608 framework — our [premium residential team at berne-repair.com](https://berne-repair.com) handles Sub-Zero, Wolf, and Viking refrigerant work on the home side.",
       ],
     },
   ],

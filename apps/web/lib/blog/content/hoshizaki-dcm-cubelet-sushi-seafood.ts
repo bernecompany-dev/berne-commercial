@@ -77,6 +77,7 @@ export const hoshizakiDcmCubeletSushiSeafood: Article = {
       heading: "Same-day Hoshizaki cubelet service",
       body: [
         "Berne Commercial Repair services Hoshizaki DCM cubelet, FD flake, KM cube, and FS dispense ice machines across Miami-Dade, Broward, and Palm Beach. Sanitation, descaling, auger service, gearmotor service, and full refrigeration diagnostic. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our ice machine repair page.",
+        "For premium residential ice production (Sub-Zero ice maker columns, Scotsman undercounter), [Berne's premium residential team](https://berne-repair.com) handles those installations.",
       ],
     },
   ],

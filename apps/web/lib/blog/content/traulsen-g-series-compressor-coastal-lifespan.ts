@@ -79,6 +79,7 @@ export const traulsenGSeriesCompressorCoastal: Article = {
       heading: "Same-day Traulsen service",
       body: [
         "Berne Commercial Repair services Traulsen G-series, RH, RB, RIH, TBC, and ABC commercial refrigeration across Miami-Dade, Broward, and Palm Beach. Compressor service, R-290 certified work, condenser cleaning, and full diagnostic. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial refrigeration repair page.",
+        "For residential built-in refrigeration facing the same coastal compressor stress (Sub-Zero 600/700, Wolf undercounter), [Berne's premium residential operation](https://berne-repair.com) handles home-side service.",
       ],
     },
   ],

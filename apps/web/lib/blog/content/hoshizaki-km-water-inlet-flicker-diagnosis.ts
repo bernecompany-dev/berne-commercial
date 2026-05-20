@@ -78,6 +78,7 @@ export const hoshizakiKmWaterInletFlicker: Article = {
       heading: "Same-day Hoshizaki service",
       body: [
         "Berne Commercial Repair services Hoshizaki KM, KMD, DCM, F-series, and FD-series ice machines across Miami-Dade, Broward, and Palm Beach. Alarm diagnostics, descaling, parts replacement, and full refrigeration service. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our ice machine repair page.",
+        "For residential premium ice makers (Sub-Zero, U-Line, Scotsman undercounter), [Berne's premium residential team at berne-repair.com](https://berne-repair.com) covers home-side diagnostics.",
       ],
     },
   ],

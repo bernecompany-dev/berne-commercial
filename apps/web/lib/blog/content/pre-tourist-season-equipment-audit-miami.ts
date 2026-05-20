@@ -86,6 +86,7 @@ export const preTouristSeasonEquipmentAuditMiami: Article = {
       heading: "Same-day commercial dispatch",
       body: [
         "Berne Commercial Repair runs pre-season audits and same-day dispatch across Miami-Dade, Broward, and Palm Beach. $89 commercial service call applied to the approved repair. Audit programs for restaurants, hotels, and hospitality groups. Call (754) 345-4515 or request through our dispatch page.",
+        "For residential premium kitchens that operate as short-term rentals during tourist season, [Berne's premium residential team](https://berne-repair.com) covers the home-side equipment audit on Sub-Zero, Wolf, and Miele.",
       ],
     },
   ],

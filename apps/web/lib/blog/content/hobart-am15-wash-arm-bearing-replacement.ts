@@ -78,6 +78,7 @@ export const hobartAm15WashArmBearing: Article = {
       heading: "Same-day Hobart warewashing service",
       body: [
         "Berne Commercial Repair runs same-day dispatch for Hobart AM-15, AM-15T, AM Select, CL series, and FT series warewashing equipment across Miami-Dade, Broward, and Palm Beach. $89 commercial service call applied to the approved repair. COI on file for hotel and corporate clients. Call (754) 345-4515 or book a tech through our commercial dishwasher repair page.",
+        "For premium residential dishwashers running comparable wash-arm geometries (Miele G7000, Bosch Benchmark), [Berne's premium residential team](https://berne-repair.com) handles that platform.",
       ],
     },
   ],
