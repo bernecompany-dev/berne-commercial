@@ -83,39 +83,41 @@ export default function AboutPageES() {
                 difíciles.
               </p>
               <p>
-                Berne Commercial tiene cuatro años como empresa, pero los
-                trucks cargan hasta 30 años de experiencia práctica. Hoy
-                operamos despacho comercial en Miami-Dade, Broward y Palm
-                Beach para restaurantes, cadenas, plantas de producción,
-                hoteles, retail y edificios administrados. Con licencia,
-                asegurados, listos para COI y disponibles para servicio de
+                Berne Commercial opera con 11 años en el negocio, 18
+                técnicos certificados y más de 29,000 servicios
+                completados — calificación 4.79 ★ en 871 reseñas
+                verificadas. Hoy operamos despacho comercial en
+                Miami-Dade, Broward y Palm Beach para restaurantes,
+                cadenas, plantas de producción, hoteles, retail y
+                edificios administrados. Con licencia, asegurados,
+                listos para COI y disponibles para servicio de
                 emergencia el mismo día.
               </p>
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-4 border-t border-border pt-6 text-sm sm:grid-cols-4">
               <div>
-                <div className="text-2xl font-semibold tracking-tight">17+</div>
+                <div className="text-2xl font-semibold tracking-tight">11</div>
                 <div className="text-xs text-muted-foreground">
-                  Técnicos en ruta
+                  Años en el negocio
                 </div>
               </div>
               <div>
-                <div className="text-2xl font-semibold tracking-tight">30y</div>
+                <div className="text-2xl font-semibold tracking-tight">18</div>
                 <div className="text-xs text-muted-foreground">
-                  Experiencia técnico senior
+                  Técnicos certificados
                 </div>
               </div>
               <div>
-                <div className="text-2xl font-semibold tracking-tight">3</div>
+                <div className="text-2xl font-semibold tracking-tight">29,000+</div>
                 <div className="text-xs text-muted-foreground">
-                  Condados del Sur de Florida
+                  Servicios completados
                 </div>
               </div>
               <div>
-                <div className="text-2xl font-semibold tracking-tight">24/7</div>
+                <div className="text-2xl font-semibold tracking-tight">4.79 ★</div>
                 <div className="text-xs text-muted-foreground">
-                  Despacho de emergencia
+                  871 reseñas verificadas
                 </div>
               </div>
             </div>
