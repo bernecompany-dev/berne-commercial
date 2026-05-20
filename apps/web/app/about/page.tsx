@@ -68,14 +68,38 @@ export default function AboutPage() {
                 We solve hard ones.
               </p>
               <p>
-                Berne Commercial is backed by Berne Appliance Repair — 11
-                years in business, 18 technicians, 29,000+ services completed
-                across South Florida, and a 4.79★ aggregate rating across
-                871 reviews. Today we run commercial dispatch across
+                Berne Commercial is backed by{" "}
+                <a
+                  href="https://bernerepair.com/"
+                  rel="noopener"
+                  className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                >
+                  Berne Appliance Repair
+                </a>
+                {" "}— 11 years in business, 18 technicians, 29,000+ services
+                completed across South Florida, and a 4.79★ aggregate rating
+                across 871 reviews. Today we run commercial dispatch across
                 Miami-Dade, Broward and Palm Beach for restaurants, chains,
                 production facilities, hotels, retail and property-managed
-                buildings. Licensed, insured, COI-ready, and on call for
-                same-day emergency service.
+                buildings. Residential customers are served by our consumer
+                arm{" "}
+                <a
+                  href="https://bernerepair.com/"
+                  rel="noopener"
+                  className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                >
+                  bernerepair.com
+                </a>
+                {" "}and the premium Sub-Zero / Wolf / Viking / Miele service{" "}
+                <a
+                  href="https://www.berne-repair.com/"
+                  rel="noopener"
+                  className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                >
+                  berne-repair.com
+                </a>
+                . Licensed, insured, COI-ready, and on call for same-day
+                emergency service.
               </p>
             </div>
 
