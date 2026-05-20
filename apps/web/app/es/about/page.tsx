@@ -93,6 +93,26 @@ export default function AboutPageES() {
                 listos para COI y disponibles para servicio de
                 emergencia el mismo día.
               </p>
+              <p>
+                Berne es miembro de{" "}
+                <a
+                  href="https://msaworld.com/"
+                  rel="noopener external"
+                  target="_blank"
+                  className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                >
+                  MSA World
+                </a>
+                {" "}(Marcone Servicers Association), la principal asociación
+                de la industria para contratistas de servicio de
+                electrodomésticos. Nuestros técnicos completan programas de
+                capacitación continua sobre tecnología emergente de
+                electrodomésticos a través de cursos de MSA World y
+                actualizaciones de certificación OEM (Sub-Zero, Wolf, Miele,
+                LG, Samsung, GE) — para que el camión que llega a su loading
+                dock esté equipado para reparar el equipo que realmente
+                opera, no el que se especificó hace cinco años.
+              </p>
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-4 border-t border-border pt-6 text-sm sm:grid-cols-4">

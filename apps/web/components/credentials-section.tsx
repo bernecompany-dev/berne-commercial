@@ -1,4 +1,4 @@
-import { FileText, ShieldCheck, Award, Stamp, Building2, Receipt, FileSignature, ShieldHalf } from "lucide-react"
+import { FileText, ShieldCheck, Award, Stamp, Building2, Receipt, FileSignature, ShieldHalf, Network, GraduationCap } from "lucide-react"
 import { Card } from "@workspace/ui/components/card"
 import { SectionHeading } from "./section-heading"
 import { t } from "@/lib/i18n/dict"
@@ -65,6 +65,20 @@ export function CredentialsSection({ locale = "en" }: { locale?: Locale }) {
             file: "/credentials/w9.pdf",
             fileLabel: "Ver W-9 (PDF)",
           },
+          {
+            icon: Network,
+            title: "Miembro de MSA World",
+            body: "Miembro de Marcone Servicers Association (MSA), la principal asociación industrial de contratistas de servicio de electrodomésticos en Norteamérica.",
+            file: "https://msaworld.com/",
+            fileLabel: "Visitar MSA World →",
+          },
+          {
+            icon: GraduationCap,
+            title: "Capacitación continua del fabricante",
+            body: "Nuestros técnicos completan capacitación continua sobre tecnología emergente de electrodomésticos a través de cursos de MSA World y actualizaciones de OEM (Sub-Zero, Wolf, Miele, LG, Samsung, GE).",
+            file: "https://msaworld.com/",
+            fileLabel: "Programa MSA →",
+          },
         ]
       : [
           {
@@ -122,6 +136,20 @@ export function CredentialsSection({ locale = "en" }: { locale?: Locale }) {
             body: "Signed, current W-9 — ready to drop into your accounts-payable workflow.",
             file: "/credentials/w9.pdf",
             fileLabel: "View W-9 (PDF)",
+          },
+          {
+            icon: Network,
+            title: "MSA World Member",
+            body: "Member of Marcone Servicers Association (MSA), the leading industry association for appliance service contractors in North America. Verifiable industry tie-in for procurement onboarding.",
+            file: "https://msaworld.com/",
+            fileLabel: "Visit MSA World →",
+          },
+          {
+            icon: GraduationCap,
+            title: "Continuous Manufacturer Training",
+            body: "Our technicians complete ongoing training on emerging appliance technology through MSA World coursework and OEM programs (Sub-Zero, Wolf, Miele, LG, Samsung, GE).",
+            file: "https://msaworld.com/",
+            fileLabel: "MSA training program →",
           },
         ]
 

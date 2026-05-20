@@ -105,6 +105,25 @@ export default function AboutPage() {
                 . Licensed, insured, COI-ready, and on call for same-day
                 emergency service.
               </p>
+              <p>
+                Berne is a member of{" "}
+                <a
+                  href="https://msaworld.com/"
+                  rel="noopener external"
+                  target="_blank"
+                  className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                >
+                  MSA World
+                </a>
+                {" "}(Marcone Servicers Association), the leading industry
+                association for appliance service contractors. Our technicians
+                complete continuous training programs on emerging appliance
+                technology through MSA World coursework and OEM (Sub-Zero,
+                Wolf, Miele, LG, Samsung, GE) certification updates — so the
+                truck arriving at your loading dock is equipped to service the
+                equipment you actually own, not the one specified five years
+                ago.
+              </p>
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-4 border-t border-border pt-6 text-sm sm:grid-cols-4">

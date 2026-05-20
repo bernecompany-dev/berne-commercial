@@ -62,6 +62,17 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
                 <ShieldCheck className="mt-0.5 size-4 shrink-0" />
                 <span>{site.licenses}</span>
               </li>
+              <li className="flex items-start gap-2.5">
+                <ShieldCheck className="mt-0.5 size-4 shrink-0" />
+                <a
+                  href="https://msaworld.com/"
+                  target="_blank"
+                  rel="noopener noreferrer external"
+                  className="hover:underline"
+                >
+                  {locale === "es" ? "Miembro de MSA World" : "MSA World Member"}
+                </a>
+              </li>
             </ul>
           </div>
 
