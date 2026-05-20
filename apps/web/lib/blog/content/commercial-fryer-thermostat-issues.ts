@@ -77,7 +77,7 @@ export const commercialFryerThermostat: Article = {
     {
       heading: "Fryer tech, same day",
       body: [
-        "Berne Commercial Repair runs same-day dispatch for Pitco, Frymaster, Vulcan, Imperial, and Wells commercial fryers across Miami-Dade, Broward, and Palm Beach. $89 commercial service call, applied to the approved repair. Call (305) 520-7833 or request service through our fryer repair page. For residential ranges with deep-fry features — Wolf, Viking, Thermador — our sister site bernerepair.com handles the home side.",
+        "Berne Commercial Repair runs same-day dispatch for Pitco, Frymaster, Vulcan, Imperial, and Wells commercial fryers across Miami-Dade, Broward, and Palm Beach. $89 commercial service call, applied to the approved repair. Call (754) 345-4515 or request service through our fryer repair page. For residential ranges with deep-fry features — Wolf, Viking, Thermador — our sister site bernerepair.com handles the home side.",
       ],
     },
   ],

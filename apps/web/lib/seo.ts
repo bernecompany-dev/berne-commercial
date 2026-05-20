@@ -182,8 +182,10 @@ export function localBusinessSchema() {
     },
     address: {
       "@type": "PostalAddress",
+      streetAddress: site.address.streetAddress,
       addressLocality: site.address.locality,
       addressRegion: site.address.region,
+      postalCode: site.address.postalCode,
       addressCountry: site.address.country,
     },
     areaServed: [
@@ -193,6 +195,10 @@ export function localBusinessSchema() {
     ],
     priceRange: "$$",
     hasCredential: HAS_CREDENTIAL,
+    // Canonical hours from _docs/canonical-facts.md — Mon-Sun 07:00-21:00.
+    // The previous 00:00-23:59 (24/7) was retired 2026-05-20 to avoid
+    // over-promising. After-hours emergency dispatch is handled via copy,
+    // not as advertised standard hours.
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -205,8 +211,8 @@ export function localBusinessSchema() {
           "Saturday",
           "Sunday",
         ],
-        opens: "00:00",
-        closes: "23:59",
+        opens: "07:00",
+        closes: "21:00",
       },
     ],
   }
@@ -253,10 +259,12 @@ const SAME_AS = [
   "https://www.tiktok.com/@berne.repair",
   "https://www.instagram.com/bernerepair/",
   "https://www.facebook.com/bernerepair",
-  // Yelp
+  // Yelp — canonical listings only. The legacy `berne-repair-hallandale-beach-3`
+  // slug was deduped into `-4` (280-review primary) per backlinks-agent merge
+  // 2026-05-19; do not re-add. Sarasota + Fort Myers are real service areas
+  // per canonical-facts.md (Gulf Coast + Lee County).
   "https://www.yelp.com/biz/berne-appliance-repair-hallandale-beach-4",
   "https://www.yelp.com/biz/berne-repair-sarasota",
-  "https://www.yelp.com/biz/berne-repair-hallandale-beach-3",
   "https://www.yelp.com/biz/berne-repair-fort-myers",
   // Thumbtack
   "https://www.thumbtack.com/fl/tampa/appliance-repair/norma-appliance-repair/service/485458498671689761",
@@ -371,12 +379,13 @@ export function serviceSchema(args: {
     serviceType: args.name,
     description: args.description,
     url: args.url,
+    // Provider is a BARE @id reference to the canonical LocalBusiness node
+    // emitted globally from app/layout.tsx. Repeating @type/name/telephone
+    // here would create a second graph node with the same @id and conflicting
+    // fields — Google then reports "Review has multiple aggregate ratings"
+    // and rejects the rich result (GSC URL-Inspection, 2026-05-20).
     provider: {
-      "@type": "LocalBusiness",
       "@id": `${site.url}/#localbusiness`,
-      name: site.name,
-      telephone: site.phone,
-      url: site.url,
     },
     areaServed: args.city
       ? { "@type": "City", name: args.city }

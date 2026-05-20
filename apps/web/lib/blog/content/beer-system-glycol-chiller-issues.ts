@@ -71,7 +71,7 @@ export const beerSystemGlycolChiller: Article = {
     {
       heading: "8. Calling for service and what to know first",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about a draft beer system, our dispatcher will ask about the power pack model, the number of taps, the trunk-line length, and whether the issue is on all taps or just some. That last question matters most. If only IPAs pour foamy, you've got a single-line insulation issue. If everything pours warm, you've got a power-pack or glycol-mix problem.",
+        "When you call Berne Commercial at (754) 345-4515 about a draft beer system, our dispatcher will ask about the power pack model, the number of taps, the trunk-line length, and whether the issue is on all taps or just some. That last question matters most. If only IPAs pour foamy, you've got a single-line insulation issue. If everything pours warm, you've got a power-pack or glycol-mix problem.",
         "The $89 commercial service call covers the diagnostic. Most draft system fixes happen in one visit; pump or trunk repairs may need a second visit with parts. For coffee-shop equipment that overlaps a bar setup (espresso, batch brew, gelato display), we cover those too. For residential kegerators (Edgestar, NewAir, Kegco) our sister site bernerepair.com handles them under the residential side.",
       ],
     },

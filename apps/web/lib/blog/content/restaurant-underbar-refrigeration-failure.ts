@@ -71,7 +71,7 @@ export const underbarRefrigerationFailure: Article = {
     {
       heading: "8. Calling for service and what to know first",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about underbar refrigeration, our dispatcher will ask for the unit model, the cabinet temperature reading, the door type (sliding or hinged), and the install date. That information loads the truck — door gaskets, door track lubricant, hard-start kits, and a service-grade vacuum for condenser work.",
+        "When you call Berne Commercial at (754) 345-4515 about underbar refrigeration, our dispatcher will ask for the unit model, the cabinet temperature reading, the door type (sliding or hinged), and the install date. That information loads the truck — door gaskets, door track lubricant, hard-start kits, and a service-grade vacuum for condenser work.",
         "Our $89 commercial service call covers the diagnostic and the cleaning. Most underbar problems are resolved in a single visit. For bars running multiple underbar cabinets across multiple locations, we offer route-service contracts at 30-day intervals. For residential outdoor bars (Sub-Zero outdoor coolers, Lynx, Hestan beverage centers) our sister site bernerepair.com handles those — same dispatch desk routes the call to the right technician.",
       ],
     },

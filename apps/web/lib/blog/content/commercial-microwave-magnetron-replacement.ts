@@ -71,7 +71,7 @@ export const commercialMicrowaveMagnetron: Article = {
     {
       heading: "8. Calling for service and what to have ready",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about a commercial microwave that won't heat, our dispatcher will ask for the model number, the symptom (no heat, sparking, error code, won't start), and the install date. That information puts the right parts on the truck — magnetron, HV cap, diode, door switch kit, and a leakage meter.",
+        "When you call Berne Commercial at (754) 345-4515 about a commercial microwave that won't heat, our dispatcher will ask for the model number, the symptom (no heat, sparking, error code, won't start), and the install date. That information puts the right parts on the truck — magnetron, HV cap, diode, door switch kit, and a leakage meter.",
         "Our $89 commercial service call covers the on-site diagnostic and the leakage test on completion. Most no-heat calls are resolved in one visit. Panasonic NE-1054F, Amana RFS511MP, ACP RCS511DSE, Sharp R-CD2200M, and Menumaster MCS10TS all have parts on the truck. For residential microwaves (GE, Whirlpool, KitchenAid) our sister site bernerepair.com handles those — they're a different parts library and a different service approach.",
       ],
     },

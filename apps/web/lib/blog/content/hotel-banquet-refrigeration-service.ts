@@ -71,7 +71,7 @@ export const hotelBanquetRefrigeration: Article = {
     {
       heading: "8. Service calls and what to know first",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about hotel banquet refrigeration, our dispatcher needs the event calendar. If a unit is running warm two days before a 400-cover dinner, that call gets priority dispatch. If the unit is warm on a Tuesday with no event for a week, we schedule for the next morning. Both calls run the same $89 commercial service call, but the urgency differs.",
+        "When you call Berne Commercial at (754) 345-4515 about hotel banquet refrigeration, our dispatcher needs the event calendar. If a unit is running warm two days before a 400-cover dinner, that call gets priority dispatch. If the unit is warm on a Tuesday with no event for a week, we schedule for the next morning. Both calls run the same $89 commercial service call, but the urgency differs.",
         "For hotel residential operations (executive housing, long-stay suites with kitchenettes), the residential team at bernerepair.com handles in-room reach-ins, ice makers, and dishwashers. The commercial team works banquet, restaurant, lobby bar, and back-of-house. Two trucks, two specialties, one umbrella for the property manager to call.",
       ],
     },

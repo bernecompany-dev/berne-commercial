@@ -78,7 +78,7 @@ export const iceMachineNotMakingIce: Article = {
     {
       heading: "Need a tech on site today?",
       body: [
-        "Berne Commercial Repair runs a $89 commercial service call across Miami-Dade, Broward, and Palm Beach — the diagnostic fee is applied to the approved repair. Our trucks stock Hoshizaki KM, Manitowoc Indigo, and Scotsman Prodigy parts, plus 3M Cuno and Everpure filter cartridges. Call dispatch at (305) 520-7833 or request service through our ice machine repair page.",
+        "Berne Commercial Repair runs a $89 commercial service call across Miami-Dade, Broward, and Palm Beach — the diagnostic fee is applied to the approved repair. Our trucks stock Hoshizaki KM, Manitowoc Indigo, and Scotsman Prodigy parts, plus 3M Cuno and Everpure filter cartridges. Call dispatch at (754) 345-4515 or request service through our ice machine repair page.",
         "Restaurants that run a quarterly preventive program on ice equipment see roughly half the emergency calls of those running break-fix only. If you want a service contract built around your menu volume and ambient kitchen heat load, our team can write one to match. For residential ice maker work — undercounter Sub-Zero, KitchenAid, or U-Line — our sister site bernerepair.com handles those calls.",
       ],
     },

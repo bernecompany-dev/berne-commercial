@@ -71,7 +71,7 @@ export const marineRefrigerationMarina: Article = {
     {
       heading: "8. Calling for service and what to know first",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about marina-adjacent refrigeration, our dispatcher needs to know how far the unit sits from saltwater and whether it's roof-mounted, deck-mounted, or interior. Interior remote units last almost as long as inland equipment. Deck-mounted units in the splash zone don't make it past year 4 without protective coatings.",
+        "When you call Berne Commercial at (754) 345-4515 about marina-adjacent refrigeration, our dispatcher needs to know how far the unit sits from saltwater and whether it's roof-mounted, deck-mounted, or interior. Interior remote units last almost as long as inland equipment. Deck-mounted units in the splash zone don't make it past year 4 without protective coatings.",
         "Our $89 commercial service call covers the marina-adjusted protocol. We run the 60-day cycle on contract clients; per-call work runs a single-visit version of the same checklist. For residential waterfront properties (Sub-Zero outdoor refrigeration, Viking outdoor kitchens, Hestan beverage centers) our sister site bernerepair.com runs the residential marine book. The salt environment is the same. The parts library and service approach differ.",
       ],
     },

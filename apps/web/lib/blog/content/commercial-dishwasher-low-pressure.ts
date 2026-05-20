@@ -72,7 +72,7 @@ export const commercialDishwasherLowPressure: Article = {
     {
       heading: "Need a dish tech today?",
       body: [
-        "Berne Commercial Repair runs same-day dispatch for Hobart, Jackson, CMA, and Champion commercial dishwashers across Miami-Dade, Broward, and Palm Beach. $89 commercial service call, applied to the approved repair. Call (305) 520-7833 or request service through our commercial appliance repair page. For residential dishwasher service — Bosch, Miele, KitchenAid — our sister site bernerepair.com covers those calls.",
+        "Berne Commercial Repair runs same-day dispatch for Hobart, Jackson, CMA, and Champion commercial dishwashers across Miami-Dade, Broward, and Palm Beach. $89 commercial service call, applied to the approved repair. Call (754) 345-4515 or request service through our commercial appliance repair page. For residential dishwasher service — Bosch, Miele, KitchenAid — our sister site bernerepair.com covers those calls.",
       ],
     },
   ],

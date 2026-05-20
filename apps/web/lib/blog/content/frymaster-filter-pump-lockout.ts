@@ -71,7 +71,7 @@ export const frymasterFilterPumpLockout: Article = {
     {
       heading: "8. Calling for service and what to know first",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about a Frymaster filter lockout, our dispatcher needs the model number, the controller type (M3000, M2000, or FootPrint Pro), and the specific lockout code if displayed. That information puts the right parts on the truck — float switches, valve micro-switches, controller test cables, and filter paper.",
+        "When you call Berne Commercial at (754) 345-4515 about a Frymaster filter lockout, our dispatcher needs the model number, the controller type (M3000, M2000, or FootPrint Pro), and the specific lockout code if displayed. That information puts the right parts on the truck — float switches, valve micro-switches, controller test cables, and filter paper.",
         "Our $89 commercial service call covers the diagnostic and the lockout reset. Most filter-pump lockouts are resolved in a single visit. For chains running multiple Frymaster units across multiple locations, we offer route service that includes scheduled FilterQuick verification on every visit. For residential deep fryers (T-Fal, Hamilton Beach, Cuisinart) our sister site bernerepair.com handles those — totally different unit class but the same dispatch desk routes the call.",
       ],
     },

@@ -70,7 +70,7 @@ export const propertyManagementMultiUnit: Article = {
     {
       heading: "8. Calling for a survey and contract quote",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about a property-management service contract, ask for the survey appointment. The survey itself is at no cost for properties with 8 or more refrigeration assets. The survey takes 2 to 4 hours depending on property size and produces a written asset list plus a contract proposal within 5 business days.",
+        "When you call Berne Commercial at (754) 345-4515 about a property-management service contract, ask for the survey appointment. The survey itself is at no cost for properties with 8 or more refrigeration assets. The survey takes 2 to 4 hours depending on property size and produces a written asset list plus a contract proposal within 5 business days.",
         "Per-call work still runs at our $89 commercial service call for properties that aren't ready for a contract. Most clients move to contract structure within 6 to 12 months of starting per-call work, usually after the first prevented emergency. For property management firms with mixed commercial and residential assets (executive housing, employee dormitories, condo-board common spaces), our sister site bernerepair.com runs the residential side and we coordinate documentation across both books.",
       ],
     },

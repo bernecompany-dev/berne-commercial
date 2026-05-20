@@ -71,7 +71,7 @@ export const espressoGroupHeadBoilerPressure: Article = {
     {
       heading: "8. Calling for service and what to know first",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about espresso pressure issues, our dispatcher will ask which group, what the pressure gauge reads at idle, and whether all shots are affected or just specific drink builds. That information loads the truck — gicleurs, vacuum breakers, expansion valves, pressurestats, and a blind portafilter with gauge for verification.",
+        "When you call Berne Commercial at (754) 345-4515 about espresso pressure issues, our dispatcher will ask which group, what the pressure gauge reads at idle, and whether all shots are affected or just specific drink builds. That information loads the truck — gicleurs, vacuum breakers, expansion valves, pressurestats, and a blind portafilter with gauge for verification.",
         "Our $89 commercial service call covers the diagnostic. Most single-group pressure issues are resolved in one visit. For high-end home espresso (La Marzocco Linea Mini, Rocket R58, Profitec Pro 700) our sister site bernerepair.com handles residential cafe equipment. Different parts library and different work cadence, but the same diagnostic approach to a saturated-group pressure problem.",
       ],
     },

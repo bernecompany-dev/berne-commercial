@@ -84,7 +84,7 @@ export const espressoMachineNoPressure: Article = {
     {
       heading: "Cafe tech on the way",
       body: [
-        "Berne Commercial Repair runs same-day dispatch for La Marzocco, Nuova Simonelli, Rancilio, Synesso, and Slayer espresso machines across Miami-Dade, Broward, and Palm Beach. $89 commercial service call applied to the approved repair. Call (305) 520-7833 or request service through our espresso machine repair page. For home-prosumer machines — Rocket, ECM, Lelit — bernerepair.com handles the residential side.",
+        "Berne Commercial Repair runs same-day dispatch for La Marzocco, Nuova Simonelli, Rancilio, Synesso, and Slayer espresso machines across Miami-Dade, Broward, and Palm Beach. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request service through our espresso machine repair page. For home-prosumer machines — Rocket, ECM, Lelit — bernerepair.com handles the residential side.",
       ],
     },
   ],

@@ -71,7 +71,7 @@ export const foodTruckRefrigeration: Article = {
     {
       heading: "8. Calling for service and route scheduling",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about food-truck refrigeration, our dispatcher needs the truck location (commissary or roving), the unit model, and the symptom. If the truck's at an event, we run a mobile service call within 90 minutes within Miami-Dade and Broward. The $89 commercial service call applies.",
+        "When you call Berne Commercial at (754) 345-4515 about food-truck refrigeration, our dispatcher needs the truck location (commissary or roving), the unit model, and the symptom. If the truck's at an event, we run a mobile service call within 90 minutes within Miami-Dade and Broward. The $89 commercial service call applies.",
         "For operators running multiple trucks, we offer a route-service program that hits each truck on a 30-day cycle at the commissary during off-event hours. Pricing scales with fleet size. Our food-truck book and our restaurant book are the same techs and the same trucks — refrigeration is refrigeration. For residential operators running side businesses out of home garages (catering trailers, mobile bars), our sister site bernerepair.com covers residential-class units.",
       ],
     },

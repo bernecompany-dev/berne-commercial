@@ -9,7 +9,7 @@ import { AnchorButton, LinkButton } from "@/components/link-button"
 import { DispatchForm } from "@/components/dispatch-form"
 import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
-import { breadcrumbSchema, faqSchema, metaFor } from "@/lib/seo"
+import { breadcrumbSchema, faqSchema, metaFor, serviceSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import {
   INDUSTRY_PROFILES,
@@ -41,45 +41,12 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   })
 }
 
-function industryServiceSchema(args: {
-  name: string
-  description: string
-  url: string
-}) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: args.name,
-    serviceType: args.name,
-    description: args.description,
-    url: args.url,
-    provider: {
-      "@type": ["LocalBusiness", "HVACBusiness"],
-      "@id": `${site.url}/#localbusiness`,
-      name: site.name,
-      url: site.url,
-      telephone: site.phone,
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.79",
-        reviewCount: 871,
-        bestRating: 5,
-        worstRating: 1,
-      },
-    },
-    areaServed: [
-      { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" },
-      { "@type": "AdministrativeArea", name: "Broward County, FL" },
-      { "@type": "AdministrativeArea", name: "Palm Beach County, FL" },
-    ],
-    offers: {
-      "@type": "Offer",
-      price: "89",
-      priceCurrency: "USD",
-      description: "$89 commercial service call",
-    },
-  }
-}
+// industryServiceSchema was retired 2026-05-20 — it emitted a second
+// LocalBusiness node with @id=#localbusiness AND a duplicate aggregateRating,
+// which collided with the canonical node from app/layout.tsx and triggered
+// "Review has multiple aggregate ratings" in GSC URL-Inspection. We now
+// reuse the shared serviceSchema() helper from lib/seo, which emits a Service
+// whose provider is a bare @id reference back to the canonical node.
 
 export default async function IndustryDetailPage({ params }: Params) {
   const { slug } = await params
@@ -321,7 +288,7 @@ export default async function IndustryDetailPage({ params }: Params) {
       ) : null}
 
       <JsonLd
-        data={industryServiceSchema({
+        data={serviceSchema({
           name: `${profile.industryTitle} Equipment Repair`,
           description: profile.metaDescription,
           url: `${site.url}/industries/${profile.slug}`,

@@ -9,7 +9,7 @@ import { AnchorButton, LinkButton } from "@/components/link-button"
 import { DispatchForm } from "@/components/dispatch-form"
 import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
-import { breadcrumbSchema, faqSchema, metaFor } from "@/lib/seo"
+import { breadcrumbSchema, faqSchema, metaFor, serviceSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import {
   INDUSTRY_PROFILES,
@@ -44,46 +44,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   })
 }
 
-function industryServiceSchema(args: {
-  name: string
-  description: string
-  url: string
-}) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: args.name,
-    serviceType: args.name,
-    description: args.description,
-    url: args.url,
-    inLanguage: "es-US",
-    provider: {
-      "@type": ["LocalBusiness", "HVACBusiness"],
-      "@id": `${site.url}/#localbusiness`,
-      name: site.name,
-      url: site.url,
-      telephone: site.phone,
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.79",
-        reviewCount: 871,
-        bestRating: 5,
-        worstRating: 1,
-      },
-    },
-    areaServed: [
-      { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" },
-      { "@type": "AdministrativeArea", name: "Broward County, FL" },
-      { "@type": "AdministrativeArea", name: "Palm Beach County, FL" },
-    ],
-    offers: {
-      "@type": "Offer",
-      price: "89",
-      priceCurrency: "USD",
-      description: "$89 service call comercial",
-    },
-  }
-}
+// industryServiceSchema retired 2026-05-20 — see EN counterpart for context.
+// The shared serviceSchema() emits Service with a bare @id provider reference
+// to the canonical LocalBusiness from app/layout.tsx, avoiding duplicate-node
+// graph conflicts that Google flagged in URL-Inspection.
 
 export default async function IndustryDetailPageES({ params }: Params) {
   const { slug } = await params
@@ -334,7 +298,7 @@ export default async function IndustryDetailPageES({ params }: Params) {
       ) : null}
 
       <JsonLd
-        data={industryServiceSchema({
+        data={serviceSchema({
           name: `Reparación de Equipo para ${v.industryTitle}`,
           description: v.metaDescription,
           url: `${site.url}/es/industries/${profile.slug}`,

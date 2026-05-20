@@ -70,7 +70,7 @@ export const trueRefrigerationGasket: Article = {
     {
       heading: "8. Calling for service and what to know first",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about a True door gasket, our dispatcher will ask for the model, the door size, and the symptom. If you've already gotten a write-up from DBPR or Health, mention that. Inspection re-visit calls get priority dispatch within 24 hours.",
+        "When you call Berne Commercial at (754) 345-4515 about a True door gasket, our dispatcher will ask for the model, the door size, and the symptom. If you've already gotten a write-up from DBPR or Health, mention that. Inspection re-visit calls get priority dispatch within 24 hours.",
         "For hotel chains running corporate compliance audits, we provide a quarterly gasket condition report per unit. That report tracks gasket age, last service date, and projected next replacement. For residential refrigerator gaskets (Sub-Zero, Viking, GE Monogram in executive housing or short-stay suites), our sister site bernerepair.com runs the residential gasket book. Different parts library, different truck.",
       ],
     },

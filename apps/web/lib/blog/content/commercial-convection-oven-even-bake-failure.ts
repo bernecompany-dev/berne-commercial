@@ -77,7 +77,7 @@ export const commercialConvectionOvenEvenBake: Article = {
     {
       heading: "Same-day oven service",
       body: [
-        "Berne Commercial Repair runs same-day dispatch for Vulcan, Blodgett, Garland, Wolf, and Imperial commercial convection ovens across Miami-Dade, Broward, and Palm Beach. $89 commercial service call applied to the approved repair. Call (305) 520-7833 or request a tech through our commercial oven repair page. For residential built-in convection ovens — Wolf, Thermador, Miele — bernerepair.com runs the home side.",
+        "Berne Commercial Repair runs same-day dispatch for Vulcan, Blodgett, Garland, Wolf, and Imperial commercial convection ovens across Miami-Dade, Broward, and Palm Beach. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request a tech through our commercial oven repair page. For residential built-in convection ovens — Wolf, Thermador, Miele — bernerepair.com runs the home side.",
       ],
     },
   ],

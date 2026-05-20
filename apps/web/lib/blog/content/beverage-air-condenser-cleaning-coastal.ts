@@ -70,7 +70,7 @@ export const beverageAirCondenserCleaning: Article = {
     {
       heading: "8. What to ask when you call for service",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about a warm reach-in, the dispatcher's first question is going to be: when was the condenser last cleaned, and do you have the date on a sticker inside the door. If the answer is 'I don't know,' we plan the visit around a deep clean before anything else. The $89 commercial service call applies to the cleaning if that's the fix.",
+        "When you call Berne Commercial at (754) 345-4515 about a warm reach-in, the dispatcher's first question is going to be: when was the condenser last cleaned, and do you have the date on a sticker inside the door. If the answer is 'I don't know,' we plan the visit around a deep clean before anything else. The $89 commercial service call applies to the cleaning if that's the fix.",
         "For property managers running multi-location accounts, we maintain a service log per unit per address that pulls into a monthly compliance report. That paper trail matters when an insurance audit or a corporate compliance team asks for proof of preventive maintenance. For residential Sub-Zero, KitchenAid, or U-Line reach-ins at executive housing units, our sister site bernerepair.com handles those calls under the same umbrella.",
       ],
     },

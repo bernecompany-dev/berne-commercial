@@ -70,7 +70,7 @@ export const vulcanRangePilot: Article = {
     {
       heading: "8. Calling for service and what to have ready",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about a Vulcan pilot that won't hold, our dispatcher will ask for the model number off the back nameplate, the gas type (natural or LP), and whether the issue is on one burner or all burners. That information loads the truck correctly — thermocouples, a Honeywell safety valve, pilot orifices, and a manometer set.",
+        "When you call Berne Commercial at (754) 345-4515 about a Vulcan pilot that won't hold, our dispatcher will ask for the model number off the back nameplate, the gas type (natural or LP), and whether the issue is on one burner or all burners. That information loads the truck correctly — thermocouples, a Honeywell safety valve, pilot orifices, and a manometer set.",
         "Our $89 commercial service call covers the on-site diagnostic. Most pilot failures are corrected the same visit. For residential ranges (Wolf, Viking, Thermador with similar standing-pilot designs) our sister site bernerepair.com handles those calls. We don't cross-staff trucks — the commercial techs run code-rated parts and the residential techs run UL-listed consumer parts, and you want the right one on each call.",
       ],
     },

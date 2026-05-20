@@ -71,7 +71,7 @@ export const pizzaConveyorOvenBelt: Article = {
     {
       heading: "8. Calling for service and what to know first",
       body: [
-        "When you call Berne Commercial at (305) 520-7833 about a pizza conveyor oven, our dispatcher needs the model number off the nameplate (typically inside the front control panel cover), the symptom (tracking off, slipping, won't run, runs at wrong speed), and the install date. That information loads the truck — replacement bearings, belt link kits, speed pots, and a torque wrench for the take-up adjustment.",
+        "When you call Berne Commercial at (754) 345-4515 about a pizza conveyor oven, our dispatcher needs the model number off the nameplate (typically inside the front control panel cover), the symptom (tracking off, slipping, won't run, runs at wrong speed), and the install date. That information loads the truck — replacement bearings, belt link kits, speed pots, and a torque wrench for the take-up adjustment.",
         "Our $89 commercial service call covers the diagnostic and most adjustments. Belt replacement on a Lincoln Impinger 1132 is a separate quote because the labor varies with belt condition and access. For residential pizza ovens (Ooni, Roccbox, Breville Pizzaiolo) our sister site bernerepair.com handles those. The commercial conveyor work and residential dome-oven work are different specialties.",
       ],
     },
