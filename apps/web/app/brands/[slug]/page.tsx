@@ -35,6 +35,7 @@ import {
   brandProfileSlugs,
   getBrandProfile,
 } from "@/lib/data/brand-profiles"
+import { getComparisonsForBrand } from "@/lib/data/brand-comparisons"
 import { INDUSTRY_PROFILES } from "@/lib/data/industry-profiles"
 import {
   breadcrumbSchema,
@@ -104,6 +105,8 @@ export default async function BrandDetailPage({ params }: Params) {
     .sort((a, c) => c.overlap - a.overlap || a.p.name.localeCompare(c.p.name))
     .map((x) => x.p)
     .slice(0, 4)
+
+  const comparisons = getComparisonsForBrand(b.slug)
 
   return (
     <PageShell>
@@ -342,6 +345,49 @@ export default async function BrandDetailPage({ params }: Params) {
           </div>
         </div>
       </section>
+
+      {/* Brand comparisons (long-form "X vs Y" decision content) */}
+      {comparisons.length ? (
+        <section className="border-b border-border/60 bg-background py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <div className="text-xs font-medium uppercase tracking-wider text-primary">
+                Compare {b.name}
+              </div>
+              <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+                {b.name} vs the alternatives — honest comparisons.
+              </h2>
+              <p className="mt-3 text-muted-foreground">
+                Long-form decision content for operators weighing {b.name}{" "}
+                against the brands it competes with. Built from real field
+                tickets, not catalog copy.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              {comparisons.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/compare/${c.slug}`}
+                  className="group rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40"
+                >
+                  <div className="text-base font-semibold">
+                    {c.h1.replace(/ — .*/, "")}
+                  </div>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    {c.teaser.length > 160
+                      ? `${c.teaser.slice(0, 157)}...`
+                      : c.teaser}
+                  </p>
+                  <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-primary">
+                    Read the comparison
+                    <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* Related brands */}
       {relatedBrands.length ? (

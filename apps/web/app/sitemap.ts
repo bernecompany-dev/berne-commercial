@@ -3,6 +3,7 @@ import { site } from "@/lib/site"
 import { cities } from "@/lib/data/cities"
 import { primaryServices, services } from "@/lib/data/services"
 import { brandProfiles } from "@/lib/data/brand-profiles"
+import { BRAND_COMPARISONS } from "@/lib/data/brand-comparisons"
 import { INDUSTRY_PROFILES } from "@/lib/data/industry-profiles"
 import { publishedArticles } from "@/lib/blog/articles"
 import { team } from "@/lib/data/team"
@@ -122,6 +123,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  // Brand comparison pages — long-form informational ("X vs Y") content.
+  // English only for now; Spanish translations can follow.
+  const compareIndex = [
+    {
+      url: `${base}/compare`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    },
+  ]
+  const comparePages = BRAND_COMPARISONS.map((c) => ({
+    url: `${base}/compare/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }))
+
   const industryPages = INDUSTRY_PROFILES.map((p) => ({
     url: `${base}/industries/${p.slug}`,
     lastModified: now,
@@ -186,6 +204,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...esServiceDetails,
     ...brandPages,
     ...esBrandPages,
+    ...compareIndex,
+    ...comparePages,
     ...industryPages,
     ...esIndustryPages,
     ...cityPages,
