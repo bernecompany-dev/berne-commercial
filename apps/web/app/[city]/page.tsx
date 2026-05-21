@@ -3,6 +3,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { AnchorButton, LinkButton } from "@/components/link-button"
 import { Card } from "@workspace/ui/components/card"
 import { Badge } from "@workspace/ui/components/badge"
@@ -65,6 +66,13 @@ export default async function CityPage({ params }: Params) {
 
   return (
     <PageShell>
+      <Breadcrumbs
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Service areas", href: "/service-areas" },
+          { name: c.name },
+        ]}
+      />
       <PageHero
         eyebrow={`${COUNTIES[c.county]} County`}
         title={`Commercial Equipment Repair in ${c.name}, FL`}

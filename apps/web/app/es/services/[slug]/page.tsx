@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { ArrowRight } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { Card } from "@workspace/ui/components/card"
 import { Badge } from "@workspace/ui/components/badge"
 import { AnchorButton, LinkButton } from "@/components/link-button"
@@ -59,6 +60,13 @@ export default async function ServiceDetailPageES({ params }: Params) {
 
   return (
     <PageShell locale="es">
+      <Breadcrumbs
+        items={[
+          { name: "Inicio", href: "/es" },
+          { name: "Servicios", href: "/es/services" },
+          { name: es.shortTitle },
+        ]}
+      />
       <PageHero
         eyebrow="Servicio"
         title={`${es.title} en el Sur de Florida`}

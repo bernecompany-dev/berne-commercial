@@ -21,6 +21,7 @@ import {
 } from "lucide-react"
 
 import { PageHero, PageShell } from "@/components/page-shell"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { Card } from "@workspace/ui/components/card"
 import { Badge } from "@workspace/ui/components/badge"
 import { AnchorButton, LinkButton } from "@/components/link-button"
@@ -106,6 +107,13 @@ export default async function BrandDetailPage({ params }: Params) {
 
   return (
     <PageShell>
+      <Breadcrumbs
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Brands", href: "/brands" },
+          { name: b.name },
+        ]}
+      />
       <PageHero
         eyebrow={`${b.name} Repair`}
         title={`${b.name} Commercial Repair — South Florida`}
