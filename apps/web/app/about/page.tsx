@@ -14,9 +14,9 @@ import { team } from "@/lib/data/team"
 import { JsonLd } from "@/components/json-ld"
 
 export const metadata: Metadata = metaFor({
-  title: "About — Commercial Service Organization",
+  title: "About — Berne Commercial Repair · South Florida Since 2015",
   description:
-    "Berne Commercial Repair is a South Florida commercial service organization focused on refrigeration, restaurant equipment and enterprise dispatch.",
+    "Founded 2015 by Eugene Bernitsky. 18 W-2 technicians, 29,000+ services, 4.79/871 reviews. Commercial dispatch for restaurants, hotels, supermarkets, property management across South Florida and the Gulf Coast — COI-ready, NDA-friendly, downtime-priced.",
   path: "/about",
 })
 
@@ -25,8 +25,8 @@ export default function AboutPage() {
     <PageShell>
       <PageHero
         eyebrow="About"
-        title="A commercial service organization for South Florida"
-        description={`${site.name} provides enterprise-level commercial repair across Miami-Dade, Broward and Palm Beach — built to support restaurants, production facilities, retail, and property-managed buildings.`}
+        title="A commercial service organization built for South Florida operations"
+        description={`Founded 2015. ${site.name} runs commercial dispatch across Miami-Dade, Broward, Palm Beach, and the Gulf Coast for restaurants, hotels, supermarkets, production facilities, and property-managed portfolios — engineered around the operational truth that every hour of downtime is dollars.`}
       />
 
       <section className="border-b border-border/60 bg-background py-20">
@@ -48,45 +48,55 @@ export default function AboutPage() {
               Founder
             </div>
             <h2 className="mt-2 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-              I&apos;m {site.founder.name}, an engineer by training — and I
-              built Berne Commercial to run on engineering, not guesswork.
+              I&apos;m {site.founder.name}. We built Berne Commercial to run
+              on engineering and SLAs, not improvisation.
             </h2>
             <div className="mt-6 space-y-4 text-base text-muted-foreground">
               <p className="flex items-start gap-3">
                 <Quote className="mt-1 size-5 shrink-0 text-primary" />
                 <span>
-                  Most service companies in Florida were built to serve
-                  homeowners. Restaurants, supermarkets, hotels and production
-                  facilities have a completely different reality — every hour
-                  a walk-in is down, inventory is at risk, food cost goes up,
-                  and operations stall. We built our dispatch, our techs and
-                  our paperwork around that reality.
+                  I started the Berne family of operations in 2015 because
+                  South Florida&apos;s commercial kitchens, supermarkets,
+                  hotels and production lines were getting the residential
+                  treatment from service vendors — no SLA, no COI, no
+                  dispatch reliability, and a $400 invoice for a $40
+                  diagnostic. Every hour a walk-in is down, inventory is at
+                  risk, food cost climbs, and operations stall. We built
+                  Berne Commercial&apos;s dispatch, technician roster, parts
+                  inventory, and paperwork around that reality — not around
+                  the homeowner one.
                 </span>
               </p>
               <p>
-                Every person on the team is an engineer-trained technician.
-                That&apos;s why we take on the work other shops walk away from
-                — control-board level diagnostics, complex refrigeration
-                loops, full walk-in rebuilds, commercial laundry systems with
-                custom electrical. We don&apos;t sell easy jobs.
-                We solve hard ones.
+                Eleven years in, the operation is 18 W-2 technicians on the
+                road, 29,000+ services completed across the Berne family,
+                and a 4.79★ aggregate rating across 871 verified customer
+                reviews. The technicians are engineer-trained — which is
+                why we take on the work other shops walk away from:
+                control-board diagnostics, complex refrigeration loops,
+                full walk-in rebuilds, glycol beer systems, commercial
+                laundry with custom electrical, NSF inspector recoveries.
+                We do not sell easy jobs. We solve hard ones — under SLA,
+                under COI, under NDA when the operator requires it.
               </p>
               <p>
-                Berne Commercial is backed by{" "}
-                <a
-                  href="https://bernerepair.com/"
-                  rel="noopener"
-                  className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
-                >
-                  Berne Appliance Repair
-                </a>
-                {" "}— 11 years in business, 18 technicians, 29,000+ services
-                completed across South Florida, and a 4.79★ aggregate rating
-                across 871 reviews. Today we run commercial dispatch across
-                Miami-Dade, Broward and Palm Beach for restaurants, chains,
-                production facilities, hotels, retail and property-managed
-                buildings. Residential customers are served by our consumer
-                arm{" "}
+                How we work with operators: a single dispatcher contact for
+                multi-unit portfolios, mobile-uploaded invoices and
+                photos-on-completion for the AP department, a 90-day
+                workmanship warranty on the actual paperwork, and a
+                same-day commercial standard for emergency calls inside
+                Miami-Dade, Broward, and Palm Beach. Diagnostic on a
+                commercial site is a flat {site.serviceCall}, credited
+                back if you proceed. We carry OEM parts for the verticals
+                we run dispatch for — Hobart, Vulcan, True, Manitowoc,
+                Hoshizaki, Rational, Garland, Traulsen, Beverage-Air,
+                Frymaster on the kitchen side; Speed Queen, Continental,
+                Wascomat on commercial laundry.
+              </p>
+              <p>
+                Berne Commercial is one of three coordinated brands inside
+                the Berne family. Residential customers are served by our
+                consumer arm{" "}
                 <a
                   href="https://bernerepair.com/"
                   rel="noopener"
@@ -94,7 +104,9 @@ export default function AboutPage() {
                 >
                   bernerepair.com
                 </a>
-                {" "}and the premium Sub-Zero / Wolf / Viking / Miele service{" "}
+                . High-end residential — Sub-Zero columns, Wolf
+                dual-fuel, Miele built-ins for Bal Harbour / Fisher
+                Island / Sunny Isles households — is dispatched through{" "}
                 <a
                   href="https://www.berne-repair.com/"
                   rel="noopener"
@@ -102,8 +114,12 @@ export default function AboutPage() {
                 >
                   berne-repair.com
                 </a>
-                . Licensed, insured, COI-ready, and on call for same-day
-                emergency service.
+                . The same training standard, the same W-2 employee model,
+                and the same accountability flow across all three. Berne
+                Commercial dispatches from 1001 N Federal Hwy #230 in
+                Hallandale Beach (HQ) and 131 S Federal Hwy #533 in Boca
+                Raton. Three commercial lines: (754) 345-4515, (954)
+                569-8550, and (561) 858-9919. Licensed, insured, COI-ready.
               </p>
               <p>
                 Berne is a member of{" "}
@@ -116,13 +132,25 @@ export default function AboutPage() {
                   MSA World
                 </a>
                 {" "}(Marcone Servicers Association), the leading industry
-                association for appliance service contractors. Our technicians
-                complete continuous training programs on emerging appliance
-                technology through MSA World coursework and OEM (Sub-Zero,
-                Wolf, Miele, LG, Samsung, GE) certification updates — so the
-                truck arriving at your loading dock is equipped to service the
-                equipment you actually own, not the one specified five years
-                ago.
+                association for appliance service contractors. Our
+                technicians complete continuous training on emerging
+                refrigeration and commercial-equipment technology through
+                MSA World coursework and OEM (Sub-Zero, Wolf, Miele,
+                Hobart, Manitowoc, Hoshizaki, Rational) certification
+                updates — so the truck arriving at your loading dock is
+                equipped to service the equipment you actually run, not a
+                five-year-old spec sheet.
+              </p>
+              <p>
+                Where we are going: the commercial footprint widens through
+                2026 and 2027 — six to eight technicians added to the fleet
+                over the next 18 months, expanded coverage on the Gulf
+                Coast (Tampa, Sarasota, Naples), and a dedicated
+                multi-location dispatcher for restaurant groups and
+                property-management portfolios. The premise is unchanged:
+                South Florida hospitality and operations should not have
+                to discover the vendor-reliability gap on a Friday night
+                with the walk-in at 52°F.
               </p>
             </div>
 

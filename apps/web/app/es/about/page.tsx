@@ -9,9 +9,9 @@ import { CredentialsSection } from "@/components/credentials-section"
 import { site } from "@/lib/site"
 
 export const metadata: Metadata = {
-  title: "Nosotros — Empresa de servicio comercial",
+  title: "Nosotros — Berne Commercial Repair · Sur de Florida desde 2015",
   description:
-    "Berne Commercial Repair es una empresa de servicio comercial del Sur de Florida enfocada en refrigeración, equipo de restaurante y despacho corporativo.",
+    "Fundada en 2015 por Eugene Bernitsky. 18 técnicos W-2, más de 29,000 servicios, 4.79/871 reseñas. Despacho comercial para restaurantes, hoteles, supermercados y administración de propiedades en el Sur de Florida — listos para COI, NDA, y costo de downtime.",
   alternates: {
     canonical: "/es/about",
     languages: {
@@ -33,8 +33,8 @@ export default function AboutPageES() {
     <PageShell locale="es">
       <PageHero
         eyebrow="Nosotros"
-        title="Empresa de servicio comercial del Sur de Florida"
-        description={`${site.name} brinda reparación comercial de nivel corporativo en Miami-Dade, Broward y Palm Beach — construida para apoyar restaurantes, plantas de producción, retail y edificios administrados.`}
+        title="Organización de servicio comercial construida para las operaciones del Sur de Florida"
+        description={`Fundada en 2015. ${site.name} corre despacho comercial en Miami-Dade, Broward, Palm Beach y la Costa del Golfo para restaurantes, hoteles, supermercados, plantas de producción y portfolios administrados — diseñada alrededor de la verdad operativa de que cada hora de downtime cuesta dólares.`}
       />
 
       <section className="border-b border-border/60 bg-background py-20">
@@ -56,42 +56,82 @@ export default function AboutPageES() {
               Fundador
             </div>
             <h2 className="mt-2 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-              Soy {site.founder.name}, ingeniero de formación — y construí
-              Berne Commercial para operar con ingeniería, no con improvisación.
+              Soy {site.founder.name}. Construimos Berne Commercial para
+              operar con ingeniería y SLA, no con improvisación.
             </h2>
             <div className="mt-6 space-y-4 text-base text-muted-foreground">
               <p className="flex items-start gap-3">
                 <Quote className="mt-1 size-5 shrink-0 text-primary" />
                 <span>
-                  La mayoría de las empresas de servicio en Florida fueron
-                  construidas para servir a hogares. Restaurantes,
-                  supermercados, hoteles y plantas de producción viven una
-                  realidad completamente distinta — cada hora que un walk-in
-                  está caído, el inventario está en riesgo, el food cost
-                  sube y las operaciones se paralizan. Construimos nuestro
-                  despacho, nuestros técnicos y nuestra documentación
-                  alrededor de esa realidad.
+                  Arranqué la familia Berne en 2015 porque las cocinas
+                  comerciales, supermercados, hoteles y líneas de producción
+                  del sur de Florida estaban recibiendo trato de servicio
+                  residencial — sin SLA, sin COI, sin confiabilidad de
+                  despacho, y con una factura de $400 por un diagnóstico de
+                  $40. Cada hora que un walk-in está caído, el inventario
+                  está en riesgo, el food cost sube y las operaciones se
+                  paralizan. Construimos el despacho, el roster de
+                  técnicos, el inventario de partes y la documentación de
+                  Berne Commercial alrededor de esa realidad — no
+                  alrededor de la del hogar.
                 </span>
               </p>
               <p>
-                Cada miembro del equipo es un técnico con formación de
-                ingeniería. Por eso tomamos el trabajo que otros talleres
-                rechazan — diagnóstico a nivel de control board, loops de
+                Once años después, la operación son 18 técnicos W-2 en la
+                calle, más de 29,000 servicios completados en la familia
+                Berne, y una calificación agregada de 4.79★ en 871 reseñas
+                verificadas. Los técnicos vienen con formación de
+                ingeniería — por eso tomamos el trabajo que otros talleres
+                rechazan: diagnóstico a nivel de control board, loops de
                 refrigeración complejos, reconstrucciones completas de
-                walk-in, sistemas de lavandería comercial con eléctrica
-                custom. No vendemos trabajos fáciles. Resolvemos los
-                difíciles.
+                walk-in, sistemas de cerveza con glycol, lavandería
+                comercial con eléctrica custom, recuperaciones de NSF
+                inspector. No vendemos trabajos fáciles. Resolvemos los
+                difíciles — bajo SLA, bajo COI, bajo NDA cuando el
+                operador lo requiere.
               </p>
               <p>
-                Berne Commercial opera con 11 años en el negocio, 18
-                técnicos certificados y más de 29,000 servicios
-                completados — calificación 4.79 ★ en 871 reseñas
-                verificadas. Hoy operamos despacho comercial en
-                Miami-Dade, Broward y Palm Beach para restaurantes,
-                cadenas, plantas de producción, hoteles, retail y
-                edificios administrados. Con licencia, asegurados,
-                listos para COI y disponibles para servicio de
-                emergencia el mismo día.
+                Cómo trabajamos con los operadores: un solo contacto de
+                despachador para portfolios multi-unidad, facturas
+                subidas vía mobile y fotos al cierre para el
+                departamento de AP, garantía de 90 días de mano de obra
+                por escrito, y un estándar comercial de mismo día en
+                Miami-Dade, Broward y Palm Beach. El diagnóstico en sitio
+                comercial es un flat {site.serviceCall}, acreditado si
+                procede. Llevamos partes OEM para las verticales en las
+                que corremos despacho — Hobart, Vulcan, True, Manitowoc,
+                Hoshizaki, Rational, Garland, Traulsen, Beverage-Air,
+                Frymaster en cocina; Speed Queen, Continental, Wascomat
+                en lavandería comercial.
+              </p>
+              <p>
+                Berne Commercial es una de tres marcas coordinadas
+                dentro de la familia Berne. Los clientes residenciales
+                son atendidos por nuestra rama de consumo{" "}
+                <a
+                  href="https://bernerepair.com/"
+                  rel="noopener"
+                  className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                >
+                  bernerepair.com
+                </a>
+                . El residencial premium — columnas Sub-Zero, Wolf
+                dual-fuel, Miele built-in para casas de Bal Harbour /
+                Fisher Island / Sunny Isles — se despacha vía{" "}
+                <a
+                  href="https://www.berne-repair.com/"
+                  rel="noopener"
+                  className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                >
+                  berne-repair.com
+                </a>
+                . El mismo estándar de capacitación, el mismo modelo
+                W-2, y el mismo flujo de rendición de cuentas en las
+                tres. Berne Commercial despacha desde 1001 N Federal
+                Hwy #230 en Hallandale Beach (HQ) y 131 S Federal Hwy
+                #533 en Boca Raton. Tres líneas comerciales: (754)
+                345-4515, (954) 569-8550 y (561) 858-9919. Con
+                licencia, asegurados, listos para COI.
               </p>
               <p>
                 Berne es miembro de{" "}
@@ -105,13 +145,26 @@ export default function AboutPageES() {
                 </a>
                 {" "}(Marcone Servicers Association), la principal asociación
                 de la industria para contratistas de servicio de
-                electrodomésticos. Nuestros técnicos completan programas de
-                capacitación continua sobre tecnología emergente de
-                electrodomésticos a través de cursos de MSA World y
-                actualizaciones de certificación OEM (Sub-Zero, Wolf, Miele,
-                LG, Samsung, GE) — para que el camión que llega a su loading
-                dock esté equipado para reparar el equipo que realmente
-                opera, no el que se especificó hace cinco años.
+                electrodomésticos. Nuestros técnicos completan capacitación
+                continua sobre tecnología emergente de refrigeración y
+                equipo comercial a través de cursos de MSA World y
+                actualizaciones de certificación OEM (Sub-Zero, Wolf,
+                Miele, Hobart, Manitowoc, Hoshizaki, Rational) — para que
+                el camión que llega a su loading dock esté equipado para
+                reparar el equipo que realmente opera, no una hoja de
+                especificaciones de hace cinco años.
+              </p>
+              <p>
+                Hacia dónde vamos: la huella comercial se amplía durante
+                2026 y 2027 — seis a ocho técnicos sumados a la flota en
+                los próximos 18 meses, cobertura ampliada en la Costa del
+                Golfo (Tampa, Sarasota, Naples), y un despachador
+                dedicado multi-location para grupos de restaurantes y
+                portfolios de administración de propiedades. La premisa
+                no cambia: la hospitalidad y las operaciones del sur de
+                Florida no deberían tener que descubrir el gap de
+                confiabilidad de vendor un viernes en la noche con el
+                walk-in a 52°F.
               </p>
             </div>
 
