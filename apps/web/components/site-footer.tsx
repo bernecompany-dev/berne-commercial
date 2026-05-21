@@ -187,6 +187,33 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
           <span>{tr.footer.copyright(year)}</span>
           <span>{tr.footer.serviceCall}</span>
         </div>
+
+        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-background/60">
+          <Link href={`${p}/privacy`} className="hover:text-background">
+            {locale === "es" ? "Privacidad" : "Privacy"}
+          </Link>
+          <span aria-hidden>·</span>
+          <Link href={`${p}/terms`} className="hover:text-background">
+            {locale === "es" ? "Términos" : "Terms"}
+          </Link>
+          <span aria-hidden>·</span>
+          <Link href={`${p}/cookies`} className="hover:text-background">
+            Cookies
+          </Link>
+          <span aria-hidden>·</span>
+          <Link href="/sitemap.xml" className="hover:text-background">
+            {locale === "es" ? "Mapa del sitio" : "Sitemap"}
+          </Link>
+          <span aria-hidden>·</span>
+          <span className="text-background/50">
+            {locale === "es"
+              ? "GDPR / CCPA — escriba a "
+              : "GDPR / CCPA — email "}
+            <a href={`mailto:${site.email}`} className="hover:text-background">
+              {site.email}
+            </a>
+          </span>
+        </div>
       </div>
     </footer>
   )
