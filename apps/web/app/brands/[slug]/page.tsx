@@ -27,6 +27,7 @@ import { AnchorButton, LinkButton } from "@/components/link-button"
 import { DispatchForm } from "@/components/dispatch-form"
 import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
+import { BrandSpecialistsSection } from "@/components/brand-specialists-section"
 
 import {
   brandProfiles,
@@ -251,6 +252,9 @@ export default async function BrandDetailPage({ params }: Params) {
           </div>
         </div>
       </section>
+
+      {/* Specialists for this brand */}
+      <BrandSpecialistsSection brandSlug={b.slug} brandName={b.name} />
 
       {/* Industries cross-link */}
       {industryLinks.length ? (
