@@ -153,7 +153,27 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
         q: "Will you provide a Certificate of Insurance for our landlord?",
         a: "Yes — our COI is on file at /credentials/coi.pdf and we add additional insureds on request for landlord or property-management requirements.",
       },
-    ],
+          {
+        q: "How quickly can you respond to a walk-in cooler emergency on a Friday night?",
+        a: "Walk-in emergencies on Friday and Saturday nights get the top of the dispatch queue — typical response time across Miami-Dade and Broward is under 90 minutes when the call comes in by 9 pm. Refrigeration techs on those routes carry R-410A and R-404A on the truck plus the most common Copeland and Tecumseh compressor relays and contactors, so the first visit usually closes the ticket.",
+      },
+      {
+        q: "Do you handle hood and exhaust cleaning records for the fire marshal?",
+        a: "We handle hood mechanical repair — blower bearings, belts, makeup-air balancing, damper assemblies — and document NFPA 96 service records that fit into the property's annual fire marshal binder. Full grease-cleaning is a separate scope handled by a partnered hood-cleaning specialist on the same dispatch if the operator wants both done at once.",
+      },
+      {
+        q: "What does a typical fryer rebuild cost on a Pitco or Frymaster?",
+        a: "A standard rebuild — hot-surface ignitor, gas valve coils, high-limit thermostat, drain valve gasket — runs $480 to $780 in parts and labor on Pitco SG and Frymaster H50 platforms. Larger filtration-equipped units sit higher. We always quote in writing after the diagnostic so the operator authorizes the scope before parts are pulled.",
+      },
+      {
+        q: "Can you service equipment after the dinner rush so the line is not interrupted?",
+        a: "Yes. Restaurant calls that can wait until after-hours go to the late-shift dispatch — typically 10 pm to 2 am on the cooking line, earlier on refrigeration if there is product loss risk. Service-call fee is the same; no after-hours surcharge for booked appointments. Emergency response outside the window is quoted separately.",
+      },
+      {
+        q: "Do you provide quarterly preventive-maintenance contracts for restaurant groups?",
+        a: "Yes. Multi-unit restaurant operators run on quarterly PM programs that cover refrigeration coil cleaning, walk-in door seal inspection, ice machine descaling, fryer drain valve service, and combustion analyzer checks on the gas line. Pricing scales with location count and equipment density — we quote per portfolio after a baseline walkthrough.",
+      },
+],
     relatedServices: [
       "commercial-refrigeration-repair",
       "walk-in-cooler-repair",
@@ -292,7 +312,27 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
         q: "Are your techs background-screened for guest-floor access?",
         a: "Yes. Our technicians are screened and badged appropriate for guest-floor and back-of-house access. We coordinate escort arrangements with security on the first visit.",
       },
-    ],
+          {
+        q: "Do you support after-hours engineering calls without surcharge for contracted properties?",
+        a: "Yes for properties on a service agreement — engineering can call the dispatcher 24/7 and the call is routed to on-call technicians at standard rates. Non-contracted after-hours calls carry a $150 emergency dispatch fee that is credited toward the repair when work is authorized. We invoice through the property's existing PO process.",
+      },
+      {
+        q: "How fast can you turn a guest-room minibar replacement across a 200-room property?",
+        a: "Phased minibar rollouts on Indel B and Minibar Systems platforms typically run 40 to 60 units per visit day, with two technicians working in parallel and one runner moving units between the loading dock and the floors. A 200-room conversion completes in 4 to 6 service days with no impact on revenue floors because we sequence around occupancy.",
+      },
+      {
+        q: "Can you coordinate banquet-floor work around event schedules so we do not disrupt setups?",
+        a: "Yes. Banquet manager hands us the BEO calendar and we sequence repairs into the gap windows between events — combi oven descaling, hood blower service, ice room dispenser swaps. We coordinate with banquet captain on cart routing through the back-of-house corridors so prep flow is not interrupted.",
+      },
+      {
+        q: "Do you handle pool-deck and outdoor bar refrigeration for the pool ops team?",
+        a: "Yes. Outdoor reach-ins, kegerators, ice bins, and frozen-drink machines at the pool deck and beach club get serviced on the same dispatch as interior equipment. Outdoor units fail more often because of salt air corrosion on condenser coils — we quote PM coil cleaning at 6-month intervals on outdoor refrigeration to extend service life.",
+      },
+      {
+        q: "Are your technicians familiar with brand-flag engineering standards documentation?",
+        a: "Yes. Major flag properties have brand-specific engineering manuals that govern parts sourcing, OEM-only requirements on guest-facing equipment, and documentation formats for the property's engineering log. Our senior techs work within those standards and provide closeout documentation in the format the property's engineering chief uses for brand audits.",
+      },
+],
     relatedServices: [
       "commercial-laundry-repair",
       "ice-machine-repair",
@@ -424,7 +464,27 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
         q: "Can you handle a new equipment install or store reset?",
         a: "Yes — install coordination on washers, dryers, water heating and venting. We work alongside your plumbing and gas contractor or coordinate a licensed sub when needed.",
       },
-    ],
+          {
+        q: "Can you support a multi-store route operator?",
+        a: "Yes. Multi-store operators get a single dispatcher relationship across the portfolio with consolidated invoicing, scheduled PM rotations, and per-store equipment history. We have laundromat chain operators currently running 3, 5, and 8-store portfolios on our route service. Pricing is volume-based and quoted per portfolio after a baseline walkthrough.",
+      },
+      {
+        q: "Do you handle coin and card payment system repair?",
+        a: "Yes — Greenwald coin mechs, Setomatic SpyderWash card readers, CCI and ESD value-add systems, and Card Concepts mobile-payment retrofits. We diagnose mechanical jams, reader cleaning and replacement, and network bridge troubleshooting. Programming and merchant account work is on the operator's side — we handle the hardware.",
+      },
+      {
+        q: "How do you price preventive maintenance on a 30-machine laundromat?",
+        a: "Quarterly PM rotation on a 30-machine store runs $480 to $720 per quarter depending on equipment mix — covers door seal inspection, drain pump checks, dryer vent flow testing, gas valve combustion analysis on the dryer bank, and water heater anode rod inspection. PM finds the failures 2-3 weeks early so they get fixed on a scheduled visit instead of a Sunday morning emergency.",
+      },
+      {
+        q: "Can you replace a Speed Queen front-load drum bearing on-site?",
+        a: "Yes for SC and SF-series front-loads — drum bearing kits run $580 to $820 in parts and labor depending on capacity. The work is 4-6 hours per machine because the drum has to come out for the bearing seal replacement. We schedule bearing jobs for off-peak windows so the store does not lose weekend revenue.",
+      },
+      {
+        q: "Do you carry Wascomat door lock modules on the truck?",
+        a: "Yes for the EX and W4-series — door lock modules and the boot harnesses that fail because of water intrusion. Wascomat door locks are the number-one stocked part on the laundromat truck because the failure mode (chattering after a long spin) happens 3-4 times a year on a heavily-cycled machine.",
+      },
+],
     relatedServices: [
       "commercial-laundry-repair",
       "commercial-washer-repair",
@@ -552,7 +612,27 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
         q: "Do you do ULT (-80°C) freezer repair?",
         a: "We service the mechanical refrigeration on Thermo, Helmer, PHCbi (Panasonic) and Stirling Ultracold ULT units. Biomed validation is handled by your biomed group.",
       },
-    ],
+          {
+        q: "Are your technicians background-screened for HIPAA-sensitive environments?",
+        a: "Yes. Our healthcare-route techs are background-screened, badged for clinical-area access, and trained in basic HIPAA awareness — they understand they are working in patient-care areas and do not engage with visible patient information. Badge documentation is on file with the facility's vendor management system.",
+      },
+      {
+        q: "Can you service medical-grade refrigeration with temperature logging requirements?",
+        a: "Yes. Vaccine refrigerators, blood bank units, and lab reagent storage with temperature monitoring (Helmer, Migali Scientific, So-Low) are part of our regular healthcare service. We document service against the facility's temperature log and provide calibration certificates on units we adjust. We do not handle USP 797/800 compounding pharmacy work — that requires specialized vendors.",
+      },
+      {
+        q: "Do you provide service documentation that meets Joint Commission audit requirements?",
+        a: "Yes. Service tickets include serial number, work performed, parts replaced with manufacturer info, and tech sign-off in the format the facility's biomed or facilities management team uses for Joint Commission documentation. We do not provide medical device validation — that is a regulated activity outside our scope.",
+      },
+      {
+        q: "How fast can you respond to a kitchen equipment failure in a hospital cafeteria?",
+        a: "Hospital cafeteria emergencies route to the next available restaurant-trained technician — typical response in Miami-Dade is 2-4 hours during business hours, longer for after-hours. We coordinate with the facility's food service director on entry through service corridors and timing around meal service rounds.",
+      },
+      {
+        q: "Do you handle ice machine sanitization for infection control?",
+        a: "Yes. Ice machine sanitization on Hoshizaki, Manitowoc, Scotsman, and Follett medical-grade units follows the manufacturer's sanitization cycle plus a discharge water test if the facility's infection control program requires one. We document the cycle and the chemical batch on the service ticket.",
+      },
+],
     relatedServices: [
       "commercial-refrigeration-repair",
       "walk-in-cooler-repair",
@@ -686,7 +766,27 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
         q: "Do you do deli slicer and scale repair?",
         a: "Hobart, Globe and Bizerba slicers and Bizerba scales — yes, on the same account as refrigeration.",
       },
-    ],
+          {
+        q: "Can you handle multi-location grocery chain dispatch?",
+        a: "Yes. Multi-location grocery operators get a single dispatcher relationship across the chain with consolidated billing, store-by-store equipment history, and PM rotation schedules that align with each store's slow-traffic windows. We currently service grocery chains running 4, 6, and 11 stores in South Florida on this model.",
+      },
+      {
+        q: "Do you handle walk-in freezer compressor replacement?",
+        a: "Yes — sealed-system work on walk-in freezers across Copeland, Tecumseh, and Bitzer platforms is part of our regular grocery service. Compressor jobs typically run $2,400 to $4,800 depending on size and refrigerant. We hold EPA Section 608 Universal certification and document refrigerant recovery on every system that opens.",
+      },
+      {
+        q: "How quickly can you respond to a refrigeration emergency that threatens product loss?",
+        a: "Grocery refrigeration emergencies are the top of the dispatch priority — typical response in Miami-Dade and Broward is under 90 minutes during business hours. We carry common Copeland and Tecumseh contactors, fan motors, and EC fan motors on the truck for first-visit fixes. Product-loss protection drives the schedule.",
+      },
+      {
+        q: "Do you service open-front meat and deli cases?",
+        a: "Yes — Hussmann, Hill Phoenix, and Kysor open-front meat cases plus the closed-glass deli display sections. Common failures are evap fan motors, defrost heaters, night-curtain motors, and door heaters on the glass section. We carry the high-failure parts for the platforms we see most.",
+      },
+      {
+        q: "Can you support our store rack refrigeration with subcooling loops?",
+        a: "Yes for parallel rack systems — Heatcraft, Hussmann, and Kysor rack platforms with subcooling and heat-recovery loops are part of our commercial refrigeration scope. Rack work is senior-tech and we send EPA-certified refrigeration specialists. Compressor and condenser fan work on rack systems is quoted separately from in-store case work.",
+      },
+],
     relatedServices: [
       "commercial-refrigeration-repair",
       "walk-in-cooler-repair",
@@ -822,7 +922,27 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
         q: "Will you provide a COI naming the district as additional insured?",
         a: "Yes. Additional-insured endorsements for school districts are routine — turnaround is one business day.",
       },
-    ],
+          {
+        q: "Do you service equipment under the school district's procurement process?",
+        a: "Yes. We work with school districts on PO-based invoicing, district-approved vendor onboarding, and the documentation requirements district procurement uses (W-9, COI naming the district, background-check records on technicians assigned to school sites). We support charter networks and private K-12 schools on the same procurement model.",
+      },
+      {
+        q: "Can you schedule major repairs around the school calendar?",
+        a: "Yes. Cafeteria walk-in coolers, dish machine motor work, and combi oven steam generator rebuilds get scheduled into school breaks — winter, spring, summer — so the cafeteria operation is not disrupted during instructional days. Emergency repairs during the school year happen between meal services.",
+      },
+      {
+        q: "Do you handle the kitchen equipment in a high school football stadium concession?",
+        a: "Yes — stadium concession equipment (fryers, hot-holding cabinets, ice machines, soda dispensers) is part of our regular service mix. Concession work typically clusters around event days, and we schedule PM service after Friday night games so the equipment is ready for Saturday tournament events.",
+      },
+      {
+        q: "Are your technicians background-screened for K-12 campus access?",
+        a: "Yes. Our school-route techs are background-screened to the standards district vendor programs require, badged for campus access, and aware of school-day protocols (no contact with students, escort by facilities staff during instructional hours). Documentation is on file with the district's vendor management office.",
+      },
+      {
+        q: "Do you provide preventive-maintenance contracts for school food service?",
+        a: "Yes. Annual PM contracts for K-12 cafeteria operations cover walk-in coil cleaning, dish machine descaling, combi oven steam generator service, fryer drain valve maintenance, and ice machine descaling. We schedule the work into school breaks and document service for the district's facilities management records.",
+      },
+],
     relatedServices: [
       "commercial-refrigeration-repair",
       "walk-in-cooler-repair",
@@ -958,7 +1078,27 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
         q: "Do you carry Hoshizaki and Manitowoc parts for gym ice machines?",
         a: "Yes — common service parts on the truck for both.",
       },
-    ],
+          {
+        q: "Do you service smoothie bar and juice bar equipment in gyms?",
+        a: "Yes — Vitamix XL blenders, Hamilton Beach commercial blenders, Bunn juice dispensers, and the under-counter refrigeration that holds prepped fruit and dairy. Smoothie bar equipment runs hot because of the duty cycle, and we carry common blender drive sockets and motor brushes on the truck for same-visit fixes.",
+      },
+      {
+        q: "How do you handle ice machine descaling in a high-humidity gym environment?",
+        a: "Quarterly descaling on Hoshizaki and Manitowoc units is the recommended cycle for gym installations because the high humidity around the locker rooms and pool areas accelerates mineral buildup. We descale with a nickel-safe acid solution and document each cycle on the service ticket so the facility manager has a maintenance log for the franchise audit.",
+      },
+      {
+        q: "Can you service equipment in gyms operating under franchise brand standards?",
+        a: "Yes. Most major fitness franchise brands have equipment standards for their juice bars and refreshment areas, and we work within those standards on parts sourcing and documentation. Service records get filed in the franchisee's brand-audit binder along with the rest of the operational compliance documentation.",
+      },
+      {
+        q: "Do you service towel laundry equipment in gym facilities?",
+        a: "Yes — on-premise laundry for gym towel programs typically runs Speed Queen or Continental Girbau commercial washers and gas dryers. We service the washers and dryers on the same dispatch as the juice bar and refreshment equipment, which lets the facility batch maintenance into a single visit.",
+      },
+      {
+        q: "Can you handle pool-area ice machines and outdoor refrigeration?",
+        a: "Yes. Outdoor and pool-area refrigeration is part of our regular service scope. Outdoor units fail more often because of salt air corrosion on condenser coils — we quote PM coil cleaning at 6-month intervals on outdoor refrigeration to extend service life. Stainless cabinets and outdoor-rated compressors hold up better than indoor units pressed into outdoor service.",
+      },
+],
     relatedServices: [
       "commercial-refrigeration-repair",
       "ice-machine-repair",
@@ -1093,7 +1233,27 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
         q: "Do you carry kegerator parts on the truck?",
         a: "Common parts — fan motors, condenser cleaning kits, thermostats, gaskets — yes. Tap-tower-specific parts are sourced same- or next-day depending on brand.",
       },
-    ],
+          {
+        q: "Do you handle glycol chiller service for brewery fermenters?",
+        a: "Yes. Glycol chiller systems on Pro Refrigeration, G&D Chillers, and Mueller platforms are part of our brewery service scope. Chiller work is senior-tech and we send EPA Section 608 Universal certified refrigeration specialists. We service the chiller, the glycol distribution loop, and the temperature controls — full system scope rather than just the box.",
+      },
+      {
+        q: "Can you repair walk-in cold rooms for finished beer storage?",
+        a: "Yes. Walk-in cold rooms for packaged beer storage use standard commercial refrigeration platforms (Heatcraft, Russell, Bohn) and are part of our regular service mix. The temperature setpoints for finished beer storage (38-42 F) are looser than restaurant walk-ins, but the consequence of failure is the same: product loss.",
+      },
+      {
+        q: "Do you service taproom draft systems and CO2 distribution?",
+        a: "Taproom-side draft system work — keg couplers, FOB detectors, faucet cleaning, line balancing — is typically handled by a draft-specific specialist, but we service the cold room refrigeration that holds the kegs, the glycol chiller that runs the long-draw beer lines, and the ice machine behind the bar. We coordinate with the operator's draft-line specialist on scheduling.",
+      },
+      {
+        q: "How do you handle a brewery cold room emergency on a weekend?",
+        a: "Brewery cold room emergencies get the top of the dispatch queue for the same reason restaurant walk-ins do — finished product is at risk. Typical weekend response in Miami-Dade and Broward is 2-4 hours. We carry common Copeland and Tecumseh compressor contactors and EC fan motors on the truck for first-visit fixes.",
+      },
+      {
+        q: "Do you service the kitchen equipment in brewpub operations?",
+        a: "Yes. Brewpub kitchens run the same restaurant equipment we service every day — Vulcan and Wolf ranges, Pitco fryers, Hobart dish machines, Hoshizaki ice machines. The brewpub model lets us dispatch a single technician for both the brewery glycol chiller and the kitchen line on the same visit, which most operators prefer over coordinating two vendors.",
+      },
+],
     relatedServices: [
       "commercial-refrigeration-repair",
       "walk-in-cooler-repair",
@@ -1227,7 +1387,27 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
         q: "Are your techs presentable for member-area access?",
         a: "Yes. Uniformed, badged, and oriented to member-area protocol.",
       },
-    ],
+          {
+        q: "Can you service the equipment across multiple country club outlets in one visit?",
+        a: "Yes. Country club properties typically have a main dining room kitchen, a grill kitchen, a halfway-house concession, a banquet kitchen, and a pool-side cabana. We schedule maintenance rotation across all five outlets in a single multi-day visit so the property's F&B director coordinates with a single dispatcher rather than juggling multiple vendors.",
+      },
+      {
+        q: "Do you handle ice machines on the halfway house and pool deck?",
+        a: "Yes — outdoor and remote-location ice machines (Hoshizaki, Manitowoc, Scotsman, Follett) are part of our regular service scope. Outdoor units fail more often because of salt air corrosion on condenser coils — we quote PM coil cleaning at 6-month intervals on outdoor ice machines to extend service life.",
+      },
+      {
+        q: "Can you support member-event work outside normal kitchen schedules?",
+        a: "Yes. Country club banquet operations cluster around member events that often happen on weekends — weddings, member tournaments, charity events. We dispatch around the event calendar so the kitchen line is ready for service Friday afternoon and we are not in the kitchen during plated service.",
+      },
+      {
+        q: "Do you provide quarterly PM for the entire F&B operation?",
+        a: "Yes. Quarterly PM contracts for country club F&B cover the dining room and grill kitchens, banquet kitchen, halfway-house concession, and pool cabana — refrigeration coil cleaning, walk-in door seal inspection, ice machine descaling, fryer drain valve service, and combustion analyzer checks on the gas line. PM finds the failures 2-3 weeks early so they get fixed on a scheduled visit.",
+      },
+      {
+        q: "How do you handle the kitchen equipment in the men's grill versus the main dining room?",
+        a: "Same technicians, same parts inventory, different dispatch windows. Main dining room work happens late morning before service; men's grill work happens mid-afternoon between lunch and evening service. We coordinate with the F&B director on each outlet's service window so the work fits the operation rather than disrupting it.",
+      },
+],
     relatedServices: [
       "commercial-refrigeration-repair",
       "walk-in-cooler-repair",
@@ -1362,7 +1542,27 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
         q: "Do you cover trash-room compactor service?",
         a: "Yes — Marathon, Wastequip and Compactor Management equipment.",
       },
-    ],
+          {
+        q: "Do you service common-area laundry rooms in multi-family properties?",
+        a: "Yes — common-area laundry installations on Speed Queen, Huebsch, and Continental Girbau commercial washers and dryers are part of our regular multi-family service. We coordinate with the property's laundry-service vendor (Coinmach, CSC ServiceWorks, WASH Multifamily) when the property is on a leased-equipment program, or service direct when the property owns the machines.",
+      },
+      {
+        q: "Can you handle in-unit appliance repair across the property in one visit?",
+        a: "Yes. Property managers schedule multi-unit work orders into a single dispatch day — we route the technician through all units that need service that day rather than dispatching separately for each unit. Consolidated invoicing per work-order batch reduces the property's admin overhead.",
+      },
+      {
+        q: "How do you handle resident notification for in-unit work?",
+        a: "Property management handles resident notification through their standard 24/48-hour notice process — we coordinate with the leasing or maintenance office on entry codes, key access, or escort arrangements. Our technicians sign in at the property office on arrival and sign out at completion with a service ticket for each unit visited.",
+      },
+      {
+        q: "Do you provide turnover service on appliances between residents?",
+        a: "Yes. Turnover inspections on in-unit refrigerators, ranges, dishwashers, washers, and dryers find the failures before the new resident moves in. Typical turnover service is a 20-30 minute inspection per unit with a written list of needed repairs and replacement recommendations. Property managers batch turnover service into the make-ready cycle.",
+      },
+      {
+        q: "Can you handle the central laundry-room ventilation and gas dryer compliance?",
+        a: "Yes. Central laundry rooms with gas dryers require periodic vent inspection (12-18 months on a heavy-use installation) for fire safety, plus gas combustion analysis on the dryer bank. We document inspection records for the property's fire safety file and provide the report format the property insurance carrier requires.",
+      },
+],
     relatedServices: [
       "commercial-laundry-repair",
       "commercial-washer-repair",

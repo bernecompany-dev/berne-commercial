@@ -226,7 +226,27 @@ export const brandProfiles: BrandProfile[] = [
         q: "Do you provide COI and W-9 for property managers and franchise vendors?",
         a: "Yes — General Liability, Workers Comp and Auto on a single COI, plus W-9 and EPA refrigerant license documentation. Available under /credentials/.",
       },
-    ],
+          {
+        q: "How long does a Hobart booster heater element typically last?",
+        a: "Booster heater elements on Hobart AM and CL platforms typically run 4 to 7 years depending on water hardness and duty cycle. The failure mode is calcification on the element surface, which insulates the heat transfer and trips the high-limit. Hard-water installations should descale the booster every 12 to 18 months to extend element life — we offer descaling on the same service call.",
+      },
+      {
+        q: "Can you rebuild the wash pump on a Hobart AM-15 instead of full replacement?",
+        a: "Yes if the housing and impeller are in spec — a rebuild kit (mechanical seal, bearings, gaskets) runs $340 to $480 in parts and labor versus $720 to $980 for a full pump replacement. We measure the impeller and inspect the housing on the diagnostic; if the housing is corroded past spec we recommend full replacement instead.",
+      },
+      {
+        q: "Do you carry replacement parts for the Hobart LXeR and LXi undercounter?",
+        a: "Yes — drain pump impellers, wash motor capacitors, door spring assemblies, and the soft-touch control overlay all stock on the truck for the LX platform. Booster heaters and the wash chamber thermostat are also stocked because they are the next most common failure on undercounter units after the drain pump.",
+      },
+      {
+        q: "How do you handle Hobart equipment on a service agreement for a multi-restaurant operator?",
+        a: "Multi-restaurant operators on a service agreement get scheduled quarterly PM rotations across all properties — descaling the booster heater, inspecting wash arms, replacing the drain pump impeller before failure, lubing the door spring, and full electrical inspection on the contactor and motor terminals. PM cycles eliminate most of the Friday-night emergency calls.",
+      },
+      {
+        q: "Are your Hobart slicer blade jobs OSHA-compliant for the food service license?",
+        a: "Yes. Hobart 1612, 2812, EDGE13, and CenterLine slicer blade replacement follows OSHA lockout-tagout and the manufacturer's safe-replacement procedure. We document the blade replacement with serial, date, and tech sign-off so the food service license inspection has a maintenance record. Used blades are disposed in puncture-proof containers per OSHA bloodborne pathogen standards.",
+      },
+],
     keywords: [
       "hobart dishwasher repair miami",
       "hobart AM-15 repair",
@@ -453,7 +473,27 @@ export const brandProfiles: BrandProfile[] = [
         q: "Can you provide a COI naming our property management company?",
         a: "Yes — we issue COIs with additional-insured endorsements for property managers, franchise vendor networks and facility-management programs. Documentation lives under /credentials/.",
       },
-    ],
+          {
+        q: "How often should the gas combustion analyzer reading be done on a Vulcan range?",
+        a: "Annually at minimum, twice a year on a heavily-cycled range that runs more than 12 hours a day. Combustion analysis verifies the burner is hitting target CO and O2 levels under load — drift from spec means the burner is running rich (carbon monoxide risk) or lean (yellow flame and soot buildup). We document the reading on the service ticket for the operator's safety file.",
+      },
+      {
+        q: "Can you re-tube a Vulcan VR salamander broiler element?",
+        a: "Salamander emitters are not user-rebuildable — we replace them as a matched set so heat distribution stays even across the finishing surface. A full salamander emitter set runs $480 to $720 in parts and labor depending on model. Single-emitter replacement creates uneven heat that shows up in service quality.",
+      },
+      {
+        q: "Do you handle Vulcan SteamMax convection-steamer boiler descaling?",
+        a: "Yes. SteamMax boiler descaling runs at 6 to 12 month intervals depending on water hardness — South Florida water is hard enough that 6 months is the safe interval. The descaling cycle uses an OEM-approved scale-removal compound, full drain-and-rinse, and a post-service combustion analyzer check. Typical descaling visit runs 90 to 120 minutes.",
+      },
+      {
+        q: "Can you support a Vulcan equipment portfolio across multiple restaurant locations?",
+        a: "Yes. Multi-location operators with Vulcan equipment on a service contract get quarterly PM rotations across all properties — combustion analysis, gas valve seat inspection, pilot orifice cleaning, oven calibration verification, and door hinge alignment. PM cycles catch the failures before they become a Friday-night emergency.",
+      },
+      {
+        q: "Do you carry the Vulcan LG-series fryer high-limit thermostat on the truck?",
+        a: "Yes for LG300, LG400, and LG500 platforms — high-limit thermostats, melt-cycle controls, drain valve assemblies, and the most common gas valves all stock on the commercial truck. The first-visit close rate on Vulcan fryer calls is typically 80-plus percent because the failure modes are well-known and the parts are common.",
+      },
+],
     keywords: [
       "vulcan range repair miami",
       "vulcan v-series repair",
@@ -681,7 +721,27 @@ export const brandProfiles: BrandProfile[] = [
         q: "Can you handle multi-location True refrigeration coverage for a chain?",
         a: "Yes — multi-location dispatch with vendor reporting, COI on file with property management or franchise vendor networks, and standardized service documentation. Talk to dispatch about the account setup.",
       },
-    ],
+          {
+        q: "How do you handle True T-series condenser fan motor replacement on the rooftop unit?",
+        a: "Rooftop and remote-condenser True units (T-49F-HC, T-72F-HC variants) get the condenser fan motor replaced at the condenser location, which adds rooftop access labor to the service ticket. We coordinate with property management on roof access and tie-off requirements. EC fan motor replacements are usually $580 to $820 all-in including the part, labor, and rooftop access.",
+      },
+      {
+        q: "Do you carry True door gaskets on the truck?",
+        a: "Yes for the high-volume models — T-23, T-49, T-72, GDM-23, GDM-49, and TUC-undercounter platforms. Door gasket replacement is the number-one stocked True part because the failure mode (visible compression set after 4-6 years) is well-known and the part is common across the platform. Gasket swaps run 30 to 60 minutes per door.",
+      },
+      {
+        q: "Can you service True merchandiser display cases at retail locations?",
+        a: "Yes. True GDM glass-door merchandisers are part of our regular service mix at convenience stores, c-stores, and grocery store frozen-foods aisles. Common failures are the LED lighting strip, the door heaters that prevent condensation, and the EC fan motors on the newer R-290 platform. We carry the high-failure parts for the GDM-23, GDM-49, and GDM-72 platforms.",
+      },
+      {
+        q: "How do you handle True equipment on a hydrocarbon refrigerant (R-290) platform?",
+        a: "R-290 (propane refrigerant) is the standard on True's newer commercial line — TUC-HC, T-HC, and GDM-HC variants. R-290 service requires hydrocarbon-rated tools and a slightly different leak-detection protocol than R-404A or R-410A. Our refrigeration techs hold EPA Section 608 certification plus hydrocarbon refrigerant training for R-290 platforms.",
+      },
+      {
+        q: "Do you provide PM contracts for True equipment across a restaurant group?",
+        a: "Yes. Quarterly PM rotation on a True equipment portfolio covers condenser coil cleaning, evaporator coil inspection, door gasket compression check, defrost cycle verification, and electrical terminal torque check on the contactor and overload. PM cycles eliminate most of the after-hours emergency calls on True equipment.",
+      },
+],
     keywords: [
       "true refrigerator repair miami",
       "true t-49 service",
@@ -903,7 +963,27 @@ export const brandProfiles: BrandProfile[] = [
         q: "Can you service remote-condensing Manitowoc QuietQube setups?",
         a: "Yes — line-set verification, remote-condenser fan service, refrigerant charge correction and head-pressure control valve diagnosis on QuietQube installations.",
       },
-    ],
+          {
+        q: "How often should a Manitowoc ice machine be descaled?",
+        a: "Twice a year for normal operation, quarterly for high-volume installations or hard-water locations. Manitowoc Indigo NXT and IY-Series both run a built-in descaling cycle that the tech initiates — typical cycle is 90 to 120 minutes with the unit out of service. We schedule descaling into the off-peak window so the operator does not lose production during peak ice demand.",
+      },
+      {
+        q: "Do you carry Manitowoc IY-series harvest probes on the truck?",
+        a: "Yes — IY-series harvest probes, water curtain switches, water level sensors, and bin thermostats all stock on the commercial truck. These are the high-failure components on the IY platform and we stock them because the first-visit close rate matters when the operator's ice supply is at risk during peak service.",
+      },
+      {
+        q: "Can you handle Manitowoc CVD-series remote condenser installations?",
+        a: "Yes. Remote-condenser Manitowoc installations (CVD-series, KRC condenser) are part of our regular service scope. The remote condenser sits on the roof or an outdoor pad and the head unit sits in the prep area — service splits between the two locations. We hold EPA Section 608 Universal certification and handle the refrigerant line work between head and condenser.",
+      },
+      {
+        q: "Do you handle the Manitowoc auto-clean cycle on the Indigo NXT platform?",
+        a: "Yes. Indigo NXT has a programmed auto-clean cycle that the operator can initiate from the front panel, but the cycle does not replace a full mechanical descaling at the 6-month interval. Auto-clean handles the routine scale prevention; mechanical descaling addresses the buildup that the auto-cycle cannot reach. Both should be part of the maintenance schedule.",
+      },
+      {
+        q: "Can you support multi-location Manitowoc service for a hospitality group?",
+        a: "Yes. Hospitality groups with Manitowoc equipment across multiple properties get a single dispatcher relationship, consolidated invoicing, and PM rotation scheduling that aligns with each property's slow-traffic windows. We currently service hotel groups running 4-plus properties on this model with quarterly descaling on every ice machine in the portfolio.",
+      },
+],
     keywords: [
       "manitowoc ice machine repair miami",
       "manitowoc indigo NXT service",
@@ -1128,7 +1208,27 @@ export const brandProfiles: BrandProfile[] = [
         q: "Can you do preventive maintenance on a fleet of Hoshizaki machines?",
         a: "Yes — quarterly descale, sanitize, filter swap and condenser clean on a documented PM schedule. Multi-location pricing for chains and property management.",
       },
-    ],
+          {
+        q: "How often should the Hoshizaki KM water curtain be inspected?",
+        a: "Quarterly on a heavily-cycled installation, semi-annually on normal operation. The water curtain is the gravity-fed water distribution panel that runs across the evaporator — buildup of biofilm or mineral scale on the curtain creates uneven ice formation and triggers harvest failures. We inspect on every PM visit and clean or replace as needed.",
+      },
+      {
+        q: "Do you handle Hoshizaki crescent-cube ice machines for hotel ice rooms?",
+        a: "Yes. Crescent-cube Hoshizaki KM-series and KMS-series ice machines are part of our regular hotel service mix. Hotel ice rooms typically run multiple machines in parallel — we service the bank as a system, not as individual units, which catches the early failures before they cascade across the room.",
+      },
+      {
+        q: "Can you service Hoshizaki sushi-case refrigerated displays?",
+        a: "Yes — Hoshizaki HNC and HNR-series sushi cases are part of our specialized refrigerated-display scope. Common failures are the LED lighting strip, the inner door tracks, and the EC fan motor on the back. Sushi cases run colder than standard merchandisers (28-32 F) and the failures present differently — we have techs trained on the platform.",
+      },
+      {
+        q: "How do you handle the Hoshizaki F-series flake ice machine for fish service?",
+        a: "F-series flake ice machines for seafood displays at grocery and restaurant locations are part of our regular service scope. Flake ice machines use a different harvest mechanism than crescent-cube units — auger-driven instead of gravity-fed — and the failure modes are different. We carry F-series harvest motors and auger gearboxes on the commercial truck.",
+      },
+      {
+        q: "Do you provide PM contracts for Hoshizaki equipment across a hotel portfolio?",
+        a: "Yes. Hotel portfolios with Hoshizaki ice equipment get quarterly descaling cycles on every machine in the portfolio plus annual harvest probe and water curtain inspection. PM cycles eliminate most of the wedding-banquet emergency calls and let the engineering team plan around scheduled service instead of reacting to failures.",
+      },
+],
     keywords: [
       "hoshizaki ice machine repair miami",
       "hoshizaki KM service",
@@ -1357,7 +1457,27 @@ export const brandProfiles: BrandProfile[] = [
         q: "Do you have a COI for Rational repairs on hospital production kitchens?",
         a: "Yes — full COI with hospital additional-insured endorsements, W-9, license documentation under /credentials/.",
       },
-    ],
+          {
+        q: "How often does a Rational SCC need calibration?",
+        a: "Annually for normal operation, more often if the unit is used for sensitive applications like sous-vide or pastry where temperature precision matters. SCC calibration verifies the cavity temperature sensor reading matches actual cavity temperature within 1-2 F and confirms the steam generator output meets factory spec. We use a calibrated digital probe and document the as-found and as-left readings on the service ticket.",
+      },
+      {
+        q: "Do you handle Rational SelfCookingCenter Bluetooth diagnostic access?",
+        a: "Yes. SCC platforms with ConnectedCooking and the iCare diagnostic system can be accessed via Bluetooth for fault-code retrieval and parameter verification. Our combi-oven specialists carry the Rational service tool and the relevant ChefLine diagnostic access. Bluetooth diagnostics often save a teardown by pinpointing the fault before we open the cavity.",
+      },
+      {
+        q: "Can you service the Rational VarioCookingCenter (VCC) line?",
+        a: "Yes. VCC tilt-skillet and pressure-cooking platforms are part of our regular Rational service scope. VCC units use different control firmware and a different cleaning system than SCC combis — we have technicians trained on both platforms. Common VCC failures are the tilt-mechanism gas spring, the bowl-temp probe, and the steam-injection valve.",
+      },
+      {
+        q: "Do you handle Rational descaling for hard-water South Florida installations?",
+        a: "Yes. Hard-water installations need quarterly descaling on the steam generator and the cleaning system to prevent scale buildup that fouls the rinse-water injection. We use the OEM-approved scale-removal compound, full drain-and-rinse on the steam generator, and a post-descaling verification of steam output. Typical descaling visit runs 2 to 3 hours.",
+      },
+      {
+        q: "How do you handle a Rational SCC steam generator replacement?",
+        a: "Steam generator replacement on SCC platforms is a major job — typically 4 to 6 hours and the part is $1,400 to $2,200 depending on model size. We always quote in writing after the diagnostic and verify the failure is the generator and not the water inlet, the level probe, or the steam contactor. Generator replacements are senior-tech work.",
+      },
+],
     keywords: [
       "rational combi oven repair miami",
       "rational iCombi Pro service",
@@ -1576,7 +1696,27 @@ export const brandProfiles: BrandProfile[] = [
         q: "Can you provide COI for property managers and restaurant groups?",
         a: "Yes — GL + WC + Auto on a single COI with additional-insured endorsements. Documentation under /credentials/.",
       },
-    ],
+          {
+        q: "Do you handle Garland Master Series range top burner replacement?",
+        a: "Yes. Master Series open-burner and even-heat plancha burners are part of our regular Garland service scope. Open-burner replacement runs $380 to $520 per burner in parts and labor; even-heat plancha replacement runs higher because of the cast surface. We carry the gas valves and pilot assemblies for the Master Series on the truck.",
+      },
+      {
+        q: "Can you service Garland convection ovens with the proprietary digital controls?",
+        a: "Yes. Garland convection ovens with the M2000 and M3000 digital control platforms are part of our regular service mix. The digital controls have brand-specific diagnostic codes that we read with the Garland service tool. Common failures are the cavity temperature sensor, the convection fan motor, and the gas valve coil.",
+      },
+      {
+        q: "Do you handle Garland charbroiler ceramic radiant replacement?",
+        a: "Yes. Charbroiler ceramic radiants on Garland G-Series and Master Series broilers wear out after 18 to 36 months of heavy service — the ceramic cracks and the heat output drops. We replace radiants as a complete set to maintain even heat across the cooking surface. Stocked on the commercial truck for the high-volume models.",
+      },
+      {
+        q: "Can you service Garland induction ranges and induction cooktops?",
+        a: "Yes. Garland induction platforms (Garland GI-BH/SD3500 and similar) use sealed inverter electronics that require senior-tech diagnostic work. Common failures are the inverter board for a specific burner zone, the cooling fan underneath, and the IR temperature sensor that monitors pan temperature. We carry replacement inverter boards for the high-volume models.",
+      },
+      {
+        q: "How do you handle Garland gas valve replacement with the safety-pilot system?",
+        a: "Garland safety-pilot gas valves require a specific replacement procedure — pilot orifice sizing, thermocouple millivolt verification, and a combustion analyzer check after the swap. Typical valve replacement runs 60 to 90 minutes per burner station. We document the combustion reading and the leak-test result on the service ticket for the operator's safety file.",
+      },
+],
     keywords: [
       "garland range repair miami",
       "garland g-series service",
@@ -1801,7 +1941,27 @@ export const brandProfiles: BrandProfile[] = [
         q: "Can you support multi-location Traulsen coverage for a hotel group?",
         a: "Yes — multi-property dispatch, vendor reporting, COI documentation and standardized work-order format for hotel and restaurant-group accounts.",
       },
-    ],
+          {
+        q: "Do you handle Traulsen RHT and RIT-series reach-in temperature alarm troubleshooting?",
+        a: "Yes. Traulsen RHT and RIT-series reach-ins with the high-temp alarm panel typically alarm because of a failing evap fan motor, a clogged condenser coil, a worn door gasket, or a defrost cycle that is not running. We diagnose the actual cause on the alarm event rather than just clearing the alarm. Most alarm calls trace to one of those four failures and we carry the parts on the truck.",
+      },
+      {
+        q: "Can you service Traulsen blast chillers and blast freezers?",
+        a: "Yes. Traulsen blast chiller and blast freezer platforms (RBC-series, RBF-series) are part of our specialized refrigeration scope. Blast units use a high-velocity evaporator design that pulls heat out of product fast — common failures are the high-CFM evap fan motor, the temperature probe, and the defrost timer. Senior-tech work on a sealed-system call.",
+      },
+      {
+        q: "Do you handle Traulsen prep-table refrigeration for restaurant lines?",
+        a: "Yes. Traulsen TS, TU, and UPT-series prep tables are part of our regular restaurant service mix. Prep tables fail differently than reach-ins because the well refrigeration runs colder than the cabinet — we service the well evaporator, the food-pan thermostat, and the cabinet condenser as separate systems on the same unit. Common pan-icing complaints trace to the defrost cycle on the well.",
+      },
+      {
+        q: "Can you service Traulsen pass-through and roll-in units for banquet kitchens?",
+        a: "Yes. Pass-through Traulsen (G-series, RPT-series) and roll-in units (G-series RR, RHF-series) for banquet kitchens are part of our hotel service scope. Pass-through units have refrigeration on both sides — front-of-house and back-of-house — which doubles the door gasket count and the evap fan motor count. We carry parts for both configurations.",
+      },
+      {
+        q: "Do you provide PM contracts for Traulsen equipment in restaurant groups?",
+        a: "Yes. Restaurant groups with Traulsen equipment on PM rotation get quarterly coil cleaning, door gasket compression checks, defrost cycle verification, and electrical terminal torque check on the contactor and overload. PM cycles catch the failures 2-3 weeks early so they get fixed on a scheduled visit instead of becoming a Friday-night emergency.",
+      },
+],
     keywords: [
       "traulsen refrigerator repair miami",
       "traulsen R-series service",
