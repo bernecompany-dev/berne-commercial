@@ -236,7 +236,7 @@ export default async function BrandDetailPageES({ params }: Params) {
       <section className="border-b border-border/60 bg-accent/30 py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold tracking-tight">
-            Por qué Berne atiende {b.name}
+            Por qué Berne atiende equipo {b.name}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             {v.whyBerne}

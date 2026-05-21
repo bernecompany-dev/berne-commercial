@@ -1,18 +1,31 @@
 import { SiteNavbar } from "./site-navbar"
 import { SiteFooter } from "./site-footer"
 import { MobileCtaBar } from "./mobile-cta-bar"
+import { TrustStrip } from "./trust-strip"
 import type { Locale } from "@/lib/i18n/config"
 
+/**
+ * PageShell is the chrome for every inner route (about, services, brands,
+ * industries, contact, team, credentials, city pages, blog).
+ *
+ * `showTrustStrip` defaults to `true` so the rating/dispatch/licensed strip
+ * surfaces sitewide directly under the navbar — matching home + about. Pages
+ * that already mount their own hero-adjacent trust strip (or that intentionally
+ * skip it) can pass `showTrustStrip={false}`.
+ */
 export function PageShell({
   children,
   locale = "en",
+  showTrustStrip = true,
 }: {
   children: React.ReactNode
   locale?: Locale
+  showTrustStrip?: boolean
 }) {
   return (
     <>
       <SiteNavbar locale={locale} />
+      {showTrustStrip ? <TrustStrip /> : null}
       <main className="pb-20 md:pb-0">{children}</main>
       <SiteFooter locale={locale} />
       <MobileCtaBar locale={locale} />

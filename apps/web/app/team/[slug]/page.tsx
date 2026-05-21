@@ -42,21 +42,23 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const back = BACK_OFFICE_BY_SLUG[slug]
 
   if (tech) {
+    // Suffix template adds " · Berne" — keep base concise so the rendered
+    // <title> stays inside Google's ~60-char SERP cutoff.
     return metaFor({
-      title: `${tech.name} — ${tech.role} | Berne Commercial Repair`,
+      title: `${tech.name} — ${tech.role}`,
       description: `${tech.name}, ${tech.role} at Berne Commercial Repair. ${tech.yearsExperience} years experience. Specialties: ${tech.specialties.join(", ")}. Service across South Florida.`,
       path: `/team/${slug}`,
     })
   }
   if (back) {
     return metaFor({
-      title: `${back.role} — Berne Commercial Operations`,
+      title: `${back.role} — Commercial Operations`,
       description: `${back.role} role at Berne Commercial Repair. Part of the dispatch and operations team behind the technician fleet.`,
       path: `/team/${slug}`,
     })
   }
   return metaFor({
-    title: "Team — Berne Commercial Repair",
+    title: "Team",
     description: "Berne Commercial Repair team member.",
     path: `/team/${slug}`,
     noindex: true,

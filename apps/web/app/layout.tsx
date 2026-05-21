@@ -22,9 +22,13 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    // S13: keep home <title> at <=60 chars (Google SERP cutoff).
+    // S13: keep home <title> at <=60 chars (Google SERP cutoff). The suffix
+    // template applies to every child page via Metadata.title — keep it short
+    // ("· Berne", 7 chars) so per-page base titles up to 53 chars stay within
+    // the SERP cutoff. The full canonical brand name lives in site.name and
+    // is emitted via Organization / LocalBusiness JSON-LD, not the <title>.
     default: `${site.name} · South Florida Dispatch`,
-    template: `%s · ${site.name}`,
+    template: `%s · Berne`,
   },
   description: site.description,
   applicationName: site.name,

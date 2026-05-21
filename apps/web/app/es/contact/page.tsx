@@ -25,6 +25,14 @@ export const metadata: Metadata = {
   },
 }
 
+// Berne family dispatch lines. The primary number lives in site.ts; the two
+// below give Broward and Palm Beach callers a local-area-code line into the
+// same shared dispatch board.
+const ALT_PHONES_ES = [
+  { label: "Despacho Broward", display: "(954) 569-8550", href: "tel:+19545698550" },
+  { label: "Despacho Palm Beach", display: "(561) 858-9919", href: "tel:+15618589919" },
+] as const
+
 export default function ContactPageES() {
   return (
     <PageShell locale="es">
@@ -37,7 +45,10 @@ export default function ContactPageES() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-5 lg:px-8">
           <div className="space-y-4 lg:col-span-2">
             <Card className="gap-4 p-6">
-              <Item icon={Phone} label="Despacho" value={site.phone} href={site.phoneHref} />
+              <Item icon={Phone} label="Despacho principal" value={site.phone} href={site.phoneHref} />
+              {ALT_PHONES_ES.map((p) => (
+                <Item key={p.href} icon={Phone} label={p.label} value={p.display} href={p.href} />
+              ))}
               <Item icon={Mail} label="Email" value={site.email} href={`mailto:${site.email}`} />
               <Item
                 icon={MapPin}

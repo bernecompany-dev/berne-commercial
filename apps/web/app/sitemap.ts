@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/blog",
     "/team",
+    "/credentials",
   ].map((p) => ({
     url: `${base}${p}`,
     lastModified: now,
@@ -42,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/es/contact",
     "/es/request-dispatch",
     "/es/blog",
+    "/es/credentials",
   ].map((p) => ({
     url: `${base}${p}`,
     lastModified: now,
@@ -75,6 +77,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "weekly" as const,
     priority: 0.7,
+  }))
+
+  const esBrandPages = brandProfiles.map((b) => ({
+    url: `${base}/es/brands/${b.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
   }))
 
   const industryPages = INDUSTRY_PROFILES.map((p) => ({
@@ -140,6 +149,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...serviceDetails,
     ...esServiceDetails,
     ...brandPages,
+    ...esBrandPages,
     ...industryPages,
     ...esIndustryPages,
     ...cityPages,

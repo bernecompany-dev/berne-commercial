@@ -68,7 +68,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     slug: "restaurants",
     industry: "restaurants",
     industryTitle: "Restaurant",
-    metaTitle: "Restaurant Equipment Repair Miami | Berne Commercial",
+    metaTitle: "Restaurant Equipment Repair Miami",
     metaDescription:
       "Same-day restaurant equipment repair across South Florida — Hobart, Vulcan, Hoshizaki, Manitowoc. Insured, EPA-certified, 18 techs, 4.79★ on 871 reviews.",
     h1: "Restaurant Equipment Repair in South Florida",
@@ -168,7 +168,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     es: {
       industry: "restaurantes",
       industryTitle: "Restaurante",
-      metaTitle: "Reparación de Equipo de Restaurante Miami | Berne",
+      metaTitle: "Reparación de Equipo de Restaurante Miami",
       metaDescription:
         "Reparación de equipo de restaurante el mismo día en el Sur de Florida — Hobart, Vulcan, Hoshizaki. Asegurados, certificados EPA, 18 técnicos.",
       h1: "Reparación de Equipo de Restaurante en el Sur de Florida",
@@ -212,7 +212,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     slug: "hotels",
     industry: "hotels",
     industryTitle: "Hotel",
-    metaTitle: "Hotel Equipment Repair South Florida | Berne Commercial",
+    metaTitle: "Hotel Equipment Repair South Florida",
     metaDescription:
       "Hotel laundry, kitchen, ice and refrigeration repair across Miami-Dade, Broward, Palm Beach. Speed Queen, Continental, Hoshizaki — same-day dispatch.",
     h1: "Hotel Equipment Repair in South Florida",
@@ -306,7 +306,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     es: {
       industry: "hoteles",
       industryTitle: "Hotel",
-      metaTitle: "Reparación de Equipo de Hotel Miami | Berne Commercial",
+      metaTitle: "Reparación de Equipo de Hotel Miami",
       metaDescription:
         "Lavandería OPL, cocina, hielo y refrigeración para hoteles en Miami-Dade, Broward y Palm Beach. Speed Queen, Continental, Hoshizaki — despacho el mismo día.",
       h1: "Reparación de Equipo de Hotel en el Sur de Florida",
@@ -349,7 +349,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     slug: "laundromats",
     industry: "laundromats",
     industryTitle: "Laundromat",
-    metaTitle: "Laundromat Equipment Repair Miami | Berne Commercial",
+    metaTitle: "Laundromat Equipment Repair Miami",
     metaDescription:
       "Speed Queen, Huebsch, Wascomat, Continental Girbau washer & dryer repair across South Florida. Coin and card systems, route fleets, multi-store operators.",
     h1: "Laundromat Equipment Repair in South Florida",
@@ -435,7 +435,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     es: {
       industry: "lavanderías",
       industryTitle: "Lavandería",
-      metaTitle: "Reparación de Equipo de Lavandería Miami | Berne",
+      metaTitle: "Reparación de Equipo de Lavandería Miami",
       metaDescription:
         "Reparación de lavadoras y secadoras Speed Queen, Huebsch, Wascomat, Continental Girbau en el Sur de Florida. Sistemas de monedas, tarjeta, flotas de ruta.",
       h1: "Reparación de Equipo de Lavandería en el Sur de Florida",
@@ -477,7 +477,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     slug: "healthcare",
     industry: "healthcare facilities",
     industryTitle: "Healthcare",
-    metaTitle: "Medical & Healthcare Equipment Repair Miami | Berne",
+    metaTitle: "Medical & Healthcare Equipment Repair Miami",
     metaDescription:
       "Vaccine fridge, lab refrigeration, hospital kitchen and ice machine repair across South Florida. Helmer, Thermo Scientific. NDA & HIPAA-aware crews.",
     h1: "Healthcare Equipment Repair in South Florida",
@@ -564,7 +564,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     es: {
       industry: "instalaciones de salud",
       industryTitle: "Salud",
-      metaTitle: "Reparación de Equipo Médico Miami | Berne",
+      metaTitle: "Reparación de Equipo Médico Miami",
       metaDescription:
         "Refrigeradores de vacunas, refrigeración de laboratorio, cocinas de hospital y máquinas de hielo en el Sur de Florida. Helmer, Thermo Scientific. NDA y HIPAA-aware.",
       h1: "Reparación de Equipo de Salud en el Sur de Florida",
@@ -606,7 +606,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     slug: "grocery",
     industry: "supermarkets and grocery stores",
     industryTitle: "Grocery & Supermarket",
-    metaTitle: "Supermarket & Grocery Equipment Repair Miami | Berne",
+    metaTitle: "Supermarket & Grocery Equipment Repair Miami",
     metaDescription:
       "Hussmann, Hill Phoenix, Master-Bilt display case and walk-in repair across South Florida. Refrigeration racks, deli, ice, scales — same-day dispatch.",
     h1: "Supermarket & Grocery Equipment Repair in South Florida",
@@ -699,7 +699,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     es: {
       industry: "supermercados",
       industryTitle: "Supermercado",
-      metaTitle: "Reparación de Equipo de Supermercado Miami | Berne",
+      metaTitle: "Reparación de Equipo de Supermercado Miami",
       metaDescription:
         "Hussmann, Hill Phoenix, Master-Bilt — reparación de vitrinas y walk-ins en el Sur de Florida. Racks de refrigeración, deli, hielo — despacho el mismo día.",
       h1: "Reparación de Equipo de Supermercado en el Sur de Florida",
@@ -742,7 +742,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     slug: "schools",
     industry: "schools and universities",
     industryTitle: "School & University",
-    metaTitle: "School Cafeteria Equipment Repair Miami | Berne",
+    metaTitle: "School Cafeteria Equipment Repair Miami",
     metaDescription:
       "K-12 and university cafeteria repair across South Florida — Cleveland, Vulcan, Hobart dish machines, walk-ins, bulk milk coolers. Background-screened techs.",
     h1: "School & University Equipment Repair in South Florida",
@@ -835,7 +835,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     es: {
       industry: "escuelas y universidades",
       industryTitle: "Escuela y Universidad",
-      metaTitle: "Reparación de Cafetería Escolar Miami | Berne",
+      metaTitle: "Reparación de Cafetería Escolar Miami",
       metaDescription:
         "Reparación K-12 y universidad en el Sur de Florida — Cleveland, Vulcan, lavavajillas Hobart, walk-ins, coolers de leche en bulk. Técnicos con background-screen.",
       h1: "Reparación de Equipo Escolar y Universitario en el Sur de Florida",
@@ -878,7 +878,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     slug: "gyms",
     industry: "gyms and fitness centers",
     industryTitle: "Gym & Fitness Center",
-    metaTitle: "Gym Smoothie Bar & Cafe Equipment Repair Miami | Berne",
+    metaTitle: "Gym Smoothie Bar & Cafe Equipment Repair Miami",
     metaDescription:
       "Smoothie bar refrigeration, blender stations, juice press, retail beverage coolers — gym & fitness equipment repair across South Florida.",
     h1: "Gym & Fitness Center Equipment Repair in South Florida",
@@ -970,7 +970,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     es: {
       industry: "gimnasios y centros fitness",
       industryTitle: "Gimnasio y Fitness",
-      metaTitle: "Reparación Smoothie Bar y Cafe de Gym Miami | Berne",
+      metaTitle: "Reparación Smoothie Bar y Cafe de Gym Miami",
       metaDescription:
         "Refrigeración de smoothie bar, estaciones de licuadora, juice press, coolers de bebida retail — reparación de equipo de gym en el Sur de Florida.",
       h1: "Reparación de Equipo de Gimnasio y Fitness en el Sur de Florida",
@@ -1013,7 +1013,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     slug: "breweries",
     industry: "breweries and distilleries",
     industryTitle: "Brewery & Distillery",
-    metaTitle: "Brewery Glycol & Taproom Repair Miami | Berne",
+    metaTitle: "Brewery Glycol & Taproom Repair Miami",
     metaDescription:
       "Glycol chillers, kegerators, walk-in cold rooms, taproom refrigeration & ice for breweries and distilleries across South Florida. Same-day taproom service.",
     h1: "Brewery & Distillery Equipment Repair in South Florida",
@@ -1104,7 +1104,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     es: {
       industry: "cervecerías y destilerías",
       industryTitle: "Cervecería y Destilería",
-      metaTitle: "Reparación Glycol y Taproom Cervecería Miami | Berne",
+      metaTitle: "Reparación Glycol y Taproom Cervecería Miami",
       metaDescription:
         "Chillers de glycol, kegerators, cuartos fríos walk-in, refrigeración de taproom y hielo para cervecerías y destilerías en el Sur de Florida.",
       h1: "Reparación de Cervecería y Destilería en el Sur de Florida",
@@ -1147,7 +1147,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     slug: "country-clubs",
     industry: "country clubs and private hospitality venues",
     industryTitle: "Country Club & Private Hospitality",
-    metaTitle: "Country Club Kitchen & Ice Repair Miami | Berne",
+    metaTitle: "Country Club Kitchen & Ice Repair Miami",
     metaDescription:
       "Country club catering kitchens, banquet refrigeration, ice machines, dishwashing — discreet, NDA-friendly service across South Florida. Member-event priority.",
     h1: "Country Club & Hospitality Equipment Repair in South Florida",
@@ -1239,7 +1239,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     es: {
       industry: "country clubs y venues privados de hospitalidad",
       industryTitle: "Country Club y Hospitalidad Privada",
-      metaTitle: "Reparación Cocina y Hielo Country Club Miami | Berne",
+      metaTitle: "Reparación Cocina y Hielo Country Club Miami",
       metaDescription:
         "Cocinas de catering de country club, refrigeración de banquetes, máquinas de hielo, lavavajillas — servicio discreto y NDA-friendly en el Sur de Florida.",
       h1: "Reparación de Country Club y Hospitalidad en el Sur de Florida",
@@ -1282,7 +1282,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     slug: "multi-family",
     industry: "multi-family and apartment buildings",
     industryTitle: "Multi-Family & Apartment",
-    metaTitle: "Multi-Family Laundry & Common-Area Repair Miami | Berne",
+    metaTitle: "Multi-Family Laundry & Common-Area Repair Miami",
     metaDescription:
       "Common-area laundry, amenity kitchens, apartment-unit appliances across South Florida multi-family. Speed Queen, building manager service contracts.",
     h1: "Multi-Family & Apartment Equipment Repair in South Florida",
@@ -1374,7 +1374,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     es: {
       industry: "multifamiliar y edificios de apartamentos",
       industryTitle: "Multifamiliar y Apartamentos",
-      metaTitle: "Reparación Multifamiliar Lavandería y Amenidades Miami | Berne",
+      metaTitle: "Reparación Multifamiliar Lavandería y Amenidades Miami",
       metaDescription:
         "Lavandería de área común, cocinas de amenidades, appliances de unidad en multifamiliar del Sur de Florida. Speed Queen, contratos de service para building managers.",
       h1: "Reparación de Equipo Multifamiliar y Apartamentos en el Sur de Florida",
