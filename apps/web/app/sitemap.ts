@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/brands": { priority: 0.85, changeFrequency: "monthly" },
     "/service-areas": { priority: 0.8, changeFrequency: "monthly" },
     "/become-a-client": { priority: 0.7, changeFrequency: "monthly" },
+    "/careers": { priority: 0.7, changeFrequency: "monthly" },
     "/request-dispatch": { priority: 0.7, changeFrequency: "yearly" },
     "/contact": { priority: 0.7, changeFrequency: "yearly" },
     "/blog": { priority: 0.7, changeFrequency: "weekly" },
