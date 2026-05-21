@@ -49,7 +49,7 @@ export default function HomePage() {
   return (
     <>
       <SiteNavbar locale="en" />
-      <main className="pb-20 md:pb-0">
+      <main id="main" tabIndex={-1} className="pb-20 md:pb-0 focus:outline-none">
         <Hero locale="en" />
         <TrustStrip />
         <ServicesGrid locale="en" />

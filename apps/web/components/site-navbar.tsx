@@ -34,7 +34,7 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
           <BrandMark />
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav aria-label={locale === "es" ? "Principal" : "Primary"} className="hidden items-center gap-7 lg:flex">
           {nav.map((n) => (
             <Link
               key={n.href}
@@ -61,19 +61,22 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
           type="button"
           onClick={() => setOpen((v) => !v)}
           className="inline-flex size-9 items-center justify-center rounded-md border border-border lg:hidden"
-          aria-label="Toggle menu"
+          aria-label={open ? (locale === "es" ? "Cerrar menú" : "Close menu") : (locale === "es" ? "Abrir menú" : "Open menu")}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
         >
           {open ? <X className="size-4" /> : <Menu className="size-4" />}
         </button>
       </div>
 
       <div
+        id="mobile-nav"
         className={cn(
           "border-t border-border/60 bg-background lg:hidden",
           open ? "block" : "hidden",
         )}
       >
-        <div className="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6">
+        <nav aria-label={locale === "es" ? "Móvil" : "Mobile"} className="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6">
           {nav.map((n) => (
             <Link
               key={n.href}
@@ -96,7 +99,7 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
               {tr.cta.requestDispatch}
             </LinkButton>
           </div>
-        </div>
+        </nav>
       </div>
     </header>
   )

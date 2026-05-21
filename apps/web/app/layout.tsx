@@ -10,6 +10,7 @@ import { MetaPixel } from "@/components/meta-pixel"
 import { Clarity } from "@/components/clarity"
 import { CookieBanner } from "@/components/cookie-banner"
 import { WhatsAppFab } from "@/components/whatsapp-fab"
+import { SkipToContent } from "@/components/skip-to-content"
 import {
   organizationSchema,
   localBusinessSchema,
@@ -83,6 +84,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//www.clarity.ms" />
       </head>
       <body className="font-sans antialiased">
+        <SkipToContent />
         {children}
         <JsonLd data={organizationSchema()} />
         <JsonLd data={localBusinessSchema()} />

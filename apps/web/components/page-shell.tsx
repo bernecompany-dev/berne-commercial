@@ -26,7 +26,7 @@ export function PageShell({
     <>
       <SiteNavbar locale={locale} />
       {showTrustStrip ? <TrustStrip /> : null}
-      <main className="pb-20 md:pb-0">{children}</main>
+      <main id="main" tabIndex={-1} className="pb-20 md:pb-0 focus:outline-none">{children}</main>
       <SiteFooter locale={locale} />
       <MobileCtaBar locale={locale} />
     </>

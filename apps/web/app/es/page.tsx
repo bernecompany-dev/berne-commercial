@@ -70,7 +70,7 @@ export default function HomePageES() {
   return (
     <>
       <SiteNavbar locale="es" />
-      <main className="pb-20 md:pb-0">
+      <main id="main" tabIndex={-1} className="pb-20 md:pb-0 focus:outline-none">
         <Hero locale="es" />
         <TrustStrip />
         <ServicesGrid locale="es" />
