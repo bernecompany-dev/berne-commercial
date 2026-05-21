@@ -29,8 +29,11 @@ export function Clarity() {
   // Defensive: allow only alnum/underscore/hyphen, max 64 chars.
   if (!/^[A-Za-z0-9_-]{1,64}$/.test(CLARITY_ID)) return null
 
+  // Clarity is session-recording for UX research, not conversion-critical.
+  // `lazyOnload` defers it until the browser is idle so it stays off the
+  // TBT / INP critical path on the initial interaction.
   return (
-    <Script id="ms-clarity" strategy="afterInteractive">
+    <Script id="ms-clarity" strategy="lazyOnload">
       {`
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
