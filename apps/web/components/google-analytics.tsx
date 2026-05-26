@@ -24,7 +24,7 @@ export function GoogleAnalytics() {
             if (!t) return;
             var href = t.getAttribute('href') || '';
             if (href.indexOf('tel:') === 0) {
-              gtag('event', 'call_click', {
+              gtag('event', 'phone_call', {
                 phone: href.replace('tel:', ''),
                 location: window.location.pathname,
               });
