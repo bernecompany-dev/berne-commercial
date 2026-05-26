@@ -6,7 +6,7 @@ export const preTouristSeasonEquipmentAuditMiami: Article = {
     "Pre-Tourist-Season Equipment Audit — Miami's October-to-May Peak",
   description:
     "Miami's commercial kitchens push 60 to 70 percent of annual revenue between October and May. September is the audit window. Here's the asset-by-asset pre-season check that prevents the avoidable mid-season failure.",
-  publishedAt: "2026-09-01T09:00:00Z",
+  publishedAt: "2026-08-17T09:00:00Z",
   readingMinutes: 11,
   category: "Operations",
   tags: [

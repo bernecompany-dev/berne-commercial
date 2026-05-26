@@ -6,7 +6,7 @@ export const espressoMachineNoPressure: Article = {
     "Espresso Machine Won't Build Pressure — Cafe Operator's Diagnostic Checklist",
   description:
     "Why a La Marzocco Linea, Nuova Simonelli Aurelia, or Rancilio Classe 9 stops pulling 9 bars — rotary pump, OPV, group solenoid, gicleur, and the gauge readings that tell you which part to order.",
-  publishedAt: "2026-06-12",
+  publishedAt: "2026-06-01",
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: [

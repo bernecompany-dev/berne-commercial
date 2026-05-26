@@ -6,7 +6,7 @@ export const trueGdmDoorGasketPreInspection: Article = {
     "True GDM Door Gasket Replacement Before Health Inspection",
   description:
     "A True GDM-26 glass-door merchandiser with worn door gaskets shows visible condensation, biofilm streaks, and inconsistent temperatures. Replace the gasket 30 days before the inspection, not the day it's already failed.",
-  publishedAt: "2026-10-22T09:00:00Z",
+  publishedAt: "2026-10-08T09:00:00Z",
   readingMinutes: 8,
   category: "Commercial Refrigeration",
   tags: [

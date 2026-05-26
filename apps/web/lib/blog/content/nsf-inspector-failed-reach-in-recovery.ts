@@ -6,7 +6,7 @@ export const nsfInspectorFailedReachIn: Article = {
     "NSF Health Inspector Failed Your Reach-In? Quick Fixes for Recovery",
   description:
     "A Florida DBPR inspector wrote up your True T-49 or Beverage-Air HBR48 at 47°F — what to fix in 24 hours so the re-inspection passes and the kitchen doesn't lose its permit.",
-  publishedAt: "2026-06-10",
+  publishedAt: "2026-05-28",
   readingMinutes: 9,
   category: "Refrigeration",
   tags: [

@@ -6,7 +6,7 @@ export const greaseTrapApplianceLifespan: Article = {
     "Restaurant Grease Trap Maintenance and Appliance Lifespan",
   description:
     "Skipped grease-trap service kills commercial dishwashers, drain pumps, and floor sinks. Miami-Dade plumbing code, FOG ordinances, and how trap maintenance schedules drive appliance lifespan in a busy kitchen.",
-  publishedAt: "2026-06-17",
+  publishedAt: "2026-06-04",
   readingMinutes: 9,
   category: "Compliance",
   tags: [

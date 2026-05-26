@@ -5,7 +5,7 @@ export const commercialFryerThermostat: Article = {
   title: "Commercial Fryer Thermostat or Pilot Issues — Fast Diagnosis",
   description:
     "When a Pitco SG14, Frymaster H50, or Vulcan 1ER50 stops holding 350°F or won't light — high-limit, thermopile, gas valve, and the gauge-and-meter sequence a fryer tech runs in 20 minutes.",
-  publishedAt: "2026-06-19",
+  publishedAt: "2026-06-08",
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: ["fryers", "Pitco", "Frymaster", "Vulcan", "gas equipment"],

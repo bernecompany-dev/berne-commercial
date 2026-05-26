@@ -6,7 +6,7 @@ export const serviceContractVsPerIncidentTco: Article = {
     "Service Contract Decision — Per-Incident vs Annual TCO Analysis",
   description:
     "A 14-asset restaurant pays $14k a year reactively or $9k a year on a service contract. The math is straightforward but most operators run reactive until the third major failure forces the conversation.",
-  publishedAt: "2026-12-03T09:00:00Z",
+  publishedAt: "2026-11-19T09:00:00Z",
   readingMinutes: 9,
   category: "Operations",
   tags: [

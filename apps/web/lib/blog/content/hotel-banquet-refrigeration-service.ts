@@ -6,7 +6,7 @@ export const hotelBanquetRefrigeration: Article = {
     "Hotel Banquet Catering Equipment — Common Refrigeration Service Calls",
   description:
     "Hotel banquet kitchens stress refrigeration in ways that 24/7 restaurants don't. A working tech's read on Traulsen G-Series, Continental DL2R, and walk-in service calls in event-cycle catering operations.",
-  publishedAt: "2026-07-08T09:00:00Z",
+  publishedAt: "2026-06-25T09:00:00Z",
   readingMinutes: 9,
   category: "Hospitality",
   tags: [

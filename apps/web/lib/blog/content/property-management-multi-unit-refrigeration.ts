@@ -6,7 +6,7 @@ export const propertyManagementMultiUnit: Article = {
     "Property Management Multi-Unit Refrigeration — Service Contracts vs Per-Call",
   description:
     "Property managers running 8 to 40 commercial refrigeration units across multiple addresses see different total cost between service contracts and per-call work. A field tech's read on the math, the response time, and the documentation.",
-  publishedAt: "2026-08-12T09:00:00Z",
+  publishedAt: "2026-07-27T09:00:00Z",
   readingMinutes: 9,
   category: "Hospitality",
   tags: [

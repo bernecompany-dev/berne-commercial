@@ -6,7 +6,7 @@ export const foodTruckRefrigeration: Article = {
     "Food Truck Refrigeration Service — Mobile Coil Cleaning in Heat",
   description:
     "A food truck reach-in or undercounter unit faces ambient temperatures restaurant equipment never sees. A field tech's read on True TUC-27F, Atosa MGF8401, and Beverage-Air UCR27 service intervals in mobile use.",
-  publishedAt: "2026-07-15T09:00:00Z",
+  publishedAt: "2026-07-02T09:00:00Z",
   readingMinutes: 9,
   category: "Mobile Food Service",
   tags: [

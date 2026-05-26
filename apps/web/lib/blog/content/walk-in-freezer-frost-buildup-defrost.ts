@@ -6,7 +6,7 @@ export const walkInFreezerFrostBuildup: Article = {
     "Walk-In Freezer Frost Buildup — Diagnosing Defrost Timer vs Heater",
   description:
     "Your Heatcraft or Bohn walk-in freezer evaporator is a block of ice and product is thawing. A field tech's diagnostic on the Paragon timer, defrost termination thermostat, and the 240V heating element behind the frost.",
-  publishedAt: "2026-06-24",
+  publishedAt: "2026-06-11",
   readingMinutes: 9,
   category: "Refrigeration",
   tags: [

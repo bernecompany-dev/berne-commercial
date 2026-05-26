@@ -6,7 +6,7 @@ export const frymasterFilterPumpLockout: Article = {
     "Frymaster Filter Pump Won't Engage — Lockout Reset Procedure",
   description:
     "Your Frymaster FPP3, FPGL230, or H50 with FilterQuick is throwing a filter-pump lockout. A field diagnostic on the float switches, drain valve sensors, and how to clear the M3000 controller fault.",
-  publishedAt: "2026-07-24T09:00:00Z",
+  publishedAt: "2026-07-13T09:00:00Z",
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: [

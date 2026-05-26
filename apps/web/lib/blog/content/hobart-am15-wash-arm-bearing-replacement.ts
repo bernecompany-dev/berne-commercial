@@ -6,7 +6,7 @@ export const hobartAm15WashArmBearing: Article = {
     "Hobart AM-15 Wash Arm Bearing Replacement Intervals — High-Volume Kitchens",
   description:
     "Hobart AM-15 wash arm bearings are the wear part nobody schedules until the chamber stops spraying mid-service. A field tech's interval map for hotel banquet kitchens, banquet halls, and 800-cover-a-night restaurants.",
-  publishedAt: "2026-08-13T09:00:00Z",
+  publishedAt: "2026-07-30T09:00:00Z",
   readingMinutes: 10,
   category: "Restaurant Equipment",
   tags: [

@@ -6,7 +6,7 @@ export const pizzaConveyorOvenBelt: Article = {
     "Pizza Conveyor Oven — Belt Tension and Bearing Wear Service",
   description:
     "Your Lincoln Impinger 1132, Middleby Marshall PS640, or Lincoln 1162 conveyor belt is tracking off, slipping, or running uneven. A field tech's read on belt tension, drive bearings, and motor diagnosis.",
-  publishedAt: "2026-08-05T09:00:00Z",
+  publishedAt: "2026-07-23T09:00:00Z",
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: [

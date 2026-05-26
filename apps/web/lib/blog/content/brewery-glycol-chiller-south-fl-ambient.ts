@@ -6,7 +6,7 @@ export const breweryGlycolChillerSouthFl: Article = {
     "Brewery Glycol Chiller Maintenance — South FL Ambient Temp Impact",
   description:
     "A Pro Refrigeration or G&D Chillers glycol system rated for 95°F ambient struggles in 105°F Miami August conditions. Pressure rises, capacity drops, and beer fermentation control suffers. Here's the South FL-specific service plan.",
-  publishedAt: "2026-12-08T09:00:00Z",
+  publishedAt: "2026-11-23T09:00:00Z",
   readingMinutes: 9,
   category: "Industry",
   tags: [

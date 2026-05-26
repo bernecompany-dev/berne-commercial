@@ -6,7 +6,7 @@ export const garlandRbCharbroilerBurnerRegulator: Article = {
     "Garland RB Charbroiler — Burner Regulator Failure Pattern",
   description:
     "Garland RB series charbroilers hold flame on a sectional manifold with individual burner regulators. The regulators fail in a predictable sequence and the symptoms get blamed on the gas company. Here's the real diagnostic.",
-  publishedAt: "2026-09-24T09:00:00Z",
+  publishedAt: "2026-09-10T09:00:00Z",
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: [

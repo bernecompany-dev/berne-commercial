@@ -6,7 +6,7 @@ export const hoshizakiKmWaterInletFlicker: Article = {
     "Hoshizaki KM Series — Water Inlet Flicker Patterns and What They Mean",
   description:
     "A Hoshizaki KM-901MAJ flashing alarm code A1 or 3F isn't always the obvious cause. The flicker pattern, the inlet valve, the float switch, and the water-pressure regulator each tell a different diagnostic story.",
-  publishedAt: "2026-09-10T09:00:00Z",
+  publishedAt: "2026-08-27T09:00:00Z",
   readingMinutes: 10,
   category: "Commercial Refrigeration",
   tags: [

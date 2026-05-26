@@ -6,7 +6,7 @@ export const manitowocNeoPreSeasonSouthFl: Article = {
     "Manitowoc NEO Series Ice Machine — Pre-Season Service for South Florida",
   description:
     "The Manitowoc NEO undercounter is the workhorse ice machine for bars, cafes, and small kitchens across South Florida. October pre-season service includes the four checks most owners skip — until production drops mid-season.",
-  publishedAt: "2026-10-29T09:00:00Z",
+  publishedAt: "2026-10-15T09:00:00Z",
   readingMinutes: 8,
   category: "Commercial Refrigeration",
   tags: [

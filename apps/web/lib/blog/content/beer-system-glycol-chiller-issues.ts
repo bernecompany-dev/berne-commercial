@@ -6,7 +6,7 @@ export const beerSystemGlycolChiller: Article = {
     "Multi-Tap Beer System Glycol Chiller Issues — Restaurant Bar Service",
   description:
     "Your 12-tap glycol chiller is letting beer pour foamy, warm, or with the wrong head. A field tech's diagnostic on the Perlick, Micro Matic, and Glastender chiller power packs, glycol mix, and trunk-line insulation.",
-  publishedAt: "2026-07-03T09:00:00Z",
+  publishedAt: "2026-06-22T09:00:00Z",
   readingMinutes: 9,
   category: "Beverage Equipment",
   tags: [

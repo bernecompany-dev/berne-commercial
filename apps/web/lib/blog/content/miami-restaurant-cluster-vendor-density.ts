@@ -6,7 +6,7 @@ export const miamiRestaurantClusterVendorDensity: Article = {
     "Miami Restaurant Cluster — Equipment Vendor Density Realities",
   description:
     "Brickell, Wynwood, and Miami Beach have specific equipment-vendor density patterns. Knowing which neighborhoods have which parts on the shelf versus which require 2-day waits changes how operators schedule preventive service.",
-  publishedAt: "2026-12-24T09:00:00Z",
+  publishedAt: "2026-12-10T09:00:00Z",
   readingMinutes: 8,
   category: "Industry",
   tags: [

@@ -6,7 +6,7 @@ export const garlandSectionalGasPressure: Article = {
     "Garland Sectional Range — Gas Pressure Adjustment After Install",
   description:
     "A new Garland G24, G36, or G60 sectional range that's running yellow flames or underperforming on day one usually has a manifold pressure adjustment issue. Here's the install-day check the gas plumber didn't do.",
-  publishedAt: "2026-11-19T09:00:00Z",
+  publishedAt: "2026-11-05T09:00:00Z",
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: [

@@ -6,7 +6,7 @@ export const trueTSeriesCondenserCoastalInland: Article = {
     "True T-Series Condenser Cleaning Schedule — Coastal vs Inland South Florida",
   description:
     "A True T-49 in a Brickell rooftop kitchen needs the condenser cleaned every 8 weeks. The same unit in Doral 9 miles inland goes 16 weeks between cleanings. Here's the salt-air, hood-grease, and ambient-temp math behind why.",
-  publishedAt: "2026-08-27T09:00:00Z",
+  publishedAt: "2026-08-13T09:00:00Z",
   readingMinutes: 9,
   category: "Commercial Refrigeration",
   tags: [

@@ -6,7 +6,7 @@ export const restaurantKitchenDowntimeCalculator: Article = {
     "Restaurant Kitchen Downtime Cost Calculator + Vendor SLA Template",
   description:
     "When your walk-in goes warm or the line range dies mid-service, the real number isn't the repair bill. It's the lost covers, the food spoilage, and the next-day reservations that don't book. A working operator's calculator.",
-  publishedAt: "2026-08-18T09:00:00Z",
+  publishedAt: "2026-08-03T09:00:00Z",
   readingMinutes: 11,
   category: "Operations",
   tags: [
