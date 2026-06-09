@@ -8,6 +8,17 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60 * 60 * 24 * 30,
   },
+  // Old placeholder back-office profile URLs (pre real dispatch-team roster,
+  // June 2026) → /team. Real profiles now live at /team/bogdan etc.
+  async redirects() {
+    return [
+      {
+        source: "/team/back-office-:n(\\d{1})",
+        destination: "/team",
+        permanent: true,
+      },
+    ]
+  },
   // S14: site-wide Permissions-Policy. Disable browser features we never
   // need so embedded scripts/iframes cannot request them. Mirrors the
   // header set on the bernerepair.com WP site.

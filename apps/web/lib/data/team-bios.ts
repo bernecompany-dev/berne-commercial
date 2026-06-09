@@ -368,36 +368,104 @@ export const TECH_BIOS: Record<string, ExtendedBio> = {
 }
 
 /**
- * Back-office scaffold. Names + photos to be filled by Eugene in coming days.
+ * Dispatch & operations roster — the back office behind the technician fleet.
  *
- * TODO(eugene): provide real names, photos, and any role corrections. Once
- * supplied, edit each entry below and remove the `placeholder: true` flag.
+ * Voice rules: bios describe what the ROLE covers at Berne — no fabricated
+ * personal histories, years, or cities. Taglines are one truthful role line.
  */
 export type BackOfficeMember = {
   slug: string
   name: string
   role: string
   photo: string
+  /** One short, truthful role line shown on roster cards. */
+  tagline: string
   bio: ExtendedBio
-  placeholder: boolean
 }
-
-const PLACEHOLDER_PHOTO = "/team/placeholder-back-office.svg"
 
 export const BACK_OFFICE: BackOfficeMember[] = [
   {
-    slug: "back-office-1",
-    name: "Berne Operations Team Member",
-    role: "Dispatch Manager",
-    photo: PLACEHOLDER_PHOTO,
-    placeholder: true,
+    slug: "bogdan",
+    name: "Bogdan",
+    role: "Operational Director",
+    photo: "/team/bogdan.jpg",
+    tagline: "Runs day-to-day operations behind the 18-technician fleet.",
     bio: {
       lede:
-        "Dispatch manager — the person who decides which tech goes where, in what order, and with which parts already loaded on the truck.",
+        "Operational Director — responsible for the machine behind the fleet: dispatch standards, vendor compliance, parts logistics, and the service quality the customer actually feels.",
       background:
-        "Dispatch is the difference between a same-day fix and a return visit. The role covers technician routing, parts pre-load, ETA windows, and the day-of customer communication that keeps a property manager calm when a walk-in goes down at 6 a.m.",
+        "Operations covers everything that doesn't happen on a truck but makes the work on the truck possible: the dispatch board, fleet capacity planning, vendor compliance for property-management clients, and the escalation path when a commercial account needs an answer today.",
       workOn:
-        "Live routing across Miami-Dade, Broward, and Palm Beach. Triage of incoming dispatch tickets, technician load balancing, parts-on-truck verification, and same-day reschedule logistics when a job runs long.",
+        "Day-to-day oversight of the dispatch and operations team, technician capacity planning across Miami-Dade, Broward, and Palm Beach, COI and vendor-portal compliance, and commercial-account escalations.",
+      whyBerne:
+        "Berne treats dispatch and compliance as features, not checkboxes. That makes this role about service quality, not paperwork.",
+      serviceArea:
+        "Oversees operations for the full Berne service area — Miami-Dade, Broward, and Palm Beach.",
+      related: [
+        { href: "/become-a-client", label: "Become a commercial client" },
+        { href: "/credentials", label: "Licenses & credentials" },
+      ],
+    },
+  },
+  {
+    slug: "artem",
+    name: "Artem",
+    role: "Operational Manager & IT",
+    photo: "/team/artem.jpg",
+    tagline: "Keeps dispatch software, routing, and phone systems running.",
+    bio: {
+      lede:
+        "Operational Manager and IT — the systems side of dispatch: the software, routing tools, phones, and ticketing that turn an inbound call into a tech at your door.",
+      background:
+        "Berne dispatch runs on real software — ticketing, live routing, and service history per site — not whiteboards. Someone has to keep that stack running, integrated, and honest. That's this role.",
+      workOn:
+        "Dispatch and ticketing systems, technician routing tools, phone and online-request intake, and the operational reporting that multi-location commercial accounts ask for.",
+      whyBerne:
+        "Dispatch quality is a software problem as much as a people problem. Berne invests in both.",
+      serviceArea:
+        "Systems support for the full dispatch operation across Miami-Dade, Broward, and Palm Beach.",
+      related: [
+        { href: "/request-dispatch", label: "Request commercial dispatch" },
+        { href: "/services", label: "Service catalog" },
+      ],
+    },
+  },
+  {
+    slug: "gabe",
+    name: "Gabe",
+    role: "Operational Manager",
+    photo: "/team/gabe.jpg",
+    tagline: "Coordinates schedules, parts, and technician routes.",
+    bio: {
+      lede:
+        "Operational Manager — schedules, parts, and technician load balancing. The role that decides whether a job gets fixed on the first visit or needs a second one.",
+      background:
+        "A same-day fix depends on logistics that happen before the truck rolls: the right tech, the right route order, and the right parts loaded the night before. This role owns that sequence.",
+      workOn:
+        "Technician schedule coordination, parts pre-load for the next day's dispatch board, same-day reschedule logistics when a job runs long, and route balancing across the fleet.",
+      whyBerne:
+        "Berne stocks real parts-on-truck inventory, which makes first-visit fixes an operations goal you can actually hit.",
+      serviceArea:
+        "Coordinates fleet logistics across Miami-Dade, Broward, and Palm Beach.",
+      related: [
+        { href: "/services", label: "Service catalog" },
+        { href: "/brands", label: "Brands serviced" },
+      ],
+    },
+  },
+  {
+    slug: "keith",
+    name: "Keith",
+    role: "Dispatch Lead Operator",
+    photo: "/team/keith.jpg",
+    tagline: "Leads the dispatch desk — triage, routing, ETA windows.",
+    bio: {
+      lede:
+        "Dispatch Lead Operator — first triage on incoming commercial tickets, and the person who decides which tech goes where, in what order.",
+      background:
+        "Dispatch is the difference between a same-day fix and a return visit. The lead operator role covers ticket triage, technician routing, ETA windows, and the day-of communication that keeps a property manager calm when a walk-in goes down at 6 a.m.",
+      workOn:
+        "Live routing across Miami-Dade, Broward, and Palm Beach. Triage of incoming dispatch tickets, emergency prioritization for refrigeration and food-safety-critical equipment, and ETA communication to the customer.",
       whyBerne:
         "Berne dispatch runs on real software and real notes from real techs — not whiteboards and guesses.",
       serviceArea:
@@ -409,20 +477,43 @@ export const BACK_OFFICE: BackOfficeMember[] = [
     },
   },
   {
-    slug: "back-office-2",
-    name: "Berne Operations Team Member",
-    role: "Customer Service Lead",
-    photo: PLACEHOLDER_PHOTO,
-    placeholder: true,
+    slug: "jayla",
+    name: "Jayla",
+    role: "Dispatch Operator",
+    photo: "/team/jayla.jpg",
+    tagline: "Takes inbound service calls and books dispatch tickets.",
     bio: {
       lede:
-        "Customer service lead — the first voice on the phone when a commercial customer calls Berne, and the person who follows up after the tech leaves.",
+        "Dispatch Operator — one of the voices answering when a commercial customer calls Berne, and the person who turns that call into a scheduled dispatch ticket.",
       background:
-        "This role owns the customer experience from first call through invoice and warranty follow-up. Every escalation lands here first — before it becomes a problem for the owner.",
+        "Every Berne job starts as a phone call or an online request. The dispatch operator role qualifies the call, captures the equipment and site details a technician needs, and books the visit into the live dispatch board.",
       workOn:
-        "Inbound call qualification, customer onboarding for new commercial accounts, post-service follow-up calls, warranty claim coordination, and the kind of small-print communication that prevents disputes before they happen.",
+        "Inbound call qualification, dispatch ticket intake, scheduling against technician routes, and keeping the customer informed from booking through arrival.",
       whyBerne:
-        "Berne backs the work in writing. That makes the customer-service job possible to do honestly.",
+        "A real in-house dispatch desk — not an answering service. The person who books the call works next to the people who route it.",
+      serviceArea:
+        "Phone and online-request coverage during business hours across all Berne service areas.",
+      related: [
+        { href: "/contact", label: "Contact Berne Commercial" },
+        { href: "/request-dispatch", label: "Request dispatch online" },
+      ],
+    },
+  },
+  {
+    slug: "lina",
+    name: "Lina",
+    role: "Dispatch Operator",
+    photo: "/team/lina.jpg",
+    tagline: "Schedules service visits and keeps customers updated.",
+    bio: {
+      lede:
+        "Dispatch Operator — scheduling service visits and keeping commercial customers updated from first call through job completion.",
+      background:
+        "Commercial customers don't just need a fix — they need to know when the tech arrives, what happens if a part is ordered, and who to call with a question. The dispatch operator role owns that communication loop.",
+      workOn:
+        "Service visit scheduling, ETA updates, follow-up coordination when a job needs a parts order or a second visit, and day-of communication with restaurant managers and property managers.",
+      whyBerne:
+        "Berne's dispatch desk reads the technician's notes from the last visit before booking the next one. That context makes the job possible to do well.",
       serviceArea:
         "Phone and email coverage during business hours across all Berne service areas.",
       related: [
@@ -432,71 +523,25 @@ export const BACK_OFFICE: BackOfficeMember[] = [
     },
   },
   {
-    slug: "back-office-3",
-    name: "Berne Operations Team Member",
-    role: "Operations Coordinator",
-    photo: PLACEHOLDER_PHOTO,
-    placeholder: true,
+    slug: "stacey",
+    name: "Stacey",
+    role: "Dispatch Operator",
+    photo: "/team/stacey.jpg",
+    tagline: "Handles dispatch tickets and day-of customer updates.",
     bio: {
       lede:
-        "Operations coordinator — the role that keeps trucks stocked, schedules synced, and technician credentials current.",
+        "Dispatch Operator — handling dispatch tickets and the day-of updates that keep a commercial kitchen or property office in the loop.",
       background:
-        "Operations covers the work that doesn't happen on a truck but makes the work on the truck possible: fleet maintenance, EPA 608 renewal tracking, Florida license renewals, COI updates for property-management clients, and continuous-training enrollment with MSA World.",
+        "A dispatch ticket isn't done when it's booked. Jobs run long, parts get ordered, schedules shift — and the customer needs to hear it from a person, not a portal. This role keeps that loop closed.",
       workOn:
-        "Vendor compliance documentation, COI renewals, EPA and Florida license tracking for the technician roster, MSA World training enrollment, and the back-end credentialing work that the customer never sees.",
+        "Dispatch ticket handling, day-of customer updates, reschedule coordination, and post-service follow-up so completed jobs actually get closed out.",
       whyBerne:
-        "Berne treats compliance as a feature, not a checkbox. That makes this role meaningful rather than performative.",
+        "The dispatch desk and the technicians are one team under one roof. Questions get answered the same hour, not the next day.",
       serviceArea:
-        "Operations support for the full Berne service area.",
+        "Phone and email coverage during business hours across all Berne service areas.",
       related: [
-        { href: "/about", label: "About Berne Commercial" },
-        { href: "/contact", label: "Contact" },
-      ],
-    },
-  },
-  {
-    slug: "back-office-4",
-    name: "Berne Operations Team Member",
-    role: "Parts Procurement Specialist",
-    photo: PLACEHOLDER_PHOTO,
-    placeholder: true,
-    bio: {
-      lede:
-        "Parts procurement — the person who keeps the right Sub-Zero compressor, Hoshizaki control board, and UniMac drive belt on the right truck the night before.",
-      background:
-        "Parts is where commercial service either works or fails. Berne procurement maintains relationships with Marcone, Reliable Parts, and OEM distributors (Sub-Zero, Wolf, Manitowoc, Hoshizaki, UniMac) so that next-day part availability stops being a customer-facing problem.",
-      workOn:
-        "Daily parts pull for the next day's dispatch board, OEM distributor coordination, MSA World parts-program management, urgent overnight sourcing for emergency commercial calls, and the warranty-parts paperwork that keeps OEM coverage in play.",
-      whyBerne:
-        "Berne actually invests in parts-on-truck inventory. Most shops don't, and customers feel the difference.",
-      serviceArea:
-        "Procurement support for the full Berne fleet.",
-      related: [
-        { href: "/brands", label: "Brands serviced" },
-        { href: "/services", label: "Service catalog" },
-      ],
-    },
-  },
-  {
-    slug: "back-office-5",
-    name: "Berne Operations Team Member",
-    role: "Admin / Billing Lead",
-    photo: PLACEHOLDER_PHOTO,
-    placeholder: true,
-    bio: {
-      lede:
-        "Admin and billing — invoicing, vendor payment terms, COI compliance, and the financial back end of a commercial service operation.",
-      background:
-        "Billing for commercial service is a different animal from residential. Net-30, vendor portals, COIs by location, sales-tax-exempt certificates, multi-property invoice consolidation, and dispute resolution all live in this role.",
-      workOn:
-        "Customer invoicing through QuickBooks Online and Service Fusion, Marcone Servicers Association vendor program billing, vendor-portal compliance for property management groups, and reconciliation of warranty-parts credits.",
-      whyBerne:
-        "Berne keeps the books clean. That makes this work possible to do correctly.",
-      serviceArea:
-        "Billing and admin support for the full Berne service area.",
-      related: [
-        { href: "/become-a-client", label: "Become a commercial client" },
         { href: "/contact", label: "Contact Berne Commercial" },
+        { href: "/request-dispatch", label: "Request dispatch online" },
       ],
     },
   },

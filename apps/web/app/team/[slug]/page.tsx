@@ -52,8 +52,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   }
   if (back) {
     return metaFor({
-      title: `${back.role} — Commercial Operations`,
-      description: `${back.role} role at Berne Commercial Repair. Part of the dispatch and operations team behind the technician fleet.`,
+      title: `${back.name} — ${back.role}`,
+      description: `${back.name}, ${back.role} at Berne Commercial Repair. Part of the dispatch and operations team behind the technician fleet.`,
       path: `/team/${slug}`,
     })
   }
@@ -127,7 +127,7 @@ export default async function TeamMemberPage({ params }: Params) {
   const breadcrumbs = breadcrumbSchema([
     { name: "Home", url: site.url },
     { name: "Team", url: `${site.url}/team` },
-    { name: isBackOffice ? role : name, url: `${site.url}/team/${slug}` },
+    { name, url: `${site.url}/team/${slug}` },
   ])
   // Attach an @id to breadcrumb so ProfilePage can reference it cleanly.
   ;(breadcrumbs as { "@id"?: string })["@id"] = `${site.url}/team/${slug}#breadcrumb`
@@ -149,9 +149,7 @@ export default async function TeamMemberPage({ params }: Params) {
                 Team
               </Link>
               <span aria-hidden>/</span>
-              <span className="text-foreground/80">
-                {isBackOffice ? role : name}
-              </span>
+              <span className="text-foreground/80">{name}</span>
             </nav>
 
             <div className="grid gap-10 lg:grid-cols-12">
@@ -173,13 +171,11 @@ export default async function TeamMemberPage({ params }: Params) {
                   {isBackOffice ? "Operations" : "Technician"}
                 </div>
                 <h1 className="mt-2 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
-                  {isBackOffice ? role : name}
+                  {name}
                 </h1>
-                {!isBackOffice ? (
-                  <div className="mt-2 text-base font-medium text-muted-foreground">
-                    {role}
-                  </div>
-                ) : null}
+                <div className="mt-2 text-base font-medium text-muted-foreground">
+                  {role}
+                </div>
 
                 <p className="mt-6 text-base text-muted-foreground sm:text-lg">
                   {bio.lede}
@@ -312,7 +308,7 @@ export default async function TeamMemberPage({ params }: Params) {
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {isBackOffice
-                    ? `Speak to the ${role.toLowerCase()} during business hours.`
+                    ? `${name.split(" ")[0]} and the dispatch desk pick up during business hours.`
                     : `Dispatch ${name.split(" ")[0]} or another Berne tech to your site.`}
                 </p>
                 <a

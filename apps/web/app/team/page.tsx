@@ -142,9 +142,10 @@ export default function TeamIndexPage() {
               The dispatch and operations team
             </h2>
             <p className="mt-4 text-base text-muted-foreground">
-              The technicians on the trucks are the front line. These five roles
-              are the back-end that keeps Berne Commercial dispatchable. Photos
-              and names being finalized — descriptions of each role are live now.
+              The technicians on the trucks are the front line. This is the
+              in-house dispatch desk and operations team that routes them —
+              the people who answer the phone, triage the ticket, and get the
+              right tech with the right parts to your site.
             </p>
           </div>
 
@@ -158,22 +159,25 @@ export default function TeamIndexPage() {
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-muted">
                   <Image
                     src={m.photo}
-                    alt={`${m.role} at Berne Commercial Repair`}
+                    alt={`${m.name}, ${m.role} at Berne Commercial Repair`}
                     fill
                     sizes="(min-width: 1024px) 30vw, 90vw"
-                    className="object-cover"
+                    className="object-cover transition-transform group-hover:scale-[1.02]"
                   />
                 </div>
                 <div className="space-y-1">
                   <div className="text-base font-semibold tracking-tight group-hover:text-primary">
-                    {m.role}
+                    {m.name}
                   </div>
                   <div className="text-xs uppercase tracking-wider text-primary">
-                    Operations team
+                    {m.role}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {m.tagline}
                   </div>
                 </div>
                 <div className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium text-primary">
-                  Read role <ArrowRight className="size-3.5" aria-hidden />
+                  Read bio <ArrowRight className="size-3.5" aria-hidden />
                 </div>
               </Link>
             ))}
