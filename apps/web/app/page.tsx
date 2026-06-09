@@ -13,6 +13,7 @@ import { CredentialsSection } from "@/components/credentials-section"
 import { TrustedBy } from "@/components/trusted-by"
 import { ReviewsSection } from "@/components/reviews-section"
 import { DispatchSection } from "@/components/dispatch-section"
+import { ServiceAreasLinks } from "@/components/service-areas-links"
 import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
 import { faqSchema, founderSchema, personJsonLd } from "@/lib/seo"
@@ -62,6 +63,7 @@ export default function HomePage() {
         <TrustedBy locale="en" />
         <ReviewsSection locale="en" />
         <DispatchSection locale="en" />
+        <ServiceAreasLinks />
         <FAQSection
           faqs={homepageFaqs}
           title="Commercial repair questions"

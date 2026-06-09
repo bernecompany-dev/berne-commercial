@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowRight } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
@@ -13,6 +14,7 @@ import { JsonLd } from "@/components/json-ld"
 import { faqSchema, metaFor, serviceSchema, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import { getService, services } from "@/lib/data/services"
+import { citiesByCounty } from "@/lib/data/cities"
 
 type Params = { params: Promise<{ slug: string }> }
 
@@ -122,6 +124,43 @@ export default async function ServiceDetailPage({ params }: Params) {
           <JsonLd data={faqSchema(s.faqs)} />
         </>
       ) : null}
+
+      {/*
+        Internal linking for discovery — every city combo page for this
+        service, grouped by county. Mirrors the combo-page "nearby cities"
+        pill pattern; gives Google a crawl path from each service hub to all
+        of its /{city}/{service} pages (strongest discovery path on the
+        sister berne-repair site).
+      */}
+      <section className="bg-background py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-base font-semibold tracking-tight">
+            {s.title} by city
+          </h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Same-day {s.shortTitle.toLowerCase()} dispatch across Miami-Dade,
+            Broward and Palm Beach counties.
+          </p>
+          {citiesByCounty().map((county) => (
+            <div key={county.county} className="mt-6">
+              <h3 className="text-sm font-semibold text-muted-foreground">
+                {county.label} County
+              </h3>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {county.items.map((city) => (
+                  <Link
+                    key={city.slug}
+                    href={`/${city.slug}/${s.slug}`}
+                    className="rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground hover:text-foreground"
+                  >
+                    {s.shortTitle} in {city.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <JsonLd
         data={serviceSchema({

@@ -1,4 +1,5 @@
 import Script from "next/script"
+import { isProductionDeployment } from "@/lib/env"
 
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? ""
 
@@ -15,7 +16,8 @@ const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? ""
  *                          next/script with strategy="afterInteractive".
  */
 export function Clarity() {
-  if (!CLARITY_ID) return null
+  // Production only — keep session recordings free of dev/preview noise.
+  if (!CLARITY_ID || !isProductionDeployment) return null
 
   if (CLARITY_ID === "BERNE_PLACEHOLDER") {
     return (

@@ -11,18 +11,35 @@ declare global {
 
 const STORAGE_KEY = "berne-consent"
 
-function applyDefaultDeny() {
+/**
+ * gtag.js loads with strategy="lazyOnload" (see components/google-analytics.tsx),
+ * so window.gtag may not exist yet when the banner hydrates. Pushing the raw
+ * `arguments` object onto window.dataLayer is exactly what the gtag() stub
+ * does — gtag.js drains the queue when it eventually loads, so consent
+ * commands are never lost to the race.
+ */
+function gtagQueue(..._args: unknown[]) {
   if (typeof window === "undefined") return
   if (typeof window.gtag === "function") {
-    window.gtag("consent", "default", {
-      ad_storage: "denied",
-      analytics_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied",
-      functionality_storage: "granted",
-      security_storage: "granted",
-    })
+    window.gtag(..._args)
+    return
   }
+  const w = window as unknown as { dataLayer?: unknown[] }
+  w.dataLayer = w.dataLayer || []
+  // eslint-disable-next-line prefer-rest-params
+  w.dataLayer.push(arguments)
+}
+
+function applyDefaultDeny() {
+  if (typeof window === "undefined") return
+  gtagQueue("consent", "default", {
+    ad_storage: "denied",
+    analytics_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    functionality_storage: "granted",
+    security_storage: "granted",
+  })
   if (typeof window.fbq === "function") {
     window.fbq("consent", "revoke")
   }
@@ -30,14 +47,12 @@ function applyDefaultDeny() {
 
 function applyGranted() {
   if (typeof window === "undefined") return
-  if (typeof window.gtag === "function") {
-    window.gtag("consent", "update", {
-      ad_storage: "granted",
-      analytics_storage: "granted",
-      ad_user_data: "granted",
-      ad_personalization: "granted",
-    })
-  }
+  gtagQueue("consent", "update", {
+    ad_storage: "granted",
+    analytics_storage: "granted",
+    ad_user_data: "granted",
+    ad_personalization: "granted",
+  })
   if (typeof window.fbq === "function") {
     window.fbq("consent", "grant")
   }
