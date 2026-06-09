@@ -19,7 +19,9 @@ export const metadata: Metadata = metaFor({
 })
 
 export default function TeamIndexPage() {
-  const technicians = team
+  // Eugene is the owner — never listed as a staff/technician card. His
+  // founder profile lives at /team/eugene-bernitsky (linked from /about).
+  const technicians = team.filter((t) => t.role !== "Founder & Operator")
   const personSchemas = technicians.map((t) => personJsonLd(t))
 
   const itemList = {

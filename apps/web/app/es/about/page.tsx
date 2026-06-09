@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import Link from "next/link"
 import { Quote } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
 import { TrustedBy } from "@/components/trusted-by"
@@ -200,6 +201,12 @@ export default function AboutPageES() {
               <div className="text-sm text-muted-foreground">
                 Fundador y Operador, {site.name}
               </div>
+              <Link
+                href="/team/eugene-bernitsky"
+                className="mt-2 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
+              >
+                Perfil del fundador →
+              </Link>
             </div>
           </div>
         </div>

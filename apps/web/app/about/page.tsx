@@ -186,6 +186,12 @@ export default function AboutPage() {
               <div className="text-sm text-muted-foreground">
                 {site.founder.title}, {site.name}
               </div>
+              <Link
+                href="/team/eugene-bernitsky"
+                className="mt-2 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
+              >
+                Read the founder profile →
+              </Link>
             </div>
           </div>
         </div>

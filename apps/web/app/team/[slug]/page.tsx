@@ -168,7 +168,11 @@ export default async function TeamMemberPage({ params }: Params) {
 
               <div className="lg:col-span-7">
                 <div className="text-xs font-medium uppercase tracking-wider text-primary">
-                  {isBackOffice ? "Operations" : "Technician"}
+                  {isBackOffice
+                    ? "Operations"
+                    : role === "Founder & Operator"
+                      ? "Founder"
+                      : "Technician"}
                 </div>
                 <h1 className="mt-2 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
                   {name}

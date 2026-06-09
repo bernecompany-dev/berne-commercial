@@ -10,11 +10,14 @@
  *   - apps/web/lib/data/team-bios.ts (deployed bio pages at /team/{slug})
  *
  * Commercial-tone mapping rules:
- *   - Hobart, Vulcan → restaurant/cooking-line techs (Eugene, Maksim, Valerii)
- *   - True, Manitowoc, Hoshizaki → ice + refrigeration techs (Boris, Eugene,
- *     Viktor, Andrei)
- *   - Rational, Garland → cooking equipment (Maksim, Shokhrat, Eugene)
+ *   - Hobart, Vulcan → restaurant/cooking-line techs (Maksim, Valerii, Nikita Sh.)
+ *   - True, Manitowoc, Hoshizaki → ice + refrigeration techs (Boris, Viktor,
+ *     Denis, Andrei)
+ *   - Rational, Garland → cooking equipment (Maksim, Shokhrat, Nikita Sh.)
  *   - Traulsen → refrigeration (Andrei, Viktor, Denis)
+ *
+ * NOTE: Eugene (the owner) must never appear in technician/specialist lists —
+ * founder schema lives in lib/seo.ts, not here.
  */
 
 import { team, type TeamMember } from "./team"
@@ -22,17 +25,17 @@ import { team, type TeamMember } from "./team"
 /** Brand slug → ordered list of tech slugs (priority order, max 3 used). */
 export const BRAND_SPECIALISTS: Record<string, string[]> = {
   // Cooking + dishwashing
-  hobart: ["eugene-bernitsky", "valerii-basov", "refat-bekirov"],
-  vulcan: ["eugene", "maksim-shiryagin", "shokhrat-agabekov"],
-  garland: ["eugene", "shokhrat-agabekov", "valerii-basov"],
+  hobart: ["valerii-basov", "refat-bekirov", "maksim-shiryagin"],
+  vulcan: ["nikita-shirshov", "maksim-shiryagin", "shokhrat-agabekov"],
+  garland: ["nikita-shirshov", "shokhrat-agabekov", "valerii-basov"],
   rational: ["maksim-shiryagin", "shokhrat-agabekov", "andrei-lavrov"],
 
   // Refrigeration
-  true: ["eugene-bernitsky", "denis-novitskii", "andrei-lavrov"],
+  true: ["denis-novitskii", "andrei-lavrov", "viktor-kamenschikov"],
   traulsen: ["andrei-lavrov", "viktor-kamenschikov", "denis-novitskii"],
 
   // Ice machines
-  manitowoc: ["boris", "eugene-bernitsky", "viktor-kamenschikov"],
+  manitowoc: ["boris", "nikita-maslakov", "viktor-kamenschikov"],
   hoshizaki: ["boris", "nikita-maslakov", "viktor-kamenschikov"],
 }
 

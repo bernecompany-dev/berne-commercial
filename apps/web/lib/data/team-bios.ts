@@ -186,24 +186,6 @@ export const TECH_BIOS: Record<string, ExtendedBio> = {
     ],
   },
 
-  eugene: {
-    lede:
-      "Restaurant equipment technician. Fryers, panini presses, warming systems, bar equipment — the cooking and beverage line, not the cooling side.",
-    background:
-      "Came to commercial service from a mechanical background. The cooking line is where I feel most useful: gas, electric, hot-side controls, ignition, and the kind of operator-error issues that walk away the moment you show up and listen to the kitchen.",
-    workOn:
-      "Pitco and Frymaster fryers, Vulcan and Wolf ranges, Star and Hatco panini presses, hot food wells, bar blenders, and frozen-drink dispensers. Gas valve, thermopile, and ignition diagnostics — that's where most kitchen calls actually live.",
-    whyBerne:
-      "The shop has the right backup parts on a truck near me by 7 a.m. Half the value of this job is having what you need on hand.",
-    serviceArea:
-      "Restaurant and bar calls across Miami-Dade and Broward. English and Russian.",
-    related: [
-      { href: "/services/fryer-repair", label: "Commercial fryer repair" },
-      { href: "/services/commercial-range-repair", label: "Commercial range repair" },
-      { href: "/industries/restaurants", label: "Restaurant service program" },
-    ],
-  },
-
   "evgenii-knyazev": {
     lede:
       "Refrigeration technician. Refrigerant systems, walk-ins, reach-ins. Strong leak-detection workflow.",

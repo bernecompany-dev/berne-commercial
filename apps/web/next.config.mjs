@@ -17,6 +17,13 @@ const nextConfig = {
         destination: "/team",
         permanent: true,
       },
+      // Eugene is the owner, not a staff technician — his roster card was
+      // removed (June 2026). Founder profile remains at /team/eugene-bernitsky.
+      {
+        source: "/team/eugene",
+        destination: "/team",
+        permanent: true,
+      },
     ]
   },
   // S14: site-wide Permissions-Policy. Disable browser features we never
