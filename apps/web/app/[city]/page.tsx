@@ -8,6 +8,7 @@ import { AnchorButton, LinkButton } from "@/components/link-button"
 import { Card } from "@workspace/ui/components/card"
 import { Badge } from "@workspace/ui/components/badge"
 import { DispatchForm } from "@/components/dispatch-form"
+import { FAQSection } from "@/components/faq-section"
 import { CityMap } from "@/components/city-map"
 import { TrustedBy } from "@/components/trusted-by"
 import { JsonLd } from "@/components/json-ld"
@@ -17,6 +18,7 @@ import { cities, getCity, nearbyCities, COUNTIES } from "@/lib/data/cities"
 import { services, primaryServices } from "@/lib/data/services"
 import { cityIntro, citySecondaryParagraph } from "@/lib/copy"
 import { getCityProfile, cityProfileFallback } from "@/lib/data/city-profiles"
+import { getCityEnrichment } from "@/lib/data/city-content"
 
 type Params = { params: Promise<{ city: string }> }
 
@@ -66,7 +68,8 @@ export default async function CityPage({ params }: Params) {
   const c = getCity(slug)
   if (!c) notFound()
   const nearby = nearbyCities(c.slug, 8)
-  const faqs = faqsFor(c.name)
+  const enrichment = getCityEnrichment(c.slug)
+  const faqs = [...faqsFor(c.name), ...(enrichment?.faqs ?? [])]
 
   return (
     <PageShell>
@@ -124,6 +127,77 @@ export default async function CityPage({ params }: Params) {
         </div>
       </section>
 
+      {/* Deep local build-out for proven-demand cities (wave-2 2026-06-10):
+          named corridors, local failure patterns, contextual combo links.
+          Cities without an enrichment entry keep the lightweight template. */}
+      {enrichment ? (
+        <section className="border-b border-border/60 bg-background py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="max-w-4xl text-2xl font-semibold tracking-tight">
+              {enrichment.heading}
+            </h2>
+            <div className="mt-6 max-w-4xl space-y-4 text-base leading-relaxed text-muted-foreground">
+              {enrichment.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+
+            <h3 className="mt-12 text-lg font-semibold tracking-tight">
+              Where we work in {c.name}
+            </h3>
+            <ul className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {enrichment.districts.map((d) => (
+                <li
+                  key={d.name}
+                  className="rounded-xl border border-border bg-card p-5"
+                >
+                  <div className="flex items-start gap-2">
+                    <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
+                    <div>
+                      <div className="text-sm font-semibold">{d.name}</div>
+                      <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                        {d.detail}
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="mt-12 text-lg font-semibold tracking-tight">
+              What fails here — local patterns from our tickets
+            </h3>
+            <ul className="mt-5 grid gap-4 md:grid-cols-3">
+              {enrichment.patterns.map((p) => (
+                <li
+                  key={p.title}
+                  className="rounded-xl border border-border bg-card p-5"
+                >
+                  <div className="text-sm font-semibold">{p.title}</div>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    {p.detail}
+                  </p>
+                </li>
+              ))}
+            </ul>
+
+            {enrichment.links?.length ? (
+              <div className="mt-8 flex flex-wrap gap-2">
+                {enrichment.links.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/10"
+                  >
+                    {l.label} →
+                  </Link>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        </section>
+      ) : null}
+
       <section className="border-b border-border/60 bg-accent/30 py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold tracking-tight">
@@ -134,6 +208,16 @@ export default async function CityPage({ params }: Params) {
           </div>
         </div>
       </section>
+
+      {/* Visible FAQ for enriched cities — the FAQ JSON-LD below should not
+          reference content the page doesn't render. */}
+      {enrichment ? (
+        <FAQSection
+          faqs={faqs}
+          title={`${c.name} commercial repair FAQ`}
+          description="From dispatch and the Palm Beach County route techs."
+        />
+      ) : null}
 
       <CityMap city={c.name} />
 
