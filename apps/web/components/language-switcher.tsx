@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Languages } from "lucide-react"
 import { altLocale, type Locale } from "@/lib/i18n/config"
+import { BRAND_SERVICE_SLUGS } from "@/lib/data/brand-service-slugs"
 
 function detectLocale(pathname: string): Locale {
   return pathname === "/es" || pathname.startsWith("/es/") ? "es" : "en"
@@ -18,6 +19,11 @@ const EN_ONLY_PREFIXES = [
   "/compare",
   "/team",
   "/services/medical-lab-refrigeration-repair",
+  "/fort-lauderdale/medical-lab-refrigeration-repair",
+  // Static brand-service routes (manitowoc, hoshizaki, …) — EN-only by
+  // design. Slug list is type-synced with lib/data/brand-services.ts, so
+  // future brand pages are covered automatically (W3-P1.1).
+  ...BRAND_SERVICE_SLUGS.map((slug) => `/services/${slug}`),
 ]
 
 function toAlt(pathname: string, target: Locale): string {

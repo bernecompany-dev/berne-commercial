@@ -1,4 +1,5 @@
 import type { SymptomRow } from "./services"
+import type { BrandServiceSlug } from "./brand-service-slugs"
 
 /**
  * Brand-specific service pages — /services/<brand>-<equipment>-repair.
@@ -34,8 +35,9 @@ export type BrandServiceCode = {
 }
 
 export type BrandService = {
-  /** /services/<slug> */
-  slug: string
+  /** /services/<slug> — must be listed in brand-service-slugs.ts (keeps the
+   *  language switcher's EN-only list in sync; see that module's docblock) */
+  slug: BrandServiceSlug
   /** Brand name as written in copy ("Manitowoc") */
   brand: string
   /** /brands/<slug> on this site, if a brand profile exists */

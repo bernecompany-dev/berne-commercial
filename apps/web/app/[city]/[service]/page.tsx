@@ -54,6 +54,21 @@ const COMBO_TITLE_OVERRIDES: Record<string, string> = {
     "Ice Maker & Ice Machine Repair in Boynton Beach — Same-Day",
 }
 
+// Visible-H1 counterpart of the title override — the hero (and Service
+// schema name) must carry the same "ice maker" synonym the <title> targets
+// (W3-P2.2).
+const COMBO_H1_OVERRIDES: Record<string, string> = {
+  "boynton-beach/ice-machine-repair":
+    "Ice Maker & Ice Machine Repair in Boynton Beach, FL",
+}
+
+// Per-combo descriptions where the compact template drops a synonym the
+// title/H1 lead with ("fountain" — W3-P2.3). 150ch.
+const COMBO_DESC_OVERRIDES: Record<string, string> = {
+  "hialeah-gardens/soda-machine-repair":
+    "Fountain & soda machine repair across the NW 122nd Street area in Hialeah Gardens — Pepsi & Coke dispensers, carbonators, BIB lines. $89 service call.",
+}
+
 // Layout appends " · Berne" (8 chars) — keep the base <=52 so the rendered
 // <title> stays inside Google's ~60-char SERP cutoff.
 const TITLE_BUDGET = 52
@@ -95,7 +110,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const p = getCityProfile(c.slug) ?? cityProfileFallback(c.name, c.county)
   return metaFor({
     title: COMBO_TITLE_OVERRIDES[`${c.slug}/${s.slug}`] ?? comboTitle(s, c.name),
-    description: comboDescription(s, p, c.name),
+    description:
+      COMBO_DESC_OVERRIDES[`${c.slug}/${s.slug}`] ??
+      comboDescription(s, p, c.name),
     path: `/${c.slug}/${s.slug}`,
   })
 }
@@ -124,6 +141,8 @@ export default async function CityServicePage({ params }: Params) {
   const nearby = nearbyCities(c.slug, 8)
   const cFaqs = cityFaqs(c.name, s.shortTitle, site.serviceCall)
   const combinedFaqs = [...cFaqs, ...s.faqs]
+  const h1 =
+    COMBO_H1_OVERRIDES[`${c.slug}/${s.slug}`] ?? `${s.title} in ${c.name}, FL`
 
   return (
     <PageShell>
@@ -140,7 +159,7 @@ export default async function CityServicePage({ params }: Params) {
           nothing from the TrustStrip above. */}
       <PageHero
         eyebrow={`${COUNTIES[c.county]} County`}
-        title={`${s.title} in ${c.name}, FL`}
+        title={h1}
         description={cityServiceIntro(c, s)}
       >
         <div className="flex flex-wrap gap-2">
@@ -260,7 +279,7 @@ export default async function CityServicePage({ params }: Params) {
 
       <JsonLd
         data={serviceSchema({
-          name: `${s.title} in ${c.name}, FL`,
+          name: h1,
           description: s.summary,
           url: `${site.url}/${c.slug}/${s.slug}`,
           city: c.name,

@@ -20,8 +20,10 @@ import { site } from "@/lib/site"
 
 export const metadata: Metadata = {
   title: "Reparación de Equipo Comercial en el Sur de Florida",
+  // 152ch — Google trunca ~160 (W3-P2.1); mantiene refrigeración comercial,
+  // Miami y la llamada de servicio $89.
   description:
-    "Despacho rápido para restaurantes, plantas de producción, cocinas comerciales y clientes corporativos. Refrigeración, máquinas de hielo, equipo de restaurante, lavandería. Llamada de servicio: $89.",
+    "Reparación de equipo comercial en Miami y el sur de Florida — refrigeración comercial, máquinas de hielo, cocina y lavandería. Llamada de servicio: $89.",
   alternates: {
     canonical: "/es",
     languages: {
