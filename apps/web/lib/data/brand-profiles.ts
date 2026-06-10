@@ -1771,7 +1771,7 @@ export const brandProfiles: BrandProfile[] = [
     hq: "Fort Worth, Texas, USA",
     metaTitle: "Traulsen Refrigeration Repair in South Florida",
     metaDescription:
-      "Traulsen reach-in, blast chiller and dealer-network refrigeration repair across Miami-Dade, Broward and Palm Beach. EPA-608, OEM parts, $89 service call.",
+      "Traulsen reach-in & blast chiller repair across South Florida — common failures & error codes, OEM parts, EPA-608 techs. $89 service call.",
     teaser:
       "Reach-in refrigerators and freezers, blast chillers and dealer-network premium platforms — fine-dining, hospitals, hotels, R-series.",
     categories: ["refrigeration", "blast-chill"],

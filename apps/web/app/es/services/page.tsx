@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     locale: "es_US",
     url: `${site.url}/es/services`,
     siteName: site.name,
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 }
 

@@ -35,15 +35,11 @@ export function metaFor({
     description,
     alternates: {
       canonical: url,
-      ...(esAlternate
-        ? {
-            languages: {
-              en: enPath,
-              es: esPath,
-              "x-default": enPath,
-            },
-          }
-        : {}),
+      // EN-only pages still emit a self-referencing en + x-default pair —
+      // a valid single-member hreflang cluster instead of an es 404.
+      languages: esAlternate
+        ? { en: enPath, es: esPath, "x-default": enPath }
+        : { en: enPath, "x-default": enPath },
     },
     openGraph: {
       title,

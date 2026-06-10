@@ -70,7 +70,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
               </li>
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 size-4 shrink-0" />
-                <span>{site.address.locality}, {site.address.region}</span>
+                <span>{site.officeAddress}</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <ShieldCheck className="mt-0.5 size-4 shrink-0" />

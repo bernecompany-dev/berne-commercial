@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { Card } from "@workspace/ui/components/card"
 import { industries } from "@/lib/data/industries"
+import { localizedIndustry } from "@/lib/data/industries-es"
 import { INDUSTRY_PROFILE_SLUGS } from "@/lib/data/industry-profiles"
 import { SectionHeading } from "./section-heading"
 import { t } from "@/lib/i18n/dict"
@@ -23,9 +24,13 @@ const PROFILE_SLUGS = new Set(INDUSTRY_PROFILE_SLUGS)
 export function IndustriesSection({ locale = "en" }: { locale?: Locale }) {
   const tr = t(locale)
   const p = locale === "es" ? "/es" : ""
-  const items = featured
-    .map((s) => industries.find((i) => i.slug === s))
-    .filter(Boolean) as typeof industries
+  // Localize card copy — the ES home previously rendered the English
+  // name/blurb straight from industries.ts (audit 2026-06-10 P1.4).
+  const items = (
+    featured
+      .map((s) => industries.find((i) => i.slug === s))
+      .filter(Boolean) as typeof industries
+  ).map((i) => localizedIndustry(i, locale))
 
   return (
     <section className="border-b border-border/60 bg-accent/30 py-20 sm:py-24">

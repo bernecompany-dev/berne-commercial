@@ -16,6 +16,8 @@ export const metadata: Metadata = metaFor({
   description:
     "Berne Commercial Repair is a fleet of 18 W-2 technicians plus the dispatch and operations team behind them. EPA 608 certified, MSA World members, continuous OEM training.",
   path: "/team",
+  // EN-only section — /es/team does not exist.
+  esAlternate: false,
 })
 
 export default function TeamIndexPage() {

@@ -16,9 +16,18 @@ import { JsonLd } from "@/components/json-ld"
 import { metaFor, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import { cities, getCity, nearbyCities, COUNTIES } from "@/lib/data/cities"
-import { getService, services, primaryServices } from "@/lib/data/services"
+import {
+  getService,
+  services,
+  primaryServices,
+  type Service,
+} from "@/lib/data/services"
 import { cityServiceIntro, cityServiceContext } from "@/lib/copy"
-import { getCityProfile, cityProfileFallback } from "@/lib/data/city-profiles"
+import {
+  getCityProfile,
+  cityProfileFallback,
+  type CityProfile,
+} from "@/lib/data/city-profiles"
 
 type Params = { params: Promise<{ city: string; service: string }> }
 
@@ -35,6 +44,43 @@ export function generateStaticParams() {
 
 export const dynamicParams = true
 
+/**
+ * Unique-data layer: per-combo SERP titles where GSC shows a query synonym
+ * the sitewide template can't carry without blowing the 60-char budget
+ * ("ice maker repair boynton beach", 26 imp at pos 41 — audit 2026-06-10).
+ */
+const COMBO_TITLE_OVERRIDES: Record<string, string> = {
+  "boynton-beach/ice-machine-repair":
+    "Ice Maker & Ice Machine Repair in Boynton Beach — Same-Day",
+}
+
+// Layout appends " · Berne" (8 chars) — keep the base <=52 so the rendered
+// <title> stays inside Google's ~60-char SERP cutoff.
+const TITLE_BUDGET = 52
+
+function comboTitle(s: Service, cityName: string): string {
+  if (s.comboTitle) return s.comboTitle.replace("{city}", cityName)
+  // Degrade gracefully when the full template overflows the budget:
+  // drop ", FL" first, then fall back to the shortTitle form.
+  const shortest = `${s.shortTitle} Repair in ${cityName}`
+  const candidates = [
+    `${s.title} in ${cityName}, FL`,
+    `${s.title} in ${cityName}`,
+    shortest,
+  ]
+  return candidates.find((t) => t.length <= TITLE_BUDGET) ?? shortest
+}
+
+// Meta-description budget — Google truncates around 155-160 chars; the old
+// template ran up to 224 on long corridors (audit 2026-06-10).
+function comboDescription(s: Service, p: CityProfile, cityName: string): string {
+  const full = `${s.shortTitle} dispatch across ${p.corridor} in ${cityName}. ${s.summary} Service call: ${site.serviceCall}.`
+  if (full.length <= 158) return full
+  const compact = `${s.shortTitle} dispatch across ${p.corridor} in ${cityName} — same-day, licensed & insured. ${site.serviceCall} call.`
+  if (compact.length <= 158) return compact
+  return `${compact.slice(0, 157).replace(/\s+\S*$/, "")}…`
+}
+
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { city: citySlug, service: serviceSlug } = await params
   const c = getCity(citySlug)
@@ -46,11 +92,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       path: `/${citySlug}/${serviceSlug}`,
       noindex: true,
     })
-  const title = `${s.title} in ${c.name}, FL`
   const p = getCityProfile(c.slug) ?? cityProfileFallback(c.name, c.county)
   return metaFor({
-    title,
-    description: `${s.shortTitle} dispatch across ${p.corridor} in ${c.name}. ${s.summary} Service call: ${site.serviceCall}.`,
+    title: COMBO_TITLE_OVERRIDES[`${c.slug}/${s.slug}`] ?? comboTitle(s, c.name),
+    description: comboDescription(s, p, c.name),
     path: `/${c.slug}/${s.slug}`,
   })
 }

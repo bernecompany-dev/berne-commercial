@@ -98,6 +98,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: a.title,
     description: a.description,
     path: `/blog/${a.slug}`,
+    // Individual posts are EN-only — only the /es/blog index exists.
+    esAlternate: false,
   })
 }
 

@@ -6,7 +6,10 @@ export const healthcareMedicalRefrigerationVaccine: Article = {
     "Healthcare Medical Refrigeration — Vaccine Fridge Compliance + Audit Prep",
   description:
     "A medical refrigerator holding vaccines needs 36 to 46°F continuous, validated probes, calibrated monitoring, and a documented temperature log. Failed equipment plus failed documentation equals failed CDC VFC audit.",
-  publishedAt: "2026-09-28T09:00:00Z",
+  // Pulled forward from 2026-09-28: the live medical service page already
+  // links here (404 until publish) and the healthcare GSC cluster (~50 imp)
+  // is hot now — audit 2026-06-10 P1.3.
+  publishedAt: "2026-06-15T09:00:00Z",
   readingMinutes: 10,
   category: "Compliance",
   tags: [

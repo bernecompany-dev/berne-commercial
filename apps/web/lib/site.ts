@@ -27,6 +27,9 @@ export const site = {
     postalCode: "33009",
     country: "US",
   },
+  // Visible footer NAP (GEO) — the Boca Raton office. Schema keeps the
+  // Hallandale Beach HQ above; don't swap one for the other.
+  officeAddress: "131 S Federal Hwy #533, Boca Raton, FL",
   // Customer-facing copy. Schema emits canonical Mon-Sun 07:00-21:00 hours.
   hours: "Mon-Sun, 7:00 AM - 9:00 PM",
   licenses: "Licensed & Insured",

@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { Card } from "@workspace/ui/components/card"
 import { services } from "@/lib/data/services"
+import { localizedService } from "@/lib/data/services-es"
 import { SectionHeading } from "./section-heading"
 import { t } from "@/lib/i18n/dict"
 import type { Locale } from "@/lib/i18n/config"
@@ -24,9 +25,13 @@ const featured = [
 export function ServicesGrid({ locale = "en" }: { locale?: Locale }) {
   const tr = t(locale)
   const p = locale === "es" ? "/es" : ""
-  const items = featured
-    .map((slug) => services.find((s) => s.slug === slug))
-    .filter(Boolean) as typeof services
+  // Localize card copy — the ES home previously rendered the English
+  // shortTitle/summary straight from services.ts (audit 2026-06-10 P1.4).
+  const items = (
+    featured
+      .map((slug) => services.find((s) => s.slug === slug))
+      .filter(Boolean) as typeof services
+  ).map((s) => localizedService(s, locale))
 
   return (
     <section className="border-b border-border/60 bg-background py-20 sm:py-24">

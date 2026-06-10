@@ -14,7 +14,11 @@ function detectLocale(pathname: string): Locale {
  * /es produced sitewide 404 links (/es/compare/*, /es/team/*, /es/blog/<slug>).
  * Keep in sync with the app/es/ route tree.
  */
-const EN_ONLY_PREFIXES = ["/compare", "/team"]
+const EN_ONLY_PREFIXES = [
+  "/compare",
+  "/team",
+  "/services/medical-lab-refrigeration-repair",
+]
 
 function toAlt(pathname: string, target: Locale): string {
   if (target === "es") {

@@ -15,6 +15,8 @@ export const metadata: Metadata = metaFor({
   description:
     "Rational vs Unox, Frymaster vs Pitco, True vs Turbo Air, Hoshizaki vs Scotsman, walk-in repair-or-replace — comparisons written by South Florida service techs.",
   path: "/compare",
+  // EN-only section — /es/compare does not exist.
+  esAlternate: false,
 })
 
 export default function CompareIndexPage() {

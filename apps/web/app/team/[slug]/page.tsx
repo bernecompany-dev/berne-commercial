@@ -48,6 +48,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       title: `${tech.name} — ${tech.role}`,
       description: `${tech.name}, ${tech.role} at Berne Commercial Repair. ${tech.yearsExperience} years experience. Specialties: ${tech.specialties.join(", ")}. Service across South Florida.`,
       path: `/team/${slug}`,
+      // EN-only section — /es/team/* does not exist.
+      esAlternate: false,
     })
   }
   if (back) {
@@ -55,6 +57,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       title: `${back.name} — ${back.role}`,
       description: `${back.name}, ${back.role} at Berne Commercial Repair. Part of the dispatch and operations team behind the technician fleet.`,
       path: `/team/${slug}`,
+      esAlternate: false,
     })
   }
   return metaFor({

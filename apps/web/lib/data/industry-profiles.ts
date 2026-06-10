@@ -74,7 +74,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     slug: "restaurants",
     industry: "restaurants",
     industryTitle: "Restaurant",
-    metaTitle: "Restaurant Equipment Repair Miami",
+    metaTitle: "Restaurant Equipment Repair Miami — Same-Day, $89 Call",
     metaDescription:
       "Same-day restaurant equipment repair across South Florida — Hobart, Vulcan, Hoshizaki, Manitowoc. Insured, EPA-certified, 18 techs, 4.79★ on 871 reviews.",
     h1: "Restaurant Equipment Repair in South Florida",
@@ -543,7 +543,9 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     slug: "healthcare",
     industry: "healthcare facilities",
     industryTitle: "Healthcare",
-    metaTitle: "Medical & Healthcare Equipment Repair Miami",
+    // "hospital refrigeration repair" cluster — vertical page; the repair
+    // offer lives at /services/medical-lab-refrigeration-repair.
+    metaTitle: "Hospital & Medical Equipment Repair — South Florida 24/7",
     metaDescription:
       "Vaccine fridge, lab refrigeration, hospital kitchen and ice machine repair across South Florida. Helmer, Thermo Scientific. NDA & HIPAA-aware crews.",
     h1: "Healthcare Equipment Repair in South Florida",

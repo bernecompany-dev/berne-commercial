@@ -49,6 +49,8 @@ export async function generateMetadata({
     title: c.metaTitle,
     description: c.metaDescription,
     path: `/compare/${c.slug}`,
+    // EN-only section — /es/compare/* does not exist.
+    esAlternate: false,
   })
 }
 

@@ -67,6 +67,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       locale: "es_US",
       url: `${site.url}/es/${c.slug}/${s.slug}`,
       siteName: site.name,
+      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
     },
   }
 }

@@ -16,7 +16,7 @@ import { JsonLd } from "@/components/json-ld"
 export const metadata: Metadata = metaFor({
   title: "About — Berne Commercial Repair · South Florida Since 2015",
   description:
-    "Founded 2015 by Eugene Bernitsky. 18 W-2 technicians, 29,000+ services, 4.79/871 reviews. Commercial dispatch for restaurants, hotels, supermarkets, property management across South Florida and the Gulf Coast — COI-ready, NDA-friendly, downtime-priced.",
+    "Founded 2015 by Eugene Bernitsky. 18 W-2 technicians, 29,000+ services, 4.79★ from 871 reviews. COI-ready commercial dispatch across South Florida.",
   path: "/about",
 })
 

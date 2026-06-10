@@ -42,6 +42,13 @@ export type Service = {
   // char SERP budget) and metaDescription <=155 chars.
   metaTitle?: string
   metaDescription?: string
+  /**
+   * SERP-tuned <title> template for the /{city}/{slug} combo pages —
+   * `{city}` is substituted with the city name. Keep the substituted base
+   * <=52 chars for typical city names (layout appends " · Berne", 8 chars).
+   * When unset, combos fall back to `${title} in ${city}, FL`.
+   */
+  comboTitle?: string
 }
 
 export const SERVICE_CATEGORIES: Record<ServiceCategory, string> = {
@@ -616,6 +623,11 @@ export const services: Service[] = [
     shortTitle: "Commercial Hoods",
     category: "ventilation",
     primary: true,
+    // CTR pass 2026-06-10: "kitchen hood repair commercial near me" sits at
+    // pos 5.7 — surface the exhaust-fan synonym and the $89/makeup-air hooks.
+    metaTitle: "Commercial Hood & Exhaust Fan Repair — 24/7 South FL",
+    metaDescription:
+      "Exhaust fan motors, hood control panels and makeup-air units fixed same-day across South Florida kitchens. Belts, bearings, dampers. $89 service call.",
     summary:
       "Vent hood, range hood and commercial exhaust system service — fan motors, controls, makeup-air units.",
     longDescription:
@@ -767,13 +779,20 @@ export const services: Service[] = [
   },
   {
     slug: "soda-machine-repair",
-    title: "Soda Machine & Beverage Dispenser Repair",
+    title: "Fountain & Soda Machine Repair",
     shortTitle: "Soda Machines",
     category: "beverage-frozen",
+    // GSC 2026-06-10: "pepsi fountain machine service" (14 imp) + "pepsi
+    // fountain service" (13 imp) landed on combos whose titles never said
+    // "fountain" — the hub and combo titles now lead with the synonym.
+    metaTitle: "Fountain & Soda Machine Repair — South Florida 24/7",
+    metaDescription:
+      "Pepsi & Coke fountain machines, post-mix soda & beverage dispensers fixed same-day across South Florida. Carbonators, BIB lines, valves. $89 service call.",
+    comboTitle: "Fountain & Soda Machine Repair in {city} — $89",
     summary:
-      "Post-mix soda, juice and coffee dispenser service — carbonators, valves, refrigeration.",
+      "Fountain and post-mix soda, juice and coffee dispenser service — carbonators, valves, refrigeration.",
     longDescription:
-      "We service post-mix soda machines, juice dispensers, iced tea brewers and combination beverage stations. Common service includes carbonator rebuilds, BIB (bag-in-box) line work, dispense valve service, ice/water bath refrigeration, and electronic control.",
+      "We service fountain machines and post-mix soda systems — Pepsi and Coke fountain dispensers, juice dispensers, iced tea brewers and combination beverage stations. Common service includes carbonator rebuilds, BIB (bag-in-box) line work, dispense valve service, ice/water bath refrigeration, and electronic control.",
     bullets: [
       "Carbonator pump and motor service",
       "Dispense valve replacement",
