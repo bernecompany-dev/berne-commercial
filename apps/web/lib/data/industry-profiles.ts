@@ -40,6 +40,12 @@ export type IndustryProfile = {
   /** Service slugs to cross-link in a "Related services" strip. */
   relatedServices: string[]
   /**
+   * Optional highlighted page rendered first in the related-services strip —
+   * for dedicated pages that are not services.ts entries (e.g. the static
+   * medical & lab refrigeration page linked from healthcare).
+   */
+  featuredPage?: { href: string; title: string; description: string }
+  /**
    * Optional contextual cross-link to a sister site (residential / premium-residential).
    * Rendered as a single sentence after the "Why same-day" section so the link
    * appears in editorial context rather than as boilerplate. Allows inline markdown
@@ -633,6 +639,12 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
         a: "Yes. Ice machine sanitization on Hoshizaki, Manitowoc, Scotsman, and Follett medical-grade units follows the manufacturer's sanitization cycle plus a discharge water test if the facility's infection control program requires one. We document the cycle and the chemical batch on the service ticket.",
       },
 ],
+    featuredPage: {
+      href: "/services/medical-lab-refrigeration-repair",
+      title: "Medical & Lab Refrigeration Service",
+      description:
+        "Vaccine fridges, blood bank & reagent storage, lab and ULT freezers, pharmacy ice — the dedicated service page with response SLAs, typical repair costs and audit-documentation details.",
+    },
     relatedServices: [
       "commercial-refrigeration-repair",
       "walk-in-cooler-repair",

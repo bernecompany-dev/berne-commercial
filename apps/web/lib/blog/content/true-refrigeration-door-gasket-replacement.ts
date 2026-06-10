@@ -76,6 +76,8 @@ export const trueRefrigerationGasket: Article = {
     },
   ],
   internalLinks: [
+    { label: "True vs Turbo Air comparison", href: "/compare/true-vs-turbo-air" },
+    { label: "True vs Traulsen comparison", href: "/compare/true-vs-traulsen-refrigeration" },
     {
       label: "Reach-in cooler repair",
       href: "/services/reach-in-cooler-repair",

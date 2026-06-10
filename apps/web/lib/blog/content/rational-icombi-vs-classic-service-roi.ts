@@ -87,6 +87,7 @@ export const rationalIcombiVsClassicRoi: Article = {
     },
   ],
   internalLinks: [
+    { label: "Rational vs other combi ovens", href: "/compare/rational-vs-combi" },
     { label: "Commercial oven repair", href: "/services/commercial-oven-repair" },
     { label: "Rational repair", href: "/brands/rational" },
     { label: "Restaurants", href: "/industries/restaurants" },

@@ -77,6 +77,7 @@ export const frymasterFilterPumpLockout: Article = {
     },
   ],
   internalLinks: [
+    { label: "Frymaster vs Pitco — full comparison", href: "/compare/frymaster-vs-pitco-fryers" },
     { label: "Fryer repair", href: "/services/fryer-repair" },
     { label: "Commercial range repair", href: "/services/commercial-range-repair" },
     { label: "Commercial oven repair", href: "/services/commercial-oven-repair" },

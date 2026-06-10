@@ -83,6 +83,7 @@ export const walkInCoolerTempDriftCallOrWait: Article = {
     },
   ],
   internalLinks: [
+    { label: "Walk-in cooler: repair or replace guide", href: "/compare/walk-in-cooler-repair-or-replace" },
     { label: "Walk-in cooler repair", href: "/services/walk-in-cooler-repair" },
     { label: "Restaurants", href: "/industries/restaurants" },
     { label: "Hotels", href: "/industries/hotels" },

@@ -8,12 +8,19 @@ export function metaFor({
   path = "/",
   noindex = false,
   locale = "en",
+  esAlternate = true,
 }: {
   title: string
   description: string
   path?: string
   noindex?: boolean
   locale?: "en" | "es"
+  /**
+   * Set false for EN-only pages with no /es counterpart (e.g. the static
+   * /services/medical-lab-refrigeration-repair route) — otherwise the
+   * emitted hreflang es URL would 404.
+   */
+  esAlternate?: boolean
 }): Metadata {
   const url = `${site.url}${path}`
   // For canonical/alternates: if path starts with /es, EN equivalent strips it.
@@ -28,11 +35,15 @@ export function metaFor({
     description,
     alternates: {
       canonical: url,
-      languages: {
-        en: enPath,
-        es: esPath,
-        "x-default": enPath,
-      },
+      ...(esAlternate
+        ? {
+            languages: {
+              en: enPath,
+              es: esPath,
+              "x-default": enPath,
+            },
+          }
+        : {}),
     },
     openGraph: {
       title,

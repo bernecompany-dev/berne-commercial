@@ -98,6 +98,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" as const,
     priority: 0.9,
   }))
+  // Static EN-only service page (not in services.ts by design — a services.ts
+  // entry would spawn 140 phantom /{city}/ combo routes; see page comment).
+  serviceDetails.push({
+    url: `${base}/services/medical-lab-refrigeration-repair`,
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  })
 
   const esServiceDetails = services.map((s) => ({
     url: `${base}/es/services/${s.slug}`,

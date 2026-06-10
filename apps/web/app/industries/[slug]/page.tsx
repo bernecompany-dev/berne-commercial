@@ -337,13 +337,26 @@ export default async function IndustryDetailPage({ params }: Params) {
       ) : null}
 
       {/* Related services */}
-      {related.length ? (
+      {related.length || profile.featuredPage ? (
         <section className="border-b border-border/60 bg-accent/30 py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-semibold tracking-tight">
               Related services
             </h2>
             <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {profile.featuredPage ? (
+                <Link
+                  href={profile.featuredPage.href}
+                  className="group rounded-lg border border-primary/40 bg-primary/5 p-4 transition hover:border-primary sm:col-span-2 lg:col-span-3"
+                >
+                  <div className="text-sm font-semibold text-primary">
+                    {profile.featuredPage.title} →
+                  </div>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    {profile.featuredPage.description}
+                  </p>
+                </Link>
+              ) : null}
               {related.map((s) => (
                 <Link
                   key={s.slug}

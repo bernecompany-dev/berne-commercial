@@ -84,6 +84,7 @@ export const iceMachineNotMakingIce: Article = {
     },
   ],
   internalLinks: [
+    { label: "Manitowoc vs Hoshizaki comparison", href: "/compare/manitowoc-vs-hoshizaki-ice" },
     { label: "Ice machine repair", href: "/services/ice-machine-repair" },
     {
       label: "Commercial refrigeration repair",

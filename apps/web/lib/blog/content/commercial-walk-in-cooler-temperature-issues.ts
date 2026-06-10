@@ -88,6 +88,7 @@ export const walkInCoolerTemperature: Article = {
     },
   ],
   internalLinks: [
+    { label: "Walk-in cooler: repair or replace guide", href: "/compare/walk-in-cooler-repair-or-replace" },
     { label: "Walk-in cooler repair", href: "/services/walk-in-cooler-repair" },
     {
       label: "Walk-in freezer repair",

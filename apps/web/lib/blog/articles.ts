@@ -62,6 +62,15 @@ import { yearEndDepreciationReplacement } from "./content/year-end-equipment-dep
 import { multiFamilyLaundrySpeedQueenCard } from "./content/multi-family-laundry-speed-queen-card-system"
 import { miamiRestaurantClusterVendorDensity } from "./content/miami-restaurant-cluster-vendor-density"
 import { southFlHospitalitySaltAirZone } from "./content/south-fl-hospitality-salt-air-zone-schedule"
+// Wave-2 demand-backed additions (2026-06-10): orphan GSC clusters
+// (fountain 29 impr, healthcare ~50 impr, hood, manitowoc) + compare-cluster
+// support posts. Published near-term to ride the active promotion window.
+import { pepsiCokeFountainMachineService } from "./content/pepsi-coke-fountain-machine-service-south-florida"
+import { medicalLabRefrigerationService } from "./content/medical-lab-refrigeration-service-south-florida"
+import { combiOvenBuyingGuideSouthFlorida } from "./content/combi-oven-buying-guide-south-florida"
+import { manitowocErrorCodesFieldGuide } from "./content/manitowoc-error-codes-field-guide"
+import { commercialKitchenExhaustFanHoodMotor } from "./content/commercial-kitchen-exhaust-fan-hood-motor-failures"
+import { walkIn50PercentRule } from "./content/walk-in-50-percent-rule-repair-or-replace"
 
 export type ArticleSection = {
   heading: string
@@ -153,6 +162,12 @@ export const articles: Article[] = [
   multiFamilyLaundrySpeedQueenCard,
   miamiRestaurantClusterVendorDensity,
   southFlHospitalitySaltAirZone,
+  pepsiCokeFountainMachineService,
+  medicalLabRefrigerationService,
+  combiOvenBuyingGuideSouthFlorida,
+  manitowocErrorCodesFieldGuide,
+  commercialKitchenExhaustFanHoodMotor,
+  walkIn50PercentRule,
 ]
 
 export function getArticle(slug: string): Article | undefined {

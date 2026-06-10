@@ -83,6 +83,7 @@ export const hotelLaundrySpeedQueenContinental: Article = {
     },
   ],
   internalLinks: [
+    { label: "Speed Queen vs Continental — full comparison", href: "/compare/speed-queen-vs-continental-laundry" },
     { label: "Commercial washer repair", href: "/services/commercial-washer-repair" },
     { label: "Hotels", href: "/industries/hotels" },
     { label: "Multi-family", href: "/industries/multi-family" },

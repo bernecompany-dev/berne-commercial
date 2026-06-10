@@ -76,6 +76,8 @@ export const hoshizakiVsManitowocVsScotsman: Article = {
     },
   ],
   internalLinks: [
+    { label: "Manitowoc vs Hoshizaki — full comparison", href: "/compare/manitowoc-vs-hoshizaki-ice" },
+    { label: "Hoshizaki vs Scotsman — full comparison", href: "/compare/hoshizaki-vs-scotsman-ice" },
     { label: "Ice machine repair", href: "/services/ice-machine-repair" },
     {
       label: "Commercial refrigeration repair",
