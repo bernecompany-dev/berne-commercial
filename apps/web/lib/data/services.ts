@@ -8,6 +8,17 @@ export type ServiceCategory =
   | "commercial-laundry"
   | "other"
 
+export type SymptomRow = {
+  /** What the operator sees ("walk-in not holding temperature") */
+  symptom: string
+  /** Most likely cause(s) from real tickets */
+  cause: string
+  /** Typical repair cost range, parts + labor */
+  cost: string
+  /** Dispatch expectation ("Same-day", "Emergency", "Next visit") */
+  response: string
+}
+
 export type Service = {
   slug: string
   title: string
@@ -17,6 +28,13 @@ export type Service = {
   longDescription: string
   bullets: string[]
   faqs: { q: string; a: string }[]
+  /**
+   * Symptom → likely cause → typical cost table for the top hubs
+   * (wave-2 2026-06-10: refrigeration pos 8.0 / "near me" pos 9.9 — this is
+   * the diagnostic-content depth the page-1 competitors have and we lacked).
+   * Costs derive from the brand-comparisons failure-mode data — keep in sync.
+   */
+  symptomTable?: SymptomRow[]
   primary?: boolean
   // Optional SERP-tuned overrides for the /services/<slug> hub. When unset,
   // the hub falls back to `${title} in South Florida` / `summary`. Keep
@@ -51,6 +69,50 @@ export const services: Service[] = [
       "Same-day refrigeration service for restaurants, supermarkets, production facilities and enterprise clients.",
     longDescription:
       "Berne Commercial Repair services every class of commercial refrigeration system in South Florida — from walk-in coolers and freezers to reach-in units, prep tables, display merchandisers, and deep freeze systems. Our refrigeration technicians are factory-trained on the brands that dominate commercial kitchens and back-of-house operations: Hoshizaki, Manitowoc, Scotsman, Turbo Air, True, Traulsen, Beverage-Air, Continental, Delfield and more.",
+    symptomTable: [
+      {
+        symptom: "Cabinet not holding temperature / product above 41°F",
+        cause: "Door gasket compression set or thermostat/controller drift",
+        cost: "$80–$380",
+        response: "Same-day",
+      },
+      {
+        symptom: "Compressor short-cycling or struggling to start",
+        cause: "Start relay/capacitor wear or fouled condenser coil",
+        cost: "$120–$480",
+        response: "Same-day",
+      },
+      {
+        symptom: "Condenser fan dead, unit running hot",
+        cause: "Salt-air corroded fan motor — the #1 coastal failure",
+        cost: "$120–$240",
+        response: "Same-day",
+      },
+      {
+        symptom: "Doors sweating, condensation around the frame",
+        cause: "Worn gasket or failed door/frame heater",
+        cost: "$80–$350",
+        response: "Same-day",
+      },
+      {
+        symptom: "Water pooling under the cabinet",
+        cause: "Clogged condensate drain or leaking inlet solenoid",
+        cost: "$90–$280",
+        response: "Next visit",
+      },
+      {
+        symptom: "Warm box + hissing or oil traces at fittings",
+        cause: "Refrigerant leak — detection, repair and recharge",
+        cost: "$400–$1,200",
+        response: "Emergency",
+      },
+      {
+        symptom: "Compressor dead on a 10+ year system",
+        cause: "End-of-life sealed system — replacement vs repair math",
+        cost: "$700–$1,300",
+        response: "24–48h",
+      },
+    ],
     bullets: [
       "Walk-in coolers and freezers",
       "Reach-in coolers and freezers",
@@ -87,6 +149,50 @@ export const services: Service[] = [
       "Emergency walk-in cooler service — temperature loss, door seal issues, compressor failures, refrigerant leaks.",
     longDescription:
       "A failing walk-in cooler puts inventory and revenue at risk. Berne Commercial Repair dispatches refrigeration technicians equipped for walk-in cooler diagnostics, refrigerant recovery, electrical work, and component replacement. We service every common configuration — indoor and outdoor units, self-contained and remote condensing systems, and walk-ins with custom panels.",
+    symptomTable: [
+      {
+        symptom: "Temperature creeping up overnight",
+        cause: "Defrost timer/heater failure or low refrigerant charge",
+        cost: "$250–$600",
+        response: "Emergency",
+      },
+      {
+        symptom: "Ice building up on the evaporator coil",
+        cause: "Failed defrost cycle or door infiltration icing the coil",
+        cost: "$250–$700",
+        response: "Same-day",
+      },
+      {
+        symptom: "Evaporator fans loud, slow, or dead",
+        cause: "Fan motor wear — heat load climbs fast once one drops",
+        cost: "$200–$450",
+        response: "Same-day",
+      },
+      {
+        symptom: "Door won't seal, sweep dragging, frame sweating",
+        cause: "Gasket, sweep, hinge cam or frame-heater wear",
+        cost: "$150–$350",
+        response: "Next visit",
+      },
+      {
+        symptom: "Refrigerant leak on an R-22 system",
+        cause: "Aged line set or coil — recharge runs $90–$150/lb",
+        cost: "$400–$1,200",
+        response: "Same-day",
+      },
+      {
+        symptom: "Compressor dead on an aging system",
+        cause: "Full condensing-unit replacement resets 10–15 yrs of life",
+        cost: "$2,500–$4,500",
+        response: "24–48h",
+      },
+      {
+        symptom: "Walls sweating, soft floor, ice at panel seams",
+        cause: "Failed panel insulation — repair-or-replace assessment",
+        cost: "Included in $89 call",
+        response: "Same-day",
+      },
+    ],
     bullets: [
       "Loss of temperature diagnostics",
       "Compressor and condenser replacement",
@@ -186,6 +292,50 @@ export const services: Service[] = [
       "Commercial ice machine repair for restaurants, hotels, healthcare and retail — Hoshizaki, Manitowoc, Scotsman.",
     longDescription:
       "Berne Commercial Repair services every major commercial ice machine — Hoshizaki, Manitowoc, Scotsman, Ice-O-Matic, Follett, Kold-Draft and more. Whether you have a modular head, undercounter, or remote condenser system, our technicians diagnose ice production failures, water flow problems, electronic control faults, and refrigeration loops.",
+    symptomTable: [
+      {
+        symptom: "No ice, or cubes coming out thin",
+        cause: "Water inlet valve failure or scale restricting flow",
+        cost: "$90–$260",
+        response: "Same-day",
+      },
+      {
+        symptom: "Machine runs continuously but never harvests",
+        cause: "Harvest sensor drift — the classic 5–8 year ticket",
+        cost: "$80–$180",
+        response: "Same-day",
+      },
+      {
+        symptom: "Production drops in summer heat",
+        cause: "Fouled condenser or corroded fan motor (coastal)",
+        cost: "$120–$260",
+        response: "Same-day",
+      },
+      {
+        symptom: "Ice tastes or smells off",
+        cause: "Overdue sanitation cycle + water filter change",
+        cost: "$180–$340",
+        response: "Next visit",
+      },
+      {
+        symptom: "Machine stops while the bin is half empty",
+        cause: "Bin level sensor or thermistor contamination",
+        cost: "$60–$140",
+        response: "Same-day",
+      },
+      {
+        symptom: "Water pooling under the machine",
+        cause: "Inlet solenoid drip or drain line clog",
+        cost: "$90–$130",
+        response: "Next visit",
+      },
+      {
+        symptom: "Grinding noise from a nugget machine",
+        cause: "Auger bearing wear — stop the machine, it gets expensive",
+        cost: "$300–$600",
+        response: "Emergency",
+      },
+    ],
     bullets: [
       "Low or no ice production diagnostics",
       "Water inlet valve and pump service",
@@ -215,6 +365,50 @@ export const services: Service[] = [
       "Pitco, Frymaster, Vulcan and Hobart fryer repair — ignition, gas valve, thermostat and element service.",
     longDescription:
       "We repair gas and electric commercial fryers from Pitco, Frymaster, Vulcan, Hobart, Garland, Southbend and Cleveland. Common failures we resolve include ignition issues, gas valve faults, heating element failures, thermostat drift, and filtration system problems.",
+    symptomTable: [
+      {
+        symptom: "Pilot won't stay lit",
+        cause: "Thermopile/thermocouple failure — parts on the truck",
+        cost: "$80–$160",
+        response: "Same-day",
+      },
+      {
+        symptom: "Oil overheating, food burning",
+        cause: "Thermostat drift or stuck high-limit",
+        cost: "$120–$300",
+        response: "Same-day",
+      },
+      {
+        symptom: "Fryer drops to standby mid-rush",
+        cause: "Temperature probe failure",
+        cost: "$90–$160",
+        response: "Same-day",
+      },
+      {
+        symptom: "Filter pump locked out (Frymaster FilterQuick)",
+        cause: "Thermal lockout or seized pump from cold-oil filtration",
+        cost: "$260–$520",
+        response: "Same-day",
+      },
+      {
+        symptom: "Oil leaking into the cabinet",
+        cause: "Hardened filtration O-rings or seized drain valve",
+        cost: "$20–$220",
+        response: "Next visit",
+      },
+      {
+        symptom: "Burner won't ignite on electronic-ignition models",
+        cause: "Ignition module or combination gas valve",
+        cost: "$180–$380",
+        response: "Same-day",
+      },
+      {
+        symptom: "Vat weeping oil at the weld seams",
+        cause: "Vat corrosion — end of life, replacement planning",
+        cost: "Assessment",
+        response: "Same-day",
+      },
+    ],
     bullets: [
       "Gas valve and ignition module service",
       "Thermostat replacement and calibration",

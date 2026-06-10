@@ -106,6 +106,72 @@ export default async function ServiceDetailPage({ params }: Params) {
         </div>
       </section>
 
+      {/* Symptom → cause → cost table (top hubs). Diagnostic depth is what
+          the page-1 competitors for "commercial refrigeration repair" have
+          and templated hubs lack; costs derive from brand-comparisons
+          failure-mode tickets. */}
+      {s.symptomTable?.length ? (
+        <section className="border-b border-border/60 bg-background py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-semibold tracking-tight">
+              {s.shortTitle} symptoms, likely causes &amp; typical repair costs
+            </h2>
+            <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
+              Real numbers from our South Florida service tickets — parts plus
+              labor, before any contract pricing. The {site.serviceCall}{" "}
+              commercial service call covers the diagnosis and is applied
+              toward an approved repair.
+            </p>
+            <div className="mt-6 overflow-x-auto rounded-xl border border-border">
+              <table className="w-full min-w-[640px] border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-border bg-accent/40 text-left">
+                    <th scope="col" className="px-4 py-3 font-semibold">
+                      What you&apos;re seeing
+                    </th>
+                    <th scope="col" className="px-4 py-3 font-semibold">
+                      Most likely cause
+                    </th>
+                    <th scope="col" className="whitespace-nowrap px-4 py-3 font-semibold">
+                      Typical cost
+                    </th>
+                    <th scope="col" className="whitespace-nowrap px-4 py-3 font-semibold">
+                      Dispatch
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {s.symptomTable.map((row) => (
+                    <tr
+                      key={row.symptom}
+                      className="border-b border-border/60 last:border-b-0 even:bg-accent/20"
+                    >
+                      <td className="px-4 py-3 font-medium text-foreground">
+                        {row.symptom}
+                      </td>
+                      <td className="px-4 py-3 text-muted-foreground">
+                        {row.cause}
+                      </td>
+                      <td className="whitespace-nowrap px-4 py-3 text-foreground">
+                        {row.cost}
+                      </td>
+                      <td className="whitespace-nowrap px-4 py-3 text-muted-foreground">
+                        {row.response}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-4 text-xs text-muted-foreground">
+              Same-day dispatch is typical across Miami-Dade, Broward and Palm
+              Beach; refrigeration loss is prioritized as an emergency. Call{" "}
+              {site.phone} for a window.
+            </p>
+          </div>
+        </section>
+      ) : null}
+
       <section className="border-b border-border/60 bg-accent/30 py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold tracking-tight">
