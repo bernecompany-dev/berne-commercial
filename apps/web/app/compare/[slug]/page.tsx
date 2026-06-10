@@ -23,6 +23,7 @@ import {
   BRAND_COMPARISON_SLUGS,
   getBrandComparison,
 } from "@/lib/data/brand-comparisons"
+import { getBrandServicesForComparison } from "@/lib/data/brand-services"
 import { breadcrumbSchema, faqSchema, metaFor } from "@/lib/seo"
 import { site } from "@/lib/site"
 
@@ -72,6 +73,7 @@ export default async function CompareDetailPage({ params }: Params) {
   ]
     .filter((o) => o.slug !== c.slug)
     .slice(0, 4)
+  const brandRepairPages = getBrandServicesForComparison(c.slug)
   const pageUrl = `${site.url}/compare/${c.slug}`
   const heroTitle = c.h1.replace(/ — .*/, "")
   const updatedLabel = new Date(
@@ -422,6 +424,33 @@ export default async function CompareDetailPage({ params }: Params) {
           </div>
         </div>
       </section>
+
+      {/* Brand repair pages — readers comparing brands often own one that's
+          broken right now (Content_Plan 2026-06-10). */}
+      {brandRepairPages.length ? (
+        <section className="border-b border-border/60 bg-background py-12">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+              Already own one of these? Repair pages
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Fault codes, common failure patterns and real South Florida
+              repair costs, brand by brand.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {brandRepairPages.map((bs) => (
+                <Link
+                  key={bs.slug}
+                  href={`/services/${bs.slug}`}
+                  className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/10"
+                >
+                  {bs.title} →
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* Other comparisons */}
       {others.length ? (

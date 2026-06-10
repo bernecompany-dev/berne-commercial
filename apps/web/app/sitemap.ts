@@ -3,6 +3,7 @@ import { site } from "@/lib/site"
 import { cities } from "@/lib/data/cities"
 import { primaryServices, services } from "@/lib/data/services"
 import { brandProfiles } from "@/lib/data/brand-profiles"
+import { BRAND_SERVICES } from "@/lib/data/brand-services"
 import { BRAND_COMPARISONS } from "@/lib/data/brand-comparisons"
 import { INDUSTRY_PROFILES } from "@/lib/data/industry-profiles"
 import { publishedArticles } from "@/lib/blog/articles"
@@ -106,6 +107,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   })
 
+  // Brand-specific service pages (Content_Plan 2026-06-10) — same static
+  // EN-only machinery as medical-lab. Honest lastmod from the data layer.
+  const brandServicePages = BRAND_SERVICES.map((b) => ({
+    url: `${base}/services/${b.slug}`,
+    lastModified: new Date(`${b.datePublished}T12:00:00Z`),
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  }))
+
+  // City-specific medical/lab page (static route, outside the combo matrix).
+  const specialtyCityPages = [
+    {
+      url: `${base}/fort-lauderdale/medical-lab-refrigeration-repair`,
+      lastModified: new Date("2026-06-11T12:00:00Z"),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+  ]
+
   const esServiceDetails = services.map((s) => ({
     url: `${base}/es/services/${s.slug}`,
     changeFrequency: "weekly" as const,
@@ -196,6 +216,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...esStaticPaths,
     ...blogPosts,
     ...serviceDetails,
+    ...brandServicePages,
+    ...specialtyCityPages,
     ...esServiceDetails,
     ...brandPages,
     ...esBrandPages,

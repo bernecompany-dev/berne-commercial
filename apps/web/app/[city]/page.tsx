@@ -48,6 +48,21 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   })
 }
 
+/**
+ * City-specific specialty pages that live OUTSIDE the services.ts matrix
+ * (static routes, no phantom combos) — rendered as extra pills in the
+ * link-farm section. Currently only Fort Lauderdale's medical/lab page
+ * (Content_Plan 2026-06-10 #27).
+ */
+const SPECIALTY_LINKS: Record<string, { label: string; href: string }[]> = {
+  "fort-lauderdale": [
+    {
+      label: "Medical & Lab Refrigeration in Fort Lauderdale",
+      href: "/fort-lauderdale/medical-lab-refrigeration-repair",
+    },
+  ],
+}
+
 const faqsFor = (cityName: string) => [
   {
     q: `Do you offer same-day commercial repair in ${cityName}?`,
@@ -252,6 +267,15 @@ export default async function CityPage({ params }: Params) {
                   className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/10"
                 >
                   {s.shortTitle} in {c.name}
+                </Link>
+              ))}
+              {(SPECIALTY_LINKS[c.slug] ?? []).map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/10"
+                >
+                  {l.label}
                 </Link>
               ))}
             </div>

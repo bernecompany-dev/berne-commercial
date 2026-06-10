@@ -399,6 +399,12 @@ export default function MedicalLabRefrigerationPage() {
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 <Link
+                  href="/fort-lauderdale/medical-lab-refrigeration-repair"
+                  className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/10"
+                >
+                  Medical &amp; lab refrigeration in Fort Lauderdale →
+                </Link>
+                <Link
                   href="/industries/healthcare"
                   className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/10"
                 >

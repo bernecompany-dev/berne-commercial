@@ -36,6 +36,7 @@ import {
   getBrandProfile,
 } from "@/lib/data/brand-profiles"
 import { getComparisonsForBrand } from "@/lib/data/brand-comparisons"
+import { getBrandServiceForBrandProfile } from "@/lib/data/brand-services"
 import { INDUSTRY_PROFILES } from "@/lib/data/industry-profiles"
 import {
   breadcrumbSchema,
@@ -107,6 +108,7 @@ export default async function BrandDetailPage({ params }: Params) {
     .slice(0, 4)
 
   const comparisons = getComparisonsForBrand(b.slug)
+  const dedicatedService = getBrandServiceForBrandProfile(b.slug)
 
   return (
     <PageShell>
@@ -181,6 +183,17 @@ export default async function BrandDetailPage({ params }: Params) {
               >
                 Request Service
               </LinkButton>
+              {/* Dedicated brand-repair page (fault codes, costs) — the
+                  deep-dive counterpart to this brand overview. */}
+              {dedicatedService ? (
+                <Link
+                  href={`/services/${dedicatedService.slug}`}
+                  className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+                >
+                  {dedicatedService.title}: fault codes &amp; costs
+                  <ArrowRight className="size-3.5" />
+                </Link>
+              ) : null}
             </Card>
           </div>
         </div>

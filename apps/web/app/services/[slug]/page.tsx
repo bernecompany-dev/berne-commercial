@@ -15,6 +15,7 @@ import { faqSchema, metaFor, serviceSchema, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import { getService, services } from "@/lib/data/services"
 import { getComparisonsForService } from "@/lib/data/brand-comparisons"
+import { getBrandServicesForHub } from "@/lib/data/brand-services"
 import { citiesByCounty } from "@/lib/data/cities"
 
 type Params = { params: Promise<{ slug: string }> }
@@ -39,6 +40,7 @@ export default async function ServiceDetailPage({ params }: Params) {
   const s = getService(slug)
   if (!s) notFound()
   const relatedComparisons = getComparisonsForService(s.slug)
+  const brandServices = getBrandServicesForHub(s.slug)
 
   return (
     <PageShell>
@@ -206,6 +208,39 @@ export default async function ServiceDetailPage({ params }: Params) {
           <FAQSection faqs={s.faqs} title={`${s.shortTitle} FAQ`} />
           <JsonLd data={faqSchema(s.faqs)} />
         </>
+      ) : null}
+
+      {/* Brand-specific repair pages (Content_Plan 2026-06-10) — the
+          "{brand} {equipment} repair" queries outvolume the generic hub
+          terms; give each brand page a crawl path from its parent hub. */}
+      {brandServices.length ? (
+        <section className="border-b border-border/60 bg-background py-12">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+              Brand-specific {s.shortTitle.toLowerCase()} repair
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Know what you run? The brand pages cover fault codes, failure
+              patterns and real repair costs for each platform.
+            </p>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {brandServices.map((bs) => (
+                <Link
+                  key={bs.slug}
+                  href={`/services/${bs.slug}`}
+                  className="group flex flex-col gap-1.5 rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40"
+                >
+                  <span className="text-sm font-semibold text-foreground group-hover:text-primary">
+                    {bs.title}
+                  </span>
+                  <span className="line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                    {bs.metaDescription}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
       ) : null}
 
       {/* Cross-link to matching /compare guides — the site's strongest
