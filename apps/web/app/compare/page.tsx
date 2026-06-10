@@ -13,7 +13,7 @@ import { site } from "@/lib/site"
 export const metadata: Metadata = metaFor({
   title: "Commercial Equipment Brand Comparisons",
   description:
-    "Hobart vs Vulcan, Manitowoc vs Hoshizaki, True vs Traulsen, Rational vs combi alternatives — commercial equipment comparisons written by South Florida service technicians.",
+    "Rational vs Unox, Frymaster vs Pitco, True vs Turbo Air, Hoshizaki vs Scotsman, walk-in repair-or-replace — comparisons written by South Florida service techs.",
   path: "/compare",
 })
 

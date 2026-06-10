@@ -128,6 +128,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
   const comparePages = BRAND_COMPARISONS.map((c) => ({
     url: `${base}/compare/${c.slug}`,
+    // Honest lastmod from the content layer (datePublished/dateModified) —
+    // these are the site's strongest organic earners.
+    lastModified: new Date(`${c.dateModified ?? c.datePublished}T12:00:00Z`),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }))

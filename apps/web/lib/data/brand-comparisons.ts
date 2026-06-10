@@ -12,7 +12,12 @@
  *
  * Sizing target: 1500-2000+ words per comparison across intro, brands.about,
  * strengths, failureModes, buyerProfiles, ownership, bernePerspective, faqs.
+ *
+ * Wave-2 profiles (pairwise combi split + 8 new topics, 2026-06-10) live in
+ * ./brand-comparisons-wave2.ts and are merged into the registry below.
  */
+
+import { WAVE2_COMPARISONS } from "./brand-comparisons-wave2"
 
 export type ComparisonBrand = {
   name: string
@@ -61,6 +66,24 @@ export type ComparisonProfile = {
   bernePerspective: string
   /** 5-7 FAQ entries — using {q, a} to match site convention */
   faqs: { q: string; a: string }[]
+  /**
+   * ISO yyyy-mm-dd. Feeds Article datePublished (freshness signal on the
+   * site's strongest organic earners) + honest sitemap lastmod.
+   */
+  datePublished: string
+  /** ISO yyyy-mm-dd — set when content is materially revised. */
+  dateModified?: string
+  /**
+   * Preferred cross-links for the "More comparisons" block. Lets the
+   * rational-vs-combi umbrella act as a category hub pointing at its
+   * pairwise children (and vice versa). Falls back to registry order.
+   */
+  related?: string[]
+  /**
+   * Decision guides ("repair or replace") compare options, not brands —
+   * suppresses the Brand JSON-LD nodes that would otherwise be emitted.
+   */
+  isDecisionGuide?: boolean
 }
 
 // ---------------------------------------------------------------------------
@@ -69,8 +92,16 @@ export type ComparisonProfile = {
 
 const HOBART_VS_VULCAN_RANGES: ComparisonProfile = {
   slug: "hobart-vs-vulcan-ranges",
+  datePublished: "2026-05-18",
+  dateModified: "2026-06-10",
+  related: [
+    "frymaster-vs-pitco-fryers",
+    "rational-vs-combi",
+    "true-vs-traulsen-refrigeration",
+    "manitowoc-vs-hoshizaki-ice",
+  ],
   h1: "Hobart vs Vulcan — Which Commercial Range Is Better for Your Kitchen?",
-  metaTitle: "Hobart vs Vulcan Commercial Ranges | Berne",
+  metaTitle: "Hobart vs Vulcan Commercial Ranges",
   metaDescription:
     "Hobart vs Vulcan commercial ranges compared by South Florida service techs. Burner output, oven design, parts ecosystem, real-world reliability on the line.",
   teaser:
@@ -261,8 +292,16 @@ const HOBART_VS_VULCAN_RANGES: ComparisonProfile = {
 
 const MANITOWOC_VS_HOSHIZAKI: ComparisonProfile = {
   slug: "manitowoc-vs-hoshizaki-ice",
+  datePublished: "2026-05-18",
+  dateModified: "2026-06-10",
+  related: [
+    "hoshizaki-vs-scotsman-ice",
+    "true-vs-traulsen-refrigeration",
+    "true-vs-turbo-air",
+    "walk-in-cooler-repair-or-replace",
+  ],
   h1: "Manitowoc vs Hoshizaki — Which Commercial Ice Machine Is Better?",
-  metaTitle: "Manitowoc vs Hoshizaki Ice Machines | Berne",
+  metaTitle: "Manitowoc vs Hoshizaki Ice Machines",
   metaDescription:
     "Manitowoc vs Hoshizaki commercial ice machines compared by South Florida service techs. Production rate, ice quality, reliability, parts costs.",
   teaser:
@@ -453,8 +492,16 @@ const MANITOWOC_VS_HOSHIZAKI: ComparisonProfile = {
 
 const TRUE_VS_TRAULSEN: ComparisonProfile = {
   slug: "true-vs-traulsen-refrigeration",
+  datePublished: "2026-05-18",
+  dateModified: "2026-06-10",
+  related: [
+    "true-vs-turbo-air",
+    "walk-in-cooler-repair-or-replace",
+    "manitowoc-vs-hoshizaki-ice",
+    "hoshizaki-vs-scotsman-ice",
+  ],
   h1: "True vs Traulsen — Which Commercial Reach-In Refrigerator Is Better?",
-  metaTitle: "True vs Traulsen Commercial Refrigeration | Berne",
+  metaTitle: "True vs Traulsen Commercial Refrigeration",
   metaDescription:
     "True vs Traulsen commercial reach-in refrigeration compared. Temperature stability, build quality, parts ecosystem, real failure modes in South Florida kitchens.",
   teaser:
@@ -645,8 +692,17 @@ const TRUE_VS_TRAULSEN: ComparisonProfile = {
 
 const RATIONAL_VS_COMBI: ComparisonProfile = {
   slug: "rational-vs-combi",
+  datePublished: "2026-05-18",
+  dateModified: "2026-06-10",
+  // Category hub for the combi cluster — pairwise children first.
+  related: [
+    "rational-vs-unox",
+    "rational-vs-convotherm",
+    "rational-vs-alto-shaam",
+    "hobart-vs-vulcan-ranges",
+  ],
   h1: "Rational vs Other Combi Ovens — Which Is Right for Your Kitchen?",
-  metaTitle: "Rational vs Combi Ovens Compared | Berne",
+  metaTitle: "Rational vs Combi Ovens Compared",
   metaDescription:
     "Rational vs Alto-Shaam, Convotherm, Unox, and Henny Penny combi ovens compared. Cooking quality, parts ecosystem, operator interface, real failure modes.",
   teaser:
@@ -896,6 +952,7 @@ export const BRAND_COMPARISONS: ComparisonProfile[] = [
   MANITOWOC_VS_HOSHIZAKI,
   TRUE_VS_TRAULSEN,
   RATIONAL_VS_COMBI,
+  ...WAVE2_COMPARISONS,
 ]
 
 export const BRAND_COMPARISON_SLUGS = BRAND_COMPARISONS.map((c) => c.slug)
@@ -925,10 +982,36 @@ export function getComparisonsForBrand(
  */
 const COMPARISONS_BY_SERVICE: Record<string, string[]> = {
   "commercial-range-repair": ["hobart-vs-vulcan-ranges"],
-  "ice-machine-repair": ["manitowoc-vs-hoshizaki-ice"],
-  "commercial-refrigeration-repair": ["true-vs-traulsen-refrigeration"],
-  "reach-in-cooler-repair": ["true-vs-traulsen-refrigeration"],
-  "commercial-oven-repair": ["rational-vs-combi"],
+  "ice-machine-repair": [
+    "manitowoc-vs-hoshizaki-ice",
+    "hoshizaki-vs-scotsman-ice",
+  ],
+  "commercial-refrigeration-repair": [
+    "true-vs-traulsen-refrigeration",
+    "true-vs-turbo-air",
+    "walk-in-cooler-repair-or-replace",
+  ],
+  "reach-in-cooler-repair": [
+    "true-vs-traulsen-refrigeration",
+    "true-vs-turbo-air",
+  ],
+  "reach-in-freezer-repair": [
+    "true-vs-turbo-air",
+    "true-vs-traulsen-refrigeration",
+  ],
+  "walk-in-cooler-repair": ["walk-in-cooler-repair-or-replace"],
+  "walk-in-freezer-repair": ["walk-in-cooler-repair-or-replace"],
+  "fryer-repair": ["frymaster-vs-pitco-fryers"],
+  "commercial-oven-repair": [
+    "rational-vs-combi",
+    "rational-vs-unox",
+    "rational-vs-convotherm",
+    "rational-vs-alto-shaam",
+  ],
+  "steamer-repair": ["rational-vs-combi", "rational-vs-alto-shaam"],
+  "commercial-laundry-repair": ["speed-queen-vs-continental-laundry"],
+  "commercial-washer-repair": ["speed-queen-vs-continental-laundry"],
+  "commercial-dryer-repair": ["speed-queen-vs-continental-laundry"],
 }
 
 export function getComparisonsForService(

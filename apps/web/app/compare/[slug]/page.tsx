@@ -57,9 +57,24 @@ export default async function CompareDetailPage({ params }: Params) {
   const c = getBrandComparison(slug)
   if (!c) notFound()
 
-  const others = BRAND_COMPARISONS.filter((o) => o.slug !== c.slug).slice(0, 4)
+  // Preferred cross-links first (lets the combi umbrella act as a hub for
+  // its pairwise children), fall back to registry order for the rest.
+  const preferred = (c.related ?? [])
+    .map((slug) => BRAND_COMPARISONS.find((o) => o.slug === slug))
+    .filter((o): o is (typeof BRAND_COMPARISONS)[number] => Boolean(o))
+  const others = [
+    ...preferred,
+    ...BRAND_COMPARISONS.filter(
+      (o) => o.slug !== c.slug && !preferred.some((p) => p.slug === o.slug),
+    ),
+  ]
+    .filter((o) => o.slug !== c.slug)
+    .slice(0, 4)
   const pageUrl = `${site.url}/compare/${c.slug}`
   const heroTitle = c.h1.replace(/ — .*/, "")
+  const updatedLabel = new Date(
+    `${c.dateModified ?? c.datePublished}T12:00:00Z`,
+  ).toLocaleDateString("en-US", { month: "long", year: "numeric" })
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -74,6 +89,8 @@ export default async function CompareDetailPage({ params }: Params) {
       "@id": pageUrl,
     },
     inLanguage: "en-US",
+    datePublished: c.datePublished,
+    dateModified: c.dateModified ?? c.datePublished,
     author: {
       "@type": "Organization",
       "@id": `${site.url}/#organization`,
@@ -89,21 +106,28 @@ export default async function CompareDetailPage({ params }: Params) {
         url: `${site.url}/opengraph-image`,
       },
     },
-    about: c.brands.map((b) => ({
-      "@type": "Brand",
-      name: b.name,
-      ...(b.hq
-        ? {
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: b.hq,
-            },
-          }
-        : {}),
-      ...(b.brandSlug
-        ? { url: `${site.url}/brands/${b.brandSlug}` }
-        : {}),
-    })),
+    // Decision guides ("repair or replace") compare options, not brands —
+    // emitting Brand nodes named "Repairing the existing walk-in" would be
+    // schema garbage, so they are suppressed.
+    ...(c.isDecisionGuide
+      ? {}
+      : {
+          about: c.brands.map((b) => ({
+            "@type": "Brand",
+            name: b.name,
+            ...(b.hq
+              ? {
+                  address: {
+                    "@type": "PostalAddress",
+                    addressLocality: b.hq,
+                  },
+                }
+              : {}),
+            ...(b.brandSlug
+              ? { url: `${site.url}/brands/${b.brandSlug}` }
+              : {}),
+          })),
+        }),
   }
 
   return (
@@ -115,7 +139,11 @@ export default async function CompareDetailPage({ params }: Params) {
           { name: heroTitle },
         ]}
       />
-      <PageHero eyebrow="Brand Comparison" title={c.h1} description={c.teaser}>
+      <PageHero
+        eyebrow={c.isDecisionGuide ? "Decision Guide" : "Brand Comparison"}
+        title={c.h1}
+        description={c.teaser}
+      >
         <div className="flex flex-wrap gap-2">
           <Badge
             variant="outline"
@@ -126,8 +154,13 @@ export default async function CompareDetailPage({ params }: Params) {
           <Badge variant="outline">
             Commercial service call: {site.serviceCall}
           </Badge>
-          <Badge variant="outline">We service both brands</Badge>
+          <Badge variant="outline">
+            {c.isDecisionGuide
+              ? "Built from real service tickets"
+              : "We service both brands"}
+          </Badge>
           <Badge variant="outline">11 years · 18 technicians</Badge>
+          <Badge variant="outline">Updated {updatedLabel}</Badge>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
           <LinkButton href={`/request-dispatch?topic=${c.slug}`}>
@@ -195,10 +228,12 @@ export default async function CompareDetailPage({ params }: Params) {
       <section className="border-b border-border/60 bg-background py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-xs font-medium uppercase tracking-wider text-primary">
-            Brand-by-brand
+            {c.isDecisionGuide ? "Option-by-option" : "Brand-by-brand"}
           </div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-            About each brand — and what we see in the field.
+            {c.isDecisionGuide
+              ? "Each path — and what we see in the field."
+              : "About each brand — and what we see in the field."}
           </h2>
 
           <div className="mt-10 grid gap-10">
@@ -256,7 +291,10 @@ export default async function CompareDetailPage({ params }: Params) {
 
                   <div>
                     <h4 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                      <Wrench className="size-4" /> Common failure modes
+                      <Wrench className="size-4" />{" "}
+                      {c.isDecisionGuide
+                        ? "Where this path goes wrong"
+                        : "Common failure modes"}
                     </h4>
                     <ul className="mt-4 grid gap-3">
                       {b.failureModes.map((f) => (
