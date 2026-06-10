@@ -31,7 +31,7 @@ const POPULAR = [
   { href: "/services/commercial-refrigeration-repair", label: "Commercial refrigeration" },
   { href: "/services/ice-machine-repair", label: "Ice machines" },
   { href: "/services/commercial-dishwasher-repair", label: "Commercial dishwashers" },
-  { href: "/services/commercial-fryer-repair", label: "Commercial fryers" },
+  { href: "/services/fryer-repair", label: "Commercial fryers" },
   { href: "/industries/restaurants", label: "Restaurants" },
   { href: "/industries/hotels", label: "Hotels" },
   { href: "/brands/hobart", label: "Hobart specialist" },

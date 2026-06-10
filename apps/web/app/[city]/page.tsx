@@ -37,7 +37,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const p = getCityProfile(c.slug) ?? cityProfileFallback(c.name, c.county)
   return metaFor({
     title: `Commercial Equipment Repair in ${c.name}, FL`,
-    description: `Same-day commercial dispatch across ${p.corridor} in ${c.name} — refrigeration, ice machines, restaurant equipment, ventilation and commercial laundry. Service call: ${site.serviceCall}.`,
+    // CTR pass 2026-06-09: corridor keeps each of the 70 city descriptions
+    // unique; hooks (24/7, COI, W-2 headcount, rating, $89) drive the click.
+    // Base is 94 chars — fits <155 for every corridor up to ~60 chars (the
+    // old equipment-list version ran 200+ for Miami and got truncated).
+    description: `24/7 commercial repair dispatch across ${p.corridor} in ${c.name}. COI-ready, 18 W-2 techs, 4.79★. ${site.serviceCall} service call.`,
     path: `/${c.slug}`,
   })
 }

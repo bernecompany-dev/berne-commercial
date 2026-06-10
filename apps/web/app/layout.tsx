@@ -18,7 +18,14 @@ import {
 } from "@/lib/seo"
 import { site } from "@/lib/site"
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
+// display:"swap" — explicit (it is next/font's default, but it's load-bearing
+// for hero LCP: the H1 paints immediately in the size-adjusted fallback while
+// Inter streams in, instead of blocking on the webfont).
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -28,10 +35,16 @@ export const metadata: Metadata = {
     // ("· Berne", 7 chars) so per-page base titles up to 53 chars stay within
     // the SERP cutoff. The full canonical brand name lives in site.name and
     // is emitted via Organization / LocalBusiness JSON-LD, not the <title>.
-    default: `${site.name} · South Florida Dispatch`,
+    // 53 chars — leads with brand, adds the 24/7 dispatch hook (CTR pass
+    // 2026-06-09).
+    default: `${site.name} — 24/7 South Florida Dispatch`,
     template: `%s · Berne`,
   },
-  description: site.description,
+  // CTR-tuned home description (146 chars): 24/7 + enterprise hooks
+  // (W-2 techs, COI, rating). site.description stays as the neutral
+  // brand blurb for schema/other surfaces.
+  description:
+    "24/7 commercial equipment repair across South Florida — refrigeration, ice machines, restaurant equipment. 18 W-2 techs, COI-ready, 4.79★ rated.",
   applicationName: site.name,
   alternates: {
     canonical: "/",

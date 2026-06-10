@@ -18,6 +18,12 @@ export type Service = {
   bullets: string[]
   faqs: { q: string; a: string }[]
   primary?: boolean
+  // Optional SERP-tuned overrides for the /services/<slug> hub. When unset,
+  // the hub falls back to `${title} in South Florida` / `summary`. Keep
+  // metaTitle <=52 chars (the layout appends " · Berne", 8 chars, for a 60
+  // char SERP budget) and metaDescription <=155 chars.
+  metaTitle?: string
+  metaDescription?: string
 }
 
 export const SERVICE_CATEGORIES: Record<ServiceCategory, string> = {
@@ -38,6 +44,9 @@ export const services: Service[] = [
     shortTitle: "Commercial Refrigeration",
     category: "refrigeration",
     primary: true,
+    metaTitle: "Commercial Refrigeration Repair Miami — 24/7",
+    metaDescription:
+      "Walk-in coolers, freezers & reach-ins fixed same-day across South Florida. 18 W-2 techs, COI-ready dispatch, 4.79★ from 871 reviews. $89 call.",
     summary:
       "Same-day refrigeration service for restaurants, supermarkets, production facilities and enterprise clients.",
     longDescription:
@@ -71,6 +80,9 @@ export const services: Service[] = [
     shortTitle: "Walk-In Coolers",
     category: "refrigeration",
     primary: true,
+    metaTitle: "Walk-In Cooler Repair Miami — 24/7 Emergency",
+    metaDescription:
+      "Emergency walk-in cooler repair across South Florida — temp loss, compressors, refrigerant leaks. 24/7 dispatch, COI-ready, 4.79★. $89 service call.",
     summary:
       "Emergency walk-in cooler service — temperature loss, door seal issues, compressor failures, refrigerant leaks.",
     longDescription:
@@ -214,6 +226,54 @@ export const services: Service[] = [
       {
         q: "Can you repair both gas and electric fryers?",
         a: "Yes. Our restaurant equipment technicians service gas and electric fryers from every major commercial brand.",
+      },
+    ],
+  },
+  {
+    slug: "commercial-dishwasher-repair",
+    title: "Commercial Dishwasher Repair",
+    shortTitle: "Commercial Dishwashers",
+    category: "restaurant-equipment",
+    primary: true,
+    metaTitle: "Commercial Dishwasher Repair Miami — 24/7",
+    metaDescription:
+      "Hobart, CMA, Jackson & Champion dish machine repair across South Florida. Rinse temp, booster heaters, chemical feed. 24/7, COI-ready, $89 call.",
+    summary:
+      "Same-day dish machine repair — Hobart, CMA, Jackson, Champion — rinse temperature, booster heater, chemical feed and wash pump service.",
+    longDescription:
+      "A down dish machine stalls the whole line: plates back up, the expo window slows, and a health inspector who finds a final rinse below spec can stop service entirely. Berne Commercial Repair dispatches technicians for door-type, undercounter, conveyor and flight-type commercial dishwashers across Miami-Dade, Broward and Palm Beach — Hobart, CMA Dishmachines, Jackson, Champion, Moyer Diebel, Insinger, Fagor and Electrolux Professional, including machines running Auto-Chlor or Ecolab chemical-feed systems. Most dishwasher calls fall into a handful of patterns we resolve on the first visit. High-temp machines that won't reach the 180°F final rinse NSF requires — usually a failed booster heater element, a scaled heat exchanger or a drifted rinse thermostat. Low-temp chemical machines with sanitizer concentration faults — air-locked squeeze-tube pumps, hardened peristaltic tubing, crimped chemical lines or a feed system that lost its prime. Wash pumps that hum but won't circulate — seized impellers, sheared couplings, or worn shaft seals letting water reach the motor. And machines that won't fill or won't drain — fill valves, float switches, drain solenoids, ball valves and vacuum breakers. South Florida adds a failure mode most markets don't see at this rate: hard, mineral-heavy municipal water scales booster heaters, rinse jets and wash arms aggressively, choking flow and dragging rinse temperature down weeks before the machine fails outright. We descale, rebuild and recalibrate as part of the repair, and we flag machines where a scale-management program will prevent the next outage instead of just clearing this one. Every repair is verified against operating spec before the tech leaves: wash and final-rinse temperatures logged at the machine, pressure checked at the rinse manifold, and chemical concentration titrated on low-temp machines — so the machine passes its next health inspection, not just its next rack.",
+    bullets: [
+      "Low rinse temperature and booster heater service",
+      "Chemical feed, sanitizer and detergent pump repair",
+      "Wash pump, wash arm and spray jet service",
+      "Fill valve, float switch and drain solenoid replacement",
+      "Door switch, latch and gasket replacement",
+      "Descaling and hard-water scale management",
+    ],
+    faqs: [
+      {
+        q: "Do you repair Hobart commercial dishwashers?",
+        a: "Yes — Hobart is the most common machine on our dishwasher calls. We service AM-series door machines, LXe undercounters and CL-series conveyors, and we stock common wash arm, pump seal and booster heater parts for first-visit repairs.",
+      },
+      {
+        q: "My dish machine isn't reaching 180°F final rinse — can you fix it today?",
+        a: "Rinse-temperature failures are health-inspection critical, so they're prioritized in our dispatch queue with same-day response across South Florida. The usual causes are a failed booster heater element, heavy scale in the booster or heat exchanger, or a drifted rinse thermostat — we diagnose all three on the first visit.",
+      },
+      {
+        q: "Do you service both high-temp and low-temp dish machines?",
+        a: "Yes. High-temp machines (180°F sanitizing rinse with a booster heater) and low-temp chemical-sanitizing machines are both routine for our technicians, including the chemical feed pumps and concentration calibration on low-temp units.",
+      },
+      {
+        q: "Can you work on machines using Auto-Chlor or Ecolab chemical systems?",
+        a: "If the machine is leased, repairs typically run through the lease provider. For customer-owned machines running Auto-Chlor or Ecolab chemical feeds, we repair the machine itself and coordinate with your chemical provider on feed-rate and titration issues.",
+      },
+      {
+        q: "Why does my dishwasher leave film or spots on glassware?",
+        a: "In South Florida it's usually hard-water scale or a rinse-aid feed problem — scaled rinse jets, low rinse pressure, or a rinse-aid pump that lost its prime. We descale, restore rinse pressure and recalibrate the feed as part of the repair.",
+      },
+      {
+        q: "What does a commercial dishwasher service call cost?",
+        a: "Our commercial service call is $89 and may be applied toward an approved repair.",
       },
     ],
   },

@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const s = getService(slug)
   if (!s) return metaFor({ title: "Service", description: "", path: `/services/${slug}`, noindex: true })
   return metaFor({
-    title: `${s.title} in South Florida`,
-    description: s.summary,
+    title: s.metaTitle ?? `${s.title} in South Florida`,
+    description: s.metaDescription ?? s.summary,
     path: `/services/${slug}`,
   })
 }

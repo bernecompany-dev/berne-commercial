@@ -130,6 +130,44 @@ export const servicesEs: Record<string, ServiceI18n> = {
       },
     ],
   },
+  "commercial-dishwasher-repair": {
+    title: "Reparación de Lavavajillas Comerciales",
+    shortTitle: "Lavavajillas Comerciales",
+    summary:
+      "Reparación de dish machines el mismo día — Hobart, CMA, Jackson, Champion — temperatura de rinse, booster heater, chemical feed y bomba de lavado.",
+    longDescription:
+      "Un dish machine caído detiene toda la línea: los platos se acumulan, la ventana de expo se atrasa, y un inspector de salud que encuentra un final rinse fuera de spec puede parar el servicio por completo. Berne Commercial Repair despacha técnicos para lavavajillas comerciales door-type, undercounter, conveyor y flight-type en Miami-Dade, Broward y Palm Beach — Hobart, CMA Dishmachines, Jackson, Champion, Moyer Diebel, Insinger, Fagor y Electrolux Professional, incluyendo máquinas con sistemas de chemical feed de Auto-Chlor o Ecolab. Resolvemos los patrones más comunes en la primera visita: máquinas high-temp que no alcanzan el final rinse de 180°F que exige NSF (elemento de booster heater fallado, intercambiador con escala, termostato de rinse desviado), máquinas low-temp con fallas de concentración de sanitizante (bombas peristálticas con aire, tubing endurecido, líneas químicas dobladas), bombas de lavado que zumban pero no circulan, y máquinas que no llenan o no drenan. El Sur de Florida agrega su propio modo de falla: el agua dura y cargada de minerales genera escala en booster heaters, jets de rinse y brazos de lavado más rápido que en casi cualquier otro mercado — hacemos descaling, reconstrucción y recalibración como parte de la reparación. Cada reparación se verifica contra spec antes de que el técnico se vaya: temperaturas de lavado y final rinse registradas, presión verificada en el manifold de rinse, y concentración química titrada en máquinas low-temp.",
+    bullets: [
+      "Temperatura de rinse baja y servicio de booster heater",
+      "Reparación de bombas de chemical feed, sanitizante y detergente",
+      "Servicio de bomba de lavado, brazos de lavado y spray jets",
+      "Reemplazo de válvula de llenado, float switch y solenoide de drenaje",
+      "Reemplazo de door switch, latch y empaques",
+      "Descaling y manejo de escala de agua dura",
+    ],
+    faqs: [
+      {
+        q: "¿Reparan lavavajillas comerciales Hobart?",
+        a: "Sí — Hobart es la máquina más común en nuestras llamadas de lavavajillas. Atendemos door machines AM-series, undercounters LXe y conveyors CL-series, y cargamos partes comunes de brazos de lavado, sellos de bomba y booster heater para reparaciones en la primera visita.",
+      },
+      {
+        q: "Mi dish machine no alcanza 180°F de final rinse — ¿pueden arreglarlo hoy?",
+        a: "Las fallas de temperatura de rinse son críticas para inspección de salud, así que tienen prioridad en nuestra cola de despacho con respuesta el mismo día en el Sur de Florida. Las causas usuales: elemento de booster heater fallado, escala pesada, o termostato de rinse desviado — diagnosticamos las tres en la primera visita.",
+      },
+      {
+        q: "¿Atienden máquinas high-temp y low-temp?",
+        a: "Sí. Máquinas high-temp (rinse sanitizante de 180°F con booster heater) y máquinas low-temp de sanitización química son rutina para nuestros técnicos, incluyendo las bombas de chemical feed y calibración de concentración en unidades low-temp.",
+      },
+      {
+        q: "¿Por qué mi lavavajillas deja película o manchas en la cristalería?",
+        a: "En el Sur de Florida usualmente es escala de agua dura o un problema de feed de rinse-aid — jets de rinse con escala, presión de rinse baja, o una bomba de rinse-aid sin prime. Hacemos descaling, restauramos presión de rinse y recalibramos el feed como parte de la reparación.",
+      },
+      {
+        q: "¿Cuánto cuesta una llamada de servicio de lavavajillas comercial?",
+        a: "Nuestra llamada de servicio comercial es $89 y se aplica al costo de la reparación aprobada.",
+      },
+    ],
+  },
   "commercial-oven-repair": {
     title: "Reparación de Hornos Comerciales",
     shortTitle: "Hornos Comerciales",
