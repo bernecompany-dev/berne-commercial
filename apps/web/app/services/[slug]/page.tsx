@@ -14,6 +14,7 @@ import { JsonLd } from "@/components/json-ld"
 import { faqSchema, metaFor, serviceSchema, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import { getService, services } from "@/lib/data/services"
+import { getComparisonsForService } from "@/lib/data/brand-comparisons"
 import { citiesByCounty } from "@/lib/data/cities"
 
 type Params = { params: Promise<{ slug: string }> }
@@ -37,6 +38,7 @@ export default async function ServiceDetailPage({ params }: Params) {
   const { slug } = await params
   const s = getService(slug)
   if (!s) notFound()
+  const relatedComparisons = getComparisonsForService(s.slug)
 
   return (
     <PageShell>
@@ -123,6 +125,38 @@ export default async function ServiceDetailPage({ params }: Params) {
           <FAQSection faqs={s.faqs} title={`${s.shortTitle} FAQ`} />
           <JsonLd data={faqSchema(s.faqs)} />
         </>
+      ) : null}
+
+      {/* Cross-link to matching /compare guides — the site's strongest
+          organic earners, otherwise orphaned with zero internal links. */}
+      {relatedComparisons.length ? (
+        <section className="border-b border-border/60 bg-accent/30 py-12">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-base font-semibold tracking-tight">
+              Equipment guides for {s.shortTitle.toLowerCase()}
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Deciding which brand to buy or keep? Our techs compare the
+              platforms we service every week.
+            </p>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              {relatedComparisons.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/compare/${c.slug}`}
+                  className="group flex flex-col gap-1.5 rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/40"
+                >
+                  <span className="text-sm font-semibold text-foreground group-hover:text-primary">
+                    {c.h1}
+                  </span>
+                  <span className="line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                    {c.teaser}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
       ) : null}
 
       {/*

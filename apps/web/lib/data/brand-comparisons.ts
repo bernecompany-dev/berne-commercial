@@ -917,3 +917,24 @@ export function getComparisonsForBrand(
     c.brands.some((b) => b.brandSlug === brandSlug),
   )
 }
+
+/**
+ * Service-hub → comparison cross-links. /compare/* are the site's strongest
+ * organic earners; this map gives them internal links from matching
+ * /services/<slug> hubs (they were otherwise orphaned).
+ */
+const COMPARISONS_BY_SERVICE: Record<string, string[]> = {
+  "commercial-range-repair": ["hobart-vs-vulcan-ranges"],
+  "ice-machine-repair": ["manitowoc-vs-hoshizaki-ice"],
+  "commercial-refrigeration-repair": ["true-vs-traulsen-refrigeration"],
+  "reach-in-cooler-repair": ["true-vs-traulsen-refrigeration"],
+  "commercial-oven-repair": ["rational-vs-combi"],
+}
+
+export function getComparisonsForService(
+  serviceSlug: string,
+): ComparisonProfile[] {
+  return (COMPARISONS_BY_SERVICE[serviceSlug] ?? [])
+    .map((slug) => getBrandComparison(slug))
+    .filter((c): c is ComparisonProfile => Boolean(c))
+}

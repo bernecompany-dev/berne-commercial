@@ -7,6 +7,7 @@ import { ServicesGrid } from "@/components/services-grid"
 import { IndustriesSection } from "@/components/industries-section"
 import { WhyUs } from "@/components/why-us"
 import { BrandCloud } from "@/components/brand-cloud"
+import { CompareTeaser } from "@/components/compare-teaser"
 import { FounderSection } from "@/components/founder-section"
 import { TeamGrid } from "@/components/team-grid"
 import { CredentialsSection } from "@/components/credentials-section"
@@ -59,6 +60,7 @@ export default function HomePage() {
         <FounderSection locale="en" />
         <TeamGrid compact locale="en" />
         <BrandCloud locale="en" />
+        <CompareTeaser />
         <CredentialsSection locale="en" />
         <TrustedBy locale="en" />
         <ReviewsSection locale="en" />

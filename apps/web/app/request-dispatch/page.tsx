@@ -10,10 +10,9 @@ export const metadata: Metadata = metaFor({
   path: "/request-dispatch",
 })
 
-type SearchParams = { searchParams: Promise<{ city?: string; service?: string }> }
-
-export default async function RequestDispatchPage({ searchParams }: SearchParams) {
-  const params = await searchParams
+// CTA query params (?city= ?service= ?brand= ?topic=) are read client-side
+// inside <DispatchForm/> so this route stays statically prerendered.
+export default function RequestDispatchPage() {
   return (
     <PageShell>
       <PageHero
@@ -23,7 +22,7 @@ export default async function RequestDispatchPage({ searchParams }: SearchParams
       />
       <section className="bg-background py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <DispatchForm defaults={{ city: params.city, service: params.service }} />
+          <DispatchForm />
         </div>
       </section>
     </PageShell>

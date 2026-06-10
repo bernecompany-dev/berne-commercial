@@ -61,23 +61,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPaths = Object.entries(STATIC_MATRIX).map(([p, cfg]) => ({
     url: `${base}${p}`,
-    lastModified: now,
     changeFrequency: cfg.changeFrequency,
     priority: cfg.priority,
   }))
 
   const esStaticPaths = Object.entries(STATIC_MATRIX)
     // /es is the home counterpart — emit it separately so we can priority=0.95
-    .filter(([p]) => p !== "")
+    // /es/team does not exist (team pages are EN-only) — listing it 404'd.
+    .filter(([p]) => p !== "" && p !== "/team")
     .map(([p, cfg]) => ({
       url: `${base}/es${p}`,
-      lastModified: now,
       changeFrequency: cfg.changeFrequency,
       priority: Math.max(0.1, +(cfg.priority - ES_DROP).toFixed(2)),
     }))
   esStaticPaths.unshift({
     url: `${base}/es`,
-    lastModified: now,
     changeFrequency: "weekly" as const,
     priority: 0.95,
   })
@@ -97,28 +95,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const serviceDetails = services.map((s) => ({
     url: `${base}/services/${s.slug}`,
-    lastModified: now,
     changeFrequency: "weekly" as const,
     priority: 0.9,
   }))
 
   const esServiceDetails = services.map((s) => ({
     url: `${base}/es/services/${s.slug}`,
-    lastModified: now,
     changeFrequency: "weekly" as const,
     priority: 0.85,
   }))
 
   const brandPages = brandProfiles.map((b) => ({
     url: `${base}/brands/${b.slug}`,
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }))
 
   const esBrandPages = brandProfiles.map((b) => ({
     url: `${base}/es/brands/${b.slug}`,
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }))
@@ -128,42 +122,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const compareIndex = [
     {
       url: `${base}/compare`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.75,
     },
   ]
   const comparePages = BRAND_COMPARISONS.map((c) => ({
     url: `${base}/compare/${c.slug}`,
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }))
 
   const industryPages = INDUSTRY_PROFILES.map((p) => ({
     url: `${base}/industries/${p.slug}`,
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }))
 
   const esIndustryPages = INDUSTRY_PROFILES.map((p) => ({
     url: `${base}/es/industries/${p.slug}`,
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }))
 
   const cityPages = cities.map((c) => ({
     url: `${base}/${c.slug}`,
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }))
 
   const esCityPages = cities.map((c) => ({
     url: `${base}/es/${c.slug}`,
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }))
@@ -171,7 +159,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const cityServicePages = cities.flatMap((c) =>
     primaryServices.map((s) => ({
       url: `${base}/${c.slug}/${s.slug}`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
@@ -180,7 +167,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const esCityServicePages = cities.flatMap((c) =>
     primaryServices.map((s) => ({
       url: `${base}/es/${c.slug}/${s.slug}`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.75,
     })),
@@ -191,7 +177,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...BACK_OFFICE.map((b) => `/team/${b.slug}`),
   ].map((p) => ({
     url: `${base}${p}`,
-    lastModified: now,
     changeFrequency: "yearly" as const,
     priority: 0.6,
   }))

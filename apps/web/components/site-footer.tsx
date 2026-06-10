@@ -22,6 +22,11 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
     { href: `${p}/become-a-client`, label: tr.nav.becomeClient },
     { href: `${p}/request-dispatch`, label: tr.nav.requestDispatch },
     { href: `${p}/blog`, label: locale === "es" ? "Blog" : "Blog" },
+    // /compare is EN-only — no /es prefix (avoids a sitewide 404 link).
+    {
+      href: "/compare",
+      label: locale === "es" ? "Guías de equipos" : "Equipment guides",
+    },
     { href: `${p}/about`, label: tr.nav.about },
     { href: `${p}/team`, label: locale === "es" ? "Equipo" : "Team" },
     { href: `${p}/careers`, label: locale === "es" ? "Carreras" : "Careers" },

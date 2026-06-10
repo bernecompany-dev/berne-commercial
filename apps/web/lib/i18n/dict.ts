@@ -83,6 +83,9 @@ type Dict = {
     submitting: string
     success: string
     successDescription: string
+    successResponse: string
+    successCall: string
+    regarding: string
     serviceCallNote: string
     required: string
   }
@@ -206,6 +209,9 @@ const en: Dict = {
     success: "Dispatch request received",
     successDescription:
       "A dispatcher will contact you shortly to confirm the service window. For emergency service, please also call our dispatch line.",
+    successResponse: "Same-day response — emergency dispatch within hours.",
+    successCall: "Call dispatch",
+    regarding: "Regarding",
     serviceCallNote:
       "Commercial service call: $89 · Applied toward approved repair",
     required: "required",
@@ -348,6 +354,10 @@ const es: Dict = {
     success: "Solicitud de despacho recibida",
     successDescription:
       "Un despachador se comunicará pronto para confirmar la ventana de servicio. Para servicio de emergencia, llame también a nuestra línea de despacho.",
+    successResponse:
+      "Respuesta el mismo día — despacho de emergencia en cuestión de horas.",
+    successCall: "Llamar a despacho",
+    regarding: "Asunto",
     serviceCallNote:
       "Llamada de servicio comercial: $89 · Se aplica al costo de la reparación aprobada",
     required: "requerido",

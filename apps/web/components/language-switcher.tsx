@@ -9,12 +9,28 @@ function detectLocale(pathname: string): Locale {
   return pathname === "/es" || pathname.startsWith("/es/") ? "es" : "en"
 }
 
+/**
+ * EN sections that have NO Spanish counterpart. Blindly prefixing these with
+ * /es produced sitewide 404 links (/es/compare/*, /es/team/*, /es/blog/<slug>).
+ * Keep in sync with the app/es/ route tree.
+ */
+const EN_ONLY_PREFIXES = ["/compare", "/team"]
+
 function toAlt(pathname: string, target: Locale): string {
   if (target === "es") {
     if (pathname === "/") return "/es"
+    if (
+      EN_ONLY_PREFIXES.some(
+        (p) => pathname === p || pathname.startsWith(`${p}/`),
+      )
+    ) {
+      return "/es"
+    }
+    // Individual blog posts are EN-only; the ES blog index exists.
+    if (pathname.startsWith("/blog/")) return "/es/blog"
     return `/es${pathname}`
   }
-  // target = en
+  // target = en — every ES route has an EN counterpart.
   if (pathname === "/es") return "/"
   if (pathname.startsWith("/es/")) return pathname.replace(/^\/es/, "")
   return pathname
