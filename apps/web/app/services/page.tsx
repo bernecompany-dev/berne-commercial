@@ -22,14 +22,14 @@ export default function ServicesPage() {
         title="Commercial repair services"
         description="Refrigeration, restaurant equipment, ice machines, commercial laundry and back-of-house systems."
       />
-      <section className="bg-background py-20">
+      <section className="bg-background py-16">
         <div className="mx-auto max-w-7xl space-y-14 px-4 sm:px-6 lg:px-8">
           {groups.map((g) => (
             <div key={g.category}>
-              <h2 className="text-xl font-semibold tracking-tight">
+              <h2 className="text-2xl font-semibold tracking-tight">
                 {g.label}
               </h2>
-              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {g.items.map((s) => (
                   <Link key={s.slug} href={`/services/${s.slug}`} className="group">
                     <Card className="h-full gap-3 p-5 transition-all hover:border-primary/40 hover:shadow-md">
@@ -37,7 +37,7 @@ export default function ServicesPage() {
                         <span className="text-sm font-semibold">{s.title}</span>
                         <ArrowUpRight className="size-4 text-muted-foreground transition-colors group-hover:text-primary" />
                       </div>
-                      <p className="text-sm text-muted-foreground">{s.summary}</p>
+                      <p className="text-xs leading-relaxed text-muted-foreground">{s.summary}</p>
                     </Card>
                   </Link>
                 ))}

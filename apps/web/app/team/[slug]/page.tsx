@@ -326,7 +326,7 @@ export default async function TeamMemberPage({ params }: Params) {
                   href="/request-dispatch"
                   className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary/40 bg-background px-4 py-2.5 text-sm font-semibold text-foreground hover:border-primary"
                 >
-                  Request dispatch online
+                  Request service online
                 </Link>
               </div>
             </aside>

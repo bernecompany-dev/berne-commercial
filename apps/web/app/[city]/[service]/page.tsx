@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowRight, MapPin } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { AnchorButton, LinkButton } from "@/components/link-button"
@@ -90,18 +90,17 @@ export default async function CityServicePage({ params }: Params) {
           { name: s.shortTitle },
         ]}
       />
+      {/* Eyebrow carries the one fact the H1 lacks (the county); the service
+          and city already appear in the H1 and breadcrumb. Badges restate
+          nothing from the TrustStrip above. */}
       <PageHero
-        eyebrow={`${COUNTIES[c.county]} County · ${s.shortTitle}`}
+        eyebrow={`${COUNTIES[c.county]} County`}
         title={`${s.title} in ${c.name}, FL`}
         description={cityServiceIntro(c, s)}
       >
         <div className="flex flex-wrap gap-2">
           <Badge variant="outline" className="border-primary/30 bg-primary/5 text-primary">
-            Commercial service call: {site.serviceCall}
-          </Badge>
-          <Badge variant="outline">Same-day dispatch</Badge>
-          <Badge variant="outline" className="gap-1.5">
-            <MapPin className="size-3" /> {c.name}
+            Commercial service call: {site.serviceCall} — applied toward approved repair
           </Badge>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
@@ -154,9 +153,9 @@ export default async function CityServicePage({ params }: Params) {
       </section>
 
       <section className="border-b border-border/60 bg-accent/30 py-16">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold tracking-tight">
-            Request {s.shortTitle.toLowerCase()} dispatch in {c.name}
+            Request {s.shortTitle.toLowerCase()} service in {c.name}
           </h2>
           <div className="mt-8">
             <DispatchForm defaults={{ city: c.name, service: s.slug }} />
@@ -175,7 +174,9 @@ export default async function CityServicePage({ params }: Params) {
 
       <section className="bg-background py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-base font-semibold tracking-tight">
+          {/* Pill colors keep one sitewide meaning (matches the city page):
+              primary tint = service links, gray = geography links. */}
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
             Other services in {c.name}
           </h2>
           <div className="mt-4 flex flex-wrap gap-2">
@@ -185,7 +186,7 @@ export default async function CityServicePage({ params }: Params) {
                 <Link
                   key={p.slug}
                   href={`/${c.slug}/${p.slug}`}
-                  className="rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground hover:text-foreground"
+                  className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/10"
                 >
                   {p.shortTitle}
                 </Link>
@@ -193,7 +194,7 @@ export default async function CityServicePage({ params }: Params) {
           </div>
           {nearby.length ? (
             <>
-              <h2 className="mt-8 text-base font-semibold tracking-tight">
+              <h2 className="mt-8 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
                 {s.shortTitle} in nearby cities
               </h2>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -201,7 +202,7 @@ export default async function CityServicePage({ params }: Params) {
                   <Link
                     key={n.slug}
                     href={`/${n.slug}/${s.slug}`}
-                    className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-primary"
+                    className="rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground hover:bg-accent hover:text-foreground"
                   >
                     {s.shortTitle} in {n.name}
                   </Link>
@@ -221,9 +222,12 @@ export default async function CityServicePage({ params }: Params) {
         })}
       />
       <JsonLd data={faqSchema(combinedFaqs)} />
+      {/* Must mirror the visible <Breadcrumbs> trail exactly — Google
+          penalises drift (see breadcrumbs.tsx). */}
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", url: `${site.url}/` },
+          { name: "Service Areas", url: `${site.url}/service-areas` },
           { name: c.name, url: `${site.url}/${c.slug}` },
           { name: s.shortTitle, url: `${site.url}/${c.slug}/${s.slug}` },
         ])}

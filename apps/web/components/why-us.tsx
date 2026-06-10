@@ -33,8 +33,8 @@ export function WhyUs({ locale = "en" }: { locale?: Locale }) {
         <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border/60 bg-border/60 sm:grid-cols-2 lg:grid-cols-3">
           {items.map(({ icon: Icon, title, body }) => (
             <div key={title} className="flex flex-col gap-3 bg-background p-6">
-              <span className="inline-flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Icon className="size-5" />
+              <span className="inline-flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Icon className="size-4" />
               </span>
               <div className="text-sm font-semibold text-foreground">
                 {title}

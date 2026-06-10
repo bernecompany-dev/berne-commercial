@@ -128,9 +128,9 @@ export default async function ServiceDetailPageES({ params }: Params) {
       </section>
 
       <section className="border-b border-border/60 bg-accent/30 py-16">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold tracking-tight">
-            Solicitar despacho de {es.shortTitle.toLowerCase()}
+            Solicitar {es.shortTitle.toLowerCase()}
           </h2>
           <p className="mt-2 text-muted-foreground">
             Un despachador confirmará pronto la ventana de servicio.

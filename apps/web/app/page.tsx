@@ -2,7 +2,6 @@ import { SiteNavbar } from "@/components/site-navbar"
 import { SiteFooter } from "@/components/site-footer"
 import { MobileCtaBar } from "@/components/mobile-cta-bar"
 import { Hero } from "@/components/hero"
-import { TrustStrip } from "@/components/trust-strip"
 import { ServicesGrid } from "@/components/services-grid"
 import { IndustriesSection } from "@/components/industries-section"
 import { WhyUs } from "@/components/why-us"
@@ -51,26 +50,29 @@ export default function HomePage() {
   return (
     <>
       <SiteNavbar locale="en" />
+      {/* Section order: the dispatch form (the page's reason to exist) sits
+          right after the core pitch instead of 13th; the trust stack does its
+          work below for skeptics who keep scrolling. TrustStrip removed — the
+          hero highlight cards directly above made the same three claims. */}
       <main id="main" tabIndex={-1} className="pb-20 md:pb-0 focus:outline-none">
         <Hero locale="en" />
-        <TrustStrip />
         <ServicesGrid locale="en" />
         <IndustriesSection locale="en" />
         <WhyUs locale="en" />
+        <DispatchSection locale="en" />
+        <ReviewsSection locale="en" />
+        <CredentialsSection locale="en" />
         <FounderSection locale="en" />
         <TeamGrid compact locale="en" />
         <BrandCloud locale="en" />
         <CompareTeaser />
-        <CredentialsSection locale="en" />
         <TrustedBy locale="en" />
-        <ReviewsSection locale="en" />
-        <DispatchSection locale="en" />
-        <ServiceAreasLinks />
         <FAQSection
           faqs={homepageFaqs}
           title="Commercial repair questions"
           description="Common questions from restaurants, production facilities and enterprise clients."
         />
+        <ServiceAreasLinks />
       </main>
       <SiteFooter locale="en" />
       <MobileCtaBar locale="en" />

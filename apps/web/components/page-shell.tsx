@@ -17,10 +17,14 @@ export function PageShell({
   children,
   locale = "en",
   showTrustStrip = true,
+  hideDispatchCta = false,
 }: {
   children: React.ReactNode
   locale?: Locale
   showTrustStrip?: boolean
+  // For pages that ARE the dispatch form (request-dispatch, contact) — the
+  // mobile bar's dispatch button would link to the current page.
+  hideDispatchCta?: boolean
 }) {
   return (
     <>
@@ -28,7 +32,7 @@ export function PageShell({
       {showTrustStrip ? <TrustStrip /> : null}
       <main id="main" tabIndex={-1} className="pb-20 md:pb-0 focus:outline-none">{children}</main>
       <SiteFooter locale={locale} />
-      <MobileCtaBar locale={locale} />
+      <MobileCtaBar locale={locale} hideDispatch={hideDispatchCta} />
     </>
   )
 }
@@ -49,7 +53,7 @@ export function PageHero({
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="max-w-3xl">
           {eyebrow ? (
-            <div className="mb-3 text-xs font-medium uppercase tracking-wider text-primary">
+            <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
               {eyebrow}
             </div>
           ) : null}

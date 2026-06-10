@@ -72,9 +72,15 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#13161d" },
+  ],
   width: "device-width",
   initialScale: 1,
+  // Exposes env(safe-area-inset-*) so the fixed bottom CTA bar can pad past
+  // the iOS home indicator.
+  viewportFit: "cover",
 }
 
 export default function RootLayout({

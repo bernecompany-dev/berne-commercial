@@ -3,7 +3,6 @@ import { SiteNavbar } from "@/components/site-navbar"
 import { SiteFooter } from "@/components/site-footer"
 import { MobileCtaBar } from "@/components/mobile-cta-bar"
 import { Hero } from "@/components/hero"
-import { TrustStrip } from "@/components/trust-strip"
 import { ServicesGrid } from "@/components/services-grid"
 import { IndustriesSection } from "@/components/industries-section"
 import { WhyUs } from "@/components/why-us"
@@ -70,19 +69,21 @@ export default function HomePageES() {
   return (
     <>
       <SiteNavbar locale="es" />
+      {/* Section order mirrors the EN home: dispatch form right after the
+          core pitch, trust stack below. TrustStrip removed — the hero
+          highlight cards above make the same claims. */}
       <main id="main" tabIndex={-1} className="pb-20 md:pb-0 focus:outline-none">
         <Hero locale="es" />
-        <TrustStrip />
         <ServicesGrid locale="es" />
         <IndustriesSection locale="es" />
         <WhyUs locale="es" />
+        <DispatchSection locale="es" />
+        <ReviewsSection locale="es" />
+        <CredentialsSection locale="es" />
         <FounderSection locale="es" />
         <TeamGrid compact locale="es" />
         <BrandCloud locale="es" />
-        <CredentialsSection locale="es" />
         <TrustedBy locale="es" />
-        <ReviewsSection locale="es" />
-        <DispatchSection locale="es" />
         <FAQSection
           faqs={homepageFaqs}
           title="Preguntas sobre reparación comercial"

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Menu, Phone, X } from "lucide-react"
 import { AnchorButton, LinkButton } from "./link-button"
@@ -13,6 +14,9 @@ import { cn } from "@workspace/ui/lib/utils"
 
 export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname() ?? "/"
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(href + "/")
   const tr = t(locale)
   const p = locale === "es" ? "/es" : ""
   const home = locale === "es" ? "/es" : "/"
@@ -39,15 +43,25 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
             <Link
               key={n.href}
               href={n.href}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              aria-current={isActive(n.href) ? "page" : undefined}
+              className={cn(
+                "text-sm transition-colors",
+                isActive(n.href)
+                  ? "font-medium text-foreground"
+                  : "text-muted-foreground hover:text-foreground",
+              )}
             >
               {n.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
-          <LanguageSwitcher compact />
+        {/* Phone + dispatch surface from md so tablets (768–1023px) are never
+            without a visible conversion CTA — the bottom bar is md:hidden. */}
+        <div className="hidden items-center gap-2 md:flex">
+          <div className="hidden lg:block">
+            <LanguageSwitcher compact />
+          </div>
           <AnchorButton href={site.phoneHref} variant="ghost" size="sm" className="gap-2">
             <Phone className="size-4" />
             {site.phone}
@@ -60,7 +74,7 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex size-9 items-center justify-center rounded-md border border-border lg:hidden"
+          className="inline-flex size-11 items-center justify-center rounded-md border border-border lg:hidden"
           aria-label={open ? (locale === "es" ? "Cerrar menú" : "Close menu") : (locale === "es" ? "Abrir menú" : "Open menu")}
           aria-expanded={open}
           aria-controls="mobile-nav"
@@ -82,7 +96,13 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
               key={n.href}
               href={n.href}
               onClick={() => setOpen(false)}
-              className="block rounded-md px-2 py-2 text-sm text-foreground hover:bg-muted"
+              aria-current={isActive(n.href) ? "page" : undefined}
+              className={cn(
+                "block rounded-md px-2 py-3 text-sm hover:bg-muted",
+                isActive(n.href)
+                  ? "font-medium text-foreground bg-muted/60"
+                  : "text-foreground",
+              )}
             >
               {n.label}
             </Link>

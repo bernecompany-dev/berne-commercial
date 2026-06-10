@@ -20,7 +20,7 @@ export function FAQSection({
   description?: string
 }) {
   return (
-    <section className="border-b border-border/60 bg-background py-20 sm:py-24">
+    <section className="border-b border-border/60 bg-background py-16 sm:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow={eyebrow}
@@ -28,7 +28,7 @@ export function FAQSection({
           description={description}
           align="center"
         />
-        <Accordion className="mt-10">
+        <Accordion className="mt-12">
           {faqs.map((f, i) => (
             <AccordionItem key={i}>
               <AccordionTrigger className="text-left text-base font-medium">

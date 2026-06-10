@@ -57,7 +57,7 @@ export default function IndustriesPage() {
       >
         <div className="flex flex-wrap gap-3">
           <LinkButton href="/request-dispatch">
-            Request Dispatch <ArrowRight className="size-4" />
+            Request Service <ArrowRight className="size-4" />
           </LinkButton>
           <LinkButton href="/services" variant="outline">
             Browse all services
@@ -142,7 +142,7 @@ export default function IndustriesPage() {
             cover it. Call dispatch for a scope conversation.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <LinkButton href="/request-dispatch">Request Dispatch</LinkButton>
+            <LinkButton href="/request-dispatch">Request Service</LinkButton>
             <LinkButton href="/contact" variant="outline">
               Contact us
             </LinkButton>

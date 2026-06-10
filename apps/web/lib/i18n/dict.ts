@@ -79,6 +79,12 @@ type Dict = {
     issue: string
     issuePlaceholder: string
     preferredTime: string
+    preferredTimePlaceholder: string
+    moreDetails: string
+    requiredNote: string
+    errorBeforePhone: string
+    errorAfterPhone: string
+    smsConsent: string
     submit: string
     submitting: string
     success: string
@@ -121,13 +127,14 @@ const en: Dict = {
     becomeClient: "Become a Client",
     about: "About",
     contact: "Contact",
-    requestDispatch: "Request Dispatch",
+    // One name for the one conversion action, sitewide (ES already unified).
+    requestDispatch: "Request Service",
   },
   cta: {
     requestService: "Request Service",
     callNow: "Call Now",
     becomeClient: "Become a Client",
-    requestDispatch: "Request Dispatch",
+    requestDispatch: "Request Service",
   },
   hero: {
     eyebrow: "South Florida commercial dispatch",
@@ -204,7 +211,14 @@ const en: Dict = {
     issuePlaceholder:
       "Error codes, leaks, noises, last service — anything you have.",
     preferredTime: "Preferred service window (optional)",
-    submit: "Request Dispatch",
+    preferredTimePlaceholder: "e.g. today 2–4 PM, or tomorrow morning",
+    moreDetails: "More details (optional)",
+    requiredNote: "Fields marked * are required.",
+    errorBeforePhone: "We couldn't send your request. Please try again, or call",
+    errorAfterPhone: "— dispatch answers 24/7.",
+    smsConsent:
+      "By submitting, you agree to receive service messages from Berne Commercial. Reply STOP to opt out, HELP for help. Msg & data rates may apply.",
+    submit: "Request Service",
     submitting: "Sending…",
     success: "Dispatch request received",
     successDescription:
@@ -349,7 +363,15 @@ const es: Dict = {
     issuePlaceholder:
       "Códigos de error, fugas, ruidos, último servicio — todo lo que tenga.",
     preferredTime: "Ventana de servicio preferida (opcional)",
-    submit: "Solicitar despacho",
+    preferredTimePlaceholder: "p. ej. hoy 2–4 PM, o mañana por la mañana",
+    moreDetails: "Más detalles (opcional)",
+    requiredNote: "Los campos marcados con * son obligatorios.",
+    errorBeforePhone:
+      "No pudimos enviar su solicitud. Inténtelo de nuevo o llame al",
+    errorAfterPhone: "— el despacho responde 24/7.",
+    smsConsent:
+      "Al enviar, acepta recibir mensajes de servicio de Berne Commercial. Responda STOP para darse de baja, HELP para ayuda. Pueden aplicar tarifas de mensajes y datos.",
+    submit: "Solicitar servicio",
     submitting: "Enviando…",
     success: "Solicitud de despacho recibida",
     successDescription:

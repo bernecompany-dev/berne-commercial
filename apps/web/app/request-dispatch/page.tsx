@@ -14,7 +14,7 @@ export const metadata: Metadata = metaFor({
 // inside <DispatchForm/> so this route stays statically prerendered.
 export default function RequestDispatchPage() {
   return (
-    <PageShell>
+    <PageShell hideDispatchCta>
       <PageHero
         eyebrow="Dispatch"
         title="Request commercial dispatch"

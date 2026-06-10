@@ -85,13 +85,12 @@ export default async function CityPage({ params }: Params) {
         title={`Commercial Equipment Repair in ${c.name}, FL`}
         description={cityIntro(c)}
       >
+        {/* One badge with NEW information — "Same-day" and "Licensed" already
+            sit in the TrustStrip a viewport-line above, and the city is in
+            the H1. Repetition reads as noise, not reassurance. */}
         <div className="flex flex-wrap gap-2">
           <Badge variant="outline" className="border-primary/30 bg-primary/5 text-primary">
-            Same-day dispatch
-          </Badge>
-          <Badge variant="outline">Licensed & insured</Badge>
-          <Badge variant="outline" className="gap-1.5">
-            <MapPin className="size-3" /> {c.name}
+            {site.serviceCall} service call — applied toward approved repair
           </Badge>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
@@ -112,14 +111,14 @@ export default async function CityPage({ params }: Params) {
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {services.map((s) => (
               <Link key={s.slug} href={`/${c.slug}/${s.slug}`} className="group">
-                <Card className="h-full gap-2 p-5 transition-all hover:border-primary/40 hover:shadow-md">
+                <Card className="h-full gap-3 p-5 transition-all hover:border-primary/40 hover:shadow-md">
                   <div className="flex items-start justify-between gap-2">
                     <span className="text-sm font-semibold">
                       {s.shortTitle} in {c.name}
                     </span>
                     <ArrowUpRight className="size-4 text-muted-foreground transition-colors group-hover:text-primary" />
                   </div>
-                  <p className="text-xs text-muted-foreground">{s.summary}</p>
+                  <p className="text-xs leading-relaxed text-muted-foreground">{s.summary}</p>
                 </Card>
               </Link>
             ))}
@@ -199,9 +198,9 @@ export default async function CityPage({ params }: Params) {
       ) : null}
 
       <section className="border-b border-border/60 bg-accent/30 py-16">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold tracking-tight">
-            Request dispatch in {c.name}
+            Request service in {c.name}
           </h2>
           <div className="mt-8">
             <DispatchForm defaults={{ city: c.name }} />
@@ -209,15 +208,14 @@ export default async function CityPage({ params }: Params) {
         </div>
       </section>
 
-      {/* Visible FAQ for enriched cities — the FAQ JSON-LD below should not
-          reference content the page doesn't render. */}
-      {enrichment ? (
-        <FAQSection
-          faqs={faqs}
-          title={`${c.name} commercial repair FAQ`}
-          description="From dispatch and the Palm Beach County route techs."
-        />
-      ) : null}
+      {/* FAQ renders for EVERY city — the answers (price, same-day coverage,
+          equipment list) are exactly what a city-page visitor is asking, and
+          the visible content now always matches the FAQ JSON-LD below. */}
+      <FAQSection
+        faqs={faqs}
+        title={`${c.name} commercial repair FAQ`}
+        description="From our dispatch desk and route technicians."
+      />
 
       <CityMap city={c.name} />
 
@@ -226,7 +224,10 @@ export default async function CityPage({ params }: Params) {
       {nearby.length ? (
         <section className="border-b border-border/60 bg-background py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-base font-semibold tracking-tight">
+            {/* Link-farm headings use the muted overline recipe (footer/sidebar
+                convention) — pill colors keep one sitewide meaning: gray =
+                geography, primary tint = services. */}
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
               Nearby service areas
             </h2>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -234,13 +235,13 @@ export default async function CityPage({ params }: Params) {
                 <Link
                   key={n.slug}
                   href={`/${n.slug}`}
-                  className="rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground hover:text-foreground"
+                  className="rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground hover:bg-accent hover:text-foreground"
                 >
                   {n.name}
                 </Link>
               ))}
             </div>
-            <h3 className="mt-8 text-base font-semibold tracking-tight">
+            <h3 className="mt-8 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
               Primary services
             </h3>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -248,7 +249,7 @@ export default async function CityPage({ params }: Params) {
                 <Link
                   key={s.slug}
                   href={`/${c.slug}/${s.slug}`}
-                  className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-primary"
+                  className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/10"
                 >
                   {s.shortTitle} in {c.name}
                 </Link>

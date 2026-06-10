@@ -1,13 +1,14 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react"
+import { ArrowRight, ArrowUpRight } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { AnchorButton, LinkButton } from "@/components/link-button"
 import { Card } from "@workspace/ui/components/card"
 import { Badge } from "@workspace/ui/components/badge"
 import { DispatchForm } from "@/components/dispatch-form"
+import { FAQSection } from "@/components/faq-section"
 import { CityMap } from "@/components/city-map"
 import { TrustedBy } from "@/components/trusted-by"
 import { JsonLd } from "@/components/json-ld"
@@ -93,16 +94,14 @@ export default async function CityPageES({ params }: Params) {
         title={`Reparación de Equipo Comercial en ${c.name}, FL`}
         description={cityIntro(c, "es")}
       >
+        {/* One badge with NEW info — same-day/licensed live in the TrustStrip
+            above, the city is in the H1 (mirrors the EN template). */}
         <div className="flex flex-wrap gap-2">
           <Badge
             variant="outline"
             className="border-primary/30 bg-primary/5 text-primary"
           >
-            Despacho el mismo día
-          </Badge>
-          <Badge variant="outline">Con licencia y asegurado</Badge>
-          <Badge variant="outline" className="gap-1.5">
-            <MapPin className="size-3" /> {c.name}
+            Llamada de servicio {site.serviceCall} — se aplica a la reparación aprobada
           </Badge>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
@@ -142,15 +141,24 @@ export default async function CityPageES({ params }: Params) {
       </section>
 
       <section className="border-b border-border/60 bg-accent/30 py-16">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold tracking-tight">
-            Solicitar despacho en {c.name}
+            Solicitar servicio en {c.name}
           </h2>
           <div className="mt-8">
             <DispatchForm locale="es" defaults={{ city: c.name }} />
           </div>
         </div>
       </section>
+
+      {/* Visible FAQ — must exist for the faqSchema JSON-LD below to be
+          honest (it was previously emitted with no rendered FAQ at all). */}
+      <FAQSection
+        faqs={faqs}
+        eyebrow="FAQ"
+        title={`Preguntas frecuentes — ${c.name}`}
+        description="De nuestro despacho y técnicos de ruta."
+      />
 
       <CityMap city={c.name} locale="es" />
 
@@ -159,7 +167,7 @@ export default async function CityPageES({ params }: Params) {
       {nearby.length ? (
         <section className="border-b border-border/60 bg-background py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-base font-semibold tracking-tight">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
               Áreas de servicio cercanas
             </h2>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -167,13 +175,13 @@ export default async function CityPageES({ params }: Params) {
                 <Link
                   key={n.slug}
                   href={`/es/${n.slug}`}
-                  className="rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground hover:text-foreground"
+                  className="rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground hover:bg-accent hover:text-foreground"
                 >
                   {n.name}
                 </Link>
               ))}
             </div>
-            <h3 className="mt-8 text-base font-semibold tracking-tight">
+            <h3 className="mt-8 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
               Servicios principales
             </h3>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -183,7 +191,7 @@ export default async function CityPageES({ params }: Params) {
                   <Link
                     key={s.slug}
                     href={`/es/${c.slug}/${s.slug}`}
-                    className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-primary"
+                    className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/10"
                   >
                     {es.shortTitle} en {c.name}
                   </Link>

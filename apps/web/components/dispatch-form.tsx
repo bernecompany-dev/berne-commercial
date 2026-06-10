@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useState, useSyncExternalStore } from "react"
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react"
 
 declare global {
   interface Window {
@@ -9,8 +9,8 @@ declare global {
   }
 }
 
-import { CheckCircle2, Loader2, Phone } from "lucide-react"
-import { Button } from "@workspace/ui/components/button"
+import { CheckCircle2, ChevronDown, Loader2, Phone } from "lucide-react"
+import { Button, buttonVariants } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 import { Textarea } from "@workspace/ui/components/textarea"
 import { Label } from "@workspace/ui/components/label"
@@ -22,8 +22,10 @@ import { t } from "@/lib/i18n/dict"
 import type { Locale } from "@/lib/i18n/config"
 import { cn } from "@workspace/ui/lib/utils"
 
+// Mirrors the kit Input recipe exactly (text-base on mobile suppresses iOS
+// focus-zoom; same focus ring + dark fill as the adjacent inputs).
 const selectClass =
-  "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40 disabled:cursor-not-allowed disabled:opacity-50"
+  "flex h-11 w-full rounded-md border border-input bg-transparent px-2.5 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 md:h-9 md:text-sm dark:bg-input/30"
 
 type Status = "idle" | "submitting" | "success" | "error"
 
@@ -67,7 +69,12 @@ export function DispatchForm({
 }) {
   const tr = t(locale)
   const [status, setStatus] = useState<Status>("idle")
-  const [errorMsg, setErrorMsg] = useState<string>("")
+  // Move focus to the success heading so screen-reader/keyboard users hear
+  // the state change (the submit button they were on unmounts).
+  const successHeadingRef = useRef<HTMLHeadingElement>(null)
+  useEffect(() => {
+    if (status === "success") successHeadingRef.current?.focus()
+  }, [status])
   // Read CTA query params client-side (post-hydration) — keeps every route
   // embedding this form statically prerendered.
   const search = useSyncExternalStore(
@@ -113,7 +120,6 @@ export function DispatchForm({
     e.preventDefault()
     const form = e.currentTarget
     setStatus("submitting")
-    setErrorMsg("")
 
     const formData = new FormData(form)
     const payload = Object.fromEntries(formData.entries())
@@ -125,8 +131,11 @@ export function DispatchForm({
         body: JSON.stringify(payload),
       })
       if (!res.ok) {
-        const text = await res.text()
-        throw new Error(text || "Submission failed")
+        // Server bodies are not UX copy — log for diagnostics, show the
+        // fixed human message with the phone escape hatch instead.
+        const text = await res.text().catch(() => "")
+        console.error("dispatch submit failed:", res.status, text)
+        throw new Error("Submission failed")
       }
       form.reset()
       setStatus("success")
@@ -149,24 +158,33 @@ export function DispatchForm({
         })
       }
     } catch (err) {
+      console.error("dispatch submit error:", err)
       setStatus("error")
-      setErrorMsg(err instanceof Error ? err.message : "Submission failed")
     }
   }
 
   if (status === "success") {
     return (
-      <Card className="flex flex-col items-center gap-3 p-10 text-center">
+      <Card
+        role="status"
+        className="flex flex-col items-center gap-3 p-10 text-center"
+      >
         <span className="inline-flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary">
           <CheckCircle2 className="size-6" />
         </span>
-        <h3 className="text-lg font-semibold">{tr.form.success}</h3>
+        <h3
+          ref={successHeadingRef}
+          tabIndex={-1}
+          className="text-lg font-semibold focus:outline-none"
+        >
+          {tr.form.success}
+        </h3>
         <p className="max-w-md text-sm text-muted-foreground">
           {tr.form.successDescription}
         </p>
         <a
           href={site.phoneHref}
-          className="mt-1 inline-flex h-10 items-center gap-2 rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+          className={cn(buttonVariants({ size: "lg" }), "mt-1 h-11 gap-2 font-semibold")}
         >
           <Phone className="size-4" />
           {tr.form.successCall}: {site.phone}
@@ -190,6 +208,7 @@ export function DispatchForm({
         onSubmit={handleSubmit}
         className="grid gap-5"
       >
+        <p className="text-xs text-muted-foreground">{tr.form.requiredNote}</p>
         {topicLabel ? (
           <p className="rounded-md border border-primary/25 bg-primary/5 px-3 py-2 text-sm text-foreground/90">
             <span className="font-semibold text-primary">
@@ -254,11 +273,12 @@ export function DispatchForm({
           </SelectField>
         </div>
 
-        {/* Urgency is a routing-critical field — keep it visible, not buried
-            in the optional-details accordion. */}
+        {/* Urgency is routing-critical — visible AND required, so emergency
+            requests can't arrive untriaged. */}
         <SelectField
           label={tr.form.urgency}
           name="urgency"
+          required
           placeholder={tr.form.selectPlaceholder}
         >
           {urgencyOptions.map((u) => (
@@ -268,15 +288,26 @@ export function DispatchForm({
           ))}
         </SelectField>
 
+        {/* The issue description is as routing-critical as urgency — what the
+            caller is bursting to tell us stays visible, not behind details. */}
+        <div className="grid gap-2">
+          <Label htmlFor="issue">{tr.form.issue}</Label>
+          <Textarea
+            id="issue"
+            name="issue"
+            rows={4}
+            defaultValue={issueDefault}
+            placeholder={tr.form.issuePlaceholder}
+          />
+        </div>
+
         <details className="group rounded-md border border-border/60 bg-background/40 open:bg-background/60">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 text-sm font-medium text-foreground/90 hover:text-foreground">
-            <span>More details (optional)</span>
-            <span
-              className="text-xs text-muted-foreground transition-transform group-open:rotate-180"
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-2 rounded-md px-4 py-3 text-sm font-medium text-foreground/90 hover:text-foreground focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 [&::-webkit-details-marker]:hidden">
+            <span>{tr.form.moreDetails}</span>
+            <ChevronDown
+              className="size-4 text-muted-foreground transition-transform group-open:rotate-180"
               aria-hidden
-            >
-              ▾
-            </span>
+            />
           </summary>
           <div className="space-y-4 px-4 pb-4 pt-1">
             <div className="grid gap-4 sm:grid-cols-2">
@@ -296,33 +327,34 @@ export function DispatchForm({
             </div>
 
             <div className="grid gap-2">
-              <Label htmlFor="issue">{tr.form.issue}</Label>
-              <Textarea
-                id="issue"
-                name="issue"
-                rows={4}
-                defaultValue={issueDefault}
-                placeholder={tr.form.issuePlaceholder}
-              />
-            </div>
-
-            <div className="grid gap-2">
               <Label htmlFor="preferredTime">{tr.form.preferredTime}</Label>
-              <Input id="preferredTime" name="preferredTime" />
+              <Input
+                id="preferredTime"
+                name="preferredTime"
+                placeholder={tr.form.preferredTimePlaceholder}
+              />
             </div>
           </div>
         </details>
 
         {status === "error" ? (
-          <p className="rounded-md border border-destructive/30 bg-destructive/5 px-3 py-2 text-sm text-destructive">
-            {errorMsg || "Submission failed. Please try again."}
+          <p
+            role="alert"
+            className="rounded-md border border-destructive/30 bg-destructive/5 px-3 py-2 text-sm text-destructive"
+          >
+            {tr.form.errorBeforePhone}{" "}
+            <a
+              href={site.phoneHref}
+              className="font-semibold underline underline-offset-2"
+            >
+              {site.phone}
+            </a>{" "}
+            {tr.form.errorAfterPhone}
           </p>
         ) : null}
 
         <p className="text-xs leading-relaxed text-muted-foreground">
-          By submitting, you agree to receive service messages from Berne
-          Commercial. Reply STOP to opt out, HELP for help. Msg &amp; data rates
-          may apply.
+          {tr.form.smsConsent}
         </p>
 
         <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -331,7 +363,7 @@ export function DispatchForm({
             type="submit"
             size="lg"
             disabled={status === "submitting"}
-            className={cn("min-w-44 gap-2")}
+            className={cn("h-11 min-w-44 gap-2")}
           >
             {status === "submitting" ? (
               <>
@@ -368,7 +400,12 @@ function Field({
     <div className="grid gap-2">
       <Label htmlFor={name}>
         {label}
-        {required ? <span className="text-destructive"> *</span> : null}
+        {required ? (
+          <span aria-hidden className="text-destructive">
+            {" "}
+            *
+          </span>
+        ) : null}
       </Label>
       <Input
         id={name}
@@ -402,7 +439,12 @@ function SelectField({
     <div className="grid gap-2">
       <Label htmlFor={name}>
         {label}
-        {required ? <span className="text-destructive"> *</span> : null}
+        {required ? (
+          <span aria-hidden className="text-destructive">
+            {" "}
+            *
+          </span>
+        ) : null}
       </Label>
       <select
         id={name}

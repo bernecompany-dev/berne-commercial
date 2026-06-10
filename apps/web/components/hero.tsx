@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { ArrowRight, Phone, Shield, Snowflake, Wrench } from "lucide-react"
 import { Badge } from "@workspace/ui/components/badge"
 import { AnchorButton, LinkButton } from "./link-button"
@@ -38,20 +39,29 @@ export function Hero({ locale = "en" }: { locale?: Locale }) {
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <LinkButton href={`${p}/request-dispatch`} size="lg" className="gap-2">
+            {/* Anchor to the on-page form (DispatchSection id="dispatch") —
+                one scroll instead of a full navigation. */}
+            <LinkButton href="#dispatch" size="lg" className="h-11 gap-2">
               {tr.cta.requestService} <ArrowRight className="size-4" />
             </LinkButton>
             <AnchorButton
               href={site.phoneHref}
               size="lg"
               variant="outline"
-              className="gap-2"
+              className="h-11 gap-2"
             >
               <Phone className="size-4" /> {tr.cta.callNow}
             </AnchorButton>
-            <LinkButton href={`${p}/become-a-client`} size="lg" variant="ghost">
-              {tr.cta.becomeClient}
-            </LinkButton>
+          </div>
+          {/* B2B onboarding is a different journey — keep the path, drop the
+              third competing button (it's already in the navbar + footer). */}
+          <div className="mt-4">
+            <Link
+              href={`${p}/become-a-client`}
+              className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+            >
+              {tr.cta.becomeClient} →
+            </Link>
           </div>
         </div>
 
@@ -59,9 +69,9 @@ export function Hero({ locale = "en" }: { locale?: Locale }) {
           {highlights.map(({ icon: Icon, label }) => (
             <li
               key={label}
-              className="flex items-start gap-3 rounded-xl border border-border/60 bg-card/70 p-4 text-left shadow-sm backdrop-blur"
+              className="flex items-start gap-3 rounded-xl border border-border/60 bg-card p-4 text-left shadow-sm"
             >
-              <span className="mt-0.5 inline-flex size-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+              <span className="mt-0.5 inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                 <Icon className="size-4" />
               </span>
               <span className="text-sm font-medium leading-snug text-foreground">

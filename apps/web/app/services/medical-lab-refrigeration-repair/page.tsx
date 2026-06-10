@@ -181,7 +181,7 @@ export default function MedicalLabRefrigerationPage() {
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
           <LinkButton href="/request-dispatch?topic=medical-refrigeration">
-            Request dispatch <ArrowRight className="size-4" />
+            Request service <ArrowRight className="size-4" />
           </LinkButton>
           <AnchorButton href={site.phoneHref} variant="outline">
             Call {site.phone}
@@ -424,9 +424,9 @@ export default function MedicalLabRefrigerationPage() {
 
       {/* Dispatch form */}
       <section className="border-b border-border/60 bg-background py-16">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold tracking-tight">
-            Request medical refrigeration dispatch
+            Request medical refrigeration service
           </h2>
           <p className="mt-2 text-muted-foreground">
             A dispatcher will confirm the service window shortly. Critical

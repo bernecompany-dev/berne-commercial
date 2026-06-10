@@ -54,16 +54,16 @@ export default async function ServiceDetailPage({ params }: Params) {
         title={`${s.title} in South Florida`}
         description={s.summary}
       >
+        {/* One badge with NEW information — "Same-day" and "Licensed" sit in
+            the TrustStrip directly above this hero. */}
         <div className="flex flex-wrap gap-2">
           <Badge variant="outline" className="border-primary/30 bg-primary/5 text-primary">
-            Commercial service call: {site.serviceCall}
+            Commercial service call: {site.serviceCall} — applied toward approved repair
           </Badge>
-          <Badge variant="outline">Same-day emergency dispatch</Badge>
-          <Badge variant="outline">Licensed & insured</Badge>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
-          <LinkButton href="/request-dispatch">
-            Request Dispatch <ArrowRight className="size-4" />
+          <LinkButton href={`/request-dispatch?service=${s.slug}`}>
+            Request Service <ArrowRight className="size-4" />
           </LinkButton>
           <AnchorButton href={site.phoneHref} variant="outline">
             Call {site.phone}
@@ -86,10 +86,9 @@ export default async function ServiceDetailPage({ params }: Params) {
                 Miami-Dade, Broward and Palm Beach — same-day emergency
                 dispatch for commercial accounts.
               </p>
-              <LinkButton
-                href={`/request-dispatch?service=${s.slug}`}
-                className="mt-3"
-              >
+              {/* The same form is rendered on this page (#dispatch) — anchor
+                  to it instead of a pointless round-trip navigation. */}
+              <LinkButton href="#dispatch" className="mt-3">
                 Request Service
               </LinkButton>
             </Card>
@@ -122,7 +121,20 @@ export default async function ServiceDetailPage({ params }: Params) {
               commercial service call covers the diagnosis and is applied
               toward an approved repair.
             </p>
-            <div className="mt-6 overflow-x-auto rounded-xl border border-border">
+            <p
+              className="mt-4 text-xs text-muted-foreground md:hidden"
+              aria-hidden
+            >
+              Swipe to see costs and dispatch times →
+            </p>
+            {/* tabIndex + role: the horizontally-scrolling cost columns must
+                be reachable by keyboard, not just touch. */}
+            <div
+              tabIndex={0}
+              role="region"
+              aria-label={`${s.shortTitle} symptoms and typical repair costs`}
+              className="mt-2 overflow-x-auto rounded-xl border border-border focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 md:mt-6"
+            >
               <table className="w-full min-w-[640px] border-collapse text-sm">
                 <thead>
                   <tr className="border-b border-border bg-accent/40 text-left">
@@ -144,7 +156,7 @@ export default async function ServiceDetailPage({ params }: Params) {
                   {s.symptomTable.map((row) => (
                     <tr
                       key={row.symptom}
-                      className="border-b border-border/60 last:border-b-0 even:bg-accent/20"
+                      className="border-b border-border/60 last:border-b-0"
                     >
                       <td className="px-4 py-3 font-medium text-foreground">
                         {row.symptom}
@@ -172,10 +184,13 @@ export default async function ServiceDetailPage({ params }: Params) {
         </section>
       ) : null}
 
-      <section className="border-b border-border/60 bg-accent/30 py-16">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <section
+        id="dispatch"
+        className="border-b border-border/60 bg-accent/30 py-16"
+      >
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold tracking-tight">
-            Request {s.shortTitle.toLowerCase()} dispatch
+            Request {s.shortTitle.toLowerCase()} service
           </h2>
           <p className="mt-2 text-muted-foreground">
             A dispatcher will confirm the service window shortly.
@@ -198,7 +213,7 @@ export default async function ServiceDetailPage({ params }: Params) {
       {relatedComparisons.length ? (
         <section className="border-b border-border/60 bg-accent/30 py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-base font-semibold tracking-tight">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
               Equipment guides for {s.shortTitle.toLowerCase()}
             </h2>
             <p className="mt-2 text-sm text-muted-foreground">
@@ -210,7 +225,7 @@ export default async function ServiceDetailPage({ params }: Params) {
                 <Link
                   key={c.slug}
                   href={`/compare/${c.slug}`}
-                  className="group flex flex-col gap-1.5 rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/40"
+                  className="group flex flex-col gap-1.5 rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40"
                 >
                   <span className="text-sm font-semibold text-foreground group-hover:text-primary">
                     {c.h1}
@@ -234,7 +249,7 @@ export default async function ServiceDetailPage({ params }: Params) {
       */}
       <section className="bg-background py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-base font-semibold tracking-tight">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
             {s.title} by city
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
@@ -243,7 +258,7 @@ export default async function ServiceDetailPage({ params }: Params) {
           </p>
           {citiesByCounty().map((county) => (
             <div key={county.county} className="mt-6">
-              <h3 className="text-sm font-semibold text-muted-foreground">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 {county.label} County
               </h3>
               <div className="mt-3 flex flex-wrap gap-2">
@@ -251,7 +266,7 @@ export default async function ServiceDetailPage({ params }: Params) {
                   <Link
                     key={city.slug}
                     href={`/${city.slug}/${s.slug}`}
-                    className="rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground hover:text-foreground"
+                    className="rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground hover:bg-accent hover:text-foreground"
                   >
                     {s.shortTitle} in {city.name}
                   </Link>

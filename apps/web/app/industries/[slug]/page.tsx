@@ -139,7 +139,7 @@ export default async function IndustryDetailPage({ params }: Params) {
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
           <LinkButton href={`/request-dispatch?industry=${profile.slug}`}>
-            Request Dispatch <ArrowRight className="size-4" />
+            Request Service <ArrowRight className="size-4" />
           </LinkButton>
           <AnchorButton href={site.phoneHref} variant="outline">
             Call {site.phone}

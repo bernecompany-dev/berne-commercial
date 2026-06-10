@@ -238,7 +238,7 @@ export default async function BlogArticlePage({ params }: Params) {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <LinkButton href="/request-dispatch">
-                    Request Dispatch
+                    Request Service
                   </LinkButton>
                   <AnchorButton href={site.phoneHref} variant="outline">
                     <Phone className="size-4" />

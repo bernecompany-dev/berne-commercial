@@ -24,7 +24,7 @@ const ALT_PHONES = [
 
 export default function ContactPage() {
   return (
-    <PageShell>
+    <PageShell hideDispatchCta>
       <PageHero
         eyebrow="Contact"
         title="Talk to commercial dispatch"
@@ -38,6 +38,10 @@ export default function ContactPage() {
               {ALT_PHONES.map((p) => (
                 <Item key={p.href} icon={Phone} label={p.label} value={p.display} href={p.href} />
               ))}
+              <p className="text-xs text-muted-foreground">
+                All three lines reach the same 24/7 dispatch desk — call
+                whichever is local to you.
+              </p>
               <Item icon={Mail} label="Email" value={site.email} href={`mailto:${site.email}`} />
               <Item
                 icon={MapPin}
@@ -48,7 +52,15 @@ export default function ContactPage() {
             </Card>
           </div>
           <div className="lg:col-span-3">
-            <DispatchForm />
+            <h2 className="text-2xl font-semibold tracking-tight">
+              Request a service visit
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              A dispatcher will confirm the service window shortly.
+            </p>
+            <div className="mt-6">
+              <DispatchForm />
+            </div>
           </div>
         </div>
       </section>
@@ -69,19 +81,29 @@ function Item({
 }) {
   const content = (
     <div className="flex items-start gap-3">
-      <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+      <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
         <Icon className="size-4" />
       </span>
       <div>
         <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
           {label}
         </div>
-        <div className="text-sm font-medium">{value}</div>
+        {/* Clickable values must LOOK clickable — primary + hover underline,
+            unlike the static Coverage/Status rows. */}
+        <div
+          className={
+            href
+              ? "text-sm font-medium text-primary underline-offset-2 group-hover:underline"
+              : "text-sm font-medium"
+          }
+        >
+          {value}
+        </div>
       </div>
     </div>
   )
   return href ? (
-    <a href={href} className="block hover:opacity-80">
+    <a href={href} className="group block">
       {content}
     </a>
   ) : (

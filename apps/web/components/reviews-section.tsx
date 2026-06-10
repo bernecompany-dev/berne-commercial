@@ -35,14 +35,16 @@ export function ReviewsSection({ locale = "en" }: { locale?: Locale }) {
           align="center"
         />
 
-        <div
-          className="mt-10 flex items-center justify-center gap-3"
-          aria-label={`${REVIEW_AGGREGATE.ratingValue} out of 5 stars, ${REVIEW_AGGREGATE.reviewCount} reviews`}
-        >
-          <div className="flex" aria-hidden>
+        <div className="mt-12 flex items-center justify-center gap-3">
+          <div
+            className="flex"
+            role="img"
+            aria-label={`${REVIEW_AGGREGATE.ratingValue} out of 5 stars`}
+          >
             {[0, 1, 2, 3, 4].map((i) => (
               <Star
                 key={i}
+                aria-hidden
                 className="size-5 fill-primary text-primary"
               />
             ))}
@@ -63,10 +65,15 @@ export function ReviewsSection({ locale = "en" }: { locale?: Locale }) {
               className="flex flex-col gap-4 rounded-2xl border border-border/60 bg-background p-6 shadow-sm"
             >
               <div className="flex items-center justify-between">
-                <div className="flex" aria-hidden>
+                <div
+                  className="flex"
+                  role="img"
+                  aria-label={`${r.rating} out of 5 stars`}
+                >
                   {Array.from({ length: r.rating }).map((_, i) => (
                     <Star
                       key={i}
+                      aria-hidden
                       className="size-4 fill-primary text-primary"
                     />
                   ))}

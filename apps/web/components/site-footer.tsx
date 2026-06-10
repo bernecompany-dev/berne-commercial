@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Mail, MapPin, Phone, ShieldCheck } from "lucide-react"
+import { ArrowUpRight, Mail, MapPin, Phone, ShieldCheck } from "lucide-react"
 import { BrandMark } from "./brand-mark"
 import { SocialIcons } from "./social-icons"
 import { site } from "@/lib/site"
@@ -14,19 +14,21 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
   const year = new Date().getFullYear()
   const p = locale === "es" ? "/es" : ""
 
-  const quick = [
-    { href: `${p}/services`, label: tr.nav.services },
+  // Two scannable buckets instead of one 13-link "Company" drawer:
+  // browse = site sections (Services/Service Areas live in their own
+  // columns already, so no duplicates here), company = who we are.
+  const browse = [
     { href: `${p}/industries`, label: tr.nav.industries },
     { href: `${p}/brands`, label: tr.nav.brands },
-    { href: `${p}/service-areas`, label: tr.nav.serviceAreas },
     { href: `${p}/become-a-client`, label: tr.nav.becomeClient },
     { href: `${p}/request-dispatch`, label: tr.nav.requestDispatch },
-    { href: `${p}/blog`, label: locale === "es" ? "Blog" : "Blog" },
     // /compare is EN-only — no /es prefix (avoids a sitewide 404 link).
     {
       href: "/compare",
       label: locale === "es" ? "Guías de equipos" : "Equipment guides",
     },
+  ]
+  const company = [
     { href: `${p}/about`, label: tr.nav.about },
     { href: `${p}/team`, label: locale === "es" ? "Equipo" : "Team" },
     { href: `${p}/careers`, label: locale === "es" ? "Carreras" : "Careers" },
@@ -34,6 +36,7 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
       href: `${p}/credentials`,
       label: locale === "es" ? "Credenciales" : "Credentials",
     },
+    { href: `${p}/blog`, label: "Blog" },
     { href: `${p}/contact`, label: tr.nav.contact },
   ]
 
@@ -110,7 +113,22 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
               {tr.footer.company}
             </div>
             <ul className="mt-4 space-y-2 text-sm">
-              {quick.map((q) => (
+              {company.map((q) => (
+                <li key={q.href}>
+                  <Link
+                    href={q.href}
+                    className="text-background/80 hover:text-background"
+                  >
+                    {q.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 text-xs font-semibold uppercase tracking-wider text-background/60">
+              {locale === "es" ? "Explorar" : "Browse"}
+            </div>
+            <ul className="mt-4 space-y-2 text-sm">
+              {browse.map((q) => (
                 <li key={q.href}>
                   <Link
                     href={q.href}
@@ -127,13 +145,13 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
             <div className="text-xs font-semibold uppercase tracking-wider text-background/60">
               {tr.footer.serviceAreas}
             </div>
-            <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1 text-xs sm:grid-cols-3">
+            <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:grid-cols-3">
               {counties.map((c) =>
                 c.items.slice(0, 8).map((city) => (
                   <Link
                     key={city.slug}
                     href={`${p}/${city.slug}`}
-                    className="text-background/70 hover:text-background"
+                    className="inline-block py-0.5 text-background/70 hover:text-background"
                   >
                     {city.name}
                   </Link>
@@ -159,8 +177,8 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
               rel="noopener"
               className="group flex flex-col gap-1 rounded-lg border border-background/15 bg-background/5 p-4 transition-colors hover:border-background/40"
             >
-              <span className="text-sm font-semibold text-background group-hover:underline">
-                Berne Appliance Repair →
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-background group-hover:underline">
+                Berne Appliance Repair <ArrowUpRight className="size-3.5" aria-hidden />
               </span>
               <span className="text-xs leading-relaxed text-background/65">
                 {locale === "es"
@@ -173,8 +191,8 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
               rel="noopener"
               className="group flex flex-col gap-1 rounded-lg border border-background/15 bg-background/5 p-4 transition-colors hover:border-background/40"
             >
-              <span className="text-sm font-semibold text-background group-hover:underline">
-                Berne Repair →
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-background group-hover:underline">
+                Berne Repair <ArrowUpRight className="size-3.5" aria-hidden />
               </span>
               <span className="text-xs leading-relaxed text-background/65">
                 {locale === "es"
@@ -206,12 +224,14 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
           <Link href={`${p}/cookies`} className="hover:text-background">
             Cookies
           </Link>
+          {/* "Sitemap" for humans = the service-areas index; crawlers find
+              sitemap.xml via robots.txt and don't need an anchor. */}
           <span aria-hidden>·</span>
-          <Link href="/sitemap.xml" className="hover:text-background">
+          <Link href={`${p}/service-areas`} className="hover:text-background">
             {locale === "es" ? "Mapa del sitio" : "Sitemap"}
           </Link>
           <span aria-hidden>·</span>
-          <span className="text-background/50">
+          <span className="text-background/70">
             {locale === "es"
               ? "GDPR / CCPA — escriba a "
               : "GDPR / CCPA — email "}

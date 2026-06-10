@@ -5,9 +5,11 @@ import { usePathname } from "next/navigation"
 /**
  * Floating WhatsApp click-to-chat button for Berne Commercial.
  *
- * - Fixed bottom-right (16px), z-index 9998 (below cookie banner at 9999).
- * - On mobile we shift to bottom-left so we don't collide with the mobile
- *   phone CTA bar that fills the bottom on small screens.
+ * - Fixed bottom-right (16px) on desktop, z-50 (below the cookie banner at
+ *   z-[60] while consent is pending).
+ * - Below md we shift to bottom-LEFT and ABOVE the fixed CTA bar
+ *   (max-md:bottom-20) — the bar is full-width, so only a vertical offset
+ *   avoids covering its Call button.
  * - Pre-fills a commercial-toned, context-aware greeting derived from the
  *   current pathname (industry / equipment / city / brand).
  * - Tracks clicks via gtag (`whatsapp_click`) + fbq (`Contact` custom event)
@@ -160,10 +162,7 @@ export function WhatsAppFab() {
       aria-label="Chat with Berne Commercial on WhatsApp"
       data-analytics="whatsapp-fab"
       onClick={handleClick}
-      className="berne-whatsapp-fab fixed bottom-4 z-[9998] flex h-14 w-14 items-center justify-center rounded-full text-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition-transform duration-150 ease-out hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 right-4 md:right-4 max-md:left-4 max-md:right-auto motion-reduce:transition-none motion-reduce:hover:scale-100"
-      style={{ backgroundColor: "#25D366" }}
-      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#1ebe57")}
-      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#25D366")}
+      className="berne-whatsapp-fab fixed bottom-4 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition-[transform,background-color] duration-150 ease-out hover:scale-105 hover:bg-[#1ebe57] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background max-md:bottom-20 max-md:left-4 max-md:right-auto motion-reduce:transition-none motion-reduce:hover:scale-100"
     >
       <svg
         viewBox="0 0 32 32"

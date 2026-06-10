@@ -101,14 +101,14 @@ export function CookieBanner() {
 
   return (
     <div
-      className="berne-consent fixed bottom-20 left-4 right-4 z-40 rounded-2xl border border-border bg-background/95 p-4 shadow-xl backdrop-blur md:bottom-4 md:left-auto md:right-4 md:max-w-md"
-      role="dialog"
+      className="berne-consent fixed bottom-36 left-4 right-4 z-[60] rounded-2xl border border-border bg-background/95 p-4 shadow-xl backdrop-blur md:bottom-4 md:left-auto md:right-24 md:max-w-md"
+      role="region"
       aria-label="Cookie consent"
       aria-live="polite"
     >
       <p className="mb-3 text-sm text-foreground">
         We use cookies to improve service and measure traffic.{" "}
-        <a href="/about" className="underline underline-offset-2">
+        <a href="/cookies" className="underline underline-offset-2">
           Learn more
         </a>
         .
@@ -117,14 +117,14 @@ export function CookieBanner() {
         <button
           type="button"
           onClick={accept}
-          className="rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-primary-foreground hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="rounded-md bg-primary px-3 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/80 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 active:translate-y-px"
         >
           Accept all
         </button>
         <button
           type="button"
           onClick={essentialOnly}
-          className="rounded-md border border-border bg-transparent px-3 py-1.5 text-sm text-foreground hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="rounded-md border border-border bg-transparent px-3 py-2.5 text-sm text-foreground transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 active:translate-y-px"
         >
           Essential only
         </button>

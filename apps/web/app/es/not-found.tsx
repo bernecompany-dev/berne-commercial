@@ -10,12 +10,8 @@ export default function NotFound() {
     { href: "/es/industries", label: "Industrias" },
     { href: "/es/brands", label: "Marcas que reparamos" },
     { href: "/es/service-areas", label: "Áreas de servicio" },
-    { href: "/es/blog", label: "Notas de campo" },
-    { href: "/es/credentials", label: "Credenciales" },
-    { href: "/team", label: "Nuestro equipo" },
+    { href: "/es/blog", label: "Blog" },
     { href: "/es/about", label: "Sobre Berne Commercial" },
-    { href: "/es/request-dispatch", label: "Solicitar despacho" },
-    { href: "/es/become-a-client", label: "Convertirse en cliente" },
     { href: "/es/contact", label: "Contacto" },
   ]
 
@@ -29,41 +25,16 @@ export default function NotFound() {
           Esa página no existe — te redirigimos.
         </h1>
         <p className="mt-5 max-w-2xl text-base text-muted-foreground sm:text-lg">
-          No pudimos encontrar lo que buscabas. Elige un destino, busca, o
-          llama a despacho y te llevamos al lugar correcto.
+          No pudimos encontrar lo que buscabas. Elige un destino, o llama a
+          despacho y te llevamos al lugar correcto.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <LinkButton href="/es/request-dispatch">Solicitar despacho</LinkButton>
+          <LinkButton href="/es/request-dispatch">Solicitar servicio</LinkButton>
           <AnchorButton href={site.phoneHref} variant="outline">
             Llamar {site.phone}
           </AnchorButton>
         </div>
-
-        <form
-          action="/es"
-          method="get"
-          role="search"
-          aria-label="Búsqueda del sitio"
-          className="mt-10 flex w-full max-w-md items-center gap-2"
-        >
-          <label htmlFor="berne-404-search-es" className="sr-only">
-            Buscar Berne Commercial
-          </label>
-          <input
-            type="search"
-            name="q"
-            id="berne-404-search-es"
-            placeholder="Buscar p.ej. máquina de hielo, walk-in, Hobart…"
-            className="flex-1 rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
-          />
-          <button
-            type="submit"
-            className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-          >
-            Buscar
-          </button>
-        </form>
 
         <nav
           aria-label="Destinos populares"

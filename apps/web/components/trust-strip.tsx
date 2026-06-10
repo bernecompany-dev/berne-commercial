@@ -1,4 +1,4 @@
-import { Clock, ShieldCheck, Phone } from "lucide-react"
+import { Clock, ShieldCheck, Zap } from "lucide-react"
 import { site } from "@/lib/site"
 
 /**
@@ -19,9 +19,11 @@ export function TrustStrip() {
         <span className="hidden text-muted-foreground sm:inline" aria-hidden>
           ·
         </span>
+        {/* Zap, not Phone — sitewide the phone icon marks tappable tel: links;
+            this is a speed claim, not a call affordance. */}
         <span className="inline-flex items-center gap-2">
-          <Phone className="size-4 text-primary" aria-hidden />
-          Same-day dispatch · within hours
+          <Zap className="size-4 text-primary" aria-hidden />
+          Same-day service
         </span>
         <span className="hidden text-muted-foreground sm:inline" aria-hidden>
           ·
