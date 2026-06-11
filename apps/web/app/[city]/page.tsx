@@ -37,13 +37,16 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       noindex: true,
     })
   const p = getCityProfile(c.slug) ?? cityProfileFallback(c.name, c.county)
+  // CTR pass 2026-06-09: corridor keeps each of the 70 city descriptions
+  // unique; hooks (24/7, COI, W-2 headcount, rating, $89) drive the click.
+  // Long corridors (Fort Lauderdale, Coconut Creek, Davie) pushed the full
+  // template past Google's ~160-char cutoff — degrade to a compact form
+  // that drops the headcount hook instead of getting truncated mid-rating.
+  const full = `24/7 commercial repair dispatch across ${p.corridor} in ${c.name}. COI-ready, 18 W-2 techs, 4.79★. ${site.serviceCall} service call.`
+  const compact = `24/7 commercial repair dispatch across ${p.corridor} in ${c.name}. COI-ready, 4.79★. ${site.serviceCall} service call.`
   return metaFor({
     title: `Commercial Equipment Repair in ${c.name}, FL`,
-    // CTR pass 2026-06-09: corridor keeps each of the 70 city descriptions
-    // unique; hooks (24/7, COI, W-2 headcount, rating, $89) drive the click.
-    // Base is 94 chars — fits <155 for every corridor up to ~60 chars (the
-    // old equipment-list version ran 200+ for Miami and got truncated).
-    description: `24/7 commercial repair dispatch across ${p.corridor} in ${c.name}. COI-ready, 18 W-2 techs, 4.79★. ${site.serviceCall} service call.`,
+    description: full.length <= 160 ? full : compact,
     path: `/${c.slug}`,
   })
 }

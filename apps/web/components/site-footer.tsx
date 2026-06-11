@@ -30,7 +30,9 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
   ]
   const company = [
     { href: `${p}/about`, label: tr.nav.about },
-    { href: `${p}/team`, label: locale === "es" ? "Equipo" : "Team" },
+    // /team is EN-only — no /es prefix (avoids a sitewide 404 link on every
+    // ES page; same rationale as /compare in `browse` below).
+    { href: "/team", label: locale === "es" ? "Equipo" : "Team" },
     { href: `${p}/careers`, label: locale === "es" ? "Carreras" : "Careers" },
     {
       href: `${p}/credentials`,

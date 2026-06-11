@@ -505,7 +505,7 @@ const TRUE_VS_TRAULSEN: ComparisonProfile = {
   // CTR pass 2026-06-11 — hook added, 51ch + " · Berne" suffix = 59 ≤ 60.
   metaTitle: "True vs Traulsen Refrigeration: Which Lasts Longer?",
   metaDescription:
-    "True vs Traulsen commercial reach-in refrigeration compared. Temperature stability, build quality, parts ecosystem, real failure modes in South Florida kitchens.",
+    "True vs Traulsen commercial reach-in refrigeration compared. Temperature stability, build quality, parts ecosystem, failure modes in South Florida kitchens.",
   teaser:
     "Two brands dominate commercial reach-in refrigeration — True Manufacturing and Traulsen. Both build excellent stainless reach-ins; one is the volume leader, the other is the institutional standard. The decision is more interesting than it looks.",
   intro:

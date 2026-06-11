@@ -26,7 +26,7 @@ import { industries as legacyIndustries } from "@/lib/data/industries"
 export const metadata: Metadata = metaFor({
   title: "Industries We Serve — Commercial Equipment Repair",
   description:
-    "Restaurants, hotels, laundromats, healthcare, grocery, schools, gyms, breweries, country clubs, multi-family — South Florida commercial repair across 10 verticals.",
+    "Restaurants, hotels, laundromats, healthcare, grocery, gyms, breweries, country clubs, multi-family — South Florida commercial repair across 10 verticals.",
   path: "/industries",
 })
 

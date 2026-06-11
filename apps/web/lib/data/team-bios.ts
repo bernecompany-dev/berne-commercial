@@ -92,7 +92,7 @@ export const TECH_BIOS: Record<string, ExtendedBio> = {
     related: [
       { href: "/services/commercial-laundry-repair", label: "Commercial laundry repair" },
       { href: "/services/commercial-washer-repair", label: "Commercial washer service" },
-      { href: "/industries/property-management", label: "Property management dispatch" },
+      { href: "/industries/multi-family", label: "Property management dispatch" },
     ],
   },
 
@@ -164,7 +164,7 @@ export const TECH_BIOS: Record<string, ExtendedBio> = {
     related: [
       { href: "/services/commercial-laundry-repair", label: "Commercial laundry repair" },
       { href: "/services/commercial-dryer-repair", label: "Commercial dryer repair" },
-      { href: "/industries/property-management", label: "Property management program" },
+      { href: "/industries/multi-family", label: "Property management program" },
     ],
   },
 
