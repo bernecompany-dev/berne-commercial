@@ -101,7 +101,8 @@ const HOBART_VS_VULCAN_RANGES: ComparisonProfile = {
     "manitowoc-vs-hoshizaki-ice",
   ],
   h1: "Hobart vs Vulcan — Which Commercial Range Is Better for Your Kitchen?",
-  metaTitle: "Hobart vs Vulcan Commercial Ranges",
+  // CTR pass 2026-06-11 — hook added, 47ch + " · Berne" suffix = 55 ≤ 60.
+  metaTitle: "Hobart vs Vulcan Commercial Ranges: Which Wins?",
   metaDescription:
     "Hobart vs Vulcan commercial ranges compared by South Florida service techs. Burner output, oven design, parts ecosystem, real-world reliability on the line.",
   teaser:
@@ -501,7 +502,8 @@ const TRUE_VS_TRAULSEN: ComparisonProfile = {
     "hoshizaki-vs-scotsman-ice",
   ],
   h1: "True vs Traulsen — Which Commercial Reach-In Refrigerator Is Better?",
-  metaTitle: "True vs Traulsen Commercial Refrigeration",
+  // CTR pass 2026-06-11 — hook added, 51ch + " · Berne" suffix = 59 ≤ 60.
+  metaTitle: "True vs Traulsen Refrigeration: Which Lasts Longer?",
   metaDescription:
     "True vs Traulsen commercial reach-in refrigeration compared. Temperature stability, build quality, parts ecosystem, real failure modes in South Florida kitchens.",
   teaser:
@@ -702,7 +704,9 @@ const RATIONAL_VS_COMBI: ComparisonProfile = {
     "hobart-vs-vulcan-ranges",
   ],
   h1: "Rational vs Other Combi Ovens — Which Is Right for Your Kitchen?",
-  metaTitle: "Rational vs Combi Ovens Compared",
+  // CTR pass 2026-06-11 (GSC: 552 imp / 1 click / 0.2% at pos 10.2) — hook
+  // added, keywords kept, 48ch + " · Berne" template suffix = 56 ≤ 60.
+  metaTitle: "Rational vs Combi Ovens: A Repair Tech's Verdict",
   metaDescription:
     "Rational vs Alto-Shaam, Convotherm, Unox, and Henny Penny combi ovens compared. Cooking quality, parts ecosystem, operator interface, real failure modes.",
   teaser:
