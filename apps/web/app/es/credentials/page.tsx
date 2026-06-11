@@ -10,7 +10,7 @@ import { site } from "@/lib/site"
 export const metadata: Metadata = metaFor({
   title: "Credenciales, Licencia y Seguro",
   description:
-    "Licencia de técnico de Florida, certificación EPA 608, COI, DBA, W-9, exención de Workers' Comp, EIN, certificado de reventa de Florida y membresía MSA World de Berne Commercial Repair.",
+    "Licencia de técnico de Florida, EPA 608, COI, DBA, W-9, exención de Workers' Comp, EIN, certificado de reventa y membresía MSA World — Berne Commercial Repair.",
   path: "/es/credentials",
   locale: "es",
 })

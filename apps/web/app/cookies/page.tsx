@@ -1,20 +1,15 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { site } from "@/lib/site"
+import { metaFor } from "@/lib/seo"
 
-export const metadata: Metadata = {
+// metaFor keeps the hreflang cluster (en/es/x-default) symmetric with the
+// ES counterpart, which also uses metaFor.
+export const metadata: Metadata = metaFor({
   title: "Cookie Policy",
   description: `Which cookies ${site.name} uses, what they do, and how to disable them.`,
-  alternates: {
-    canonical: "/cookies",
-    languages: {
-      "en-US": `${site.url}/cookies`,
-      "es-US": `${site.url}/es/cookies`,
-      "x-default": `${site.url}/cookies`,
-    },
-  },
-  robots: { index: true, follow: true },
-}
+  path: "/cookies",
+})
 
 export default function CookiesPage() {
   return (

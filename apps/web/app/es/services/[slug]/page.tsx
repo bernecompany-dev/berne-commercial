@@ -30,8 +30,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       robots: { index: false },
     }
   const es = localizedService(s, "es")
+  // The /es home <title> is "Reparación de Equipo Comercial en el Sur de
+  // Florida" — the generic whole-facility service slug would render the exact
+  // same string (duplicate <title> across two indexable pages). Differentiate
+  // with the 24/7 dispatch hook, mirroring how the EN home title differs from
+  // the EN service hub.
+  const metaTitle =
+    slug === "commercial-appliance-repair"
+      ? `${es.title} — Despacho 24/7, Sur de Florida`
+      : `${es.title} en el Sur de Florida`
   return {
-    title: `${es.title} en el Sur de Florida`,
+    title: metaTitle,
     description: es.summary,
     alternates: {
       canonical: `/es/services/${slug}`,
@@ -42,7 +51,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: `${es.title} en el Sur de Florida`,
+      title: metaTitle,
       description: es.summary,
       type: "website",
       locale: "es_US",

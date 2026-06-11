@@ -1,20 +1,15 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { site } from "@/lib/site"
+import { metaFor } from "@/lib/seo"
 
-export const metadata: Metadata = {
+// metaFor keeps the hreflang cluster (en/es/x-default) symmetric with the
+// ES counterpart, which also uses metaFor.
+export const metadata: Metadata = metaFor({
   title: "Terms of Service",
   description: `Service scope, dispatch, pricing, warranty, payment, NDA and vendor terms for ${site.name} commercial customers.`,
-  alternates: {
-    canonical: "/terms",
-    languages: {
-      "en-US": `${site.url}/terms`,
-      "es-US": `${site.url}/es/terms`,
-      "x-default": `${site.url}/terms`,
-    },
-  },
-  robots: { index: true, follow: true },
-}
+  path: "/terms",
+})
 
 export default function TermsPage() {
   return (

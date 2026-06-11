@@ -1,20 +1,15 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { site } from "@/lib/site"
+import { metaFor } from "@/lib/seo"
 
-export const metadata: Metadata = {
+// metaFor keeps the hreflang cluster (en/es/x-default) symmetric with the
+// ES counterpart, which also uses metaFor.
+export const metadata: Metadata = metaFor({
   title: "Privacy Policy",
   description: `How ${site.name} collects, uses, and protects business and contact information from commercial customers and site visitors.`,
-  alternates: {
-    canonical: "/privacy",
-    languages: {
-      "en-US": `${site.url}/privacy`,
-      "es-US": `${site.url}/es/privacy`,
-      "x-default": `${site.url}/privacy`,
-    },
-  },
-  robots: { index: true, follow: true },
-}
+  path: "/privacy",
+})
 
 export default function PrivacyPage() {
   return (

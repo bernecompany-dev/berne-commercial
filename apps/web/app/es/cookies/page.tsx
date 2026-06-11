@@ -1,20 +1,17 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { site } from "@/lib/site"
+import { metaFor } from "@/lib/seo"
 
-export const metadata: Metadata = {
+// metaFor keeps og:locale (es_US) and the hreflang cluster (en/es/x-default)
+// consistent with every other ES page — the previous hand-rolled metadata
+// inherited og:locale=en_US from the root layout.
+export const metadata: Metadata = metaFor({
   title: "Política de Cookies",
   description: `Qué cookies usa ${site.name}, para qué sirven y cómo desactivarlas.`,
-  alternates: {
-    canonical: "/es/cookies",
-    languages: {
-      "en-US": `${site.url}/cookies`,
-      "es-US": `${site.url}/es/cookies`,
-      "x-default": `${site.url}/cookies`,
-    },
-  },
-  robots: { index: true, follow: true },
-}
+  path: "/es/cookies",
+  locale: "es",
+})
 
 export default function CookiesPageES() {
   return (

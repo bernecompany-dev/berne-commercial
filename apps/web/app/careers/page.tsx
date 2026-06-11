@@ -20,7 +20,7 @@ import { CAREERS, POSTING_DATE, VALID_THROUGH } from "@/lib/data/careers"
 export const metadata: Metadata = metaFor({
   title: "Careers — Berne Commercial Repair",
   description:
-    "Join Berne Commercial Repair — South Florida's enterprise commercial service organization. Hiring senior refrigeration techs, commercial cooking equipment techs, dispatch and vendor coordinators.",
+    "Join Berne Commercial Repair — South Florida's commercial service organization. Hiring senior refrigeration and cooking equipment techs plus dispatch staff.",
   path: "/careers",
 })
 

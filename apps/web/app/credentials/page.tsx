@@ -10,7 +10,7 @@ import { site } from "@/lib/site"
 export const metadata: Metadata = metaFor({
   title: "Credentials, License & Insurance",
   description:
-    "Florida technician license, EPA 608 certification, COI, DBA, W-9, Workers' Comp exemption, EIN, Florida resale certificate and MSA World membership for Berne Commercial Repair.",
+    "Florida technician license, EPA 608, COI, DBA, W-9, Workers' Comp exemption, EIN, resale certificate and MSA World membership — Berne Commercial Repair.",
   path: "/credentials",
 })
 

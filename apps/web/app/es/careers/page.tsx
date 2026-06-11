@@ -20,7 +20,7 @@ import { CAREERS, POSTING_DATE, VALID_THROUGH } from "@/lib/data/careers"
 export const metadata: Metadata = metaFor({
   title: "Carreras — Berne Commercial Repair",
   description:
-    "Únete a Berne Commercial Repair — la organización de servicio comercial corporativo del sur de Florida. Contratando técnicos senior de refrigeración, técnicos de equipos de cocina comercial, coordinadores de despacho y vendor.",
+    "Únete a Berne Commercial Repair en el sur de Florida. Contratando técnicos senior de refrigeración, técnicos de cocina comercial y coordinadores de despacho.",
   path: "/es/careers",
   locale: "es",
 })

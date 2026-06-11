@@ -42,11 +42,23 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const back = BACK_OFFICE_BY_SLUG[slug]
 
   if (tech) {
+    // Meta description budget: ~155ch. The full specialties list pushed the
+    // old template to 166-232ch (SERP truncation on every bio) — instead,
+    // keep the fixed sentences and include only as many specialties as fit.
+    const head = `${tech.name}, ${tech.role} at Berne Commercial Repair. ${tech.yearsExperience} years experience.`
+    const tail = " South Florida service."
+    let specs = [...tech.specialties]
+    let description = `${head} Specialties: ${specs.join(", ")}.${tail}`
+    while (description.length > 155 && specs.length > 1) {
+      specs = specs.slice(0, -1)
+      description = `${head} Specialties: ${specs.join(", ")}.${tail}`
+    }
+    if (description.length > 155) description = `${head}${tail}`
     // Suffix template adds " · Berne" — keep base concise so the rendered
     // <title> stays inside Google's ~60-char SERP cutoff.
     return metaFor({
       title: `${tech.name} — ${tech.role}`,
-      description: `${tech.name}, ${tech.role} at Berne Commercial Repair. ${tech.yearsExperience} years experience. Specialties: ${tech.specialties.join(", ")}. Service across South Florida.`,
+      description,
       path: `/team/${slug}`,
       // EN-only section — /es/team/* does not exist.
       esAlternate: false,

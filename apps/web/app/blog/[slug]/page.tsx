@@ -10,6 +10,7 @@ import { AnchorButton, LinkButton } from "@/components/link-button"
 import { JsonLd } from "@/components/json-ld"
 import {
   metaFor,
+  clampDescription,
   breadcrumbSchema,
   blogPostingSchema,
   howToSchema,
@@ -96,7 +97,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   }
   return metaFor({
     title: a.title,
-    description: a.description,
+    // Article descriptions double as visible ledes/teasers and run long
+    // (179-279ch) — clamp only the meta/og surface to the ~155ch SERP budget.
+    description: clampDescription(a.description),
     path: `/blog/${a.slug}`,
     // Individual posts are EN-only — only the /es/blog index exists.
     esAlternate: false,

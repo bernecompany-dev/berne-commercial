@@ -504,7 +504,7 @@ export const brandProfiles: BrandProfile[] = [
     es: {
       metaTitle: "Reparación Comercial Vulcan Estufas y Freidoras Miami",
       metaDescription:
-        "Reparación comercial Vulcan de estufas, salamandras, freidoras y hot-tops en el Sur de Florida. V-series, EV, MSA, freidoras LG. Despacho el mismo día, técnicos gas-certified.",
+        "Reparación comercial Vulcan de estufas, salamandras, freidoras y hot-tops en el Sur de Florida. V-series, EV, LG. Despacho el mismo día, gas-certified.",
       teaser:
         "Estufas V-series, salamandras, hot tops y freidoras LG — líneas de restaurante, cocinas de banquete y rebuilds de ghost-kitchen.",
       about:

@@ -1,20 +1,17 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { site } from "@/lib/site"
+import { metaFor } from "@/lib/seo"
 
-export const metadata: Metadata = {
+// metaFor keeps og:locale (es_US) and the hreflang cluster (en/es/x-default)
+// consistent with every other ES page — the previous hand-rolled metadata
+// inherited og:locale=en_US from the root layout.
+export const metadata: Metadata = metaFor({
   title: "Términos de Servicio",
   description: `Alcance del servicio, despacho, precios, garantía, pago, NDA y términos de vendor para clientes comerciales de ${site.name}.`,
-  alternates: {
-    canonical: "/es/terms",
-    languages: {
-      "en-US": `${site.url}/terms`,
-      "es-US": `${site.url}/es/terms`,
-      "x-default": `${site.url}/terms`,
-    },
-  },
-  robots: { index: true, follow: true },
-}
+  path: "/es/terms",
+  locale: "es",
+})
 
 export default function TermsPageES() {
   return (

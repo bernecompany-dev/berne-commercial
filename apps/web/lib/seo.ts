@@ -2,6 +2,30 @@ import type { Metadata } from "next"
 import { site } from "./site"
 import type { TeamMember } from "./data/team"
 
+/**
+ * Clamp a meta description to the ~155-char SERP budget without touching the
+ * source copy (article ledes / bio descriptions double as visible teasers and
+ * must stay full-length there). Strategy: prefer the last sentence boundary
+ * that fits; otherwise cut at a word boundary and add an ellipsis. Idempotent
+ * for strings already within budget.
+ */
+export function clampDescription(text: string, max = 155): string {
+  const t = text.trim()
+  if (t.length <= max) return t
+  const slice = t.slice(0, max + 1)
+  // Prefer a clean sentence end (". ", "! ", "? ") if it keeps enough copy.
+  const sentenceEnd = Math.max(
+    slice.lastIndexOf(". "),
+    slice.lastIndexOf("! "),
+    slice.lastIndexOf("? "),
+  )
+  if (sentenceEnd >= 80) return t.slice(0, sentenceEnd + 1)
+  // Otherwise cut at the last word boundary that leaves room for "…".
+  const wordEnd = slice.lastIndexOf(" ", max - 1)
+  const cut = t.slice(0, wordEnd > 0 ? wordEnd : max - 1).replace(/[,;:\s]+$/, "")
+  return `${cut}…`
+}
+
 export function metaFor({
   title,
   description,

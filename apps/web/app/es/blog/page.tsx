@@ -14,7 +14,7 @@ export const revalidate = 3600
 export const metadata: Metadata = metaFor({
   title: "Blog de Reparación de Equipo Comercial — Berne Commercial",
   description:
-    "Guías de campo para operadores de restaurantes, cocinas de hotel y administradores de propiedades — máquinas de hielo, cuartos fríos, lavavajillas, espresso y freidoras.",
+    "Guías de campo para restaurantes, hoteles y administradores de propiedades — máquinas de hielo, cuartos fríos, lavavajillas, espresso y freidoras.",
   path: "/es/blog",
   locale: "es",
 })

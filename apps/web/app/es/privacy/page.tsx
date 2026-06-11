@@ -1,20 +1,17 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { site } from "@/lib/site"
+import { metaFor } from "@/lib/seo"
 
-export const metadata: Metadata = {
+// metaFor keeps og:locale (es_US) and the hreflang cluster (en/es/x-default)
+// consistent with every other ES page — the previous hand-rolled metadata
+// inherited og:locale=en_US from the root layout.
+export const metadata: Metadata = metaFor({
   title: "Política de Privacidad",
   description: `Cómo ${site.name} recopila, usa y protege información comercial y de contacto de clientes corporativos y visitantes del sitio.`,
-  alternates: {
-    canonical: "/es/privacy",
-    languages: {
-      "en-US": `${site.url}/privacy`,
-      "es-US": `${site.url}/es/privacy`,
-      "x-default": `${site.url}/privacy`,
-    },
-  },
-  robots: { index: true, follow: true },
-}
+  path: "/es/privacy",
+  locale: "es",
+})
 
 export default function PrivacyPageES() {
   return (

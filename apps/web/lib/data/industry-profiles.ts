@@ -660,7 +660,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       industryTitle: "Salud",
       metaTitle: "Reparación de Equipo Médico Miami",
       metaDescription:
-        "Refrigeradores de vacunas, refrigeración de laboratorio, cocinas de hospital y máquinas de hielo en el Sur de Florida. Helmer, Thermo Scientific. NDA y HIPAA-aware.",
+        "Refrigeradores de vacunas, refrigeración de laboratorio y cocinas de hospital en el Sur de Florida. Helmer, Thermo Scientific. NDA y HIPAA-aware.",
       h1: "Reparación de Equipo de Salud en el Sur de Florida",
       hero: "Refrigeradores de vacunas, refrigeración de laboratorio, cocinas de hospital, hielo — discreto, documentado, certificado.",
       whyUs:
@@ -1590,7 +1590,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       industryTitle: "Multifamiliar y Apartamentos",
       metaTitle: "Reparación Multifamiliar Lavandería y Amenidades Miami",
       metaDescription:
-        "Lavandería de área común, cocinas de amenidades, appliances de unidad en multifamiliar del Sur de Florida. Speed Queen, contratos de service para building managers.",
+        "Lavandería de área común, cocinas de amenidades y appliances de unidad en multifamiliar del Sur de Florida. Speed Queen, contratos para building managers.",
       h1: "Reparación de Equipo Multifamiliar y Apartamentos en el Sur de Florida",
       hero: "Lavandería de área común, cocinas de amenidades, appliances in-unit — contratos de servicio para building managers.",
       whyUs:

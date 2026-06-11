@@ -14,7 +14,7 @@ export const metadata: Metadata = metaFor({
   // final <title> stays inside Google's ~60-char SERP cutoff.
   title: "Meet the team — 18 South Florida technicians",
   description:
-    "Berne Commercial Repair is a fleet of 18 W-2 technicians plus the dispatch and operations team behind them. EPA 608 certified, MSA World members, continuous OEM training.",
+    "Berne Commercial Repair: 18 W-2 technicians plus the dispatch and operations team behind them. EPA 608 certified, MSA World members, OEM-trained.",
   path: "/team",
   // EN-only section — /es/team does not exist.
   esAlternate: false,

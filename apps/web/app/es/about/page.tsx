@@ -12,7 +12,7 @@ import { site } from "@/lib/site"
 export const metadata: Metadata = {
   title: "Nosotros — Berne Commercial Repair · Sur de Florida desde 2015",
   description:
-    "Fundada en 2015 por Eugene Bernitsky. 18 técnicos W-2, más de 29,000 servicios, 4.79/871 reseñas. Despacho comercial para restaurantes, hoteles, supermercados y administración de propiedades en el Sur de Florida — listos para COI, NDA, y costo de downtime.",
+    "Fundada en 2015 por Eugene Bernitsky. 18 técnicos W-2, 29,000+ servicios, 4.79★/871 reseñas. Despacho comercial COI-ready en el Sur de Florida.",
   alternates: {
     canonical: "/es/about",
     languages: {
