@@ -12,6 +12,7 @@ import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
 import { breadcrumbSchema, faqSchema, metaFor, serviceSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
+import { REPAIRS_COMPLETED_BARE } from "@/lib/data/company"
 import {
   INDUSTRY_PROFILES,
   getIndustryProfile,
@@ -121,7 +122,7 @@ export default async function IndustryDetailPageES({ params }: Params) {
               <p className="mt-4 text-muted-foreground">{v.whyUs}</p>
               <p className="mt-4 text-muted-foreground">
                 Once años operando en el Sur de Florida, 18 técnicos en la
-                calle, más de 29,000 servicios completados, y un promedio de
+                calle, más de {REPAIRS_COMPLETED_BARE} servicios completados, y un promedio de
                 4.79 estrellas en 871 reseñas. Somos licenciados y asegurados
                 (DBA Berne Appliance Repair), certificados EPA para trabajo de
                 refrigerante, y NDA-friendly para las industrias que lo

@@ -20,6 +20,7 @@ import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
 import { faqSchema, metaFor, serviceSchema, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
+import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 
 /**
  * City-specific medical & lab refrigeration page (Content_Plan 2026-06-10,
@@ -402,8 +403,9 @@ export default function FortLauderdaleMedicalLabPage() {
                 </Link>{" "}
                 and on file with the common procurement portals.
                 Healthcare-route technicians are background-screened,
-                badge-ready and HIPAA-aware. 18 W-2 technicians, 29,000+
-                completed services since 2015, 4.79★ from 871 reviews.
+                badge-ready and HIPAA-aware. 18 W-2 technicians,{" "}
+                {REPAIRS_COMPLETED_DISPLAY} completed services since 2015,
+                4.79★ from 871 reviews.
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 <Link

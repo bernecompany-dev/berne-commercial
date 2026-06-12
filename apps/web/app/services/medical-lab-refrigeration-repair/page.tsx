@@ -19,6 +19,7 @@ import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
 import { faqSchema, metaFor, serviceSchema, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
+import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 
 /**
  * Dedicated medical & lab refrigeration service page (wave-2, 2026-06-10).
@@ -394,8 +395,8 @@ export default function MedicalLabRefrigerationPage() {
                 and on file with the common procurement portals (Compliance
                 Depot, NetVendor, RealPage). Healthcare-route technicians are
                 background-screened, badge-ready and HIPAA-aware for
-                clinical-area access. 18 W-2 technicians, 11 years, 29,000+
-                completed services.
+                clinical-area access. 18 W-2 technicians, 11 years,{" "}
+                {REPAIRS_COMPLETED_DISPLAY} completed services.
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 <Link

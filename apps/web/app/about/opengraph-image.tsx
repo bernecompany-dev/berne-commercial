@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og"
 import { site } from "@/lib/site"
+import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 
 export const runtime = "edge"
 export const alt = "About Berne Commercial Repair — 11 years, 18 technicians, South Florida"
@@ -146,7 +147,7 @@ export default async function Image() {
               marginTop: 4,
             }}
           >
-            29,000+ South Florida service tickets · refrigeration, restaurant, ice, laundry. Single in-house team.
+            {`${REPAIRS_COMPLETED_DISPLAY} South Florida service tickets · refrigeration, restaurant, ice, laundry. Single in-house team.`}
           </div>
         </div>
 

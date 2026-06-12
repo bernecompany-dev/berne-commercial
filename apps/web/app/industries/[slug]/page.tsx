@@ -13,6 +13,7 @@ import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
 import { breadcrumbSchema, faqSchema, metaFor, serviceSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
+import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 import {
   INDUSTRY_PROFILES,
   getIndustryProfile,
@@ -158,7 +159,7 @@ export default async function IndustryDetailPage({ params }: Params) {
               <p className="mt-4 text-muted-foreground">{profile.whyUs}</p>
               <p className="mt-4 text-muted-foreground">
                 Eleven years operating across South Florida, 18 technicians on
-                the road, 29,000+ services completed, and a 4.79-star average
+                the road, {REPAIRS_COMPLETED_DISPLAY} services completed, and a 4.79-star average
                 on 871 reviews. We&apos;re licensed and insured (DBA Berne
                 Appliance Repair), EPA-certified for refrigerant work, and
                 NDA-friendly for the verticals that need it.

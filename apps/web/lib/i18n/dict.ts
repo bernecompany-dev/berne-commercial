@@ -1,4 +1,8 @@
 import type { Locale } from "./config"
+import {
+  REPAIRS_COMPLETED_BARE,
+  REPAIRS_COMPLETED_DISPLAY,
+} from "@/lib/data/company"
 
 type Dict = {
   nav: {
@@ -189,7 +193,7 @@ const en: Dict = {
     founderTitle:
       "An engineering-built service company. We take on the hard work other shops walk away from.",
     founderQuote:
-      "I'm an engineer by training, and so is the team I built. That's why we take on the equipment most South Florida shops won't — complex refrigeration loops, control-board level diagnostics, commercial laundry systems, walk-in rebuilds. Berne Commercial is backed by 11 years and 29,000+ services from the Berne family, with 18 technicians on the trucks today.",
+      `I'm an engineer by training, and so is the team I built. That's why we take on the equipment most South Florida shops won't — complex refrigeration loops, control-board level diagnostics, commercial laundry systems, walk-in rebuilds. Berne Commercial is backed by 11 years and ${REPAIRS_COMPLETED_DISPLAY} services from the Berne family, with 18 technicians on the trucks today.`,
   },
   form: {
     contactName: "Contact name",
@@ -341,7 +345,7 @@ const es: Dict = {
     founderTitle:
       "Una empresa de servicio construida por ingenieros. Tomamos el trabajo difícil que otros talleres rechazan.",
     founderQuote:
-      "Soy ingeniero de formación, igual que el equipo que armé. Por eso tomamos el equipo que la mayoría de los talleres del Sur de Florida rechazan — loops de refrigeración complejos, diagnóstico a nivel de control board, sistemas de lavandería comercial, reconstrucciones de walk-in. Berne Commercial está respaldado por 11 años y más de 29,000 servicios de la familia Berne, con 18 técnicos en los trucks hoy.",
+      `Soy ingeniero de formación, igual que el equipo que armé. Por eso tomamos el equipo que la mayoría de los talleres del Sur de Florida rechazan — loops de refrigeración complejos, diagnóstico a nivel de control board, sistemas de lavandería comercial, reconstrucciones de walk-in. Berne Commercial está respaldado por 11 años y más de ${REPAIRS_COMPLETED_BARE} servicios de la familia Berne, con 18 técnicos en los trucks hoy.`,
   },
   form: {
     contactName: "Nombre de contacto",

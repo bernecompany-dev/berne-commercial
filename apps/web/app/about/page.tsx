@@ -10,13 +10,13 @@ import { CredentialsSection } from "@/components/credentials-section"
 import { INDUSTRY_PROFILES } from "@/lib/data/industry-profiles"
 import { metaFor, personJsonLd } from "@/lib/seo"
 import { site } from "@/lib/site"
+import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 import { team } from "@/lib/data/team"
 import { JsonLd } from "@/components/json-ld"
 
 export const metadata: Metadata = metaFor({
   title: "About — Berne Commercial Repair · South Florida Since 2015",
-  description:
-    "Founded 2015 by Eugene Bernitsky. 18 W-2 technicians, 29,000+ services, 4.79★ from 871 reviews. COI-ready commercial dispatch across South Florida.",
+  description: `Founded 2015 by Eugene Bernitsky. 18 W-2 technicians, ${REPAIRS_COMPLETED_DISPLAY} services, 4.79★ from 871 reviews. COI-ready commercial dispatch across South Florida.`,
   path: "/about",
 })
 
@@ -69,7 +69,7 @@ export default function AboutPage() {
               </p>
               <p>
                 Eleven years in, the operation is 18 W-2 technicians on the
-                road, 29,000+ services completed across the Berne family,
+                road, {REPAIRS_COMPLETED_DISPLAY} services completed across the Berne family,
                 and a 4.79★ aggregate rating across 871 verified customer
                 reviews. The technicians are engineer-trained — which is
                 why we take on the work other shops walk away from:
@@ -168,7 +168,9 @@ export default function AboutPage() {
                 </div>
               </div>
               <div>
-                <div className="text-2xl font-semibold tracking-tight">29k+</div>
+                <div className="text-2xl font-semibold tracking-tight">
+                  {REPAIRS_COMPLETED_DISPLAY}
+                </div>
                 <div className="text-xs text-muted-foreground">
                   Services completed
                 </div>

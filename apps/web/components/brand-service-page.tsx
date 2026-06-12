@@ -14,6 +14,7 @@ import { breadcrumbSchema, faqSchema, metaFor, serviceSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import type { BrandService } from "@/lib/data/brand-services"
 import { getBrandService } from "@/lib/data/brand-services"
+import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 
 /**
  * Shared template for the brand-specific service pages (Content_Plan
@@ -116,8 +117,8 @@ export function BrandServicePage({ slug }: { slug: string }) {
                   <span className="font-medium text-foreground">
                     Track record:
                   </span>{" "}
-                  18 W-2 technicians, 29,000+ services since 2015, 4.79★ from
-                  871 reviews.
+                  18 W-2 technicians, {REPAIRS_COMPLETED_DISPLAY} services
+                  since 2015, 4.79★ from 871 reviews.
                 </li>
               </ul>
               <LinkButton

@@ -1,5 +1,6 @@
 import type { SymptomRow } from "./services"
 import type { BrandServiceSlug } from "./brand-service-slugs"
+import { REPAIRS_COMPLETED_DISPLAY } from "./company"
 
 /**
  * Brand-specific service pages — /services/<brand>-<equipment>-repair.
@@ -21,7 +22,8 @@ import type { BrandServiceSlug } from "./brand-service-slugs"
  *   - Error-code tables are general technician knowledge for the brand line
  *     (Indigo/NEO alerts, KM beep codes, Prodigy codes…) — keep them at the
  *     level a field tech would recognize, no invented numeric codes.
- *   - Canonical facts only: 18 techs, 29,000+ services, since 2015,
+ *   - Canonical facts only: 18 techs, the repair counter from
+ *     lib/data/company.ts (REPAIRS_COMPLETED_DISPLAY) services, since 2015,
  *     4.79★/871, $89 service call, Miami-Dade/Broward/Palm Beach.
  */
 
@@ -464,7 +466,7 @@ const SCOTSMAN: BrandService = {
   intro: [
     "Scotsman's Prodigy platform is built around sensors — water level, ice level, temperature — which makes it efficient when clean and temperamental in South Florida water. Mineral scale on the conductivity-style water sensors is the single most common root cause behind the Prodigy fault calls we run: the machine isn't broken, it's blind. Our techs descale and recalibrate the sensing system, replace what's actually failed, and leave you with a filtration recommendation matched to your water.",
     "The diagnostic codes on the Prodigy display do half the work — if your service company reads them. Code 1 and 2 events (long freeze, long harvest), slow-water-fill faults and high discharge temperature shutdowns each point at a short list of components, and our trucks carry the usual suspects: water sensors, fill valves, curtain/bin switches, condenser fan motors, harvest assist parts.",
-    "Berne is an independent commercial service company — no Scotsman affiliation, no dealer quota, 18 W-2 technicians and 29,000+ completed services since 2015. Hotels, bars, healthcare and QSR accounts run our PM contracts on Scotsman fleets precisely because we're brand-neutral: when a machine is worth fixing we fix it, and when it isn't we say so.",
+    `Berne is an independent commercial service company — no Scotsman affiliation, no dealer quota, 18 W-2 technicians and ${REPAIRS_COMPLETED_DISPLAY} completed services since 2015. Hotels, bars, healthcare and QSR accounts run our PM contracts on Scotsman fleets precisely because we're brand-neutral: when a machine is worth fixing we fix it, and when it isn't we say so.`,
   ],
   codesHeading: "Scotsman Prodigy diagnostic codes we see most",
   codesIntro:
@@ -645,7 +647,7 @@ const HOBART: BrandService = {
   intro: [
     "A down Hobart isn't an appliance problem — it's a health-code problem. When the final rinse can't hold sanitizing temperature, every plate out of that machine is an inspection finding waiting to happen, and hand-washing through a Friday service burns labor you don't have. That's why dish machine outages dispatch same-day in our queue, and why our techs verify wash and rinse temperatures with a calibrated thermometer before they leave — documented on the ticket for your inspection file.",
     "Hobart machines are the longest-lived dishwashers in the industry, which is exactly why South Florida is full of 10-20 year old AM-series and CL conveyors with very fixable problems: scaled booster heaters that can't reach 180°F rinse, fill valves and float switches fouled by mineral load, wash pump seals, door springs and interlocks, and delime cycles that nobody has run since installation. The machine is rarely dead; it's neglected.",
-    "Berne is an independent commercial service company — not a Hobart agency — servicing Hobart warewashing alongside the rest of your kitchen line. 18 W-2 technicians, 29,000+ services since 2015, and honest advice at the repair-vs-replace line: a 15-year-old AM15 with a sound tank and pump is usually worth every dollar of repair; a rusted-through wash chamber is not.",
+    `Berne is an independent commercial service company — not a Hobart agency — servicing Hobart warewashing alongside the rest of your kitchen line. 18 W-2 technicians, ${REPAIRS_COMPLETED_DISPLAY} services since 2015, and honest advice at the repair-vs-replace line: a 15-year-old AM15 with a sound tank and pump is usually worth every dollar of repair; a rusted-through wash chamber is not.`,
   ],
   codesHeading: "Hobart fault indications we diagnose daily",
   codesIntro:
@@ -1008,7 +1010,7 @@ const LA_MARZOCCO: BrandService = {
   intro: [
     "A La Marzocco is the most expensive piece of equipment per square foot in most cafés, and the one the entire revenue line depends on. When a three-group Linea goes down on a Saturday morning, you're not losing a machine — you're losing every ticket until it's back. We run espresso emergencies same-day across South Florida, and our techs treat a $20,000 machine with the respect its owner does: proper gaskets, correct torque, no improvised parts.",
     "South Florida water is the enemy. Nearly every La Marzocco failure we see traces to scale: heating elements furred until they burn out, level probes reading wrong, autofill systems overfilling or timing out, gicleurs and flow restrictors clogging, and steam valves seizing. A machine on properly maintained softening/filtration runs for decades; a machine on raw Florida water eats boilers. Every service ticket we close includes a frank assessment of your water treatment, because the alternative is selling you the same repair every eight months.",
-    "Berne is an independent commercial service company — not a La Marzocco distributor or authorized café-equipment agency. What we bring is commercial-kitchen discipline: 18 W-2 technicians, real dispatch (not a one-man bench with a two-week backlog), 29,000+ completed services since 2015, and stocked espresso wear parts — group gaskets, diffusion screens, vacuum breakers, level probes, pump heads.",
+    `Berne is an independent commercial service company — not a La Marzocco distributor or authorized café-equipment agency. What we bring is commercial-kitchen discipline: 18 W-2 technicians, real dispatch (not a one-man bench with a two-week backlog), ${REPAIRS_COMPLETED_DISPLAY} completed services since 2015, and stocked espresso wear parts — group gaskets, diffusion screens, vacuum breakers, level probes, pump heads.`,
   ],
   codesHeading: "La Marzocco failure points our techs service",
   codesIntro:
@@ -1369,7 +1371,7 @@ const TURBO_AIR: BrandService = {
   intro: [
     "Turbo Air earned its market share on price and features — digital controllers, self-cleaning condenser mechanisms, hydrocarbon refrigerants early. In the field that means a different failure profile than the all-mechanical brands: more sensor and controller tickets, more defrost-logic faults, and a self-cleaning condenser that helps but doesn't repeal South Florida physics. Our techs service the M3 fleet daily and know which faults are a probe, which are a board, and which are plain old dirty-coil heat rejection.",
     "The digital controller is your friend if someone reads it correctly. Probe errors (the E-type sensor faults on M3 displays), high-temp alarms and defrost misbehavior each narrow the diagnosis to minutes. The expensive mistake we see from generalist repair: replacing a controller to fix what was a $40 probe, or condemning a compressor when the start components failed. We test components, not guesses.",
-    "Berne is an independent commercial service company — no Turbo Air affiliation, no dealer relationship. We service Turbo Air alongside True, Traulsen and the rest of the cold side: 18 W-2 technicians, 29,000+ services since 2015, EPA 608-certified for both the legacy R-134a/R-404A units and the current R290 hydrocarbon generation.",
+    `Berne is an independent commercial service company — no Turbo Air affiliation, no dealer relationship. We service Turbo Air alongside True, Traulsen and the rest of the cold side: 18 W-2 technicians, ${REPAIRS_COMPLETED_DISPLAY} services since 2015, EPA 608-certified for both the legacy R-134a/R-404A units and the current R290 hydrocarbon generation.`,
   ],
   codesHeading: "Turbo Air M3 controller faults & field signatures",
   codesIntro:
