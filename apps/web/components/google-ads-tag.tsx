@@ -55,10 +55,21 @@ export function GoogleAdsTag() {
   return (
     <>
       <script dangerouslySetInnerHTML={{ __html: inline }} />
+      {/*
+        lazyOnload (mobile LCP fix 2026-06-12, same pattern as berne-repair
+        03e863b): afterInteractive started the 136KB gtag lib at ~160ms with
+        High priority — parallel to the LCP-critical CSS/font — and dragged
+        the linked GA4 config (160KB) + wcm/loader + call-tracking chain into
+        the pre-LCP window (lab mobile LCP 8.4s on home). The raw inline stub
+        above still runs during HTML parse, so config commands (incl.
+        phone_conversion_number) queue in dataLayer and replay when the lib
+        arrives at browser idle — no conversions lost; the ad-click
+        phone-number swap just lands 1-2s later.
+      */}
       <Script
         id="gads-lib"
         src={`https://www.googletagmanager.com/gtag/js?id=${GADS_ID}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
     </>
   )
