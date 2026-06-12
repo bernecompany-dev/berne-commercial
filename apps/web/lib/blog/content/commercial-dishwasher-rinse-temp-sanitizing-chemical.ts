@@ -77,7 +77,7 @@ export const dishwasherRinseTempSanitizing: Article = {
     {
       heading: "Same-day commercial dishwasher service",
       body: [
-        "Berne Commercial Repair services Hobart, Champion, Jackson, Insinger, and CMA commercial dishwashers across Miami-Dade, Broward, and Palm Beach. Booster heater service, descaling, element replacement, conveyor diagnostics. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial dishwasher repair page.",
+        "Berne Commercial Repair services Hobart, Champion, Jackson, Insinger, and CMA commercial dishwashers across Miami-Dade, Broward, and Palm Beach. Booster heater service, descaling, element replacement, conveyor diagnostics. $89 commercial service call (free with approved repair). Call (754) 345-4515 or request through our commercial dishwasher repair page.",
         "Residential dishwashers operate on a different sanitation standard — for premium home dishwashers (Miele, Bosch Benchmark, KitchenAid integrated), [Berne's premium residential team](https://berne-repair.com) handles that platform.",
       ],
     },

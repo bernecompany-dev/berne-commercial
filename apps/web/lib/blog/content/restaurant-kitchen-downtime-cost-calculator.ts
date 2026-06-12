@@ -76,7 +76,7 @@ export const restaurantKitchenDowntimeCalculator: Article = {
     {
       heading: "Same-day commercial dispatch",
       body: [
-        "Berne Commercial Repair runs same-day dispatch across Miami-Dade, Broward, and Palm Beach for restaurants, hotels, and hospitality groups. $89 commercial service call applied to the approved repair. COI on file. Service contracts with documented SLA available for multi-asset operators. Call (754) 345-4515 or request a tech through our dispatch page.",
+        "Berne Commercial Repair runs same-day dispatch across Miami-Dade, Broward, and Palm Beach for restaurants, hotels, and hospitality groups. $89 commercial service call — free when you approve the repair, paid only if you decline. COI on file. Service contracts with documented SLA available for multi-asset operators. Call (754) 345-4515 or request a tech through our dispatch page.",
         "Restaurant operators who run premium kitchens at home can route the home-side dispatch to [Berne's premium residential operation](https://berne-repair.com) under the same back-office.",
       ],
     },

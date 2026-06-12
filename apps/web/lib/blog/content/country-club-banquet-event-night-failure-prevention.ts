@@ -89,7 +89,7 @@ export const countryClubBanquetEventFailurePrevention: Article = {
     {
       heading: "Same-day country club service",
       body: [
-        "Berne Commercial Repair services country clubs across Miami-Dade, Broward, and Palm Beach with event-night on-call coverage available. Banquet kitchen specialty, multi-asset service contracts, priority dispatch. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our dispatch page.",
+        "Berne Commercial Repair services country clubs across Miami-Dade, Broward, and Palm Beach with event-night on-call coverage available. Banquet kitchen specialty, multi-asset service contracts, priority dispatch. $89 commercial service call — waived when you approve the repair. Call (754) 345-4515 or request through our dispatch page.",
         "Members who run premium appliance suites at home (Sub-Zero, Wolf, Viking, Miele) can route those calls to [Berne's premium residential operation](https://berne-repair.com); the dispatch system shares a single back-office across the two sites.",
       ],
     },

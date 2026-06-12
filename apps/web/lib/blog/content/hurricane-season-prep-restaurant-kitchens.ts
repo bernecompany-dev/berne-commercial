@@ -83,7 +83,7 @@ export const hurricaneSeasonPrepKitchens: Article = {
     {
       heading: "Same-day commercial dispatch",
       body: [
-        "Berne Commercial Repair runs storm-response and same-day dispatch across Miami-Dade, Broward, and Palm Beach. Pre-storm equipment audits, post-storm damage assessments, generator coordination, and full diagnostic. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our dispatch page.",
+        "Berne Commercial Repair runs storm-response and same-day dispatch across Miami-Dade, Broward, and Palm Beach. Pre-storm equipment audits, post-storm damage assessments, generator coordination, and full diagnostic. $89 commercial service call, free with an approved repair. Call (754) 345-4515 or request through our dispatch page.",
         "Residential premium kitchens face the same hurricane prep checklist — [Berne's premium residential team](https://berne-repair.com) publishes the home-side preparation guidance for Sub-Zero, Wolf, and Viking installs.",
       ],
     },

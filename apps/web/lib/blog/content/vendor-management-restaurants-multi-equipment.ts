@@ -83,7 +83,7 @@ export const vendorManagementRestaurantsMultiEquipment: Article = {
     {
       heading: "Same-day commercial dispatch",
       body: [
-        "Berne Commercial Repair services restaurants, hotels, and hospitality groups across Miami-Dade, Broward, and Palm Beach. Appliance and refrigeration consolidation with vendor-management referrals. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our dispatch page.",
+        "Berne Commercial Repair services restaurants, hotels, and hospitality groups across Miami-Dade, Broward, and Palm Beach. Appliance and refrigeration consolidation with vendor-management referrals. $89 commercial service call (free with approved repair). Call (754) 345-4515 or request through our dispatch page.",
         "Restaurant owners with premium residential kitchens can consolidate home-side service under [Berne's premium residential team](https://berne-repair.com), routed through the same back-office.",
       ],
     },

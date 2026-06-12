@@ -51,7 +51,7 @@ export const pepsiCokeFountainMachineService: Article = {
       heading: "5. Who to call, in order",
       body: [
         "Syrup taste wrong, syrup not flowing, BIB leaking, tower valve dripping: call the bottler — it is their equipment and your syrup contract pays for the service. Have your customer number from the syrup invoice ready; both Pepsi and Coke dispatch faster with it.",
-        "Flat soda with good flavor, warm soda, dead machine, water leaks under the counter, ice bin empty: call a commercial equipment service company. In South Florida, Berne dispatches same-day for an $89 commercial service call applied toward the repair — carbonators, chillers, drop-ins, filtration, and the ice machines that feed cold plates are all routine tickets. If it turns out the problem genuinely is on the bottler's side, we will tell you that at the diagnostic and you are out the service call, not a markup.",
+        "Flat soda with good flavor, warm soda, dead machine, water leaks under the counter, ice bin empty: call a commercial equipment service company. In South Florida, Berne dispatches same-day for an $89 commercial service call that is free if you approve the repair — carbonators, chillers, drop-ins, filtration, and the ice machines that feed cold plates are all routine tickets. If it turns out the problem genuinely is on the bottler's side, we will tell you that at the diagnostic and you are out the service call, not a markup.",
       ],
     },
     {
@@ -71,7 +71,7 @@ export const pepsiCokeFountainMachineService: Article = {
     {
       heading: "Same-day fountain and beverage equipment service",
       body: [
-        "Berne Commercial Repair services fountain carbonators, chillers, drop-in dispensers, filtration, and the ice machines behind ice-cooled towers across Miami-Dade, Broward, and Palm Beach — restaurants, cafeterias, convenience stores, and offices. $89 commercial service call, applied toward the approved repair. Call (754) 345-4515 or use our [soda and fountain machine repair](/services/soda-machine-repair) page to request dispatch.",
+        "Berne Commercial Repair services fountain carbonators, chillers, drop-in dispensers, filtration, and the ice machines behind ice-cooled towers across Miami-Dade, Broward, and Palm Beach — restaurants, cafeterias, convenience stores, and offices. $89 commercial service call — free if you approve the repair, paid only if you decline. Call (754) 345-4515 or use our [soda and fountain machine repair](/services/soda-machine-repair) page to request dispatch.",
       ],
     },
   ],

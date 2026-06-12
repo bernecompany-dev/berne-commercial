@@ -63,7 +63,7 @@ export const manitowocErrorCodesFieldGuide: Article = {
     {
       heading: "Same-day Manitowoc service in South Florida",
       body: [
-        "Berne Commercial Repair services Manitowoc ice machines daily across Miami-Dade, Broward, and Palm Beach — Indigo, Indigo NXT, i-Series, NEO, and legacy platforms, with harvest sensors, water valves, fan motors, and start components on the trucks. $89 commercial service call applied toward the approved repair. Call (754) 345-4515 or request dispatch through our [ice machine repair](/services/ice-machine-repair) page, and see the full [Manitowoc brand page](/brands/manitowoc) for platform coverage.",
+        "Berne Commercial Repair services Manitowoc ice machines daily across Miami-Dade, Broward, and Palm Beach — Indigo, Indigo NXT, i-Series, NEO, and legacy platforms, with harvest sensors, water valves, fan motors, and start components on the trucks. $89 commercial service call, free when you approve the repair. Call (754) 345-4515 or request dispatch through our [ice machine repair](/services/ice-machine-repair) page, and see the full [Manitowoc brand page](/brands/manitowoc) for platform coverage.",
       ],
     },
   ],

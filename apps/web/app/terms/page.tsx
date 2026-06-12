@@ -54,7 +54,7 @@ export default function TermsPage() {
 
         <h2 className="mt-10 text-xl font-semibold tracking-tight">3. Service-call fee and pricing</h2>
         <ul className="list-disc space-y-1 pl-6">
-          <li>The commercial service-call (diagnostic) fee is <strong>{site.serviceCall}</strong>. It is applied toward the approved repair if you authorize work on the same visit.</li>
+          <li>The commercial service-call (diagnostic) fee is <strong>{site.serviceCall}</strong>. It is waived in full if you approve the repair; you pay the fee only if you decline the repair.</li>
           <li>Repair pricing is quoted flat-rate or time-and-materials, disclosed in writing before work begins.</li>
           <li>Parts costs are disclosed upfront. Special-order, OEM-only, or expedited parts may require a deposit.</li>
           <li>The on-site contact authorizes repairs in writing (signed estimate or digital work order) before parts are ordered or labor begins.</li>

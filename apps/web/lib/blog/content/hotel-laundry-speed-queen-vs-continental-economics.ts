@@ -71,7 +71,7 @@ export const hotelLaundrySpeedQueenContinental: Article = {
       heading: "8. Service contract structure for hotel laundry",
       body: [
         "Quarterly preventive visits: drain valve inspection, door seal inspection, drive belt tension, bearing-sound check, inverter board temp scan. Annual deep service: bearing greasing, drum balance check, suspension inspection, calibration of the inverter to OEM spec. Emergency dispatch with under-8-hour response for hospitality clients running 24/7.",
-        "Berne Commercial services both Speed Queen and Continental across South Florida. We carry the high-wear parts for both brands on the truck. COI on file for hospitality clients. $89 commercial service call applied to the approved repair. Call (754) 345-4515.",
+        "Berne Commercial services both Speed Queen and Continental across South Florida. We carry the high-wear parts for both brands on the truck. COI on file for hospitality clients. $89 commercial service call — free if you approve the repair. Call (754) 345-4515.",
       ],
     },
     {

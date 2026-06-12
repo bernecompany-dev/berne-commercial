@@ -71,7 +71,7 @@ export const hoshizakiVsManitowocVsScotsman: Article = {
     {
       heading: "Spec the right machine the first time",
       body: [
-        "Berne Commercial Repair sells, installs, and services Hoshizaki, Manitowoc, and Scotsman across Miami-Dade, Broward, and Palm Beach. We don't push one brand — we spec the unit that matches the kitchen heat load, the water condition, the floor plan, and the maintenance reality. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or reach us through our ice machine repair page. For home ice makers — Sub-Zero, Scotsman residential, U-Line — bernerepair.com runs the residential side.",
+        "Berne Commercial Repair sells, installs, and services Hoshizaki, Manitowoc, and Scotsman across Miami-Dade, Broward, and Palm Beach. We don't push one brand — we spec the unit that matches the kitchen heat load, the water condition, the floor plan, and the maintenance reality. $89 commercial service call, free if you go ahead with the repair. Call (754) 345-4515 or reach us through our ice machine repair page. For home ice makers — Sub-Zero, Scotsman residential, U-Line — bernerepair.com runs the residential side.",
       ],
     },
   ],

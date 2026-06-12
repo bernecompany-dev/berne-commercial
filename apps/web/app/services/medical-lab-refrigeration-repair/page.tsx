@@ -143,7 +143,7 @@ const FAQS = [
   },
   {
     q: "What does the service call cost?",
-    a: "$89 commercial service call, applied toward the approved repair — same as every Berne commercial dispatch. Preventive contracts for clinics typically run $600-$1,100/year for two units including quarterly visits.",
+    a: "$89 commercial service call — free with an approved repair, paid only if you decline — same as every Berne commercial dispatch. Preventive contracts for clinics typically run $600-$1,100/year for two units including quarterly visits.",
   },
   {
     q: "Can you take over preventive maintenance for a clinic or lab fleet?",
@@ -299,8 +299,8 @@ export default function MedicalLabRefrigerationPage() {
           </h2>
           <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
             Real numbers from our healthcare tickets — parts plus labor. The{" "}
-            {site.serviceCall} service call covers diagnosis and is applied
-            toward an approved repair.
+            {site.serviceCall} service call covers diagnosis and is free
+            when you approve the repair.
           </p>
           <div className="mt-6 overflow-x-auto rounded-xl border border-border">
             <table className="w-full min-w-[640px] border-collapse text-sm">

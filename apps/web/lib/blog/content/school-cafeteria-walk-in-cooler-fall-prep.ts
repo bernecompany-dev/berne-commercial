@@ -77,7 +77,7 @@ export const schoolCafeteriaWalkInFallPrep: Article = {
     {
       heading: "Same-day school cafeteria service",
       body: [
-        "Berne Commercial Repair services K-12 school cafeteria equipment across Miami-Dade, Broward, and Palm Beach. Pre-opening prep programs, full kitchen equipment service, walk-in/reach-in/ice machine specialty. $89 commercial service call applied to the approved repair. Public school district COI requirements on file. Call (754) 345-4515 or request through our dispatch page.",
+        "Berne Commercial Repair services K-12 school cafeteria equipment across Miami-Dade, Broward, and Palm Beach. Pre-opening prep programs, full kitchen equipment service, walk-in/reach-in/ice machine specialty. $89 commercial service call (free with approved repair). Public school district COI requirements on file. Call (754) 345-4515 or request through our dispatch page.",
         "For residential walk-in coolers in private estates (chef's pantries, wine rooms), [Berne's premium residential team](https://berne-repair.com) handles home-side service.",
       ],
     },

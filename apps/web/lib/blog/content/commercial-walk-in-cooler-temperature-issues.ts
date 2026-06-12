@@ -83,7 +83,7 @@ export const walkInCoolerTemperature: Article = {
     {
       heading: "Get a refrigeration tech on the dock",
       body: [
-        "Berne Commercial Repair runs same-day commercial dispatch across South Florida — $89 service call applied to the approved repair, with a refrigeration-specialist truck in your area most days. Call (754) 345-4515 or request service through our walk-in cooler repair page or commercial refrigeration repair page. For residential refrigeration — Sub-Zero, Viking, or a basement reach-in at a property manager's residence — our sister site bernerepair.com covers that side.",
+        "Berne Commercial Repair runs same-day commercial dispatch across South Florida — $89 service call that is free when you approve the repair, with a refrigeration-specialist truck in your area most days. Call (754) 345-4515 or request service through our walk-in cooler repair page or commercial refrigeration repair page. For residential refrigeration — Sub-Zero, Viking, or a basement reach-in at a property manager's residence — our sister site bernerepair.com covers that side.",
       ],
     },
   ],

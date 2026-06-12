@@ -86,7 +86,7 @@ export const miamiRestaurantClusterVendorDensity: Article = {
     {
       heading: "Same-day commercial dispatch across South Florida",
       body: [
-        "Berne Commercial Repair services commercial restaurants across Miami-Dade, Broward, and Palm Beach with truck-fleet coverage and on-truck parts inventory. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our dispatch page.",
+        "Berne Commercial Repair services commercial restaurants across Miami-Dade, Broward, and Palm Beach with truck-fleet coverage and on-truck parts inventory. $89 commercial service call — free if you approve the repair. Call (754) 345-4515 or request through our dispatch page.",
         "Many restaurant owners run premium appliance suites at home — for the home-side service on Sub-Zero, Wolf, and Miele, [Berne's premium residential operation](https://berne-repair.com) shares the same back-office.",
       ],
     },

@@ -84,7 +84,7 @@ export const yearEndDepreciationReplacement: Article = {
     {
       heading: "Same-day commercial dispatch and capital planning support",
       body: [
-        "Berne Commercial Repair services commercial kitchen equipment and supports year-end capital planning across Miami-Dade, Broward, and Palm Beach. Equipment evaluation, replacement coordination, decommissioning, install commissioning. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our dispatch page.",
+        "Berne Commercial Repair services commercial kitchen equipment and supports year-end capital planning across Miami-Dade, Broward, and Palm Beach. Equipment evaluation, replacement coordination, decommissioning, install commissioning. $89 commercial service call — free when you approve the repair, paid only if you decline. Call (754) 345-4515 or request through our dispatch page.",
         "Premium residential year-end planning follows similar economics — [Berne's premium residential team](https://berne-repair.com) covers Sub-Zero, Wolf, Viking, and Miele depreciation-vs-replacement on the home side.",
       ],
     },

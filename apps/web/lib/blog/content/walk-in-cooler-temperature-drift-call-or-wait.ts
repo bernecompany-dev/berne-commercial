@@ -77,7 +77,7 @@ export const walkInCoolerTempDriftCallOrWait: Article = {
     {
       heading: "Same-day walk-in cooler service",
       body: [
-        "Berne Commercial Repair services walk-in coolers and freezers across Miami-Dade, Broward, and Palm Beach. Same-day dispatch for restaurants, hotels, and hospitality groups. EPA Section 608 certified for refrigerant work. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our walk-in cooler repair page.",
+        "Berne Commercial Repair services walk-in coolers and freezers across Miami-Dade, Broward, and Palm Beach. Same-day dispatch for restaurants, hotels, and hospitality groups. EPA Section 608 certified for refrigerant work. $89 commercial service call — free if you approve the repair. Call (754) 345-4515 or request through our walk-in cooler repair page.",
         "For residential walk-in cooler installations in private estates (chef's pantry, wine room), [Berne's premium residential team](https://berne-repair.com) handles home-side service.",
       ],
     },

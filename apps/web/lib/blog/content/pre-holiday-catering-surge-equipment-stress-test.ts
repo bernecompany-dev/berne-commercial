@@ -83,7 +83,7 @@ export const preHolidayCateringSurgeStressTest: Article = {
     {
       heading: "Same-day commercial dispatch",
       body: [
-        "Berne Commercial Repair runs holiday stress-test services and emergency dispatch across Miami-Dade, Broward, and Palm Beach. Banquet, catering, and hospitality specialty. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our dispatch page.",
+        "Berne Commercial Repair runs holiday stress-test services and emergency dispatch across Miami-Dade, Broward, and Palm Beach. Banquet, catering, and hospitality specialty. $89 commercial service call — free when you approve the repair, paid only if you decline. Call (754) 345-4515 or request through our dispatch page.",
         "Premium residential holiday-kitchen prep follows the same stress-test logic — [Berne's premium residential team](https://berne-repair.com) covers home-side pre-holiday service for Sub-Zero, Wolf, Viking, and Miele installations.",
       ],
     },

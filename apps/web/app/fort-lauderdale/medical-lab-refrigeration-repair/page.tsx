@@ -134,7 +134,7 @@ const FAQS = [
   },
   {
     q: "What does a service call cost in Fort Lauderdale?",
-    a: "$89 commercial service call, applied toward the approved repair — the same flat structure as every Berne dispatch. Preventive contracts for clinics typically run $600-$1,100/year for two units including quarterly visits and audit-format documentation.",
+    a: "$89 commercial service call — free if you approve the repair, charged only if you decline. Same flat structure as every Berne dispatch. Preventive contracts for clinics typically run $600-$1,100/year for two units including quarterly visits and audit-format documentation.",
   },
   {
     q: "Are your technicians cleared for clinical areas?",
@@ -233,7 +233,7 @@ export default function FortLauderdaleMedicalLabPage() {
                 <p>
                   Dispatch runs from our Broward routes seven days a week —
                   the same 18 W-2 technicians, the same {site.serviceCall}{" "}
-                  service call applied toward the approved repair, and the
+                  service call that is free when you approve the repair, and the
                   same rule on every healthcare ticket: critical refrigeration
                   goes first, and the paperwork is done before the truck
                   leaves the parking lot.
@@ -310,7 +310,7 @@ export default function FortLauderdaleMedicalLabPage() {
           <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
             Real numbers from our Broward healthcare tickets — parts plus
             labor. The {site.serviceCall} service call covers diagnosis and is
-            applied toward an approved repair.
+            free when you approve the repair.
           </p>
           <div className="mt-6 overflow-x-auto rounded-xl border border-border">
             <table className="w-full min-w-[640px] border-collapse text-sm">

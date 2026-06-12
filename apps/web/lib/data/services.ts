@@ -141,7 +141,7 @@ export const services: Service[] = [
       },
       {
         q: "How much does a commercial refrigeration service call cost?",
-        a: "Our commercial service call is $89 and may be applied toward an approved repair.",
+        a: "Our commercial service call is $89 — free if you approve the repair; you only pay the fee if you decide not to proceed.",
       },
       {
         q: "What commercial refrigeration brands do you service?",
@@ -303,7 +303,7 @@ export const services: Service[] = [
     primary: true,
     metaTitle: "Commercial Ice Machine Repair Miami — 24/7",
     metaDescription:
-      "Hoshizaki, Manitowoc, Scotsman & Ice-O-Matic fixed same-day across Miami & South Florida. 24/7 dispatch, $89 call applied toward the repair.",
+      "Hoshizaki, Manitowoc, Scotsman & Ice-O-Matic fixed same-day across Miami & South Florida. 24/7 dispatch, $89 call — free with repair.",
     heroTitle: "Commercial Ice Machine Repair",
     summary:
       "Commercial ice machine repair for restaurants, hotels, healthcare and retail — Hoshizaki, Manitowoc, Scotsman.",
@@ -484,7 +484,7 @@ export const services: Service[] = [
       },
       {
         q: "What does a commercial dishwasher service call cost?",
-        a: "Our commercial service call is $89 and may be applied toward an approved repair.",
+        a: "Our commercial service call is $89, and it is free when you approve the repair — the fee applies only if you decline.",
       },
     ],
   },

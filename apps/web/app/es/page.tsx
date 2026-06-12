@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 const homepageFaqs = [
   {
     q: "¿Cuánto cuesta la llamada de servicio comercial?",
-    a: "Nuestra llamada de servicio comercial es $89 y se aplica al costo de la reparación aprobada.",
+    a: "Nuestra llamada de servicio comercial es $89 y es gratuita si aprueba la reparación: solo se paga si decide no continuar.",
   },
   {
     q: "¿Ofrecen servicio comercial de emergencia el mismo día?",

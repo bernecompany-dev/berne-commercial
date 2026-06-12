@@ -86,8 +86,8 @@ export default function AboutPage() {
                 workmanship warranty on the actual paperwork, and a
                 same-day commercial standard for emergency calls inside
                 Miami-Dade, Broward, and Palm Beach. Diagnostic on a
-                commercial site is a flat {site.serviceCall}, credited
-                back if you proceed. We carry OEM parts for the verticals
+                commercial site is a flat {site.serviceCall}, free if
+                you proceed with the repair. We carry OEM parts for the verticals
                 we run dispatch for — Hobart, Vulcan, True, Manitowoc,
                 Hoshizaki, Rational, Garland, Traulsen, Beverage-Air,
                 Frymaster on the kitchen side; Speed Queen, Continental,

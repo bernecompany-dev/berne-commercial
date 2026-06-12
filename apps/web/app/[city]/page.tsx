@@ -73,7 +73,7 @@ const faqsFor = (cityName: string) => [
   },
   {
     q: `What is the commercial service call in ${cityName}?`,
-    a: `Our commercial service call is ${site.serviceCall} and may be applied toward an approved repair.`,
+    a: `Our commercial service call is ${site.serviceCall} — free if you approve the repair; you only pay the fee if you decide not to proceed.`,
   },
   {
     q: `What commercial equipment do you repair in ${cityName}?`,
@@ -108,7 +108,7 @@ export default async function CityPage({ params }: Params) {
             the H1. Repetition reads as noise, not reassurance. */}
         <div className="flex flex-wrap gap-2">
           <Badge variant="outline" className="border-primary/30 bg-primary/5 text-primary">
-            {site.serviceCall} service call — applied toward approved repair
+            {site.serviceCall} service call — free with approved repair
           </Badge>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">

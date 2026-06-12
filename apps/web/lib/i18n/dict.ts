@@ -227,7 +227,7 @@ const en: Dict = {
     successCall: "Call dispatch",
     regarding: "Regarding",
     serviceCallNote:
-      "Commercial service call: $89 · Applied toward approved repair",
+      "Commercial service call: $89 · Free with approved repair",
     required: "required",
   },
   whyUs: {
@@ -381,7 +381,7 @@ const es: Dict = {
     successCall: "Llamar a despacho",
     regarding: "Asunto",
     serviceCallNote:
-      "Llamada de servicio comercial: $89 · Se aplica al costo de la reparación aprobada",
+      "Llamada de servicio comercial: $89 · Gratis con la reparación aprobada",
     required: "requerido",
   },
   whyUs: {

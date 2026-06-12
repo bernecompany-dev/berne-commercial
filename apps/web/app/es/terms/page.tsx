@@ -56,7 +56,7 @@ export default function TermsPageES() {
 
         <h2 className="mt-10 text-xl font-semibold tracking-tight">3. Tarifa de servicio y precios</h2>
         <ul className="list-disc space-y-1 pl-6">
-          <li>La tarifa de llamada de servicio comercial (diagnóstico) es de <strong>{site.serviceCall}</strong>. Se aplica al costo de la reparación si autoriza el trabajo el mismo día.</li>
+          <li>La tarifa de llamada de servicio comercial (diagnóstico) es de <strong>{site.serviceCall}</strong>. Es gratuita si aprueba la reparación; solo se paga si decide no continuar.</li>
           <li>Precios de reparación se cotizan como tarifa plana o tiempo-y-materiales, divulgados por escrito antes de comenzar.</li>
           <li>Costos de partes se informan por adelantado. Partes de pedido especial, solo OEM o expeditadas pueden requerir depósito.</li>
           <li>El contacto en sitio autoriza reparaciones por escrito (estimado firmado o work order digital) antes de pedir partes o iniciar trabajo.</li>

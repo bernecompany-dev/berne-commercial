@@ -80,7 +80,7 @@ export const serviceContractVsPerIncidentTco: Article = {
     {
       heading: "Same-day commercial dispatch",
       body: [
-        "Berne Commercial Repair runs service contracts and same-day dispatch across Miami-Dade, Broward, and Palm Beach. Restaurant, hotel, hospitality, and multi-property specialty. $89 commercial service call applied to the approved repair (non-contract). Contract evaluation at no charge. Call (754) 345-4515 or request through our dispatch page.",
+        "Berne Commercial Repair runs service contracts and same-day dispatch across Miami-Dade, Broward, and Palm Beach. Restaurant, hotel, hospitality, and multi-property specialty. $89 commercial service call — free if you approve the repair (non-contract). Contract evaluation at no charge. Call (754) 345-4515 or request through our dispatch page.",
         "Premium residential service contracts use a parallel framework — [Berne's premium residential team](https://berne-repair.com) publishes the home-side TCO guidance for Sub-Zero, Wolf, and Miele installations.",
       ],
     },

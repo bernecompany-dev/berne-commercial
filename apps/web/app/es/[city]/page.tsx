@@ -66,7 +66,7 @@ const faqsForEs = (cityName: string) => [
   },
   {
     q: `¿Cuánto cuesta la llamada de servicio comercial en ${cityName}?`,
-    a: `Nuestra llamada de servicio comercial es ${site.serviceCall} y se aplica al costo de la reparación aprobada.`,
+    a: `Nuestra llamada de servicio comercial es ${site.serviceCall} y es gratuita si aprueba la reparación: solo se paga si decide no continuar.`,
   },
   {
     q: `¿Qué equipo comercial reparan en ${cityName}?`,
@@ -102,7 +102,7 @@ export default async function CityPageES({ params }: Params) {
             variant="outline"
             className="border-primary/30 bg-primary/5 text-primary"
           >
-            Llamada de servicio {site.serviceCall} — se aplica a la reparación aprobada
+            Llamada de servicio {site.serviceCall} — gratis con la reparación aprobada
           </Badge>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">

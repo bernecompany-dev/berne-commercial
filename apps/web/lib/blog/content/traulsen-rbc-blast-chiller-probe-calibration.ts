@@ -83,7 +83,7 @@ export const traulsenRbcBlastChillerProbe: Article = {
     {
       heading: "Same-day Traulsen blast chiller service",
       body: [
-        "Berne Commercial Repair services Traulsen RBC blast chillers, G-series reach-ins, and full Traulsen commercial refrigeration across Miami-Dade, Broward, and Palm Beach. Probe calibration, refrigeration service, compliance documentation support. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial refrigeration repair page.",
+        "Berne Commercial Repair services Traulsen RBC blast chillers, G-series reach-ins, and full Traulsen commercial refrigeration across Miami-Dade, Broward, and Palm Beach. Probe calibration, refrigeration service, compliance documentation support. $89 commercial service call — free if you approve the repair. Call (754) 345-4515 or request through our commercial refrigeration repair page.",
         "For premium residential blast-chiller and rapid-cool installations (Sub-Zero PRO, Miele, Gaggenau), [Berne's premium residential team](https://berne-repair.com) covers home-side probe calibration.",
       ],
     },

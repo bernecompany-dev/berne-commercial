@@ -64,7 +64,7 @@ export const combiOvenBuyingGuideSouthFlorida: Article = {
     {
       heading: "Combi service across all four platforms",
       body: [
-        "Berne Commercial Repair services Rational, Unox, Convotherm, and Alto-Shaam combis daily across Miami-Dade, Broward, and Palm Beach — repairs, descaling, water-treatment guidance, and annual contracts. $89 commercial service call applied toward the approved repair. Call (754) 345-4515 or request dispatch through our [commercial oven repair](/services/commercial-oven-repair) page.",
+        "Berne Commercial Repair services Rational, Unox, Convotherm, and Alto-Shaam combis daily across Miami-Dade, Broward, and Palm Beach — repairs, descaling, water-treatment guidance, and annual contracts. $89 commercial service call — free if you approve the repair. Call (754) 345-4515 or request dispatch through our [commercial oven repair](/services/commercial-oven-repair) page.",
       ],
     },
   ],

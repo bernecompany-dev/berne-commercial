@@ -60,7 +60,7 @@ export default async function ServiceDetailPage({ params }: Params) {
             the TrustStrip directly above this hero. */}
         <div className="flex flex-wrap gap-2">
           <Badge variant="outline" className="border-primary/30 bg-primary/5 text-primary">
-            Commercial service call: {site.serviceCall} — applied toward approved repair
+            Commercial service call: {site.serviceCall} — free with approved repair
           </Badge>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
@@ -120,8 +120,8 @@ export default async function ServiceDetailPage({ params }: Params) {
             <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
               Real numbers from our South Florida service tickets — parts plus
               labor, before any contract pricing. The {site.serviceCall}{" "}
-              commercial service call covers the diagnosis and is applied
-              toward an approved repair.
+              commercial service call covers the diagnosis and is free
+              when you approve the repair — you only pay it if you decline.
             </p>
             <p
               className="mt-4 text-xs text-muted-foreground md:hidden"

@@ -99,8 +99,8 @@ export default function AboutPageES() {
                 departamento de AP, garantía de 90 días de mano de obra
                 por escrito, y un estándar comercial de mismo día en
                 Miami-Dade, Broward y Palm Beach. El diagnóstico en sitio
-                comercial es un flat {site.serviceCall}, acreditado si
-                procede. Llevamos partes OEM para las verticales en las
+                comercial es un flat {site.serviceCall}, gratis si
+                procede con la reparación. Llevamos partes OEM para las verticales en las
                 que corremos despacho — Hobart, Vulcan, True, Manitowoc,
                 Hoshizaki, Rational, Garland, Traulsen, Beverage-Air,
                 Frymaster en cocina; Speed Queen, Continental, Wascomat

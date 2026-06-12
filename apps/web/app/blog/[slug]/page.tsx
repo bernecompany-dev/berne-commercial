@@ -237,7 +237,7 @@ export default async function BlogArticlePage({ params }: Params) {
                     Need a commercial tech on site?
                   </div>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    {site.serviceCall} commercial service call, applied to the
+                    {site.serviceCall} commercial service call, free with the
                     approved repair. Same-day dispatch across South Florida.
                   </p>
                 </div>

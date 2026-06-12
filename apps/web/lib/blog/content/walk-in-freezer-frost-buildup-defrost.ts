@@ -78,7 +78,7 @@ export const walkInFreezerFrostBuildup: Article = {
     {
       heading: "Same-day walk-in freezer service",
       body: [
-        "Berne Commercial Repair runs emergency dispatch for walk-in freezer defrost failures across Miami-Dade, Broward, and Palm Beach. Our trucks stock Paragon timers, defrost heating elements, termination thermostats, and Heatcraft replacement evap fans. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request service through our walk-in freezer repair page. For residential standalone freezers — Sub-Zero, Viking, GE Profile — bernerepair.com handles the home side.",
+        "Berne Commercial Repair runs emergency dispatch for walk-in freezer defrost failures across Miami-Dade, Broward, and Palm Beach. Our trucks stock Paragon timers, defrost heating elements, termination thermostats, and Heatcraft replacement evap fans. $89 commercial service call, free with an approved repair. Call (754) 345-4515 or request service through our walk-in freezer repair page. For residential standalone freezers — Sub-Zero, Viking, GE Profile — bernerepair.com handles the home side.",
       ],
     },
   ],

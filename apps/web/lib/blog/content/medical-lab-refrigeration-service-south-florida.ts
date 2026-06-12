@@ -64,7 +64,7 @@ export const medicalLabRefrigerationService: Article = {
     {
       heading: "Same-day medical and lab refrigeration dispatch",
       body: [
-        "Berne Commercial Repair services vaccine and pharmacy refrigerators, blood bank and reagent storage, lab freezers, ULT units (mechanical scope), and healthcare cafeteria refrigeration across Miami-Dade, Broward, and Palm Beach. EPA 608-certified, background-screened techs; audit-ready service documentation; $89 commercial service call applied toward the approved repair. Call (754) 345-4515 or request dispatch through the [medical & lab refrigeration service page](/services/medical-lab-refrigeration-repair).",
+        "Berne Commercial Repair services vaccine and pharmacy refrigerators, blood bank and reagent storage, lab freezers, ULT units (mechanical scope), and healthcare cafeteria refrigeration across Miami-Dade, Broward, and Palm Beach. EPA 608-certified, background-screened techs; audit-ready service documentation; $89 commercial service call — free with an approved repair. Call (754) 345-4515 or request dispatch through the [medical & lab refrigeration service page](/services/medical-lab-refrigeration-repair).",
       ],
     },
   ],

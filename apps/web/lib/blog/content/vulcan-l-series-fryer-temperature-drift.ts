@@ -80,7 +80,7 @@ export const vulcanLSeriesFryerTempDrift: Article = {
     {
       heading: "Same-day Vulcan fryer service",
       body: [
-        "Berne Commercial Repair services Vulcan L-series, VK series, LCS, and 1ER models across Miami-Dade, Broward, and Palm Beach. Thermostat calibration, burner service, high-limit replacement, oil filtration system service. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our fryer repair page.",
+        "Berne Commercial Repair services Vulcan L-series, VK series, LCS, and 1ER models across Miami-Dade, Broward, and Palm Beach. Thermostat calibration, burner service, high-limit replacement, oil filtration system service. $89 commercial service call — waived when you approve the repair. Call (754) 345-4515 or request through our fryer repair page.",
         "For premium residential deep-fryer installations and dual-fuel range frying performance (Wolf, Viking, BlueStar), [Berne's premium residential team](https://berne-repair.com) handles home-side calibration.",
       ],
     },

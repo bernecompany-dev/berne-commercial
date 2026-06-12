@@ -77,7 +77,7 @@ export const greaseTrapApplianceLifespan: Article = {
     {
       heading: "Service contracts that include FOG-aware diagnostics",
       body: [
-        "Berne Commercial Repair writes commercial service contracts that document grease-trap-related appliance stress on every visit and flag chronic drainage issues to the operator before they become equipment failures. We work across Miami-Dade, Broward, and Palm Beach. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or reach us through our commercial appliance repair page. For home plumbing and appliance work — disposals, dishwashers, washing machines — bernerepair.com handles the residential side.",
+        "Berne Commercial Repair writes commercial service contracts that document grease-trap-related appliance stress on every visit and flag chronic drainage issues to the operator before they become equipment failures. We work across Miami-Dade, Broward, and Palm Beach. $89 commercial service call, free with an approved repair. Call (754) 345-4515 or reach us through our commercial appliance repair page. For home plumbing and appliance work — disposals, dishwashers, washing machines — bernerepair.com handles the residential side.",
       ],
     },
   ],

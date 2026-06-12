@@ -77,7 +77,7 @@ export const rationalIcombiProDescaling: Article = {
     {
       heading: "Same-day Rational service",
       body: [
-        "Berne Commercial Repair services Rational iCombi Pro, iCombi Classic, SelfCookingCenter, and ConvoTherm combi ovens across Miami-Dade, Broward, and Palm Beach. CareControl programming, steam generator service, water treatment install, and full diagnostic. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial oven repair page.",
+        "Berne Commercial Repair services Rational iCombi Pro, iCombi Classic, SelfCookingCenter, and ConvoTherm combi ovens across Miami-Dade, Broward, and Palm Beach. CareControl programming, steam generator service, water treatment install, and full diagnostic. $89 commercial service call — waived when you approve the repair. Call (754) 345-4515 or request through our commercial oven repair page.",
         "For residential premium steam ovens (Wolf CSO, Miele DGC, Thermador) that face the same descaling chemistry, [Berne's premium residential operation](https://berne-repair.com) handles home-side service.",
       ],
     },

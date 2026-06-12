@@ -124,7 +124,7 @@ const cityFaqs = (city: string, service: string, sc: string) => [
   },
   {
     q: `What is the commercial service call cost in ${city}?`,
-    a: `Our commercial service call is ${sc} and may be applied toward an approved repair.`,
+    a: `Our commercial service call is ${sc} — free if you approve the repair; you only pay the fee if you decide not to proceed.`,
   },
   {
     q: `Are your ${city} technicians licensed and insured?`,
@@ -164,7 +164,7 @@ export default async function CityServicePage({ params }: Params) {
       >
         <div className="flex flex-wrap gap-2">
           <Badge variant="outline" className="border-primary/30 bg-primary/5 text-primary">
-            Commercial service call: {site.serviceCall} — applied toward approved repair
+            Commercial service call: {site.serviceCall} — free with approved repair
           </Badge>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">

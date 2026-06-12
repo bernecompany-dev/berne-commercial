@@ -89,7 +89,7 @@ const MANITOWOC: BrandService = {
   metaDescription:
     "Manitowoc Indigo, NEO & i-Series fixed same-day across South Florida. 18 W-2 techs read the fault codes daily. 4.79★ from 871 reviews. $89 service call.",
   heroDescription:
-    "Same-day Manitowoc ice machine repair across Miami-Dade, Broward and Palm Beach — Indigo NXT, NEO, i-Series and S-Series cubers, plus RNS/RFS nugget and flake machines. 24/7 emergency dispatch for commercial accounts, $89 service call applied toward the approved repair.",
+    "Same-day Manitowoc ice machine repair across Miami-Dade, Broward and Palm Beach — Indigo NXT, NEO, i-Series and S-Series cubers, plus RNS/RFS nugget and flake machines. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
     "Manitowoc is the highest-volume ice machine in our South Florida ticket history — more restaurants, hotels and bars run Indigo and NEO heads here than any other brand. That volume means our 18 W-2 technicians see every Manitowoc failure mode weekly, carry the common parts on the truck (ice thickness probes, water level probes, dump valves, fan motors, bin switches), and clear most calls on the first visit.",
     "South Florida is hard duty for a Manitowoc. Salt air corrodes condenser fins and fan motors on coastal installs; our mineral-heavy water scales evaporator plates and fouls the sensing probes the Indigo control system depends on; and 90°F+ ambient in cramped back-of-house alcoves pushes discharge temperatures into the range where the controller starts derating production or shutting the machine down to protect the compressor. Most of the \"my Manitowoc died\" calls we run trace back to one of those three local stressors, not a defective machine.",
@@ -230,7 +230,7 @@ const MANITOWOC: BrandService = {
   faqs: [
     {
       q: "Do you repair Manitowoc ice machines the same day in Miami?",
-      a: "Yes — Manitowoc calls dispatch same-day across Miami-Dade, Broward and Palm Beach, seven days a week, and a down ice machine in season is treated as an emergency. The $89 commercial service call is applied toward the approved repair.",
+      a: "Yes — Manitowoc calls dispatch same-day across Miami-Dade, Broward and Palm Beach, seven days a week, and a down ice machine in season is treated as an emergency. The $89 commercial service call is free if you approve the repair — you only pay it if you decline.",
     },
     {
       q: "Are you an authorized Manitowoc service agent?",
@@ -278,11 +278,11 @@ const HOSHIZAKI: BrandService = {
   metaDescription:
     "Hoshizaki KM & IM series repaired same-day across South Florida. Techs who read the beep codes. 18 W-2 techs, 4.79★ from 871 reviews. $89 service call.",
   heroDescription:
-    "Same-day Hoshizaki ice machine repair across Miami-Dade, Broward and Palm Beach — KM-series crescent cubers, IM-series square cubers, F/DCM flaker and nugget machines. 24/7 emergency dispatch for commercial accounts, $89 service call applied toward the approved repair.",
+    "Same-day Hoshizaki ice machine repair across Miami-Dade, Broward and Palm Beach — KM-series crescent cubers, IM-series square cubers, F/DCM flaker and nugget machines. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
     "Hoshizaki has earned its workhorse reputation honestly — stainless evaporators, simple control logic, fewer moving parts in the water path. But South Florida still finds the weak points: float switches and harvest-water valves scale up in our mineral-heavy water, condenser coils foul fast in greasy kitchens, and coastal salt air takes fan motors years early. Our techs run Hoshizaki tickets daily and carry float switches, water valves, fan motors, and control-board spares for the KM line on the truck.",
     "The KM-series control board talks to you — alarm beeps and LED patterns that identify exactly which safety shut it down. Most operators never get told this; they just hear \"it stopped working.\" Our technicians read those codes the way the factory manual intends, which turns a vague no-ice complaint into a targeted one-visit repair instead of parts roulette.",
-    "We are an independent service company, not a Hoshizaki distributor — no affiliation, no factory warranty processing, no incentive to sell you a new machine. What you get is a tech who has serviced hundreds of KM and IM units across South Florida, same-day, with the $89 service call applied toward the approved repair.",
+    "We are an independent service company, not a Hoshizaki distributor — no affiliation, no factory warranty processing, no incentive to sell you a new machine. What you get is a tech who has serviced hundreds of KM and IM units across South Florida, same-day, with the $89 service call waived when you approve the repair.",
   ],
   codesHeading: "Hoshizaki KM beep codes — what the board is telling you",
   codesIntro:
@@ -412,7 +412,7 @@ const HOSHIZAKI: BrandService = {
   faqs: [
     {
       q: "Do you repair Hoshizaki ice machines same-day in South Florida?",
-      a: "Yes — Hoshizaki tickets dispatch same-day across Miami-Dade, Broward and Palm Beach, with no-ice emergencies prioritized. The $89 commercial service call applies toward the approved repair.",
+      a: "Yes — Hoshizaki tickets dispatch same-day across Miami-Dade, Broward and Palm Beach, with no-ice emergencies prioritized. The $89 commercial service call is waived with an approved repair — it is only charged if you decline.",
     },
     {
       q: "Are you a Hoshizaki authorized service center?",
@@ -460,7 +460,7 @@ const SCOTSMAN: BrandService = {
   metaDescription:
     "Scotsman Prodigy & legacy cubers, Meridian dispensers, nugget machines — same-day repair across South Florida. 4.79★ from 871 reviews. $89 service call.",
   heroDescription:
-    "Same-day Scotsman ice machine repair across Miami-Dade, Broward and Palm Beach — Prodigy and Prodigy Plus cubers, legacy CME heads, Meridian dispensers and nugget/flake machines. 24/7 emergency dispatch for commercial accounts, $89 service call applied toward the approved repair.",
+    "Same-day Scotsman ice machine repair across Miami-Dade, Broward and Palm Beach — Prodigy and Prodigy Plus cubers, legacy CME heads, Meridian dispensers and nugget/flake machines. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
     "Scotsman's Prodigy platform is built around sensors — water level, ice level, temperature — which makes it efficient when clean and temperamental in South Florida water. Mineral scale on the conductivity-style water sensors is the single most common root cause behind the Prodigy fault calls we run: the machine isn't broken, it's blind. Our techs descale and recalibrate the sensing system, replace what's actually failed, and leave you with a filtration recommendation matched to your water.",
     "The diagnostic codes on the Prodigy display do half the work — if your service company reads them. Code 1 and 2 events (long freeze, long harvest), slow-water-fill faults and high discharge temperature shutdowns each point at a short list of components, and our trucks carry the usual suspects: water sensors, fill valves, curtain/bin switches, condenser fan motors, harvest assist parts.",
@@ -594,7 +594,7 @@ const SCOTSMAN: BrandService = {
   faqs: [
     {
       q: "Do you repair Scotsman ice machines same-day?",
-      a: "Yes — same-day dispatch across Miami-Dade, Broward and Palm Beach, seven days a week. A down ice machine in a bar or healthcare setting is run as an emergency. $89 service call, applied toward the approved repair.",
+      a: "Yes — same-day dispatch across Miami-Dade, Broward and Palm Beach, seven days a week. A down ice machine in a bar or healthcare setting is run as an emergency. $89 service call — free if you approve the repair.",
     },
     {
       q: "Are you an authorized Scotsman service agency?",
@@ -641,7 +641,7 @@ const HOBART: BrandService = {
   metaDescription:
     "Hobart AM15, LXi/LXe & CL conveyor dishwashers repaired same-day across South Florida. Sanitizer temps restored, inspection-ready. 4.79★/871. $89 call.",
   heroDescription:
-    "Same-day Hobart commercial dishwasher repair across Miami-Dade, Broward and Palm Beach — AM15/AM16 door-types, LXi/LXe undercounters, and CL-series conveyors. 24/7 emergency dispatch for commercial accounts, $89 service call applied toward the approved repair.",
+    "Same-day Hobart commercial dishwasher repair across Miami-Dade, Broward and Palm Beach — AM15/AM16 door-types, LXi/LXe undercounters, and CL-series conveyors. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
     "A down Hobart isn't an appliance problem — it's a health-code problem. When the final rinse can't hold sanitizing temperature, every plate out of that machine is an inspection finding waiting to happen, and hand-washing through a Friday service burns labor you don't have. That's why dish machine outages dispatch same-day in our queue, and why our techs verify wash and rinse temperatures with a calibrated thermometer before they leave — documented on the ticket for your inspection file.",
     "Hobart machines are the longest-lived dishwashers in the industry, which is exactly why South Florida is full of 10-20 year old AM-series and CL conveyors with very fixable problems: scaled booster heaters that can't reach 180°F rinse, fill valves and float switches fouled by mineral load, wash pump seals, door springs and interlocks, and delime cycles that nobody has run since installation. The machine is rarely dead; it's neglected.",
@@ -775,7 +775,7 @@ const HOBART: BrandService = {
   faqs: [
     {
       q: "Do you repair Hobart dishwashers the same day?",
-      a: "Yes — a dish machine that can't sanitize is a health-code emergency and dispatches same-day across Miami-Dade, Broward and Palm Beach. The $89 commercial service call is applied toward the approved repair.",
+      a: "Yes — a dish machine that can't sanitize is a health-code emergency and dispatches same-day across Miami-Dade, Broward and Palm Beach. The $89 commercial service call is free with an approved repair; you only pay it if you decide not to proceed.",
     },
     {
       q: "Are you Hobart-authorized?",
@@ -822,7 +822,7 @@ const TRUE: BrandService = {
   metaDescription:
     "True T-series reach-ins, GDM merchandisers & prep tables repaired same-day across South Florida. R290 service, EPA 608 techs. 4.79★/871. $89 call.",
   heroDescription:
-    "Same-day True commercial refrigeration repair across Miami-Dade, Broward and Palm Beach — T-series reach-ins, GDM glass-door merchandisers, TUC undercounters and prep tables. 24/7 emergency dispatch, $89 service call applied toward the approved repair.",
+    "Same-day True commercial refrigeration repair across Miami-Dade, Broward and Palm Beach — T-series reach-ins, GDM glass-door merchandisers, TUC undercounters and prep tables. 24/7 emergency dispatch, $89 service call — free with approved repair.",
   intro: [
     "True is the most common reach-in nameplate in South Florida kitchens, which makes it the most common refrigeration ticket we run. The good news: True boxes are mechanically simple and almost always worth fixing. The patterns are stable across thousands of our tickets — condenser coils choked with kitchen grease and dust, evaporator fan motors dying of salt air and age, door gaskets that lost compression years ago, and start components (relay/capacitor) that fail long before the compressor itself does.",
     "The single most valuable thing a True owner can hear: when a T-49 stops holding temperature, it is usually a $120-$400 repair, not a dead compressor. A fouled condenser makes the system run hot and long until it trips or quits; a $30 start relay mimics total compressor failure; a torn gasket makes a healthy box sweat and struggle. We diagnose with gauges and meters before anyone says the word 'replacement.'",
@@ -956,7 +956,7 @@ const TRUE: BrandService = {
   faqs: [
     {
       q: "Do you repair True refrigerators the same day?",
-      a: "Yes — loss of refrigeration is an emergency in our dispatch queue. Same-day across Miami-Dade, Broward and Palm Beach, seven days a week, $89 service call applied toward the approved repair.",
+      a: "Yes — loss of refrigeration is an emergency in our dispatch queue. Same-day across Miami-Dade, Broward and Palm Beach, seven days a week — $89 service call, free when you approve the repair.",
     },
     {
       q: "Are you an authorized True service company?",
@@ -1004,7 +1004,7 @@ const LA_MARZOCCO: BrandService = {
   metaDescription:
     "La Marzocco Linea, GB5 & PB repaired across South Florida — scale, groups, pumps, boilers. Café-grade workmanship, honest parts. 4.79★/871. $89 call.",
   heroDescription:
-    "Commercial La Marzocco espresso machine repair across Miami-Dade, Broward and Palm Beach — Linea Classic, Linea PB, GB5 and KB90 machines in cafés, restaurants and hotels. Same-day dispatch for dead-machine emergencies, $89 service call applied toward the approved repair.",
+    "Commercial La Marzocco espresso machine repair across Miami-Dade, Broward and Palm Beach — Linea Classic, Linea PB, GB5 and KB90 machines in cafés, restaurants and hotels. Same-day dispatch for dead-machine emergencies, $89 service call — free with approved repair.",
   intro: [
     "A La Marzocco is the most expensive piece of equipment per square foot in most cafés, and the one the entire revenue line depends on. When a three-group Linea goes down on a Saturday morning, you're not losing a machine — you're losing every ticket until it's back. We run espresso emergencies same-day across South Florida, and our techs treat a $20,000 machine with the respect its owner does: proper gaskets, correct torque, no improvised parts.",
     "South Florida water is the enemy. Nearly every La Marzocco failure we see traces to scale: heating elements furred until they burn out, level probes reading wrong, autofill systems overfilling or timing out, gicleurs and flow restrictors clogging, and steam valves seizing. A machine on properly maintained softening/filtration runs for decades; a machine on raw Florida water eats boilers. Every service ticket we close includes a frank assessment of your water treatment, because the alternative is selling you the same repair every eight months.",
@@ -1152,7 +1152,7 @@ const LA_MARZOCCO: BrandService = {
     },
     {
       q: "What does the $89 service call cover?",
-      a: "The visit and the diagnosis, applied toward the approved repair — same flat structure as every Berne commercial dispatch. You get a written quote before any work; espresso parts are itemized, never bundled into mystery labor.",
+      a: "The visit and the diagnosis — free if you approve the repair, paid only if you decline. Same flat structure as every Berne commercial dispatch. You get a written quote before any work; espresso parts are itemized, never bundled into mystery labor.",
     },
   ],
   related: [
@@ -1178,7 +1178,7 @@ const VULCAN: BrandService = {
   metaDescription:
     "Vulcan VC convection ovens, ranges & deck ovens repaired same-day across South Florida. Igniters, t-stats, gas valves on the truck. 4.79★/871. $89 call.",
   heroDescription:
-    "Same-day Vulcan oven and range repair across Miami-Dade, Broward and Palm Beach — VC-series convection ovens, restaurant ranges, deck ovens and kettles. 24/7 emergency dispatch for commercial kitchens, $89 service call applied toward the approved repair.",
+    "Same-day Vulcan oven and range repair across Miami-Dade, Broward and Palm Beach — VC-series convection ovens, restaurant ranges, deck ovens and kettles. 24/7 emergency dispatch for commercial kitchens, $89 service call — free with approved repair.",
   intro: [
     "Vulcan cooking equipment is everywhere in South Florida kitchens — VC4GD and VC5GD convection ovens stacked two high, 6-burner ranges with standard ovens under, salamanders and cheese melters over the line. When a Vulcan goes down mid-prep, the failure is almost always in a short list of components: hot-surface igniters, spark modules and pilots, thermostats, gas valves, door mechanisms and blower motors. Our trucks carry that list.",
     "Convection ovens have a particular South Florida career: years of heavy use take out door hinges and gaskets first (heat loss, uneven bakes, slammed doors), then igniters, then thermostat calibration drifts until the bake chart is fiction. Ranges age differently — pilot outages from grease and cleaning chemicals, burner valves stiffening, oven thermostats failing safe-cold. None of it is exotic; all of it costs covers when ignored.",
@@ -1318,7 +1318,7 @@ const VULCAN: BrandService = {
   faqs: [
     {
       q: "Do you repair Vulcan ovens and ranges the same day?",
-      a: "Yes — cooking-line outages dispatch same-day across Miami-Dade, Broward and Palm Beach. A dead convection oven before a Friday service is exactly the call our dispatch exists for. $89 service call, applied toward the approved repair.",
+      a: "Yes — cooking-line outages dispatch same-day across Miami-Dade, Broward and Palm Beach. A dead convection oven before a Friday service is exactly the call our dispatch exists for. $89 service call — waived once you approve the repair.",
     },
     {
       q: "Are you an authorized Vulcan service agent?",
@@ -1365,7 +1365,7 @@ const TURBO_AIR: BrandService = {
   metaDescription:
     "Turbo Air M3 & PRO reach-ins, undercounters & prep tables repaired same-day across South Florida. Controller faults read right. 4.79★/871. $89 call.",
   heroDescription:
-    "Same-day Turbo Air refrigeration repair across Miami-Dade, Broward and Palm Beach — M3 and PRO series reach-ins, TSR merchandisers, undercounters and prep tables. 24/7 emergency dispatch for commercial accounts, $89 service call applied toward the approved repair.",
+    "Same-day Turbo Air refrigeration repair across Miami-Dade, Broward and Palm Beach — M3 and PRO series reach-ins, TSR merchandisers, undercounters and prep tables. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
     "Turbo Air earned its market share on price and features — digital controllers, self-cleaning condenser mechanisms, hydrocarbon refrigerants early. In the field that means a different failure profile than the all-mechanical brands: more sensor and controller tickets, more defrost-logic faults, and a self-cleaning condenser that helps but doesn't repeal South Florida physics. Our techs service the M3 fleet daily and know which faults are a probe, which are a board, and which are plain old dirty-coil heat rejection.",
     "The digital controller is your friend if someone reads it correctly. Probe errors (the E-type sensor faults on M3 displays), high-temp alarms and defrost misbehavior each narrow the diagnosis to minutes. The expensive mistake we see from generalist repair: replacing a controller to fix what was a $40 probe, or condemning a compressor when the start components failed. We test components, not guesses.",
@@ -1499,7 +1499,7 @@ const TURBO_AIR: BrandService = {
   faqs: [
     {
       q: "Do you repair Turbo Air refrigerators same-day?",
-      a: "Yes — refrigeration loss dispatches as an emergency across Miami-Dade, Broward and Palm Beach, seven days a week. $89 commercial service call, applied toward the approved repair.",
+      a: "Yes — refrigeration loss dispatches as an emergency across Miami-Dade, Broward and Palm Beach, seven days a week. $89 commercial service call — free with the approved repair.",
     },
     {
       q: "Are you an authorized Turbo Air servicer?",

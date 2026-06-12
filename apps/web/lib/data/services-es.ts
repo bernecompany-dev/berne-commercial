@@ -27,7 +27,7 @@ export const servicesEs: Record<string, ServiceI18n> = {
       },
       {
         q: "¿Cuánto cuesta una llamada de servicio de refrigeración comercial?",
-        a: "Nuestra llamada de servicio comercial es $89 y se aplica al costo de la reparación aprobada.",
+        a: "Nuestra llamada de servicio comercial es $89 y es gratuita si aprueba la reparación: solo se paga si decide no continuar.",
       },
       {
         q: "¿Qué marcas de refrigeración comercial reparan?",
@@ -164,7 +164,7 @@ export const servicesEs: Record<string, ServiceI18n> = {
       },
       {
         q: "¿Cuánto cuesta una llamada de servicio de lavavajillas comercial?",
-        a: "Nuestra llamada de servicio comercial es $89 y se aplica al costo de la reparación aprobada.",
+        a: "Nuestra llamada de servicio comercial es $89 — gratis si aprueba la reparación; solo se paga si decide no continuar.",
       },
     ],
   },

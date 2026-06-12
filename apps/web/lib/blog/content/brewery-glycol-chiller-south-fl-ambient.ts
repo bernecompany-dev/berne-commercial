@@ -83,7 +83,7 @@ export const breweryGlycolChillerSouthFl: Article = {
     {
       heading: "Same-day brewery refrigeration service",
       body: [
-        "Berne Commercial Repair services brewery glycol chillers and brewery refrigeration across Miami-Dade, Broward, and Palm Beach. Pro Refrigeration, G&D, Penguin, Beverage-Air, and related brands. Quarterly condenser service, refrigerant work, fermenter loop diagnostic. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial refrigeration repair page.",
+        "Berne Commercial Repair services brewery glycol chillers and brewery refrigeration across Miami-Dade, Broward, and Palm Beach. Pro Refrigeration, G&D, Penguin, Beverage-Air, and related brands. Quarterly condenser service, refrigerant work, fermenter loop diagnostic. $89 commercial service call, free with an approved repair. Call (754) 345-4515 or request through our commercial refrigeration repair page.",
         "For residential beverage refrigeration that backs a home bar or wine room, our [residential team at bernerepair.com](https://bernerepair.com) covers built-in beverage centers separately.",
       ],
     },

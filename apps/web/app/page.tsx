@@ -22,7 +22,7 @@ import { team } from "@/lib/data/team"
 const homepageFaqs = [
   {
     q: "What is your commercial service call cost?",
-    a: "Our commercial service call is $89 and may be applied toward an approved repair.",
+    a: "Our commercial service call is $89 — and it is free if you approve the repair: you only pay the fee if you decide not to proceed.",
   },
   {
     q: "Do you offer emergency same-day commercial repair?",

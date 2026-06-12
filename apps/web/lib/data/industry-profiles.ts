@@ -153,7 +153,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       },
       {
         q: "What's the commercial service-call fee?",
-        a: "$89 commercial service call, applied toward an approved repair. Diagnostic and travel are included in that fee.",
+        a: "$89 commercial service call — free if you approve the repair; you only pay it if you decline. Diagnostic and travel are included in that fee.",
       },
       {
         q: "Will you provide a Certificate of Insurance for our landlord?",
@@ -227,7 +227,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
         { q: "¿Sus técnicos están certificados por la EPA?", a: "Sí. Nuestros técnicos de refrigeración tienen certificación EPA Sección 608 y registramos recuperación de refrigerante en cada sistema." },
         { q: "¿Pueden atender Hobart y Vulcan en la misma visita?", a: "Frecuentemente sí. Si el ticket menciona cocción y lavavajillas, el despacho manda un técnico calificado para ambos." },
         { q: "¿Cargan partes Hoshizaki y Manitowoc en el camión?", a: "Partes comunes — switches de cortina de agua, válvulas de entrada, contactores, motores de ventilador — sí. Tarjetas especiales se piden el mismo día o al siguiente." },
-        { q: "¿Cuál es el costo del service call comercial?", a: "$89 service call comercial, aplicable a la reparación aprobada. Diagnóstico y viaje incluidos." },
+        { q: "¿Cuál es el costo del service call comercial?", a: "$89 service call comercial — gratis si aprueba la reparación; solo se paga si decide no continuar. Diagnóstico y viaje incluidos." },
         { q: "¿Pueden dar un Certificado de Seguro para nuestro landlord?", a: "Sí — nuestro COI está en /credentials/coi.pdf y agregamos additional insureds cuando lo pide el property management." },
       ],
     },
@@ -320,7 +320,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
       },
           {
         q: "Do you support after-hours engineering calls without surcharge for contracted properties?",
-        a: "Yes for properties on a service agreement — engineering can call the dispatcher 24/7 and the call is routed to on-call technicians at standard rates. Non-contracted after-hours calls carry a $150 emergency dispatch fee that is credited toward the repair when work is authorized. We invoice through the property's existing PO process.",
+        a: "Yes for properties on a service agreement — engineering can call the dispatcher 24/7 and the call is routed to on-call technicians at standard rates. Non-contracted after-hours calls carry a $150 emergency dispatch fee that is waived when you approve the repair — you pay it only if no work is authorized. We invoice through the property's existing PO process.",
       },
       {
         q: "How fast can you turn a guest-room minibar replacement across a 200-room property?",

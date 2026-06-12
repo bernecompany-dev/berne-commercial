@@ -64,7 +64,7 @@ export function BrandServicePage({ slug }: { slug: string }) {
             variant="outline"
             className="border-primary/30 bg-primary/5 text-primary"
           >
-            Commercial service call: {site.serviceCall} — applied toward
+            Commercial service call: {site.serviceCall} — free with
             approved repair
           </Badge>
           <Badge variant="outline">Independent service — no dealer queue</Badge>
@@ -176,8 +176,8 @@ export function BrandServicePage({ slug }: { slug: string }) {
           <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
             Real numbers from our South Florida service tickets — parts plus
             labor, before any contract pricing. The {site.serviceCall}{" "}
-            commercial service call covers the diagnosis and is applied toward
-            an approved repair.
+            commercial service call covers the diagnosis and is free when you
+            approve the repair — the fee applies only if you decline.
           </p>
           <p className="mt-4 text-xs text-muted-foreground md:hidden" aria-hidden>
             Swipe to see costs and dispatch times →

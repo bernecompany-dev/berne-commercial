@@ -212,7 +212,7 @@ export const brandProfiles: BrandProfile[] = [
       },
       {
         q: "What does a Hobart commercial service call cost?",
-        a: "Our commercial service call is $89, which covers travel and diagnostic. The fee is applied toward the approved repair when work is authorized on the same visit.",
+        a: "Our commercial service call is $89, which covers travel and diagnostic. The fee is waived when you approve the repair — you only pay it if you decide not to proceed.",
       },
       {
         q: "Do you handle Hobart slicer blade replacement and sharpening?",
@@ -299,7 +299,7 @@ export const brandProfiles: BrandProfile[] = [
       faqs: [
         { q: "¿Reparan lavavajillas Hobart comerciales el mismo día en Miami?", a: "Sí. Nuestro despacho pone un técnico entrenado en Hobart on-site el mismo día hábil en Miami-Dade, Broward y Palm Beach. Fallas de elemento del booster, atascos de bomba de drenaje y baleros del wash-arm están stocked en el camión." },
         { q: "¿Pueden atender batidoras A-200 legacy? Las partes son cada vez más difíciles.", a: "Sí. Atendemos batidoras A-200 y HL200 de 20 cuartos incluyendo rebuilds de gearbox, bandas de drive, baleros planetarios, ejes de agitador y switch packs. Las partes OEM todavía están en producción vía Hobart Service Parts." },
-        { q: "¿Cuánto cuesta un service call comercial Hobart?", a: "Nuestro service call comercial es $89, que cubre viaje y diagnóstico. La cuota se aplica a la reparación aprobada cuando el trabajo se autoriza en la misma visita." },
+        { q: "¿Cuánto cuesta un service call comercial Hobart?", a: "Nuestro service call comercial es $89, que cubre viaje y diagnóstico. La cuota es gratuita si aprueba la reparación: solo se paga si decide no continuar." },
         { q: "¿Manejan reemplazo y afilado de cuchilla Hobart?", a: "Sí — reemplazo de cuchilla, alineación de piedra de sharpening, tracking de carriage y servicio de motor en líneas de rebanadora 1612, 2812, EDGE13 y CenterLine. También podemos reconstruir el gear drive en modelos automáticos." },
         { q: "¿Sus partes Hobart son OEM?", a: "Default es partes Hobart OEM — brazos de lavado, booster heaters, motores, gearboxes, control boards. Cotizaremos una alternativa aftermarket de calidad en partes commodity (mangueras, fittings, fusibles) cuando el cliente lo pida." },
         { q: "¿Proveen COI y W-9 para property managers y vendors de franquicia?", a: "Sí — General Liability, Workers Comp y Auto en un solo COI, más W-9 y documentación de licencia EPA de refrigerante. Disponible bajo /credentials/." },
@@ -463,7 +463,7 @@ export const brandProfiles: BrandProfile[] = [
       },
       {
         q: "What is the Vulcan commercial service call cost?",
-        a: "Our commercial service call is $89, applied toward the approved repair when the customer authorizes work on the same visit.",
+        a: "Our commercial service call is $89 — free when the customer approves the repair; the fee only applies if the repair is declined.",
       },
       {
         q: "Do you replace Vulcan salamander infrared emitters?",
@@ -715,7 +715,7 @@ export const brandProfiles: BrandProfile[] = [
       },
       {
         q: "What is the True commercial service call cost?",
-        a: "Our commercial service call is $89, applied toward the repair when authorized on the same visit.",
+        a: "Our commercial service call is $89, and it is free if you authorize the repair — you pay the fee only when no work is approved.",
       },
       {
         q: "Can you handle multi-location True refrigeration coverage for a chain?",
@@ -785,7 +785,7 @@ export const brandProfiles: BrandProfile[] = [
         { q: "¿Qué tan rápido pueden poner online un True T-23 o T-49?", a: "La mayoría de reparaciones True cierran en una visita. Cartuchos de puerta, empaques, evap fans, capacitores y cleaning de coil de condensador están en el camión. Despacho el mismo día cuando se llama antes de 1pm en la mayoría de ZIPs." },
         { q: "¿Pueden hacer limpieza de coil de condensador en mantenimiento?", a: "Sí — cleaning químico del coil con verificación de amp draw antes/después es servicio estándar. La carga de grasa es la falla #1 en cocinas." },
         { q: "¿Trabajan en TSSU prep tables y temperatura del pan-rail?", a: "Sí — drift de pan-rail es queja regular. Aislamos airflow, ventilador y sello en secuencia antes de cambiar partes." },
-        { q: "¿Cuánto cuesta un service call comercial True?", a: "$89 service call comercial, cubre diagnóstico. Se aplica a la reparación aprobada en la misma visita." },
+        { q: "¿Cuánto cuesta un service call comercial True?", a: "$89 service call comercial, cubre diagnóstico. Gratis si aprueba la reparación — solo se paga si decide no continuar." },
         { q: "¿Su trabajo de refrigerante es EPA-certified?", a: "Sí. Todos los técnicos de refrigeración tienen EPA-608 universal. Recovery, leak test y recharge se documentan en el work order." },
         { q: "¿Atienden merchandisers GDM en c-stores y supermercados?", a: "Sí — GDM-23, GDM-49, GDM-72 y variantes freezer. Cable anti-sweat, cartucho de puerta y limpieza de coil son las reparaciones estándar." },
       ],
@@ -953,7 +953,7 @@ export const brandProfiles: BrandProfile[] = [
       },
       {
         q: "What does a Manitowoc service call cost?",
-        a: "Our commercial service call is $89, which covers diagnostic. The fee is applied toward the approved repair on the same visit.",
+        a: "Our commercial service call is $89, which covers diagnostic. The fee is dropped once you approve the repair — you only pay if you decline.",
       },
       {
         q: "Do you sanitize Manitowoc machines under FDA / health-department schedule?",
@@ -1025,7 +1025,7 @@ export const brandProfiles: BrandProfile[] = [
         { q: "¿Qué tan rápido pueden poner online un Manitowoc Indigo NXT?", a: "La mayoría de reparaciones Manitowoc en el Sur de Florida cierran en una visita. Descales, tubo de distribución, switch de cortina, válvula hot-gas y sensores de harvest están en el camión. Despacho el mismo día cuando se llama antes de 1pm en la mayoría de ZIPs." },
         { q: "¿Instalan filtros de water-treatment Manitowoc?", a: "Sí — instalaciones de XO y AC-prefilter son estándar con llamadas de descale. El agua de la llave de Florida es la causa raíz de la mayoría de llamadas Manitowoc; no cerraremos un descale mayor sin recomendar filtración." },
         { q: "¿Su trabajo de refrigerante es EPA-certified?", a: "Sí. Todos los técnicos de refrigeración tienen EPA-608 universal. Recovery, leak test y recharge se documentan en el work order." },
-        { q: "¿Cuánto cuesta un service call Manitowoc?", a: "$89 service call comercial, cubre diagnóstico. Se aplica a la reparación aprobada en la misma visita." },
+        { q: "¿Cuánto cuesta un service call Manitowoc?", a: "$89 service call comercial, cubre diagnóstico. Gratis con la reparación aprobada; solo se cobra si decide no continuar." },
         { q: "¿Sanitizan máquinas Manitowoc bajo schedule del health department?", a: "Sí. Descale full nickel-safe más chlorine sanitize con fotos documentadas antes/después y números de lote químico para archivos de health-inspector." },
         { q: "¿Pueden atender setups QuietQube con condensador remoto?", a: "Sí — verificación de line-set, servicio de ventilador del condensador remoto, corrección de carga de refrigerante y diagnóstico de válvula de head-pressure en instalaciones QuietQube." },
       ],
@@ -1198,7 +1198,7 @@ export const brandProfiles: BrandProfile[] = [
       },
       {
         q: "What does a Hoshizaki service call cost?",
-        a: "Our commercial service call is $89, applied toward the approved repair on the same visit.",
+        a: "Our commercial service call is $89, free with an approved repair — the fee is only charged if you choose not to repair.",
       },
       {
         q: "Do you handle F-801 flake-ice auger seal rebuilds?",
@@ -1447,7 +1447,7 @@ export const brandProfiles: BrandProfile[] = [
       },
       {
         q: "What does a Rational service call cost?",
-        a: "Our commercial service call is $89, applied toward the repair when authorized on the same visit.",
+        a: "Our commercial service call is $89. Approve the repair and the visit is free; the fee applies only if you decline the work.",
       },
       {
         q: "Can you do Rational PM (preventive maintenance) on a hotel banquet platform?",
@@ -1686,7 +1686,7 @@ export const brandProfiles: BrandProfile[] = [
       },
       {
         q: "What does a Garland commercial service call cost?",
-        a: "Our commercial service call is $89, applied toward the approved repair when authorized on the same visit.",
+        a: "Our commercial service call is $89 — waived in full when you approve the repair, charged only if you decide not to proceed.",
       },
       {
         q: "Do you handle Garland convection ovens?",
@@ -1931,7 +1931,7 @@ export const brandProfiles: BrandProfile[] = [
       },
       {
         q: "What does a Traulsen service call cost?",
-        a: "Our commercial service call is $89, applied toward the approved repair when authorized on the same visit.",
+        a: "Our commercial service call is $89, and it is free with an approved repair — you only pay the fee if you turn the repair down.",
       },
       {
         q: "Do you stock parts for the older Traulsen mechanical-control platforms?",

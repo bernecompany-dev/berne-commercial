@@ -84,7 +84,7 @@ export const southFlHospitalitySaltAirZone: Article = {
     {
       heading: "Same-day commercial dispatch across South Florida zones",
       body: [
-        "Berne Commercial Repair services commercial kitchen and refrigeration equipment across all four South Florida coastal zones — Miami-Dade, Broward, and Palm Beach. Zone-aware service planning, coastal-specific preventive intervals, capital-replacement coordination. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our dispatch page.",
+        "Berne Commercial Repair services commercial kitchen and refrigeration equipment across all four South Florida coastal zones — Miami-Dade, Broward, and Palm Beach. Zone-aware service planning, coastal-specific preventive intervals, capital-replacement coordination. $89 commercial service call — waived when you approve the repair. Call (754) 345-4515 or request through our dispatch page.",
         "Residential oceanfront installs face the same salt-air corrosion profile — [Berne's premium residential team](https://berne-repair.com) runs the home-side coastal maintenance schedule for Sub-Zero, Wolf, and Viking units.",
       ],
     },

@@ -77,7 +77,7 @@ export const garlandRbCharbroilerBurnerRegulator: Article = {
     {
       heading: "Same-day Garland service",
       body: [
-        "Berne Commercial Repair services Garland charbroilers, ranges, salamanders, and convection ovens across Miami-Dade, Broward, and Palm Beach. Regulator service, burner work, gas leak testing, and full diagnostic. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial range repair page.",
+        "Berne Commercial Repair services Garland charbroilers, ranges, salamanders, and convection ovens across Miami-Dade, Broward, and Palm Beach. Regulator service, burner work, gas leak testing, and full diagnostic. $89 commercial service call — free if you approve the repair. Call (754) 345-4515 or request through our commercial range repair page.",
         "For high-end residential outdoor grills and indoor ranges (Wolf, Viking, BlueStar), [Berne's premium residential team at berne-repair.com](https://berne-repair.com) covers the home-side equivalent.",
       ],
     },

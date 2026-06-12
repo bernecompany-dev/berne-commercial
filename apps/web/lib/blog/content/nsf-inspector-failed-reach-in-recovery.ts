@@ -78,7 +78,7 @@ export const nsfInspectorFailedReachIn: Article = {
     {
       heading: "Same-day inspection recovery dispatch",
       body: [
-        "Berne Commercial Repair runs emergency same-day service for kitchens facing DBPR re-inspections across Miami-Dade, Broward, and Palm Beach. $89 commercial service call, applied to the approved repair, and a service invoice formatted for inspector review. Call (754) 345-4515 or request a tech through our reach-in cooler repair page. For home or office reach-ins — Sub-Zero, Viking, residential built-ins — bernerepair.com runs the residential side.",
+        "Berne Commercial Repair runs emergency same-day service for kitchens facing DBPR re-inspections across Miami-Dade, Broward, and Palm Beach. $89 commercial service call — free with an approved repair — and a service invoice formatted for inspector review. Call (754) 345-4515 or request a tech through our reach-in cooler repair page. For home or office reach-ins — Sub-Zero, Viking, residential built-ins — bernerepair.com runs the residential side.",
       ],
     },
   ],

@@ -77,7 +77,7 @@ export const trueTSeriesCondenserCoastalInland: Article = {
     {
       heading: "Same-day True refrigeration service",
       body: [
-        "Berne Commercial Repair services True T-series, GDM, TPP, TUC, TSSU, and TWT refrigeration across Miami-Dade, Broward, and Palm Beach. Condenser cleaning, compressor work, gasket replacement, and full diagnostic. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial refrigeration repair page.",
+        "Berne Commercial Repair services True T-series, GDM, TPP, TUC, TSSU, and TWT refrigeration across Miami-Dade, Broward, and Palm Beach. Condenser cleaning, compressor work, gasket replacement, and full diagnostic. $89 commercial service call — free when you approve the repair, paid only if you decline. Call (754) 345-4515 or request through our commercial refrigeration repair page.",
         "Residential built-in condensers in coastal homes face the same cleaning interval — [Berne's premium residential operation](https://berne-repair.com) covers Sub-Zero, Wolf, and Viking condenser service on the home side.",
       ],
     },

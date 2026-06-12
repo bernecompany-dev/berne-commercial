@@ -84,7 +84,7 @@ export const multiFamilyLaundrySpeedQueenCard: Article = {
     {
       heading: "Same-day multi-family laundry service",
       body: [
-        "Berne Commercial Repair services Speed Queen, Huebsch, Wascomat, and related multi-family laundry equipment across Miami-Dade, Broward, and Palm Beach. Integrated mechanical and card-system coordination, quarterly preventive contracts, monthly property-manager reporting. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial laundry repair page.",
+        "Berne Commercial Repair services Speed Queen, Huebsch, Wascomat, and related multi-family laundry equipment across Miami-Dade, Broward, and Palm Beach. Integrated mechanical and card-system coordination, quarterly preventive contracts, monthly property-manager reporting. $89 commercial service call, free with an approved repair. Call (754) 345-4515 or request through our commercial laundry repair page.",
         "For individual-unit residential washer/dryer service (LG, Samsung, Whirlpool, GE), [Berne Appliance Repair](https://bernerepair.com) handles in-unit calls when residents have personal machines outside the common laundry room.",
       ],
     },

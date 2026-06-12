@@ -78,7 +78,7 @@ export const laundromatWasherBearingRotation: Article = {
     {
       heading: "Same-day commercial laundry service",
       body: [
-        "Berne Commercial Repair services Speed Queen, Huebsch, Wascomat, Continental, and Unimac commercial laundry equipment across Miami-Dade, Broward, and Palm Beach. Laundromat fleet specialty. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our commercial laundry repair page.",
+        "Berne Commercial Repair services Speed Queen, Huebsch, Wascomat, Continental, and Unimac commercial laundry equipment across Miami-Dade, Broward, and Palm Beach. Laundromat fleet specialty. $89 commercial service call (free with approved repair). Call (754) 345-4515 or request through our commercial laundry repair page.",
         "For residential washer bearing service on top-end home units (Miele W1, Speed Queen residential), [Berne's premium residential team](https://berne-repair.com) handles that platform.",
       ],
     },

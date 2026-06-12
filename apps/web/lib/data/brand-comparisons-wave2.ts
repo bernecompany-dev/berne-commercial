@@ -207,7 +207,7 @@ const RATIONAL_VS_UNOX: ComparisonProfile = {
     },
     {
       q: "Can Berne service both brands in South Florida?",
-      a: "Yes — daily across Miami-Dade, Broward, and Palm Beach. $89 commercial service call applied toward the repair, same-day dispatch typical, and we stock common wear parts for both platforms.",
+      a: "Yes — daily across Miami-Dade, Broward, and Palm Beach. $89 commercial service call — free if you approve the repair — same-day dispatch typical, and we stock common wear parts for both platforms.",
     },
     {
       q: "Which holds resale value better?",
@@ -405,7 +405,7 @@ const RATIONAL_VS_CONVOTHERM: ComparisonProfile = {
     },
     {
       q: "Can Berne service both brands?",
-      a: "Yes — we run service tickets on both weekly across Miami-Dade, Broward, and Palm Beach. $89 commercial service call applied toward the repair; same-day dispatch typical.",
+      a: "Yes — we run service tickets on both weekly across Miami-Dade, Broward, and Palm Beach. $89 commercial service call, free with an approved repair; same-day dispatch typical.",
     },
     {
       q: "I'm comparing three quotes: Rational, Convotherm, and Alto-Shaam. How do I think about it?",
@@ -603,7 +603,7 @@ const RATIONAL_VS_ALTO_SHAAM: ComparisonProfile = {
     },
     {
       q: "Can Berne service both brands in South Florida?",
-      a: "Yes — weekly tickets on both across Miami-Dade, Broward, and Palm Beach. $89 commercial service call applied toward the repair, same-day dispatch typical.",
+      a: "Yes — weekly tickets on both across Miami-Dade, Broward, and Palm Beach. $89 commercial service call (free when you approve the repair), same-day dispatch typical.",
     },
     {
       q: "What about Rational vs Convotherm or Unox?",
@@ -801,7 +801,7 @@ const TRUE_VS_TURBO_AIR: ComparisonProfile = {
     },
     {
       q: "Can Berne service both brands in South Florida?",
-      a: "Yes — daily across Miami-Dade, Broward, and Palm Beach. We carry common True parts on the truck and stock Turbo Air consumables for contract accounts. $89 commercial service call, applied toward the repair.",
+      a: "Yes — daily across Miami-Dade, Broward, and Palm Beach. We carry common True parts on the truck and stock Turbo Air consumables for contract accounts. $89 commercial service call — waived with approved repair.",
     },
     {
       q: "True, Turbo Air, or Traulsen — how do all three stack up?",
@@ -990,7 +990,7 @@ const FRYMASTER_VS_PITCO: ComparisonProfile = {
     },
     {
       q: "What do repairs typically cost?",
-      a: "Berne charges $89 for the commercial service call on either brand, applied toward the repair. Common tickets: Pitco $200-$420; Frymaster $260-$520. Vat replacement is not economical on either — leaking vats mean replacement planning.",
+      a: "Berne charges $89 for the commercial service call on either brand — free if you approve the repair, charged only if you decline. Common tickets: Pitco $200-$420; Frymaster $260-$520. Vat replacement is not economical on either — leaking vats mean replacement planning.",
     },
     {
       q: "Gas or electric for South Florida?",
@@ -1196,7 +1196,7 @@ const HOSHIZAKI_VS_SCOTSMAN: ComparisonProfile = {
     },
     {
       q: "Can Berne service both brands?",
-      a: "Yes — Hoshizaki and Scotsman are daily tickets for us across Miami-Dade, Broward, and Palm Beach, cubers and nugget machines both. $89 commercial service call applied toward the repair; same-day dispatch typical for no-ice emergencies.",
+      a: "Yes — Hoshizaki and Scotsman are daily tickets for us across Miami-Dade, Broward, and Palm Beach, cubers and nugget machines both. $89 commercial service call — free with approved repair; same-day dispatch typical for no-ice emergencies.",
     },
     {
       q: "Is the Hoshizaki crescent cube actually better in drinks?",
@@ -1393,7 +1393,7 @@ const SPEED_QUEEN_VS_CONTINENTAL: ComparisonProfile = {
     },
     {
       q: "Can Berne service both brands in South Florida?",
-      a: "Yes — commercial laundry rooms, laundromats, and hotel OPL across Miami-Dade, Broward, and Palm Beach. $89 commercial service call applied toward the repair; we stock common Speed Queen parts and maintain Continental accounts on contract.",
+      a: "Yes — commercial laundry rooms, laundromats, and hotel OPL across Miami-Dade, Broward, and Palm Beach. $89 commercial service call, free if you approve the repair; we stock common Speed Queen parts and maintain Continental accounts on contract.",
     },
     {
       q: "Should I convert an existing Speed Queen laundry to Continental?",
@@ -1481,7 +1481,7 @@ const WALK_IN_REPAIR_OR_REPLACE: ComparisonProfile = {
         },
       ],
       ownership:
-        "A maintained walk-in on sound panels costs $400-$900/year in routine service plus a $2,500-$4,500 refrigeration-system replacement every 10-15 years. Amortized, that is $700-$1,200/year for the cold storage an entire kitchen depends on — the best cost-per-cubic-foot in commercial refrigeration. The $89 Berne service call (applied toward repair) covers diagnosis, including the panel assessment that should precede any major-repair approval.",
+        "A maintained walk-in on sound panels costs $400-$900/year in routine service plus a $2,500-$4,500 refrigeration-system replacement every 10-15 years. Amortized, that is $700-$1,200/year for the cold storage an entire kitchen depends on — the best cost-per-cubic-foot in commercial refrigeration. The $89 Berne service call (free with approved repair) covers diagnosis, including the panel assessment that should precede any major-repair approval.",
     },
     {
       name: "Replacing the walk-in",
@@ -1563,7 +1563,7 @@ const WALK_IN_REPAIR_OR_REPLACE: ComparisonProfile = {
     },
   ],
   ownershipNotes:
-    "All walk-in service qualifies for the Berne $89 commercial service call, applied toward an approved repair. The numbers that matter: routine repairs $150-$600; major component work $1,400-$2,600; full condensing-unit replacement $2,500-$4,500; new walk-in installed $8,000-$15,000+ before site work. The asymmetry the 50% rule misses: repair spend buys time on the existing envelope's clock, replacement resets a 25-year clock — so the comparison is never repair-quote vs replacement-quote, it is cost-per-remaining-year on each path. Annual preventive maintenance ($250-$400) is the cheapest line on either path and the one most operators skip.",
+    "All walk-in service qualifies for the Berne $89 commercial service call — free if you approve the repair, paid only if you decline. The numbers that matter: routine repairs $150-$600; major component work $1,400-$2,600; full condensing-unit replacement $2,500-$4,500; new walk-in installed $8,000-$15,000+ before site work. The asymmetry the 50% rule misses: repair spend buys time on the existing envelope's clock, replacement resets a 25-year clock — so the comparison is never repair-quote vs replacement-quote, it is cost-per-remaining-year on each path. Annual preventive maintenance ($250-$400) is the cheapest line on either path and the one most operators skip.",
   bernePerspective:
     "We are a repair company, so discount our bias accordingly — but our bias runs opposite to the one you usually hear. The companies quoting $12,000 boxes invoke the 50% rule; we look at panels. Our senior techs' field rule: dry, tight panels under 15 years old make almost any mechanical repair worth it; wet panels make almost no mechanical repair worth it; everything between is a numbers conversation we will have with you honestly, including the energy penalty math. What we ask of operators is one thing: decide before the emergency. A walk-in assessment during annual maintenance costs nothing extra and converts the eventual decision from a 2 a.m. panic into a planned capital item.",
   faqs: [

@@ -270,7 +270,7 @@ const HOBART_VS_VULCAN_RANGES: ComparisonProfile = {
     },
     {
       q: "What's the typical service-call cost for either brand?",
-      a: "Berne charges $89 for the commercial service call across both brands, applied toward the repair. Out-of-warranty repair on common tickets runs $280-$520 on Vulcan and $320-$580 on Hobart cooking equipment — slightly higher on Hobart due to parts sourcing.",
+      a: "Berne charges $89 for the commercial service call across both brands — free if you approve the repair, charged only if you decline. Out-of-warranty repair on common tickets runs $280-$520 on Vulcan and $320-$580 on Hobart cooking equipment — slightly higher on Hobart due to parts sourcing.",
     },
     {
       q: "Can Berne service both in South Florida?",
@@ -474,7 +474,7 @@ const MANITOWOC_VS_HOSHIZAKI: ComparisonProfile = {
     },
     {
       q: "What's the typical service-call cost for either brand?",
-      a: "Berne charges $89 for the commercial service call across both brands, applied toward the repair. Out-of-warranty repair averages $240-$440 on Hoshizaki and $260-$480 on Manitowoc — effectively tied per-ticket.",
+      a: "Berne charges $89 for the commercial service call across both brands; the fee is waived when you approve the repair and only applies if you do not proceed. Out-of-warranty repair averages $240-$440 on Hoshizaki and $260-$480 on Manitowoc — effectively tied per-ticket.",
     },
     {
       q: "Can Berne service both brands in South Florida?",
@@ -934,7 +934,7 @@ const RATIONAL_VS_COMBI: ComparisonProfile = {
     },
     {
       q: "What's the typical service-call cost for combi repairs?",
-      a: "Berne charges $89 for the commercial service call across all combi brands, applied toward the repair. Out-of-warranty repair averages $340-$680 on common tickets; major component lands $1,400-$3,500.",
+      a: "Berne charges $89 for the commercial service call across all combi brands — free with an approved repair; you pay it only if no work is authorized. Out-of-warranty repair averages $340-$680 on common tickets; major component lands $1,400-$3,500.",
     },
     {
       q: "Can Berne service all of these brands in South Florida?",

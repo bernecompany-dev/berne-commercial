@@ -63,7 +63,7 @@ export const commercialKitchenExhaustFanHoodMotor: Article = {
     {
       heading: "Same-day hood and exhaust fan service",
       body: [
-        "Berne Commercial Repair services hood exhaust fans, motors, belts, bearings, and makeup-air units across Miami-Dade, Broward, and Palm Beach — restaurants, hotels, country clubs, and institutional kitchens. $89 commercial service call applied toward the approved repair; smoke-in-the-kitchen calls dispatch same-day. Call (754) 345-4515 or request dispatch through our [commercial hood repair](/services/commercial-hood-repair) page.",
+        "Berne Commercial Repair services hood exhaust fans, motors, belts, bearings, and makeup-air units across Miami-Dade, Broward, and Palm Beach — restaurants, hotels, country clubs, and institutional kitchens. $89 commercial service call — free with approved repair; smoke-in-the-kitchen calls dispatch same-day. Call (754) 345-4515 or request dispatch through our [commercial hood repair](/services/commercial-hood-repair) page.",
       ],
     },
   ],

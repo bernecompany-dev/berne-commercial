@@ -85,7 +85,7 @@ export const backupGeneratorBrownoutDamage: Article = {
     {
       heading: "Same-day commercial dispatch",
       body: [
-        "Berne Commercial Repair runs post-event diagnostic, generator-coordination service planning, and commercial dispatch across Miami-Dade, Broward, and Palm Beach. $89 commercial service call applied to the approved repair. Call (754) 345-4515 or request through our dispatch page.",
+        "Berne Commercial Repair runs post-event diagnostic, generator-coordination service planning, and commercial dispatch across Miami-Dade, Broward, and Palm Beach. $89 commercial service call — free if you approve the repair. Call (754) 345-4515 or request through our dispatch page.",
         "For residential appliances that took brownout damage on the same circuit (refrigerators, ovens, dishwashers), [Berne Appliance Repair](https://bernerepair.com) handles the home side of post-storm diagnostics.",
       ],
     },
