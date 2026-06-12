@@ -53,7 +53,7 @@ export default async function ServiceDetailPage({ params }: Params) {
       />
       <PageHero
         eyebrow="Service"
-        title={`${s.title} in South Florida`}
+        title={`${s.heroTitle ?? s.title} in South Florida`}
         description={s.summary}
       >
         {/* One badge with NEW information — "Same-day" and "Licensed" sit in

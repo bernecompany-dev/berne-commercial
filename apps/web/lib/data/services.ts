@@ -43,6 +43,12 @@ export type Service = {
   metaTitle?: string
   metaDescription?: string
   /**
+   * Optional H1 override for the /services/<slug> hub hero (SXO round-4
+   * block 5: put the SERP intent qualifier — "Commercial" — in the H1).
+   * Rendered as `${heroTitle} in South Florida`; falls back to `title`.
+   */
+  heroTitle?: string
+  /**
    * SERP-tuned <title> template for the /{city}/{slug} combo pages —
    * `{city}` is substituted with the city name. Keep the substituted base
    * <=52 chars for typical city names (layout appends " · Berne", 8 chars).
@@ -298,6 +304,7 @@ export const services: Service[] = [
     metaTitle: "Commercial Ice Machine Repair Miami — 24/7",
     metaDescription:
       "Hoshizaki, Manitowoc, Scotsman & Ice-O-Matic fixed same-day across Miami & South Florida. 24/7 dispatch, $89 call applied toward the repair.",
+    heroTitle: "Commercial Ice Machine Repair",
     summary:
       "Commercial ice machine repair for restaurants, hotels, healthcare and retail — Hoshizaki, Manitowoc, Scotsman.",
     longDescription:
