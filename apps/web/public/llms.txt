@@ -1,0 +1,73 @@
+# Berne Commercial Repair
+
+> Commercial appliance and kitchen equipment repair across South Florida — Miami-Dade, Broward and Palm Beach counties. $89 commercial service call applied toward approved repair. Same-day emergency dispatch, after-hours support, COI and vendor-portal ready for restaurants, hotels, chains and property management. Call (754) 345-4515.
+
+## Key facts
+
+- Phone: (754) 345-4515 — tel:+17543454515
+- Email: bernerepair@gmail.com
+- Commercial service call: $89, applied toward an approved repair
+- Emergency dispatch: same-day across Miami-Dade, Broward and Palm Beach; refrigeration outages and food-safety-critical equipment are prioritized
+- Part of the Berne family of companies: serving South Florida since 2015, 18 technicians, 29,000+ jobs completed, 4.79★ from 871 customers across the Berne family
+- Licensed & insured in Florida; EPA Section 608 certified technicians
+- Enterprise-ready: COI on request, vendor portals, NDA-friendly, multi-location reporting, volume contracts
+- Languages: English, Spanish, Russian
+
+## Services
+
+- [Commercial Refrigeration Repair](https://www.berne-commercial.com/services/commercial-refrigeration-repair)
+- [Walk-In Cooler Repair](https://www.berne-commercial.com/services/walk-in-cooler-repair)
+- [Walk-In Freezer Repair](https://www.berne-commercial.com/services/walk-in-freezer-repair)
+- [Reach-In Cooler Repair](https://www.berne-commercial.com/services/reach-in-cooler-repair)
+- [Ice Machine Repair](https://www.berne-commercial.com/services/ice-machine-repair)
+- [Fryer Repair](https://www.berne-commercial.com/services/fryer-repair)
+- [Commercial Oven Repair](https://www.berne-commercial.com/services/commercial-oven-repair)
+- [Commercial Range Repair](https://www.berne-commercial.com/services/commercial-range-repair)
+- [Commercial Dishwasher Repair](https://www.berne-commercial.com/services/commercial-dishwasher-repair)
+- [Steamer Repair](https://www.berne-commercial.com/services/steamer-repair)
+- [Prep Table Repair](https://www.berne-commercial.com/services/prep-table-repair)
+- [Commercial Laundry Repair](https://www.berne-commercial.com/services/commercial-laundry-repair)
+- [Espresso Machine Repair](https://www.berne-commercial.com/services/espresso-machine-repair)
+- [Commercial Hood Repair](https://www.berne-commercial.com/services/commercial-hood-repair)
+- [All commercial services](https://www.berne-commercial.com/services)
+
+## Industries
+
+- [Restaurants](https://www.berne-commercial.com/industries/restaurants)
+- [Commercial Kitchens](https://www.berne-commercial.com/industries/commercial-kitchens)
+- [Hotels](https://www.berne-commercial.com/industries/hotels)
+- [Grocery Stores](https://www.berne-commercial.com/industries/grocery-stores)
+- [Property Management](https://www.berne-commercial.com/industries/property-management)
+- [Medical Facilities](https://www.berne-commercial.com/industries/medical-facilities)
+- [Retail Chains](https://www.berne-commercial.com/industries/retail-chains)
+- [Franchises](https://www.berne-commercial.com/industries/franchises)
+- [All industries](https://www.berne-commercial.com/industries)
+
+## Brands serviced
+
+Hoshizaki, Manitowoc, Scotsman, Turbo Air, True, Traulsen, Beverage-Air, Continental, Delfield, Vulcan, Hobart, Rational, Blodgett, Garland, Southbend, Cleveland, Pitco, Frymaster, Middleby, Alto-Shaam, Hatco, La Marzocco, Electrolux Professional, Speed Queen, Whirlpool Commercial, Maytag Commercial and more — see [brand pages](https://www.berne-commercial.com/brands).
+
+## Key pages
+
+- [Become a Client — multi-location and chain onboarding](https://www.berne-commercial.com/become-a-client)
+- [Request Dispatch](https://www.berne-commercial.com/request-dispatch)
+- [Contact](https://www.berne-commercial.com/contact)
+- [Service Areas](https://www.berne-commercial.com/service-areas)
+- [Credentials — licenses, COI, EPA](https://www.berne-commercial.com/credentials)
+- [Team — the technicians on the trucks](https://www.berne-commercial.com/team)
+- [Brand comparison guides](https://www.berne-commercial.com/compare)
+- [Blog — field guides and equipment economics](https://www.berne-commercial.com/blog)
+
+## Site structure
+
+- Sitemap: https://www.berne-commercial.com/sitemap.xml
+- /services/{service} — commercial service pages; /industries/{industry} — industry pages; /{city} — city hubs (e.g., /fort-lauderdale); /es/* — Spanish mirror
+
+## Sister companies
+
+- [Berne Appliance Repair (residential)](https://bernerepair.com/)
+- [Berne Appliance Repair — premium division](https://berne-repair.com/)
+
+## License
+
+Public content. You may quote, link to, or summarize any page freely. Please link back to the original page.
