@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { JsonLd } from "@/components/json-ld"
 import { GoogleAnalytics } from "@/components/google-analytics"
 import { GoogleAdsTag } from "@/components/google-ads-tag"
+import { MicrosoftUetTag } from "@/components/microsoft-uet-tag"
 import { MetaPixel } from "@/components/meta-pixel"
 import { Clarity } from "@/components/clarity"
 import { CookieBanner } from "@/components/cookie-banner"
@@ -115,6 +116,12 @@ export default function RootLayout({
           visitors; no tel: click listener needed.
         */}
         <GoogleAdsTag />
+        {/*
+          Microsoft Advertising UET (tag 97251280) + phone_click event for
+          the "Phone click" conversion goal — Bing has no number-swap call
+          tracking, so tel: clicks are the call proxy.
+        */}
+        <MicrosoftUetTag />
         <MetaPixel />
         <Clarity />
         <WhatsAppFab />
