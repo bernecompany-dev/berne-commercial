@@ -6,7 +6,7 @@ export const trueRefrigerationGasket: Article = {
     "True Refrigeration Door Gasket Replacement — Hotel Service Frequency",
   description:
     "True T-49, GDM-26, and TSSU-60 door gaskets fail on a predictable schedule in hotel refrigeration. A field tech's read on gasket types, replacement intervals, and how a torn gasket drives compressor failure.",
-  publishedAt: "2026-07-06T09:00:00Z",
+  publishedAt: "2026-07-23T09:00:00Z",
   readingMinutes: 9,
   category: "Hospitality",
   tags: [

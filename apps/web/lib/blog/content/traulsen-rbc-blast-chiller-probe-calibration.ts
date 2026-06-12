@@ -6,7 +6,7 @@ export const traulsenRbcBlastChillerProbe: Article = {
     "Traulsen RBC Blast Chiller Core Temperature Probe Calibration",
   description:
     "A Traulsen RBC blast chiller drops cooked product from 135°F to 41°F within the FDA 6-hour spec — but only if the core temperature probe is calibrated. Drift on the probe means the cycle stops late or early. Compliance and product quality both depend on the calibration interval.",
-  publishedAt: "2026-11-12T09:00:00Z",
+  publishedAt: "2026-11-26T09:00:00Z",
   readingMinutes: 9,
   category: "Compliance",
   tags: [

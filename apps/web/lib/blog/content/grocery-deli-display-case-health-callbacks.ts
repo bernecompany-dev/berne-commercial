@@ -6,7 +6,7 @@ export const groceryDeliDisplayCaseHealthCallbacks: Article = {
     "Grocery Deli Display Case — What Triggers Health Inspector Callbacks",
   description:
     "A Hussmann or Hill Phoenix deli case running 42°F at the back top corner during a busy Saturday is the citation pattern most grocery managers don't catch until inspection. Here's what the inspector measures and how to prevent the callback.",
-  publishedAt: "2026-10-12T09:00:00Z",
+  publishedAt: "2026-10-26T09:00:00Z",
   readingMinutes: 9,
   category: "Compliance",
   tags: [

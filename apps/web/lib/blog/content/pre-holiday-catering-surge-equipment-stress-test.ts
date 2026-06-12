@@ -6,7 +6,7 @@ export const preHolidayCateringSurgeStressTest: Article = {
     "Pre-Holiday Catering Surge — Equipment Stress Test Checklist",
   description:
     "Thanksgiving through New Year's Eve catering volume runs 2.5 to 4x baseline. Equipment that handled October fine will fail under November and December load if not stress-tested first.",
-  publishedAt: "2026-11-02T09:00:00Z",
+  publishedAt: "2026-11-16T09:00:00Z",
   readingMinutes: 9,
   category: "Operations",
   tags: [

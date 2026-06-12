@@ -6,7 +6,7 @@ export const countryClubBanquetEventFailurePrevention: Article = {
     "Country Club Banquet Equipment — Event-Night Failure Prevention",
   description:
     "Country club banquets are higher-stakes than restaurant service — 300 plated dinners, single-night-only opportunity, member-experience reputation. Pre-event equipment checks that catch the problems guests would notice.",
-  publishedAt: "2026-11-30T09:00:00Z",
+  publishedAt: "2026-12-14T09:00:00Z",
   readingMinutes: 9,
   category: "Industry",
   tags: [

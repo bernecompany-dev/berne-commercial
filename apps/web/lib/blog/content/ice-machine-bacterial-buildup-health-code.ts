@@ -6,7 +6,7 @@ export const iceMachineBacterialHealthCode: Article = {
     "Ice Machine Bacterial Buildup — Health Code Compliance + Cleaning Intervals",
   description:
     "Pink slime in the bin, biofilm on the evaporator, and mold around the door seal are the three findings that trigger health-code citations. Cleaning intervals by water profile and use case.",
-  publishedAt: "2026-09-07T09:00:00Z",
+  publishedAt: "2026-09-24T09:00:00Z",
   readingMinutes: 9,
   category: "Compliance",
   tags: [

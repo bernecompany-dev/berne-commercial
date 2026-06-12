@@ -6,7 +6,7 @@ export const laundromatWasherBearingRotation: Article = {
     "Laundromat Washer Bearing Failure — The Rotation Strategy That Saves $40k",
   description:
     "Speed Queen, Huebsch, and Wascomat washer bearings fail on a predictable cycle curve. Operators who rotate machine duty extend service life. Operators who don't replace bearings on the same three units every five years.",
-  publishedAt: "2026-08-24T09:00:00Z",
+  publishedAt: "2026-09-10T09:00:00Z",
   readingMinutes: 9,
   category: "Operations",
   tags: [

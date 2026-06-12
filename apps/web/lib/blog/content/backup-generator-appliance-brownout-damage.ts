@@ -6,7 +6,7 @@ export const backupGeneratorBrownoutDamage: Article = {
     "Backup Generator + Appliance Brownout Damage — Commercial Coverage",
   description:
     "A marginal backup generator delivers dirty power that kills compressors and electronic controls slowly. Most insurance policies don't cover the cumulative damage unless it's documented. Here's the prevention and the claim path.",
-  publishedAt: "2026-11-09T09:00:00Z",
+  publishedAt: "2026-11-23T09:00:00Z",
   readingMinutes: 9,
   category: "Operations",
   tags: [

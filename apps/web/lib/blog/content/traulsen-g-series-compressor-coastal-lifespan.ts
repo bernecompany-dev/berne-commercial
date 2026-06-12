@@ -6,7 +6,7 @@ export const traulsenGSeriesCompressorCoastal: Article = {
     "Traulsen G-Series Reach-In Compressor Lifespan in Coastal Climate",
   description:
     "Traulsen G-series reach-ins ship with Copeland or Embraco compressors rated for 10 to 12 years of normal service. In coastal South Florida the practical lifespan is 7 to 9. Here's why and how to extend it.",
-  publishedAt: "2026-09-17T09:00:00Z",
+  publishedAt: "2026-10-05T09:00:00Z",
   readingMinutes: 9,
   category: "Commercial Refrigeration",
   tags: [

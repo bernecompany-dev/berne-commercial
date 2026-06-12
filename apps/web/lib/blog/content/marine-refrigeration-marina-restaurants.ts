@@ -6,7 +6,7 @@ export const marineRefrigerationMarina: Article = {
     "Marine Refrigeration in Marina Restaurants — Salt-Air Compressor Service",
   description:
     "Marina-side restaurants face a refrigeration environment that destroys condensers and compressor electricals years before inland units fail. A field tech's read on coil coatings, contactor pitting, and protective service.",
-  publishedAt: "2026-07-09T09:00:00Z",
+  publishedAt: "2026-07-27T09:00:00Z",
   readingMinutes: 9,
   category: "Refrigeration",
   tags: [

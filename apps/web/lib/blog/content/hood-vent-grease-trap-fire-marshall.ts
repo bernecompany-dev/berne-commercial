@@ -6,7 +6,7 @@ export const hoodVentGreaseTrapFireMarshall: Article = {
     "Hood Vent + Grease Trap Service — Fire Marshal Expectations",
   description:
     "NFPA 96 requires hood and exhaust cleaning on a schedule tied to cooking volume. Plus a grease trap pumped on a documented interval. Skip either and the fire marshal writes the citation that closes the kitchen.",
-  publishedAt: "2026-10-05T09:00:00Z",
+  publishedAt: "2026-10-19T09:00:00Z",
   readingMinutes: 10,
   category: "Compliance",
   tags: [

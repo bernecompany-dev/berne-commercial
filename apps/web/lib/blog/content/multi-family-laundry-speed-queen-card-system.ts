@@ -6,7 +6,7 @@ export const multiFamilyLaundrySpeedQueenCard: Article = {
     "Multi-Family Laundry Room — Speed Queen Card System + Service Contract",
   description:
     "Apartment building laundry rooms running Speed Queen card-system washers need a specific service contract structure. Card-system reads, mechanical failures, and resident-complaint workflow each impact operations differently.",
-  publishedAt: "2026-12-07T09:00:00Z",
+  publishedAt: "2026-12-21T09:00:00Z",
   readingMinutes: 9,
   category: "Hospitality",
   tags: [

@@ -6,7 +6,7 @@ export const rationalIcombiProDescaling: Article = {
     "Rational iCombi Pro — Descaling Cycles and Steam Generator Life",
   description:
     "A Rational iCombi Pro running Miami water needs descaling every 45 to 75 cycles depending on water profile. Skip the interval and the steam generator dies in year 3 instead of year 8. Here's the math.",
-  publishedAt: "2026-09-03T09:00:00Z",
+  publishedAt: "2026-09-21T09:00:00Z",
   readingMinutes: 10,
   category: "Restaurant Equipment",
   tags: [

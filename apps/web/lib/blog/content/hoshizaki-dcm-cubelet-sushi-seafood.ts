@@ -6,7 +6,7 @@ export const hoshizakiDcmCubeletSushiSeafood: Article = {
     "Hoshizaki DCM Cubelet Ice Machine — Sushi and Seafood Market Reality",
   description:
     "Sushi counters and seafood markets need cubelet ice for product display — Hoshizaki DCM is the dominant brand. Production demands, sanitation cycles, and the freight-elevator install reality.",
-  publishedAt: "2026-10-22T09:00:00Z",
+  publishedAt: "2026-11-05T09:00:00Z",
   readingMinutes: 8,
   category: "Commercial Refrigeration",
   tags: [

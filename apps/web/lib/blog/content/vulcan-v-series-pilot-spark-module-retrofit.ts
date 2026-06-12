@@ -6,7 +6,7 @@ export const vulcanVSeriesPilotSparkModule: Article = {
     "Vulcan V-Series Range Pilot vs Spark Module Retrofits — When It's Worth It",
   description:
     "The standing pilot on your Vulcan V6BS or V10P is reliable but eats $30 a month in gas per burner. A spark module retrofit pays back in 14 to 22 months. The catch is finding the right kit for the range vintage.",
-  publishedAt: "2026-08-06T09:00:00Z",
+  publishedAt: "2026-08-24T09:00:00Z",
   readingMinutes: 10,
   category: "Restaurant Equipment",
   tags: [

@@ -6,7 +6,7 @@ export const rationalIcombiVsClassicRoi: Article = {
     "Rational iCombi Pro vs iCombi Classic — Service ROI for Mid-Volume Restaurants",
   description:
     "Rational iCombi Pro is the high-end combi at $32k. iCombi Classic is the entry-level at $18k. For a 120-cover Miami restaurant, the service-cost economics over 10 years tell a different story than the spec sheet.",
-  publishedAt: "2026-10-29T09:00:00Z",
+  publishedAt: "2026-11-12T09:00:00Z",
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: [

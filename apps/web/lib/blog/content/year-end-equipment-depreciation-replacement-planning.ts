@@ -6,7 +6,7 @@ export const yearEndDepreciationReplacement: Article = {
     "Year-End Equipment Depreciation + Replacement Planning",
   description:
     "Commercial kitchen equipment depreciates faster than tax schedules suggest. December is the right window to plan next-year replacement for assets past their economic service life — and to capture Section 179 and bonus depreciation correctly.",
-  publishedAt: "2026-12-03T09:00:00Z",
+  publishedAt: "2026-12-17T09:00:00Z",
   readingMinutes: 9,
   category: "Operations",
   tags: [

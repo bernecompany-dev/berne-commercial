@@ -6,7 +6,7 @@ export const hurricaneSeasonPrepKitchens: Article = {
     "Hurricane Season Prep for Restaurant Kitchens — Power, Food, Equipment",
   description:
     "October is peak Atlantic hurricane month. A 48-hour power outage destroys $8k in walk-in product, kills marginal compressors on restart, and creates insurance-claim documentation work most operators aren't prepared for.",
-  publishedAt: "2026-09-21T09:00:00Z",
+  publishedAt: "2026-10-08T09:00:00Z",
   readingMinutes: 11,
   category: "Operations",
   tags: [

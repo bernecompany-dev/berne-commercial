@@ -6,7 +6,7 @@ export const southFlHospitalitySaltAirZone: Article = {
     "South FL Hospitality Salt-Air Maintenance Schedule by Zone",
   description:
     "Salt-air exposure varies sharply across South Florida — barrier-island properties see 5x the deposition of inland properties. Equipment maintenance schedules should reflect the zone, not assume a single Miami-wide cadence.",
-  publishedAt: "2026-12-14T09:00:00Z",
+  publishedAt: "2026-12-28T09:00:00Z",
   readingMinutes: 9,
   category: "Operations",
   tags: [

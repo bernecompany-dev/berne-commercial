@@ -6,7 +6,7 @@ export const dishwasherRinseTempSanitizing: Article = {
     "Commercial Dishwasher Rinse-Temp + Sanitizing Chemical Balance",
   description:
     "Hot-water sanitizing requires 180°F final rinse. Chemical sanitizing requires the right concentration and contact time. Get the wrong balance and you'll fail an FDA Food Code inspection on either path.",
-  publishedAt: "2026-09-14T09:00:00Z",
+  publishedAt: "2026-10-01T09:00:00Z",
   readingMinutes: 9,
   category: "Compliance",
   tags: [

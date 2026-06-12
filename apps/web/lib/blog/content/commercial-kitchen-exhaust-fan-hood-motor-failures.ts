@@ -6,7 +6,7 @@ export const commercialKitchenExhaustFanHoodMotor: Article = {
     "Commercial Kitchen Exhaust Fan & Hood Motor Failures: Belts, Bearings, and Fire-Marshal Triggers",
   description:
     "When the hood fan slows or dies, the kitchen gets hot, smoke rolls, and the fire-marshal clock starts. The real failure sequence behind exhaust fan breakdowns — belts, bearings, motors — and what each repair costs.",
-  publishedAt: "2026-06-19T09:00:00Z",
+  publishedAt: "2026-07-02T09:00:00Z",
   readingMinutes: 8,
   category: "Operations",
   tags: [

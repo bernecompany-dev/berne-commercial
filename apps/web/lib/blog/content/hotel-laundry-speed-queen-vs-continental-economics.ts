@@ -6,7 +6,7 @@ export const hotelLaundrySpeedQueenContinental: Article = {
     "Hotel Laundry Equipment — Speed Queen vs Continental Service Economics",
   description:
     "Picking between Speed Queen Commercial and Continental Girbau for a 120-room hotel laundry isn't a purchase decision — it's a 10-year service economics decision. A field tech's read on parts availability, motor life, and total cost of ownership.",
-  publishedAt: "2026-08-10T09:00:00Z",
+  publishedAt: "2026-08-27T09:00:00Z",
   readingMinutes: 11,
   category: "Hospitality",
   tags: [

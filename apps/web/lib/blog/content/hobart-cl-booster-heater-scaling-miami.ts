@@ -6,7 +6,7 @@ export const hobartClBoosterHeaterScalingMiami: Article = {
     "Hobart CL Series Booster Heater Scaling — Miami Water Profile",
   description:
     "A Hobart CLeN conveyor dishwasher with a scaled booster heater pulls 165°F final rinse and fails health inspection. Descale, replace the element, or upgrade to an external booster — here's the decision math.",
-  publishedAt: "2026-09-24T09:00:00Z",
+  publishedAt: "2026-10-12T09:00:00Z",
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: [

@@ -6,7 +6,7 @@ export const manitowocIndigoNxtIt: Article = {
     "Manitowoc Indigo NXT IT Series — Floridian Water Hardness Scale",
   description:
     "Miami municipal water runs 200 to 280 ppm hardness. Manitowoc Indigo NXT IT-series ice machines descale by AuCS automatic cleaning, but that doesn't reach the water-distribution tube and the float assembly. A field tech's interval map.",
-  publishedAt: "2026-08-20T09:00:00Z",
+  publishedAt: "2026-09-07T09:00:00Z",
   readingMinutes: 10,
   category: "Commercial Refrigeration",
   tags: [

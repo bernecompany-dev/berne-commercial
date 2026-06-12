@@ -6,7 +6,7 @@ export const espressoGroupHeadBoilerPressure: Article = {
     "Espresso Group Head Boiler Pressure Drop — La Marzocco / Nuova",
   description:
     "Your La Marzocco Linea PB or Nuova Simonelli Aurelia II is dropping group pressure mid-shot. A field tech's read on the group thermosiphon, vacuum breaker, and pressurestat calibration.",
-  publishedAt: "2026-07-16T09:00:00Z",
+  publishedAt: "2026-08-03T09:00:00Z",
   readingMinutes: 9,
   category: "Cafe Equipment",
   tags: [

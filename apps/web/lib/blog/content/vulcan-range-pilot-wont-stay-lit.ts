@@ -6,7 +6,7 @@ export const vulcanRangePilot: Article = {
     "Vulcan Range Pilot Won't Stay Lit — Thermocouple vs Gas Valve",
   description:
     "Your Vulcan V24F-6BN or VC44 keeps dropping pilot during dinner service. A field diagnostic on the thermocouple voltage, pilot gas pressure, and Honeywell safety valve sequence.",
-  publishedAt: "2026-06-18T09:00:00Z",
+  publishedAt: "2026-06-29T09:00:00Z",
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: [

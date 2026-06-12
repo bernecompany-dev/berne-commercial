@@ -6,7 +6,7 @@ export const gymSmoothieBarRefrigeration: Article = {
     "Gym Smoothie Bar Refrigeration — Pre-Peak Hour Readiness",
   description:
     "A gym smoothie bar runs 70 percent of daily volume in 90 minutes: morning rush and post-work peak. The refrigeration sized for steady-state can't recover between hits if it's not maintained.",
-  publishedAt: "2026-11-16T09:00:00Z",
+  publishedAt: "2026-11-30T09:00:00Z",
   readingMinutes: 8,
   category: "Operations",
   tags: [

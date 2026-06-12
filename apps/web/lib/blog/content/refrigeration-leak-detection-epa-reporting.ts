@@ -6,7 +6,7 @@ export const refrigerationLeakDetectionEpa: Article = {
     "Refrigeration Leak Detection — When EPA Reporting Kicks In",
   description:
     "Commercial refrigeration systems leaking above 35 percent of charge annually trigger EPA Section 608 reporting and remediation requirements. Here's what operators need to know about leak rates, repair timelines, and compliance.",
-  publishedAt: "2026-10-19T09:00:00Z",
+  publishedAt: "2026-11-02T09:00:00Z",
   readingMinutes: 9,
   category: "Compliance",
   tags: [

@@ -6,7 +6,7 @@ export const beverageAirCondenserCleaning: Article = {
     "Beverage-Air Reach-In Condenser Cleaning Schedule for Coastal Florida",
   description:
     "Salt air, kitchen grease, and Miami humidity kill Beverage-Air HBR48, HBF49, and MMR23 condenser coils on a predictable schedule. A field tech's cleaning interval and what happens when you skip it.",
-  publishedAt: "2026-06-15T09:00:00Z",
+  publishedAt: "2026-06-18T09:00:00Z",
   readingMinutes: 9,
   category: "Refrigeration",
   tags: [

@@ -6,7 +6,7 @@ export const vendorManagementRestaurantsMultiEquipment: Article = {
     "Vendor Management for Restaurants — Multi-Equipment Shop Reality",
   description:
     "Most Miami restaurants juggle 6 to 12 vendor relationships across appliance service, hood cleaning, grease pumping, Ansul, water treatment, pest control, and HVAC. A practical approach to consolidating without losing specialty depth.",
-  publishedAt: "2026-11-26T09:00:00Z",
+  publishedAt: "2026-12-10T09:00:00Z",
   readingMinutes: 9,
   category: "Operations",
   tags: [

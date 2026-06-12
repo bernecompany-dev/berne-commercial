@@ -6,7 +6,7 @@ export const schoolCafeteriaWalkInFallPrep: Article = {
     "School Cafeteria Walk-In Cooler — Summer Prep Before Fall Opening",
   description:
     "K-12 cafeteria walk-ins sat closed for 8 to 10 weeks over summer. Door gaskets dried, condensers sat in a 95°F kitchen, drain lines may have grown slime. Three-week pre-opening prep avoids the August surprise.",
-  publishedAt: "2026-10-26T09:00:00Z",
+  publishedAt: "2026-11-09T09:00:00Z",
   readingMinutes: 8,
   category: "Operations",
   tags: [

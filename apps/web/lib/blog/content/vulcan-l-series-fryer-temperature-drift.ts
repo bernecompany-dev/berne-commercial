@@ -6,7 +6,7 @@ export const vulcanLSeriesFryerTempDrift: Article = {
     "Vulcan L-Series Fryer Temperature Drift — Troubleshooting Sequence",
   description:
     "A Vulcan LG400 or 1ER50A fryer that's running 8 to 12°F low at the basket is producing greasy food and longer cook times. The thermostat, the high-limit, the burners, and the oil quality each tell a different story.",
-  publishedAt: "2026-10-01T09:00:00Z",
+  publishedAt: "2026-10-15T09:00:00Z",
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: [

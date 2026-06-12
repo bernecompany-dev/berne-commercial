@@ -6,7 +6,7 @@ export const commercialMicrowaveMagnetron: Article = {
     "Commercial Microwave Magnetron Replacement — Panasonic / ACP / Amana",
   description:
     "Your Panasonic NE-1054F or Amana RFS511MP isn't heating. A field diagnostic on magnetron output, HV diode and capacitor, door interlock chain, and when replacement makes more sense than repair.",
-  publishedAt: "2026-06-29T09:00:00Z",
+  publishedAt: "2026-07-16T09:00:00Z",
   readingMinutes: 9,
   category: "Restaurant Equipment",
   tags: [

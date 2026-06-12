@@ -6,7 +6,7 @@ export const walkIn50PercentRule: Article = {
     "The 50% Rule Is Wrong for Walk-Ins: Repair-or-Replace Math With Real South Florida Ticket Data",
   description:
     "The '50% rule' says replace when the repair costs half of new. Applied to walk-in coolers it gives the wrong answer in both directions — because a walk-in is two assets with two lifespans. The math, with real numbers.",
-  publishedAt: "2026-06-23T09:00:00Z",
+  publishedAt: "2026-07-09T09:00:00Z",
   readingMinutes: 8,
   category: "Operations",
   tags: [

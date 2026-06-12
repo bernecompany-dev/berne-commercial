@@ -6,7 +6,7 @@ export const manitowocErrorCodesFieldGuide: Article = {
     "Manitowoc Ice Machine Error Codes: What You Can Clear Yourself vs What Needs a Tech",
   description:
     "A field guide to Manitowoc Indigo/Indigo NXT and i-Series fault codes — which alarms an operator can safely clear, which mean stop-and-call, and what each repair typically costs in South Florida.",
-  publishedAt: "2026-06-16T09:00:00Z",
+  publishedAt: "2026-06-25T09:00:00Z",
   readingMinutes: 9,
   category: "Commercial Refrigeration",
   tags: [

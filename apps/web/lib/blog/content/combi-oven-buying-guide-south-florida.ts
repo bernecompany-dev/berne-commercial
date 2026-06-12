@@ -6,7 +6,7 @@ export const combiOvenBuyingGuideSouthFlorida: Article = {
     "Combi Oven Buying Guide for South Florida: Rational, Unox, Convotherm, Alto-Shaam — and What Each Costs to Own",
   description:
     "A service-shop buying guide to the four combi platforms that matter: installed prices, 15-year ownership costs, the water-treatment rule nobody can skip, and which kitchen buys which brand.",
-  publishedAt: "2026-06-14T09:00:00Z",
+  publishedAt: "2026-06-15T09:00:00Z",
   readingMinutes: 10,
   category: "Restaurant Equipment",
   tags: [

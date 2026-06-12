@@ -6,7 +6,7 @@ export const underbarRefrigerationFailure: Article = {
     "Restaurant Underbar Refrigeration — Why It Fails Faster Than You Think",
   description:
     "Underbar bottle coolers and beer-bottle stations have the harshest duty cycle in a restaurant. A field tech's read on True TBB-24, Perlick BC36, and Krowne underbar service intervals and failure modes.",
-  publishedAt: "2026-07-20T09:00:00Z",
+  publishedAt: "2026-08-06T09:00:00Z",
   readingMinutes: 9,
   category: "Beverage Equipment",
   tags: [
