@@ -6,6 +6,7 @@ import { cn } from "@workspace/ui/lib/utils"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { JsonLd } from "@/components/json-ld"
 import { GoogleAnalytics } from "@/components/google-analytics"
+import { GoogleAdsTag } from "@/components/google-ads-tag"
 import { MetaPixel } from "@/components/meta-pixel"
 import { Clarity } from "@/components/clarity"
 import { CookieBanner } from "@/components/cookie-banner"
@@ -107,6 +108,13 @@ export default function RootLayout({
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
         <GoogleAnalytics />
+        {/*
+          Google Ads conversion tracking (tag AW-18232464152, baked-in default
+          with NEXT_PUBLIC_GADS_* override). Includes the website call tracking
+          config — Google swaps the displayed phone number for ad-click
+          visitors; no tel: click listener needed.
+        */}
+        <GoogleAdsTag />
         <MetaPixel />
         <Clarity />
         <WhatsAppFab />

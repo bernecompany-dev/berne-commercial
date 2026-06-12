@@ -147,6 +147,13 @@ export function DispatchForm({
           urgency: String(payload.urgency ?? ""),
           locale,
         })
+        // Google Ads "Lead form submit" conversion (secondary). send_to is a
+        // public id (visible in page HTML), so the real value is baked in as
+        // the default; NEXT_PUBLIC_GADS_LEAD_LABEL overrides it if needed.
+        const adsLeadLabel =
+          process.env.NEXT_PUBLIC_GADS_LEAD_LABEL ??
+          "AW-18232464152/dCXNCM-JqL0cEJim9fVD"
+        window.gtag("event", "conversion", { send_to: adsLeadLabel })
       }
       if (typeof window !== "undefined" && typeof window.fbq === "function") {
         window.fbq("track", "Lead", {
