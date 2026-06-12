@@ -295,6 +295,9 @@ export const services: Service[] = [
     shortTitle: "Ice Machines",
     category: "ice-machines",
     primary: true,
+    metaTitle: "Commercial Ice Machine Repair Miami — 24/7",
+    metaDescription:
+      "Hoshizaki, Manitowoc, Scotsman & Ice-O-Matic fixed same-day across Miami & South Florida. 24/7 dispatch, $89 call applied toward the repair.",
     summary:
       "Commercial ice machine repair for restaurants, hotels, healthcare and retail — Hoshizaki, Manitowoc, Scotsman.",
     longDescription:
