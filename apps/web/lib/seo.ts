@@ -282,10 +282,12 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
 }
 
 const SAME_AS = [
-  // Affiliated / sister sites (de-duped, no self-ref)
+  // Affiliated / sister sites (de-duped, no self-ref).
+  // normarepair.com removed 2026-06-12 (round-4 block 7): Norma is a separate
+  // brand entity (own GBP, phone, GA4) — Eugene approved variant A
+  // ("раздельные бренды"), so Berne properties no longer claim it via sameAs.
   "https://berne-repair.com",
   "https://bernerepair.com",
-  "https://normarepair.com",
   // Social
   "https://www.tiktok.com/@berne.repair",
   "https://www.instagram.com/bernerepair/",
@@ -297,8 +299,7 @@ const SAME_AS = [
   "https://www.yelp.com/biz/berne-appliance-repair-hallandale-beach-4",
   "https://www.yelp.com/biz/berne-repair-sarasota",
   "https://www.yelp.com/biz/berne-repair-fort-myers",
-  // Thumbtack
-  "https://www.thumbtack.com/fl/tampa/appliance-repair/norma-appliance-repair/service/485458498671689761",
+  // Thumbtack (the Norma profile was removed 2026-06-12 with the brand split)
   "https://www.thumbtack.com/fl/naples/appliance-repair/berne-appliance-repair-naples-fort-myers/service/566337571507380237",
   // BBB (A+ rating profile, verified 2026-05-20)
   "https://www.bbb.org/us/fl/hallandale-beach/profile/appliance-repair/berne-inc-0633-92031029",
