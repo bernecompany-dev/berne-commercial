@@ -311,6 +311,15 @@ const SAME_AS = [
   "https://share.google/VCXebzL4hfcPcu3P5",
   "https://share.google/gH0RfcApFEEwD6zpy",
   "https://share.google/c2j6LHKohujVnmXge",
+  // Citation directories — Berne Commercial brand profiles only, added
+  // 2026-06-13 sameAs-pass. Entity-resolution signals; clean canonical URLs,
+  // no UTM. No Norma profiles (variant A entity split).
+  "https://www.provenexpert.com/berne-commercial-kitchen-equipment-repair/",
+  "https://www.hotfrog.com/company/cf9fc4e44d89a41543fb6174a91d8653",
+  "https://www.cylex.us.com/company/berne-commercial-kitchen-equipment-repair-40630433.html",
+  "https://www.manta.com/c/m1hh69g",
+  "https://www.callupcontact.com/b/businessprofile/Berne_Commercial/10124998",
+  "https://www.n49.com/biz/7243498/berne-commercial-kitchen-equipment-repair/",
 ]
 
 export function organizationSchema() {
