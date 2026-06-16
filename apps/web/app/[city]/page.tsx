@@ -64,6 +64,28 @@ const SPECIALTY_LINKS: Record<string, { label: string; href: string }[]> = {
       href: "/fort-lauderdale/medical-lab-refrigeration-repair",
     },
   ],
+  // Combi money cluster (2026-06-15): "commercial oven repair" / "...near me"
+  // currently land on these three city pages (GSC pos 3-9). Surface a link up
+  // to the canonical combi-repair hub so the ranking equity flows to the page
+  // built for that intent, anchored on the head term.
+  "boynton-beach": [
+    {
+      label: "Commercial Combi Oven Repair",
+      href: "/services/combi-oven-repair",
+    },
+  ],
+  "west-palm-beach": [
+    {
+      label: "Commercial Combi Oven Repair",
+      href: "/services/combi-oven-repair",
+    },
+  ],
+  "boca-raton": [
+    {
+      label: "Commercial Combi Oven Repair",
+      href: "/services/combi-oven-repair",
+    },
+  ],
 }
 
 const faqsFor = (cityName: string) => [

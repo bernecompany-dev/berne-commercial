@@ -18,6 +18,10 @@ export const BRAND_SERVICE_SLUGS = [
   "la-marzocco-espresso-repair",
   "vulcan-oven-repair",
   "turbo-air-refrigeration-repair",
+  "rational-combi-oven-repair",
+  "convotherm-combi-oven-repair",
+  "unox-combi-oven-repair",
+  "alto-shaam-combi-oven-repair",
 ] as const
 
 export type BrandServiceSlug = (typeof BRAND_SERVICE_SLUGS)[number]

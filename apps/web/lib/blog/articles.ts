@@ -71,6 +71,10 @@ import { combiOvenBuyingGuideSouthFlorida } from "./content/combi-oven-buying-gu
 import { manitowocErrorCodesFieldGuide } from "./content/manitowoc-error-codes-field-guide"
 import { commercialKitchenExhaustFanHoodMotor } from "./content/commercial-kitchen-exhaust-fan-hood-motor-failures"
 import { walkIn50PercentRule } from "./content/walk-in-50-percent-rule-repair-or-replace"
+// Combi money cluster (2026-06-15): error-code + troubleshooting magnets that
+// cross-link the new /services/combi-oven-repair hub and brand spokes.
+import { rationalIcombiErrorCodesGuide } from "./content/rational-icombi-error-codes-guide"
+import { combiOvenNotSteaming } from "./content/combi-oven-not-steaming-troubleshooting"
 
 export type ArticleSection = {
   heading: string
@@ -168,6 +172,8 @@ export const articles: Article[] = [
   manitowocErrorCodesFieldGuide,
   commercialKitchenExhaustFanHoodMotor,
   walkIn50PercentRule,
+  rationalIcombiErrorCodesGuide,
+  combiOvenNotSteaming,
 ]
 
 export function getArticle(slug: string): Article | undefined {

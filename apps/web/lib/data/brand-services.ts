@@ -1535,6 +1535,753 @@ const TURBO_AIR: BrandService = {
 }
 
 // ---------------------------------------------------------------------------
+// 9. Rational combi oven repair — combi-cluster money page (2026-06-15)
+// ---------------------------------------------------------------------------
+
+const RATIONAL_COMBI: BrandService = {
+  slug: "rational-combi-oven-repair",
+  brand: "Rational",
+  brandSlug: "rational",
+  title: "Rational Combi Oven Repair",
+  shortTitle: "Rational Combi Oven",
+  metaTitle: "Rational Combi Oven Repair Miami — 24/7",
+  metaDescription:
+    "Rational iCombi Pro & SelfCookingCenter repaired same-day across South Florida — steam-generator scale, CareControl, door faults. 4.79★/871. $89 call.",
+  heroDescription:
+    "Same-day Rational combi oven repair across Miami-Dade, Broward and Palm Beach — iCombi Pro, iCombi Classic, and legacy SelfCookingCenter (SCC) / CombiMaster platforms. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
+  intro: [
+    "Rational is the benchmark combi in South Florida fine dining, hotels, country clubs and corporate kitchens — and the steam side of that benchmark is exactly what our water destroys. The single most common Rational ticket we run is steam-generator scale: untreated South Florida hard water furs the generator until production crashes, the unit throws a service prompt, and a $3,000-$5,000 generator replacement is suddenly on the table that proper descaling and water treatment would have prevented. We open almost every Rational call with a water-treatment verdict, because the alternative is selling you the same repair every 18 months.",
+    "The good news for the operator: most Rational faults are mechatronic and economical — the CareControl tablet/clean pump that fails at year 5-7, door gaskets that take a compression set under nightly auto-clean, touchscreen calibration drift, core-probe damage from rough handling, and condensate/drain issues. The iCombi Pro and the older SelfCookingCenter both surface faults as plain-language service messages and a built-in ServiceDiagnosis routine; a tech who reads them arrives with the right part instead of guessing. Our trucks carry the common Rational wear parts for South Florida fleets.",
+    "Berne is an independent commercial service company — not a Rational dealership and not an authorized agent. In-warranty units should go through Rational USA's network first (it's free for you). Out of warranty, independence works in your favor: same-day dispatch, no warranty-queue wait, parts on the truck, and honest repair-vs-replace math on a 10-year SCC where a new iCombi Pro may pay back in energy and reliability.",
+  ],
+  codesHeading: "Rational service messages & fault indications we clear daily",
+  codesIntro:
+    "iCombi Pro and SelfCookingCenter machines report problems as plain-language service messages on the display plus a built-in ServiceDiagnosis self-test, rather than cryptic numbers. These are the indications behind most of our Rational dispatches — and what each usually means in South Florida conditions.",
+  codes: [
+    {
+      code: "Descale / Care prompt that won't clear",
+      meaning:
+        "The unit is demanding a CareControl descale or has detected heavy scale in the steam generator.",
+      action:
+        "Run a proper OEM CareControl cycle; if scale is advanced we acid-clean or service the generator and set a 3-6 month descale schedule with water treatment so it doesn't return.",
+    },
+    {
+      code: "Steam generator not heating / weak steam",
+      meaning:
+        "The generator can't make or hold steam under load — scale, a failed heating element, or level-probe trouble.",
+      action:
+        "We check the element, level probe and contactor before condemning the generator. Catching this at the prompt stage is the difference between a $300 fix and a $3,000-$5,000 generator.",
+    },
+    {
+      code: "CareControl / clean pump fault",
+      meaning:
+        "The self-clean tablet/clean pump won't prime or run, so auto-clean fails.",
+      action:
+        "Pump replacement is our single most common Rational ticket — $280-$380, roughly a 60-minute swap.",
+    },
+    {
+      code: "Core probe error / implausible probe reading",
+      meaning:
+        "The core temperature probe reads open, shorted, or implausible.",
+      action:
+        "Bent or punctured probe from handling, or a corroded connector. We test and replace the probe and verify against a reference.",
+    },
+    {
+      code: "Door / gasket fault, steam escaping the seal",
+      meaning:
+        "The door isn't sealing — gasket compression set or latch wear lets steam past.",
+      action:
+        "Gasket replacement ($180-$260, ~35 min) restores the seal and the cook-time economics; latch and hinge service where needed.",
+    },
+    {
+      code: "Touchscreen unresponsive or drifted",
+      meaning:
+        "The display mis-registers touches or goes dark.",
+      action:
+        "Recalibration fixes most cases (year 6-8 drift); hardware replacement $1,200-$1,800 only when calibration won't hold.",
+    },
+    {
+      code: "Drain / condensate fault, water under the unit",
+      meaning:
+        "Condensate isn't draining — clogged drain, failed drain valve or pump.",
+      action:
+        "We clear the drain path, service the valve/pump, and check the standpipe before a wet floor becomes a corrosion and electronics problem.",
+    },
+  ],
+  codesNote:
+    "Legacy CombiMaster (manual control) and early SelfCookingCenter boards report the same failures with fewer words — we service every Rational generation in the South Florida install base.",
+  symptomTable: [
+    {
+      symptom: "Steam side weak, food not cooking on steam programs",
+      cause: "Scaled steam generator or failed generator element",
+      cost: "$300–$1,200",
+      response: "Same-day",
+    },
+    {
+      symptom: "Descale prompt keeps returning after a clean",
+      cause: "Advanced generator scale + no water treatment",
+      cost: "$300–$700",
+      response: "Same-day",
+    },
+    {
+      symptom: "Auto-clean won't run / CareControl fault",
+      cause: "Clean/tablet pump failure — the classic year 5-7 ticket",
+      cost: "$280–$420",
+      response: "Same-day",
+    },
+    {
+      symptom: "Steam leaking from the door, long cook times",
+      cause: "Door gasket compression set or latch wear",
+      cost: "$180–$320",
+      response: "Same-day",
+    },
+    {
+      symptom: "Core probe reading wrong or faulted",
+      cause: "Damaged probe or corroded connector",
+      cost: "$180–$300",
+      response: "Same-day",
+    },
+    {
+      symptom: "Touchscreen unresponsive or mis-touching",
+      cause: "Calibration drift (recal) or panel failure",
+      cost: "$120–$1,800",
+      response: "Same-day",
+    },
+    {
+      symptom: "Generator dead on a 10+ year SCC",
+      cause: "End-of-life sealed steam system — repair-vs-replace math",
+      cost: "$3,000–$5,000",
+      response: "24–48h",
+    },
+  ],
+  equipment: [
+    {
+      name: "iCombi Pro (current platform)",
+      detail:
+        "iCookingSuite, iProductionManager, ConnectedCooking. We service generators, CareControl pumps, probes, doors and boards — the full platform.",
+    },
+    {
+      name: "iCombi Classic",
+      detail:
+        "The value iCombi without the adaptive suite — same generator, door and clean-system service set, same South Florida scale exposure.",
+    },
+    {
+      name: "SelfCookingCenter (SCC / 5 Senses)",
+      detail:
+        "The prior-generation flagship, thousands still running across South Florida hotels and clubs — full board, generator and door support.",
+    },
+    {
+      name: "CombiMaster / CombiMaster Plus",
+      detail:
+        "Manual-control combis without the cooking intelligence — straightforward generator, element and door service.",
+    },
+    {
+      name: "Steam generators & water treatment",
+      detail:
+        "Descaling, element and level-probe service, plus the water-treatment sizing that actually keeps a Rational generator alive in our water.",
+    },
+    {
+      name: "CareControl & door systems",
+      detail:
+        "Clean/tablet pumps, gaskets, latches, hinges — the high-frequency wear parts ride on the truck for first-visit closure.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Do you repair Rational combi ovens the same day in Miami?",
+      a: "Yes — Rational combi calls dispatch same-day across Miami-Dade, Broward and Palm Beach, seven days a week, and a down combi in a hotel or club banquet operation is treated as an emergency. The $89 commercial service call is free when you approve the repair — you only pay it if you decline.",
+    },
+    {
+      q: "Are you a Rational authorized service partner?",
+      a: "No — and we say so plainly. Berne is an independent commercial service company, not affiliated with Rational and not a factory warranty station. In-warranty iCombi units should use Rational USA's network first (it's free for you). Out of warranty, we service iCombi Pro, iCombi Classic, SelfCookingCenter and CombiMaster machines daily, with parts on the truck and no warranty-queue wait.",
+    },
+    {
+      q: "My Rational steam side is weak — how serious is it?",
+      a: "It's the call to make early, not late. In South Florida our hard water scales the steam generator until production drops and the unit throws a descale or service prompt; descaling and water treatment caught early is a $300-$700 fix, while a neglected generator that finally fails is a $3,000-$5,000 replacement. We diagnose the generator, element and level probe before quoting either path.",
+    },
+    {
+      q: "How often does a Rational need descaling here?",
+      a: "Every 3-6 months on untreated South Florida water, and the machine will demand it via the CareControl prompt — ignoring that prompt is how generators die early. With proper water treatment (we size it on the visit) the interval stretches and the generator lasts years longer. Our PM contracts bundle CareControl service, descaling, door and probe checks with documentation.",
+    },
+    {
+      q: "What's the most common Rational repair you run?",
+      a: "The CareControl clean/tablet pump — it fails around year 5-7 of nightly auto-clean cycles, auto-clean stops working, and it's a $280-$420 repair on roughly a 60-minute swap. After that: door gaskets taking a compression set, touchscreen calibration drift, and steam-generator scale.",
+    },
+    {
+      q: "Repair or replace a 10-year-old SelfCookingCenter?",
+      a: "Boards, doors, probes, pumps and door gaskets — repair, at almost any age. A failed steam generator past year 10 is where we run the honest math: a new iCombi Pro can pay back in energy, water and reliability versus a $3,000-$5,000 generator on an aging SCC. We quote both paths and tell you which we'd pick.",
+    },
+  ],
+  related: [
+    { label: "Combi oven repair (all brands)", href: "/services/combi-oven-repair" },
+    { label: "Commercial oven repair", href: "/services/commercial-oven-repair" },
+    { label: "Rational vs combi alternatives — buyer's guide", href: "/compare/rational-vs-combi" },
+    { label: "Rational iCombi error codes guide", href: "/blog/rational-icombi-error-codes-guide" },
+    { label: "Rational brand overview", href: "/brands/rational" },
+    { label: "Convotherm combi oven repair", href: "/services/convotherm-combi-oven-repair" },
+  ],
+  requestTopic: "rational-combi-oven",
+  datePublished: "2026-06-15",
+}
+
+// ---------------------------------------------------------------------------
+// 10. Convotherm combi oven repair — combi-cluster spoke (2026-06-15)
+// ---------------------------------------------------------------------------
+
+const CONVOTHERM_COMBI: BrandService = {
+  slug: "convotherm-combi-oven-repair",
+  brand: "Convotherm",
+  title: "Convotherm Combi Oven Repair",
+  shortTitle: "Convotherm Combi Oven",
+  metaTitle: "Convotherm Combi Oven Repair Miami — 24/7",
+  metaDescription:
+    "Convotherm maxx & C4 combi ovens repaired same-day across South Florida — ConvoClean, steam, door & board faults. EPA 608 techs, 4.79★/871. $89 call.",
+  heroDescription:
+    "Same-day Convotherm combi oven service across Miami-Dade, Broward and Palm Beach — Convotherm maxx, maxx pro, C4 and legacy OES/OGS platforms. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
+  intro: [
+    "Convotherm is the institutional combi answer in a lot of South Florida hotels, hospitals, schools and high-volume banquet kitchens — Welbilt-built, durable, and famous for the disappearing roll-in door on larger units. The platform earns its keep, but our market finds the same two pressure points it finds on every combi: the steam side scales hard in our water, and the ConvoClean automatic wash system depends on chemical pumps and supply lines that air-lock, run dry, or clog when the cleaning program is neglected. Most of our Convotherm tickets trace to one of those two, not to a defective machine.",
+    "Convotherm machines run boiler (steam-generator) and boilerless (spray/injection) configurations, and the failure signature differs: boiler units are scale-and-element calls, boilerless units are nozzle, water-distribution and sensor calls. Either way the controls — the easyTouch screen on maxx/C4, the dial-and-display on older OES/OGS — surface faults as service messages our techs read on arrival. We carry the high-frequency Convotherm wear parts: door gaskets, ConvoClean pumps and tubing, level probes, drain components and steam-side elements.",
+    "Berne is an independent commercial service company — no Convotherm or Welbilt affiliation, no dealer quota. In-warranty machines should go through the factory network first; out of warranty, our 18 W-2 technicians service Convotherm combis same-day across South Florida and give you honest repair-vs-replace numbers instead of a sales pitch.",
+  ],
+  codesHeading: "Convotherm fault messages & failure points we diagnose daily",
+  codesIntro:
+    "maxx and C4 machines report faults as service messages on the easyTouch display; older OES/OGS units report the same failures on the dial-and-LED panel. Here's what the common indications mean in South Florida conditions.",
+  codes: [
+    {
+      code: "Steam generator not heating (boiler models)",
+      meaning:
+        "The boiler can't make or hold steam — scale, a failed element, or a level-probe/contactor fault.",
+      action:
+        "We descale the boiler, test the element and level probe, and check the contactor before condemning the generator. Catching scale early protects the boiler.",
+    },
+    {
+      code: "ConvoClean wash fault / no chemical pickup",
+      meaning:
+        "The automatic clean system isn't pulling cleaner or rinse, so the wash cycle fails.",
+      action:
+        "Air-locked or worn ConvoClean pump, hardened/kinked supply tubing, or an empty chemical drum. Pump and tubing service is a common, economical same-day fix.",
+    },
+    {
+      code: "Weak steam / poor browning (boilerless models)",
+      meaning:
+        "Spray-injection steam is under-performing — water distribution or sensor trouble.",
+      action:
+        "We clear the spray nozzles and water-distribution path and verify the cavity sensors that govern injection timing.",
+    },
+    {
+      code: "Core probe error / implausible reading",
+      meaning:
+        "The core temperature probe reads open, shorted or implausible.",
+      action:
+        "Damaged probe or corroded connector — test and replace, then verify against a reference thermometer.",
+    },
+    {
+      code: "Door / gasket fault, steam past the seal",
+      meaning:
+        "The door isn't sealing — gasket compression set, latch or hinge wear (including roll-in door mechanisms).",
+      action:
+        "Gasket and latch service restores the seal; roll-in door units get hinge and sealing-frame attention.",
+    },
+    {
+      code: "Drain / overtemp / water-under-unit fault",
+      meaning:
+        "Condensate or wash water isn't draining, or a cavity overtemp safety tripped.",
+      action:
+        "We clear the drain, service the drain valve/pump, and trace overtemp trips to airflow, sensor or element causes.",
+    },
+  ],
+  codesNote:
+    "Convotherm error messaging is plain-language on maxx/C4; legacy OES/OGS panels report the same safety events with LED indications — our techs read both.",
+  symptomTable: [
+    {
+      symptom: "Steam side weak, steam programs underperforming",
+      cause: "Boiler scale or failed generator element (boiler models)",
+      cost: "$300–$1,100",
+      response: "Same-day",
+    },
+    {
+      symptom: "ConvoClean cycle fails / streaky cavity",
+      cause: "Clean-system pump or supply-tubing fault",
+      cost: "$220–$480",
+      response: "Same-day",
+    },
+    {
+      symptom: "Uneven browning on a boilerless unit",
+      cause: "Spray-nozzle scale or water-distribution fault",
+      cost: "$200–$520",
+      response: "Same-day",
+    },
+    {
+      symptom: "Steam leaking from the door / long cooks",
+      cause: "Door gasket compression set or latch wear",
+      cost: "$180–$340",
+      response: "Same-day",
+    },
+    {
+      symptom: "Core probe faulted or reading wrong",
+      cause: "Damaged probe or corroded connector",
+      cost: "$180–$300",
+      response: "Same-day",
+    },
+    {
+      symptom: "Water pooling under the unit",
+      cause: "Clogged drain, drain valve or drain pump",
+      cost: "$150–$420",
+      response: "Same-day",
+    },
+    {
+      symptom: "Boiler dead on a 10+ year unit",
+      cause: "End-of-life steam generator — repair-vs-replace math",
+      cost: "$2,500–$4,500",
+      response: "24–48h",
+    },
+  ],
+  equipment: [
+    {
+      name: "Convotherm maxx & maxx pro",
+      detail:
+        "Current easyTouch platform, boiler and boilerless — generators, ConvoClean pumps, doors, probes and boards.",
+    },
+    {
+      name: "Convotherm C4 (easyTouch / easyDial)",
+      detail:
+        "The prior flagship across South Florida institutions — full controls, steam-side and clean-system service.",
+    },
+    {
+      name: "Roll-in & rack units",
+      detail:
+        "Large banquet and production combis with the disappearing door — hinge, sealing-frame and rack-system service.",
+    },
+    {
+      name: "ConvoClean automatic wash system",
+      detail:
+        "Chemical pumps, tubing, sensors and the cleaning programs that keep the cavity sanitary — the #2 Convotherm ticket here.",
+    },
+    {
+      name: "Steam generators & boilers",
+      detail:
+        "Descaling, elements, level probes and contactors, plus the water treatment that keeps a boiler unit alive in our water.",
+    },
+    {
+      name: "Legacy OES / OGS platforms",
+      detail:
+        "Dial-and-display machines still earning their keep — straightforward element, door and drain service.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Do you service Convotherm combi ovens same-day in South Florida?",
+      a: "Yes — Convotherm calls dispatch same-day across Miami-Dade, Broward and Palm Beach, with down combis in hotel, hospital and banquet kitchens prioritized as emergencies. The $89 commercial service call is waived when you approve the repair.",
+    },
+    {
+      q: "Are you a Convotherm or Welbilt authorized service agent?",
+      a: "No — Berne is an independent commercial service company, not affiliated with Convotherm or Welbilt. In-warranty machines should use the factory network first (it's free for you). Out of warranty, we service maxx, C4 and legacy OES/OGS combis daily, with the common wear parts on the truck.",
+    },
+    {
+      q: "My Convotherm ConvoClean wash isn't working — what's wrong?",
+      a: "Usually the chemical pump or its supply tubing: the ConvoClean pump air-locks or wears, the tubing hardens or kinks, or the chemical drum ran dry. It's a common, economical same-day repair ($220-$480). We service the pump and tubing and verify a full clean cycle before we leave.",
+    },
+    {
+      q: "Does South Florida water hurt a Convotherm?",
+      a: "On boiler (steam-generator) models, absolutely — our hard water scales the boiler and elements the same way it does any combi. Boilerless models scale the spray nozzles and water-distribution path instead. Either way, water treatment plus a descale schedule is the difference between a long-lived machine and a recurring repair; we size treatment on the visit.",
+    },
+    {
+      q: "What does Convotherm combi repair typically cost?",
+      a: "Most tickets land $180-$520 — door gaskets, clean-system pumps, probes, drain service and boilerless steam faults. Boiler-side scale or element work runs higher ($300-$1,100), and a failed steam generator on an aging unit is a repair-vs-replace conversation. The $89 service call covers the diagnosis and is free with an approved repair.",
+    },
+    {
+      q: "Repair or replace a 10-year-old Convotherm?",
+      a: "Doors, probes, clean-system pumps, drains and boards are economical repairs at almost any age — these machines are built to last. A failed steam generator or boiler past year 10 is where we run the honest math and quote both paths so the call is yours.",
+    },
+  ],
+  related: [
+    { label: "Combi oven repair (all brands)", href: "/services/combi-oven-repair" },
+    { label: "Commercial oven repair", href: "/services/commercial-oven-repair" },
+    { label: "Rational vs Convotherm — honest comparison", href: "/compare/rational-vs-convotherm" },
+    { label: "Combi oven not steaming — troubleshooting", href: "/blog/combi-oven-not-steaming-troubleshooting" },
+    { label: "Rational combi oven repair", href: "/services/rational-combi-oven-repair" },
+  ],
+  requestTopic: "convotherm-combi-oven",
+  datePublished: "2026-06-15",
+}
+
+// ---------------------------------------------------------------------------
+// 11. Unox combi oven repair — combi-cluster spoke (2026-06-15)
+// ---------------------------------------------------------------------------
+
+const UNOX_COMBI: BrandService = {
+  slug: "unox-combi-oven-repair",
+  brand: "Unox",
+  title: "Unox Combi Oven Repair",
+  shortTitle: "Unox Combi Oven",
+  metaTitle: "Unox Combi Oven Repair Miami — 24/7",
+  metaDescription:
+    "Unox CHEFTOP MIND.Maps & BAKERTOP combi ovens repaired same-day across South Florida — steam, DET.Clean, boards, doors. EPA 608 techs, 4.79★/871. $89 call.",
+  heroDescription:
+    "Same-day Unox combi oven service across Miami-Dade, Broward and Palm Beach — CHEFTOP MIND.Maps, BAKERTOP MIND.Maps, and the compact CHEFTOP/LineMiss platforms. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
+  intro: [
+    "Unox is the value combi that exploded across South Florida fast-casual, bakeries, ghost kitchens, cafés and supermarket programs — Italian-built, feature-dense, and a lot of oven for the money. The flip side of that value is that Unox machines are electronics-forward and water-sensitive: the boilerless spray-steam system, the DET.Clean automatic wash, and the sensor-driven MIND.Maps control all depend on clean water and clean nozzles, and our hard water goes after all three. The most common Unox calls we run are weak-steam / scale issues and DET.Clean wash faults — rarely a dead machine, usually a blind or scaled one.",
+    "Because Unox is boilerless (it injects water onto a hot surface rather than running a steam boiler), the failure map is different from a Rational or a boiler Convotherm: scaled or clogged steam-injection nozzles, water-distribution and inlet-valve faults, humidity/lambda-sensor drift, and clean-system pump and supply problems dominate. The MIND.Maps controller surfaces faults as on-screen messages, and our techs read them rather than swapping parts at random. Trucks carry the common Unox wear items — door gaskets, inlet and water-distribution components, clean-system parts, fan motors and boards.",
+    "Berne is an independent commercial service company — not a Unox dealer or authorized agent. In-warranty units should use Unox's own service network first; out of warranty, we service CHEFTOP and BAKERTOP combis same-day across South Florida with honest repair-vs-replace advice, which matters more on a value platform where a major board failure can approach the cost of a new compact unit.",
+  ],
+  codesHeading: "Unox fault messages & failure points we diagnose daily",
+  codesIntro:
+    "CHEFTOP and BAKERTOP MIND.Maps machines surface faults as on-screen service messages; the compact CHEFTOP/LineMiss line reports the same failures with simpler indications. Here's what the common ones mean in South Florida conditions.",
+  codes: [
+    {
+      code: "Weak steam / poor humidity (boilerless)",
+      meaning:
+        "Spray-injection steam is under-performing — scaled nozzles, water-distribution restriction, or a humidity/lambda sensor reading wrong.",
+      action:
+        "We descale and clear the injection nozzles and water path, then verify the humidity sensor that governs steam timing. The #1 Unox call here.",
+    },
+    {
+      code: "Water inlet / fill fault",
+      meaning:
+        "The oven isn't getting water to the steam-injection system within its window.",
+      action:
+        "Clogged inlet valve, scaled solenoid, supply-pressure or filter problem — we trace the water path from filter to injection point.",
+    },
+    {
+      code: "DET.Clean wash fault / no detergent pickup",
+      meaning:
+        "The automatic clean cycle isn't pulling detergent or rinse, so the wash fails.",
+      action:
+        "Clean-system pump, supply tubing, or an empty cartridge/drum. Pump and tubing service is an economical same-day fix.",
+    },
+    {
+      code: "Core probe error / implausible reading",
+      meaning:
+        "The multi-point core probe reads open, shorted or implausible.",
+      action:
+        "Damaged probe or corroded connector — test and replace, verify against a reference.",
+    },
+    {
+      code: "Door / gasket fault, steam past the seal",
+      meaning:
+        "The door isn't sealing — gasket compression set or latch wear.",
+      action:
+        "Gasket and latch service restores the seal and the cook-time economics.",
+    },
+    {
+      code: "Fan / motor fault, uneven cooking",
+      meaning:
+        "The convection fan or its drive is faulting, so heat and steam distribute unevenly.",
+      action:
+        "We check the fan motor, reversing logic and bearings; salt air shortens motor life on coastal installs.",
+    },
+    {
+      code: "Board / power fault, unit dead or rebooting",
+      meaning:
+        "The control or power board is faulting — no display, random reboots, or no heat.",
+      action:
+        "We test inputs and power before condemning a board; brownouts and shared circuits cause false board faults in older buildings.",
+    },
+  ],
+  codesNote:
+    "Unox is fully boilerless, so there is no steam-generator/boiler to scale — but the spray-injection nozzles and water path scale in its place, which is where most Unox steam complaints actually live.",
+  symptomTable: [
+    {
+      symptom: "Weak or no steam, food not finishing on steam programs",
+      cause: "Scaled injection nozzles or humidity-sensor drift",
+      cost: "$200–$520",
+      response: "Same-day",
+    },
+    {
+      symptom: "No water to the steam system",
+      cause: "Clogged inlet valve, scaled solenoid or filter",
+      cost: "$150–$380",
+      response: "Same-day",
+    },
+    {
+      symptom: "DET.Clean wash cycle fails / streaky cavity",
+      cause: "Clean-system pump or supply tubing fault",
+      cost: "$200–$460",
+      response: "Same-day",
+    },
+    {
+      symptom: "Uneven cooking front-to-back",
+      cause: "Fan motor or reversing-logic fault",
+      cost: "$220–$560",
+      response: "Same-day",
+    },
+    {
+      symptom: "Steam leaking from the door",
+      cause: "Door gasket compression set or latch wear",
+      cost: "$160–$320",
+      response: "Same-day",
+    },
+    {
+      symptom: "Core probe faulted or reading wrong",
+      cause: "Damaged probe or corroded connector",
+      cost: "$160–$280",
+      response: "Same-day",
+    },
+    {
+      symptom: "Unit dead or rebooting on a 7+ year oven",
+      cause: "Control/power board failure — repair-vs-replace math",
+      cost: "$600–$1,800",
+      response: "24–48h",
+    },
+  ],
+  equipment: [
+    {
+      name: "CHEFTOP MIND.Maps (PLUS / ONE)",
+      detail:
+        "The savory combi workhorse — steam-injection, DET.Clean, probes, doors and boards across full and compact sizes.",
+    },
+    {
+      name: "BAKERTOP MIND.Maps",
+      detail:
+        "The bakery-spec combi/convection platform — humidity control, fan systems and clean-system service for pastry and bread programs.",
+    },
+    {
+      name: "Compact CHEFTOP / LineMiss",
+      detail:
+        "Countertop and half-size ovens in cafés, ghost kitchens and c-stores — water-path, fan and board service.",
+    },
+    {
+      name: "Steam-injection & water systems",
+      detail:
+        "Nozzles, inlet valves, solenoids and water distribution — descaling and the filtration sizing that keeps injection clean.",
+    },
+    {
+      name: "DET.Clean automatic wash",
+      detail:
+        "Detergent pumps, tubing, cartridges and sensors — the #2 Unox ticket, kept inspection-ready.",
+    },
+    {
+      name: "Fan, door & control systems",
+      detail:
+        "Convection fan motors, door gaskets and latches, MIND.Maps boards and probes — common wear parts on the truck.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Do you repair Unox combi ovens same-day in South Florida?",
+      a: "Yes — Unox calls dispatch same-day across Miami-Dade, Broward and Palm Beach, with down ovens in fast-casual, bakery and ghost-kitchen operations prioritized. The $89 commercial service call is free when you approve the repair.",
+    },
+    {
+      q: "Are you a Unox authorized service center?",
+      a: "No — Berne is an independent commercial service company, not affiliated with Unox. In-warranty machines should go through Unox's own network first (it's free for you). Out of warranty, our techs service CHEFTOP and BAKERTOP combis daily, with the common wear parts on the truck.",
+    },
+    {
+      q: "My Unox makes weak steam — is it broken?",
+      a: "Usually not — Unox is boilerless, so 'weak steam' almost always means scaled or clogged steam-injection nozzles, a restricted water path, or a humidity sensor reading wrong, not a failed steam generator (there isn't one). We descale and clear the injection system and verify the humidity sensor; it's typically a $200-$520 same-day fix.",
+    },
+    {
+      q: "Does Unox need descaling in South Florida?",
+      a: "Yes — even though there's no steam boiler, our hard water scales the spray-injection nozzles and water-distribution path, which is exactly where most Unox steam complaints originate. Filtration matched to your water plus a regular DET.Clean and descale routine keeps the steam side performing; we size the filtration on the visit.",
+    },
+    {
+      q: "What does Unox combi repair usually cost?",
+      a: "Most tickets land $160-$560 — steam-injection descaling, water-inlet faults, clean-system pumps, door gaskets, probes and fan motors. A control or power board on an older oven runs higher; on a value platform that's where we run the honest repair-vs-replace math, since a major board can approach the cost of a new compact unit.",
+    },
+    {
+      q: "Repair or replace an aging Unox?",
+      a: "Steam-injection, water-system, door, probe and fan repairs are economical at almost any age. A major board failure on an older compact unit is the one case where replacement sometimes wins — we quote both paths with real numbers so the decision is yours, not ours.",
+    },
+  ],
+  related: [
+    { label: "Combi oven repair (all brands)", href: "/services/combi-oven-repair" },
+    { label: "Commercial oven repair", href: "/services/commercial-oven-repair" },
+    { label: "Rational vs Unox — honest comparison", href: "/compare/rational-vs-unox" },
+    { label: "Combi oven not steaming — troubleshooting", href: "/blog/combi-oven-not-steaming-troubleshooting" },
+    { label: "Alto-Shaam combi oven repair", href: "/services/alto-shaam-combi-oven-repair" },
+  ],
+  requestTopic: "unox-combi-oven",
+  datePublished: "2026-06-15",
+}
+
+// ---------------------------------------------------------------------------
+// 12. Alto-Shaam combi oven repair — combi-cluster spoke (2026-06-15)
+// ---------------------------------------------------------------------------
+
+const ALTO_SHAAM_COMBI: BrandService = {
+  slug: "alto-shaam-combi-oven-repair",
+  brand: "Alto-Shaam",
+  title: "Alto-Shaam Combi Oven Repair",
+  shortTitle: "Alto-Shaam Combi Oven",
+  metaTitle: "Alto-Shaam Combi Oven Repair Miami — 24/7",
+  metaDescription:
+    "Alto-Shaam Combitherm & CT PROformance combi ovens repaired same-day across South Florida — boilerfree steam, doors, probes, boards. 4.79★/871. $89 call.",
+  heroDescription:
+    "Same-day Alto-Shaam combi oven service across Miami-Dade, Broward and Palm Beach — Combitherm CT PROformance, CT Express, and legacy Combitherm platforms, including Halo Heat holding integration. 24/7 emergency dispatch, $89 service call — free with approved repair.",
+  intro: [
+    "Alto-Shaam is the American institutional combi — built in Menomonee Falls, Wisconsin, and the brand a lot of South Florida hospitals, schools, country clubs, supermarkets and chain kitchens standardized on, often paired with Alto-Shaam's Halo Heat holding cabinets on the same line. The Combitherm's claim is boilerfree (boilerless) steam, which changes the service math in our favor: there's no steam boiler to scale into a $4,000 replacement. But our hard water still goes after the water-injection system, and the automatic clean system, doors, probes and boards fail on the same schedule as any combi.",
+    "Because the Combitherm makes steam by injection rather than a boiler, the common calls are scaled or clogged steam-injection and water-distribution components, inlet-valve and water-system faults, door gaskets and latches, core-probe damage, drain issues and the occasional board or fan-motor failure. The CT PROformance and CT Express controls surface faults as service messages, and our techs read them on arrival. We carry the high-frequency Alto-Shaam wear parts and service the Halo Heat holding equipment on the same dispatch, so a kitchen running an Alto-Shaam cook-and-hold line has one vendor for the whole line.",
+    "Berne is an independent commercial service company — no Alto-Shaam affiliation, no dealer quota. In-warranty Combitherm units should use the factory network first; out of warranty, our 18 W-2 technicians service Combitherm combis same-day across South Florida with honest repair-vs-replace numbers.",
+  ],
+  codesHeading: "Alto-Shaam Combitherm fault messages & failure points",
+  codesIntro:
+    "CT PROformance and CT Express machines report faults as service messages on the control; legacy Combitherm units report the same failures with simpler indications. Here's what the common ones mean in South Florida conditions.",
+  codes: [
+    {
+      code: "Weak steam / poor humidity (boilerfree)",
+      meaning:
+        "Injection steam is under-performing — scaled water-injection components, restricted water distribution, or a sensor reading wrong.",
+      action:
+        "We descale and clear the injection and water-distribution path and verify the controlling sensor. No boiler to replace — this is the boilerfree advantage.",
+    },
+    {
+      code: "Water inlet / fill fault",
+      meaning:
+        "The oven isn't getting water to the injection system within its window.",
+      action:
+        "Clogged inlet valve, scaled solenoid, supply-pressure or filter problem — we trace the water path end to end.",
+    },
+    {
+      code: "Automatic clean fault / no chemical pickup",
+      meaning:
+        "The automatic clean cycle isn't pulling cleaner or rinse, so the wash fails.",
+      action:
+        "Clean-system pump, supply tubing, or an empty cleaner supply. Pump and tubing service is an economical same-day fix.",
+    },
+    {
+      code: "Core probe error / implausible reading",
+      meaning:
+        "The core temperature probe reads open, shorted or implausible.",
+      action:
+        "Damaged probe or corroded connector — test and replace, verify against a reference thermometer.",
+    },
+    {
+      code: "Door / gasket fault, steam past the seal",
+      meaning:
+        "The door isn't sealing — gasket compression set, latch or hinge wear.",
+      action:
+        "Gasket, latch and hinge service restores the seal and the cook-time economics.",
+    },
+    {
+      code: "Drain / water-under-unit fault",
+      meaning:
+        "Condensate or wash water isn't draining.",
+      action:
+        "We clear the drain path and service the drain valve/pump before a wet floor becomes a corrosion problem.",
+    },
+    {
+      code: "Fan / heat fault, uneven cooking",
+      meaning:
+        "The convection fan or heat source is faulting, so cooking is uneven.",
+      action:
+        "Fan motor, element/burner and airflow diagnosis; salt air shortens fan-motor life on coastal installs.",
+    },
+  ],
+  codesNote:
+    "Combitherm is boilerfree, so there is no steam boiler to scale into a major replacement — the water-injection system scales in its place, which is where most Alto-Shaam steam complaints live.",
+  symptomTable: [
+    {
+      symptom: "Weak or no steam on steam programs",
+      cause: "Scaled water-injection components or sensor drift",
+      cost: "$200–$520",
+      response: "Same-day",
+    },
+    {
+      symptom: "No water reaching the steam system",
+      cause: "Clogged inlet valve, scaled solenoid or filter",
+      cost: "$150–$380",
+      response: "Same-day",
+    },
+    {
+      symptom: "Automatic clean cycle fails / streaky cavity",
+      cause: "Clean-system pump or supply-tubing fault",
+      cost: "$200–$460",
+      response: "Same-day",
+    },
+    {
+      symptom: "Steam leaking from the door / long cooks",
+      cause: "Door gasket compression set or latch wear",
+      cost: "$160–$340",
+      response: "Same-day",
+    },
+    {
+      symptom: "Core probe faulted or reading wrong",
+      cause: "Damaged probe or corroded connector",
+      cost: "$160–$300",
+      response: "Same-day",
+    },
+    {
+      symptom: "Uneven cooking front-to-back",
+      cause: "Convection fan motor or heat-source fault",
+      cost: "$220–$580",
+      response: "Same-day",
+    },
+    {
+      symptom: "Board fault on a 10+ year Combitherm",
+      cause: "Control board failure — repair-vs-replace math",
+      cost: "$700–$1,900",
+      response: "24–48h",
+    },
+  ],
+  equipment: [
+    {
+      name: "Combitherm CT PROformance",
+      detail:
+        "The current flagship — boilerfree steam, automatic clean, probes, doors and boards across full and split sizes.",
+    },
+    {
+      name: "Combitherm CT Express",
+      detail:
+        "The compact ventless combi in cafés, c-stores and small kitchens — water-system, door and board service.",
+    },
+    {
+      name: "Legacy Combitherm platforms",
+      detail:
+        "Earlier Combitherm generations still running across South Florida institutions — element, door, drain and control service.",
+    },
+    {
+      name: "Boilerfree steam & water systems",
+      detail:
+        "Water-injection components, inlet valves, solenoids and distribution — descaling and filtration sizing for our water.",
+    },
+    {
+      name: "Automatic clean systems",
+      detail:
+        "Clean-system pumps, tubing and supplies kept inspection-ready, with documentation for the kitchen log.",
+    },
+    {
+      name: "Halo Heat holding integration",
+      detail:
+        "We service the Alto-Shaam cook-and-hold line together — combi plus Halo Heat holding cabinets, one vendor, one dispatch.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Do you repair Alto-Shaam combi ovens same-day in South Florida?",
+      a: "Yes — Alto-Shaam Combitherm calls dispatch same-day across Miami-Dade, Broward and Palm Beach, with down ovens in hospital, school and club kitchens prioritized as emergencies. The $89 commercial service call is free when you approve the repair.",
+    },
+    {
+      q: "Are you an Alto-Shaam authorized service agent?",
+      a: "No — Berne is an independent commercial service company, not affiliated with Alto-Shaam. In-warranty Combitherm units should use the factory network first (it's free for you). Out of warranty, our techs service Combitherm combis daily, and we can cover your Halo Heat holding equipment on the same visit.",
+    },
+    {
+      q: "My Alto-Shaam Combitherm makes weak steam — what's the cause?",
+      a: "Because the Combitherm is boilerfree, weak steam almost always means scaled or clogged water-injection components, a restricted water path, or a sensor reading wrong — not a failed steam boiler (there isn't one). We descale and clear the injection system and verify the controlling sensor; it's typically a $200-$520 same-day fix, with no $4,000 boiler in the picture.",
+    },
+    {
+      q: "Does a boilerfree combi still need water treatment here?",
+      a: "Yes — boilerfree means there's no steam boiler to scale, but our hard water still scales the water-injection nozzles and distribution path, which is where most Alto-Shaam steam complaints originate. Filtration matched to your water plus a regular clean-and-descale routine keeps the steam side performing; we size treatment on the visit.",
+    },
+    {
+      q: "What does Alto-Shaam combi repair usually cost?",
+      a: "Most tickets land $160-$580 — water-injection descaling, inlet faults, clean-system pumps, door gaskets, probes and fan motors. A control board on an older unit runs higher and becomes a repair-vs-replace conversation. The $89 service call covers the diagnosis and is free with an approved repair.",
+    },
+    {
+      q: "Can you service our Combitherm and Halo Heat line together?",
+      a: "Yes — that's a common Alto-Shaam install, and we service the combi oven and the Halo Heat holding cabinets on the same dispatch. One vendor for the whole cook-and-hold line keeps your documentation and your service relationship simple.",
+    },
+  ],
+  related: [
+    { label: "Combi oven repair (all brands)", href: "/services/combi-oven-repair" },
+    { label: "Commercial oven repair", href: "/services/commercial-oven-repair" },
+    { label: "Rational vs Alto-Shaam — honest comparison", href: "/compare/rational-vs-alto-shaam" },
+    { label: "Combi oven not steaming — troubleshooting", href: "/blog/combi-oven-not-steaming-troubleshooting" },
+    { label: "Unox combi oven repair", href: "/services/unox-combi-oven-repair" },
+  ],
+  requestTopic: "alto-shaam-combi-oven",
+  datePublished: "2026-06-15",
+}
+
+// ---------------------------------------------------------------------------
 // Registry + helpers
 // ---------------------------------------------------------------------------
 
@@ -1547,6 +2294,10 @@ export const BRAND_SERVICES: BrandService[] = [
   LA_MARZOCCO,
   VULCAN,
   TURBO_AIR,
+  RATIONAL_COMBI,
+  CONVOTHERM_COMBI,
+  UNOX_COMBI,
+  ALTO_SHAAM_COMBI,
 ]
 
 export function getBrandService(slug: string): BrandService | undefined {
@@ -1577,7 +2328,22 @@ const BRAND_SERVICES_BY_HUB: Record<string, string[]> = {
     "true-refrigeration-repair",
     "turbo-air-refrigeration-repair",
   ],
-  "commercial-oven-repair": ["vulcan-oven-repair"],
+  "commercial-oven-repair": [
+    "vulcan-oven-repair",
+    "rational-combi-oven-repair",
+    "convotherm-combi-oven-repair",
+    "unox-combi-oven-repair",
+    "alto-shaam-combi-oven-repair",
+  ],
+  // Combi-oven pillar hub (static route, not a services.ts entry) renders its
+  // own brand-spoke grid — but keep the hub key here so any shared lookup
+  // resolves the four combi brand pages.
+  "combi-oven-repair": [
+    "rational-combi-oven-repair",
+    "convotherm-combi-oven-repair",
+    "unox-combi-oven-repair",
+    "alto-shaam-combi-oven-repair",
+  ],
   "commercial-range-repair": ["vulcan-oven-repair"],
   "espresso-machine-repair": ["la-marzocco-espresso-repair"],
   "coffee-machine-repair": ["la-marzocco-espresso-repair"],
@@ -1611,6 +2377,38 @@ const BRAND_SERVICES_BY_COMPARISON: Record<string, string[]> = {
     "true-refrigeration-repair",
     "turbo-air-refrigeration-repair",
   ],
+  // Combi cluster — the comparison pages are informational; readers who own
+  // one of these brands and need a repair right now get the brand-spoke pill.
+  "rational-vs-combi": [
+    "rational-combi-oven-repair",
+    "convotherm-combi-oven-repair",
+    "unox-combi-oven-repair",
+    "alto-shaam-combi-oven-repair",
+  ],
+  "rational-vs-unox": [
+    "rational-combi-oven-repair",
+    "unox-combi-oven-repair",
+  ],
+  "rational-vs-convotherm": [
+    "rational-combi-oven-repair",
+    "convotherm-combi-oven-repair",
+  ],
+  "rational-vs-alto-shaam": [
+    "rational-combi-oven-repair",
+    "alto-shaam-combi-oven-repair",
+  ],
+  "unox-vs-convotherm": [
+    "unox-combi-oven-repair",
+    "convotherm-combi-oven-repair",
+  ],
+  "alto-shaam-vs-convotherm": [
+    "alto-shaam-combi-oven-repair",
+    "convotherm-combi-oven-repair",
+  ],
+  "unox-vs-alto-shaam": [
+    "unox-combi-oven-repair",
+    "alto-shaam-combi-oven-repair",
+  ],
 }
 
 export function getBrandServicesForComparison(
@@ -1630,6 +2428,7 @@ const BRAND_SERVICE_BY_BRAND_PROFILE: Record<string, string> = {
   true: "true-refrigeration-repair",
   hobart: "hobart-dishwasher-repair",
   vulcan: "vulcan-oven-repair",
+  rational: "rational-combi-oven-repair",
 }
 
 export function getBrandServiceForBrandProfile(

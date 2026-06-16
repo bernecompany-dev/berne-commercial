@@ -505,6 +505,22 @@ export default async function CompareDetailPage({ params }: Params) {
               Fault codes, common failure patterns and real South Florida
               repair costs, brand by brand.
             </p>
+            {/* Combi cluster: route the informational comparison reader up to
+                the commercial combi-oven repair hub (the commercial-intent
+                page) when this matchup is part of that cluster. */}
+            {brandRepairPages.some((bs) =>
+              bs.slug.endsWith("-combi-oven-repair"),
+            ) ? (
+              <p className="mt-3 text-sm">
+                <Link
+                  href="/services/combi-oven-repair"
+                  className="font-medium text-primary hover:underline"
+                >
+                  Need a tech now? Commercial combi oven repair, same-day across
+                  South Florida →
+                </Link>
+              </p>
+            ) : null}
             <div className="mt-4 flex flex-wrap gap-2">
               {brandRepairPages.map((bs) => (
                 <Link

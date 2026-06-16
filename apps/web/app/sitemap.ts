@@ -106,6 +106,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" as const,
     priority: 0.9,
   })
+  // Combi-oven pillar hub (combi money cluster 2026-06-15) — static route,
+  // NOT a services.ts entry (would spawn ~70 phantom combos). Same machinery
+  // as medical-lab; the four combi brand spokes ride in via BRAND_SERVICES.
+  serviceDetails.push({
+    url: `${base}/services/combi-oven-repair`,
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  })
 
   // Brand-specific service pages (Content_Plan 2026-06-10) — same static
   // EN-only machinery as medical-lab. Honest lastmod from the data layer.
