@@ -211,6 +211,74 @@ export default async function CompareDetailPage({ params }: Params) {
         </div>
       </section>
 
+      {/* At-a-glance comparison table — the format Google rewards for "X vs Y"
+          intent and the first thing operators skim. Optional per comparison. */}
+      {c.specTable ? (
+        <section className="border-b border-border/60 bg-background py-16">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="text-xs font-medium uppercase tracking-wider text-primary">
+              At a glance
+            </div>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+              {heroTitle} — side by side.
+            </h2>
+            <p className="mt-3 text-sm text-muted-foreground">
+              The quick comparison. Field-ticket detail and our verdict follow
+              below.
+            </p>
+            <div className="mt-6 overflow-x-auto rounded-2xl border border-border">
+              <table className="w-full border-collapse text-sm">
+                <caption className="sr-only">
+                  {heroTitle} comparison table
+                </caption>
+                <thead>
+                  <tr className="bg-accent/40">
+                    <th
+                      scope="col"
+                      className="border-b border-border px-4 py-3 text-left font-semibold"
+                    >
+                      Spec
+                    </th>
+                    {c.specTable.columns.map((col) => (
+                      <th
+                        key={col}
+                        scope="col"
+                        className="border-b border-l border-border px-4 py-3 text-left font-semibold text-primary"
+                      >
+                        {col}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {c.specTable.rows.map((row, ri) => (
+                    <tr
+                      key={row.label}
+                      className={ri % 2 ? "bg-accent/20" : "bg-background"}
+                    >
+                      <th
+                        scope="row"
+                        className="border-b border-border px-4 py-3 text-left font-medium text-foreground/90"
+                      >
+                        {row.label}
+                      </th>
+                      {row.cells.map((cell, ci) => (
+                        <td
+                          key={ci}
+                          className="border-b border-l border-border px-4 py-3 align-top text-muted-foreground"
+                        >
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       {/* Intro */}
       <section className="border-b border-border/60 bg-accent/30 py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">

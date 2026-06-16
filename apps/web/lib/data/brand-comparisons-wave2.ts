@@ -25,6 +25,7 @@ import type { ComparisonProfile } from "./brand-comparisons"
 const RATIONAL_VS_UNOX: ComparisonProfile = {
   slug: "rational-vs-unox",
   datePublished: "2026-06-10",
+  dateModified: "2026-06-15",
   related: [
     "rational-vs-combi",
     "rational-vs-convotherm",
@@ -153,6 +154,28 @@ const RATIONAL_VS_UNOX: ComparisonProfile = {
         "Out-of-warranty Unox service averages $280-$520 on common tickets; major components land $900-$2,200. Parts arrive 3-5 days through US distribution — adequate, not Rational-fast. Annual service contract through Berne runs $1,100-$1,600 per oven. Total 15-year cost of ownership on a 6-pan: $32,000-$44,000 including purchase.",
     },
   ],
+  specTable: {
+    columns: ["Rational iCombi Pro", "Unox CHEFTOP MIND.Maps"],
+    rows: [
+      { label: "Origin", cells: ["Germany", "Italy"] },
+      { label: "Installed price (6-pan)", cells: ["$19k–$24k", "$9.5k–$14.5k"] },
+      {
+        label: "Cooking precision",
+        cells: ["Best in class (iCookingSuite)", "Good (MIND.Maps draw-the-curve)"],
+      },
+      { label: "Interface", cells: ["Best operator UX", "Good, intuitive"] },
+      {
+        label: "Cloud / fleet",
+        cells: ["ConnectedCooking (mature)", "Data Driven Cooking"],
+      },
+      { label: "Footprint", cells: ["6-half minimum", "Slim/compact lines fit tight kitchens"] },
+      { label: "Common-ticket service", cells: ["$380–$680", "$280–$520"] },
+      { label: "Annual contract", cells: ["$1,800–$2,400", "$1,100–$1,600"] },
+      { label: "Parts speed (S. FL)", cells: ["24–72h", "3–5 days"] },
+      { label: "15-yr total cost", cells: ["$52k–$65k", "$32k–$44k"] },
+      { label: "Best for", cells: ["Programmed-cooking volume kitchens", "Café, bakery, ghost kitchen, 2nd combi"] },
+    ],
+  },
   buyerProfiles: [
     {
       headline: "Fine-dining or chef-driven kitchen running programmed cooking at volume",
@@ -223,6 +246,7 @@ const RATIONAL_VS_UNOX: ComparisonProfile = {
 const RATIONAL_VS_CONVOTHERM: ComparisonProfile = {
   slug: "rational-vs-convotherm",
   datePublished: "2026-06-10",
+  dateModified: "2026-06-15",
   related: [
     "rational-vs-combi",
     "rational-vs-unox",
@@ -351,6 +375,27 @@ const RATIONAL_VS_CONVOTHERM: ComparisonProfile = {
         "Out-of-warranty service averages $360-$620 on common tickets; major components $1,500-$3,000. Parts flow through Welbilt's network — 24-72 hours in South Florida, same warehouses that stock Manitowoc and Frymaster. Annual Berne service contract $1,500-$2,000 per oven. 15-year total cost of ownership: $46,000-$58,000.",
     },
   ],
+  specTable: {
+    columns: ["Rational iCombi Pro", "Convotherm 4 / maxx pro"],
+    rows: [
+      { label: "Origin", cells: ["Germany (Landsberg)", "Germany (Eglfing, Welbilt)"] },
+      { label: "Installed price (6-half)", cells: ["$19k–$24k", "$14k–$18k"] },
+      { label: "Hardware build", cells: ["Reference standard", "Near-parity"] },
+      {
+        label: "Software / algorithms",
+        cells: ["iCookingSuite (adaptive)", "easyTouch (static programs)"],
+      },
+      { label: "Cloud / fleet", cells: ["ConnectedCooking (mature)", "Welbilt KitchenConnect"] },
+      {
+        label: "Signature feature",
+        cells: ["iProductionManager mixed loading", "Disappearing Door (4 series)"],
+      },
+      { label: "Vendor consolidation", cells: ["Rational-only", "Welbilt (ice, fryers, ranges)"] },
+      { label: "Common-ticket service", cells: ["$380–$680", "$360–$620"] },
+      { label: "15-yr total cost", cells: ["$52k–$65k", "$46k–$58k"] },
+      { label: "Best for", cells: ["Chef-driven, multi-unit fleets", "Banquet, institutional, Welbilt shops"] },
+    ],
+  },
   buyerProfiles: [
     {
       headline: "Hotel banquet kitchen (200+ covers per service)",
@@ -421,6 +466,7 @@ const RATIONAL_VS_CONVOTHERM: ComparisonProfile = {
 const RATIONAL_VS_ALTO_SHAAM: ComparisonProfile = {
   slug: "rational-vs-alto-shaam",
   datePublished: "2026-06-10",
+  dateModified: "2026-06-15",
   related: [
     "rational-vs-combi",
     "rational-vs-unox",
@@ -549,6 +595,24 @@ const RATIONAL_VS_ALTO_SHAAM: ComparisonProfile = {
         "Out-of-warranty service $340-$580 on common tickets; major components $1,400-$2,800. Parts 24-72 hours domestic. Annual Berne contract $1,400-$1,900. 15-year total cost of ownership: $42,000-$53,000.",
     },
   ],
+  specTable: {
+    columns: ["Rational iCombi Pro", "Alto-Shaam Combitherm CT"],
+    rows: [
+      { label: "Origin", cells: ["Germany", "USA (Wisconsin)"] },
+      { label: "Installed price (6-half)", cells: ["$19k–$24k", "$12.5k–$16k"] },
+      {
+        label: "Cooking software",
+        cells: ["iCookingSuite (adaptive)", "Programmed + Halo Heat evenness"],
+      },
+      { label: "Multi-rack evenness", cells: ["Excellent", "Excellent (Halo Heat cavity)"] },
+      { label: "Cloud / fleet", cells: ["ConnectedCooking", "ChefLinc"] },
+      { label: "Steam system", cells: ["Sealed generator", "Boilerless injection"] },
+      { label: "Parts supply", cells: ["German, 24–72h US", "Domestic (WI), 24–72h"] },
+      { label: "Common-ticket service", cells: ["$380–$680", "$340–$580"] },
+      { label: "15-yr total cost", cells: ["$52k–$65k", "$42k–$53k"] },
+      { label: "Best for", cells: ["Fine dining, precision, fleets", "Banquet, healthcare, corporate dining"] },
+    ],
+  },
   buyerProfiles: [
     {
       headline: "Hotel banquet or country club banquet kitchen",

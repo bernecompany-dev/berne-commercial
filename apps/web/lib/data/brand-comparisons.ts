@@ -18,6 +18,7 @@
  */
 
 import { WAVE2_COMPARISONS } from "./brand-comparisons-wave2"
+import { COMBI_WAVE3_COMPARISONS } from "./brand-comparisons-combi"
 
 export type ComparisonBrand = {
   name: string
@@ -58,6 +59,18 @@ export type ComparisonProfile = {
   tldr: string[]
   /** 2 or 3 brands being compared */
   brands: ComparisonBrand[]
+  /**
+   * Optional at-a-glance comparison table. `columns` are the brand/option
+   * labels (typically mirror `brands[].name` in the same order); each `rows`
+   * entry pairs a spec label with one cell value per column. Rendered as a
+   * scannable HTML <table> just under the TL;DR — the format Google rewards
+   * for "X vs Y" intent and the layout operators skim first. Omit on
+   * comparisons where a spec grid would be misleading (e.g. decision guides).
+   */
+  specTable?: {
+    columns: string[]
+    rows: { label: string; cells: string[] }[]
+  }
   /** Buyer profiles — who picks which */
   buyerProfiles: BuyerProfile[]
   /** Cost-of-ownership notes across the comparison */
@@ -695,7 +708,7 @@ const TRUE_VS_TRAULSEN: ComparisonProfile = {
 const RATIONAL_VS_COMBI: ComparisonProfile = {
   slug: "rational-vs-combi",
   datePublished: "2026-05-18",
-  dateModified: "2026-06-10",
+  dateModified: "2026-06-15",
   // Category hub for the combi cluster — pairwise children first.
   related: [
     "rational-vs-unox",
@@ -708,9 +721,9 @@ const RATIONAL_VS_COMBI: ComparisonProfile = {
   // added, keywords kept, 48ch + " · Berne" template suffix = 56 ≤ 60.
   metaTitle: "Rational vs Combi Ovens: A Repair Tech's Verdict",
   metaDescription:
-    "Rational vs Alto-Shaam, Convotherm, Unox, and Henny Penny combi ovens compared. Cooking quality, parts ecosystem, operator interface, real failure modes.",
+    "Rational vs Unox, Convotherm, Alto-Shaam, Cleveland & Henny Penny combi ovens, compared by South Florida combi techs. Price, cooking, parts, failure modes.",
   teaser:
-    "Rational is the German combi-oven brand that dominates premium commercial kitchens. But Alto-Shaam, Convotherm, Unox, Cleveland, and Henny Penny all make legitimate combi platforms at lower price points. The decision is not always Rational. Here is the honest comparison.",
+    "Rational is the German combi-oven brand that dominates premium commercial kitchens. But Alto-Shaam, Convotherm, Unox, Cleveland, and Henny Penny all make legitimate combi platforms at lower price points. The decision is not always Rational. Here is the honest comparison — with a head-to-head table and a deep dive on each brand.",
   intro:
     "Rational is the German combi-oven brand — the iCombi Pro and SelfCookingCenter platforms are the gold standard in premium commercial kitchens worldwide, and most chefs who have used a Rational will tell you it is the best combi oven on the market. But Rational is also the most expensive combi platform: a Rational iCombi Pro 6-half lands $19,000-$24,000 installed, while a comparable Alto-Shaam, Convotherm, Unox, or Henny Penny combi can land $12,000-$17,000 for similar capacity and feature set.\n\nFor operators who can afford Rational and will train staff to use it properly, Rational is genuinely the right answer. For operators who need a combi but cannot justify the Rational price premium — or who run higher-volume / lower-precision cooking — the alternatives are legitimate. Berne services Rational, Alto-Shaam, Convotherm, Henny Penny, Unox, Cleveland, and several other combi platforms across South Florida. The comparison below is built from real field tickets, not marketing copy.\n\nThe short version: Rational delivers the most precise cooking, the best operator interface, and the strongest parts ecosystem (in major markets). Alto-Shaam and Convotherm deliver 80-85% of the Rational experience at 65-75% of the price. Unox and Henny Penny are strong specialized choices. None of them is a bad combi.",
   tldr: [
@@ -879,6 +892,77 @@ const RATIONAL_VS_COMBI: ComparisonProfile = {
         "Convotherm parts arrive 24-72 hours through Welbilt's network. Out-of-warranty service averages $360-$620 on common tickets; major component lands $1,500-$3,000. Annual service contract through Berne runs $1,500-$2,000 per oven per year.",
     },
   ],
+  specTable: {
+    columns: ["Rational", "Alto-Shaam", "Convotherm", "Unox", "Henny Penny"],
+    rows: [
+      {
+        label: "Flagship combi",
+        cells: [
+          "iCombi Pro",
+          "Combitherm CT PROformance",
+          "maxx pro / 4 series",
+          "CHEFTOP MIND.Maps",
+          "FlexFusion / SmartCombi",
+        ],
+      },
+      {
+        label: "Origin",
+        cells: ["Germany", "USA (Wisconsin)", "Germany (Welbilt)", "Italy", "USA (Ohio)"],
+      },
+      {
+        label: "Installed price (6-pan)",
+        cells: [
+          "$19k–$24k",
+          "$12.5k–$16k",
+          "$14k–$18k",
+          "$9.5k–$14.5k",
+          "$15k–$20k",
+        ],
+      },
+      {
+        label: "Cooking precision",
+        cells: [
+          "Best in class (iCookingSuite)",
+          "Very good (Halo Heat)",
+          "Very good",
+          "Good (MIND.Maps)",
+          "Specialized (fried/QSR)",
+        ],
+      },
+      {
+        label: "Operator interface",
+        cells: ["Best UX", "Strong (ChefLinc)", "Average", "Good", "Purpose-built"],
+      },
+      {
+        label: "Cloud / fleet",
+        cells: [
+          "ConnectedCooking",
+          "ChefLinc",
+          "Limited",
+          "Data Driven Cooking",
+          "FlexLink",
+        ],
+      },
+      {
+        label: "Best-fit kitchen",
+        cells: [
+          "Fine dining, multi-unit",
+          "Institutional, banquet",
+          "Welbilt-shop hotels",
+          "Café, ghost kitchen, 2nd combi",
+          "QSR chicken / fried protein",
+        ],
+      },
+      {
+        label: "Common-ticket service",
+        cells: ["$380–$680", "$340–$580", "$360–$620", "$280–$520", "$340–$600"],
+      },
+      {
+        label: "Parts speed (S. FL)",
+        cells: ["24–72h", "24–72h", "24–72h", "3–5 days", "3–5 days"],
+      },
+    ],
+  },
   buyerProfiles: [
     {
       headline: "Fine-dining restaurant or precision-cooking kitchen",
@@ -917,8 +1001,16 @@ const RATIONAL_VS_COMBI: ComparisonProfile = {
     "We service all of these brands and the decision usually comes down to the chef's preference combined with the operator's budget. Rational is the default for premium kitchens with chefs who will use the platform's full capability. Alto-Shaam is the right answer for institutional and budget-conscious accounts. Convotherm is the right answer when the operator has an existing Welbilt vendor relationship (Manitowoc ice, Garland ranges, Frymaster fryers all under one service contract). Henny Penny and Unox are right answers for specific use cases. The wrong answer is to over-spec Rational for a kitchen that does not need its capability — the operator gets the same dish quality at lower cost on Combitherm.",
   faqs: [
     {
-      q: "Is Rational actually worth the price premium over Alto-Shaam?",
-      a: "For kitchens that will use the iCookingSuite algorithms and the ConnectedCooking platform fully, yes. For kitchens that will use the combi as a high-end steam oven, no — Alto-Shaam delivers 80-85% of the experience at 70% of the price.",
+      q: "Rational vs Unox — which should I buy?",
+      a: "Utilization decides it. Full programmed-cooking kitchens running the same dishes at volume buy Rational; café, bakery, ghost-kitchen, and second-combi installs get the same plates out of a Unox CHEFTOP MIND.Maps at 55-65% of the price. See our dedicated Rational vs Unox head-to-head for the full breakdown.",
+    },
+    {
+      q: "Rational vs Convotherm — how different are they?",
+      a: "Both are German-built and the cooking quality lands within 5-10% of each other. Convotherm trails on operator interface and cloud connectivity but costs less and consolidates onto a Welbilt service contract (Manitowoc ice, Garland ranges, Frymaster fryers). See our dedicated Rational vs Convotherm comparison.",
+    },
+    {
+      q: "Rational vs Alto-Shaam — is the premium worth it?",
+      a: "For kitchens that will use the iCookingSuite algorithms and ConnectedCooking fully, yes. For kitchens using the combi as a high-end steam oven, no — Alto-Shaam Combitherm delivers 80-85% of the experience at about 70% of the price, with strong Halo Heat consistency. See our dedicated Rational vs Alto-Shaam page.",
     },
     {
       q: "What about Unox? Is it a legitimate combi?",
@@ -957,6 +1049,7 @@ export const BRAND_COMPARISONS: ComparisonProfile[] = [
   TRUE_VS_TRAULSEN,
   RATIONAL_VS_COMBI,
   ...WAVE2_COMPARISONS,
+  ...COMBI_WAVE3_COMPARISONS,
 ]
 
 export const BRAND_COMPARISON_SLUGS = BRAND_COMPARISONS.map((c) => c.slug)
@@ -1011,8 +1104,19 @@ const COMPARISONS_BY_SERVICE: Record<string, string[]> = {
     "rational-vs-unox",
     "rational-vs-convotherm",
     "rational-vs-alto-shaam",
+    "rational-vs-henny-penny",
+    "unox-vs-convotherm",
+    "alto-shaam-vs-convotherm",
+    "unox-vs-alto-shaam",
+    "electrolux-vs-rational",
+    "lainox-vs-unox",
+    "blodgett-vs-vulcan-convection",
   ],
-  "steamer-repair": ["rational-vs-combi", "rational-vs-alto-shaam"],
+  "steamer-repair": [
+    "rational-vs-combi",
+    "rational-vs-alto-shaam",
+    "rational-vs-cleveland",
+  ],
   "commercial-laundry-repair": ["speed-queen-vs-continental-laundry"],
   "commercial-washer-repair": ["speed-queen-vs-continental-laundry"],
   "commercial-dryer-repair": ["speed-queen-vs-continental-laundry"],
