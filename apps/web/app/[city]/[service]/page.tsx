@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, MapPin } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { AnchorButton, LinkButton } from "@/components/link-button"
@@ -28,6 +28,7 @@ import {
   cityProfileFallback,
   type CityProfile,
 } from "@/lib/data/city-profiles"
+import { getCityEnrichment } from "@/lib/data/city-content"
 
 type Params = { params: Promise<{ city: string; service: string }> }
 
@@ -108,12 +109,20 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       noindex: true,
     })
   const p = getCityProfile(c.slug) ?? cityProfileFallback(c.name, c.county)
+  // Index-bloat guard (R5 P2): only the 10 primary services are prebuilt,
+  // sitemapped and internally linked. The other ~21 services × 72 cities are
+  // valid routes (dynamicParams) but render on-demand and appear in neither
+  // the sitemap nor any internal link. Let them resolve (so a stray inbound
+  // link still works) but keep them out of the index so the programmatic grid
+  // can't dilute crawl budget / authority with pages we don't promote.
+  const isPrimary = primaryServices.some((ps) => ps.slug === s.slug)
   return metaFor({
     title: COMBO_TITLE_OVERRIDES[`${c.slug}/${s.slug}`] ?? comboTitle(s, c.name),
     description:
       COMBO_DESC_OVERRIDES[`${c.slug}/${s.slug}`] ??
       comboDescription(s, p, c.name),
     path: `/${c.slug}/${s.slug}`,
+    noindex: !isPrimary,
   })
 }
 
@@ -139,6 +148,13 @@ export default async function CityServicePage({ params }: Params) {
   if (!c || !s) notFound()
 
   const nearby = nearbyCities(c.slug, 8)
+  // Deep local content for proven-demand cities (city-content.ts). Surfacing
+  // the city's named corridors + ticket-history failure patterns on the combo
+  // gives striking-distance combos (e.g. ice machine repair Boynton Beach,
+  // commercial refrigeration West Palm Beach) genuinely city-specific body copy
+  // instead of the sitewide service template — and makes the combo, not the
+  // city hub, the page that owns the "<service> <city>" intent (R5 P0/P1).
+  const enrichment = getCityEnrichment(c.slug)
   const cFaqs = cityFaqs(c.name, s.shortTitle, site.serviceCall)
   const combinedFaqs = [...cFaqs, ...s.faqs]
   const h1 =
@@ -215,6 +231,59 @@ export default async function CityServicePage({ params }: Params) {
           ) : null}
         </div>
       </section>
+
+      {/* City-specific depth for enriched cities: named corridors + local
+          ticket-history failure patterns. Renders ONLY where city-content.ts
+          has an entry (currently West Palm Beach, Boynton Beach); every other
+          combo keeps the lightweight template untouched. */}
+      {enrichment ? (
+        <section className="border-b border-border/60 bg-background py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-semibold tracking-tight">
+              {s.shortTitle} in {c.name} — where we work and what fails here
+            </h2>
+
+            <h3 className="mt-8 text-lg font-semibold tracking-tight">
+              Where we work in {c.name}
+            </h3>
+            <ul className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {enrichment.districts.map((d) => (
+                <li
+                  key={d.name}
+                  className="rounded-xl border border-border bg-card p-5"
+                >
+                  <div className="flex items-start gap-2">
+                    <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
+                    <div>
+                      <div className="text-sm font-semibold">{d.name}</div>
+                      <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                        {d.detail}
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="mt-12 text-lg font-semibold tracking-tight">
+              What fails here — local patterns from our tickets
+            </h3>
+            <ul className="mt-5 grid gap-4 md:grid-cols-3">
+              {enrichment.patterns.map((p) => (
+                <li
+                  key={p.title}
+                  className="rounded-xl border border-border bg-card p-5"
+                >
+                  <div className="text-sm font-semibold">{p.title}</div>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    {p.detail}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
 
       <section className="border-b border-border/60 bg-accent/30 py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">

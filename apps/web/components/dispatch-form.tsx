@@ -216,6 +216,21 @@ export function DispatchForm({
         className="grid gap-5"
       >
         <p className="text-xs text-muted-foreground">{tr.form.requiredNote}</p>
+        {/* Honeypot: visually hidden, off-screen, not tabbable, hidden from a11y
+            tree. Real users never see or fill it; bots that auto-fill every
+            input trip the server-side `website_url` check in route.ts and get a
+            silent no-op. autoComplete="off" keeps browsers from pre-filling it. */}
+        <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+          <label htmlFor="website_url">Website (leave blank)</label>
+          <input
+            id="website_url"
+            type="text"
+            name="website_url"
+            tabIndex={-1}
+            autoComplete="off"
+            defaultValue=""
+          />
+        </div>
         {topicLabel ? (
           <p className="rounded-md border border-primary/25 bg-primary/5 px-3 py-2 text-sm text-foreground/90">
             <span className="font-semibold text-primary">

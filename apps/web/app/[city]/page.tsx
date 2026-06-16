@@ -153,9 +153,14 @@ export default async function CityPage({ params }: Params) {
               <Link key={s.slug} href={`/${c.slug}/${s.slug}`} className="group">
                 <Card className="h-full gap-3 p-5 transition-all hover:border-primary/40 hover:shadow-md">
                   <div className="flex items-start justify-between gap-2">
-                    <span className="text-sm font-semibold">
-                      {s.shortTitle} in {c.name}
-                    </span>
+                    {/* Card heading is the service only — the city is already
+                        established once by the "Commercial services in {city}"
+                        H2 above. Repeating "{service} in {city}" on all ~31
+                        cards made the city hub rank for the narrow "{service}
+                        {city}" query and cannibalize its own combo page
+                        (R5 P0: /boynton-beach p46 vs the combo p38). The combo
+                        owns that intent; the hub owns "{city} commercial repair". */}
+                    <span className="text-sm font-semibold">{s.shortTitle}</span>
                     <ArrowUpRight className="size-4 text-muted-foreground transition-colors group-hover:text-primary" />
                   </div>
                   <p className="text-xs leading-relaxed text-muted-foreground">{s.summary}</p>
