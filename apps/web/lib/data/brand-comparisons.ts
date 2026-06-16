@@ -19,6 +19,7 @@
 
 import { WAVE2_COMPARISONS } from "./brand-comparisons-wave2"
 import { COMBI_WAVE3_COMPARISONS } from "./brand-comparisons-combi"
+import { TYPECOMPARE_COMPARISONS } from "./brand-comparisons-typecompare"
 
 export type ComparisonBrand = {
   name: string
@@ -1050,6 +1051,7 @@ export const BRAND_COMPARISONS: ComparisonProfile[] = [
   RATIONAL_VS_COMBI,
   ...WAVE2_COMPARISONS,
   ...COMBI_WAVE3_COMPARISONS,
+  ...TYPECOMPARE_COMPARISONS,
 ]
 
 export const BRAND_COMPARISON_SLUGS = BRAND_COMPARISONS.map((c) => c.slug)

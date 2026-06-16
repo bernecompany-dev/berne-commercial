@@ -75,6 +75,15 @@ import { walkIn50PercentRule } from "./content/walk-in-50-percent-rule-repair-or
 // cross-link the new /services/combi-oven-repair hub and brand spokes.
 import { rationalIcombiErrorCodesGuide } from "./content/rational-icombi-error-codes-guide"
 import { combiOvenNotSteaming } from "./content/combi-oven-not-steaming-troubleshooting"
+// Money-cluster decision-guide support posts (2026-06-15): buyer-intent
+// "vs"/reliability/operations magnets, staggered across the 06-15 → 07-02
+// window at 3/week alongside the existing self-scheduled queue.
+import { commercialVsResidentialAppliances } from "./content/commercial-vs-residential-appliances-restaurant"
+import { mostReliableCommercialIceMachine } from "./content/most-reliable-commercial-ice-machine"
+import { howLongCommercialEquipmentLasts } from "./content/how-long-commercial-equipment-lasts"
+import { mostReliableCommercialRefrigerationBrands } from "./content/most-reliable-commercial-refrigeration-brands"
+import { newVsRefurbishedCommercialEquipment } from "./content/new-vs-refurbished-commercial-equipment"
+import { leaseVsBuyCommercialKitchenEquipment } from "./content/lease-vs-buy-commercial-kitchen-equipment"
 
 export type ArticleSection = {
   heading: string
@@ -174,6 +183,12 @@ export const articles: Article[] = [
   walkIn50PercentRule,
   rationalIcombiErrorCodesGuide,
   combiOvenNotSteaming,
+  commercialVsResidentialAppliances,
+  mostReliableCommercialIceMachine,
+  howLongCommercialEquipmentLasts,
+  mostReliableCommercialRefrigerationBrands,
+  newVsRefurbishedCommercialEquipment,
+  leaseVsBuyCommercialKitchenEquipment,
 ]
 
 export function getArticle(slug: string): Article | undefined {
