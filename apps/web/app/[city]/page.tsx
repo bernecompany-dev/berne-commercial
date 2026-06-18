@@ -9,7 +9,6 @@ import { Card } from "@workspace/ui/components/card"
 import { Badge } from "@workspace/ui/components/badge"
 import { DispatchForm } from "@/components/dispatch-form"
 import { FAQSection } from "@/components/faq-section"
-import { CityMap } from "@/components/city-map"
 import { ServiceMapEmbed } from "@/components/service-map-embed"
 import { cityCenter } from "@/lib/city-centers"
 import { TrustedBy } from "@/components/trusted-by"
@@ -263,8 +262,6 @@ export default async function CityPage({ params }: Params) {
         title={`${c.name} commercial repair FAQ`}
         description="From our dispatch desk and route technicians."
       />
-
-      <CityMap city={c.name} />
 
       {/* Real completed-job map (lazy: maplibre loads only on scroll-in),
           centered on the city so the local "swarm" of work is visible. */}
