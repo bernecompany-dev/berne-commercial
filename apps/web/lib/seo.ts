@@ -190,6 +190,24 @@ export const HAS_CREDENTIAL = [
       url: "https://msaworld.com/",
     },
   },
+  {
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory: "certification",
+    name: "EPA 608 — Technician Certificates",
+    url: `${site.url}/credentials/techs-epa.pdf`,
+  },
+  {
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory: "certification",
+    name: "Sealed-System Service Training",
+    url: `${site.url}/credentials/sealed-system-service-certificate.jpg`,
+  },
+  {
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory: "certification",
+    name: "Pro-Tech Appliance Training",
+    url: `${site.url}/credentials/pro-tech-training-certificate.jpg`,
+  },
 ]
 
 export function localBusinessSchema() {

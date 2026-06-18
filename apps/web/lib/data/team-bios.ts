@@ -352,7 +352,7 @@ export const TECH_BIOS: Record<string, ExtendedBio> = {
     lede:
       "Appliance repair technician focused on sealed-system and refrigeration work. Factory-trained on sealed systems and pro-tech appliance service.",
     background:
-      "I came into the trade through formal training rather than the back door — hands-on sealed-system service work at TMM Academy, then pro-tech appliance training at the Big City Appliance Repair School. Sealed systems are where I focus, because that's the part of a refrigerator most techs would rather replace than actually diagnose.",
+      "I came into the trade through formal training rather than the back door — hands-on sealed-system service work and structured pro-tech appliance training. Sealed systems are where I focus, because that's the part of a refrigerator most techs would rather replace than actually diagnose.",
     workOn:
       "Refrigeration and sealed-system repair on residential appliances — compressors, evaporator and condenser coils, refrigerant leaks, and the electronic controls that drive them. Diagnosis first, recharge and component-level repair second.",
     whyBerne:

@@ -1,4 +1,4 @@
-import { FileText, ShieldCheck, Award, Stamp, Building2, Receipt, FileSignature, ShieldHalf, Network, GraduationCap } from "lucide-react"
+import { FileText, ShieldCheck, Award, Stamp, Building2, Receipt, FileSignature, ShieldHalf, Network, GraduationCap, FileCheck } from "lucide-react"
 import { Card } from "@workspace/ui/components/card"
 import { SectionHeading } from "./section-heading"
 import { t } from "@/lib/i18n/dict"
@@ -79,6 +79,27 @@ export function CredentialsSection({ locale = "en" }: { locale?: Locale }) {
             file: "https://msaworld.com/",
             fileLabel: "Programa MSA →",
           },
+          {
+            icon: Award,
+            title: "EPA 608 — Certificados de técnicos",
+            body: "Certificados EPA Section 608 en archivo para nuestros técnicos que manejan refrigerantes.",
+            file: "/credentials/techs-epa.pdf",
+            fileLabel: "Ver certificados (PDF)",
+          },
+          {
+            icon: GraduationCap,
+            title: "Capacitación en sistemas sellados",
+            body: "Nuestros técnicos completan capacitación práctica en servicio de sistemas sellados en TMM Academy.",
+            file: "/credentials/sealed-system-service-certificate.jpg",
+            fileLabel: "Ver certificado",
+          },
+          {
+            icon: FileCheck,
+            title: "Capacitación Pro-Tech de electrodomésticos",
+            body: "Nuestros técnicos completan capacitación pro-tech en reparación de electrodomésticos en Big City Appliance Repair School.",
+            file: "/credentials/pro-tech-training-certificate.jpg",
+            fileLabel: "Ver certificado",
+          },
         ]
       : [
           {
@@ -150,6 +171,27 @@ export function CredentialsSection({ locale = "en" }: { locale?: Locale }) {
             body: "Our technicians complete ongoing training on emerging appliance technology through MSA World coursework and OEM programs (Sub-Zero, Wolf, Miele, LG, Samsung, GE).",
             file: "https://msaworld.com/",
             fileLabel: "MSA training program →",
+          },
+          {
+            icon: Award,
+            title: "EPA 608 — Technician Certificates",
+            body: "EPA Section 608 certificates on file for our refrigerant-handling technicians.",
+            file: "/credentials/techs-epa.pdf",
+            fileLabel: "View certificates (PDF)",
+          },
+          {
+            icon: GraduationCap,
+            title: "Sealed-System Service Training",
+            body: "Our refrigeration technicians complete hands-on sealed-system service training at TMM Academy.",
+            file: "/credentials/sealed-system-service-certificate.jpg",
+            fileLabel: "View certificate",
+          },
+          {
+            icon: FileCheck,
+            title: "Pro-Tech Appliance Training",
+            body: "Our technicians complete pro-tech appliance-repair training at Big City Appliance Repair School.",
+            file: "/credentials/pro-tech-training-certificate.jpg",
+            fileLabel: "View certificate",
           },
         ]
 
