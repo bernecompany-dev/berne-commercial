@@ -33,8 +33,10 @@ function Kpi({ value, label }: { value: string; label: string }) {
 
 export function ServiceMap() {
   const ref = useRef<HTMLDivElement>(null)
+  const mapRef = useRef<any>(null)
   const [d, setD] = useState<MapData | null>(null)
   const [err, setErr] = useState<string | null>(null)
+  const [mode, setMode] = useState<"pins" | "heat">("pins")
 
   useEffect(() => {
     let map: any
@@ -56,32 +58,48 @@ export function ServiceMap() {
         map = new maplibregl.Map({
           container: ref.current,
           style: "https://tiles.openfreemap.org/styles/liberty",
-          center: [-80.2, 26.05],
-          zoom: 8.4,
+          center: [-80.22, 26.05],
+          zoom: 8.6,
         })
+        mapRef.current = map
         map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right")
         map.on("load", () => {
-          map.addSource("pts", {
-            type: "geojson",
-            data: {
-              type: "FeatureCollection",
-              features: data.points.map((p) => ({
-                type: "Feature",
-                geometry: { type: "Point", coordinates: p },
-                properties: {},
-              })),
+          const fc = {
+            type: "FeatureCollection",
+            features: data.points.map((p) => ({
+              type: "Feature",
+              geometry: { type: "Point", coordinates: p },
+              properties: {},
+            })),
+          }
+          map.addSource("pts", { type: "geojson", data: fc })
+
+          // PINS — thousands of individual service locations (the "swarm")
+          map.addLayer({
+            id: "dots",
+            type: "circle",
+            source: "pts",
+            paint: {
+              "circle-radius": ["interpolate", ["linear"], ["zoom"], 8, 2, 11, 3.2, 15, 5],
+              "circle-color": "#f97316",
+              "circle-opacity": 0.55,
+              "circle-stroke-color": "#c2410c",
+              "circle-stroke-width": 0.4,
             },
           })
+
+          // HEATMAP — hidden by default; toggled on
           map.addLayer({
             id: "heat",
             type: "heatmap",
             source: "pts",
-            maxzoom: 14,
+            maxzoom: 15,
+            layout: { visibility: "none" },
             paint: {
-              "heatmap-weight": 0.6,
-              "heatmap-intensity": ["interpolate", ["linear"], ["zoom"], 8, 1, 14, 3],
-              "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 8, 12, 14, 30],
-              "heatmap-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0.85, 13.5, 0.4],
+              "heatmap-weight": 0.5,
+              "heatmap-intensity": ["interpolate", ["linear"], ["zoom"], 8, 1, 15, 3],
+              "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 8, 14, 15, 34],
+              "heatmap-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0.85, 14, 0.5],
               "heatmap-color": [
                 "interpolate",
                 ["linear"],
@@ -95,42 +113,18 @@ export function ServiceMap() {
               ],
             },
           })
-          map.addSource("zips", {
-            type: "geojson",
-            data: {
-              type: "FeatureCollection",
-              features: data.zipMarkers.map((z) => ({
-                type: "Feature",
-                geometry: { type: "Point", coordinates: [z.lng, z.lat] },
-                properties: { count: z.count, zip: z.zip, city: z.city || "" },
-              })),
-            },
-          })
-          map.addLayer({
-            id: "zipc",
-            type: "circle",
-            source: "zips",
-            paint: {
-              "circle-radius": ["interpolate", ["linear"], ["get", "count"], 50, 7, 800, 28],
-              "circle-color": "#ea580c",
-              "circle-opacity": 0.85,
-              "circle-stroke-color": "#ffffff",
-              "circle-stroke-width": 1.5,
-            },
-          })
-          const popup = new maplibregl.Popup({ closeButton: false })
-          map.on("click", "zipc", (e: any) => {
-            const f = e.features[0]
-            const p = f.properties
-            popup
-              .setLngLat(f.geometry.coordinates)
-              .setHTML(
-                `<div style="font:13px/1.4 system-ui"><strong>${p.city || ("ZIP " + p.zip)}</strong><br>${fmt(Number(p.count))} services · ZIP ${p.zip}</div>`,
-              )
-              .addTo(map)
-          })
-          map.on("mouseenter", "zipc", () => (map.getCanvas().style.cursor = "pointer"))
-          map.on("mouseleave", "zipc", () => (map.getCanvas().style.cursor = ""))
+
+          // Frame ALL coverage (South FL + Tampa/Sarasota/West coast), not a fixed center.
+          if (data.points.length) {
+            let minX = 180, minY = 90, maxX = -180, maxY = -90
+            for (const [x, y] of data.points) {
+              if (x < minX) minX = x
+              if (x > maxX) maxX = x
+              if (y < minY) minY = y
+              if (y > maxY) maxY = y
+            }
+            map.fitBounds([[minX, minY], [maxX, maxY]], { padding: 50, duration: 0, maxZoom: 11 })
+          }
         })
       } catch (e: any) {
         if (!cancelled) setErr(String(e?.message || e))
@@ -142,32 +136,65 @@ export function ServiceMap() {
     }
   }, [])
 
+  // toggle layer visibility
+  useEffect(() => {
+    const map = mapRef.current
+    if (!map || !map.getLayer || !map.getLayer("dots")) return
+    try {
+      map.setLayoutProperty("dots", "visibility", mode === "pins" ? "visible" : "none")
+      map.setLayoutProperty("heat", "visibility", mode === "heat" ? "visible" : "none")
+    } catch {}
+  }, [mode, d])
+
   const k = d?.kpis
 
   return (
     <section className="bg-background py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           <Kpi value={k ? fmt(k.completed) + "+" : "—"} label="Repairs completed" />
+          <Kpi value={k && k.lastMonthCount != null ? fmt(k.lastMonthCount) : "—"} label="Last 30 days" />
           <Kpi value={k ? String(k.citiesServed) : "—"} label="Cities served" />
-          <Kpi value={k ? String(k.zipsCovered) + "+" : "—"} label="ZIP codes covered" />
+          <Kpi value={k ? String(k.zipsCovered) : "—"} label="ZIP codes covered" />
           <Kpi value={k ? fmt(k.repeatCustomers) : "—"} label="Repeat customers" />
           <Kpi value={k ? "$" + fmt(k.avgTicketUsd) : "—"} label="Avg. repair ticket" />
         </div>
 
-        <div className="relative mt-8 overflow-hidden rounded-2xl border border-border/60 shadow-sm">
-          <div ref={ref} className="h-[460px] w-full sm:h-[560px]" aria-label="Map of completed appliance repairs across South Florida" />
-          {err ? (
-            <div className="absolute inset-0 flex items-center justify-center bg-background/90 p-6 text-center text-sm text-muted-foreground">
-              Map failed to load ({err}). Coverage spans Miami-Dade, Broward and Palm Beach.
-            </div>
-          ) : null}
+        <div className="mt-8">
+          <div className="mb-3 inline-flex rounded-lg border border-border/60 bg-background p-1 text-sm shadow-sm">
+            <button
+              type="button"
+              onClick={() => setMode("pins")}
+              className={`rounded-md px-4 py-1.5 font-medium transition ${mode === "pins" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
+            >
+              Pins
+            </button>
+            <button
+              type="button"
+              onClick={() => setMode("heat")}
+              className={`rounded-md px-4 py-1.5 font-medium transition ${mode === "heat" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
+            >
+              Heatmap
+            </button>
+          </div>
+
+          <div className="relative overflow-hidden rounded-2xl border border-border/60 shadow-sm">
+            <div
+              ref={ref}
+              className="h-[480px] w-full sm:h-[600px]"
+              aria-label="Map of completed appliance repairs across South Florida"
+            />
+            {err ? (
+              <div className="absolute inset-0 flex items-center justify-center bg-background/90 p-6 text-center text-sm text-muted-foreground">
+                Map failed to load ({err}). Coverage spans Miami-Dade, Broward and Palm Beach.
+              </div>
+            ) : null}
+          </div>
         </div>
 
         <p className="mt-3 text-xs text-muted-foreground">
-          Each glow marks where our technicians have completed jobs. Locations are
-          approximated to the neighborhood level for customer privacy — no exact
-          addresses are shown. Counts reflect completed jobs since {k?.sinceYear || "2022"}.
+          Each pin marks a completed job, offset to the neighborhood level for customer
+          privacy — no exact addresses are shown. {k ? fmt(k.completed) + "+ repairs since " + (k.sinceYear || "2022") + "." : ""}
         </p>
       </div>
     </section>
