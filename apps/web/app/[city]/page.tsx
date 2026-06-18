@@ -10,6 +10,7 @@ import { Badge } from "@workspace/ui/components/badge"
 import { DispatchForm } from "@/components/dispatch-form"
 import { FAQSection } from "@/components/faq-section"
 import { CityMap } from "@/components/city-map"
+import { ServiceMapEmbed, cityCenter } from "@/components/service-map-embed"
 import { TrustedBy } from "@/components/trusted-by"
 import { JsonLd } from "@/components/json-ld"
 import { metaFor, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/seo"
@@ -263,6 +264,29 @@ export default async function CityPage({ params }: Params) {
       />
 
       <CityMap city={c.name} />
+
+      {/* Real completed-job map (lazy: maplibre loads only on scroll-in),
+          centered on the city so the local "swarm" of work is visible. */}
+      <section className="border-b border-border/60 bg-background py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-6 flex flex-col items-start gap-1">
+            <div className="text-xs font-medium uppercase tracking-wider text-primary">
+              Proof of work
+            </div>
+            <h2 className="text-2xl font-semibold tracking-tight">
+              Appliance repairs we&apos;ve completed near {c.name}
+            </h2>
+            <p className="text-sm text-muted-foreground">
+              Each pin is a completed commercial repair, offset to the
+              neighborhood level for customer privacy.{" "}
+              <Link href="/service-map" className="font-medium text-primary hover:underline">
+                See the full South Florida service map →
+              </Link>
+            </p>
+          </div>
+          <ServiceMapEmbed center={cityCenter(c.slug)} zoom={11} />
+        </div>
+      </section>
 
       <TrustedBy />
 

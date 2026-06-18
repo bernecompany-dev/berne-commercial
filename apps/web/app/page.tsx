@@ -7,6 +7,7 @@ import { IndustriesSection } from "@/components/industries-section"
 import { WhyUs } from "@/components/why-us"
 import { BrandCloud } from "@/components/brand-cloud"
 import { CompareTeaser } from "@/components/compare-teaser"
+import { ServiceMapTeaser } from "@/components/service-map-teaser"
 import { FounderSection } from "@/components/founder-section"
 import { TeamGrid } from "@/components/team-grid"
 import { CredentialsSection } from "@/components/credentials-section"
@@ -72,6 +73,7 @@ export default function HomePage() {
           title="Commercial repair questions"
           description="Common questions from restaurants, production facilities and enterprise clients."
         />
+        <ServiceMapTeaser />
         <ServiceAreasLinks />
       </main>
       <SiteFooter locale="en" />
