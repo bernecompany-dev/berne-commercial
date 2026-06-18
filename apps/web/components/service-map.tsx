@@ -110,7 +110,6 @@ export function ServiceMap() {
             id: "zipc",
             type: "circle",
             source: "zips",
-            minzoom: 8.5,
             paint: {
               "circle-radius": ["interpolate", ["linear"], ["get", "count"], 50, 7, 800, 28],
               "circle-color": "#ea580c",
