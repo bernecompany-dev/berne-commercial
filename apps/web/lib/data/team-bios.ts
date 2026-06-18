@@ -347,6 +347,42 @@ export const TECH_BIOS: Record<string, ExtendedBio> = {
       { href: "/services/commercial-refrigeration-repair", label: "Commercial refrigeration" },
     ],
   },
+
+  "hasrat-yusifov": {
+    lede:
+      "Appliance repair technician focused on sealed-system and refrigeration work. Factory-trained on sealed systems and pro-tech appliance service.",
+    background:
+      "I came into the trade through formal training rather than the back door — hands-on sealed-system service work at TMM Academy, then pro-tech appliance training at the Big City Appliance Repair School. Sealed systems are where I focus, because that's the part of a refrigerator most techs would rather replace than actually diagnose.",
+    workOn:
+      "Refrigeration and sealed-system repair on residential appliances — compressors, evaporator and condenser coils, refrigerant leaks, and the electronic controls that drive them. Diagnosis first, recharge and component-level repair second.",
+    whyBerne:
+      "Berne backs me with parts on the truck and senior techs to call when a job gets complicated, so I can fix it right the first time instead of guessing.",
+    serviceArea:
+      "Residential refrigeration calls across Miami-Dade and Broward. English and Russian.",
+    related: [
+      { href: "/services/commercial-refrigeration-repair", label: "Commercial refrigeration repair" },
+      { href: "/brands/true", label: "True refrigeration service" },
+      { href: "/services/walk-in-cooler-repair", label: "Walk-in cooler repair" },
+    ],
+  },
+
+  "vasyl-kruchkovskyi": {
+    lede:
+      "Service technician handling residential appliance diagnostics and repair across refrigerators, washers, dryers, ovens and dishwashers.",
+    background:
+      "I work the full range of home appliances rather than specializing in one category, which means I spend most of my day reading the problem in front of me — a washer that won't drain, a dryer that won't heat, an oven that won't hold temp. EPA 608 Universal certified for refrigerant handling.",
+    workOn:
+      "Refrigerators, washers, dryers, ovens, and dishwashers — drain pumps, heating elements, ignition and bake systems, door and seal issues, and control boards. Component-level diagnostics before any part comes off the truck.",
+    whyBerne:
+      "Berne keeps the parts stocked and the dispatch honest, so I can close most calls in one visit.",
+    serviceArea:
+      "Residential appliance calls across Miami-Dade and Broward. English, Russian, and Ukrainian.",
+    related: [
+      { href: "/services/commercial-refrigeration-repair", label: "Commercial refrigeration repair" },
+      { href: "/services/commercial-oven-repair", label: "Commercial oven repair" },
+      { href: "/services/commercial-washer-repair", label: "Commercial washer service" },
+    ],
+  },
 }
 
 /**
