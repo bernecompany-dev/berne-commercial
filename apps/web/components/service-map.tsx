@@ -22,11 +22,12 @@ type MapData = {
 
 const fmt = (n: number) => n.toLocaleString("en-US")
 
-function Kpi({ value, label }: { value: string; label: string }) {
+function Kpi({ value, label, sub }: { value: string; label: string; sub?: string }) {
   return (
     <div className="rounded-xl border border-border/60 bg-background p-5 text-center shadow-sm">
       <div className="text-3xl font-semibold tracking-tight text-primary">{value}</div>
       <div className="mt-1 text-sm text-muted-foreground">{label}</div>
+      {sub ? <div className="mt-0.5 text-xs text-muted-foreground/70">{sub}</div> : null}
     </div>
   )
 }
@@ -152,7 +153,7 @@ export function ServiceMap() {
     <section className="bg-background py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-          <Kpi value={k ? fmt(k.totalJobs) + "+" : "—"} label="Service calls" />
+          <Kpi value={k ? fmt(k.totalJobs) + "+" : "—"} label="Service calls" sub="records since 2023" />
           <Kpi value={k && k.lastMonthCount != null ? fmt(k.lastMonthCount) : "—"} label="Last 30 days" />
           <Kpi value={k ? String(k.citiesServed) : "—"} label="Cities served" />
           <Kpi value={k ? String(k.zipsCovered) : "—"} label="ZIP codes covered" />
