@@ -9,7 +9,7 @@ import { site } from "@/lib/site"
 export const metadata: Metadata = metaFor({
   title: "Service Map — Where We Work",
   description:
-    "An interactive map of completed appliance repairs across Miami-Dade, Broward and Palm Beach. 13,000+ repairs since 2022, neighborhood-level coverage.",
+    "An interactive map of completed appliance repairs from the Miami metro to Tampa Bay and Sarasota — 13,000+ repairs across 189 Florida cities since 2022, shown at neighborhood level for privacy.",
   path: "/service-map",
 })
 
@@ -19,7 +19,7 @@ export default function ServiceMapPage() {
       <PageHero
         eyebrow="Coverage"
         title="Where Berne has been working"
-        description="An interactive heat map of completed appliance repairs across South Florida. Locations are approximated to the neighborhood level for customer privacy — it shows how many places we've serviced and where, not whose home."
+        description="Every completed appliance repair, mapped — from the Miami metro up through Palm Beach and across to Tampa Bay and Sarasota. Locations are approximated to the neighborhood level for customer privacy: it shows how many places we've serviced and where, not whose home."
       >
         <div className="flex flex-wrap gap-3">
           <LinkButton href="/become-a-client">Become a commercial client</LinkButton>
