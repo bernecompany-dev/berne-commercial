@@ -151,13 +151,12 @@ export function ServiceMap() {
   return (
     <section className="bg-background py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          <Kpi value={k ? fmt(k.completed) + "+" : "—"} label="Repairs completed" />
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          <Kpi value={k ? fmt(k.totalJobs) + "+" : "—"} label="Service calls" />
           <Kpi value={k && k.lastMonthCount != null ? fmt(k.lastMonthCount) : "—"} label="Last 30 days" />
           <Kpi value={k ? String(k.citiesServed) : "—"} label="Cities served" />
           <Kpi value={k ? String(k.zipsCovered) : "—"} label="ZIP codes covered" />
           <Kpi value={k ? fmt(k.repeatCustomers) : "—"} label="Repeat customers" />
-          <Kpi value={k ? "$" + fmt(k.avgTicketUsd) : "—"} label="Avg. repair ticket" />
         </div>
 
         <div className="mt-8">
@@ -194,7 +193,7 @@ export function ServiceMap() {
 
         <p className="mt-3 text-xs text-muted-foreground">
           Each pin marks a completed job, offset to the neighborhood level for customer
-          privacy — no exact addresses are shown. {k ? fmt(k.completed) + "+ repairs since " + (k.sinceYear || "2022") + "." : ""}
+          privacy — no exact addresses are shown. {k ? fmt(k.totalJobs) + "+ service calls since " + (k.sinceYear || "2022") + "." : ""}
         </p>
       </div>
     </section>
