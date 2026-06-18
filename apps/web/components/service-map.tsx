@@ -194,7 +194,7 @@ export function ServiceMap() {
 
         <p className="mt-3 text-xs text-muted-foreground">
           Each pin marks a completed job, offset to the neighborhood level for customer
-          privacy — no exact addresses are shown. {k ? fmt(k.totalJobs) + "+ service calls since " + (k.sinceYear || "2022") + "." : ""}
+          privacy — no exact addresses are shown. {k ? fmt(k.totalJobs) + "+ service calls since 2023." : ""}
         </p>
       </div>
     </section>

@@ -53,6 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog": { priority: 0.7, changeFrequency: "weekly" },
     "/team": { priority: 0.7, changeFrequency: "monthly" },
     "/credentials": { priority: 0.7, changeFrequency: "monthly" },
+    "/service-map": { priority: 0.7, changeFrequency: "weekly" },
     "/privacy": { priority: 0.4, changeFrequency: "yearly" },
     "/terms": { priority: 0.4, changeFrequency: "yearly" },
     "/cookies": { priority: 0.4, changeFrequency: "yearly" },
@@ -69,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const esStaticPaths = Object.entries(STATIC_MATRIX)
     // /es is the home counterpart — emit it separately so we can priority=0.95
     // /es/team does not exist (team pages are EN-only) — listing it 404'd.
-    .filter(([p]) => p !== "" && p !== "/team")
+    .filter(([p]) => p !== "" && p !== "/team" && p !== "/service-map")
     .map(([p, cfg]) => ({
       url: `${base}/es${p}`,
       changeFrequency: cfg.changeFrequency,
