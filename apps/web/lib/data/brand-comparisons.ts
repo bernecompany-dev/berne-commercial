@@ -20,6 +20,7 @@
 import { WAVE2_COMPARISONS } from "./brand-comparisons-wave2"
 import { COMBI_WAVE3_COMPARISONS } from "./brand-comparisons-combi"
 import { TYPECOMPARE_COMPARISONS } from "./brand-comparisons-typecompare"
+import { WAVE5_COMPARISONS } from "./brand-comparisons-wave5"
 
 export type ComparisonBrand = {
   name: string
@@ -1052,6 +1053,7 @@ export const BRAND_COMPARISONS: ComparisonProfile[] = [
   ...WAVE2_COMPARISONS,
   ...COMBI_WAVE3_COMPARISONS,
   ...TYPECOMPARE_COMPARISONS,
+  ...WAVE5_COMPARISONS,
 ]
 
 export const BRAND_COMPARISON_SLUGS = BRAND_COMPARISONS.map((c) => c.slug)
@@ -1080,11 +1082,17 @@ export function getComparisonsForBrand(
  * /services/<slug> hubs (they were otherwise orphaned).
  */
 const COMPARISONS_BY_SERVICE: Record<string, string[]> = {
-  "commercial-range-repair": ["hobart-vs-vulcan-ranges"],
+  "commercial-range-repair": [
+    "hobart-vs-vulcan-ranges",
+    "vulcan-vs-garland-ranges",
+    "garland-vs-wolf-ranges",
+  ],
   "ice-machine-repair": [
     "manitowoc-vs-hoshizaki-ice",
     "hoshizaki-vs-scotsman-ice",
+    "manitowoc-vs-scotsman-ice",
   ],
+  "commercial-dishwasher-repair": ["hobart-vs-jackson-dishwashers"],
   "commercial-refrigeration-repair": [
     "true-vs-traulsen-refrigeration",
     "true-vs-turbo-air",
@@ -1100,7 +1108,10 @@ const COMPARISONS_BY_SERVICE: Record<string, string[]> = {
   ],
   "walk-in-cooler-repair": ["walk-in-cooler-repair-or-replace"],
   "walk-in-freezer-repair": ["walk-in-cooler-repair-or-replace"],
-  "fryer-repair": ["frymaster-vs-pitco-fryers"],
+  "fryer-repair": [
+    "frymaster-vs-pitco-fryers",
+    "pitco-vs-henny-penny-fryers",
+  ],
   "commercial-oven-repair": [
     "rational-vs-combi",
     "rational-vs-unox",
