@@ -164,6 +164,10 @@ export function DispatchForm({
           locale,
         })
       }
+      // OpenAI/ChatGPT Ads conversion (registered event: lead_created).
+      if (typeof window !== "undefined" && typeof window.oaiq === "function") {
+        window.oaiq("measure", "lead_created", { type: "customer_action" })
+      }
     } catch (err) {
       console.error("dispatch submit error:", err)
       setStatus("error")

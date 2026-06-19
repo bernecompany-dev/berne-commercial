@@ -9,6 +9,7 @@ import { GoogleAnalytics } from "@/components/google-analytics"
 import { GoogleAdsTag } from "@/components/google-ads-tag"
 import { MicrosoftUetTag } from "@/components/microsoft-uet-tag"
 import { MetaPixel } from "@/components/meta-pixel"
+import { OpenAIPixel } from "@/components/openai-pixel"
 import { Clarity } from "@/components/clarity"
 import { CookieBanner } from "@/components/cookie-banner"
 import { WhatsAppFab } from "@/components/whatsapp-fab"
@@ -133,6 +134,7 @@ export default function RootLayout({
         */}
         <MicrosoftUetTag />
         <MetaPixel />
+        <OpenAIPixel />
         <Clarity />
         <WhatsAppFab />
         <CookieBanner />
