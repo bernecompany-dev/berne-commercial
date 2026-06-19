@@ -28,8 +28,12 @@ export function MetaPixel() {
               var href = t.getAttribute('href') || '';
               if (href.indexOf('tel:') === 0) {
                 fbq('trackCustom', 'PhoneClick', { phone: href.replace('tel:', ''), page: location.pathname });
+                // Standard 'Lead' — phone calls are THE conversion; Meta
+                // lead-objective adsets + Events Manager custom conversion key off it.
+                fbq('track', 'Lead', { content_category: 'phone_call', source: 'tel_click', page: location.pathname });
               } else if (href.indexOf('mailto:') === 0) {
                 fbq('trackCustom', 'EmailClick', { email: href.replace('mailto:', ''), page: location.pathname });
+                fbq('track', 'Lead', { content_category: 'email', source: 'mailto_click', page: location.pathname });
               }
             }, true);
           })();

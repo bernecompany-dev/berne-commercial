@@ -102,6 +102,13 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//www.clarity.ms" />
         <link rel="dns-prefetch" href="//cdn.callrail.com" />
+        {/*
+          OpenAI/ChatGPT Ads attribution: capture the `oppref` click ref from
+          the landing URL into a 90-day cookie so the server-side Conversions
+          API (bzr.openai.com) can tie a lead back to the ad click. Ungated
+          first-party cookie (no third-party call); harmless when absent.
+        */}
+        <script dangerouslySetInnerHTML={{ __html: `try{var o=new URLSearchParams(location.search).get('oppref');if(o){document.cookie='_oppref='+encodeURIComponent(o)+';path=/;max-age=7776000;samesite=lax'}}catch(e){}` }} />
         {/* CallRail dynamic number insertion (swap.js) — атрибуция звонков по источнику */}
         <script async src="//cdn.callrail.com/companies/879510798/bcc465bc235b37a3282e/12/swap.js"></script>
       </head>
