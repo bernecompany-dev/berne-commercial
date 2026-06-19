@@ -1,6 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   transpilePackages: ["@workspace/ui"],
+  // Service-map data is regenerated weekly on the Miami server and published to
+  // bernerepair.com (single source of truth). Proxy /service-map.json to it
+  // (beforeFiles → wins over the static file) so the map auto-refreshes without
+  // a redeploy. Graceful: if the source is unreachable the map just shows empty.
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/service-map.json",
+          destination:
+            "https://bernerepair.com/wp-content/uploads/data/service-map.json",
+        },
+      ],
+    }
+  },
   // Core Web Vitals — let next/image deliver AVIF / WebP via Accept-content
   // negotiation. ~30-50% bandwidth savings vs JPEG/PNG on team headshots
   // and brand logos. Mirrors the my-site (berne-repair.com) config.
