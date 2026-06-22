@@ -260,10 +260,13 @@ export function DispatchForm({
           />
         </div>
 
+        {/* Address is NOT required at first touch — capturing name+phone is the
+            conversion; the dispatcher collects the exact address on the callback.
+            Demanding a full street address before any commitment is the single
+            biggest drop-off field on a B2B lead form. */}
         <Field
           label={tr.form.address}
           name="address"
-          required
           autoComplete="street-address"
         />
 

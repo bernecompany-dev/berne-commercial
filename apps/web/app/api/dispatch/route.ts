@@ -84,7 +84,9 @@ function validate(data: Payload):
   if (!out.phone || out.phone.length < 7) {
     return { ok: false, error: "Missing field: phone" }
   }
-  if (!out.address) return { ok: false, error: "Missing field: address" }
+  // Address is optional at first touch: name + phone captures the lead and the
+  // dispatcher collects the exact address on the callback. The quick-lead
+  // slide-in submits name + phone + urgency only.
   if (out.email && !isEmail(out.email)) {
     return { ok: false, error: "Invalid email" }
   }

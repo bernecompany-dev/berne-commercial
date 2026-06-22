@@ -13,6 +13,7 @@ import { OpenAIPixel } from "@/components/openai-pixel"
 import { Clarity } from "@/components/clarity"
 import { CookieBanner } from "@/components/cookie-banner"
 import { WhatsAppFab } from "@/components/whatsapp-fab"
+import { QuickLeadPopup } from "@/components/quick-lead-popup"
 import { SkipToContent } from "@/components/skip-to-content"
 import {
   organizationSchema,
@@ -137,6 +138,7 @@ export default function RootLayout({
         <OpenAIPixel />
         <Clarity />
         <WhatsAppFab />
+        <QuickLeadPopup />
         <CookieBanner />
         <SpeedInsights />
       </body>
