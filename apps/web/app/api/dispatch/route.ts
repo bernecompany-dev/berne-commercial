@@ -71,6 +71,33 @@ function esc(v: unknown) {
     .replace(/>/g, "&gt;")
 }
 
+// Marketing attribution captured client-side (lib/attribution.ts) and sent as
+// loose `attr_*` fields. Not part of the typed lead schema — we read it
+// defensively and render a single human-readable "Source" line so dispatch can
+// see (and later HCP can tag) which channel produced the lead.
+function pick(raw: Record<string, unknown>, key: string): string {
+  const v = raw[key]
+  return typeof v === "string" ? v.trim().slice(0, 200) : ""
+}
+function summarizeAttribution(raw: Record<string, unknown>): string {
+  const utmS = pick(raw, "attr_utm_source")
+  const utmM = pick(raw, "attr_utm_medium")
+  const utmC = pick(raw, "attr_utm_campaign")
+  const gclid = pick(raw, "attr_gclid")
+  const msclkid = pick(raw, "attr_msclkid")
+  const fbclid = pick(raw, "attr_fbclid")
+  const ref = pick(raw, "attr_referrer")
+  const landing = pick(raw, "attr_landing")
+  let channel = ""
+  if (utmS) channel = `${utmS}${utmM ? " / " + utmM : ""}${utmC ? " (" + utmC + ")" : ""}`
+  else if (gclid) channel = "Google Ads (gclid)"
+  else if (msclkid) channel = "Bing Ads (msclkid)"
+  else if (fbclid) channel = "Meta (fbclid)"
+  else if (ref) channel = `referral: ${ref}`
+  else return "" // nothing captured = direct/unknown; don't clutter the email
+  return landing ? `${channel} → landed on ${landing}` : channel
+}
+
 function validate(data: Payload):
   | { ok: true; value: Validated }
   | { ok: false; error: string } {
@@ -129,6 +156,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: parsed.error }, { status: 400 })
   }
   const data = parsed.value
+  const source = summarizeAttribution(raw as Record<string, unknown>)
 
   const apiKey = process.env.RESEND_API_KEY
   if (!apiKey) {
@@ -166,6 +194,7 @@ Brand: ${data.brand || "—"}
 Model: ${data.model || "—"}
 Urgency: ${data.urgency || "—"}
 Preferred window: ${data.preferredTime || "—"}
+Source: ${source || "direct/unknown"}
 
 Issue:
 ${data.issue || "—"}
@@ -185,6 +214,7 @@ ${data.issue || "—"}
     ["Model", data.model || "—"],
     ["Urgency", data.urgency || "—"],
     ["Preferred", data.preferredTime || "—"],
+    ["Source", source || "direct/unknown"],
   ]
     .map(
       ([k, v]) =>

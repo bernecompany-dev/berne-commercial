@@ -20,6 +20,7 @@ import { brands } from "@/lib/data/brands"
 import { site } from "@/lib/site"
 import { t } from "@/lib/i18n/dict"
 import type { Locale } from "@/lib/i18n/config"
+import { readAttribution } from "@/lib/attribution"
 import { cn } from "@workspace/ui/lib/utils"
 
 // Mirrors the kit Input recipe exactly (text-base on mobile suppresses iOS
@@ -122,7 +123,7 @@ export function DispatchForm({
     setStatus("submitting")
 
     const formData = new FormData(form)
-    const payload = Object.fromEntries(formData.entries())
+    const payload = { ...Object.fromEntries(formData.entries()), ...readAttribution() }
 
     try {
       const res = await fetch("/api/dispatch", {

@@ -14,6 +14,7 @@ import { Clarity } from "@/components/clarity"
 import { CookieBanner } from "@/components/cookie-banner"
 import { WhatsAppFab } from "@/components/whatsapp-fab"
 import { QuickLeadPopup } from "@/components/quick-lead-popup"
+import { AttributionCapture } from "@/components/attribution-capture"
 import { SkipToContent } from "@/components/skip-to-content"
 import {
   organizationSchema,
@@ -139,6 +140,7 @@ export default function RootLayout({
         <Clarity />
         <WhatsAppFab />
         <QuickLeadPopup />
+        <AttributionCapture />
         <CookieBanner />
         <SpeedInsights />
       </body>

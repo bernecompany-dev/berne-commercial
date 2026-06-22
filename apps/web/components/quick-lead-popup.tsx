@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
 import { CheckCircle2, Loader2, Phone, X } from "lucide-react"
 import { site } from "@/lib/site"
+import { readAttribution } from "@/lib/attribution"
 
 /**
  * Quick-lead slide-in — the "popup", done the way that doesn't get penalized.
@@ -116,6 +117,7 @@ export function QuickLeadPopup() {
       phone: String(fd.get("phone") ?? ""),
       urgency: String(fd.get("urgency") ?? ""),
       issue: "Quick callback request (slide-in)",
+      ...readAttribution(),
     }
     try {
       const res = await fetch("/api/dispatch", {
