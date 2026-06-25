@@ -1,21 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   transpilePackages: ["@workspace/ui"],
-  // Service-map data is regenerated weekly on the Miami server and published to
-  // bernerepair.com (single source of truth). Proxy /service-map.json to it
-  // (beforeFiles → wins over the static file) so the map auto-refreshes without
-  // a redeploy. Graceful: if the source is unreachable the map just shows empty.
-  async rewrites() {
-    return {
-      beforeFiles: [
-        {
-          source: "/service-map.json",
-          destination:
-            "https://bernerepair.com/wp-content/uploads/data/service-map.json",
-        },
-      ],
-    }
-  },
+  // NOTE: /service-map.json used to be a bare rewrite proxy to bernerepair.com.
+  // That was NOT edge-cached (X-Vercel-Cache: MISS) → the 526KB file was re-pulled
+  // from origin on every map view = the bulk of Vercel Fast Origin Transfer.
+  // It now lives as an edge-cached Route Handler at app/service-map.json/route.ts
+  // (revalidate daily) so the origin is hit ~once/day, not per view.
   // Core Web Vitals — let next/image deliver AVIF / WebP via Accept-content
   // negotiation. ~30-50% bandwidth savings vs JPEG/PNG on team headshots
   // and brand logos. Mirrors the my-site (berne-repair.com) config.
