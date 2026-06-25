@@ -453,11 +453,22 @@ export function serviceSchema(args: {
           { "@type": "AdministrativeArea", name: "Broward County, FL" },
           { "@type": "AdministrativeArea", name: "Palm Beach County, FL" },
         ],
+    // The $89 is a conditional DIAGNOSTIC/service-call fee, waived when the
+    // customer approves the repair ("free with approved repair") — it is not
+    // the price of the service. Modeling it as a flat Offer.price:"89"
+    // contradicted the visible "free with repair" copy. Describe it honestly as
+    // a service-call fee via priceSpecification so structured data matches the
+    // on-page claim (deep audit 2026-06-25 P2).
     offers: {
       "@type": "Offer",
-      price: "89",
-      priceCurrency: "USD",
-      description: "$89 commercial service call",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        price: "89",
+        priceCurrency: "USD",
+        valueAddedTaxIncluded: false,
+      },
+      description:
+        "$89 commercial service call — waived (free) when you approve the repair.",
     },
   }
 }

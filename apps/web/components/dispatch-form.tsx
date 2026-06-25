@@ -269,6 +269,13 @@ export function DispatchForm({
             required
             autoComplete="tel"
             inputMode="tel"
+            // Mirror the server rule (route.ts: phone must be >=7 chars). Without
+            // this, a too-short number passes native validation, hits a 400 and
+            // surfaces as a generic "couldn't send" — a real lead lost to what
+            // looks like a server outage. >=7 digits (allow spaces/()-+ . ).
+            minLength={7}
+            pattern="[\d\s()+.\-]{7,}"
+            title="Please enter a valid phone number (at least 7 digits)."
           />
         </div>
 
@@ -428,6 +435,9 @@ function Field({
   defaultValue,
   autoComplete,
   inputMode,
+  minLength,
+  pattern,
+  title,
 }: {
   label: string
   name: string
@@ -436,6 +446,9 @@ function Field({
   defaultValue?: string
   autoComplete?: string
   inputMode?: "text" | "tel" | "email" | "url" | "numeric" | "decimal" | "search" | "none"
+  minLength?: number
+  pattern?: string
+  title?: string
 }) {
   return (
     <div className="grid gap-2">
@@ -456,6 +469,9 @@ function Field({
         defaultValue={defaultValue}
         autoComplete={autoComplete}
         inputMode={inputMode}
+        minLength={minLength}
+        pattern={pattern}
+        title={title}
       />
     </div>
   )

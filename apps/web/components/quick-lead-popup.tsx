@@ -216,6 +216,11 @@ export function QuickLeadPopup() {
             inputMode="tel"
             autoComplete="tel"
             placeholder="Phone number"
+            // Mirror the server rule (route.ts: phone >=7 chars) so a too-short
+            // number is caught client-side instead of returning a generic 400.
+            minLength={7}
+            pattern="[\d\s()+.\-]{7,}"
+            title="Please enter a valid phone number (at least 7 digits)."
             className="h-10 w-full rounded-md border border-input bg-transparent px-3 text-base outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 md:text-sm"
           />
           <select
