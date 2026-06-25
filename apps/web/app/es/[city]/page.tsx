@@ -56,6 +56,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       siteName: site.name,
       images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
     },
+    // Crawl-budget concentration (indexation root-cause, 2026-06-25): the ES
+    // geo layer earned 1 click in 90 days while eating ~45% of the sitemap and
+    // starving the English money pages of crawl. noindex (follow=true) keeps
+    // the page live for real ES visitors via the language switcher and lets
+    // link equity flow, but stops it diluting the index. Also removed from
+    // sitemap.ts. Revisit if Spanish geo demand materializes.
+    robots: { index: false, follow: true },
   }
 }
 

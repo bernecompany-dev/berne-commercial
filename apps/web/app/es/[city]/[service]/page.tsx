@@ -69,6 +69,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       siteName: site.name,
       images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
     },
+    // noindex (follow=true) — see app/es/[city]/page.tsx for rationale: ES geo
+    // layer earned 1 click/90d while eating ~45% of the sitemap and starving
+    // the English money pages of crawl budget. Removed from sitemap.ts too.
+    robots: { index: false, follow: true },
   }
 }
 

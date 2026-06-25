@@ -14,6 +14,12 @@ export const metadata: Metadata = metaFor({
 })
 
 export default function ReviewsPage() {
+  // The 4.79/871 AggregateRating lives on exactly ONE node sitewide — the
+  // #localbusiness node emitted from app/layout.tsx. Redefining a rating here
+  // on a second #organization node created two conflicting nodes (and two
+  // AggregateRatings across #organization + #localbusiness), which trips
+  // Google's "Review has multiple aggregate ratings" error. Reference the
+  // canonical node by bare @id instead — no rating is restated.
   const reviewsSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -22,15 +28,7 @@ export default function ReviewsPage() {
     name: `${site.name} — Customer Reviews`,
     about: { "@id": `${site.url}/#localbusiness` },
     isPartOf: { "@id": `${site.url}/#website` },
-    mainEntity: {
-      "@type": "Organization",
-      "@id": `${site.url}/#organization`,
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: REVIEW_AGGREGATE.ratingValue,
-        reviewCount: REVIEW_AGGREGATE.reviewCount,
-      },
-    },
+    mainEntity: { "@id": `${site.url}/#localbusiness` },
   }
 
   return (

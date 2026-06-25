@@ -190,25 +190,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }))
 
-  const esCityPages = cities.map((c) => ({
-    url: `${base}/es/${c.slug}`,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  }))
+  // ES geo layer (city hubs + city/service combos) is INTENTIONALLY excluded
+  // from the sitemap and noindex'd at the page level (see app/es/[city]/* —
+  // robots:{index:false}). Indexation root-cause, 2026-06-25 deep audit: the
+  // domain is ~6 weeks old and crawl-budget-starved (1909 sitemap URLs, only
+  // ~10% ever earn an impression; even /services and the top service hubs sit
+  // "Discovered — currently not indexed"). The 864 ES geo URLs (72 city + 792
+  // combo) earned ONE click in 90 days (132 impressions, 6% of all impressions
+  // while consuming ~45% of the sitemap). Removing them from the sitemap +
+  // noindexing concentrates Google's limited crawl on the English money pages
+  // that are currently stuck. The pages stay live (dynamicParams) and reachable
+  // for real ES visitors via the language switcher + hreflang; follow=true keeps
+  // internal-link equity flowing. ES content pages (home, /es/services/*,
+  // /es/brands/*, /es/industries/*) remain sitemapped — those carry real intent.
 
   const cityServicePages = cities.flatMap((c) =>
     primaryServices.map((s) => ({
       url: `${base}/${c.slug}/${s.slug}`,
       changeFrequency: "monthly" as const,
       priority: 0.8,
-    })),
-  )
-
-  const esCityServicePages = cities.flatMap((c) =>
-    primaryServices.map((s) => ({
-      url: `${base}/es/${c.slug}/${s.slug}`,
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
     })),
   )
 
@@ -236,9 +236,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...industryPages,
     ...esIndustryPages,
     ...cityPages,
-    ...esCityPages,
     ...cityServicePages,
-    ...esCityServicePages,
     ...teamPages,
   ]
 }
