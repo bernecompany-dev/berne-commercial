@@ -5,6 +5,7 @@ import { Hero } from "@/components/hero"
 import { ServicesGrid } from "@/components/services-grid"
 import { IndustriesSection } from "@/components/industries-section"
 import { WhyUs } from "@/components/why-us"
+import { HowItWorks } from "@/components/how-it-works"
 import { BrandCloud } from "@/components/brand-cloud"
 import { CompareTeaser } from "@/components/compare-teaser"
 import { ServiceMapTeaser } from "@/components/service-map-teaser"
@@ -60,6 +61,7 @@ export default function HomePage() {
         <ServicesGrid locale="en" />
         <IndustriesSection locale="en" />
         <WhyUs locale="en" />
+        <HowItWorks locale="en" />
         <DispatchSection locale="en" />
         <ReviewsSection locale="en" />
         <CredentialsSection locale="en" />

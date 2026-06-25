@@ -67,7 +67,7 @@ export const servicesEs: Record<string, ServiceI18n> = {
     summary:
       "Diagnóstico y reemplazo de componentes de walk-in freezer — acumulación de escarcha, falla de compresor, problemas de control.",
     longDescription:
-      "El downtime de un walk-in freezer es costoso. Nuestro equipo responde con las herramientas y partes para restaurar servicio rápido — incluyendo recuperación de refrigerante, reemplazo de serpentín evaporador, reconstrucción de sistemas de defrost, trabajo eléctrico y reparación de sistemas de puerta. Atendemos walk-in freezers self-contained y de condensación remota de todas las marcas comerciales principales.",
+      "El downtime de un walk-in freezer es costoso — a 0°F una falla pone miles de dólares de inventario congelado en el reloj. Berne Commercial Repair despacha técnicos de refrigeración equipados para lo que un walk-in freezer realmente necesita: recuperación y recarga de refrigerante, reemplazo de serpentín y fan de evaporador, reconstrucción de sistemas de defrost, reparación eléctrica y de control board, y servicio de calentador y empaques de puerta. El Sur de Florida agrega modos de falla que otros mercados no ven — el aire salado corroe motores y serpentines, y la humedad carga el sistema de defrost, así que un calentador de defrost marginal congela un serpentín sólido en un solo ciclo malo. Diagnosticamos todo el freezer en la primera visita y verificamos el pulldown de temperatura antes de irnos.",
     bullets: [
       "Acumulación de escarcha y servicio de defrost",
       "Reparación de serpentín evaporador y condensador",

@@ -6,6 +6,7 @@ import { Hero } from "@/components/hero"
 import { ServicesGrid } from "@/components/services-grid"
 import { IndustriesSection } from "@/components/industries-section"
 import { WhyUs } from "@/components/why-us"
+import { HowItWorks } from "@/components/how-it-works"
 import { BrandCloud } from "@/components/brand-cloud"
 import { FounderSection } from "@/components/founder-section"
 import { TeamGrid } from "@/components/team-grid"
@@ -80,6 +81,7 @@ export default function HomePageES() {
         <ServicesGrid locale="es" />
         <IndustriesSection locale="es" />
         <WhyUs locale="es" />
+        <HowItWorks locale="es" />
         <DispatchSection locale="es" />
         <ReviewsSection locale="es" />
         <CredentialsSection locale="es" />

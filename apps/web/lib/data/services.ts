@@ -231,10 +231,57 @@ export const services: Service[] = [
     shortTitle: "Walk-In Freezers",
     category: "refrigeration",
     primary: true,
+    metaTitle: "Walk-In Freezer Repair Miami — 24/7 Emergency",
+    metaDescription:
+      "Emergency walk-in freezer repair across South Florida — frost, defrost failure, compressors, refrigerant leaks. 24/7 dispatch, COI-ready. $89 service call.",
     summary:
       "Walk-in freezer diagnostics and component replacement — frost build-up, compressor failure, control issues.",
     longDescription:
-      "Walk-in freezer downtime is expensive. Our team responds with the tools and parts to restore service quickly — including refrigerant recovery, evaporator coil replacement, defrost system rebuilds, electrical work, and door system repair. We support both self-contained and remote-condensing walk-in freezers from every major commercial brand.",
+      "Walk-in freezer downtime is expensive — at 0°F a failure puts thousands of dollars of frozen inventory on the clock. Berne Commercial Repair dispatches refrigeration technicians equipped for the work walk-in freezers actually need: refrigerant recovery and recharge, evaporator coil and fan replacement, defrost system rebuilds, electrical and control-board repair, and door heater and gasket service. We support self-contained and remote-condensing freezers from every major commercial brand. South Florida adds failure modes most markets don't see — salt-air corrosion eats condenser fan motors and coils, and humidity loads the defrost system hard, so a marginal defrost heater frosts a coil solid in a single bad cycle. We diagnose the whole freezer on the first visit and verify box temperature pulldown before we leave.",
+    symptomTable: [
+      {
+        symptom: "Box temperature climbing above 0°F",
+        cause: "Low refrigerant charge, failed defrost, or iced evaporator",
+        cost: "$250–$700",
+        response: "Emergency",
+      },
+      {
+        symptom: "Solid ice on the evaporator coil",
+        cause: "Failed defrost heater, timer or termination thermostat",
+        cost: "$250–$650",
+        response: "Same-day",
+      },
+      {
+        symptom: "Door frozen shut, frame iced over",
+        cause: "Failed door/frame heater wire or worn gasket letting air in",
+        cost: "$150–$450",
+        response: "Same-day",
+      },
+      {
+        symptom: "Evaporator fans dead or running slow",
+        cause: "Fan motor or blade wear — heat load climbs once one drops",
+        cost: "$200–$450",
+        response: "Same-day",
+      },
+      {
+        symptom: "Compressor running constantly, never satisfies",
+        cause: "Refrigerant leak, fouled condenser, or failing compressor",
+        cost: "$400–$1,200",
+        response: "Emergency",
+      },
+      {
+        symptom: "Compressor dead on a 10+ year freezer",
+        cause: "End-of-life condensing unit — replace vs repair assessment",
+        cost: "$2,500–$4,800",
+        response: "24–48h",
+      },
+      {
+        symptom: "Floor heaving or ice forming under the box",
+        cause: "Failed under-floor heater — repair-or-replace evaluation",
+        cost: "Included in $89 call",
+        response: "Same-day",
+      },
+    ],
     bullets: [
       "Frost build-up and defrost system service",
       "Evaporator and condenser coil repair",
@@ -246,7 +293,15 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Why is my walk-in freezer frosting up?",
-        a: "Common causes include a failed defrost timer or heater, door seal failure, or low refrigerant charge. We diagnose all three on the first visit.",
+        a: "Common causes include a failed defrost timer or heater, a defrost termination thermostat that won't end the cycle, door seal failure letting humid air in, or low refrigerant charge. We diagnose all four on the first visit and clear the iced coil so the box can pull back down.",
+      },
+      {
+        q: "My walk-in freezer is losing temperature — can you respond today?",
+        a: "Yes. Freezer temperature loss is treated as an emergency in our dispatch queue with same-day response across Miami-Dade, Broward and Palm Beach — frozen inventory loss is on the clock, so these calls are prioritized.",
+      },
+      {
+        q: "Repair or replace a failed walk-in freezer compressor?",
+        a: "On a freezer under about 8 years a compressor or sealed-system repair usually makes sense; past 10–12 years a full condensing-unit replacement ($2,500–$4,800) resets the system life and is often the better spend. We give you the honest math on the first visit, not a sales pitch.",
       },
     ],
   },
@@ -255,10 +310,52 @@ export const services: Service[] = [
     title: "Reach-In Cooler Repair",
     shortTitle: "Reach-In Coolers",
     category: "refrigeration",
+    primary: true,
+    metaTitle: "Reach-In Cooler Repair Miami — Same-Day",
+    metaDescription:
+      "True, Turbo Air, Traulsen & Beverage-Air reach-in cooler repair across South Florida. Temp drift, fan motors, controls. Same-day, COI-ready. $89 call.",
     summary:
       "Reach-in cooler service for prep lines, bars, and back-of-house operations.",
     longDescription:
-      "Berne Commercial Repair services reach-in coolers from True, Turbo Air, Traulsen, Continental, Delfield, Beverage-Air and other commercial brands. Common issues we resolve include temperature drift, fan failure, compressor short-cycling, and electronic control failures.",
+      "Berne Commercial Repair services reach-in coolers from True, Turbo Air, Traulsen, Continental, Delfield, Beverage-Air and other commercial brands. These units run in the hottest, busiest spots in the kitchen — on the line, behind the bar, against the cookline — so they fail in predictable ways: temperature drift above the 41°F food-safety line, evaporator fan motors burning out, compressors short-cycling on a fouled or salt-corroded condenser, and electronic controllers drifting out of calibration. We carry common parts for the brands above so most reach-in repairs finish in a single visit, and we verify cabinet temperature against spec before we leave.",
+    symptomTable: [
+      {
+        symptom: "Cabinet warm / product drifting above 41°F",
+        cause: "Thermostat or controller drift, or worn door gasket",
+        cost: "$80–$350",
+        response: "Same-day",
+      },
+      {
+        symptom: "Compressor short-cycling or running constantly",
+        cause: "Fouled/salt-corroded condenser or failing start components",
+        cost: "$120–$480",
+        response: "Same-day",
+      },
+      {
+        symptom: "Evaporator fan loud, slow, or dead",
+        cause: "Fan motor wear — common on cookline-adjacent units",
+        cost: "$150–$320",
+        response: "Same-day",
+      },
+      {
+        symptom: "Doors sweating or icing inside",
+        cause: "Worn gasket, failed door heater, or blocked drain",
+        cost: "$80–$300",
+        response: "Next visit",
+      },
+      {
+        symptom: "Water pooling inside or under the cabinet",
+        cause: "Clogged condensate drain line or cracked drain pan",
+        cost: "$90–$240",
+        response: "Next visit",
+      },
+      {
+        symptom: "Display controller showing a fault code",
+        cause: "Sensor or control board failure",
+        cost: "$120–$420",
+        response: "Same-day",
+      },
+    ],
     bullets: [
       "Compressor and condenser service",
       "Evaporator fan motor replacement",
@@ -270,6 +367,10 @@ export const services: Service[] = [
       {
         q: "Can you service True and Turbo Air reach-ins on the same visit?",
         a: "Yes. Our trucks carry common parts for True, Turbo Air, Traulsen and Beverage-Air reach-ins so we can complete most repairs in one visit.",
+      },
+      {
+        q: "My reach-in cooler is warm but the compressor is running — what's wrong?",
+        a: "Usually a fouled or salt-corroded condenser coil, a dead evaporator fan, or low refrigerant — the compressor runs but can't move heat. We diagnose all three on the first visit and most are same-day fixes across South Florida.",
       },
     ],
   },
@@ -494,10 +595,57 @@ export const services: Service[] = [
     shortTitle: "Commercial Ovens",
     category: "restaurant-equipment",
     primary: true,
+    metaTitle: "Commercial Oven & Combi Oven Repair — South FL",
+    metaDescription:
+      "Convection, combi, conveyor & deck oven repair across South Florida — Rational, Vulcan, Blodgett, Middleby. Ignition, controls, steam. $89 service call.",
     summary:
       "Convection, combi, conveyor and deck oven repair — Vulcan, Blodgett, Rational, Middleby.",
     longDescription:
-      "Berne Commercial Repair services every common commercial oven configuration — convection, combi, conveyor, deck, and rotating ovens — from Vulcan, Blodgett, Rational, Middleby, Garland, Southbend, Alto-Shaam and Hatco. We resolve ignition, gas valve, control board, blower motor and thermostat issues.",
+      "Berne Commercial Repair services every common commercial oven configuration — convection, combi, conveyor, deck, and rotating ovens — from Vulcan, Blodgett, Rational, Middleby, Garland, Southbend, Alto-Shaam and Hatco. Combi ovens are their own specialty: they combine convection heat with steam injection and run sophisticated control boards, boiler or boilerless steam generators, water-quality-sensitive descaling cycles and door-seal systems that all have to work together. We diagnose combi fault codes (Rational SCC/iCombi and similar), rebuild steam generators, descale and recalibrate, and service the gas, electric, control-board, blower-motor and thermostat issues common across the whole oven category. Every repair is verified against operating temperature before we leave.",
+    symptomTable: [
+      {
+        symptom: "Oven won't ignite or won't heat",
+        cause: "Ignition module, gas valve, or failed heating element",
+        cost: "$180–$480",
+        response: "Same-day",
+      },
+      {
+        symptom: "Oven not holding set temperature / uneven bake",
+        cause: "Thermostat or temperature-probe drift, or blower motor wear",
+        cost: "$150–$450",
+        response: "Same-day",
+      },
+      {
+        symptom: "Combi oven not generating steam",
+        cause: "Scaled or failed steam generator, water inlet, or level probe",
+        cost: "$300–$900",
+        response: "Same-day",
+      },
+      {
+        symptom: "Combi oven throwing a fault / error code",
+        cause: "Sensor, control-board or water-system fault (Rational, etc.)",
+        cost: "$200–$700",
+        response: "Same-day",
+      },
+      {
+        symptom: "Blower motor noisy or not turning (convection)",
+        cause: "Fan motor bearing wear or failed motor",
+        cost: "$250–$600",
+        response: "Same-day",
+      },
+      {
+        symptom: "Door won't seal, steam or heat escaping",
+        cause: "Worn door gasket, hinge or latch",
+        cost: "$120–$380",
+        response: "Next visit",
+      },
+      {
+        symptom: "Conveyor oven belt stalling or speed drift",
+        cause: "Drive motor, belt or controller fault",
+        cost: "$200–$650",
+        response: "Same-day",
+      },
+    ],
     bullets: [
       "Ignition and gas valve service",
       "Control board diagnostics",
@@ -508,7 +656,15 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Do you repair combi ovens?",
-        a: "Yes — including Rational, Alto-Shaam, and other combi systems used in production kitchens and hotels.",
+        a: "Yes — including Rational (SCC and iCombi), Alto-Shaam, and other combi systems used in production kitchens and hotels. We diagnose fault codes, rebuild and descale steam generators, service control boards and water systems, and recalibrate against operating spec.",
+      },
+      {
+        q: "My combi oven stopped making steam — can you fix it?",
+        a: "Yes. No-steam combi calls are usually a scaled or failed steam generator, a clogged water inlet, or a level-probe fault — South Florida's hard water scales steam systems fast. We descale, rebuild and recalibrate, typically same-day across Miami-Dade, Broward and Palm Beach.",
+      },
+      {
+        q: "What does a commercial oven service call cost?",
+        a: "Our commercial service call is $89, and it is free when you approve the repair — the fee applies only if you decline.",
       },
     ],
   },

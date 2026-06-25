@@ -9,6 +9,7 @@ import { Badge } from "@workspace/ui/components/badge"
 import { AnchorButton, LinkButton } from "@/components/link-button"
 import { DispatchForm } from "@/components/dispatch-form"
 import { ServiceBullets } from "@/components/service-bullets"
+import { HowItWorks } from "@/components/how-it-works"
 import { FAQSection } from "@/components/faq-section"
 import { JsonLd } from "@/components/json-ld"
 import { faqSchema, metaFor, serviceSchema, breadcrumbSchema } from "@/lib/seo"
@@ -185,6 +186,8 @@ export default async function ServiceDetailPage({ params }: Params) {
           </div>
         </section>
       ) : null}
+
+      <HowItWorks locale="en" />
 
       <section
         id="dispatch"

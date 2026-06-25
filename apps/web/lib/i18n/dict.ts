@@ -107,6 +107,18 @@ type Dict = {
     repairs: { title: string; body: string }
     experienced: { title: string; body: string }
   }
+  howItWorks: {
+    eyebrow: string
+    title: string
+    description: string
+    cta: string
+    steps: {
+      request: { title: string; body: string }
+      diagnose: { title: string; body: string }
+      repair: { title: string; body: string }
+      warranty: { title: string; body: string }
+    }
+  }
   founder: {
     name: string
     role: string
@@ -258,6 +270,31 @@ const en: Dict = {
     experienced: {
       title: "Experienced technicians",
       body: "Factory-trained on the brands that run commercial kitchens.",
+    },
+  },
+  howItWorks: {
+    eyebrow: "How it works",
+    title: "From down equipment to back in service",
+    description:
+      "Four steps, no runaround. Commercial dispatch built to get restaurants, hotels and facilities back online — usually the same day.",
+    cta: "Request commercial dispatch",
+    steps: {
+      request: {
+        title: "Request dispatch",
+        body: "Call dispatch or submit the form — tell us the equipment, the symptom and the address. A coordinator confirms the service window, often within the hour.",
+      },
+      diagnose: {
+        title: "On-site diagnosis",
+        body: "A factory-trained technician diagnoses the unit on the first visit. The $89 commercial service call covers the diagnosis — and it's free when you approve the repair.",
+      },
+      repair: {
+        title: "Same-day commercial repair",
+        body: "Most repairs are completed on the spot — our trucks carry common refrigeration, ice machine and restaurant-equipment parts. Refrigeration loss is treated as an emergency.",
+      },
+      warranty: {
+        title: "Verified & warrantied",
+        body: "Every repair is verified against operating spec before we leave, then backed by our parts-and-labor warranty. COI and multi-location reporting available for chains.",
+      },
     },
   },
   founder: {
@@ -412,6 +449,31 @@ const es: Dict = {
     experienced: {
       title: "Técnicos con experiencia",
       body: "Certificados de fábrica en las marcas que mueven cocinas comerciales.",
+    },
+  },
+  howItWorks: {
+    eyebrow: "Cómo funciona",
+    title: "De equipo caído a de vuelta en servicio",
+    description:
+      "Cuatro pasos, sin vueltas. Despacho comercial diseñado para que restaurantes, hoteles e instalaciones vuelvan a operar — normalmente el mismo día.",
+    cta: "Solicitar despacho comercial",
+    steps: {
+      request: {
+        title: "Solicite el despacho",
+        body: "Llame a despacho o envíe el formulario — indique el equipo, el síntoma y la dirección. Un coordinador confirma la ventana de servicio, a menudo en menos de una hora.",
+      },
+      diagnose: {
+        title: "Diagnóstico en sitio",
+        body: "Un técnico certificado de fábrica diagnostica la unidad en la primera visita. La llamada de servicio comercial de $89 cubre el diagnóstico — y es gratis cuando aprueba la reparación.",
+      },
+      repair: {
+        title: "Reparación comercial el mismo día",
+        body: "La mayoría de las reparaciones se completan en el sitio — nuestros trucks llevan repuestos comunes de refrigeración, máquinas de hielo y equipo de restaurante. La pérdida de refrigeración se trata como emergencia.",
+      },
+      warranty: {
+        title: "Verificado y con garantía",
+        body: "Cada reparación se verifica contra la especificación de operación antes de irnos, y queda respaldada por nuestra garantía de repuestos y mano de obra. COI y reportes multi-locación disponibles para cadenas.",
+      },
     },
   },
   founder: {
