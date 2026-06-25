@@ -169,6 +169,17 @@ export function DispatchForm({
       if (typeof window !== "undefined" && typeof window.oaiq === "function") {
         window.oaiq("measure", "lead_created", { type: "customer_action" })
       }
+      // Microsoft Bing UET — REAL lead conversion (parity with Google/Meta).
+      // Previously Bing only counted `phone_click` (tel: taps), which inflated
+      // "conversions" far above real leads. Fire a dedicated submit_lead event
+      // so a Bing goal can count actual dispatch-form leads.
+      if (typeof window !== "undefined") {
+        const w = window as unknown as { uetq?: { push: (...a: unknown[]) => void } }
+        w.uetq?.push("event", "submit_lead", {
+          event_category: "dispatch",
+          event_label: String(payload.service ?? ""),
+        })
+      }
     } catch (err) {
       console.error("dispatch submit error:", err)
       setStatus("error")
