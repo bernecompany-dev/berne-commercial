@@ -18,6 +18,10 @@ function detectLocale(pathname: string): Locale {
 const EN_ONLY_PREFIXES = [
   "/compare",
   "/team",
+  // No /es/reviews or /es/service-map route exists — fall back to /es home
+  // instead of emitting a 404 link from the language switcher.
+  "/reviews",
+  "/service-map",
   "/services/medical-lab-refrigeration-repair",
   "/fort-lauderdale/medical-lab-refrigeration-repair",
   // Static brand-service routes (manitowoc, hoshizaki, …) — EN-only by
