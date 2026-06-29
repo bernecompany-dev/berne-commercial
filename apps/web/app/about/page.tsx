@@ -3,12 +3,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { Quote, ArrowUpRight } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { TrustedBy } from "@/components/trusted-by"
 import { WhyUs } from "@/components/why-us"
 import { TeamGrid } from "@/components/team-grid"
 import { CredentialsSection } from "@/components/credentials-section"
 import { INDUSTRY_PROFILES } from "@/lib/data/industry-profiles"
-import { metaFor, personJsonLd } from "@/lib/seo"
+import { metaFor, personJsonLd, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 import { team } from "@/lib/data/team"
@@ -23,6 +24,7 @@ export const metadata: Metadata = metaFor({
 export default function AboutPage() {
   return (
     <PageShell>
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "About" }]} />
       <PageHero
         eyebrow="About"
         title="A commercial service organization built for South Florida operations"
@@ -253,6 +255,22 @@ export default function AboutPage() {
 
       {/* Person JSON-LD for every member of the field team — E-E-A-T. */}
       <JsonLd data={team.map((t) => personJsonLd(t))} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "About — Berne Commercial Repair",
+          url: `${site.url}/about`,
+          isPartOf: { "@id": `${site.url}/#website` },
+          about: { "@id": `${site.url}/#organization` },
+        }}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: `${site.url}/` },
+          { name: "About", url: `${site.url}/about` },
+        ])}
+      />
     </PageShell>
   )
 }

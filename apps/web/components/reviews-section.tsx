@@ -1,4 +1,5 @@
-import { Star, Quote } from "lucide-react"
+import Link from "next/link"
+import { Star, Quote, ArrowRight } from "lucide-react"
 import { SectionHeading } from "./section-heading"
 import { REVIEWS, REVIEW_AGGREGATE } from "@/lib/data/reviews"
 import type { Locale } from "@/lib/i18n/config"
@@ -97,6 +98,20 @@ export function ReviewsSection({ locale = "en" }: { locale?: Locale }) {
             </figure>
           ))}
         </div>
+
+        {/* De-orphan the indexable /reviews page (EN-only) — it was sitemapped
+            but had zero internal links. Also a CRO trust touchpoint. */}
+        {!isEs ? (
+          <div className="mt-10 text-center">
+            <Link
+              href="/reviews"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline-offset-4 hover:underline"
+            >
+              Read all reviews
+              <ArrowRight className="size-4" aria-hidden />
+            </Link>
+          </div>
+        ) : null}
       </div>
     </section>
   )

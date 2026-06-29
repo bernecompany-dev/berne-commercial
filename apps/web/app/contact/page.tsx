@@ -1,9 +1,11 @@
 import type { Metadata } from "next"
 import { Mail, MapPin, Phone, ShieldCheck } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { Card } from "@workspace/ui/components/card"
 import { DispatchForm } from "@/components/dispatch-form"
-import { metaFor } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import { metaFor, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 
 export const metadata: Metadata = metaFor({
@@ -25,6 +27,7 @@ const ALT_PHONES = [
 export default function ContactPage() {
   return (
     <PageShell hideDispatchCta>
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Contact" }]} />
       <PageHero
         eyebrow="Contact"
         title="Talk to commercial dispatch"
@@ -64,6 +67,23 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact — Berne Commercial Repair",
+          url: `${site.url}/contact`,
+          isPartOf: { "@id": `${site.url}/#website` },
+          about: { "@id": `${site.url}/#localbusiness` },
+        }}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: `${site.url}/` },
+          { name: "Contact", url: `${site.url}/contact` },
+        ])}
+      />
     </PageShell>
   )
 }

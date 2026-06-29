@@ -1,8 +1,10 @@
 import type { Metadata } from "next"
 import { CheckCircle2 } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { DispatchForm } from "@/components/dispatch-form"
-import { metaFor } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import { metaFor, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
 
 export const metadata: Metadata = metaFor({
@@ -24,6 +26,9 @@ const capabilities = [
 export default function BecomeAClientPage() {
   return (
     <PageShell>
+      <Breadcrumbs
+        items={[{ name: "Home", href: "/" }, { name: "Become a Client" }]}
+      />
       <PageHero
         eyebrow="Become a Client"
         title="Enterprise commercial service partnership"
@@ -64,6 +69,13 @@ export default function BecomeAClientPage() {
           </div>
         </div>
       </section>
+
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: `${site.url}/` },
+          { name: "Become a Client", url: `${site.url}/become-a-client` },
+        ])}
+      />
     </PageShell>
   )
 }

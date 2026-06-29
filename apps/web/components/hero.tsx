@@ -1,8 +1,9 @@
 import Link from "next/link"
-import { ArrowRight, Phone, Shield, Snowflake, Wrench } from "lucide-react"
+import { ArrowRight, Phone, Shield, Snowflake, Star, Wrench } from "lucide-react"
 import { Badge } from "@workspace/ui/components/badge"
 import { AnchorButton, LinkButton } from "./link-button"
 import { site } from "@/lib/site"
+import { REVIEW_AGGREGATE } from "@/lib/data/reviews"
 import { t } from "@/lib/i18n/dict"
 import type { Locale } from "@/lib/i18n/config"
 
@@ -52,6 +53,31 @@ export function Hero({ locale = "en" }: { locale?: Locale }) {
             >
               <Phone className="size-4" /> {tr.cta.callNow}
             </AnchorButton>
+          </div>
+          {/* Above-the-fold social proof — the 4.79★/871 aggregate is the
+              site's strongest trust asset but otherwise first appears ~7
+              sections down. Surfacing it under the hero CTA lifts form starts. */}
+          <div className="mt-5 flex items-center justify-center gap-2">
+            <span
+              className="flex"
+              role="img"
+              aria-label={`${REVIEW_AGGREGATE.ratingValue} ${locale === "es" ? "de 5 estrellas" : "out of 5 stars"}`}
+            >
+              {[0, 1, 2, 3, 4].map((i) => (
+                <Star
+                  key={i}
+                  aria-hidden
+                  className="size-4 fill-primary text-primary"
+                />
+              ))}
+            </span>
+            <span className="text-sm text-muted-foreground">
+              <span className="font-semibold text-foreground">
+                {REVIEW_AGGREGATE.ratingValue}★
+              </span>{" "}
+              {locale === "es" ? "de" : "from"} {REVIEW_AGGREGATE.reviewCount}{" "}
+              {locale === "es" ? "reseñas · familia Berne" : "reviews · Berne family"}
+            </span>
           </div>
           {/* B2B onboarding is a different journey — keep the path, drop the
               third competing button (it's already in the navbar + footer). */}

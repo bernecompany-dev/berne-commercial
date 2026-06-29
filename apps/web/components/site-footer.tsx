@@ -33,6 +33,9 @@ export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
     // /team is EN-only — no /es prefix (avoids a sitewide 404 link on every
     // ES page; same rationale as /compare in `browse` below).
     { href: "/team", label: locale === "es" ? "Equipo" : "Team" },
+    // /reviews is EN-only (indexable, sitemapped) — was previously orphaned
+    // with zero internal links. Same EN-only treatment as /team & /compare.
+    { href: "/reviews", label: locale === "es" ? "Reseñas" : "Reviews" },
     { href: `${p}/careers`, label: locale === "es" ? "Carreras" : "Careers" },
     {
       href: `${p}/credentials`,

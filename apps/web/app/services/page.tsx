@@ -2,9 +2,12 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { Card } from "@workspace/ui/components/card"
-import { metaFor } from "@/lib/seo"
-import { servicesByCategory } from "@/lib/data/services"
+import { JsonLd } from "@/components/json-ld"
+import { metaFor, breadcrumbSchema } from "@/lib/seo"
+import { site } from "@/lib/site"
+import { services, servicesByCategory } from "@/lib/data/services"
 import { BRAND_SERVICES } from "@/lib/data/brand-services"
 
 export const metadata: Metadata = metaFor({
@@ -18,6 +21,7 @@ export default function ServicesPage() {
   const groups = servicesByCategory()
   return (
     <PageShell>
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Services" }]} />
       <PageHero
         eyebrow="Services"
         title="Commercial repair services"
@@ -119,6 +123,27 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Commercial Repair Services",
+          url: `${site.url}/services`,
+          isPartOf: { "@id": `${site.url}/#website` },
+          hasPart: services.map((s) => ({
+            "@type": "Service",
+            name: s.title,
+            url: `${site.url}/services/${s.slug}`,
+          })),
+        }}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: `${site.url}/` },
+          { name: "Services", url: `${site.url}/services` },
+        ])}
+      />
     </PageShell>
   )
 }
