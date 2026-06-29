@@ -84,6 +84,17 @@ import { howLongCommercialEquipmentLasts } from "./content/how-long-commercial-e
 import { mostReliableCommercialRefrigerationBrands } from "./content/most-reliable-commercial-refrigeration-brands"
 import { newVsRefurbishedCommercialEquipment } from "./content/new-vs-refurbished-commercial-equipment"
 import { leaseVsBuyCommercialKitchenEquipment } from "./content/lease-vs-buy-commercial-kitchen-equipment"
+// Specialty commercial service hubs (2026-06-29): one field guide per new
+// static /services page (humidor, wine cooler, beer cooler, pizza oven,
+// holding cabinet, sauna, cold plunge, pool heater). Each cross-links its hub.
+import { commercialHumidorHumidityControl } from "./content/commercial-humidor-humidity-control-cigar-lounge"
+import { commercialWineCoolerTempHumidity } from "./content/commercial-wine-cooler-temperature-humidity-restaurant"
+import { beerCoolerKegeratorDirectDraw } from "./content/beer-cooler-kegerator-direct-draw-bar"
+import { commercialPizzaOvenDeckConveyor } from "./content/commercial-pizza-oven-deck-conveyor-repair"
+import { holdingCabinetTemperatureFoodSafety } from "./content/holding-cabinet-temperature-food-safety"
+import { commercialSaunaHeaterControl } from "./content/commercial-sauna-heater-control-spa-hotel"
+import { commercialColdPlungeChiller } from "./content/commercial-cold-plunge-chiller-wellness-spa"
+import { commercialPoolHeaterHotelHoa } from "./content/commercial-pool-heater-hotel-hoa-repair"
 
 export type ArticleSection = {
   heading: string
@@ -189,6 +200,14 @@ export const articles: Article[] = [
   mostReliableCommercialRefrigerationBrands,
   newVsRefurbishedCommercialEquipment,
   leaseVsBuyCommercialKitchenEquipment,
+  commercialHumidorHumidityControl,
+  commercialWineCoolerTempHumidity,
+  beerCoolerKegeratorDirectDraw,
+  commercialPizzaOvenDeckConveyor,
+  holdingCabinetTemperatureFoodSafety,
+  commercialSaunaHeaterControl,
+  commercialColdPlungeChiller,
+  commercialPoolHeaterHotelHoa,
 ]
 
 export function getArticle(slug: string): Article | undefined {

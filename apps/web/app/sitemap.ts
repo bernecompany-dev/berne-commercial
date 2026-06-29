@@ -116,6 +116,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" as const,
     priority: 0.9,
   })
+  // Commercial specialty service hubs (2026-06-29) — static EN-only routes,
+  // NOT services.ts entries (would spawn ~70 phantom /{city}/ combos each).
+  // Same machinery as medical-lab / combi-oven. Hand-listed here.
+  for (const slug of [
+    "commercial-humidor-repair",
+    "commercial-wine-cooler-repair",
+    "beer-cooler-repair",
+    "pizza-oven-repair",
+    "holding-cabinet-repair",
+    "commercial-sauna-repair",
+    "commercial-cold-plunge-repair",
+    "commercial-pool-heater-repair",
+  ]) {
+    serviceDetails.push({
+      url: `${base}/services/${slug}`,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    })
+  }
 
   // Brand-specific service pages (Content_Plan 2026-06-10) — same static
   // EN-only machinery as medical-lab. Honest lastmod from the data layer.

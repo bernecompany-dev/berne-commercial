@@ -90,8 +90,86 @@ export default function ServicesPage() {
               </Link>
             </div>
           </div>
+
+          {/* Specialty commercial hubs (2026-06-29) — static EN-only routes
+              outside services.ts (cigar lounge, bar, spa, hotel, wellness). */}
+          <div>
+            <h2 className="text-2xl font-semibold tracking-tight">
+              Specialty Commercial Repair
+            </h2>
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {specialtyHubs.map((s) => (
+                <Link
+                  key={s.slug}
+                  href={`/services/${s.slug}`}
+                  className="group"
+                >
+                  <Card className="h-full gap-3 p-5 transition-all hover:border-primary/40 hover:shadow-md">
+                    <div className="flex items-start justify-between gap-2">
+                      <span className="text-sm font-semibold">{s.title}</span>
+                      <ArrowUpRight className="size-4 text-muted-foreground transition-colors group-hover:text-primary" />
+                    </div>
+                    <p className="text-xs leading-relaxed text-muted-foreground">
+                      {s.summary}
+                    </p>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </PageShell>
   )
 }
+
+const specialtyHubs: { slug: string; title: string; summary: string }[] = [
+  {
+    slug: "commercial-humidor-repair",
+    title: "Commercial Humidor Repair",
+    summary:
+      "Walk-in and cabinet humidors for cigar lounges and retail — humidity, cooling, seals.",
+  },
+  {
+    slug: "commercial-wine-cooler-repair",
+    title: "Commercial Wine Cooler Repair",
+    summary:
+      "Restaurant and retail wine refrigeration and cellars — dual-zone temp, humidity, compressors.",
+  },
+  {
+    slug: "beer-cooler-repair",
+    title: "Beer Cooler & Kegerator Repair",
+    summary:
+      "Direct-draw beer coolers and kegerators for bars — temperature, foam, dispensing.",
+  },
+  {
+    slug: "pizza-oven-repair",
+    title: "Commercial Pizza Oven Repair",
+    summary:
+      "Deck, conveyor and brick pizza ovens — burners, belts, controls and even bake.",
+  },
+  {
+    slug: "holding-cabinet-repair",
+    title: "Holding & Warming Cabinet Repair",
+    summary:
+      "Heated holding and warming cabinets — elements, humidity and hot-hold compliance.",
+  },
+  {
+    slug: "commercial-sauna-repair",
+    title: "Commercial Sauna Repair",
+    summary:
+      "Spa, gym and hotel saunas and steam rooms — heaters, controls and generators.",
+  },
+  {
+    slug: "commercial-cold-plunge-repair",
+    title: "Commercial Cold Plunge Repair",
+    summary:
+      "Cold plunge and ice-bath chillers for gyms and spas — refrigeration, pumps, sanitation.",
+  },
+  {
+    slug: "commercial-pool-heater-repair",
+    title: "Commercial Pool Heater Repair",
+    summary:
+      "Hotel and HOA pool and spa heaters — gas heaters, heat pumps, exchangers and controls.",
+  },
+]
