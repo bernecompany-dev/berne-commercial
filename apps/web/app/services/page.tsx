@@ -29,6 +29,27 @@ export default function ServicesPage() {
       />
       <section className="bg-background py-16">
         <div className="mx-auto max-w-7xl space-y-14 px-4 sm:px-6 lg:px-8">
+          {/* Cost-guide data-asset callout — links the resource from the
+              services hub (internal-equity distribution, 2026-06-29). */}
+          <Link
+            href="/resources/commercial-kitchen-repair-cost-guide"
+            className="group block"
+          >
+            <Card className="gap-2 border-primary/30 bg-primary/5 p-6 transition-all hover:border-primary/50 hover:shadow-md">
+              <div className="flex items-start justify-between gap-3">
+                <span className="text-base font-semibold text-foreground group-hover:text-primary">
+                  South Florida Commercial Kitchen Repair Cost Guide
+                </span>
+                <ArrowUpRight className="size-5 shrink-0 text-primary" />
+              </div>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                What repairs actually cost by equipment type — walk-in, ice,
+                fryer, combi, dishwasher, range and more — plus typical
+                lifespans and an interactive repair-vs-replace calculator.
+              </p>
+            </Card>
+          </Link>
+
           {groups.map((g) => (
             <div key={g.category}>
               <h2 className="text-2xl font-semibold tracking-tight">

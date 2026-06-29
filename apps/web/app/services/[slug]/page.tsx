@@ -181,7 +181,15 @@ export default async function ServiceDetailPage({ params }: Params) {
             <p className="mt-4 text-xs text-muted-foreground">
               Same-day dispatch is typical across Miami-Dade, Broward and Palm
               Beach; refrigeration loss is prioritized as an emergency. Call{" "}
-              {site.phone} for a window.
+              {site.phone} for a window. Comparing costs across equipment?
+              See our{" "}
+              <Link
+                href="/resources/commercial-kitchen-repair-cost-guide"
+                className="font-medium text-primary hover:underline"
+              >
+                South Florida commercial kitchen repair cost guide
+              </Link>{" "}
+              and repair-vs-replace calculator.
             </p>
           </div>
         </section>

@@ -145,6 +145,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
+  // Linkable data-asset: the commercial kitchen repair cost guide (2026-06-29).
+  // Static EN-only resource route; high-value editorial/LLM citation target, so
+  // weekly changefreq + 0.8 priority (above the service combos, below hubs).
+  const resourcePages = [
+    {
+      url: `${base}/resources/commercial-kitchen-repair-cost-guide`,
+      lastModified: new Date("2026-06-29T12:00:00Z"),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+  ]
+
   // City-specific medical/lab page (static route, outside the combo matrix).
   const specialtyCityPages = [
     {
@@ -246,6 +258,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogPosts,
     ...serviceDetails,
     ...brandServicePages,
+    ...resourcePages,
     ...specialtyCityPages,
     ...esServiceDetails,
     ...brandPages,

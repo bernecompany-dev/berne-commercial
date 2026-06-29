@@ -336,7 +336,15 @@ export default function CombiOvenRepairHub() {
             Real numbers from our South Florida service tickets — parts plus
             labor, before any contract pricing. The {site.serviceCall} commercial
             service call covers the diagnosis and is free when you approve the
-            repair — the fee applies only if you decline.
+            repair — the fee applies only if you decline. For costs across every
+            equipment type plus a repair-vs-replace calculator, see our{" "}
+            <Link
+              href="/resources/commercial-kitchen-repair-cost-guide"
+              className="font-medium text-primary hover:underline"
+            >
+              commercial kitchen repair cost guide
+            </Link>
+            .
           </p>
           <p className="mt-4 text-xs text-muted-foreground md:hidden" aria-hidden>
             Swipe to see costs and dispatch times →

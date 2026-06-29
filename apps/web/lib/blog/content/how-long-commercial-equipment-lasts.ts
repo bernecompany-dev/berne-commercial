@@ -105,6 +105,7 @@ export const howLongCommercialEquipmentLasts: Article = {
     { label: "Fryer repair", href: "/services/fryer-repair" },
     { label: "Commercial oven repair", href: "/services/commercial-oven-repair" },
     { label: "Walk-in cooler: repair or replace", href: "/compare/walk-in-cooler-repair-or-replace" },
+    { label: "Commercial kitchen repair cost guide + calculator", href: "/resources/commercial-kitchen-repair-cost-guide" },
   ],
   relatedSlugs: [
     "most-reliable-commercial-refrigeration-brands",

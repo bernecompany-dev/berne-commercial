@@ -62,6 +62,12 @@ export default function IndustriesPage() {
           <LinkButton href="/services" variant="outline">
             Browse all services
           </LinkButton>
+          <LinkButton
+            href="/resources/commercial-kitchen-repair-cost-guide"
+            variant="outline"
+          >
+            Repair cost guide
+          </LinkButton>
         </div>
       </PageHero>
 
