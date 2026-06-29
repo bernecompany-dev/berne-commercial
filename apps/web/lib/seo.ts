@@ -47,6 +47,10 @@ export function metaFor({
   esAlternate?: boolean
 }): Metadata {
   const url = `${site.url}${path}`
+  // SERP budget: descriptions are clamped to ~155 chars so Google doesn't
+  // truncate them. clampDescription is idempotent and leaves shorter copy
+  // untouched, so it's safe to apply globally here (P2 fix 2026-06-29).
+  const desc = clampDescription(description)
   // For canonical/alternates: if path starts with /es, EN equivalent strips it.
   const enPath = path.startsWith("/es/")
     ? path.replace(/^\/es/, "")
@@ -56,7 +60,7 @@ export function metaFor({
   const esPath = path.startsWith("/es") ? path : `/es${path === "/" ? "" : path}`
   return {
     title,
-    description,
+    description: desc,
     alternates: {
       canonical: url,
       // EN-only pages still emit a self-referencing en + x-default pair —
@@ -67,7 +71,7 @@ export function metaFor({
     },
     openGraph: {
       title,
-      description,
+      description: desc,
       url,
       siteName: site.name,
       type: "website",
@@ -77,7 +81,7 @@ export function metaFor({
     twitter: {
       card: "summary_large_image",
       title,
-      description,
+      description: desc,
       images: ["/opengraph-image"],
     },
     robots: noindex
