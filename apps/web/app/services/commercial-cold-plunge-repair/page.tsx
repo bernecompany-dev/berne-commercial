@@ -39,7 +39,7 @@ import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 const PATH = "/services/commercial-cold-plunge-repair"
 
 export const metadata: Metadata = metaFor({
-  title: "Commercial Cold Plunge Repair Miami & South Florida",
+  title: "Commercial Cold Plunge Repair Miami",
   description:
     "Cold plunge & ice-bath chiller repair for gyms, spas & recovery studios — Plunge, Renu Therapy, BlueCube, Penguin. Holds 38–50°F. 4.79★. $89 call.",
   path: PATH,

@@ -34,7 +34,7 @@ import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 const PATH = "/services/commercial-wine-cooler-repair"
 
 export const metadata: Metadata = metaFor({
-  title: "Commercial Wine Cooler Repair Miami & South Florida",
+  title: "Commercial Wine Cooler Repair Miami",
   description:
     "Restaurant & bar wine cooler and cellar repair — Sub-Zero, EuroCave, Perlick, Vinotemp, Wine Guardian. Dual-zone temp, humidity & condensation fixed. 4.79★. $89 call.",
   path: PATH,

@@ -35,7 +35,7 @@ import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 const PATH = "/services/holding-cabinet-repair"
 
 export const metadata: Metadata = metaFor({
-  title: "Holding & Warming Cabinet Repair Miami — South Florida",
+  title: "Holding & Warming Cabinet Repair Miami",
   description:
     "Heated holding & Cook-and-Hold cabinet repair across South Florida — Alto-Shaam, Winston CVap, Cres Cor, Metro C5, Hatco, FWE. Hot-hold temp & humidity fixed. 4.79★. $89 call.",
   path: PATH,

@@ -38,7 +38,7 @@ import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 const PATH = "/services/beer-cooler-repair"
 
 export const metadata: Metadata = metaFor({
-  title: "Beer Cooler & Kegerator Repair Miami — Bars 24/7",
+  title: "Beer Cooler & Kegerator Repair Miami",
   description:
     "Direct-draw beer cooler, kegerator & back-bar repair across South Florida — True, Beverage-Air, Perlick, Micro Matic, Krowne. Foam & warm pours fixed. 4.79★. $89 call.",
   path: PATH,

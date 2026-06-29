@@ -37,7 +37,7 @@ import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 const PATH = "/services/pizza-oven-repair"
 
 export const metadata: Metadata = metaFor({
-  title: "Commercial Pizza Oven Repair Miami — Deck & Conveyor",
+  title: "Commercial Pizza Oven Repair Miami",
   description:
     "Deck, stone & conveyor pizza oven repair across South Florida — Middleby Marshall, Lincoln Impinger, Bakers Pride, Blodgett, Marsal. Burners, belts, boards fixed. 4.79★. $89 call.",
   path: PATH,

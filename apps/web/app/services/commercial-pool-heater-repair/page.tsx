@@ -38,7 +38,7 @@ import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 const PATH = "/services/commercial-pool-heater-repair"
 
 export const metadata: Metadata = metaFor({
-  title: "Commercial Pool Heater Repair Miami & South Florida",
+  title: "Commercial Pool Heater Repair Miami",
   description:
     "Pool & spa heater repair for hotels, HOAs & clubs — Pentair, Raypak, Hayward, Jandy gas heaters & heat pumps. Heat exchangers, ignition, TXV. 4.79★. $89 call.",
   path: PATH,

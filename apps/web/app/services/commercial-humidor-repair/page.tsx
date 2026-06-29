@@ -33,7 +33,7 @@ import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 const PATH = "/services/commercial-humidor-repair"
 
 export const metadata: Metadata = metaFor({
-  title: "Commercial Humidor Repair Miami & South Florida",
+  title: "Commercial Humidor Repair Miami",
   description:
     "Walk-in & cabinet humidor repair for cigar lounges and hotels — Vigilant, Aristocrat, Cigar Oasis, Hydra. RH 68-72%, cooling & seals fixed. 4.79★. $89 call.",
   path: PATH,

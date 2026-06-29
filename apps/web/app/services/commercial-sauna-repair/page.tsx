@@ -35,7 +35,7 @@ import { REPAIRS_COMPLETED_DISPLAY } from "@/lib/data/company"
 const PATH = "/services/commercial-sauna-repair"
 
 export const metadata: Metadata = metaFor({
-  title: "Commercial Sauna Repair Miami — Spa & Hotel | South Florida",
+  title: "Commercial Sauna Repair Miami — Spa & Hotel",
   description:
     "Commercial sauna & steam room repair across South Florida — Tylö/Helo, Finnleo, Amerec, Saunacore, Harvia, Mr.Steam. 3-phase heaters, controls, generators fixed. 4.79★. $89 call.",
   path: PATH,
