@@ -26,6 +26,13 @@ export type Service = {
   category: ServiceCategory
   summary: string
   longDescription: string
+  /**
+   * Self-contained "quick answer" passage for AI-citation (GEO) — rendered
+   * by <QuickAnswer> directly under the hero on top money pages. 2–4 concrete
+   * sentences answering who/what/where/how much in one extractable block.
+   * Set only on the highest-intent hubs; pages without it skip the block.
+   */
+  quickAnswer?: string
   bullets: string[]
   faqs: { q: string; a: string }[]
   /**
@@ -82,6 +89,8 @@ export const services: Service[] = [
       "Same-day refrigeration service for restaurants, supermarkets, production facilities and enterprise clients.",
     longDescription:
       "Berne Commercial Repair services every class of commercial refrigeration system in South Florida — from walk-in coolers and freezers to reach-in units, prep tables, display merchandisers, and deep freeze systems. Our refrigeration technicians are factory-trained on the brands that dominate commercial kitchens and back-of-house operations: Hoshizaki, Manitowoc, Scotsman, Turbo Air, True, Traulsen, Beverage-Air, Continental, Delfield and more.",
+    quickAnswer:
+      "Berne Commercial Repair fixes commercial refrigeration across South Florida — walk-in coolers and freezers, reach-ins, prep tables and display merchandisers — for restaurants, supermarkets, production facilities and enterprise accounts in Miami-Dade, Broward and Palm Beach. Technicians are EPA 608-certified and factory-trained on Hoshizaki, Manitowoc, Scotsman, Turbo Air, True and Traulsen. Dispatch is same-day with 24/7 emergency response for temperature loss; the commercial service call is $89 and is free when you approve the repair. Typical refrigeration repairs run $80–$1,200 depending on the fault, with end-of-life compressor replacement at $700–$1,300.",
     symptomTable: [
       {
         symptom: "Cabinet not holding temperature / product above 41°F",
@@ -162,6 +171,8 @@ export const services: Service[] = [
       "Emergency walk-in cooler service — temperature loss, door seal issues, compressor failures, refrigerant leaks.",
     longDescription:
       "A failing walk-in cooler puts inventory and revenue at risk. Berne Commercial Repair dispatches refrigeration technicians equipped for walk-in cooler diagnostics, refrigerant recovery, electrical work, and component replacement. We service every common configuration — indoor and outdoor units, self-contained and remote condensing systems, and walk-ins with custom panels.",
+    quickAnswer:
+      "Berne Commercial Repair handles emergency walk-in cooler repair across South Florida — Miami-Dade, Broward and Palm Beach — for temperature loss, iced evaporator coils, dead fan motors, refrigerant leaks and compressor failure. Loss-of-temperature calls are treated as emergencies with same-day, 24/7 dispatch, and our trucks carry common compressors for Hoshizaki, Turbo Air, True, Traulsen and Manitowoc walk-ins. The $89 commercial service call is free with an approved repair; most component repairs run $150–$700, while a full condensing-unit replacement on an aging cooler runs $2,500–$4,500.",
     symptomTable: [
       {
         symptom: "Temperature creeping up overnight",
@@ -222,6 +233,14 @@ export const services: Service[] = [
       {
         q: "Do you replace walk-in cooler compressors?",
         a: "Yes — we carry common compressor sizes and source factory-matched replacements for Hoshizaki, Turbo Air, True, Traulsen and Manitowoc walk-ins.",
+      },
+      {
+        q: "How much does walk-in cooler repair cost?",
+        a: "The commercial service call is $89 and is free when you approve the repair. Most walk-in component repairs — gaskets, fan motors, defrost parts and control boards — run $150–$700; a refrigerant leak repair and recharge runs $400–$1,200, and a full condensing-unit replacement on an aging cooler runs $2,500–$4,500. You get the honest repair-or-replace math on the first visit.",
+      },
+      {
+        q: "What walk-in cooler brands do you repair?",
+        a: "We service every common configuration and carry factory-matched parts for Hoshizaki, Turbo Air, True, Traulsen, Manitowoc, Beverage-Air, Continental and Delfield — including custom-panel walk-ins with self-contained or remote condensing units.",
       },
     ],
   },
@@ -410,6 +429,8 @@ export const services: Service[] = [
       "Commercial ice machine repair for restaurants, hotels, healthcare and retail — Hoshizaki, Manitowoc, Scotsman.",
     longDescription:
       "Berne Commercial Repair services every major commercial ice machine — Hoshizaki, Manitowoc, Scotsman, Ice-O-Matic, Follett, Kold-Draft and more. Whether you have a modular head, undercounter, or remote condenser system, our technicians diagnose ice production failures, water flow problems, electronic control faults, and refrigeration loops.",
+    quickAnswer:
+      "Berne Commercial Repair services commercial ice machines across South Florida — Hoshizaki, Manitowoc, Scotsman, Ice-O-Matic, Follett and Kold-Draft — for restaurants, hotels, healthcare and retail in Miami-Dade, Broward and Palm Beach. We fix low or no ice production, harvest faults, scaling, water-flow problems and control-board faults, with same-day dispatch and priority for hotels and high-volume kitchens. The $89 service call is free with an approved repair; most ice machine repairs run $60–$340, and auger-bearing work on nugget machines runs $300–$600.",
     symptomTable: [
       {
         symptom: "No ice, or cubes coming out thin",
@@ -470,6 +491,10 @@ export const services: Service[] = [
       {
         q: "How fast can you respond to an ice machine outage?",
         a: "Same-day in most South Florida service areas. Hotels and high-volume food service operations are prioritized.",
+      },
+      {
+        q: "How much does commercial ice machine repair cost?",
+        a: "The $89 commercial service call is free when you approve the repair. Most ice machine repairs — water inlet valves, harvest and bin sensors, scaling and sanitation — run $60–$340; condenser and control-board work runs $120–$420, and auger-bearing replacement on nugget machines runs $300–$600.",
       },
     ],
   },

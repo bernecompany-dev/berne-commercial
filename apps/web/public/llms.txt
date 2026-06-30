@@ -47,6 +47,10 @@
 
 Hoshizaki, Manitowoc, Scotsman, Turbo Air, True, Traulsen, Beverage-Air, Continental, Delfield, Vulcan, Hobart, Rational, Blodgett, Garland, Southbend, Cleveland, Pitco, Frymaster, Middleby, Alto-Shaam, Hatco, La Marzocco, Electrolux Professional, Speed Queen, Whirlpool Commercial, Maytag Commercial and more — see [brand pages](https://www.berne-commercial.com/brands).
 
+## Resources
+
+- [South Florida Commercial Kitchen Repair Cost Guide](https://www.berne-commercial.com/resources/commercial-kitchen-repair-cost-guide) — what repairs actually cost by equipment type (walk-in, ice, fryer, combi, dishwasher, range and more), typical equipment lifespans, and an interactive repair-vs-replace calculator.
+
 ## Key pages
 
 - [Become a Client — multi-location and chain onboarding](https://www.berne-commercial.com/become-a-client)
@@ -62,6 +66,14 @@ Hoshizaki, Manitowoc, Scotsman, Turbo Air, True, Traulsen, Beverage-Air, Contine
 
 - Sitemap: https://www.berne-commercial.com/sitemap.xml
 - /services/{service} — commercial service pages; /industries/{industry} — industry pages; /{city} — city hubs (e.g., /fort-lauderdale); /es/* — Spanish mirror
+
+## Q&A
+
+- Why Berne Commercial Repair? Part of the Berne family of companies serving South Florida since 2015 — 18 W-2 technicians (not subcontractors), 29,300+ jobs completed, 4.79★ from 871 customers. Licensed & insured in Florida, EPA Section 608 certified, and enterprise-ready: COI on request, vendor portals, NDA-friendly, multi-location reporting and volume contracts.
+- What area do you cover? All of South Florida — Miami-Dade, Broward and Palm Beach counties — with same-day and 24/7 emergency dispatch. Refrigeration outages and food-safety-critical equipment are prioritized.
+- How much does it cost? The commercial service call is $89 and is free when you approve the repair (you only pay the $89 if you decline). Typical refrigeration repairs run $80–$1,200; ice machine repairs $60–$600; full condensing-unit replacement on aging walk-ins $2,500–$4,500. See the cost guide for per-equipment ranges.
+- How fast can you respond? Same-day across South Florida in most cases, with 24/7 emergency response for temperature loss and refrigeration outages. Hotels and high-volume kitchens are prioritized.
+- What brands do you service? Hoshizaki, Manitowoc, Scotsman, Turbo Air, True, Traulsen, Beverage-Air, Continental, Delfield, Vulcan, Hobart, Rational, Blodgett, Garland, Southbend, Cleveland, Pitco, Frymaster, Middleby, Alto-Shaam, Hatco, La Marzocco, Electrolux Professional, Speed Queen, Whirlpool Commercial, Maytag Commercial and more.
 
 ## Sister companies
 

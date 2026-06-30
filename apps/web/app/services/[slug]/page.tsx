@@ -11,6 +11,7 @@ import { DispatchForm } from "@/components/dispatch-form"
 import { ServiceBullets } from "@/components/service-bullets"
 import { HowItWorks } from "@/components/how-it-works"
 import { FAQSection } from "@/components/faq-section"
+import { QuickAnswer } from "@/components/quick-answer"
 import { JsonLd } from "@/components/json-ld"
 import { faqSchema, metaFor, serviceSchema, breadcrumbSchema } from "@/lib/seo"
 import { site } from "@/lib/site"
@@ -73,6 +74,15 @@ export default async function ServiceDetailPage({ params }: Params) {
           </AnchorButton>
         </div>
       </PageHero>
+
+      {/* GEO / AI-citation: self-contained extractable answer directly under
+          the hero on top hubs (only services with `quickAnswer` set). */}
+      {s.quickAnswer ? (
+        <QuickAnswer
+          heading={`${s.shortTitle}: quick answer`}
+          answer={s.quickAnswer}
+        />
+      ) : null}
 
       <section className="border-b border-border/60 bg-background py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
