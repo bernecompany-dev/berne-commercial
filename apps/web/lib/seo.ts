@@ -342,6 +342,8 @@ const SAME_AS = [
   "https://www.manta.com/c/m1hh69g",
   "https://www.callupcontact.com/b/businessprofile/Berne_Commercial/10124998",
   "https://www.n49.com/biz/7243498/berne-commercial-kitchen-equipment-repair/",
+  // Wikidata entity (authoritative knowledge-graph node), added 2026-06-30
+  "https://www.wikidata.org/wiki/Q140388058",
 ]
 
 export function organizationSchema() {
