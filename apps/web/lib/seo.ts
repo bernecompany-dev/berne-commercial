@@ -344,6 +344,8 @@ const SAME_AS = [
   "https://www.n49.com/biz/7243498/berne-commercial-kitchen-equipment-repair/",
   // Wikidata entity (authoritative knowledge-graph node), added 2026-06-30
   "https://www.wikidata.org/wiki/Q140388058",
+  // LinkedIn company page, added 2026-06-30
+  "https://www.linkedin.com/company/129724405",
 ]
 
 export function organizationSchema() {
