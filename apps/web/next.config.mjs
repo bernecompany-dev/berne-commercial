@@ -34,6 +34,8 @@ const nextConfig = {
   // S14: site-wide Permissions-Policy. Disable browser features we never
   // need so embedded scripts/iframes cannot request them. Mirrors the
   // header set on the bernerepair.com WP site.
+  // Audit 06-30: added baseline clickjacking/MIME-sniffing/referrer headers
+  // (no CSP — third-party script set, e.g. GTM, not audited for compat risk).
   async headers() {
     return [
       {
@@ -43,6 +45,18 @@ const nextConfig = {
             key: "Permissions-Policy",
             value:
               "geolocation=(), microphone=(), camera=(), browsing-topics=()",
+          },
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
           },
         ],
       },
