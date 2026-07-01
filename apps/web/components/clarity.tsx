@@ -1,7 +1,7 @@
 import Script from "next/script"
 import { isProductionDeployment } from "@/lib/env"
 
-const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? ""
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? "xfuu9mibt3"
 
 /**
  * Microsoft Clarity loader.
