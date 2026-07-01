@@ -34,13 +34,15 @@
 ## Industries
 
 - [Restaurants](https://www.berne-commercial.com/industries/restaurants)
-- [Commercial Kitchens](https://www.berne-commercial.com/industries/commercial-kitchens)
 - [Hotels](https://www.berne-commercial.com/industries/hotels)
-- [Grocery Stores](https://www.berne-commercial.com/industries/grocery-stores)
-- [Property Management](https://www.berne-commercial.com/industries/property-management)
-- [Medical Facilities](https://www.berne-commercial.com/industries/medical-facilities)
-- [Retail Chains](https://www.berne-commercial.com/industries/retail-chains)
-- [Franchises](https://www.berne-commercial.com/industries/franchises)
+- [Grocery Stores](https://www.berne-commercial.com/industries/grocery)
+- [Healthcare Facilities](https://www.berne-commercial.com/industries/healthcare)
+- [Schools](https://www.berne-commercial.com/industries/schools)
+- [Gyms](https://www.berne-commercial.com/industries/gyms)
+- [Breweries](https://www.berne-commercial.com/industries/breweries)
+- [Country Clubs](https://www.berne-commercial.com/industries/country-clubs)
+- [Laundromats](https://www.berne-commercial.com/industries/laundromats)
+- [Multi-Family / Property Management](https://www.berne-commercial.com/industries/multi-family)
 - [All industries](https://www.berne-commercial.com/industries)
 
 ## Brands serviced
