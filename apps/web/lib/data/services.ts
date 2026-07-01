@@ -1,3 +1,5 @@
+import { SERVICE_OPTIONS } from "./service-options"
+
 export type ServiceCategory =
   | "refrigeration"
   | "ice-machines"
@@ -1075,6 +1077,22 @@ export const services: Service[] = [
     faqs: [],
   },
 ]
+
+// Sync guard for the client-side slim copy (see service-options.ts). Runs at
+// module init, so a drift (added/renamed/reordered service) fails `next build`
+// during prerender with an actionable message instead of silently shipping a
+// dispatch form whose service <select> is missing the new option.
+if (
+  SERVICE_OPTIONS.length !== services.length ||
+  SERVICE_OPTIONS.some(
+    (o, i) => o.slug !== services[i]?.slug || o.title !== services[i]?.title,
+  )
+) {
+  throw new Error(
+    "lib/data/service-options.ts is out of sync with lib/data/services.ts — " +
+      "update SERVICE_OPTIONS to mirror services[] (slug + title, same order).",
+  )
+}
 
 export const primaryServices = services.filter((s) => s.primary)
 

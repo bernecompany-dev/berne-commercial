@@ -15,7 +15,11 @@ import { Input } from "@workspace/ui/components/input"
 import { Textarea } from "@workspace/ui/components/textarea"
 import { Label } from "@workspace/ui/components/label"
 import { Card } from "@workspace/ui/components/card"
-import { services } from "@/lib/data/services"
+// Slim {slug, title} list — NOT the full services module. This file is
+// "use client", so importing lib/data/services.ts here would ship 50+ KB of
+// service prose (longDescription/faqs/symptomTable) in the JS bundle of every
+// page embedding the form. service-options.ts is build-time-asserted in sync.
+import { SERVICE_OPTIONS } from "@/lib/data/service-options"
 import { brands } from "@/lib/data/brands"
 import { site } from "@/lib/site"
 import { t } from "@/lib/i18n/dict"
@@ -99,7 +103,7 @@ export function DispatchForm({
   // CTA links pass the city slug ("boca-raton") — show it humanized.
   const cityDefault = qp?.city ? humanizeSlug(qp.city) : defaults?.city
   const serviceDefault =
-    qp?.service && services.some((s) => s.slug === qp.service)
+    qp?.service && SERVICE_OPTIONS.some((s) => s.slug === qp.service)
       ? qp.service
       : defaults?.service
   const brandDefault = qp?.brand
@@ -313,7 +317,7 @@ export function DispatchForm({
             defaultValue={serviceDefault}
             placeholder={tr.form.selectPlaceholder}
           >
-            {services.map((s) => (
+            {SERVICE_OPTIONS.map((s) => (
               <option key={s.slug} value={s.slug}>
                 {s.title}
               </option>
