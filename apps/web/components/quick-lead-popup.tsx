@@ -151,6 +151,11 @@ export function QuickLeadPopup() {
     <div
       role="dialog"
       aria-label="Request a quick callback"
+      // Non-modal slide-in (no focus trap by design), but Escape should still
+      // dismiss it when focus is inside the card.
+      onKeyDown={(e) => {
+        if (e.key === "Escape") dismiss()
+      }}
       className="fixed bottom-4 left-4 z-40 hidden w-[22rem] max-w-[calc(100vw-2rem)] rounded-2xl border border-border bg-background p-5 shadow-2xl md:block"
     >
       <button
@@ -163,7 +168,7 @@ export function QuickLeadPopup() {
       </button>
 
       {status === "success" ? (
-        <div className="flex flex-col items-start gap-2 pr-6">
+        <div role="status" className="flex flex-col items-start gap-2 pr-6">
           <span className="inline-flex size-9 items-center justify-center rounded-full bg-primary/10 text-primary">
             <CheckCircle2 className="size-5" />
           </span>
@@ -206,6 +211,7 @@ export function QuickLeadPopup() {
             name="contact"
             required
             autoComplete="name"
+            aria-label="Your name"
             placeholder="Your name"
             className="h-10 w-full rounded-md border border-input bg-transparent px-3 text-base outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 md:text-sm"
           />
@@ -215,6 +221,7 @@ export function QuickLeadPopup() {
             required
             inputMode="tel"
             autoComplete="tel"
+            aria-label="Phone number"
             placeholder="Phone number"
             // Mirror the server rule (route.ts: phone >=7 chars) so a too-short
             // number is caught client-side instead of returning a generic 400.
@@ -226,6 +233,7 @@ export function QuickLeadPopup() {
           <select
             name="urgency"
             defaultValue="urgent"
+            aria-label="How urgent is it?"
             className="h-10 w-full rounded-md border border-input bg-transparent px-2.5 text-base outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 md:text-sm"
           >
             <option value="emergency">Emergency — down now</option>
@@ -235,7 +243,7 @@ export function QuickLeadPopup() {
           </select>
 
           {status === "error" ? (
-            <p className="text-sm text-destructive">
+            <p role="alert" className="text-sm text-destructive">
               Something went wrong — please call{" "}
               <a href={site.phoneHref} className="font-semibold underline">
                 {site.phone}
