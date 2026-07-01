@@ -22,8 +22,22 @@ const EN_ONLY_PREFIXES = [
   // instead of emitting a 404 link from the language switcher.
   "/reviews",
   "/service-map",
+  // EN-only data-asset resources (cost guide etc.) — no /es/resources tree.
+  "/resources",
   "/services/medical-lab-refrigeration-repair",
   "/fort-lauderdale/medical-lab-refrigeration-repair",
+  // Combi-oven pillar hub (2026-06-15) + specialty commercial hubs
+  // (2026-06-29) — static EN-only routes outside services.ts. Keep in sync
+  // with the hand-listed slugs in app/sitemap.ts.
+  "/services/combi-oven-repair",
+  "/services/commercial-humidor-repair",
+  "/services/commercial-wine-cooler-repair",
+  "/services/beer-cooler-repair",
+  "/services/pizza-oven-repair",
+  "/services/holding-cabinet-repair",
+  "/services/commercial-sauna-repair",
+  "/services/commercial-cold-plunge-repair",
+  "/services/commercial-pool-heater-repair",
   // Static brand-service routes (manitowoc, hoshizaki, …) — EN-only by
   // design. Slug list is type-synced with lib/data/brand-services.ts, so
   // future brand pages are covered automatically (W3-P1.1).
