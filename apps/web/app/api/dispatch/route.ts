@@ -52,10 +52,21 @@ const LIMITS = {
   preferredTime: 120,
 } as const
 
-function asString(v: unknown, max: number): { ok: true; v: string } | { ok: false } {
+function asString(
+  v: unknown,
+  max: number,
+  multiline = false,
+): { ok: true; v: string } | { ok: false } {
   if (v == null) return { ok: true, v: "" }
   if (typeof v !== "string") return { ok: false }
-  const trimmed = v.trim()
+  // Injection hardening: strip control characters. Single-line fields
+  // (everything except `issue`) also collapse CR/LF to a space so user input
+  // can never smuggle extra lines into the email subject or forge extra
+  // "Field: value" lines in the plain-text body. Normal input is unaffected
+  // (HTML <input> can't contain newlines anyway).
+  let s = v.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, "")
+  s = multiline ? s.replace(/\r\n?/g, "\n") : s.replace(/[\r\n]+/g, " ")
+  const trimmed = s.trim()
   if (trimmed.length > max) return { ok: false }
   return { ok: true, v: trimmed }
 }
@@ -77,7 +88,13 @@ function esc(v: unknown) {
 // see (and later HCP can tag) which channel produced the lead.
 function pick(raw: Record<string, unknown>, key: string): string {
   const v = raw[key]
-  return typeof v === "string" ? v.trim().slice(0, 200) : ""
+  if (typeof v !== "string") return ""
+  // Same injection hardening as asString: attr_* values are attacker-typed
+  // (URL params/referrer) and end up in the email body's "Source" line.
+  return v
+    .replace(/[\u0000-\u001F\u007F]/g, " ")
+    .trim()
+    .slice(0, 200)
 }
 function summarizeAttribution(raw: Record<string, unknown>): string {
   const utmS = pick(raw, "attr_utm_source")
@@ -103,7 +120,7 @@ function validate(data: Payload):
   | { ok: false; error: string } {
   const out: Record<string, string> = {}
   for (const key of Object.keys(LIMITS) as (keyof typeof LIMITS)[]) {
-    const res = asString(data[key], LIMITS[key])
+    const res = asString(data[key], LIMITS[key], key === "issue")
     if (!res.ok) return { ok: false, error: `Invalid field: ${key}` }
     out[key] = res.v
   }
@@ -166,6 +183,9 @@ export async function POST(req: Request) {
     console.error(
       "[dispatch] RESEND_API_KEY is not set — refusing to accept submissions",
     )
+    // Lead-recovery breadcrumb: the submission is rejected, but the contact
+    // details stay in the server log so the lead can be called back manually.
+    console.error("[dispatch] LOST LEAD (recover manually):", JSON.stringify(data))
     return NextResponse.json(
       {
         error: `Server configuration error. Please call dispatch at ${site.phone}.`,
@@ -242,6 +262,8 @@ ${data.issue || "—"}
     const result = await resend.emails.send(payload)
     if (result.error) {
       console.error("[dispatch] resend error:", result.error)
+      // Lead-recovery breadcrumb — full text body so the lead survives in logs.
+      console.error("[dispatch] LOST LEAD (recover manually):\n" + text)
       return NextResponse.json(
         { error: "Email transport failed", detail: result.error.message },
         { status: 502 },
@@ -250,6 +272,8 @@ ${data.issue || "—"}
     return NextResponse.json({ ok: true, id: result.data?.id })
   } catch (err) {
     console.error("[dispatch] resend exception:", err)
+    // Lead-recovery breadcrumb — full text body so the lead survives in logs.
+    console.error("[dispatch] LOST LEAD (recover manually):\n" + text)
     return NextResponse.json(
       { error: "Email transport failed" },
       { status: 502 },
