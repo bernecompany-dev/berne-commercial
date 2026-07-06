@@ -292,8 +292,8 @@ const en: Dict = {
         body: "Most repairs are completed on the spot — our trucks carry common refrigeration, ice machine and restaurant-equipment parts. Refrigeration loss is treated as an emergency.",
       },
       warranty: {
-        title: "Verified & warrantied",
-        body: "Every repair is verified against operating spec before we leave, then backed by our parts-and-labor warranty. COI and multi-location reporting available for chains.",
+        title: "Verified, warrantied, uptime-first",
+        body: "Every repair is verified against operating spec before we leave — temps logged, pressures checked — then backed by a tiered warranty: parts covered up to 10 years on welds, 2 years mechanical, 1 year electronics, plus 90 days on labor. We work OEM parts and factory-trained techs to keep your line running; COI and multi-location reporting available for chains.",
       },
     },
   },
@@ -471,8 +471,8 @@ const es: Dict = {
         body: "La mayoría de las reparaciones se completan en el sitio — nuestros trucks llevan repuestos comunes de refrigeración, máquinas de hielo y equipo de restaurante. La pérdida de refrigeración se trata como emergencia.",
       },
       warranty: {
-        title: "Verificado y con garantía",
-        body: "Cada reparación se verifica contra la especificación de operación antes de irnos, y queda respaldada por nuestra garantía de repuestos y mano de obra. COI y reportes multi-locación disponibles para cadenas.",
+        title: "Verificado, con garantía, uptime primero",
+        body: "Cada reparación se verifica contra la especificación de operación antes de irnos — temperaturas y presiones registradas — y queda respaldada por una garantía escalonada: piezas cubiertas hasta 10 años en soldaduras, 2 años mecánicas, 1 año electrónicas, más 90 días de mano de obra. Usamos piezas OEM y técnicos formados de fábrica para mantener su línea operando; COI y reportes multi-locación disponibles para cadenas.",
       },
     },
   },

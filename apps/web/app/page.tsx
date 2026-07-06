@@ -40,7 +40,7 @@ const homepageFaqs = [
   },
   {
     q: "Do you support multi-location and chain accounts?",
-    a: "Yes. We onboard chains, franchises and property-managed buildings with COI, vendor portals, and multi-location reporting. Visit the Become a Client page to get started.",
+    a: "Yes. We onboard chains, franchises and property-managed buildings with COI, vendor portals, and multi-location reporting — our team has serviced equipment at retail operations including Target, Publix and Petco. Visit the Become a Client page to get started.",
   },
   {
     q: "Are you licensed and insured?",
