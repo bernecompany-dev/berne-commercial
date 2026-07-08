@@ -1,4 +1,4 @@
-import { Clock, ShieldCheck, Zap } from "lucide-react"
+import { BadgeCheck, Clock, ShieldCheck, Zap } from "lucide-react"
 import { site } from "@/lib/site"
 
 /**
@@ -31,6 +31,13 @@ export function TrustStrip() {
         <span className="inline-flex items-center gap-2">
           <ShieldCheck className="size-4 text-primary" aria-hidden />
           {site.licenses}
+        </span>
+        <span className="hidden text-muted-foreground sm:inline" aria-hidden>
+          ·
+        </span>
+        <span className="inline-flex items-center gap-2">
+          <BadgeCheck className="size-4 text-primary" aria-hidden />
+          Parts warranty up to 10 years
         </span>
       </div>
     </section>

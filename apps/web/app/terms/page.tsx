@@ -64,7 +64,8 @@ export default function TermsPage() {
         <h2 className="mt-10 text-xl font-semibold tracking-tight">4. Warranty</h2>
         <ul className="list-disc space-y-1 pl-6">
           <li><strong>90-day workmanship warranty</strong> on labor of any completed repair.</li>
-          <li>Manufacturer warranty on OEM parts as supplied (typically 1 year).</li>
+          <li><strong>Tiered parts warranty:</strong> up to 10 years on sealed-system welds, up to 2 years on mechanical parts, up to 1 year on electronic and electrical parts.</li>
+          <li>Manufacturer warranty on OEM parts as supplied applies where it exceeds the above.</li>
           <li>Warranty is void if the equipment is modified or serviced by another vendor after our repair, if the failure is unrelated to the original work, or if the equipment was damaged by water, electrical surge, abuse, or pest activity.</li>
         </ul>
 

@@ -84,8 +84,10 @@ export default function AboutPage() {
               <p>
                 How we work with operators: a single dispatcher contact for
                 multi-unit portfolios, mobile-uploaded invoices and
-                photos-on-completion for the AP department, a 90-day
-                workmanship warranty on the actual paperwork, and a
+                photos-on-completion for the AP department, a tiered parts
+                warranty on the actual paperwork — up to 10 years on
+                sealed-system welds, 2 years mechanical, 1 year electronics,
+                plus 90 days on labor — and a
                 same-day commercial standard for emergency calls inside
                 Miami-Dade, Broward, and Palm Beach. Diagnostic on a
                 commercial site is a flat {site.serviceCall}, free if
