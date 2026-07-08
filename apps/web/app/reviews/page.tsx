@@ -10,7 +10,7 @@ import { REVIEW_AGGREGATE } from "@/lib/data/reviews"
 
 export const metadata: Metadata = metaFor({
   title: "Customer Reviews",
-  description: `${REVIEW_AGGREGATE.ratingValue}★ from ${REVIEW_AGGREGATE.reviewCount} customers across the Berne family of appliance-repair brands. Real Google reviews.`,
+  description: `${REVIEW_AGGREGATE.ratingValue}★ from ${REVIEW_AGGREGATE.reviewCount} customers across the Berne family of appliance-repair brands. Real Google and Yelp reviews.`,
   path: "/reviews",
 })
 
@@ -37,7 +37,7 @@ export default function ReviewsPage() {
       <PageHero
         eyebrow="Reviews"
         title={`${REVIEW_AGGREGATE.ratingValue}★ from ${REVIEW_AGGREGATE.reviewCount} customers`}
-        description="Real Google reviews from the Berne family of appliance-repair brands — the same team, technicians and standard behind Berne Commercial."
+        description="Real Google and Yelp reviews from the Berne family of appliance-repair brands — the same team, technicians and standard behind Berne Commercial."
       >
         <div className="flex flex-wrap gap-3">
           <LinkButton href="/become-a-client">Become a commercial client</LinkButton>

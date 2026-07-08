@@ -23,7 +23,7 @@ export function ReviewsSection({ locale = "en" }: { locale?: Locale }) {
         eyebrow: "Reviews",
         title: `${REVIEW_AGGREGATE.ratingValue}★ from ${REVIEW_AGGREGATE.reviewCount} customers across the Berne family`,
         description:
-          "Real Google reviews from Berne Appliance Repair — the parent organization backing Berne Commercial. Same team, same standard, same technicians.",
+          "Real Google and Yelp reviews from Berne Appliance Repair — the parent organization backing Berne Commercial. Same team, same standard, same technicians.",
       }
 
   return (
