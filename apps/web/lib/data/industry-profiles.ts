@@ -76,7 +76,7 @@ export const INDUSTRY_PROFILES: IndustryProfile[] = [
     industryTitle: "Restaurant",
     metaTitle: "Restaurant Equipment Repair Miami — Same-Day, $89 Call",
     metaDescription:
-      "Same-day restaurant equipment repair across South Florida — Hobart, Vulcan, Hoshizaki, Manitowoc. Insured, EPA-certified, 18 techs, 4.79★ on 871 reviews.",
+      "Same-day restaurant equipment repair across South Florida — Hobart, Vulcan, Hoshizaki, Manitowoc. Insured, EPA-certified, 18 techs, 4.79★ on 1,373 reviews.",
     h1: "Restaurant Equipment Repair in South Florida",
     hero: "Walk-ins, ranges, fryers, hoods, ice, espresso — one dispatch, same day.",
     whyUs:

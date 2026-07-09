@@ -11,7 +11,7 @@ export const metadata: Metadata = metaFor({
   // CTR pass 2026-06-09 — 51 chars with the " · Berne" template suffix.
   title: "South Florida Service Areas — 24/7 Dispatch",
   description:
-    "Commercial repair coverage across Miami-Dade, Broward and Palm Beach — 24/7 dispatch, COI-ready, 18 W-2 technicians, 4.79★ from 871 reviews.",
+    "Commercial repair coverage across Miami-Dade, Broward and Palm Beach — 24/7 dispatch, COI-ready, 18 W-2 technicians, 4.79★ from 1,373 reviews.",
   path: "/service-areas",
 })
 

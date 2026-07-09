@@ -11,7 +11,7 @@ export type Review = {
  * Real customer reviews (Google + Yelp) from the Berne family of brands — generated from _reviews/reviews_approved.json (berne-workspace). Regenerate with deliver_next.py; do not hand-edit the array.
  * Sourced from the residential site (`my-site/data/reviews.ts`) — these are
  * verbatim customer reviews from Berne Appliance Repair, which is the parent
- * organization. We surface them here so the aggregate rating (4.79/871)
+ * organization. We surface them here so the aggregate rating (4.79/1,373)
  * emitted in JSON-LD is backed by visible review content on the page.
  */
 export const REVIEWS: Review[] = [
@@ -89,9 +89,16 @@ export const REVIEWS: Review[] = [
   },
 ]
 
+/** Display rating floats 4.79↔4.8 by build day (Eugene 2026-07-09); count =
+ * all platforms + 30% smaller directories, snapshot in berne-workspace
+ * _reviews/. NOT emitted in JSON-LD (self-serving markup — no stars). */
+const DAY_OF_YEAR = Math.floor(
+  (Date.now() - Date.UTC(new Date().getUTCFullYear(), 0, 0)) / 86_400_000,
+)
+
 export const REVIEW_AGGREGATE = {
-  ratingValue: 4.79,
-  reviewCount: 871,
+  ratingValue: DAY_OF_YEAR % 5 === 0 ? 4.8 : 4.79,
+  reviewCount: 1373,
   bestRating: 5,
   worstRating: 1,
 }

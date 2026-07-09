@@ -6,7 +6,7 @@ import type { Locale } from "@/lib/i18n/config"
 
 /**
  * Renders a customer reviews section that backs the AggregateRating JSON-LD
- * schema (4.79 / 871). Without rendered reviews, Google may flag the
+ * schema (4.79 / 1,373). Without rendered reviews, Google may flag the
  * structured data as unsupported. Reviews are sourced from the parent
  * Berne family Google listings (see `lib/data/reviews.ts`).
  */

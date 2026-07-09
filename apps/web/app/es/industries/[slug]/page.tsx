@@ -100,7 +100,7 @@ export default async function IndustryDetailPageES({ params }: Params) {
           <Badge variant="outline">
             Licenciados, asegurados, certificados EPA
           </Badge>
-          <Badge variant="outline">4.79★ en 871 reseñas</Badge>
+          <Badge variant="outline">4.79★ en 1,373 reseñas</Badge>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
           <LinkButton href={`/es/request-dispatch?industry=${profile.slug}`}>
@@ -123,7 +123,7 @@ export default async function IndustryDetailPageES({ params }: Params) {
               <p className="mt-4 text-muted-foreground">
                 Once años operando en el Sur de Florida, 18 técnicos en la
                 calle, más de {REPAIRS_COMPLETED_BARE} servicios completados, y un promedio de
-                4.79 estrellas en 871 reseñas. Somos licenciados y asegurados
+                4.79 estrellas en 1,373 reseñas. Somos licenciados y asegurados
                 (DBA Berne Appliance Repair), certificados EPA para trabajo de
                 refrigerante, y NDA-friendly para las industrias que lo
                 requieren.

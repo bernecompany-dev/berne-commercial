@@ -17,7 +17,7 @@ import { JsonLd } from "@/components/json-ld"
 
 export const metadata: Metadata = metaFor({
   title: "About — Berne Commercial Repair · South Florida Since 2015",
-  description: `Founded 2015 by Eugene Bernitsky. 18 W-2 technicians, ${REPAIRS_COMPLETED_DISPLAY} services, 4.79★ from 871 reviews. COI-ready commercial dispatch across South Florida.`,
+  description: `Founded 2015 by Eugene Bernitsky. 18 W-2 technicians, ${REPAIRS_COMPLETED_DISPLAY} services, 4.79★ from 1,373 reviews. COI-ready commercial dispatch across South Florida.`,
   path: "/about",
 })
 
@@ -72,7 +72,7 @@ export default function AboutPage() {
               <p>
                 Eleven years in, the operation is 18 W-2 technicians on the
                 road, {REPAIRS_COMPLETED_DISPLAY} services completed across the Berne family,
-                and a 4.79★ aggregate rating across 871 verified customer
+                and a 4.79★ aggregate rating across 1,373 verified customer
                 reviews. The technicians are engineer-trained — which is
                 why we take on the work other shops walk away from:
                 control-board diagnostics, complex refrigeration loops,
@@ -182,7 +182,7 @@ export default function AboutPage() {
               <div>
                 <div className="text-2xl font-semibold tracking-tight">4.79★</div>
                 <div className="text-xs text-muted-foreground">
-                  871 customer reviews
+                  1,373 customer reviews
                 </div>
               </div>
             </div>

@@ -281,7 +281,7 @@ export default function CommercialWineCoolerRepairHub() {
                   <span className="font-medium text-foreground">
                     Track record:
                   </span>{" "}
-                  {REPAIRS_COMPLETED_DISPLAY} services since 2015, 4.79★ from 871
+                  {REPAIRS_COMPLETED_DISPLAY} services since 2015, 4.79★ from 1,373
                   reviews.
                 </li>
               </ul>

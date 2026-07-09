@@ -15,7 +15,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Nosotros — Berne Commercial Repair · Sur de Florida desde 2015",
-  description: `Fundada en 2015 por Eugene Bernitsky. 18 técnicos W-2, ${REPAIRS_COMPLETED_DISPLAY} servicios, 4.79★/871 reseñas. Despacho comercial COI-ready en el Sur de Florida.`,
+  description: `Fundada en 2015 por Eugene Bernitsky. 18 técnicos W-2, ${REPAIRS_COMPLETED_DISPLAY} servicios, 4.79★/1,373 reseñas. Despacho comercial COI-ready en el Sur de Florida.`,
   alternates: {
     canonical: "/es/about",
     languages: {
@@ -84,7 +84,7 @@ export default function AboutPageES() {
               <p>
                 Once años después, la operación son 18 técnicos W-2 en la
                 calle, más de {REPAIRS_COMPLETED_BARE} servicios completados en la familia
-                Berne, y una calificación agregada de 4.79★ en 871 reseñas
+                Berne, y una calificación agregada de 4.79★ en 1,373 reseñas
                 verificadas. Los técnicos vienen con formación de
                 ingeniería — por eso tomamos el trabajo que otros talleres
                 rechazan: diagnóstico a nivel de control board, loops de
@@ -197,7 +197,7 @@ export default function AboutPageES() {
               <div>
                 <div className="text-2xl font-semibold tracking-tight">4.79 ★</div>
                 <div className="text-xs text-muted-foreground">
-                  871 reseñas verificadas
+                  1,373 reseñas verificadas
                 </div>
               </div>
             </div>

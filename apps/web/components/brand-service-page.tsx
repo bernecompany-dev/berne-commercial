@@ -118,7 +118,7 @@ export function BrandServicePage({ slug }: { slug: string }) {
                     Track record:
                   </span>{" "}
                   18 W-2 technicians, {REPAIRS_COMPLETED_DISPLAY} services
-                  since 2015, 4.79★ from 871 reviews.
+                  since 2015, 4.79★ from 1,373 reviews.
                 </li>
               </ul>
               <LinkButton

@@ -24,7 +24,7 @@ import { REPAIRS_COMPLETED_DISPLAY } from "./company"
  *     level a field tech would recognize, no invented numeric codes.
  *   - Canonical facts only: 18 techs, the repair counter from
  *     lib/data/company.ts (REPAIRS_COMPLETED_DISPLAY) services, since 2015,
- *     4.79★/871, $89 service call, Miami-Dade/Broward/Palm Beach.
+ *     4.79★/1,373, $89 service call, Miami-Dade/Broward/Palm Beach.
  */
 
 export type BrandServiceCode = {
@@ -89,7 +89,7 @@ const MANITOWOC: BrandService = {
   shortTitle: "Manitowoc Ice Machine",
   metaTitle: "Manitowoc Ice Machine Repair Miami — 24/7",
   metaDescription:
-    "Manitowoc Indigo, NEO & i-Series fixed same-day across South Florida. 18 W-2 techs read the fault codes daily. 4.79★ from 871 reviews. $89 service call.",
+    "Manitowoc Indigo, NEO & i-Series fixed same-day across South Florida. 18 W-2 techs read the fault codes daily. 4.79★ from 1,373 reviews. $89 service call.",
   heroDescription:
     "Same-day Manitowoc ice machine repair across Miami-Dade, Broward and Palm Beach — Indigo NXT, NEO, i-Series and S-Series cubers, plus RNS/RFS nugget and flake machines. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
@@ -278,7 +278,7 @@ const HOSHIZAKI: BrandService = {
   shortTitle: "Hoshizaki Ice Machine",
   metaTitle: "Hoshizaki Ice Machine Repair Miami — 24/7",
   metaDescription:
-    "Hoshizaki KM & IM series repaired same-day across South Florida. Techs who read the beep codes. 18 W-2 techs, 4.79★ from 871 reviews. $89 service call.",
+    "Hoshizaki KM & IM series repaired same-day across South Florida. Techs who read the beep codes. 18 W-2 techs, 4.79★ from 1,373 reviews. $89 service call.",
   heroDescription:
     "Same-day Hoshizaki ice machine repair across Miami-Dade, Broward and Palm Beach — KM-series crescent cubers, IM-series square cubers, F/DCM flaker and nugget machines. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
@@ -460,7 +460,7 @@ const SCOTSMAN: BrandService = {
   shortTitle: "Scotsman Ice Machine",
   metaTitle: "Scotsman Ice Machine Repair Miami — 24/7",
   metaDescription:
-    "Scotsman Prodigy & legacy cubers, Meridian dispensers, nugget machines — same-day repair across South Florida. 4.79★ from 871 reviews. $89 service call.",
+    "Scotsman Prodigy & legacy cubers, Meridian dispensers, nugget machines — same-day repair across South Florida. 4.79★ from 1,373 reviews. $89 service call.",
   heroDescription:
     "Same-day Scotsman ice machine repair across Miami-Dade, Broward and Palm Beach — Prodigy and Prodigy Plus cubers, legacy CME heads, Meridian dispensers and nugget/flake machines. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
@@ -641,7 +641,7 @@ const HOBART: BrandService = {
   shortTitle: "Hobart Dishwasher",
   metaTitle: "Hobart Dishwasher Repair Miami — 24/7",
   metaDescription:
-    "Hobart AM15, LXi/LXe & CL conveyor dishwashers repaired same-day across South Florida. Sanitizer temps restored, inspection-ready. 4.79★/871. $89 call.",
+    "Hobart AM15, LXi/LXe & CL conveyor dishwashers repaired same-day across South Florida. Sanitizer temps restored, inspection-ready. 4.79★/1,373. $89 call.",
   heroDescription:
     "Same-day Hobart commercial dishwasher repair across Miami-Dade, Broward and Palm Beach — AM15/AM16 door-types, LXi/LXe undercounters, and CL-series conveyors. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
@@ -822,7 +822,7 @@ const TRUE: BrandService = {
   shortTitle: "True Refrigeration",
   metaTitle: "True Refrigeration Repair Miami — 24/7",
   metaDescription:
-    "True T-series reach-ins, GDM merchandisers & prep tables repaired same-day across South Florida. R290 service, EPA 608 techs. 4.79★/871. $89 call.",
+    "True T-series reach-ins, GDM merchandisers & prep tables repaired same-day across South Florida. R290 service, EPA 608 techs. 4.79★/1,373. $89 call.",
   heroDescription:
     "Same-day True commercial refrigeration repair across Miami-Dade, Broward and Palm Beach — T-series reach-ins, GDM glass-door merchandisers, TUC undercounters and prep tables. 24/7 emergency dispatch, $89 service call — free with approved repair.",
   intro: [
@@ -1004,7 +1004,7 @@ const LA_MARZOCCO: BrandService = {
   shortTitle: "La Marzocco Espresso",
   metaTitle: "La Marzocco Espresso Repair Miami — 24/7",
   metaDescription:
-    "La Marzocco Linea, GB5 & PB repaired across South Florida — scale, groups, pumps, boilers. Café-grade workmanship, honest parts. 4.79★/871. $89 call.",
+    "La Marzocco Linea, GB5 & PB repaired across South Florida — scale, groups, pumps, boilers. Café-grade workmanship, honest parts. 4.79★/1,373. $89 call.",
   heroDescription:
     "Commercial La Marzocco espresso machine repair across Miami-Dade, Broward and Palm Beach — Linea Classic, Linea PB, GB5 and KB90 machines in cafés, restaurants and hotels. Same-day dispatch for dead-machine emergencies, $89 service call — free with approved repair.",
   intro: [
@@ -1178,7 +1178,7 @@ const VULCAN: BrandService = {
   shortTitle: "Vulcan Oven & Range",
   metaTitle: "Vulcan Oven & Range Repair Miami — 24/7",
   metaDescription:
-    "Vulcan VC convection ovens, ranges & deck ovens repaired same-day across South Florida. Igniters, t-stats, gas valves on the truck. 4.79★/871. $89 call.",
+    "Vulcan VC convection ovens, ranges & deck ovens repaired same-day across South Florida. Igniters, t-stats, gas valves on the truck. 4.79★/1,373. $89 call.",
   heroDescription:
     "Same-day Vulcan oven and range repair across Miami-Dade, Broward and Palm Beach — VC-series convection ovens, restaurant ranges, deck ovens and kettles. 24/7 emergency dispatch for commercial kitchens, $89 service call — free with approved repair.",
   intro: [
@@ -1365,7 +1365,7 @@ const TURBO_AIR: BrandService = {
   shortTitle: "Turbo Air Refrigeration",
   metaTitle: "Turbo Air Refrigeration Repair Miami — 24/7",
   metaDescription:
-    "Turbo Air M3 & PRO reach-ins, undercounters & prep tables repaired same-day across South Florida. Controller faults read right. 4.79★/871. $89 call.",
+    "Turbo Air M3 & PRO reach-ins, undercounters & prep tables repaired same-day across South Florida. Controller faults read right. 4.79★/1,373. $89 call.",
   heroDescription:
     "Same-day Turbo Air refrigeration repair across Miami-Dade, Broward and Palm Beach — M3 and PRO series reach-ins, TSR merchandisers, undercounters and prep tables. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
@@ -1546,7 +1546,7 @@ const RATIONAL_COMBI: BrandService = {
   shortTitle: "Rational Combi Oven",
   metaTitle: "Rational Combi Oven Repair Miami — 24/7",
   metaDescription:
-    "Rational iCombi Pro & SelfCookingCenter repaired same-day across South Florida — steam-generator scale, CareControl, door faults. 4.79★/871. $89 call.",
+    "Rational iCombi Pro & SelfCookingCenter repaired same-day across South Florida — steam-generator scale, CareControl, door faults. 4.79★/1,373. $89 call.",
   heroDescription:
     "Same-day Rational combi oven repair across Miami-Dade, Broward and Palm Beach — iCombi Pro, iCombi Classic, and legacy SelfCookingCenter (SCC) / CombiMaster platforms. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
@@ -1735,7 +1735,7 @@ const CONVOTHERM_COMBI: BrandService = {
   shortTitle: "Convotherm Combi Oven",
   metaTitle: "Convotherm Combi Oven Repair Miami — 24/7",
   metaDescription:
-    "Convotherm maxx & C4 combi ovens repaired same-day across South Florida — ConvoClean, steam, door & board faults. EPA 608 techs, 4.79★/871. $89 call.",
+    "Convotherm maxx & C4 combi ovens repaired same-day across South Florida — ConvoClean, steam, door & board faults. EPA 608 techs, 4.79★/1,373. $89 call.",
   heroDescription:
     "Same-day Convotherm combi oven service across Miami-Dade, Broward and Palm Beach — Convotherm maxx, maxx pro, C4 and legacy OES/OGS platforms. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
@@ -1916,7 +1916,7 @@ const UNOX_COMBI: BrandService = {
   shortTitle: "Unox Combi Oven",
   metaTitle: "Unox Combi Oven Repair Miami — 24/7",
   metaDescription:
-    "Unox CHEFTOP MIND.Maps & BAKERTOP combi ovens repaired same-day across South Florida — steam, DET.Clean, boards, doors. EPA 608 techs, 4.79★/871. $89 call.",
+    "Unox CHEFTOP MIND.Maps & BAKERTOP combi ovens repaired same-day across South Florida — steam, DET.Clean, boards, doors. EPA 608 techs, 4.79★/1,373. $89 call.",
   heroDescription:
     "Same-day Unox combi oven service across Miami-Dade, Broward and Palm Beach — CHEFTOP MIND.Maps, BAKERTOP MIND.Maps, and the compact CHEFTOP/LineMiss platforms. 24/7 emergency dispatch for commercial accounts, $89 service call — free with approved repair.",
   intro: [
@@ -2104,7 +2104,7 @@ const ALTO_SHAAM_COMBI: BrandService = {
   shortTitle: "Alto-Shaam Combi Oven",
   metaTitle: "Alto-Shaam Combi Oven Repair Miami — 24/7",
   metaDescription:
-    "Alto-Shaam Combitherm & CT PROformance combi ovens repaired same-day across South Florida — boilerfree steam, doors, probes, boards. 4.79★/871. $89 call.",
+    "Alto-Shaam Combitherm & CT PROformance combi ovens repaired same-day across South Florida — boilerfree steam, doors, probes, boards. 4.79★/1,373. $89 call.",
   heroDescription:
     "Same-day Alto-Shaam combi oven service across Miami-Dade, Broward and Palm Beach — Combitherm CT PROformance, CT Express, and legacy Combitherm platforms, including Halo Heat holding integration. 24/7 emergency dispatch, $89 service call — free with approved repair.",
   intro: [

@@ -226,13 +226,8 @@ export function localBusinessSchema() {
     image: `${site.url}/opengraph-image`,
     logo: `${site.url}/opengraph-image`,
     sameAs: SAME_AS,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.79",
-      reviewCount: 871,
-      bestRating: 5,
-      worstRating: 1,
-    },
+    // aggregateRating removed 2026-07-09 — self-serving review markup earns
+    // no stars and risks a manual action; the visible rating stays in the UI.
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.streetAddress,

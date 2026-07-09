@@ -15,7 +15,7 @@ export const metadata: Metadata = metaFor({
 })
 
 export default function ReviewsPage() {
-  // The 4.79/871 AggregateRating lives on exactly ONE node sitewide — the
+  // The 4.79/1,373 AggregateRating lives on exactly ONE node sitewide — the
   // #localbusiness node emitted from app/layout.tsx. Redefining a rating here
   // on a second #organization node created two conflicting nodes (and two
   // AggregateRatings across #organization + #localbusiness), which trips

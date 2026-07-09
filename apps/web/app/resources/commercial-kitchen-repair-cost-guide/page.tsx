@@ -363,7 +363,7 @@ export default function RepairCostGuidePage() {
               Berne Commercial Repair has completed{" "}
               {REPAIRS_COMPLETED_DISPLAY} commercial equipment services across
               Miami-Dade, Broward and Palm Beach since 2015, at a 4.79-star
-              average from 871 reviews. Our 18 W-2 technicians are EPA Section
+              average from 1,373 reviews. Our 18 W-2 technicians are EPA Section
               608 certified and licensed and insured. The ranges on this page
               are aggregated from our own South Florida service tickets and
               published equipment guides — parts plus labor, before any

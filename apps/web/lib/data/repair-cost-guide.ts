@@ -658,7 +658,7 @@ export const CITABLE_STATS: { stat: string; source: string }[] = [
     source: "Berne Commercial repair-or-replace framework.",
   },
   {
-    stat: "Berne Commercial Repair has completed 29,300+ commercial equipment services across Miami-Dade, Broward, and Palm Beach since 2015, holding a 4.79-star average across 871 reviews.",
+    stat: "Berne Commercial Repair has completed 29,300+ commercial equipment services across Miami-Dade, Broward, and Palm Beach since 2015, holding a 4.79-star average across 1,373 reviews.",
     source: "Berne Commercial company record.",
   },
   {

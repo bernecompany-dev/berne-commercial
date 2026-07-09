@@ -136,7 +136,7 @@ export default async function IndustryDetailPage({ params }: Params) {
           </Badge>
           <Badge variant="outline">Same-day dispatch</Badge>
           <Badge variant="outline">Licensed, insured, EPA-certified</Badge>
-          <Badge variant="outline">4.79★ on 871 reviews</Badge>
+          <Badge variant="outline">4.79★ on 1,373 reviews</Badge>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
           <LinkButton href={`/request-dispatch?industry=${profile.slug}`}>
@@ -160,7 +160,7 @@ export default async function IndustryDetailPage({ params }: Params) {
               <p className="mt-4 text-muted-foreground">
                 Eleven years operating across South Florida, 18 technicians on
                 the road, {REPAIRS_COMPLETED_DISPLAY} services completed, and a 4.79-star average
-                on 871 reviews. We&apos;re licensed and insured (DBA Berne
+                on 1,373 reviews. We&apos;re licensed and insured (DBA Berne
                 Appliance Repair), EPA-certified for refrigerant work, and
                 NDA-friendly for the verticals that need it.
               </p>

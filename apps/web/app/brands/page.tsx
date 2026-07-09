@@ -102,7 +102,7 @@ export default function BrandsPage() {
                 Reviews
               </div>
               <div className="text-base font-semibold">
-                4.79 / 871 reviews
+                4.79 / 1,373 reviews
               </div>
               <p className="text-sm text-muted-foreground">
                 Eleven years of South Florida commercial accounts.

@@ -405,7 +405,7 @@ export default function FortLauderdaleMedicalLabPage() {
                 Healthcare-route technicians are background-screened,
                 badge-ready and HIPAA-aware. 18 W-2 technicians,{" "}
                 {REPAIRS_COMPLETED_DISPLAY} completed services since 2015,
-                4.79★ from 871 reviews.
+                4.79★ from 1,373 reviews.
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 <Link

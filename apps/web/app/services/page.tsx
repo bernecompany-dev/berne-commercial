@@ -30,7 +30,7 @@ export default function ServicesPage() {
       />
       <QuickAnswer
         heading="Commercial repair in South Florida: quick answer"
-        answer="Berne Commercial Repair is a South Florida commercial appliance and kitchen-equipment repair company covering Miami-Dade, Broward and Palm Beach. We fix commercial refrigeration, ice machines, ovens and ranges, fryers, dishwashers, commercial laundry and back-of-house systems for restaurants, hotels, grocery, healthcare and property management — with same-day and 24/7 emergency dispatch. The commercial service call is $89 and is free when you approve the repair. We are licensed and insured with EPA 608-certified technicians, COI- and vendor-portal-ready, and rated 4.79★ across 871 reviews."
+        answer="Berne Commercial Repair is a South Florida commercial appliance and kitchen-equipment repair company covering Miami-Dade, Broward and Palm Beach. We fix commercial refrigeration, ice machines, ovens and ranges, fryers, dishwashers, commercial laundry and back-of-house systems for restaurants, hotels, grocery, healthcare and property management — with same-day and 24/7 emergency dispatch. The commercial service call is $89 and is free when you approve the repair. We are licensed and insured with EPA 608-certified technicians, COI- and vendor-portal-ready, and rated 4.79★ across 1,373 reviews."
       />
       <section className="bg-background py-16">
         <div className="mx-auto max-w-7xl space-y-14 px-4 sm:px-6 lg:px-8">

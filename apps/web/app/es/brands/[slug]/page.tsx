@@ -173,7 +173,7 @@ export default async function BrandDetailPageES({ params }: Params) {
                   archivados
                 </li>
                 <li className="flex items-center gap-2">
-                  <Award className="size-4 text-primary" /> 4.79 / 871 reseñas
+                  <Award className="size-4 text-primary" /> 4.79 / 1,373 reseñas
                 </li>
               </ul>
               <LinkButton

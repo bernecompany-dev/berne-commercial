@@ -23,7 +23,7 @@ export function QuickAnswer({
     { label: "Service call", value: `${site.serviceCall} — free with approved repair` },
     { label: "Response", value: "Same-day · 24/7 emergency" },
     { label: "Coverage", value: "Miami-Dade · Broward · Palm Beach" },
-    { label: "Rating", value: "4.79★ · 871 reviews" },
+    { label: "Rating", value: "4.79★ · 1,373 reviews" },
   ]
   return (
     <section className="border-b border-border/60 bg-accent/30 py-8">

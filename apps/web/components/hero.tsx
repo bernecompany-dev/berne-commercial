@@ -54,7 +54,7 @@ export function Hero({ locale = "en" }: { locale?: Locale }) {
               <Phone className="size-4" /> {tr.cta.callNow}
             </AnchorButton>
           </div>
-          {/* Above-the-fold social proof — the 4.79★/871 aggregate is the
+          {/* Above-the-fold social proof — the 4.79★/1,373 aggregate is the
               site's strongest trust asset but otherwise first appears ~7
               sections down. Surfacing it under the hero CTA lifts form starts. */}
           <div className="mt-5 flex items-center justify-center gap-2">

@@ -174,7 +174,7 @@ export default async function BrandDetailPage({ params }: Params) {
                   on file
                 </li>
                 <li className="flex items-center gap-2">
-                  <Award className="size-4 text-primary" /> 4.79 / 871 reviews
+                  <Award className="size-4 text-primary" /> 4.79 / 1,373 reviews
                 </li>
               </ul>
               <LinkButton

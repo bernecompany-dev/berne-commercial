@@ -160,7 +160,7 @@ export default async function Image() {
           }}
         >
           {[
-            "4.79/5 on 871 reviews",
+            "4.79/5 on 1,373 reviews",
             "Licensed & Insured",
             "EPA-certified",
             "Same-day dispatch",

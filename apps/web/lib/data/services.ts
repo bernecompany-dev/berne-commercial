@@ -86,7 +86,7 @@ export const services: Service[] = [
     primary: true,
     metaTitle: "Commercial Refrigeration Repair Miami — 24/7",
     metaDescription:
-      "Walk-in coolers, freezers & reach-ins fixed same-day across South Florida. 18 W-2 techs, COI-ready dispatch, 4.79★ from 871 reviews. $89 call.",
+      "Walk-in coolers, freezers & reach-ins fixed same-day across South Florida. 18 W-2 techs, COI-ready dispatch, 4.79★ from 1,373 reviews. $89 call.",
     summary:
       "Same-day refrigeration service for restaurants, supermarkets, production facilities and enterprise clients.",
     longDescription:

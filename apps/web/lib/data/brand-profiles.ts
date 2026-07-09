@@ -198,7 +198,7 @@ export const brandProfiles: BrandProfile[] = [
     ],
     industrySlugs: ["restaurants", "hotels", "grocery", "schools"],
     whyBerne:
-      "Berne Commercial Repair has serviced Hobart equipment across South Florida for eleven years, with eighteen field technicians on the bench and a parts network that includes OEM Hobart distribution. We carry an AggregateRating of 4.79 across 871 reviews, hold full general-liability and workers-comp coverage, and supply COI on request for property managers and franchise compliance teams. Hobart repairs go in with OEM wash arms, booster elements and gearbox kits — the rebuild lasts as long as the machine.",
+      "Berne Commercial Repair has serviced Hobart equipment across South Florida for eleven years, with eighteen field technicians on the bench and a parts network that includes OEM Hobart distribution. We carry an AggregateRating of 4.79 across 1,373 reviews, hold full general-liability and workers-comp coverage, and supply COI on request for property managers and franchise compliance teams. Hobart repairs go in with OEM wash arms, booster elements and gearbox kits — the rebuild lasts as long as the machine.",
     serviceArea:
       "Miami-Dade, Broward and Palm Beach — same-day dispatch on Hobart ware-washing failures because a dead dishmachine shuts the floor. Coverage runs from Homestead to Jupiter, including Miami Beach, Aventura, Hallandale, Fort Lauderdale, Boca Raton, Delray and West Palm.",
     faqs: [
@@ -293,7 +293,7 @@ export const brandProfiles: BrandProfile[] = [
         { title: "Falla de capacitor del motor de lavado", detail: "Motores de lavado monofásicos en modelos AM y LXe usan un capacitor de run que falla en humedad de Florida. El motor zumba pero no arranca, el breaker se cae después de unos segundos. Swap de capacitor, verificación con clamp-meter." },
       ],
       whyBerne:
-        "Berne Commercial Repair ha atendido equipo Hobart en el Sur de Florida por once años, con dieciocho técnicos de campo en la banca y una red de partes que incluye distribución Hobart OEM. Tenemos un AggregateRating de 4.79 en 871 reseñas, cobertura completa de general-liability y workers-comp, y entregamos COI bajo pedido para property managers y equipos de compliance de franquicia. Las reparaciones Hobart entran con brazos de lavado, elementos de booster y kits de gearbox OEM — el rebuild dura tanto como la máquina.",
+        "Berne Commercial Repair ha atendido equipo Hobart en el Sur de Florida por once años, con dieciocho técnicos de campo en la banca y una red de partes que incluye distribución Hobart OEM. Tenemos un AggregateRating de 4.79 en 1,373 reseñas, cobertura completa de general-liability y workers-comp, y entregamos COI bajo pedido para property managers y equipos de compliance de franquicia. Las reparaciones Hobart entran con brazos de lavado, elementos de booster y kits de gearbox OEM — el rebuild dura tanto como la máquina.",
       serviceArea:
         "Miami-Dade, Broward y Palm Beach — despacho el mismo día en fallas de ware-washing Hobart porque un dishmachine muerto cierra el piso. Cobertura corre de Homestead a Jupiter, incluyendo Miami Beach, Aventura, Hallandale, Fort Lauderdale, Boca Raton, Delray y West Palm.",
       faqs: [
@@ -445,7 +445,7 @@ export const brandProfiles: BrandProfile[] = [
     ],
     industrySlugs: ["restaurants", "country-clubs", "hotels"],
     whyBerne:
-      "Vulcan repairs are gas work, so they need a technician who can pull a manometer reading, verify combustion under load and stand behind the leak test. Berne Commercial Repair runs eighteen technicians, EPA-licensed where required and all under a single COI carrying General Liability and Workers Comp. We have eleven years on South Florida lines, an AggregateRating of 4.79 across 871 reviews, and a parts policy that defaults to OEM Vulcan thermocouples, gas valves and burners. Same-day dispatch when a Vulcan range goes down on service.",
+      "Vulcan repairs are gas work, so they need a technician who can pull a manometer reading, verify combustion under load and stand behind the leak test. Berne Commercial Repair runs eighteen technicians, EPA-licensed where required and all under a single COI carrying General Liability and Workers Comp. We have eleven years on South Florida lines, an AggregateRating of 4.79 across 1,373 reviews, and a parts policy that defaults to OEM Vulcan thermocouples, gas valves and burners. Same-day dispatch when a Vulcan range goes down on service.",
     serviceArea:
       "Miami-Dade, Broward and Palm Beach — Doral, Hialeah, Miami Beach, Aventura, Hallandale, Fort Lauderdale, Boca Raton, Delray, West Palm. Same-day for kitchens that can’t turn lunch without the range battery.",
     faqs: [
@@ -531,7 +531,7 @@ export const brandProfiles: BrandProfile[] = [
         { title: "Trancada de drain ball-valve de freidora", detail: "Las drain ball valves en freidoras LG y MLG se trancan por shortening solidificado cuando la cocina deja enfriar el aceite dentro de la válvula. Reconstruimos en vez de reemplazar donde sea posible, restaurando full drain stroke." },
       ],
       whyBerne:
-        "Las reparaciones Vulcan son trabajo de gas, entonces necesitan un técnico que pueda sacar una lectura de manómetro, verificar combustión bajo carga y respaldar el leak test. Berne Commercial Repair corre dieciocho técnicos, EPA-licensed donde se requiere y todos bajo un solo COI con General Liability y Workers Comp. Tenemos once años en líneas del Sur de Florida, un AggregateRating de 4.79 en 871 reseñas, y una política de partes que por defecto va a termocoples, válvulas de gas y quemadores Vulcan OEM. Despacho el mismo día cuando una estufa Vulcan se cae en servicio.",
+        "Las reparaciones Vulcan son trabajo de gas, entonces necesitan un técnico que pueda sacar una lectura de manómetro, verificar combustión bajo carga y respaldar el leak test. Berne Commercial Repair corre dieciocho técnicos, EPA-licensed donde se requiere y todos bajo un solo COI con General Liability y Workers Comp. Tenemos once años en líneas del Sur de Florida, un AggregateRating de 4.79 en 1,373 reseñas, y una política de partes que por defecto va a termocoples, válvulas de gas y quemadores Vulcan OEM. Despacho el mismo día cuando una estufa Vulcan se cae en servicio.",
       serviceArea:
         "Miami-Dade, Broward y Palm Beach — Doral, Hialeah, Miami Beach, Aventura, Hallandale, Fort Lauderdale, Boca Raton, Delray, West Palm. El mismo día para cocinas que no pueden sacar lunch sin la range battery.",
       faqs: [
@@ -693,7 +693,7 @@ export const brandProfiles: BrandProfile[] = [
     ],
     industrySlugs: ["restaurants", "grocery", "hotels", "breweries"],
     whyBerne:
-      "Berne is EPA-608 certified, carries Florida refrigeration credentials, and runs eighteen field technicians dispatched daily across South Florida. We service True equipment under same-day windows and supply OEM True gaskets, evap fans, defrost controls, anti-sweat heaters and start components from a parts network that includes True’s authorized service distribution. Eleven years on the ground, 4.79 across 871 reviews, full COI / W-9 / EPA documentation under /credentials/.",
+      "Berne is EPA-608 certified, carries Florida refrigeration credentials, and runs eighteen field technicians dispatched daily across South Florida. We service True equipment under same-day windows and supply OEM True gaskets, evap fans, defrost controls, anti-sweat heaters and start components from a parts network that includes True’s authorized service distribution. Eleven years on the ground, 4.79 across 1,373 reviews, full COI / W-9 / EPA documentation under /credentials/.",
     serviceArea:
       "Miami-Dade, Broward and Palm Beach — same-day for restaurants and supermarkets running on True refrigeration. Common ZIPs include Miami (33101–33199), Doral, Aventura, Hallandale, Fort Lauderdale, Pompano, Boca Raton, Delray, West Palm and Wellington.",
     faqs: [
@@ -778,7 +778,7 @@ export const brandProfiles: BrandProfile[] = [
         { title: "Falla de compresor Embraco/Tecumseh", detail: "Compresores Embraco y Tecumseh fallan eléctrica y mecánicamente después de 8-12 años. Verificación de amp draw, capacitor de start y resistencia del overload antes del reemplazo." },
       ],
       whyBerne:
-        "True repairs son trabajo de refrigeración con riesgo en humedad de Florida: condensadores cargados, drifts de coil, y carga eléctrica que un técnico tiene que verificar bajo amp clamp. Berne corre dieciocho técnicos, EPA-608 en todo el field team, y mantiene partes True OEM en el camión — cartuchos de puerta, evap fans, empaques, capacitores. Once años en el Sur de Florida, 4.79 / 871 reseñas, COI y W-9 archivados.",
+        "True repairs son trabajo de refrigeración con riesgo en humedad de Florida: condensadores cargados, drifts de coil, y carga eléctrica que un técnico tiene que verificar bajo amp clamp. Berne corre dieciocho técnicos, EPA-608 en todo el field team, y mantiene partes True OEM en el camión — cartuchos de puerta, evap fans, empaques, capacitores. Once años en el Sur de Florida, 4.79 / 1,373 reseñas, COI y W-9 archivados.",
       serviceArea:
         "Miami-Dade, Broward y Palm Beach — el mismo día en T-23/T-49 caídos en servicio. ZIPs incluyen Miami, Doral, Hialeah, Aventura, Hallandale, Fort Lauderdale, Pompano, Boca Raton, Delray y West Palm.",
       faqs: [
@@ -935,7 +935,7 @@ export const brandProfiles: BrandProfile[] = [
     ],
     industrySlugs: ["restaurants", "hotels", "healthcare", "grocery"],
     whyBerne:
-      "Berne is EPA-608 certified across the whole field team, runs eighteen technicians on the bench, and treats Manitowoc service as a water-chemistry problem first, mechanical second. We carry OEM Manitowoc water-distribution tubes, curtain switches, hot-gas valves, harvest sensors and Indigo controllers — and we ship the water test before quoting the descale, so the kitchen isn’t back on the phone in six months. Eleven years in South Florida, 4.79 across 871 reviews, COI / W-9 / EPA documentation on file.",
+      "Berne is EPA-608 certified across the whole field team, runs eighteen technicians on the bench, and treats Manitowoc service as a water-chemistry problem first, mechanical second. We carry OEM Manitowoc water-distribution tubes, curtain switches, hot-gas valves, harvest sensors and Indigo controllers — and we ship the water test before quoting the descale, so the kitchen isn’t back on the phone in six months. Eleven years in South Florida, 4.79 across 1,373 reviews, COI / W-9 / EPA documentation on file.",
     serviceArea:
       "Miami-Dade, Broward and Palm Beach — same-day for restaurants, bars and hotels running on Indigo NXT or NEO. ZIPs include Miami, Doral, Hialeah, Aventura, Hallandale, Fort Lauderdale, Pompano, Boca Raton, Delray and West Palm.",
     faqs: [
@@ -1018,7 +1018,7 @@ export const brandProfiles: BrandProfile[] = [
         { title: "Restricción de airflow del condensador + climb de head pressure", detail: "El condensador air-cooled Indigo NXT ingesta polvo y grasa de la cocina. Head pressure sube, la máquina reduce producción 30–50%. Limpieza de coil, verificación de amp draw y presión de descarga." },
       ],
       whyBerne:
-        "Berne es EPA-608 certified en todo el field team, corre dieciocho técnicos en banca, y trata el servicio Manitowoc como problema de water-chemistry primero, mecánico segundo. Cargamos tubos de distribución, switches de cortina, válvulas hot-gas, sensores de harvest e Indigo controllers OEM Manitowoc — y mandamos el water test antes de cotizar el descale, para que la cocina no esté de vuelta al teléfono en seis meses. Once años en el Sur de Florida, 4.79 en 871 reseñas, documentación COI / W-9 / EPA archivada.",
+        "Berne es EPA-608 certified en todo el field team, corre dieciocho técnicos en banca, y trata el servicio Manitowoc como problema de water-chemistry primero, mecánico segundo. Cargamos tubos de distribución, switches de cortina, válvulas hot-gas, sensores de harvest e Indigo controllers OEM Manitowoc — y mandamos el water test antes de cotizar el descale, para que la cocina no esté de vuelta al teléfono en seis meses. Once años en el Sur de Florida, 4.79 en 1,373 reseñas, documentación COI / W-9 / EPA archivada.",
       serviceArea:
         "Miami-Dade, Broward y Palm Beach — el mismo día para restaurantes, bares y hoteles corriendo Indigo NXT o NEO. ZIPs incluyen Miami, Doral, Hialeah, Aventura, Hallandale, Fort Lauderdale, Pompano, Boca Raton, Delray y West Palm.",
       faqs: [
@@ -1180,7 +1180,7 @@ export const brandProfiles: BrandProfile[] = [
     ],
     industrySlugs: ["restaurants", "hotels", "healthcare", "grocery"],
     whyBerne:
-      "We service Hoshizaki with OEM parts and Hoshizaki-spec descaler — using the wrong chemistry on a Hoshizaki evaporator voids the warranty and can pit the plate. Eighteen technicians, EPA-608 across the field team, full COI / W-9 / EPA documentation under /credentials/. Eleven years in South Florida, 4.79 across 871 reviews. Same-day dispatch on Hoshizaki for restaurants and healthcare facilities.",
+      "We service Hoshizaki with OEM parts and Hoshizaki-spec descaler — using the wrong chemistry on a Hoshizaki evaporator voids the warranty and can pit the plate. Eighteen technicians, EPA-608 across the field team, full COI / W-9 / EPA documentation under /credentials/. Eleven years in South Florida, 4.79 across 1,373 reviews. Same-day dispatch on Hoshizaki for restaurants and healthcare facilities.",
     serviceArea:
       "Miami-Dade, Broward and Palm Beach — restaurants, hotels and medical facilities depending on Hoshizaki KM, KMD, F-801 and DCM. Coverage Homestead to Jupiter, including all of Miami Beach, Aventura, Hallandale, Fort Lauderdale, Boca Raton and West Palm.",
     faqs: [
@@ -1262,7 +1262,7 @@ export const brandProfiles: BrandProfile[] = [
         { title: "Fuga del sello del tornillo F-801", detail: "Las máquinas de hielo flake tienen un sello del tornillo en el fondo del cilindro del evaporador. El sello se endurece, el agua se fuga, contamina el extremo del motor. El rebuild kit reemplaza sello, balero y o-rings." },
       ],
       whyBerne:
-        "Atendemos Hoshizaki con partes OEM y descaler spec-Hoshizaki — usar la química equivocada en un evaporador Hoshizaki anula el warranty y puede picar la placa. Dieciocho técnicos, EPA-608 en todo el field team, documentación COI / W-9 / EPA completa bajo /credentials/. Once años en el Sur de Florida, 4.79 en 871 reseñas. Despacho el mismo día en Hoshizaki para restaurantes e instalaciones de salud.",
+        "Atendemos Hoshizaki con partes OEM y descaler spec-Hoshizaki — usar la química equivocada en un evaporador Hoshizaki anula el warranty y puede picar la placa. Dieciocho técnicos, EPA-608 en todo el field team, documentación COI / W-9 / EPA completa bajo /credentials/. Once años en el Sur de Florida, 4.79 en 1,373 reseñas. Despacho el mismo día en Hoshizaki para restaurantes e instalaciones de salud.",
       serviceArea:
         "Miami-Dade, Broward y Palm Beach — restaurantes, hoteles e instalaciones médicas dependiendo de Hoshizaki KM, KMD, F-801 y DCM. Cobertura Homestead a Jupiter, incluyendo todo Miami Beach, Aventura, Hallandale, Fort Lauderdale, Boca Raton y West Palm.",
       faqs: [
@@ -1429,7 +1429,7 @@ export const brandProfiles: BrandProfile[] = [
     ],
     industrySlugs: ["restaurants", "hotels", "country-clubs", "healthcare"],
     whyBerne:
-      "Rational combi service requires a technician who knows the platform — wrong cleaning chemistry damages the cavity, wrong descale chemistry pits the steam generator, wrong probe calibration ruins production. Our team is trained on iCombi Pro, iCombi Classic and SCC platforms, stocks OEM door gaskets, steam-injection valves, probes and drain components, and ships every Rational job with a full functional test. Eleven years South Florida, eighteen technicians, 4.79/871 reviews, COI/W-9/EPA under /credentials/.",
+      "Rational combi service requires a technician who knows the platform — wrong cleaning chemistry damages the cavity, wrong descale chemistry pits the steam generator, wrong probe calibration ruins production. Our team is trained on iCombi Pro, iCombi Classic and SCC platforms, stocks OEM door gaskets, steam-injection valves, probes and drain components, and ships every Rational job with a full functional test. Eleven years South Florida, eighteen technicians, 4.79/1,373 reviews, COI/W-9/EPA under /credentials/.",
     serviceArea:
       "Miami-Dade, Broward and Palm Beach — banquet kitchens, hospital production kitchens, fine-dining and ghost-kitchen platforms running on Rational iCombi or SCC. ZIPs across Miami, Doral, Aventura, Hallandale, Fort Lauderdale, Boca Raton, Delray and West Palm.",
     faqs: [
@@ -1511,7 +1511,7 @@ export const brandProfiles: BrandProfile[] = [
         { title: "Reset / falla de control board (SCC legacy)", detail: "Tarjetas SCC fallan después de exposición prolongada a vapor. Reemplazo del board con actualización de software cuando disponible." },
       ],
       whyBerne:
-        "Las reparaciones Rational requieren un técnico que pueda navegar la lógica del control combi, leer la diagnostic mode del fabricante, y verificar el ciclo de vapor bajo carga. Berne corre dieciocho técnicos con experiencia Rational, EPA-608 donde se requiere para refrigeración adyacente, y partes Rational OEM en el camión — empaques, bombas de dosing, probes, sockets. Once años en el Sur de Florida, 4.79 / 871 reseñas, documentación completa.",
+        "Las reparaciones Rational requieren un técnico que pueda navegar la lógica del control combi, leer la diagnostic mode del fabricante, y verificar el ciclo de vapor bajo carga. Berne corre dieciocho técnicos con experiencia Rational, EPA-608 donde se requiere para refrigeración adyacente, y partes Rational OEM en el camión — empaques, bombas de dosing, probes, sockets. Once años en el Sur de Florida, 4.79 / 1,373 reseñas, documentación completa.",
       serviceArea:
         "Miami-Dade, Broward y Palm Beach — restaurantes fine-dining, country clubs, hoteles y hospitales corriendo iCombi Pro y Classic. Mismo día cuando el servicio activo está en riesgo.",
       faqs: [
@@ -1668,7 +1668,7 @@ export const brandProfiles: BrandProfile[] = [
     ],
     industrySlugs: ["restaurants", "hotels", "country-clubs"],
     whyBerne:
-      "Garland is gas work and gas work is a licensure question — Berne carries the Florida licensing required, runs eighteen technicians on the field bench, and ends every gas job with a combustible-gas detector leak test plus a manometer pressure verification under burner load. Eleven years South Florida, OEM Garland thermocouples, gas valves, radiants and burner sets stocked, 4.79/871 reviews, COI/W-9 under /credentials/.",
+      "Garland is gas work and gas work is a licensure question — Berne carries the Florida licensing required, runs eighteen technicians on the field bench, and ends every gas job with a combustible-gas detector leak test plus a manometer pressure verification under burner load. Eleven years South Florida, OEM Garland thermocouples, gas valves, radiants and burner sets stocked, 4.79/1,373 reviews, COI/W-9 under /credentials/.",
     serviceArea:
       "Miami-Dade, Broward and Palm Beach — same-day dispatch on Garland cooking equipment. Restaurants, steakhouses, banquet kitchens and country clubs across Miami, Doral, Aventura, Fort Lauderdale, Boca Raton, Delray and West Palm.",
     faqs: [
@@ -1751,7 +1751,7 @@ export const brandProfiles: BrandProfile[] = [
         { title: "Falla de balero del blower de convección MCO", detail: "El balero del blower de convección falla después de uso pesado. Síntoma: ruido y cocción desparejada. Reemplazo del motor con verificación de amp." },
       ],
       whyBerne:
-        "Las reparaciones Garland son trabajo de gas — pilotos, válvulas, leak tests. Berne corre dieciocho técnicos gas-certified, EPA-608 donde se requiere, partes Garland OEM en el camión — termocoples, válvulas de gas, electrodos, radiantes cerámicos. Once años en el Sur de Florida, 4.79 / 871 reseñas, COI y W-9 archivados. Despacho el mismo día cuando una línea Garland se cae.",
+        "Las reparaciones Garland son trabajo de gas — pilotos, válvulas, leak tests. Berne corre dieciocho técnicos gas-certified, EPA-608 donde se requiere, partes Garland OEM en el camión — termocoples, válvulas de gas, electrodos, radiantes cerámicos. Once años en el Sur de Florida, 4.79 / 1,373 reseñas, COI y W-9 archivados. Despacho el mismo día cuando una línea Garland se cae.",
       serviceArea:
         "Miami-Dade, Broward y Palm Beach — steakhouses, country clubs, cocinas de banquete y hoteles. El mismo día en G-series caído antes de un cover de viernes o sábado.",
       faqs: [
@@ -1913,7 +1913,7 @@ export const brandProfiles: BrandProfile[] = [
     ],
     industrySlugs: ["restaurants", "hotels", "healthcare", "country-clubs"],
     whyBerne:
-      "Traulsen is consultant-spec equipment — it lands on jobs where the kitchen is a serious operation, and the service provider needs to match. Berne carries EPA-608 across the field team, runs eighteen technicians, stocks OEM Traulsen hinge cartridges, fan motors, controllers and gaskets, and ships every refrigeration job with documented PT-chart, amp draw and box-temperature verification. Eleven years on South Florida lines, 4.79 across 871 reviews, full COI / W-9 / EPA under /credentials/.",
+      "Traulsen is consultant-spec equipment — it lands on jobs where the kitchen is a serious operation, and the service provider needs to match. Berne carries EPA-608 across the field team, runs eighteen technicians, stocks OEM Traulsen hinge cartridges, fan motors, controllers and gaskets, and ships every refrigeration job with documented PT-chart, amp draw and box-temperature verification. Eleven years on South Florida lines, 4.79 across 1,373 reviews, full COI / W-9 / EPA under /credentials/.",
     serviceArea:
       "Miami-Dade, Broward and Palm Beach — fine-dining, hospital production kitchens, hotel banquet platforms and pizzerias running on Traulsen R-series and G-series. ZIPs across Miami, Aventura, Hallandale, Fort Lauderdale, Pompano, Boca Raton, Delray and West Palm.",
     faqs: [
@@ -1996,7 +1996,7 @@ export const brandProfiles: BrandProfile[] = [
         { title: "Falla de socket del core-probe en blast chiller", detail: "Los blast chillers RBC dependen de un core probe para ciclos chill HACCP-compliant. El socket se corroe por ingress de vapor, el ciclo lee incorrectamente, el log de food-safety está mal. Reemplazamos socket y probe, documentamos con el cliente." },
       ],
       whyBerne:
-        "Traulsen es refrigeración premium que merece un técnico que entienda cartuchos de bisagra, el controlador INTELA-TRAUL, y los ciclos HACCP de los blast chillers RBC. Berne corre dieciocho técnicos EPA-608, partes Traulsen OEM en el camión — cartuchos, empaques, controladores, probes. Once años en el Sur de Florida, 4.79 / 871 reseñas, documentación completa.",
+        "Traulsen es refrigeración premium que merece un técnico que entienda cartuchos de bisagra, el controlador INTELA-TRAUL, y los ciclos HACCP de los blast chillers RBC. Berne corre dieciocho técnicos EPA-608, partes Traulsen OEM en el camión — cartuchos, empaques, controladores, probes. Once años en el Sur de Florida, 4.79 / 1,373 reseñas, documentación completa.",
       serviceArea:
         "Miami-Dade, Broward y Palm Beach — restaurantes fine-dining, country clubs, panaderías de producción y hospitales corriendo Traulsen R-series, G-series y blast chillers RBC.",
       faqs: [
