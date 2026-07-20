@@ -26,14 +26,11 @@ export function MetaPixel() {
               var t = e.target instanceof Element ? e.target.closest('a[href^="tel:"], a[href^="mailto:"]') : null;
               if (!t || typeof fbq !== 'function') return;
               var href = t.getAttribute('href') || '';
+              var linkLocation = t.getAttribute('data-analytics-location') || t.getAttribute('data-analytics') || t.getAttribute('aria-label') || (t.textContent || '').trim().slice(0, 80) || 'unknown';
               if (href.indexOf('tel:') === 0) {
-                fbq('trackCustom', 'PhoneClick', { phone: href.replace('tel:', ''), page: location.pathname });
-                // Standard 'Lead' — phone calls are THE conversion; Meta
-                // lead-objective adsets + Events Manager custom conversion key off it.
-                fbq('track', 'Lead', { content_category: 'phone_call', source: 'tel_click', page: location.pathname });
+                fbq('trackCustom', 'call_click', { site_id: 'berne-commercial', page_path: location.pathname, link_location: linkLocation, tracking_number: href.replace('tel:', '') });
               } else if (href.indexOf('mailto:') === 0) {
-                fbq('trackCustom', 'EmailClick', { email: href.replace('mailto:', ''), page: location.pathname });
-                fbq('track', 'Lead', { content_category: 'email', source: 'mailto_click', page: location.pathname });
+                fbq('trackCustom', 'EmailClick', { site_id: 'berne-commercial', page_path: location.pathname, link_location: linkLocation });
               }
             }, true);
           })();

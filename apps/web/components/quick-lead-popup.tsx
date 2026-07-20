@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 import { CheckCircle2, Loader2, Phone, X } from "lucide-react"
 import { site } from "@/lib/site"
 import { readAttribution } from "@/lib/attribution"
+import { submitDispatchLead } from "@/lib/lead-analytics"
 
 /**
  * Quick-lead slide-in — the "popup", done the way that doesn't get penalized.
@@ -106,41 +107,24 @@ export function QuickLeadPopup() {
     const form = e.currentTarget
     setStatus("submitting")
     const fd = new FormData(form)
-    // Honeypot — bots fill it, the API silently no-ops.
-    if (String(fd.get("website_url") ?? "").trim() !== "") {
-      setStatus("success")
-      markDone()
-      return
-    }
     const payload = {
       contact: String(fd.get("contact") ?? ""),
       phone: String(fd.get("phone") ?? ""),
       urgency: String(fd.get("urgency") ?? ""),
       issue: "Quick callback request (slide-in)",
+      website_url: String(fd.get("website_url") ?? ""),
       ...readAttribution(),
     }
     try {
-      const res = await fetch("/api/dispatch", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+      await submitDispatchLead({
+        payload,
+        formName: "quick_lead",
+        context: { urgency: payload.urgency },
       })
-      if (!res.ok) throw new Error("submit failed")
       setStatus("success")
       markDone()
-      if (typeof window !== "undefined" && typeof window.gtag === "function") {
-        window.gtag("event", "generate_lead", {
-          form: "quick_lead",
-          urgency: payload.urgency,
-        })
-        window.gtag("event", "conversion", {
-          send_to: "AW-18232464152/dCXNCM-JqL0cEJim9fVD",
-        })
-      }
-      if (typeof window !== "undefined" && typeof window.fbq === "function") {
-        window.fbq("track", "Lead", { content_name: "Quick callback" })
-      }
-    } catch {
+    } catch (err) {
+      console.error("quick lead submit error:", err)
       setStatus("error")
     }
   }

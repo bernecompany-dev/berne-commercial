@@ -42,7 +42,7 @@ export const hobartDishwasherWashArms: Article = {
     {
       heading: "4. Pump screen, scrap basket, and the strainer at the float",
       body: [
-        "Every Hobart commercial dishwasher has a scrap basket and a pump intake screen. Both load up by mid-shift and reduce flow to the pump. On the AM-15 the scrap basket sits at the front of the tank. The pump intake screen is at the rear, below the wash arms. Pull both, hose them clean, and look at the float switch in the tank for buildup.",
+        "Every [Hobart commercial dishwasher](/services/commercial-dishwasher-repair) has a scrap basket and a pump intake screen. Both load up by mid-shift and reduce flow to the pump. On the AM-15 the scrap basket sits at the front of the tank. The pump intake screen is at the rear, below the wash arms. Pull both, hose them clean, and look at the float switch in the tank for buildup.",
         "If the tank doesn't fill to the float line, the wash pump cavitates and the arms hang. Float switches scale up in South Florida hard water — confirm the float moves freely and trips at the correct depth. The fill solenoid (the one feeding the rinse manifold from the booster) is a separate part and a separate test.",
       ],
     },

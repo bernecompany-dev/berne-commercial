@@ -9,8 +9,8 @@ import { isProductionDeployment } from "@/lib/env"
  * env override via NEXT_PUBLIC_MS_UET_ID. Gated to the production
  * deployment like GA / Pixel / Clarity.
  *
- * Conversion goal "Phone click" (Microsoft Ads goal id 47545659, account
- * scope) counts a custom event `phone_click` — fired by the inline
+ * Tel intent is emitted as the non-lead proxy event `call_click` — fired by
+ * the inline
  * listener below on any click of an a[href^="tel:"]. Microsoft has no
  * dynamic number-swap call tracking like Google, so tel: clicks are the
  * closest call proxy on this site.
@@ -37,7 +37,15 @@ export function MicrosoftUetTag() {
               document.addEventListener('click', function (e) {
                 var t = e.target;
                 var a = t && t.closest ? t.closest('a[href^="tel:"]') : null;
-                if (a) { window.uetq.push('event', 'phone_click', {}); }
+                if (!a) return;
+                var href = a.getAttribute('href') || '';
+                var linkLocation = a.getAttribute('data-analytics-location') || a.getAttribute('data-analytics') || a.getAttribute('aria-label') || (a.textContent || '').trim().slice(0, 80) || 'unknown';
+                window.uetq.push('event', 'call_click', {
+                  site_id: 'berne-commercial',
+                  page_path: window.location.pathname,
+                  link_location: linkLocation,
+                  tracking_number: href.replace('tel:', '')
+                });
               }, true);
             })();
           `,

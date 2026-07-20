@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { CheckCircle2 } from "lucide-react"
 import { PageHero, PageShell } from "@/components/page-shell"
 import { Breadcrumbs } from "@/components/breadcrumbs"
@@ -14,13 +15,16 @@ export const metadata: Metadata = metaFor({
   path: "/become-a-client",
 })
 
-const capabilities = [
-  "Multi-location dispatch and reporting",
-  "COI and vendor onboarding (W-9, insurance)",
-  "Property management and facility management coverage",
-  "Refrigeration, restaurant equipment, ice, laundry",
-  "Replacement coordination when repair is not viable",
-  "24/7 emergency commercial dispatch",
+const capabilities: { label: string; href?: string }[] = [
+  { label: "Multi-location dispatch and reporting" },
+  { label: "COI and vendor onboarding (W-9, insurance)" },
+  { label: "Property management and facility management coverage" },
+  {
+    label: "Refrigeration, restaurant equipment, ice, laundry",
+    href: "/services/commercial-appliance-repair",
+  },
+  { label: "Replacement coordination when repair is not viable" },
+  { label: "24/7 emergency commercial dispatch" },
 ]
 
 export default function BecomeAClientPage() {
@@ -46,10 +50,19 @@ export default function BecomeAClientPage() {
               and property managers.
             </p>
             <ul className="mt-6 space-y-3">
-              {capabilities.map((p) => (
-                <li key={p} className="flex items-start gap-2 text-sm">
+              {capabilities.map((capability) => (
+                <li key={capability.label} className="flex items-start gap-2 text-sm">
                   <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" />
-                  <span>{p}</span>
+                  {capability.href ? (
+                    <Link
+                      href={capability.href}
+                      className="text-foreground underline-offset-2 hover:text-primary hover:underline"
+                    >
+                      {capability.label}
+                    </Link>
+                  ) : (
+                    <span>{capability.label}</span>
+                  )}
                 </li>
               ))}
             </ul>

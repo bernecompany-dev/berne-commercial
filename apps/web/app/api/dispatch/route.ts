@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
+import { randomUUID } from "node:crypto"
 import { site } from "@/lib/site"
 import { clientIpFrom, rateLimit, sweepIfNeeded } from "@/lib/rate-limit"
 
@@ -138,17 +139,28 @@ function validate(data: Payload):
 }
 
 export async function POST(req: Request) {
+  // Generated server-side for every submission attempt so the browser event,
+  // transport result and dispatch email can be joined without exposing PII.
+  const leadId = randomUUID()
   let raw: Payload
   try {
     raw = (await req.json()) as Payload
   } catch {
-    return NextResponse.json({ error: "Invalid JSON" }, { status: 400 })
+    return NextResponse.json(
+      { ok: false, delivered: false, lead_id: leadId, error: "Invalid JSON" },
+      { status: 400 },
+    )
   }
 
   // Honeypot: real users never see/fill `website_url`. If a bot did, pretend
   // success so it stops retrying — but never send the email.
   if (typeof raw.website_url === "string" && raw.website_url.trim() !== "") {
-    return NextResponse.json({ ok: true, transport: "noop" })
+    return NextResponse.json({
+      ok: true,
+      delivered: false,
+      lead_id: leadId,
+      transport: "noop",
+    })
   }
 
   // Rate-limit per IP: 5 submissions / 10 minutes. Cheap, in-memory.
@@ -160,7 +172,12 @@ export async function POST(req: Request) {
   })
   if (!limit.ok) {
     return NextResponse.json(
-      { error: "Too many requests. Call dispatch directly." },
+      {
+        ok: false,
+        delivered: false,
+        lead_id: leadId,
+        error: "Too many requests. Call dispatch directly.",
+      },
       {
         status: 429,
         headers: { "Retry-After": String(limit.retryAfterSeconds) },
@@ -170,7 +187,15 @@ export async function POST(req: Request) {
 
   const parsed = validate(raw)
   if (!parsed.ok) {
-    return NextResponse.json({ error: parsed.error }, { status: 400 })
+    return NextResponse.json(
+      {
+        ok: false,
+        delivered: false,
+        lead_id: leadId,
+        error: parsed.error,
+      },
+      { status: 400 },
+    )
   }
   const data = parsed.value
   const source = summarizeAttribution(raw as Record<string, unknown>)
@@ -188,6 +213,9 @@ export async function POST(req: Request) {
     console.error("[dispatch] LOST LEAD (recover manually):", JSON.stringify(data))
     return NextResponse.json(
       {
+        ok: false,
+        delivered: false,
+        lead_id: leadId,
         error: `Server configuration error. Please call dispatch at ${site.phone}.`,
       },
       { status: 500 },
@@ -202,6 +230,8 @@ export async function POST(req: Request) {
   const subject = `ЗАКАЗ — ${data.company || "—"} · ${data.city || "—"} · ${data.urgency ? data.urgency.toUpperCase() : "—"}`
 
   const text = `New commercial dispatch request
+
+Lead ID: ${leadId}
 
 Company: ${data.company || "—"}
 Contact: ${data.contact}
@@ -223,6 +253,7 @@ ${data.issue || "—"}
   const html = `<table style="font-family:Inter,system-ui,sans-serif;font-size:14px;color:#0f172a;border-collapse:collapse">
   <tr><td colspan="2" style="padding:0 0 12px;font-size:16px;font-weight:600">New commercial dispatch request</td></tr>
   ${[
+    ["Lead ID", leadId],
     ["Company", data.company || "—"],
     ["Contact", data.contact],
     ["Phone", data.phone],
@@ -265,17 +296,34 @@ ${data.issue || "—"}
       // Lead-recovery breadcrumb — full text body so the lead survives in logs.
       console.error("[dispatch] LOST LEAD (recover manually):\n" + text)
       return NextResponse.json(
-        { error: "Email transport failed", detail: result.error.message },
+        {
+          ok: false,
+          delivered: false,
+          lead_id: leadId,
+          error: "Email transport failed",
+          detail: result.error.message,
+        },
         { status: 502 },
       )
     }
-    return NextResponse.json({ ok: true, id: result.data?.id })
+    return NextResponse.json({
+      ok: true,
+      delivered: true,
+      lead_id: leadId,
+      transport: "resend",
+      id: result.data?.id,
+    })
   } catch (err) {
     console.error("[dispatch] resend exception:", err)
     // Lead-recovery breadcrumb — full text body so the lead survives in logs.
     console.error("[dispatch] LOST LEAD (recover manually):\n" + text)
     return NextResponse.json(
-      { error: "Email transport failed" },
+      {
+        ok: false,
+        delivered: false,
+        lead_id: leadId,
+        error: "Email transport failed",
+      },
       { status: 502 },
     )
   }

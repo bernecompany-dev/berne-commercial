@@ -2,13 +2,6 @@
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react"
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void
-    dataLayer?: unknown[]
-  }
-}
-
 import { CheckCircle2, ChevronDown, Loader2, Phone } from "lucide-react"
 import { Button, buttonVariants } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -25,6 +18,7 @@ import { site } from "@/lib/site"
 import { t } from "@/lib/i18n/dict"
 import type { Locale } from "@/lib/i18n/config"
 import { readAttribution } from "@/lib/attribution"
+import { submitDispatchLead } from "@/lib/lead-analytics"
 import { cn } from "@workspace/ui/lib/utils"
 
 // Mirrors the kit Input recipe exactly (text-base on mobile suppresses iOS
@@ -130,60 +124,19 @@ export function DispatchForm({
     const payload = { ...Object.fromEntries(formData.entries()), ...readAttribution() }
 
     try {
-      const res = await fetch("/api/dispatch", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      })
-      if (!res.ok) {
-        // Server bodies are not UX copy — log for diagnostics, show the
-        // fixed human message with the phone escape hatch instead.
-        const text = await res.text().catch(() => "")
-        console.error("dispatch submit failed:", res.status, text)
-        throw new Error("Submission failed")
-      }
-      form.reset()
-      setStatus("success")
-      if (typeof window !== "undefined" && typeof window.gtag === "function") {
-        window.gtag("event", "generate_lead", {
-          form: "dispatch",
+      await submitDispatchLead({
+        payload,
+        formName: "dispatch",
+        context: {
           service: String(payload.service ?? ""),
           city: String(payload.city ?? ""),
           urgency: String(payload.urgency ?? ""),
           locale,
-        })
-        // Google Ads "Lead form submit" conversion (secondary). send_to is a
-        // public id (visible in page HTML), so the real value is baked in as
-        // the default; NEXT_PUBLIC_GADS_LEAD_LABEL overrides it if needed.
-        const adsLeadLabel =
-          process.env.NEXT_PUBLIC_GADS_LEAD_LABEL ??
-          "AW-18232464152/dCXNCM-JqL0cEJim9fVD"
-        window.gtag("event", "conversion", { send_to: adsLeadLabel })
-      }
-      if (typeof window !== "undefined" && typeof window.fbq === "function") {
-        window.fbq("track", "Lead", {
-          content_name: "Dispatch request",
-          content_category: String(payload.service ?? ""),
-          city: String(payload.city ?? ""),
-          urgency: String(payload.urgency ?? ""),
-          locale,
-        })
-      }
-      // OpenAI/ChatGPT Ads conversion (registered event: lead_created).
-      if (typeof window !== "undefined" && typeof window.oaiq === "function") {
-        window.oaiq("measure", "lead_created", { type: "customer_action" })
-      }
-      // Microsoft Bing UET — REAL lead conversion (parity with Google/Meta).
-      // Previously Bing only counted `phone_click` (tel: taps), which inflated
-      // "conversions" far above real leads. Fire a dedicated submit_lead event
-      // so a Bing goal can count actual dispatch-form leads.
-      if (typeof window !== "undefined") {
-        const w = window as unknown as { uetq?: { push: (...a: unknown[]) => void } }
-        w.uetq?.push("event", "submit_lead", {
-          event_category: "dispatch",
-          event_label: String(payload.service ?? ""),
-        })
-      }
+        },
+        adsLeadLabel: process.env.NEXT_PUBLIC_GADS_LEAD_LABEL,
+      })
+      form.reset()
+      setStatus("success")
     } catch (err) {
       console.error("dispatch submit error:", err)
       setStatus("error")

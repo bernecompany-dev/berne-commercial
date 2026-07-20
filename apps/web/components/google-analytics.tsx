@@ -16,7 +16,7 @@ export function GoogleAnalytics() {
   //   browser idle, off the LCP/TBT critical path, and drains the queue on
   //   arrival (and hijacks dataLayer.push for live processing afterwards).
   // This is the ONLY tel:/mailto: GA listener — do not add another one or
-  // phone_call will double-fire.
+  // call_click will double-fire.
   //
   // Consent Mode v2 — US/Florida B2B audience (CCPA opt-out model, GDPR does
   // not apply): analytics_storage is GRANTED by default so the silent
@@ -63,15 +63,23 @@ export function GoogleAnalytics() {
         var t = e.target instanceof Element ? e.target.closest('a[href^="tel:"], a[href^="mailto:"]') : null;
         if (!t) return;
         var href = t.getAttribute('href') || '';
+        var linkLocation = t.getAttribute('data-analytics-location') ||
+          t.getAttribute('data-analytics') ||
+          t.getAttribute('aria-label') ||
+          (t.textContent || '').trim().slice(0, 80) ||
+          'unknown';
         if (href.indexOf('tel:') === 0) {
-          gtag('event', 'phone_call', {
-            phone: href.replace('tel:', ''),
-            location: window.location.pathname,
+          gtag('event', 'call_click', {
+            site_id: 'berne-commercial',
+            page_path: window.location.pathname,
+            link_location: linkLocation,
+            tracking_number: href.replace('tel:', ''),
           });
         } else if (href.indexOf('mailto:') === 0) {
           gtag('event', 'email_click', {
-            email: href.replace('mailto:', ''),
-            location: window.location.pathname,
+            site_id: 'berne-commercial',
+            page_path: window.location.pathname,
+            link_location: linkLocation,
           });
         }
       }, true);

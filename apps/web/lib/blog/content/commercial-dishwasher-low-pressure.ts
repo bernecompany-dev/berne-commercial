@@ -29,7 +29,7 @@ export const commercialDishwasherLowPressure: Article = {
     {
       heading: "3. Scale buildup on the heating elements and inside the tank",
       body: [
-        "Inside a 6-month-old commercial dishwasher in Miami, mineral scale coats every heated surface. The booster heater on a Jackson Conserver, the wash tank immersion element on a CMA EST-44L, and the rinse manifold all collect calcium and silica. Scaled elements run hot, fail early, and waste the energy you're paying NextEra for.",
+        "Inside a 6-month-old [commercial dishwasher in Miami](/services/commercial-dishwasher-repair), mineral scale coats every heated surface. The booster heater on a Jackson Conserver, the wash tank immersion element on a CMA EST-44L, and the rinse manifold all collect calcium and silica. Scaled elements run hot, fail early, and waste the energy you're paying NextEra for.",
         "The descaling routine: drain the tank, fill with a deliming agent at manufacturer concentration (Ecolab Soilmaster or Auto-Chlor Defender at the listed dosage), run a 20-minute wash cycle, drain, and rinse with clear water for 10 minutes. Hobart specifies deliming on AM-15 series every 30 days under hard-water conditions. South Florida municipal water hits 250+ ppm hardness in some service areas, and that pushes descale frequency closer to every 2 or 3 weeks.",
       ],
     },
