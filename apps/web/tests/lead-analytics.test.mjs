@@ -153,3 +153,12 @@ test("both forms share the delivered-lead helper and have no direct conversions"
     assert.doesNotMatch(source, /submit_lead/)
   }
 })
+
+test("dispatch phone field avoids a browser-invalid HTML pattern", async () => {
+  const source = await readFile("components/dispatch-form.tsx", "utf8")
+  const start = source.indexOf('name="phone"')
+  const phoneField = source.slice(start, start + 700)
+
+  assert.match(phoneField, /minLength=\{7\}/)
+  assert.doesNotMatch(phoneField, /pattern=/)
+})

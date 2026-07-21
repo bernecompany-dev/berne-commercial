@@ -231,8 +231,6 @@ export function DispatchForm({
             // surfaces as a generic "couldn't send" — a real lead lost to what
             // looks like a server outage. >=7 digits (allow spaces/()-+ . ).
             minLength={7}
-            pattern="[\d\s()+.\-]{7,}"
-            title="Please enter a valid phone number (at least 7 digits)."
           />
         </div>
 
