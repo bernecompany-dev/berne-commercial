@@ -219,12 +219,23 @@ export function publishedArticles(now: Date = new Date()): Article[] {
     .filter((a) => new Date(a.publishedAt).getTime() <= now.getTime())
     .sort(
       (a, b) =>
-        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
     )
 }
 
 export function isPublished(article: Article, now: Date = new Date()): boolean {
   return new Date(article.publishedAt).getTime() <= now.getTime()
+}
+
+export function isPublishedBlogHref(
+  href: string,
+  now: Date = new Date()
+): boolean {
+  const match = href.match(/^\/blog\/([^/?#]+)/)
+  if (!match) return true
+  const slug = decodeURIComponent(match[1] ?? "")
+  const article = getArticle(slug)
+  return !!article && isPublished(article, now)
 }
 
 export function formatPublishDate(iso: string, locale: "en" | "es" = "en") {

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useEffect, useState } from "react"
 
 declare global {
@@ -107,7 +108,7 @@ export function CookieBanner() {
   // tall instead of ~130px.
   return (
     <div
-      className="berne-consent fixed bottom-36 left-2 right-2 z-[60] rounded-xl border border-border bg-background/95 px-3 py-2 shadow-lg backdrop-blur md:bottom-4 md:left-auto md:right-24 md:max-w-md md:rounded-2xl md:p-4"
+      className="berne-consent fixed right-2 bottom-36 left-2 z-[60] rounded-xl border border-border bg-background/95 px-3 py-2 shadow-lg backdrop-blur md:right-24 md:bottom-4 md:left-auto md:max-w-md md:rounded-2xl md:p-4"
       role="region"
       aria-label="Cookie consent"
       aria-live="polite"
@@ -115,23 +116,23 @@ export function CookieBanner() {
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2 md:flex-col md:items-start">
         <p className="min-w-0 flex-1 text-xs text-foreground md:text-sm">
           We use cookies to improve service and measure traffic.{" "}
-          <a href="/cookies" className="underline underline-offset-2">
-            Learn more
-          </a>
+          <Link href="/cookies" className="underline underline-offset-2">
+            Cookie details
+          </Link>
           .
         </p>
         <div className="flex shrink-0 gap-2">
           <button
             type="button"
             onClick={accept}
-            className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/80 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 active:translate-y-px md:py-2.5 md:text-sm"
+            className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/80 focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none active:translate-y-px md:py-2.5 md:text-sm"
           >
             OK
           </button>
           <button
             type="button"
             onClick={decline}
-            className="rounded-md border border-border bg-transparent px-3 py-1.5 text-xs text-foreground transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 active:translate-y-px md:py-2.5 md:text-sm"
+            className="rounded-md border border-border bg-transparent px-3 py-1.5 text-xs text-foreground transition-colors hover:bg-accent focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none active:translate-y-px md:py-2.5 md:text-sm"
           >
             Decline
           </button>

@@ -19,9 +19,8 @@ export function BrandMark({
       className={cn(
         "inline-flex items-center gap-2.5",
         tone === "dark" ? "text-foreground" : "text-background",
-        className,
+        className
       )}
-      aria-label="Berne Commercial Repair"
     >
       <svg
         viewBox="0 0 40 40"
@@ -62,7 +61,12 @@ export function BrandMark({
           <span className="text-[15px] font-semibold tracking-tight">
             Berne
           </span>
-          <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+          <span
+            className={cn(
+              "mt-0.5 text-[10px] font-medium tracking-[0.18em] uppercase",
+              tone === "dark" ? "text-muted-foreground" : "text-background/80"
+            )}
+          >
             Commercial
           </span>
         </span>

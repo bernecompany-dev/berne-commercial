@@ -35,11 +35,14 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
-        <Link href={home} className="flex items-center" aria-label={site.name}>
+        <Link href={home} className="flex items-center">
           <BrandMark />
         </Link>
 
-        <nav aria-label={locale === "es" ? "Principal" : "Primary"} className="hidden items-center gap-7 lg:flex">
+        <nav
+          aria-label={locale === "es" ? "Principal" : "Primary"}
+          className="hidden items-center gap-7 lg:flex"
+        >
           {nav.map((n) => (
             <Link
               key={n.href}
@@ -49,7 +52,7 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
                 "text-sm transition-colors",
                 isActive(n.href)
                   ? "font-medium text-foreground"
-                  : "text-muted-foreground hover:text-foreground",
+                  : "text-muted-foreground hover:text-foreground"
               )}
             >
               {n.label}
@@ -63,7 +66,12 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
           <div className="hidden lg:block">
             <LanguageSwitcher compact />
           </div>
-          <AnchorButton href={site.phoneHref} variant="ghost" size="sm" className="gap-2">
+          <AnchorButton
+            href={site.phoneHref}
+            variant="ghost"
+            size="sm"
+            className="gap-2"
+          >
             <Phone className="size-4" />
             {site.phone}
           </AnchorButton>
@@ -76,7 +84,15 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
           type="button"
           onClick={() => setOpen((v) => !v)}
           className="inline-flex size-11 items-center justify-center rounded-md border border-border lg:hidden"
-          aria-label={open ? (locale === "es" ? "Cerrar menú" : "Close menu") : (locale === "es" ? "Abrir menú" : "Open menu")}
+          aria-label={
+            open
+              ? locale === "es"
+                ? "Cerrar menú"
+                : "Close menu"
+              : locale === "es"
+                ? "Abrir menú"
+                : "Open menu"
+          }
           aria-expanded={open}
           aria-controls="mobile-nav"
         >
@@ -88,10 +104,13 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
         id="mobile-nav"
         className={cn(
           "border-t border-border/60 bg-background lg:hidden",
-          open ? "block" : "hidden",
+          open ? "block" : "hidden"
         )}
       >
-        <nav aria-label={locale === "es" ? "Móvil" : "Mobile"} className="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6">
+        <nav
+          aria-label={locale === "es" ? "Móvil" : "Mobile"}
+          className="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6"
+        >
           {nav.map((n) => (
             <Link
               key={n.href}
@@ -101,8 +120,8 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
               className={cn(
                 "block rounded-md px-2 py-3 text-sm hover:bg-muted",
                 isActive(n.href)
-                  ? "font-medium text-foreground bg-muted/60"
-                  : "text-foreground",
+                  ? "bg-muted/60 font-medium text-foreground"
+                  : "text-foreground"
               )}
             >
               {n.label}

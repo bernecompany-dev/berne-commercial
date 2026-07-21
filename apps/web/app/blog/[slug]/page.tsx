@@ -20,6 +20,7 @@ import {
   articles,
   getArticle,
   isPublished,
+  isPublishedBlogHref,
   formatPublishDate,
   publishedArticles,
 } from "@/lib/blog/articles"
@@ -58,9 +59,9 @@ function renderInline(text: string): ReactNode {
           className="text-primary underline-offset-2 hover:underline"
         >
           {label}
-        </a>,
+        </a>
       )
-    } else {
+    } else if (isPublishedBlogHref(url)) {
       out.push(
         <Link
           key={`l-${key++}`}
@@ -68,8 +69,10 @@ function renderInline(text: string): ReactNode {
           className="text-primary underline-offset-2 hover:underline"
         >
           {label}
-        </Link>,
+        </Link>
       )
+    } else {
+      out.push(label)
     }
     lastIndex = m.index + m[0].length
   }
@@ -122,6 +125,9 @@ export default async function BlogArticlePage({ params }: Params) {
     .slice(0, 3)
 
   const relatedFinal = related.length ? related : fallbackRelated
+  const availableInternalLinks = a.internalLinks.filter((link) =>
+    isPublishedBlogHref(link.href)
+  )
 
   const articleUrl = `${site.url}/blog/${a.slug}`
 
@@ -133,9 +139,9 @@ export default async function BlogArticlePage({ params }: Params) {
         acc +
         s.body.reduce(
           (sum, p) => sum + p.trim().split(/\s+/).filter(Boolean).length,
-          0,
+          0
         ),
-      0,
+      0
     )
 
   const blogPosting = blogPostingSchema({
@@ -160,14 +166,14 @@ export default async function BlogArticlePage({ params }: Params) {
       <article>
         <header className="border-b border-border/60 bg-gradient-to-b from-background to-accent/30">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-            <div className="mb-4 flex items-center gap-3 text-xs font-medium uppercase tracking-wider text-primary">
+            <div className="mb-4 flex items-center gap-3 text-xs font-medium tracking-wider text-primary uppercase">
               <Link href="/blog" className="hover:underline">
                 Blog
               </Link>
               <span className="text-muted-foreground">/</span>
               <span className="text-muted-foreground">{a.category}</span>
             </div>
-            <h1 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl">
               {a.title}
             </h1>
             <p className="mt-5 text-base text-muted-foreground sm:text-lg">
@@ -200,7 +206,7 @@ export default async function BlogArticlePage({ params }: Params) {
 
             {a.sections.map((section, idx) => (
               <section key={idx} className="mt-12">
-                <h2 className="text-balance text-2xl font-semibold tracking-tight">
+                <h2 className="text-2xl font-semibold tracking-tight text-balance">
                   {section.heading}
                 </h2>
                 <div className="mt-4 space-y-4 text-base leading-relaxed text-foreground/85">
@@ -212,11 +218,11 @@ export default async function BlogArticlePage({ params }: Params) {
             ))}
 
             <Card className="mt-14 gap-4 border-primary/20 bg-primary/5 p-6">
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary">
+              <div className="text-xs font-semibold tracking-wider text-primary uppercase">
                 Related service pages
               </div>
               <ul className="grid gap-2 text-sm sm:grid-cols-2">
-                {a.internalLinks.map((l) => (
+                {availableInternalLinks.map((l) => (
                   <li key={l.href}>
                     <Link
                       href={l.href}
@@ -269,13 +275,13 @@ export default async function BlogArticlePage({ params }: Params) {
                     className="group block rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   >
                     <Card className="h-full gap-3 p-5 transition-colors group-hover:ring-primary/40">
-                      <div className="text-xs font-medium uppercase tracking-wider text-primary">
+                      <div className="text-xs font-medium tracking-wider text-primary uppercase">
                         {r.category}
                       </div>
-                      <h3 className="text-balance text-base font-semibold leading-snug">
+                      <h3 className="text-base leading-snug font-semibold text-balance">
                         {r.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground line-clamp-2">
+                      <p className="line-clamp-2 text-sm text-muted-foreground">
                         {r.description}
                       </p>
                     </Card>

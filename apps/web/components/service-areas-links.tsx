@@ -18,8 +18,8 @@ export function ServiceAreasLinks() {
           Commercial repair service areas
         </h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          Same-day commercial dispatch across Miami-Dade, Broward and Palm
-          Beach counties.
+          Same-day commercial dispatch across Miami-Dade, Broward and Palm Beach
+          counties.
         </p>
         {citiesByCounty().map((county) => (
           <div key={county.county} className="mt-6">
@@ -31,7 +31,7 @@ export function ServiceAreasLinks() {
                 <Link
                   key={city.slug}
                   href={`/${city.slug}`}
-                  className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline"
+                  className="inline-flex min-h-6 items-center text-muted-foreground underline-offset-2 hover:text-foreground hover:underline"
                 >
                   {city.name}
                 </Link>
