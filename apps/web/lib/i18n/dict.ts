@@ -12,6 +12,7 @@ type Dict = {
     serviceAreas: string
     becomeClient: string
     about: string
+    careers: string
     contact: string
     requestDispatch: string
   }
@@ -142,6 +143,7 @@ const en: Dict = {
     serviceAreas: "Service Areas",
     becomeClient: "Become a Client",
     about: "About",
+    careers: "Careers",
     contact: "Contact",
     // One name for the one conversion action, sitewide (ES already unified).
     requestDispatch: "Request Service",
@@ -320,6 +322,7 @@ const es: Dict = {
     serviceAreas: "Áreas de servicio",
     becomeClient: "Hacerse cliente",
     about: "Nosotros",
+    careers: "Carreras",
     contact: "Contacto",
     requestDispatch: "Solicitar servicio",
   },

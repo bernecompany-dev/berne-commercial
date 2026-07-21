@@ -28,6 +28,7 @@ export function SiteNavbar({ locale = "en" }: { locale?: Locale }) {
     { href: `${p}/service-areas`, label: tr.nav.serviceAreas },
     { href: `${p}/become-a-client`, label: tr.nav.becomeClient },
     { href: `${p}/about`, label: tr.nav.about },
+    { href: `${p}/careers`, label: tr.nav.careers },
     { href: `${p}/contact`, label: tr.nav.contact },
   ]
 
