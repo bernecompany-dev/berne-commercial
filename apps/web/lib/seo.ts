@@ -119,6 +119,16 @@ export const HAS_CREDENTIAL = [
   },
   {
     "@type": "EducationalOccupationalCredential",
+    credentialCategory: "certification",
+    name: "LG Authorized Service Center",
+    recognizedBy: {
+      "@type": "Organization",
+      name: "LG Electronics",
+    },
+    url: `${site.url}/credentials#lg-authorized`,
+  },
+  {
+    "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
     name: "DBA Registration — Berne Appliance Repair",
     url: `${site.url}/credentials/dba-berne-appliance-repair.pdf`,

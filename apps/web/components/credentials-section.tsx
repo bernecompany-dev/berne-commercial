@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { FileText, ShieldCheck, Award, Stamp, Building2, Receipt, FileSignature, ShieldHalf, Network, GraduationCap, FileCheck } from "lucide-react"
 import { Card } from "@workspace/ui/components/card"
 import { SectionHeading } from "./section-heading"
@@ -225,6 +226,32 @@ export function CredentialsSection({ locale = "en" }: { locale?: Locale }) {
             </Card>
           ))}
         </div>
+
+        <Card
+          id="lg-authorized"
+          className="mt-6 flex-col items-center gap-6 p-6 sm:flex-row"
+        >
+          <div className="w-full max-w-[400px] shrink-0">
+            <Image
+              src="/credentials/lg-authorized-service-800.webp"
+              alt="LG Authorized Service Center — Berne Commercial Appliance Repair"
+              width={800}
+              height={125}
+              loading="lazy"
+              className="h-auto w-full rounded-md"
+            />
+          </div>
+          <div>
+            <div className="text-sm font-semibold">
+              LG Authorized Service Center
+            </div>
+            <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+              {locale === "es"
+                ? "Nuestro equipo es un LG Authorized Service Center — autorizado de fábrica para equipos LG de refrigeración y lavandería comercial, con partes OEM y procedimientos de servicio del fabricante."
+                : "Our team is an LG Authorized Service Center — factory-authorized for LG refrigeration and laundry equipment, with OEM parts and manufacturer service procedures on commercial jobs."}
+            </p>
+          </div>
+        </Card>
       </div>
     </section>
   )

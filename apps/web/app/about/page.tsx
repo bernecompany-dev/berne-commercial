@@ -94,8 +94,9 @@ export default function AboutPage() {
                 you proceed with the repair. We carry OEM parts for the verticals
                 we run dispatch for — Hobart, Vulcan, True, Manitowoc,
                 Hoshizaki, Rational, Garland, Traulsen, Beverage-Air,
-                Frymaster on the kitchen side; Speed Queen, Continental,
-                Wascomat on commercial laundry.
+                Frymaster on the kitchen side; Speed Queen, LG, Continental,
+                Wascomat on commercial laundry — Berne is an LG Authorized
+                Service Center for LG refrigeration and laundry equipment.
               </p>
               <p>
                 Berne Commercial is one of three coordinated brands inside

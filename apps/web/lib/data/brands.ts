@@ -26,6 +26,7 @@ export const brands: Brand[] = [
   { name: "Perlick" },
   { name: "Electrolux Professional" },
   { name: "Speed Queen" },
+  { name: "LG Commercial" },
   { name: "Whirlpool Commercial" },
   { name: "Maytag Commercial" },
 ]
