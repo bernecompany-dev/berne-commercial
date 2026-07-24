@@ -225,9 +225,12 @@ export async function POST(req: Request) {
   const from = process.env.DISPATCH_FROM_EMAIL ?? `dispatch@${site.domain}`
   const to = process.env.DISPATCH_TO_EMAIL ?? site.email
 
-  // Subject prefix unified across all 3 Berne sites: leading "ЗАКАЗ" so Eugene
-  // can filter/sort leads in Gmail regardless of which site the lead came from.
-  const subject = `ЗАКАЗ — ${data.company || "—"} · ${data.city || "—"} · ${data.urgency ? data.urgency.toUpperCase() : "—"}`
+  // Subject format unified across all Berne sites (owner spec 2026-07):
+  // "ЗАКАЗ - {site} - {Name} {Phone}". Contact name, company as fallback;
+  // everything else (company, city, urgency, …) lives in the email body only.
+  const subject = [`ЗАКАЗ - ${site.domain} -`, data.contact || data.company, data.phone]
+    .filter(Boolean)
+    .join(" ")
 
   const text = `New commercial dispatch request
 
